@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Section 5 Overview | Data Science Visualization</title>
+  <meta name="description" content="6 Section 5 Overview | Data Science Visualization" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Section 5 Overview | Data Science Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Section 5 Overview | Data Science Visualization" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-4-overview.html"/>
+
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-introduction-to-data-visualization-and-distributions"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Introduction to Data Visualization and Distributions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-introduction-to-ggplot2"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Introduction to ggplot2</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-summarizing-with-dplyr"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Summarizing with dplyr</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-gapminder"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Gapminder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-data-visualization-principles"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Data Visualization Principles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-data-visualization"><i class="fa fa-check"></i><b>2.1</b> Introduction to Data Visualization</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-distributions"><i class="fa fa-check"></i><b>2.2</b> Introduction to Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#data-types"><i class="fa fa-check"></i><b>2.3</b> Data Types</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---data-types"><i class="fa fa-check"></i><b>2.4</b> Assessment - Data Types</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#describe-heights-to-et"><i class="fa fa-check"></i><b>2.5</b> Describe Heights to ET</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#smooth-density-plots"><i class="fa fa-check"></i><b>2.6</b> Smooth Density Plots</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---distributions"><i class="fa fa-check"></i><b>2.7</b> Assessment - Distributions</a></li>
+<li class="chapter" data-level="2.8" data-path="section-1-overview.html"><a href="section-1-overview.html#normal-distribution"><i class="fa fa-check"></i><b>2.8</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.9" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---normal-distribution"><i class="fa fa-check"></i><b>2.9</b> Assessment - Normal Distribution</a></li>
+<li class="chapter" data-level="2.10" data-path="section-1-overview.html"><a href="section-1-overview.html#quantile-quantile-plots"><i class="fa fa-check"></i><b>2.10</b> Quantile-Quantile Plots</a></li>
+<li class="chapter" data-level="2.11" data-path="section-1-overview.html"><a href="section-1-overview.html#percentiles"><i class="fa fa-check"></i><b>2.11</b> Percentiles</a></li>
+<li class="chapter" data-level="2.12" data-path="section-1-overview.html"><a href="section-1-overview.html#boxplots"><i class="fa fa-check"></i><b>2.12</b> Boxplots</a></li>
+<li class="chapter" data-level="2.13" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---quantiles-percentiles-and-boxplots"><i class="fa fa-check"></i><b>2.13</b> Assessment - Quantiles, percentiles, and boxplots</a></li>
+<li class="chapter" data-level="2.14" data-path="section-1-overview.html"><a href="section-1-overview.html#distribution-of-female-heights"><i class="fa fa-check"></i><b>2.14</b> Distribution of Female Heights</a></li>
+<li class="chapter" data-level="2.15" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---robust-summaries-with-outliers"><i class="fa fa-check"></i><b>2.15</b> Assessment - Robust Summaries With Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#ggplot"><i class="fa fa-check"></i><b>3.1</b> ggplot</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#graph-components"><i class="fa fa-check"></i><b>3.2</b> Graph Components</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#creating-a-new-plot"><i class="fa fa-check"></i><b>3.3</b> Creating a New Plot</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#layers"><i class="fa fa-check"></i><b>3.4</b> Layers</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#tinkering"><i class="fa fa-check"></i><b>3.5</b> Tinkering</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#scales-labels-and-colors"><i class="fa fa-check"></i><b>3.6</b> Scales, Labels, and Colors</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#add-on-packages"><i class="fa fa-check"></i><b>3.7</b> Add-on Packages</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#other-examples"><i class="fa fa-check"></i><b>3.8</b> Other Examples</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---ggplot2"><i class="fa fa-check"></i><b>3.9</b> Assessment - ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#dplyr"><i class="fa fa-check"></i><b>4.1</b> dplyr</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#the-dot-placeholder"><i class="fa fa-check"></i><b>4.2</b> The Dot Placeholder</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#group-by"><i class="fa fa-check"></i><b>4.3</b> Group By</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#sorting-data-tables"><i class="fa fa-check"></i><b>4.4</b> Sorting Data Tables</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---summarizing-with-dplyr"><i class="fa fa-check"></i><b>4.5</b> Assessment - Summarizing with dplyr</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#case-study-trends-in-world-health-and-economics"><i class="fa fa-check"></i><b>5.1</b> Case Study: Trends in World Health and Economics</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#gapminder-dataset"><i class="fa fa-check"></i><b>5.2</b> Gapminder Dataset</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#life-expectancy-and-fertility-rates"><i class="fa fa-check"></i><b>5.3</b> Life Expectancy and Fertility Rates</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#faceting"><i class="fa fa-check"></i><b>5.4</b> Faceting</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#time-series-plots"><i class="fa fa-check"></i><b>5.5</b> Time Series Plots</a></li>
+<li class="chapter" data-level="5.6" data-path="section-4-overview.html"><a href="section-4-overview.html#transformations"><i class="fa fa-check"></i><b>5.6</b> Transformations</a></li>
+<li class="chapter" data-level="5.7" data-path="section-4-overview.html"><a href="section-4-overview.html#stratify-and-boxplot"><i class="fa fa-check"></i><b>5.7</b> Stratify and Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="section-4-overview.html"><a href="section-4-overview.html#comparing-distributions"><i class="fa fa-check"></i><b>5.8</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="5.9" data-path="section-4-overview.html"><a href="section-4-overview.html#density-plots"><i class="fa fa-check"></i><b>5.9</b> Density Plots</a></li>
+<li class="chapter" data-level="5.10" data-path="section-4-overview.html"><a href="section-4-overview.html#ecological-fallacy"><i class="fa fa-check"></i><b>5.10</b> Ecological Fallacy</a></li>
+<li class="chapter" data-level="5.11" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---exploring-the-gapminder-dataset"><i class="fa fa-check"></i><b>5.11</b> Assessment - Exploring the Gapminder Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#introduction-to-data-visualization-principles"><i class="fa fa-check"></i><b>6.1</b> Introduction to Data Visualization Principles</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-data-using-visual-cues"><i class="fa fa-check"></i><b>6.2</b> Encoding Data Using Visual Cues</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#know-when-to-include-zero"><i class="fa fa-check"></i><b>6.3</b> Know When to Include Zero</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#do-not-distort-quantities"><i class="fa fa-check"></i><b>6.4</b> Do Not Distort Quantities</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#order-by-a-meaningful-value"><i class="fa fa-check"></i><b>6.5</b> Order by a Meaningful Value</a></li>
+<li class="chapter" data-level="6.6" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-1"><i class="fa fa-check"></i><b>6.6</b> Assessment - Data Visualization Principles, Part 1</a></li>
+<li class="chapter" data-level="6.7" data-path="section-5-overview.html"><a href="section-5-overview.html#show-the-data"><i class="fa fa-check"></i><b>6.7</b> Show the Data</a></li>
+<li class="chapter" data-level="6.8" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-use-common-axes"><i class="fa fa-check"></i><b>6.8</b> Ease Comparisons: Use Common Axes</a></li>
+<li class="chapter" data-level="6.9" data-path="section-5-overview.html"><a href="section-5-overview.html#consider-transformations"><i class="fa fa-check"></i><b>6.9</b> Consider Transformations</a></li>
+<li class="chapter" data-level="6.10" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-compared-visual-cues-should-be-adjacent"><i class="fa fa-check"></i><b>6.10</b> Ease Comparisons: Compared Visual Cues Should Be Adjacent</a></li>
+<li class="chapter" data-level="6.11" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-2"><i class="fa fa-check"></i><b>6.11</b> Assessment - Data Visualization Principles, Part 2</a></li>
+<li class="chapter" data-level="6.12" data-path="section-5-overview.html"><a href="section-5-overview.html#slope-charts"><i class="fa fa-check"></i><b>6.12</b> Slope Charts</a></li>
+<li class="chapter" data-level="6.13" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-a-third-variable"><i class="fa fa-check"></i><b>6.13</b> Encoding a Third Variable</a></li>
+<li class="chapter" data-level="6.14" data-path="section-5-overview.html"><a href="section-5-overview.html#case-study-vaccines"><i class="fa fa-check"></i><b>6.14</b> Case Study: Vaccines</a></li>
+<li class="chapter" data-level="6.15" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-pseudo-and-gratuitous-3d-plots"><i class="fa fa-check"></i><b>6.15</b> Avoid Pseudo and Gratuitous 3D Plots</a></li>
+<li class="chapter" data-level="6.16" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-too-many-significant-digits"><i class="fa fa-check"></i><b>6.16</b> Avoid Too Many Significant Digits</a></li>
+<li class="chapter" data-level="6.17" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-3"><i class="fa fa-check"></i><b>6.17</b> Assessment - Data Visualization Principles, Part 3</a></li>
+<li class="chapter" data-level="6.18" data-path="section-5-overview.html"><a href="section-5-overview.html#titanic-survival-exercises"><i class="fa fa-check"></i><b>6.18</b> Titanic Survival Exercises</a></li>
+<li class="chapter" data-level="6.19" data-path="section-5-overview.html"><a href="section-5-overview.html#properties-of-stars-exercises"><i class="fa fa-check"></i><b>6.19</b> Properties of Stars Exercises</a></li>
+<li class="chapter" data-level="6.20" data-path="section-5-overview.html"><a href="section-5-overview.html#climate-change-exercises"><i class="fa fa-check"></i><b>6.20</b> Climate Change Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-5-overview" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Section 5 Overview</h1>
+<p>Section 5 covers some general principles that can serve as guides for effective data visualization.</p>
+<p>After completing Section 5, you will:</p>
+<ul>
+<li>understand basic principles of effective data visualization.</li>
+<li>understand the importance of keeping your goal in mind when deciding on a visualization approach.</li>
+<li>understand principles for encoding data, including position, aligned lengths, angles, area, brightness, and color hue.</li>
+<li>know when to include the number zero in visualizations.</li>
+<li>be able to use techniques to ease comparisons, such as using common axes, putting visual cues to be compared adjacent to one another, and using color effectively.</li>
+</ul>
+<div id="introduction-to-data-visualization-principles" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction to Data Visualization Principles</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>We aim to provide some general guidelines for effective data visualization.</li>
+<li>We show examples of plot styles to avoid, discuss how to improve them, and use these examples to explain research-based principles for effective visualization.</li>
+<li>When choosing a visualization approach, keep your goal and audience in mind.</li>
+</ul>
+</div>
+<div id="encoding-data-using-visual-cues" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Encoding Data Using Visual Cues</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#encoding-data-using-visual-cues">here</a></p>
+<p>You can learn more about barplots in the textbook section on <a href="https://rafalab.github.io/dsbook/distributions.html#barplots">barplots</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Visual cues for encoding data include position, length, angle, area, brightness and color hue.</li>
+<li>Position and length are the preferred way to display quantities, followed by angles, which are preferred over area. Brightness and color are even harder to quantify but can sometimes be useful.</li>
+<li>Pie charts represent visual cues as both angles and area, while donut charts use only area. Humans are not good at visually quantifying angles and are even worse at quantifying area. Therefore pie and donut charts should be avoided - use a bar plot instead. If you must make a pie chart, include percentages as labels.</li>
+<li>Bar plots represent visual cues as position and length. Humans are good at visually quantifying linear measures, making bar plots a strong alternative to pie or donut charts.</li>
+</ul>
+</div>
+<div id="know-when-to-include-zero" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Know When to Include Zero</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#know-when-to-include-0">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>When using bar plots, always start at 0. It is deceptive not to start at 0 because bar plots imply length is proportional to the quantity displayed. Cutting off the y-axis can make differences look bigger than they actually are.</li>
+<li>When using position rather than length, it is not necessary to include 0 (scatterplot, dot plot, boxplot).</li>
+</ul>
+</div>
+<div id="do-not-distort-quantities" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Do Not Distort Quantities</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#do-not-distort-quantities">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Make sure your visualizations encode the correct quantities.</li>
+<li>For example, if you are using a plot that relies on circle area, make sure the area (rather than the radius) is proportional to the quantity.</li>
+</ul>
+</div>
+<div id="order-by-a-meaningful-value" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> Order by a Meaningful Value</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#order-categories-by-a-meaningful-value">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>It is easiest to visually extract information from a plot when categories are ordered by a meaningful value. The exact value on which to order will depend on your data and the message you wish to convey with your plot.</li>
+<li>The default ordering for categories is alphabetical if the categories are strings or by factor level if factors. However, we rarely want alphabetical order.</li>
+</ul>
+</div>
+<div id="assessment---data-visualization-principles-part-1" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> Assessment - Data Visualization Principles, Part 1</h2>
+<p>1: Pie charts are appropriate:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. When we want to display percentages.</li>
+<li><input type="checkbox" disabled="" />
+B. When ggplot2 is not available.</li>
+<li><input type="checkbox" disabled="" />
+C. When I am in a bakery.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Never. Barplots and tables are always better.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>What is the problem with this plot?</li>
+</ol>
+<div class="figure">
+<img src="images/Results%20of%20Presidential%20Election.png" alt="" />
+<p class="caption">Result of Presidential Election 2016</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. The values are wrong. The final vote was 306 to 232.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. The axis does not start at 0. Judging by the length, it appears Trump received 3 times as many votes when in fact it was about 30% more.</li>
+<li><input type="checkbox" disabled="" />
+C. The colors should be the same.</li>
+<li><input type="checkbox" disabled="" />
+D. Percentages should be shown as a pie chart.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Take a look at the following two plots. They show the same information: rates of measles by state in the United States for 1928.</li>
+</ol>
+<div class="figure">
+<img src="images/Rates%20of%20measles.png" alt="" />
+<p class="caption">Rates of measles in the US for 1928</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Both plots provide the same information, so they are equally good.</li>
+<li><input type="checkbox" disabled="" />
+B. The plot on the left is better because it orders the states alphabetically.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. The plot on the right is better because it orders the states by disease rate so we can quickly see the states with highest and lowest rates.</li>
+<li><input type="checkbox" disabled="" />
+D. Both plots should be pie charts instead.</li>
+</ul>
+</div>
+<div id="show-the-data" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> Show the Data</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#show-the-data-1">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>A dynamite plot - a bar graph of group averages with error bars denoting standard errors - provides almost no information about a distribution.</li>
+<li>By showing the data, you provide viewers extra information about distributions.
+Jitter is adding a small random shift to each point in order to minimize the number of overlapping points. To add jitter, use the <code>geom_jitter</code> geometry instead of <code>geom_point</code>.</li>
+<li>Alpha blending is making points somewhat transparent, helping visualize the density of overlapping points. Add an <code>alpha</code> argument to the geometry.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="section-5-overview.html#cb287-1" aria-hidden="true"></a><span class="co"># dot plot showing the data</span></span>
+<span id="cb287-2"><a href="section-5-overview.html#cb287-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(sex, height)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="section-5-overview.html#cb288-1" aria-hidden="true"></a><span class="co"># jittered, alpha blended point plot</span></span>
+<span id="cb288-2"><a href="section-5-overview.html#cb288-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(sex, height)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-140-2.png" width="672" /></p>
+</div>
+<div id="ease-comparisons-use-common-axes" class="section level2" number="6.8">
+<h2><span class="header-section-number">6.8</span> Ease Comparisons: Use Common Axes</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#ease-comparisons">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Ease comparisons by keeping axes the same when comparing data across multiple plots.</li>
+<li>Align plots vertically to see horizontal changes. Align plots horizontally to see vertical changes.</li>
+<li>Bar plots are useful for showing one number but not useful for showing distributions.</li>
+</ul>
+</div>
+<div id="consider-transformations" class="section level2" number="6.9">
+<h2><span class="header-section-number">6.9</span> Consider Transformations</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#consider-transformations">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Use transformations when warranted to ease visual interpretation.</li>
+<li>The log transformation is useful for data with multiplicative changes. The logistic transformation is useful for fold changes in odds. The square root transformation is useful for count data.</li>
+<li>We learned how to apply transformations earlier in the course.</li>
+</ul>
+</div>
+<div id="ease-comparisons-compared-visual-cues-should-be-adjacent" class="section level2" number="6.10">
+<h2><span class="header-section-number">6.10</span> Ease Comparisons: Compared Visual Cues Should Be Adjacent</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#visual-cues-to-be-compared-should-be-adjacent">Compared visual cues being adjacent</a></li>
+<li><a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#use-color">Using color</a></li>
+<li><a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#think-of-the-color-blind">Considering the color blind</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>When two groups are to be compared, it is optimal to place them adjacent in the plot.</li>
+<li>Use color to encode groups to be compared.</li>
+<li>Consider using a color blind friendly palette.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="section-5-overview.html#cb289-1" aria-hidden="true"></a>color_blind_friendly_cols &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;#999999&quot;</span>, <span class="st">&quot;#E69F00&quot;</span>, <span class="st">&quot;#56B4E9&quot;</span>, <span class="st">&quot;#009E73&quot;</span>, <span class="st">&quot;#F0E442&quot;</span>, <span class="st">&quot;#0072B2&quot;</span>, <span class="st">&quot;#D55E00&quot;</span>, <span class="st">&quot;#CC79A7&quot;</span>)</span>
+<span id="cb289-2"><a href="section-5-overview.html#cb289-2" aria-hidden="true"></a></span>
+<span id="cb289-3"><a href="section-5-overview.html#cb289-3" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">y =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">8</span>, <span class="dt">col =</span> <span class="kw">as.character</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb289-4"><a href="section-5-overview.html#cb289-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, y, <span class="dt">color =</span> col)) <span class="op">+</span></span>
+<span id="cb289-5"><a href="section-5-overview.html#cb289-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">5</span>)</span>
+<span id="cb289-6"><a href="section-5-overview.html#cb289-6" aria-hidden="true"></a>p1 <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> color_blind_friendly_cols)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
+</div>
+<div id="assessment---data-visualization-principles-part-2" class="section level2" number="6.11">
+<h2><span class="header-section-number">6.11</span> Assessment - Data Visualization Principles, Part 2</h2>
+<ol style="list-style-type: decimal">
+<li>To make the plot on the right in the exercise from the last set of assessments, we had to reorder the levels of the states’ variables.</li>
+</ol>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="section-5-overview.html#cb290-1" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb290-2"><a href="section-5-overview.html#cb290-2" aria-hidden="true"></a><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1967</span> <span class="op">&amp;</span><span class="st"> </span>disease<span class="op">==</span><span class="st">&quot;Measles&quot;</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(population)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span> <span class="op">*</span><span class="st"> </span><span class="dv">52</span> <span class="op">/</span><span class="st"> </span>weeks_reporting)</span>
+<span id="cb290-3"><a href="section-5-overview.html#cb290-3" aria-hidden="true"></a>state &lt;-<span class="st"> </span>dat<span class="op">$</span>state </span>
+<span id="cb290-4"><a href="section-5-overview.html#cb290-4" aria-hidden="true"></a>rate &lt;-<span class="st"> </span>dat<span class="op">$</span>count<span class="op">/</span>(dat<span class="op">$</span>population<span class="op">/</span><span class="dv">10000</span>)<span class="op">*</span>(<span class="dv">52</span><span class="op">/</span>dat<span class="op">$</span>weeks_reporting)</span>
+<span id="cb290-5"><a href="section-5-overview.html#cb290-5" aria-hidden="true"></a>state =<span class="st"> </span><span class="kw">reorder</span>(state, rate)</span>
+<span id="cb290-6"><a href="section-5-overview.html#cb290-6" aria-hidden="true"></a><span class="kw">levels</span>(state)</span></code></pre></div>
+<pre><code>##  [1] &quot;Georgia&quot;              &quot;District Of Columbia&quot; &quot;Connecticut&quot;          &quot;Minnesota&quot;            &quot;Louisiana&quot;            &quot;New Hampshire&quot;        &quot;Maryland&quot;            
+##  [8] &quot;Kansas&quot;               &quot;New York&quot;             &quot;Pennsylvania&quot;         &quot;Rhode Island&quot;         &quot;Massachusetts&quot;        &quot;Missouri&quot;             &quot;New Jersey&quot;          
+## [15] &quot;South Dakota&quot;         &quot;Vermont&quot;              &quot;Delaware&quot;             &quot;Ohio&quot;                 &quot;Illinois&quot;             &quot;Michigan&quot;             &quot;Indiana&quot;             
+## [22] &quot;North Carolina&quot;       &quot;South Carolina&quot;       &quot;Hawaii&quot;               &quot;Maine&quot;                &quot;California&quot;           &quot;Florida&quot;              &quot;Iowa&quot;                
+## [29] &quot;Mississippi&quot;          &quot;Oklahoma&quot;             &quot;Nebraska&quot;             &quot;Utah&quot;                 &quot;Alabama&quot;              &quot;Kentucky&quot;             &quot;Wisconsin&quot;           
+## [36] &quot;Montana&quot;              &quot;Virginia&quot;             &quot;Alaska&quot;               &quot;Tennessee&quot;            &quot;Idaho&quot;                &quot;New Mexico&quot;           &quot;Arizona&quot;             
+## [43] &quot;Nevada&quot;               &quot;Arkansas&quot;             &quot;Wyoming&quot;              &quot;Colorado&quot;             &quot;West Virginia&quot;        &quot;Oregon&quot;               &quot;Texas&quot;               
+## [50] &quot;North Dakota&quot;         &quot;Washington&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Now we are going to customize this plot a little more by creating a rate variable and reordering by that variable instead.</li>
+</ol>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="section-5-overview.html#cb292-1" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1967</span> <span class="op">&amp;</span><span class="st"> </span>disease<span class="op">==</span><span class="st">&quot;Measles&quot;</span> <span class="op">&amp;</span><span class="st"> </span>count<span class="op">&gt;</span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(population)) <span class="op">%&gt;%</span></span>
+<span id="cb292-2"><a href="section-5-overview.html#cb292-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span> <span class="op">*</span><span class="st"> </span><span class="dv">52</span> <span class="op">/</span><span class="st"> </span>weeks_reporting)</span>
+<span id="cb292-3"><a href="section-5-overview.html#cb292-3" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, rate)) <span class="op">+</span></span>
+<span id="cb292-4"><a href="section-5-overview.html#cb292-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
+<span id="cb292-5"><a href="section-5-overview.html#cb292-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Say we are interested in comparing gun homicide rates across regions of the US.</li>
+</ol>
+<p>We see this plot and decide to move to a state in the western region.</p>
+<p>What is the main problem with this interpretation?</p>
+<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="section-5-overview.html#cb293-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb293-2"><a href="section-5-overview.html#cb293-2" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb293-3"><a href="section-5-overview.html#cb293-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb293-4"><a href="section-5-overview.html#cb293-4" aria-hidden="true"></a><span class="kw">data</span>(<span class="st">&quot;murders&quot;</span>)</span>
+<span id="cb293-5"><a href="section-5-overview.html#cb293-5" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb293-6"><a href="section-5-overview.html#cb293-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
+<span id="cb293-7"><a href="section-5-overview.html#cb293-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(rate)) <span class="op">%&gt;%</span></span>
+<span id="cb293-8"><a href="section-5-overview.html#cb293-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">region =</span> <span class="kw">factor</span>(region)) <span class="op">%&gt;%</span></span>
+<span id="cb293-9"><a href="section-5-overview.html#cb293-9" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(region, avg)) <span class="op">+</span></span>
+<span id="cb293-10"><a href="section-5-overview.html#cb293-10" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
+<span id="cb293-11"><a href="section-5-overview.html#cb293-11" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Murder Rate Average&quot;</span>)</span></code></pre></div>
+<div class="figure">
+<img src="images/Gun%20homicide%20rates.png" alt="" />
+<p class="caption">Rates of measles in the US for 1928</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. The categories are ordered alphabetically.</li>
+<li><input type="checkbox" disabled="" />
+B. The graph does not show standard errors.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. It does not show all the data. We do not see the variability within a region and it’s possible that the safest states are not in the West.</li>
+<li><input type="checkbox" disabled="" />
+D. The Northeast has the lowest average.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>To further investigate whether moving to the western region is a wise decision, let’s make a box plot of murder rates by region, showing all points.</li>
+</ol>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="section-5-overview.html#cb294-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">region =</span> <span class="kw">reorder</span>(region, rate, <span class="dt">FUN =</span> median)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(region, rate)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
+</div>
+<div id="slope-charts" class="section level2" number="6.12">
+<h2><span class="header-section-number">6.12</span> Slope Charts</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#plots-for-two-variables">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Consider using a slope chart or Bland-Altman plot when comparing one variable at two different time points, especially for a small number of observations.</li>
+<li>Slope charts use angle to encode change. Use <code>geom_line</code> to create slope charts. It is useful when comparing a small number of observations.</li>
+<li>The Bland-Altman plot (Tukey mean difference plot, MA plot) graphs the difference between conditions on the y-axis and the mean between conditions on the x-axis. It is more appropriate for large numbers of observations than slope charts.</li>
+</ul>
+<p><em>Code: Slope chart</em></p>
+<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="section-5-overview.html#cb295-1" aria-hidden="true"></a>west &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Western Europe&quot;</span>, <span class="st">&quot;Northern Europe&quot;</span>, <span class="st">&quot;Southern Europe&quot;</span>, <span class="st">&quot;Northern America&quot;</span>, <span class="st">&quot;Australia and New Zealand&quot;</span>)</span>
+<span id="cb295-2"><a href="section-5-overview.html#cb295-2" aria-hidden="true"></a></span>
+<span id="cb295-3"><a href="section-5-overview.html#cb295-3" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb295-4"><a href="section-5-overview.html#cb295-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">2010</span>, <span class="dv">2015</span>) <span class="op">&amp;</span><span class="st"> </span>region <span class="op">%in%</span><span class="st"> </span>west <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(life_expectancy) <span class="op">&amp;</span><span class="st"> </span>population <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">7</span>)</span>
+<span id="cb295-5"><a href="section-5-overview.html#cb295-5" aria-hidden="true"></a></span>
+<span id="cb295-6"><a href="section-5-overview.html#cb295-6" aria-hidden="true"></a>dat <span class="op">%&gt;%</span></span>
+<span id="cb295-7"><a href="section-5-overview.html#cb295-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">location =</span> <span class="kw">ifelse</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2010</span>, <span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb295-8"><a href="section-5-overview.html#cb295-8" aria-hidden="true"></a>                 <span class="dt">location =</span> <span class="kw">ifelse</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2015</span> <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;United Kingdom&quot;</span>, <span class="st">&quot;Portugal&quot;</span>), location <span class="op">+</span><span class="st"> </span><span class="fl">0.22</span>, location),</span>
+<span id="cb295-9"><a href="section-5-overview.html#cb295-9" aria-hidden="true"></a>                 <span class="dt">hjust =</span> <span class="kw">ifelse</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2010</span>, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb295-10"><a href="section-5-overview.html#cb295-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">as.factor</span>(year)) <span class="op">%&gt;%</span></span>
+<span id="cb295-11"><a href="section-5-overview.html#cb295-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, life_expectancy, <span class="dt">group =</span> country)) <span class="op">+</span></span>
+<span id="cb295-12"><a href="section-5-overview.html#cb295-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">color =</span> country), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb295-13"><a href="section-5-overview.html#cb295-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">label =</span> country, <span class="dt">hjust =</span> hjust), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
+<span id="cb295-14"><a href="section-5-overview.html#cb295-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb295-15"><a href="section-5-overview.html#cb295-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>)    </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
+<p><em>Code: Bland-Altman plot</em></p>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="section-5-overview.html#cb296-1" aria-hidden="true"></a>dat <span class="op">%&gt;%</span></span>
+<span id="cb296-2"><a href="section-5-overview.html#cb296-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">paste0</span>(<span class="st">&quot;life_expectancy_&quot;</span>, year)) <span class="op">%&gt;%</span></span>
+<span id="cb296-3"><a href="section-5-overview.html#cb296-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(country, year, life_expectancy) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(year, life_expectancy) <span class="op">%&gt;%</span></span>
+<span id="cb296-4"><a href="section-5-overview.html#cb296-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">average =</span> (life_expectancy_<span class="dv">2015</span> <span class="op">+</span><span class="st"> </span>life_expectancy_<span class="dv">2010</span>)<span class="op">/</span><span class="dv">2</span>,</span>
+<span id="cb296-5"><a href="section-5-overview.html#cb296-5" aria-hidden="true"></a>                <span class="dt">difference =</span> life_expectancy_<span class="dv">2015</span> <span class="op">-</span><span class="st"> </span>life_expectancy_<span class="dv">2010</span>) <span class="op">%&gt;%</span></span>
+<span id="cb296-6"><a href="section-5-overview.html#cb296-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(average, difference, <span class="dt">label =</span> country)) <span class="op">+</span></span>
+<span id="cb296-7"><a href="section-5-overview.html#cb296-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb296-8"><a href="section-5-overview.html#cb296-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text_repel</span>() <span class="op">+</span></span>
+<span id="cb296-9"><a href="section-5-overview.html#cb296-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>(<span class="dt">lty =</span> <span class="dv">2</span>) <span class="op">+</span></span>
+<span id="cb296-10"><a href="section-5-overview.html#cb296-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Average of 2010 and 2015&quot;</span>) <span class="op">+</span></span>
+<span id="cb296-11"><a href="section-5-overview.html#cb296-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Difference between 2015 and 2010&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+</div>
+<div id="encoding-a-third-variable" class="section level2" number="6.13">
+<h2><span class="header-section-number">6.13</span> Encoding a Third Variable</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#encoding-a-third-variable">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Encode a categorical third variable on a scatterplot using color hue or shape. Use the shape argument to control shape.</li>
+<li>Encode a continuous third variable on a using color intensity or size.</li>
+</ul>
+</div>
+<div id="case-study-vaccines" class="section level2" number="6.14">
+<h2><span class="header-section-number">6.14</span> Case Study: Vaccines</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#vaccines">here</a>. Information on color palettes can be found in the textbook section <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#encoding-a-third-variable">on encoding a third variable</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Vaccines save millions of lives, but misinformation has led some to question the safety of vaccines. The data support vaccines as safe and effective. We visualize data about measles incidence in order to demonstrate the impact of vaccination programs on disease rate.</li>
+<li>The <strong>RColorBrewer</strong> package offers several color palettes. Sequential color palettes are best suited for data that span from high to low. Diverging color palettes are best suited for data that are centered and diverge towards high or low values.</li>
+<li>The <code>geom_tile</code> geometry creates a grid of colored tiles.</li>
+<li>Position and length are stronger cues than color for numeric values, but color can be appropriate sometimes.</li>
+</ul>
+<p><em>Code: Tile plot of measles rate by year and state</em></p>
+<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="section-5-overview.html#cb297-1" aria-hidden="true"></a><span class="co"># import data and inspect</span></span>
+<span id="cb297-2"><a href="section-5-overview.html#cb297-2" aria-hidden="true"></a><span class="kw">str</span>(us_contagious_diseases)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    16065 obs. of  6 variables:
+##  $ disease        : Factor w/ 7 levels &quot;Hepatitis A&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ state          : Factor w/ 51 levels &quot;Alabama&quot;,&quot;Alaska&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ year           : num  1966 1967 1968 1969 1970 ...
+##  $ weeks_reporting: num  50 49 52 49 51 51 45 45 45 46 ...
+##  $ count          : num  321 291 314 380 413 378 342 467 244 286 ...
+##  $ population     : num  3345787 3364130 3386068 3412450 3444165 ...</code></pre>
+<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="section-5-overview.html#cb299-1" aria-hidden="true"></a><span class="co"># assign dat to the per 10,000 rate of measles, removing Alaska and Hawaii and adjusting for weeks reporting</span></span>
+<span id="cb299-2"><a href="section-5-overview.html#cb299-2" aria-hidden="true"></a>the_disease &lt;-<span class="st"> &quot;Measles&quot;</span></span>
+<span id="cb299-3"><a href="section-5-overview.html#cb299-3" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb299-4"><a href="section-5-overview.html#cb299-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span>state <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Hawaii&quot;</span>, <span class="st">&quot;Alaska&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>disease <span class="op">==</span><span class="st"> </span>the_disease) <span class="op">%&gt;%</span></span>
+<span id="cb299-5"><a href="section-5-overview.html#cb299-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span> <span class="op">*</span><span class="st"> </span><span class="dv">52</span><span class="op">/</span>weeks_reporting) <span class="op">%&gt;%</span></span>
+<span id="cb299-6"><a href="section-5-overview.html#cb299-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate))</span>
+<span id="cb299-7"><a href="section-5-overview.html#cb299-7" aria-hidden="true"></a></span>
+<span id="cb299-8"><a href="section-5-overview.html#cb299-8" aria-hidden="true"></a><span class="co"># plot disease rates per year in California</span></span>
+<span id="cb299-9"><a href="section-5-overview.html#cb299-9" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;California&quot;</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(rate)) <span class="op">%&gt;%</span></span>
+<span id="cb299-10"><a href="section-5-overview.html#cb299-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, rate)) <span class="op">+</span></span>
+<span id="cb299-11"><a href="section-5-overview.html#cb299-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb299-12"><a href="section-5-overview.html#cb299-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Cases per 10,000&quot;</span>) <span class="op">+</span></span>
+<span id="cb299-13"><a href="section-5-overview.html#cb299-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="section-5-overview.html#cb300-1" aria-hidden="true"></a><span class="co"># tile plot of disease rate by state and year</span></span>
+<span id="cb300-2"><a href="section-5-overview.html#cb300-2" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, state, <span class="dt">fill=</span>rate)) <span class="op">+</span></span>
+<span id="cb300-3"><a href="section-5-overview.html#cb300-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;grey50&quot;</span>) <span class="op">+</span></span>
+<span id="cb300-4"><a href="section-5-overview.html#cb300-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">expand =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>)) <span class="op">+</span></span>
+<span id="cb300-5"><a href="section-5-overview.html#cb300-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_fill_gradientn</span>(<span class="dt">colors =</span> RColorBrewer<span class="op">::</span><span class="kw">brewer.pal</span>(<span class="dv">9</span>, <span class="st">&quot;Reds&quot;</span>), <span class="dt">trans =</span> <span class="st">&quot;sqrt&quot;</span>) <span class="op">+</span></span>
+<span id="cb300-6"><a href="section-5-overview.html#cb300-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span></span>
+<span id="cb300-7"><a href="section-5-overview.html#cb300-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme</span>(<span class="dt">panel.grid =</span> <span class="kw">element_blank</span>()) <span class="op">+</span></span>
+<span id="cb300-8"><a href="section-5-overview.html#cb300-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(the_disease) <span class="op">+</span></span>
+<span id="cb300-9"><a href="section-5-overview.html#cb300-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb300-10"><a href="section-5-overview.html#cb300-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-148-2.png" width="672" /></p>
+<p><em>Code: Line plot of measles rate by year and state</em></p>
+<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="section-5-overview.html#cb301-1" aria-hidden="true"></a><span class="co"># compute US average measles rate by year</span></span>
+<span id="cb301-2"><a href="section-5-overview.html#cb301-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb301-3"><a href="section-5-overview.html#cb301-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(disease <span class="op">==</span><span class="st"> </span>the_disease) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></span>
+<span id="cb301-4"><a href="section-5-overview.html#cb301-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">us_rate =</span> <span class="kw">sum</span>(count, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)<span class="op">/</span><span class="kw">sum</span>(population, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)<span class="op">*</span><span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="section-5-overview.html#cb303-1" aria-hidden="true"></a><span class="co"># make line plot of measles rate by year by state</span></span>
+<span id="cb303-2"><a href="section-5-overview.html#cb303-2" aria-hidden="true"></a>dat <span class="op">%&gt;%</span></span>
+<span id="cb303-3"><a href="section-5-overview.html#cb303-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(rate)) <span class="op">%&gt;%</span></span>
+<span id="cb303-4"><a href="section-5-overview.html#cb303-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb303-5"><a href="section-5-overview.html#cb303-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(year, rate, <span class="dt">group =</span> state), <span class="dt">color =</span> <span class="st">&quot;grey50&quot;</span>, </span>
+<span id="cb303-6"><a href="section-5-overview.html#cb303-6" aria-hidden="true"></a>        <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb303-7"><a href="section-5-overview.html#cb303-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(year, us_rate), <span class="dt">data =</span> avg, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb303-8"><a href="section-5-overview.html#cb303-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;sqrt&quot;</span>, <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">25</span>, <span class="dv">125</span>, <span class="dv">300</span>)) <span class="op">+</span></span>
+<span id="cb303-9"><a href="section-5-overview.html#cb303-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cases per 10,000 by state&quot;</span>) <span class="op">+</span></span>
+<span id="cb303-10"><a href="section-5-overview.html#cb303-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb303-11"><a href="section-5-overview.html#cb303-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb303-12"><a href="section-5-overview.html#cb303-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1955</span>, <span class="dt">y =</span> <span class="dv">50</span>),</span>
+<span id="cb303-13"><a href="section-5-overview.html#cb303-13" aria-hidden="true"></a>        <span class="dt">mapping =</span> <span class="kw">aes</span>(x, y, <span class="dt">label =</span> <span class="st">&quot;US average&quot;</span>), <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb303-14"><a href="section-5-overview.html#cb303-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+</div>
+<div id="avoid-pseudo-and-gratuitous-3d-plots" class="section level2" number="6.15">
+<h2><span class="header-section-number">6.15</span> Avoid Pseudo and Gratuitous 3D Plots</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#avoid-pseudo-three-dimensional-plots">here</a></p>
+<p><strong>Key point</strong></p>
+<p>In general, pseudo-3D plots and gratuitous 3D plots only add confusion. Use regular 2D plots instead.</p>
+</div>
+<div id="avoid-too-many-significant-digits" class="section level2" number="6.16">
+<h2><span class="header-section-number">6.16</span> Avoid Too Many Significant Digits</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/data-visualization-principles.html#avoid-too-many-significant-digits">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In tables, avoid using too many significant digits. Too many digits can distract from the meaning of your data.</li>
+<li>Reduce the number of significant digits globally by setting an option. For example, <code>options(digits = 3)</code> will cause all future computations that session to have 3 significant digits.</li>
+<li>Reduce the number of digits locally using <code>round</code> or <code>signif</code>.</li>
+</ul>
+</div>
+<div id="assessment---data-visualization-principles-part-3" class="section level2" number="6.17">
+<h2><span class="header-section-number">6.17</span> Assessment - Data Visualization Principles, Part 3</h2>
+<ol style="list-style-type: decimal">
+<li>The sample code given creates a tile plot showing the rate of measles cases per population. We are going to modify the tile plot to look at smallpox cases instead.</li>
+</ol>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="section-5-overview.html#cb304-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(RColorBrewer)) <span class="kw">install.packages</span>(<span class="st">&quot;RColorBrewer&quot;</span>)</span>
+<span id="cb304-2"><a href="section-5-overview.html#cb304-2" aria-hidden="true"></a></span>
+<span id="cb304-3"><a href="section-5-overview.html#cb304-3" aria-hidden="true"></a><span class="kw">library</span>(RColorBrewer)</span>
+<span id="cb304-4"><a href="section-5-overview.html#cb304-4" aria-hidden="true"></a></span>
+<span id="cb304-5"><a href="section-5-overview.html#cb304-5" aria-hidden="true"></a>the_disease =<span class="st"> &quot;Smallpox&quot;</span></span>
+<span id="cb304-6"><a href="section-5-overview.html#cb304-6" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb304-7"><a href="section-5-overview.html#cb304-7" aria-hidden="true"></a><span class="st">   </span><span class="kw">filter</span>(<span class="op">!</span>state<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Hawaii&quot;</span>,<span class="st">&quot;Alaska&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>disease <span class="op">==</span><span class="st"> </span>the_disease <span class="op">&amp;</span><span class="st"> </span>weeks_reporting <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb304-8"><a href="section-5-overview.html#cb304-8" aria-hidden="true"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb304-9"><a href="section-5-overview.html#cb304-9" aria-hidden="true"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate))</span>
+<span id="cb304-10"><a href="section-5-overview.html#cb304-10" aria-hidden="true"></a></span>
+<span id="cb304-11"><a href="section-5-overview.html#cb304-11" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, state, <span class="dt">fill =</span> rate)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-12"><a href="section-5-overview.html#cb304-12" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;grey50&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-13"><a href="section-5-overview.html#cb304-13" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_x_continuous</span>(<span class="dt">expand=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-14"><a href="section-5-overview.html#cb304-14" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_fill_gradientn</span>(<span class="dt">colors =</span> <span class="kw">brewer.pal</span>(<span class="dv">9</span>, <span class="st">&quot;Reds&quot;</span>), <span class="dt">trans =</span> <span class="st">&quot;sqrt&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-15"><a href="section-5-overview.html#cb304-15" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme_minimal</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-16"><a href="section-5-overview.html#cb304-16" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">panel.grid =</span> <span class="kw">element_blank</span>()) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-17"><a href="section-5-overview.html#cb304-17" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(the_disease) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-18"><a href="section-5-overview.html#cb304-18" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb304-19"><a href="section-5-overview.html#cb304-19" aria-hidden="true"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>The sample code given creates a time series plot showing the rate of measles cases per population by state.</li>
+</ol>
+<p>We are going to again modify this plot to look at smallpox cases instead.</p>
+<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="section-5-overview.html#cb305-1" aria-hidden="true"></a>the_disease =<span class="st"> &quot;Smallpox&quot;</span></span>
+<span id="cb305-2"><a href="section-5-overview.html#cb305-2" aria-hidden="true"></a>dat &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb305-3"><a href="section-5-overview.html#cb305-3" aria-hidden="true"></a><span class="st">   </span><span class="kw">filter</span>(<span class="op">!</span>state<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Hawaii&quot;</span>,<span class="st">&quot;Alaska&quot;</span>) <span class="op">&amp;</span><span class="st"> </span>disease <span class="op">==</span><span class="st"> </span>the_disease <span class="op">&amp;</span><span class="st"> </span>weeks_reporting <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span></span>
+<span id="cb305-4"><a href="section-5-overview.html#cb305-4" aria-hidden="true"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">rate =</span> count <span class="op">/</span><span class="st"> </span>population <span class="op">*</span><span class="st"> </span><span class="dv">10000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb305-5"><a href="section-5-overview.html#cb305-5" aria-hidden="true"></a><span class="st">   </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate))</span>
+<span id="cb305-6"><a href="section-5-overview.html#cb305-6" aria-hidden="true"></a></span>
+<span id="cb305-7"><a href="section-5-overview.html#cb305-7" aria-hidden="true"></a>avg &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
+<span id="cb305-8"><a href="section-5-overview.html#cb305-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(disease<span class="op">==</span>the_disease) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></span>
+<span id="cb305-9"><a href="section-5-overview.html#cb305-9" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">us_rate =</span> <span class="kw">sum</span>(count, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)<span class="op">/</span><span class="kw">sum</span>(population, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)<span class="op">*</span><span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="section-5-overview.html#cb307-1" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb307-2"><a href="section-5-overview.html#cb307-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(year, rate, <span class="dt">group =</span> state),  <span class="dt">color =</span> <span class="st">&quot;grey50&quot;</span>, </span>
+<span id="cb307-3"><a href="section-5-overview.html#cb307-3" aria-hidden="true"></a>            <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">size =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb307-4"><a href="section-5-overview.html#cb307-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(year, us_rate),  <span class="dt">data =</span> avg, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb307-5"><a href="section-5-overview.html#cb307-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;sqrt&quot;</span>, <span class="dt">breaks =</span> <span class="kw">c</span>(<span class="dv">5</span>,<span class="dv">25</span>,<span class="dv">125</span>,<span class="dv">300</span>)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb307-6"><a href="section-5-overview.html#cb307-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Cases per 10,000 by state&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb307-7"><a href="section-5-overview.html#cb307-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb307-8"><a href="section-5-overview.html#cb307-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb307-9"><a href="section-5-overview.html#cb307-9" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x=</span><span class="dv">1955</span>, <span class="dt">y=</span><span class="dv">50</span>), <span class="dt">mapping =</span> <span class="kw">aes</span>(x, y, <span class="dt">label=</span><span class="st">&quot;US average&quot;</span>), <span class="dt">color=</span><span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb307-10"><a href="section-5-overview.html#cb307-10" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Now we are going to look at the rates of all diseases in one state.</li>
+</ol>
+<p>Again, you will be modifying the sample code to produce the desired plot.</p>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="section-5-overview.html#cb308-1" aria-hidden="true"></a>us_contagious_diseases <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(state<span class="op">==</span><span class="st">&quot;California&quot;</span> <span class="op">&amp;</span><span class="st"> </span>weeks_reporting <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb308-2"><a href="section-5-overview.html#cb308-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(year, disease) <span class="op">%&gt;%</span></span>
+<span id="cb308-3"><a href="section-5-overview.html#cb308-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(count)<span class="op">/</span><span class="kw">sum</span>(population)<span class="op">*</span><span class="dv">10000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb308-4"><a href="section-5-overview.html#cb308-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, rate, <span class="dt">color =</span> disease)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb308-5"><a href="section-5-overview.html#cb308-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## `summarise()` regrouping output by &#39;year&#39; (override with `.groups` argument)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Now we are going to make a time series plot for the rates of all diseases in the United States.</li>
+</ol>
+<p>For this exercise, we have provided less sample code - you can take a look at the previous exercise to get you started.</p>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="section-5-overview.html#cb310-1" aria-hidden="true"></a>us_contagious_diseases <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(population)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb310-2"><a href="section-5-overview.html#cb310-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(year, disease) <span class="op">%&gt;%</span></span>
+<span id="cb310-3"><a href="section-5-overview.html#cb310-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(count)<span class="op">/</span><span class="kw">sum</span>(population)<span class="op">*</span><span class="dv">10000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb310-4"><a href="section-5-overview.html#cb310-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, rate, <span class="dt">color =</span> disease)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb310-5"><a href="section-5-overview.html#cb310-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## `summarise()` regrouping output by &#39;year&#39; (override with `.groups` argument)</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-153-1.png" width="672" /></p>
+</div>
+<div id="titanic-survival-exercises" class="section level2" number="6.18">
+<h2><span class="header-section-number">6.18</span> Titanic Survival Exercises</h2>
+<p>Put all your new skills together to perform exploratory data analysis on a classic machine learning dataset: Titanic survival!</p>
+<p><strong>Background</strong></p>
+<p>The Titanic was a British ocean liner that struck an iceberg and sunk on its maiden voyage in 1912 from the United Kingdom to New York. More than 1,500 of the estimated 2,224 passengers and crew died in the accident, making this one of the largest maritime disasters ever outside of war. The ship carried a wide range of passengers of all ages and both genders, from luxury travelers in first-class to immigrants in the lower classes. However, not all passengers were equally likely to survive the accident. We use real data about a selection of 891 passengers to learn who was on the Titanic and which passengers were more likely to survive.</p>
+<p><strong>Libraries, Options, and Data</strong></p>
+<p>Define the titanic dataset starting from the <strong>titanic</strong> library with the following code:</p>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="section-5-overview.html#cb312-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(titanic)) <span class="kw">install.packages</span>(<span class="st">&quot;titanic&quot;</span>)</span>
+<span id="cb312-2"><a href="section-5-overview.html#cb312-2" aria-hidden="true"></a></span>
+<span id="cb312-3"><a href="section-5-overview.html#cb312-3" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)    <span class="co"># report 3 significant digits</span></span>
+<span id="cb312-4"><a href="section-5-overview.html#cb312-4" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb312-5"><a href="section-5-overview.html#cb312-5" aria-hidden="true"></a><span class="kw">library</span>(titanic)</span>
+<span id="cb312-6"><a href="section-5-overview.html#cb312-6" aria-hidden="true"></a>titanic &lt;-<span class="st"> </span>titanic_train <span class="op">%&gt;%</span></span>
+<span id="cb312-7"><a href="section-5-overview.html#cb312-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(Survived, Pclass, Sex, Age, SibSp, Parch, Fare) <span class="op">%&gt;%</span></span>
+<span id="cb312-8"><a href="section-5-overview.html#cb312-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">Survived =</span> <span class="kw">factor</span>(Survived),</span>
+<span id="cb312-9"><a href="section-5-overview.html#cb312-9" aria-hidden="true"></a>           <span class="dt">Pclass =</span> <span class="kw">factor</span>(Pclass),</span>
+<span id="cb312-10"><a href="section-5-overview.html#cb312-10" aria-hidden="true"></a>           <span class="dt">Sex =</span> <span class="kw">factor</span>(Sex))</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Variable Types</li>
+</ol>
+<p>Inspect the data and also use <code>?titanic_train</code> to learn more about the variables in the dataset. Match these variables from the dataset to their variable type. There is at least one variable of each type (ordinal categorical, non-ordinal categorical, continuous, discrete).</p>
+<ul>
+<li><code>Survived</code> non-ordinal categorical</li>
+<li><code>Pclass</code> ordinal categorical</li>
+<li><code>Sex</code> non-ordinal categorical</li>
+<li><code>SibSp</code> discrete</li>
+<li><code>Parch</code> discrete<br />
+</li>
+<li><code>Fare</code> continuous</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Demographics of Titanic Passengers</li>
+</ol>
+<p>Make density plots of age grouped by sex. Try experimenting with combinations of faceting, alpha blending, stacking and using variable counts on the y-axis to answer the following questions. Some questions may be easier to answer with different versions of the density plot.</p>
+<p>A faceted plot is useful for comparing the distributions of males and females for A. Each sex has the same general shape with two modes at the same locations, though proportions differ slightly across ages and there are more males than females.</p>
+<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="section-5-overview.html#cb313-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb313-2"><a href="section-5-overview.html#cb313-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
+<span id="cb313-3"><a href="section-5-overview.html#cb313-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></span>
+<span id="cb313-4"><a href="section-5-overview.html#cb313-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(Sex <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-155-1.png" width="672" /></p>
+<p>A stacked density plot with count on the y-axis is useful for answering B, C and D. The main mode is around age 25 and a second smaller mode is around age 4-5. There are more males than females as indicated by a higher total area and higher counts at almost all ages. With count on the y-axis, it is clear that more males than females are age 40.</p>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="section-5-overview.html#cb315-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb315-2"><a href="section-5-overview.html#cb315-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
+<span id="cb315-3"><a href="section-5-overview.html#cb315-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-156-1.png" width="672" /></p>
+<p>A plot filled by sex with alpha blending helps reveal the answers to E, F and G. There is a higher proportion of females than males below age 17, a higher proportion of males than females for ages 18-35, approximately the same proportion of males and females age 35-55, and a higher proportion of males over age 55. The oldest individuals are male.</p>
+<div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="section-5-overview.html#cb317-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb317-2"><a href="section-5-overview.html#cb317-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
+<span id="cb317-3"><a href="section-5-overview.html#cb317-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
+<p>Which of the following are true? Select all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Females and males had the same general shape of age distribution.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. The age distribution was bimodal, with one mode around 25 years of age and a second smaller mode around 5 years of age.</li>
+<li><input type="checkbox" disabled="" />
+C. There were more females than males.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. The count of males of age 40 was higher than the count of females of age 40.</li>
+<li><input type="checkbox" disabled="" checked="" />
+E. The proportion of males age 18-35 was higher than the proportion of females age 18-35.</li>
+<li><input type="checkbox" disabled="" checked="" />
+F. The proportion of females under age 17 was higher than the proportion of males under age 17.</li>
+<li><input type="checkbox" disabled="" />
+G. The oldest passengers were female.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>QQ-plot of Age Distribution</li>
+</ol>
+<p>Use <code>geom_qq</code> to make a QQ-plot of passenger age and add an identity line with <code>geom_abline</code>. Filter out any individuals with an age of NA first. Use the following object as the <code>dparams</code> argument in <code>geom_qq</code>:</p>
+<div class="sourceCode" id="cb319"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb319-1"><a href="section-5-overview.html#cb319-1" aria-hidden="true"></a>params &lt;-<span class="st"> </span>titanic <span class="op">%&gt;%</span></span>
+<span id="cb319-2"><a href="section-5-overview.html#cb319-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(Age)) <span class="op">%&gt;%</span></span>
+<span id="cb319-3"><a href="section-5-overview.html#cb319-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(Age), <span class="dt">sd =</span> <span class="kw">sd</span>(Age))</span>
+<span id="cb319-4"><a href="section-5-overview.html#cb319-4" aria-hidden="true"></a>    </span>
+<span id="cb319-5"><a href="section-5-overview.html#cb319-5" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb319-6"><a href="section-5-overview.html#cb319-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(Age)) <span class="op">%&gt;%</span></span>
+<span id="cb319-7"><a href="section-5-overview.html#cb319-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> Age)) <span class="op">+</span></span>
+<span id="cb319-8"><a href="section-5-overview.html#cb319-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_qq</span>(<span class="dt">dparams =</span> params) <span class="op">+</span></span>
+<span id="cb319-9"><a href="section-5-overview.html#cb319-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-158-1.png" width="672" /></p>
+<p>What is the correct plot according to the instructions above? <code>QQ-plot C</code></p>
+<div class="figure">
+<img src="images/qqplotC.png" alt="" />
+<p class="caption">QQ-plot C</p>
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li>Survival by Sex</li>
+</ol>
+<p>To answer the following questions, make barplots of the <code>Survived</code> and <code>Sex</code> variables using <code>geom_bar</code>. Try plotting one variable and filling by the other variable. You may want to try the default plot, then try adding <code>position = position_dodge()</code> to <code>geom_bar</code> to make separate bars for each group.</p>
+<p>You can read more about making barplots in the textbook section on <a href="https://rafalab.github.io/dsbook/distributions.html#other-geometries">ggplot2 geometries</a>.</p>
+<p>A and B can be clearly seen in the barplot of survival status filled by sex. The count of survivors is lower than the count of non-survivors. The bar of survivors is more than half filled by females. Alternatively, the bars can be split by sex with <code>position_dodge</code>, showing the “Female, Survived” bar has a greater height than the “Male, survived” bar. C and D are more clearly seen in the barplot of sex filled by survival status, though they can also be determined from the first barplot. Most males did not survive, but most females did survive.</p>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="section-5-overview.html#cb320-1" aria-hidden="true"></a><span class="co">#plot 1 - survival filled by sex</span></span>
+<span id="cb320-2"><a href="section-5-overview.html#cb320-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb320-3"><a href="section-5-overview.html#cb320-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
+<span id="cb320-4"><a href="section-5-overview.html#cb320-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="section-5-overview.html#cb321-1" aria-hidden="true"></a><span class="co"># plot 2 - survival filled by sex with position_dodge</span></span>
+<span id="cb321-2"><a href="section-5-overview.html#cb321-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb321-3"><a href="section-5-overview.html#cb321-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
+<span id="cb321-4"><a href="section-5-overview.html#cb321-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_dodge</span>())</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-159-2.png" width="672" /></p>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="section-5-overview.html#cb322-1" aria-hidden="true"></a><span class="co">#plot 3 - sex filled by survival</span></span>
+<span id="cb322-2"><a href="section-5-overview.html#cb322-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb322-3"><a href="section-5-overview.html#cb322-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Sex, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb322-4"><a href="section-5-overview.html#cb322-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-159-3.png" width="672" /></p>
+<p>Which of the following are true? Select all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Less than half of passengers survived.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. Most of the survivors were female.</li>
+<li><input type="checkbox" disabled="" />
+C. Most of the males survived.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Most of the females survived.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Survival by Age</li>
+</ol>
+<p>Make a density plot of age filled by survival status. Change the y-axis to count and set <code>alpha = 0.2</code>.</p>
+<div class="sourceCode" id="cb323"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb323-1"><a href="section-5-overview.html#cb323-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb323-2"><a href="section-5-overview.html#cb323-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb323-3"><a href="section-5-overview.html#cb323-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-160-1.png" width="672" /></p>
+<p>Which age group is the only group more likely to survive than die?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 0-8</li>
+<li><input type="checkbox" disabled="" />
+B. 10-18</li>
+<li><input type="checkbox" disabled="" />
+C. 18-30</li>
+<li><input type="checkbox" disabled="" />
+D. 30-50</li>
+<li><input type="checkbox" disabled="" />
+E. 50-70</li>
+<li><input type="checkbox" disabled="" />
+F. 70-80</li>
+</ul>
+<p>Which age group had the most deaths?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 0-8</li>
+<li><input type="checkbox" disabled="" />
+B. 10-18</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. 18-30</li>
+<li><input type="checkbox" disabled="" />
+D. 30-50</li>
+<li><input type="checkbox" disabled="" />
+E. 50-70</li>
+<li><input type="checkbox" disabled="" />
+F. 70-80</li>
+</ul>
+<p>Which age group had the highest proportion of deaths?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 0-8</li>
+<li><input type="checkbox" disabled="" />
+B. 10-18</li>
+<li><input type="checkbox" disabled="" />
+C. 18-30</li>
+<li><input type="checkbox" disabled="" />
+D. 30-50</li>
+<li><input type="checkbox" disabled="" />
+E. 50-70</li>
+<li><input type="checkbox" disabled="" checked="" />
+F. 70-80</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Survival by Fare</li>
+</ol>
+<p>Filter the data to remove individuals who paid a fare of 0. Make a boxplot of fare grouped by survival status. Try a log2 transformation of fares. Add the data points with jitter and alpha blending.</p>
+<div class="sourceCode" id="cb325"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb325-1"><a href="section-5-overview.html#cb325-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb325-2"><a href="section-5-overview.html#cb325-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(Fare <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) <span class="op">%&gt;%</span></span>
+<span id="cb325-3"><a href="section-5-overview.html#cb325-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, Fare)) <span class="op">+</span></span>
+<span id="cb325-4"><a href="section-5-overview.html#cb325-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb325-5"><a href="section-5-overview.html#cb325-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb325-6"><a href="section-5-overview.html#cb325-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_jitter</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
+<p>Which of the following are true? Select all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Passengers who survived generally payed higher fares than those who did not survive.</li>
+<li><input type="checkbox" disabled="" />
+B. The interquartile range for fares was smaller for passengers who survived.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. The median fare was lower for passengers who did not survive.</li>
+<li><input type="checkbox" disabled="" />
+D. Only one individual paid a fare around $500. That individual survived.</li>
+<li><input type="checkbox" disabled="" checked="" />
+E. Most individuals who paid a fare around $8 did not survive.</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>Survival by Passenger Class</li>
+</ol>
+<p>The <code>Pclass</code> variable corresponds to the passenger class. Make three barplots. For the first, make a basic barplot of passenger class filled by survival. For the second, make the same barplot but use the argument <code>position = position_fill()</code> to show relative proportions in each group instead of counts. For the third, make a barplot of survival filled by passenger class using <code>position = position_fill()</code>.</p>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="section-5-overview.html#cb326-1" aria-hidden="true"></a><span class="co"># barplot of passenger class filled by survival</span></span>
+<span id="cb326-2"><a href="section-5-overview.html#cb326-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb326-3"><a href="section-5-overview.html#cb326-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Pclass, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb326-4"><a href="section-5-overview.html#cb326-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
+<span id="cb326-5"><a href="section-5-overview.html#cb326-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-162-1.png" width="672" /></p>
+<div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="section-5-overview.html#cb327-1" aria-hidden="true"></a><span class="co"># barplot of passenger class filled by survival with position_fill</span></span>
+<span id="cb327-2"><a href="section-5-overview.html#cb327-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb327-3"><a href="section-5-overview.html#cb327-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Pclass, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb327-4"><a href="section-5-overview.html#cb327-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_fill</span>()) <span class="op">+</span></span>
+<span id="cb327-5"><a href="section-5-overview.html#cb327-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-162-2.png" width="672" /></p>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="section-5-overview.html#cb328-1" aria-hidden="true"></a><span class="co"># barplot of survival filled by passenger class with position_fill</span></span>
+<span id="cb328-2"><a href="section-5-overview.html#cb328-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb328-3"><a href="section-5-overview.html#cb328-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Pclass)) <span class="op">+</span></span>
+<span id="cb328-4"><a href="section-5-overview.html#cb328-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_fill</span>()) <span class="op">+</span></span>
+<span id="cb328-5"><a href="section-5-overview.html#cb328-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-162-3.png" width="672" /></p>
+<p>Which of the following are true? Select all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. There were more third class passengers than passengers in the first two classes combined.</li>
+<li><input type="checkbox" disabled="" />
+B. There were the fewest passengers in first class, second-most passengers in second class, and most passengers in third class.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. Survival proportion was highest for first class passengers, followed by second class. Third-class had the lowest survival proportion.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Most passengers in first class survived. Most passengers in other classes did not survive.</li>
+<li><input type="checkbox" disabled="" />
+E. The majority of survivors were from first class. (Majority means over 50%.)</li>
+<li><input type="checkbox" disabled="" checked="" />
+F. The majority of those who did not survive were from third class.</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>Survival by Age, Sex and Passenger Class</li>
+</ol>
+<p>Create a grid of density plots for age, filled by survival status, with count on the y-axis, faceted by sex and passenger class.</p>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="section-5-overview.html#cb329-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
+<span id="cb329-2"><a href="section-5-overview.html#cb329-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
+<span id="cb329-3"><a href="section-5-overview.html#cb329-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="op">+</span></span>
+<span id="cb329-4"><a href="section-5-overview.html#cb329-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(Sex <span class="op">~</span><span class="st"> </span>Pclass)</span></code></pre></div>
+<pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-163-1.png" width="672" /></p>
+<p>Which of the following are true? Select all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. The largest group of passengers was third-class males.</li>
+<li><input type="checkbox" disabled="" />
+B. The age distribution is the same across passenger classes.</li>
+<li><input type="checkbox" disabled="" />
+C. The gender distribution is the same across passenger classes.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Most first-class and second-class females survived.</li>
+<li><input type="checkbox" disabled="" checked="" />
+E. Almost all second-class males did not survive, with the exception of children.</li>
+</ul>
+</div>
+<div id="properties-of-stars-exercises" class="section level2" number="6.19">
+<h2><span class="header-section-number">6.19</span> Properties of Stars Exercises</h2>
+<p><strong>Background</strong></p>
+<p>Astronomy is one of the oldest data-driven sciences. In the late 1800s, the director of the Harvard College Observatory hired women to analyze astronomical data, which at the time was done using photographic glass plates. These women became known as the Harvard Computers. They computed the position and luminosity of various astronomical objects such as stars and galaxies. (If you are interested, you can <a href="https://platestacks.cfa.harvard.edu/women-computers">learn more about the Harvard Computers</a>). Today, astronomy is even more of a data-driven science, with an inordinate amount of data being produced by modern instruments every day.</p>
+<p>In the following exercises we will analyze some actual astronomical data to inspect properties of stars, their absolute magnitude (which relates to a star’s <strong>luminosity</strong>, or brightness), temperature and type (spectral class).</p>
+<p><strong>Libraries and Options</strong></p>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="section-5-overview.html#cb331-1" aria-hidden="true"></a><span class="kw">data</span>(stars)</span>
+<span id="cb331-2"><a href="section-5-overview.html#cb331-2" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)   <span class="co"># report 3 significant digits</span></span></code></pre></div>
+<p><em>IMPORTANT</em>: These exercises use <strong>dslabs</strong> datasets that were added in a July 2019 update. Make sure your package is up to date with the command <code>update.packages("dslabs")</code>. You can also update all packages on your system by running <code>update.packages()</code> with no arguments, and you should consider doing this routinely.</p>
+<ol style="list-style-type: decimal">
+<li>Load the <code>stars</code> data frame from <strong>dslabs</strong>. This contains the name, absolute magnitude, temperature in degrees Kelvin, and spectral class of selected stars. Absolute magnitude (shortened in these problems to simply “magnitude”) is a function of star luminosity, where <strong>negative</strong> values of magnitude have higher luminosity.</li>
+</ol>
+<p>What is the mean magnitude?</p>
+<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="section-5-overview.html#cb332-1" aria-hidden="true"></a><span class="kw">mean</span>(stars<span class="op">$</span>magnitude)</span></code></pre></div>
+<pre><code>## [1] 4.26</code></pre>
+<p>What is the standard deviation of magnitude?</p>
+<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="section-5-overview.html#cb334-1" aria-hidden="true"></a><span class="kw">sd</span>(stars<span class="op">$</span>magnitude)</span></code></pre></div>
+<pre><code>## [1] 7.35</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Make a density plot of the magnitude.</li>
+</ol>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="section-5-overview.html#cb336-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb336-2"><a href="section-5-overview.html#cb336-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(magnitude)) <span class="op">+</span></span>
+<span id="cb336-3"><a href="section-5-overview.html#cb336-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
+<p>How many peaks are there in the data?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 1</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. 2</li>
+<li><input type="checkbox" disabled="" />
+C. 3</li>
+<li><input type="checkbox" disabled="" />
+D. 4</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Examine the distribution of star temperature.</li>
+</ol>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="section-5-overview.html#cb337-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb337-2"><a href="section-5-overview.html#cb337-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(temp)) <span class="op">+</span></span>
+<span id="cb337-3"><a href="section-5-overview.html#cb337-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-168-1.png" width="672" /></p>
+<p>Which of these statements best characterizes the temperature distribution?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. The majority of stars have a high temperature.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. The majority of stars have a low temperature.</li>
+<li><input type="checkbox" disabled="" />
+C. The temperature distribution is normal.</li>
+<li><input type="checkbox" disabled="" />
+D. There are equal numbers of stars across the temperature range.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Make a scatter plot of the data with temperature on the x-axis and magnitude on the y-axis and examine the relationship between the variables. Recall that lower magnitude means a more luminous (brighter) star.</li>
+</ol>
+<p>Most stars follow a _______________ trend. These are called main sequence stars.</p>
+<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="section-5-overview.html#cb338-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb338-2"><a href="section-5-overview.html#cb338-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(temp, magnitude)) <span class="op">+</span></span>
+<span id="cb338-3"><a href="section-5-overview.html#cb338-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-169-1.png" width="672" /></p>
+<p>Fill in the blank:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. decreasing linear</li>
+<li><input type="checkbox" disabled="" />
+B. increasing linear</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. decreasing exponential</li>
+<li><input type="checkbox" disabled="" />
+D. increasing exponential</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>For various reasons, scientists do not always follow straight conventions when making plots, and astronomers usually transform values of star luminosity and temperature before plotting. Flip the y-axis so that lower values of magnitude are at the top of the axis (recall that <strong>more luminous stars have lower magnitude</strong>) using <code>scale_y_reverse</code>. Take the log base 10 of temperature and then also flip the x-axis.</li>
+</ol>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="section-5-overview.html#cb339-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb339-2"><a href="section-5-overview.html#cb339-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span><span class="kw">log10</span>(temp), magnitude)) <span class="op">+</span></span>
+<span id="cb339-3"><a href="section-5-overview.html#cb339-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
+<span id="cb339-4"><a href="section-5-overview.html#cb339-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_y_reverse</span>() <span class="op">+</span></span>
+<span id="cb339-5"><a href="section-5-overview.html#cb339-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-170-1.png" width="672" /></p>
+<p>Fill in the blanks in the statements below to describe the resulting plot.</p>
+<p>The brighest, highest temperature stars are in the ______________ corner of the plot.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. lower left</li>
+<li><input type="checkbox" disabled="" />
+B. lower right</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. upper left</li>
+<li><input type="checkbox" disabled="" />
+D. upper right</li>
+</ul>
+<p>For main sequence stars, hotter stars have ____________ luminosity.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. higher</li>
+<li><input type="checkbox" disabled="" />
+B. lower</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>The trends you see allow scientists to learn about the evolution and lifetime of stars. The primary group of stars to which most stars belong we will call the main sequence stars (discussed in question 4). Most stars belong to this main sequence, however some of the more rare stars are classified as “old” and “evolved” stars. These stars tend to be <strong>hotter</strong> stars, but also have <strong>low luminosity</strong>, and are known as white dwarfs.</li>
+</ol>
+<p>How many white dwarfs are there in our sample?</p>
+<p><code>These stars are in the lower left of the plot from question 5. There are 4 stars in this region.</code></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Consider stars which are not part of the Main Group but are not old/evolved (white dwarf) stars. These stars must also be unique in certain ways and are known as giants. Use the plot from Question 5 to estimate the average temperature of a giant.</li>
+</ol>
+<p><code>Giants are in the upper right corner of the plot and generally have temperatures below 6000K.</code></p>
+<p>Which of these temperatures is closest to the average temperature of a giant?:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 5000K</li>
+<li><input type="checkbox" disabled="" />
+B. 10000K</li>
+<li><input type="checkbox" disabled="" />
+C. 15000K</li>
+<li><input type="checkbox" disabled="" />
+D. 20000K</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>We can now identify whether specific stars are main sequence stars, red giants or white dwarfs. Add text labels to the plot to answer these questions. You may wish to plot only a selection of the labels, repel the labels, or zoom in on the plot in RStudio so you can locate specific stars.</li>
+</ol>
+<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="section-5-overview.html#cb340-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb340-2"><a href="section-5-overview.html#cb340-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">log10</span>(temp), magnitude)) <span class="op">+</span></span>
+<span id="cb340-3"><a href="section-5-overview.html#cb340-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb340-4"><a href="section-5-overview.html#cb340-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> star)) <span class="op">+</span></span>
+<span id="cb340-5"><a href="section-5-overview.html#cb340-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
+<span id="cb340-6"><a href="section-5-overview.html#cb340-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-171-1.png" width="672" /></p>
+<p>Fill in the blanks in the statements below:</p>
+<p>The least lumninous star in the sample with a surface temperature over 5000K is _________.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Antares</li>
+<li><input type="checkbox" disabled="" />
+B. Castor</li>
+<li><input type="checkbox" disabled="" />
+C. Mirfak</li>
+<li><input type="checkbox" disabled="" />
+D. Polaris</li>
+<li><input type="checkbox" disabled="" checked="" />
+E. van Maanen’s Star</li>
+</ul>
+<p>The two stars with lowest temperature and highest luminosity are known as supergiants. The two supergiants in this dataset are ____________.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Rigel and Deneb</li>
+<li><input type="checkbox" disabled="" />
+B. *SiriusB and van Maanen’s Star</li>
+<li><input type="checkbox" disabled="" />
+C. Alnitak and Alnitam</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Betelgeuse and Antares</li>
+<li><input type="checkbox" disabled="" />
+E. Wolf359 and G51-I5</li>
+</ul>
+<p>The Sun is a ______________.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. main sequence star</li>
+<li><input type="checkbox" disabled="" />
+B. giant</li>
+<li><input type="checkbox" disabled="" />
+C. white dwarf</li>
+</ul>
+<ol start="9" style="list-style-type: decimal">
+<li>Remove the text labels and color the points by star type. This classification describes the properties of the star’s spectrum, the amount of light produced at various wavelengths.</li>
+</ol>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="section-5-overview.html#cb341-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
+<span id="cb341-2"><a href="section-5-overview.html#cb341-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">log10</span>(temp), magnitude, <span class="dt">col =</span> type)) <span class="op">+</span></span>
+<span id="cb341-3"><a href="section-5-overview.html#cb341-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb341-4"><a href="section-5-overview.html#cb341-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
+<span id="cb341-5"><a href="section-5-overview.html#cb341-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-172-1.png" width="672" /></p>
+<p>Which star type has the lowest temperature? <code>M</code></p>
+<p>Which star type has the highest temperature? <code>O</code></p>
+<p>The Sun is classified as a G-type star. Is the most luminous G-type star in this dataset also the hottest? <code>No</code></p>
+</div>
+<div id="climate-change-exercises" class="section level2" number="6.20">
+<h2><span class="header-section-number">6.20</span> Climate Change Exercises</h2>
+<p><strong>Background</strong></p>
+<p>The planet’s surface temperature is increasing due to human greenhouse gas emissions, and this global warming and carbon cycle disruption is wreaking havoc on natural systems. Living systems that depend on current temperature, weather, currents and carbon balance are jeopardized, and human society will be forced to contend with widespread economic, social, political and environmental damage as the temperature continues to rise. Although most countries recognize that global warming is a crisis and that humans must act to limit its effects, little action has been taken to limit or reverse human impact on the climate.</p>
+<p>One limitation is the spread of misinformation related to climate change and its causes, especially the extent to which humans have contributed to global warming. In these exercises, we examine the relationship between global temperature changes, greenhouse gases and human carbon emissions using time series of actual atmospheric and ice core measurements from the National Oceanic and Atmospheric Administration (NOAA) and Carbon Dioxide Information Analysis Center (CDIAC).</p>
+<p><strong>Libraries and Options</strong></p>
+<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="section-5-overview.html#cb342-1" aria-hidden="true"></a><span class="kw">data</span>(temp_carbon)</span>
+<span id="cb342-2"><a href="section-5-overview.html#cb342-2" aria-hidden="true"></a><span class="kw">data</span>(greenhouse_gases)</span>
+<span id="cb342-3"><a href="section-5-overview.html#cb342-3" aria-hidden="true"></a><span class="kw">data</span>(historic_co2)</span></code></pre></div>
+<p><em>IMPORTANT</em>: These exercises use <strong>dslabs</strong> datasets that were added in a July 2019 update. Make sure your package is up to date with the command <code>update.packages("dslabs")</code>. You can also update all packages on your system by running <code>update.packages()</code> with no arguments, and you should consider doing this routinely.</p>
+<ol style="list-style-type: decimal">
+<li>Load the <code>temp_carbon</code> dataset from <strong>dslabs</strong>, which contains annual global temperature anomalies (difference from 20th century mean temperature in degrees Celsius), temperature anomalies over the land and ocean, and global carbon emissions (in metric tons). Note that the date ranges differ for temperature and carbon emissions.</li>
+</ol>
+<p>Which of these code blocks return the latest year for which carbon emissions are reported?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A.</li>
+</ul>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb343-1"><a href="section-5-overview.html#cb343-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb343-2"><a href="section-5-overview.html#cb343-2" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb343-3"><a href="section-5-overview.html#cb343-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+B.</li>
+</ul>
+<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="section-5-overview.html#cb344-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb344-2"><a href="section-5-overview.html#cb344-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb344-3"><a href="section-5-overview.html#cb344-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(year) <span class="op">%&gt;%</span></span>
+<span id="cb344-4"><a href="section-5-overview.html#cb344-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<pre><code>## [1] 2014</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+C.</li>
+</ul>
+<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="section-5-overview.html#cb346-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb346-2"><a href="section-5-overview.html#cb346-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb346-3"><a href="section-5-overview.html#cb346-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>(year)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+D.</li>
+</ul>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="section-5-overview.html#cb347-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb347-2"><a href="section-5-overview.html#cb347-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb347-3"><a href="section-5-overview.html#cb347-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb347-4"><a href="section-5-overview.html#cb347-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<pre><code>## [1] 2014</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+E.</li>
+</ul>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="section-5-overview.html#cb349-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb349-2"><a href="section-5-overview.html#cb349-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb349-3"><a href="section-5-overview.html#cb349-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(year) <span class="op">%&gt;%</span></span>
+<span id="cb349-4"><a href="section-5-overview.html#cb349-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<pre><code>## [1] 2014</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+F.</li>
+</ul>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="section-5-overview.html#cb351-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb351-2"><a href="section-5-overview.html#cb351-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb351-3"><a href="section-5-overview.html#cb351-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>(.<span class="op">$</span>year)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>Inspect the difference in carbon emissions in <code>temp_carbon</code> from the first available year to the last available year.</li>
+</ol>
+<p>What is the first year for which carbon emissions (<code>carbon_emissions</code>) data are available?</p>
+<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="section-5-overview.html#cb352-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb352-2"><a href="section-5-overview.html#cb352-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb352-3"><a href="section-5-overview.html#cb352-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb352-4"><a href="section-5-overview.html#cb352-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">min</span>()</span></code></pre></div>
+<pre><code>## [1] 1751</code></pre>
+<p>What is the last year for which carbon emissions data are available?</p>
+<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="section-5-overview.html#cb354-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb354-2"><a href="section-5-overview.html#cb354-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb354-3"><a href="section-5-overview.html#cb354-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb354-4"><a href="section-5-overview.html#cb354-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<pre><code>## [1] 2014</code></pre>
+<p>How many times larger were carbon emissions in the last year relative to the first year?</p>
+<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="section-5-overview.html#cb356-1" aria-hidden="true"></a>carbon1 &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb356-2"><a href="section-5-overview.html#cb356-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">1751</span>) <span class="op">%&gt;%</span></span>
+<span id="cb356-3"><a href="section-5-overview.html#cb356-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>carbon_emissions</span>
+<span id="cb356-4"><a href="section-5-overview.html#cb356-4" aria-hidden="true"></a></span>
+<span id="cb356-5"><a href="section-5-overview.html#cb356-5" aria-hidden="true"></a>carbon2 &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb356-6"><a href="section-5-overview.html#cb356-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2014</span>) <span class="op">%&gt;%</span></span>
+<span id="cb356-7"><a href="section-5-overview.html#cb356-7" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>carbon_emissions</span>
+<span id="cb356-8"><a href="section-5-overview.html#cb356-8" aria-hidden="true"></a></span>
+<span id="cb356-9"><a href="section-5-overview.html#cb356-9" aria-hidden="true"></a>carbon2<span class="op">/</span>carbon1</span></code></pre></div>
+<pre><code>## [1] 3285</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Inspect the difference in temperature in <code>temp_carbon</code> from the first available year to the last available year.</li>
+</ol>
+<p>What is the first year for which global temperature anomaly (<code>temp_anomaly</code>) data are available?</p>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="section-5-overview.html#cb358-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb358-2"><a href="section-5-overview.html#cb358-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb358-3"><a href="section-5-overview.html#cb358-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb358-4"><a href="section-5-overview.html#cb358-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">min</span>()</span></code></pre></div>
+<pre><code>## [1] 1880</code></pre>
+<p>What is the last year for which global temperature anomaly data are available?</p>
+<div class="sourceCode" id="cb360"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb360-1"><a href="section-5-overview.html#cb360-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb360-2"><a href="section-5-overview.html#cb360-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb360-3"><a href="section-5-overview.html#cb360-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>year <span class="op">%&gt;%</span></span>
+<span id="cb360-4"><a href="section-5-overview.html#cb360-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">max</span>()</span></code></pre></div>
+<pre><code>## [1] 2018</code></pre>
+<p>How many degrees Celsius has temperature increased over the date range? Compare the temperatures in the most recent year versus the oldest year.</p>
+<div class="sourceCode" id="cb362"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb362-1"><a href="section-5-overview.html#cb362-1" aria-hidden="true"></a>temp1 &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb362-2"><a href="section-5-overview.html#cb362-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;1880&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb362-3"><a href="section-5-overview.html#cb362-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>temp_anomaly</span>
+<span id="cb362-4"><a href="section-5-overview.html#cb362-4" aria-hidden="true"></a></span>
+<span id="cb362-5"><a href="section-5-overview.html#cb362-5" aria-hidden="true"></a>temp2 &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb362-6"><a href="section-5-overview.html#cb362-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> &quot;2018&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb362-7"><a href="section-5-overview.html#cb362-7" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>temp_anomaly</span>
+<span id="cb362-8"><a href="section-5-overview.html#cb362-8" aria-hidden="true"></a></span>
+<span id="cb362-9"><a href="section-5-overview.html#cb362-9" aria-hidden="true"></a>temp2 <span class="op">-</span><span class="st"> </span>temp1</span></code></pre></div>
+<pre><code>## [1] 0.93</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Create a time series line plot of the temperature anomaly. Only include years where temperatures are reported. Save this plot to the object <code>p</code>.</li>
+</ol>
+<p>Which command adds a blue horizontal line indicating the 20th century mean temperature?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A.</li>
+</ul>
+<div class="sourceCode" id="cb364"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb364-1"><a href="section-5-overview.html#cb364-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_vline</span>(<span class="kw">aes</span>(<span class="dt">xintercept =</span> <span class="dv">0</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+B.</li>
+</ul>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="section-5-overview.html#cb365-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">y =</span> <span class="dv">0</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+C.</li>
+</ul>
+<div class="sourceCode" id="cb366"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb366-1"><a href="section-5-overview.html#cb366-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>, <span class="dt">col =</span> blue))</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+D.</li>
+</ul>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="section-5-overview.html#cb367-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb367-2"><a href="section-5-overview.html#cb367-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb367-3"><a href="section-5-overview.html#cb367-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, temp_anomaly)) <span class="op">+</span></span>
+<span id="cb367-4"><a href="section-5-overview.html#cb367-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span>
+<span id="cb367-5"><a href="section-5-overview.html#cb367-5" aria-hidden="true"></a></span>
+<span id="cb367-6"><a href="section-5-overview.html#cb367-6" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb367-7"><a href="section-5-overview.html#cb367-7" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Continue working with <code>p</code>, the plot created in the previous question.</li>
+</ol>
+<p>Change the y-axis label to be “Temperature anomaly (degrees C)”. Add a title, “Temperature anomaly relative to 20th century mean, 1880-2018”. Also add a text layer to the plot: the x-coordinate should be 2000, the y-coordinate should be 0.05, the text should be “20th century mean”, and the text color should be blue.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A.</li>
+</ul>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="section-5-overview.html#cb368-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb368-2"><a href="section-5-overview.html#cb368-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">title</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
+<span id="cb368-3"><a href="section-5-overview.html#cb368-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>))</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+B.</li>
+</ul>
+<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="section-5-overview.html#cb369-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">ylim</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb369-2"><a href="section-5-overview.html#cb369-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
+<span id="cb369-3"><a href="section-5-overview.html#cb369-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+C.</li>
+</ul>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="section-5-overview.html#cb370-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb370-2"><a href="section-5-overview.html#cb370-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
+<span id="cb370-3"><a href="section-5-overview.html#cb370-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>))</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+D.</li>
+</ul>
+<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="section-5-overview.html#cb371-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb371-2"><a href="section-5-overview.html#cb371-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb371-3"><a href="section-5-overview.html#cb371-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, temp_anomaly)) <span class="op">+</span></span>
+<span id="cb371-4"><a href="section-5-overview.html#cb371-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb371-5"><a href="section-5-overview.html#cb371-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept=</span><span class="dv">0</span>), <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>) <span class="op">+</span></span>
+<span id="cb371-6"><a href="section-5-overview.html#cb371-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb371-7"><a href="section-5-overview.html#cb371-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
+<span id="cb371-8"><a href="section-5-overview.html#cb371-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label=</span><span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span>
+<span id="cb371-9"><a href="section-5-overview.html#cb371-9" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+E.</li>
+</ul>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="section-5-overview.html#cb372-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb372-2"><a href="section-5-overview.html#cb372-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">title</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
+<span id="cb372-3"><a href="section-5-overview.html#cb372-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<ol start="6" style="list-style-type: decimal">
+<li>Use the plot created in the last two exercises to answer the following questions.</li>
+</ol>
+<p>Answers within 5 years of the correct answer will be accepted.</p>
+<div class="sourceCode" id="cb373"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb373-1"><a href="section-5-overview.html#cb373-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb373-2"><a href="section-5-overview.html#cb373-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb373-3"><a href="section-5-overview.html#cb373-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, temp_anomaly)) <span class="op">+</span></span>
+<span id="cb373-4"><a href="section-5-overview.html#cb373-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb373-5"><a href="section-5-overview.html#cb373-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span></span>
+<span id="cb373-6"><a href="section-5-overview.html#cb373-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb373-7"><a href="section-5-overview.html#cb373-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span></span>
+<span id="cb373-8"><a href="section-5-overview.html#cb373-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">1880</span>, <span class="dv">2018</span>)) <span class="op">+</span></span>
+<span id="cb373-9"><a href="section-5-overview.html#cb373-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
+<p>When was the earliest year with a temperature above the 20th century mean? <code>1940</code></p>
+<p>When was the last year with an average temperature below the 20th century mean? <code>1976</code></p>
+<p>In what year did the temperature anomaly exceed 0.5 degrees Celsius for the first time? <code>1997</code></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Add layers to the previous plot to include line graphs of the temperature anomaly in the ocean (<code>ocean_anomaly</code>) and on land (<code>land_anomaly</code>).</li>
+</ol>
+<p>Assign different colors to the lines. Compare the global temperature anomaly to the land temperature anomaly and ocean temperature anomaly.</p>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="section-5-overview.html#cb374-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb374-2"><a href="section-5-overview.html#cb374-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(temp_anomaly)) <span class="op">%&gt;%</span></span>
+<span id="cb374-3"><a href="section-5-overview.html#cb374-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, temp_anomaly)) <span class="op">+</span></span>
+<span id="cb374-4"><a href="section-5-overview.html#cb374-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb374-5"><a href="section-5-overview.html#cb374-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(year, land_anomaly), <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>) <span class="op">+</span></span>
+<span id="cb374-6"><a href="section-5-overview.html#cb374-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(year, ocean_anomaly), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span></span>
+<span id="cb374-7"><a href="section-5-overview.html#cb374-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
+<span id="cb374-8"><a href="section-5-overview.html#cb374-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">1880</span>, <span class="dv">2018</span>)) <span class="op">+</span></span>
+<span id="cb374-9"><a href="section-5-overview.html#cb374-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly on land and ocean&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
+<p>Which region has the largest 2018 temperature anomaly relative to the 20th century mean? <code>Land</code></p>
+<p>Which region has the largest change in temperature since 1880? <code>Land</code></p>
+<p>Which region has a temperature anomaly pattern that more closely matches the global pattern? <code>Ocean</code></p>
+<ol start="8" style="list-style-type: decimal">
+<li>A major determinant of Earth’s temperature is the greenhouse effect. Many gases trap heat and reflect it towards the surface, preventing heat from escaping the atmosphere. The greenhouse effect is vital in keeping Earth at a warm enough temperature to sustain liquid water and life; however, changes in greenhouse gas levels can alter the temperature balance of the planet.</li>
+</ol>
+<p>The <code>greenhouse_gases</code> data frame from <strong>dslabs</strong> contains concentrations of the three most significant greenhouse gases: carbon dioxide (<span class="math inline">\(CO_2\)</span>, abbreviated in the data as <code>co2</code>), methane (<span class="math inline">\(CH_4\)</span>, <code>ch4</code> in the data), and nitrous oxide (<span class="math inline">\(N_2 O\)</span>, <code>n2o</code> in the data). Measurements are provided every 20 years for the past 2000 years.</p>
+<p>Complete the code outline below to make a line plot of <code>concentration</code> on the y-axis by year on the x-axis. Facet by <code>gas</code>, aligning the plots vertically so as to ease comparisons along the year axis. Add a vertical line with an x-intercept at the year 1850, noting the unofficial start of the industrial revolution and widespread fossil fuel consumption. Note that the units for <code>ch4</code> and <code>n2o</code> are ppb while the units for <code>co2</code> are ppm.</p>
+<div class="sourceCode" id="cb375"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb375-1"><a href="section-5-overview.html#cb375-1" aria-hidden="true"></a>greenhouse_gases <span class="op">%&gt;%</span></span>
+<span id="cb375-2"><a href="section-5-overview.html#cb375-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, concentration)) <span class="op">+</span></span>
+<span id="cb375-3"><a href="section-5-overview.html#cb375-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb375-4"><a href="section-5-overview.html#cb375-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(gas <span class="op">~</span><span class="st"> </span>., <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb375-5"><a href="section-5-overview.html#cb375-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">1850</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>) <span class="op">+</span></span>
+<span id="cb375-6"><a href="section-5-overview.html#cb375-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Concentration (ch4/n2o ppb, co2 ppm)&quot;</span>) <span class="op">+</span></span>
+<span id="cb375-7"><a href="section-5-overview.html#cb375-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric greenhouse gas concentration by year, 0-2000&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-197-1.png" width="672" /></p>
+<p>What code fills the first blank? <code>year, concentration</code></p>
+<p>What code fills the second blank? Make sure to align plots vertically. <code>gas ~ .</code></p>
+<p>What code fills the third blank? <code>geom_vline(xintercept = 1850)</code></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Interpret the plot of greenhouse gases over time from the previous question. You will use each answer exactly once <code>ch4</code>, <code>co2</code>, <code>n2o</code>, all, none).</li>
+</ol>
+<p>Which gas was stable at approximately 275 ppm/ppb until around 1850? <code>co2</code></p>
+<p>Which gas more than doubled in concentration since 1850? <code>ch4</code></p>
+<p>Which gas decreased in concentration since 1850? <code>none</code></p>
+<p>Which gas had the smallest magnitude change since 1850? <code>n2o</code></p>
+<p>Which gas increased exponentially in concentration after 1850? <code>all</code></p>
+<ol start="10" style="list-style-type: decimal">
+<li>While many aspects of climate are independent of human influence, and <code>co2</code> levels can change without human intervention, climate models cannot reconstruct current conditions without incorporating the effect of manmade carbon emissions. These emissions consist of greenhouse gases and are mainly the result of burning fossil fuels such as oil, coal and natural gas.</li>
+</ol>
+<p>Make a time series line plot of carbon emissions (<code>carbon_emissions</code>) from the <code>temp_carbon</code> dataset. The y-axis is metric tons of carbon emitted per year.</p>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="section-5-overview.html#cb376-1" aria-hidden="true"></a>temp_carbon <span class="op">%&gt;%</span></span>
+<span id="cb376-2"><a href="section-5-overview.html#cb376-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(carbon_emissions)) <span class="op">%&gt;%</span></span>
+<span id="cb376-3"><a href="section-5-overview.html#cb376-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, carbon_emissions)) <span class="op">+</span></span>
+<span id="cb376-4"><a href="section-5-overview.html#cb376-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb376-5"><a href="section-5-overview.html#cb376-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Carbon emissions (metric tons)&quot;</span>) <span class="op">+</span></span>
+<span id="cb376-6"><a href="section-5-overview.html#cb376-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Annual global carbon emissions, 1751-2014&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-198-1.png" width="672" /></p>
+<p>Which of the following are true about the trend of carbon emissions? Check all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Carbon emissions were essentially zero before 1850 and have increased exponentially since then.</li>
+<li><input type="checkbox" disabled="" />
+B. Carbon emissions are reaching a stable level.</li>
+<li><input type="checkbox" disabled="" />
+C. Carbon emissions have increased every year on record.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. Carbon emissions in 2014 were about 4 times as large as 1960 emissions.</li>
+<li><input type="checkbox" disabled="" checked="" />
+E. Carbon emissions have doubled since the late 1970s.</li>
+<li><input type="checkbox" disabled="" checked="" />
+F. Carbon emissions change with the same trend as atmospheric greenhouse gas levels (<code>co2</code>, <code>ch4</code>, <code>n2o</code>)</li>
+</ul>
+<ol start="11" style="list-style-type: decimal">
+<li>We saw how greenhouse gases have changed over the course of human history, but how has <span class="math inline">\(CO_2\)</span> (<code>co2</code> in the data) varied over a longer time scale? The <code>historic_co2</code> data frame in <strong>dslabs</strong> contains direct measurements of atmospheric <code>co2</code> from Mauna Loa since 1959 as well as indirect measurements of atmospheric <code>co2</code> from ice cores dating back 800,000 years.</li>
+</ol>
+<p>Make a line plot of <code>co2</code> concentration over time (<code>year</code>), coloring by the measurement source (<code>source</code>). Save this plot as <code>co2_time</code> for later use.</p>
+<div class="sourceCode" id="cb377"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb377-1"><a href="section-5-overview.html#cb377-1" aria-hidden="true"></a>co2_time &lt;-<span class="st"> </span>historic_co2 <span class="op">%&gt;%</span></span>
+<span id="cb377-2"><a href="section-5-overview.html#cb377-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">is.na</span>(co2)) <span class="op">%&gt;%</span></span>
+<span id="cb377-3"><a href="section-5-overview.html#cb377-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, co2, <span class="dt">col=</span>source)) <span class="op">+</span></span>
+<span id="cb377-4"><a href="section-5-overview.html#cb377-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb377-5"><a href="section-5-overview.html#cb377-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
+<span id="cb377-6"><a href="section-5-overview.html#cb377-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
+<span id="cb377-7"><a href="section-5-overview.html#cb377-7" aria-hidden="true"></a>co2_time</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
+<p>Which of the following are true about <code>co2_time</code>, the time series of <code>co2</code> over the last 800,000 years? Check all correct answers.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Modern co2 levels are higher than at any point in the last 800,000 years.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. There are natural cycles of co2 increase and decrease lasting 50,000-100,000 years per cycle.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. In most cases, it appears to take longer for co2 levels to decrease than to increase.</li>
+<li><input type="checkbox" disabled="" />
+D. co2 concentration has been at least 200 ppm for the last 800,000 years.</li>
+</ul>
+<ol start="12" style="list-style-type: decimal">
+<li>One way to differentiate natural <code>co2</code> oscillations from today’s manmade <code>co2</code> spike is by examining the rate of change of <code>co2</code>. The planet is affected not only by the absolute concentration of <code>co2</code> but also by its rate of change. When the rate of change is slow, living and nonliving systems have time to adapt to new temperature and gas levels, but when the rate of change is fast, abrupt differences can overwhelm natural systems. How does the pace of natural <code>co2</code> change differ from the current rate of change?</li>
+</ol>
+<p>Use the <code>co2_time</code> plot saved above. Change the limits as directed to investigate the rate of change in <code>co2</code> over various periods with spikes in <code>co2</code> concentration.</p>
+<p>Change the x-axis limits to -800,000 and -775,000. About how many years did it take for <code>co2</code> to rise from 200 ppmv to its peak near 275 ppmv?</p>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="section-5-overview.html#cb378-1" aria-hidden="true"></a>co2_time &lt;-<span class="st"> </span>historic_co2 <span class="op">%&gt;%</span></span>
+<span id="cb378-2"><a href="section-5-overview.html#cb378-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, co2, <span class="dt">col =</span> source)) <span class="op">+</span></span>
+<span id="cb378-3"><a href="section-5-overview.html#cb378-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb378-4"><a href="section-5-overview.html#cb378-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
+<span id="cb378-5"><a href="section-5-overview.html#cb378-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
+<span id="cb378-6"><a href="section-5-overview.html#cb378-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">800000</span>, <span class="dv">-775000</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 100</li>
+<li><input type="checkbox" disabled="" />
+B. 3,000</li>
+<li><input type="checkbox" disabled="" />
+C. 6,000</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. 10,000</li>
+</ul>
+<p>Change the x-axis limits to -375,000 and -330,000. About how many years did it take for co2 to rise from the minimum of 180 ppm to its peak of 300 ppmv?</p>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="section-5-overview.html#cb380-1" aria-hidden="true"></a>co2_time &lt;-<span class="st"> </span>historic_co2 <span class="op">%&gt;%</span></span>
+<span id="cb380-2"><a href="section-5-overview.html#cb380-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, co2, <span class="dt">col =</span> source)) <span class="op">+</span></span>
+<span id="cb380-3"><a href="section-5-overview.html#cb380-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb380-4"><a href="section-5-overview.html#cb380-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
+<span id="cb380-5"><a href="section-5-overview.html#cb380-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
+<span id="cb380-6"><a href="section-5-overview.html#cb380-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">375000</span>, <span class="dv">-330000</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-201-1.png" width="672" /></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 3,000</li>
+<li><input type="checkbox" disabled="" />
+B. 6,000</li>
+<li><input type="checkbox" disabled="" />
+C. 12,000</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. 25,000</li>
+</ul>
+<p>Change the x-axis limits to -140,000 and -120,000. About how many years did it take for co2 to rise from 200 ppmv to its peak near 280 ppmv?</p>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="section-5-overview.html#cb382-1" aria-hidden="true"></a>co2_time &lt;-<span class="st"> </span>historic_co2 <span class="op">%&gt;%</span></span>
+<span id="cb382-2"><a href="section-5-overview.html#cb382-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, co2, <span class="dt">col =</span> source)) <span class="op">+</span></span>
+<span id="cb382-3"><a href="section-5-overview.html#cb382-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb382-4"><a href="section-5-overview.html#cb382-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
+<span id="cb382-5"><a href="section-5-overview.html#cb382-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
+<span id="cb382-6"><a href="section-5-overview.html#cb382-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">140000</span>, <span class="dv">-120000</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 3200</li>
+<li><input type="checkbox" disabled="" />
+B. 1,500</li>
+<li><input type="checkbox" disabled="" />
+C. 5,000</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. 9,000</li>
+</ul>
+<p>Change the x-axis limits to -3000 and 2018 to investigate modern changes in co2. About how many years did it take for co2 to rise from its stable level around 275 ppmv to the current level of over 400 ppmv?</p>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="section-5-overview.html#cb384-1" aria-hidden="true"></a>co2_time &lt;-<span class="st"> </span>historic_co2 <span class="op">%&gt;%</span></span>
+<span id="cb384-2"><a href="section-5-overview.html#cb384-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, co2, <span class="dt">col =</span> source)) <span class="op">+</span></span>
+<span id="cb384-3"><a href="section-5-overview.html#cb384-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb384-4"><a href="section-5-overview.html#cb384-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
+<span id="cb384-5"><a href="section-5-overview.html#cb384-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
+<span id="cb384-6"><a href="section-5-overview.html#cb384-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">3000</span>, <span class="dv">2018</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 539 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 250</li>
+<li><input type="checkbox" disabled="" />
+B. 1,000</li>
+<li><input type="checkbox" disabled="" />
+C. 2,000</li>
+<li><input type="checkbox" disabled="" />
+D. 5,000</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-4-overview.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

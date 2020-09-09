@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Section 3 Overview | Data Science Visualization</title>
+  <meta name="description" content="4 Section 3 Overview | Data Science Visualization" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Section 3 Overview | Data Science Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Section 3 Overview | Data Science Visualization" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-2-overview.html"/>
+<link rel="next" href="section-4-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-introduction-to-data-visualization-and-distributions"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Introduction to Data Visualization and Distributions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-introduction-to-ggplot2"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Introduction to ggplot2</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-summarizing-with-dplyr"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Summarizing with dplyr</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-gapminder"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Gapminder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-data-visualization-principles"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Data Visualization Principles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-data-visualization"><i class="fa fa-check"></i><b>2.1</b> Introduction to Data Visualization</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-distributions"><i class="fa fa-check"></i><b>2.2</b> Introduction to Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#data-types"><i class="fa fa-check"></i><b>2.3</b> Data Types</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---data-types"><i class="fa fa-check"></i><b>2.4</b> Assessment - Data Types</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#describe-heights-to-et"><i class="fa fa-check"></i><b>2.5</b> Describe Heights to ET</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#smooth-density-plots"><i class="fa fa-check"></i><b>2.6</b> Smooth Density Plots</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---distributions"><i class="fa fa-check"></i><b>2.7</b> Assessment - Distributions</a></li>
+<li class="chapter" data-level="2.8" data-path="section-1-overview.html"><a href="section-1-overview.html#normal-distribution"><i class="fa fa-check"></i><b>2.8</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.9" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---normal-distribution"><i class="fa fa-check"></i><b>2.9</b> Assessment - Normal Distribution</a></li>
+<li class="chapter" data-level="2.10" data-path="section-1-overview.html"><a href="section-1-overview.html#quantile-quantile-plots"><i class="fa fa-check"></i><b>2.10</b> Quantile-Quantile Plots</a></li>
+<li class="chapter" data-level="2.11" data-path="section-1-overview.html"><a href="section-1-overview.html#percentiles"><i class="fa fa-check"></i><b>2.11</b> Percentiles</a></li>
+<li class="chapter" data-level="2.12" data-path="section-1-overview.html"><a href="section-1-overview.html#boxplots"><i class="fa fa-check"></i><b>2.12</b> Boxplots</a></li>
+<li class="chapter" data-level="2.13" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---quantiles-percentiles-and-boxplots"><i class="fa fa-check"></i><b>2.13</b> Assessment - Quantiles, percentiles, and boxplots</a></li>
+<li class="chapter" data-level="2.14" data-path="section-1-overview.html"><a href="section-1-overview.html#distribution-of-female-heights"><i class="fa fa-check"></i><b>2.14</b> Distribution of Female Heights</a></li>
+<li class="chapter" data-level="2.15" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---robust-summaries-with-outliers"><i class="fa fa-check"></i><b>2.15</b> Assessment - Robust Summaries With Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#ggplot"><i class="fa fa-check"></i><b>3.1</b> ggplot</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#graph-components"><i class="fa fa-check"></i><b>3.2</b> Graph Components</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#creating-a-new-plot"><i class="fa fa-check"></i><b>3.3</b> Creating a New Plot</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#layers"><i class="fa fa-check"></i><b>3.4</b> Layers</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#tinkering"><i class="fa fa-check"></i><b>3.5</b> Tinkering</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#scales-labels-and-colors"><i class="fa fa-check"></i><b>3.6</b> Scales, Labels, and Colors</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#add-on-packages"><i class="fa fa-check"></i><b>3.7</b> Add-on Packages</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#other-examples"><i class="fa fa-check"></i><b>3.8</b> Other Examples</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---ggplot2"><i class="fa fa-check"></i><b>3.9</b> Assessment - ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#dplyr"><i class="fa fa-check"></i><b>4.1</b> dplyr</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#the-dot-placeholder"><i class="fa fa-check"></i><b>4.2</b> The Dot Placeholder</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#group-by"><i class="fa fa-check"></i><b>4.3</b> Group By</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#sorting-data-tables"><i class="fa fa-check"></i><b>4.4</b> Sorting Data Tables</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---summarizing-with-dplyr"><i class="fa fa-check"></i><b>4.5</b> Assessment - Summarizing with dplyr</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#case-study-trends-in-world-health-and-economics"><i class="fa fa-check"></i><b>5.1</b> Case Study: Trends in World Health and Economics</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#gapminder-dataset"><i class="fa fa-check"></i><b>5.2</b> Gapminder Dataset</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#life-expectancy-and-fertility-rates"><i class="fa fa-check"></i><b>5.3</b> Life Expectancy and Fertility Rates</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#faceting"><i class="fa fa-check"></i><b>5.4</b> Faceting</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#time-series-plots"><i class="fa fa-check"></i><b>5.5</b> Time Series Plots</a></li>
+<li class="chapter" data-level="5.6" data-path="section-4-overview.html"><a href="section-4-overview.html#transformations"><i class="fa fa-check"></i><b>5.6</b> Transformations</a></li>
+<li class="chapter" data-level="5.7" data-path="section-4-overview.html"><a href="section-4-overview.html#stratify-and-boxplot"><i class="fa fa-check"></i><b>5.7</b> Stratify and Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="section-4-overview.html"><a href="section-4-overview.html#comparing-distributions"><i class="fa fa-check"></i><b>5.8</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="5.9" data-path="section-4-overview.html"><a href="section-4-overview.html#density-plots"><i class="fa fa-check"></i><b>5.9</b> Density Plots</a></li>
+<li class="chapter" data-level="5.10" data-path="section-4-overview.html"><a href="section-4-overview.html#ecological-fallacy"><i class="fa fa-check"></i><b>5.10</b> Ecological Fallacy</a></li>
+<li class="chapter" data-level="5.11" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---exploring-the-gapminder-dataset"><i class="fa fa-check"></i><b>5.11</b> Assessment - Exploring the Gapminder Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#introduction-to-data-visualization-principles"><i class="fa fa-check"></i><b>6.1</b> Introduction to Data Visualization Principles</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-data-using-visual-cues"><i class="fa fa-check"></i><b>6.2</b> Encoding Data Using Visual Cues</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#know-when-to-include-zero"><i class="fa fa-check"></i><b>6.3</b> Know When to Include Zero</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#do-not-distort-quantities"><i class="fa fa-check"></i><b>6.4</b> Do Not Distort Quantities</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#order-by-a-meaningful-value"><i class="fa fa-check"></i><b>6.5</b> Order by a Meaningful Value</a></li>
+<li class="chapter" data-level="6.6" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-1"><i class="fa fa-check"></i><b>6.6</b> Assessment - Data Visualization Principles, Part 1</a></li>
+<li class="chapter" data-level="6.7" data-path="section-5-overview.html"><a href="section-5-overview.html#show-the-data"><i class="fa fa-check"></i><b>6.7</b> Show the Data</a></li>
+<li class="chapter" data-level="6.8" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-use-common-axes"><i class="fa fa-check"></i><b>6.8</b> Ease Comparisons: Use Common Axes</a></li>
+<li class="chapter" data-level="6.9" data-path="section-5-overview.html"><a href="section-5-overview.html#consider-transformations"><i class="fa fa-check"></i><b>6.9</b> Consider Transformations</a></li>
+<li class="chapter" data-level="6.10" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-compared-visual-cues-should-be-adjacent"><i class="fa fa-check"></i><b>6.10</b> Ease Comparisons: Compared Visual Cues Should Be Adjacent</a></li>
+<li class="chapter" data-level="6.11" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-2"><i class="fa fa-check"></i><b>6.11</b> Assessment - Data Visualization Principles, Part 2</a></li>
+<li class="chapter" data-level="6.12" data-path="section-5-overview.html"><a href="section-5-overview.html#slope-charts"><i class="fa fa-check"></i><b>6.12</b> Slope Charts</a></li>
+<li class="chapter" data-level="6.13" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-a-third-variable"><i class="fa fa-check"></i><b>6.13</b> Encoding a Third Variable</a></li>
+<li class="chapter" data-level="6.14" data-path="section-5-overview.html"><a href="section-5-overview.html#case-study-vaccines"><i class="fa fa-check"></i><b>6.14</b> Case Study: Vaccines</a></li>
+<li class="chapter" data-level="6.15" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-pseudo-and-gratuitous-3d-plots"><i class="fa fa-check"></i><b>6.15</b> Avoid Pseudo and Gratuitous 3D Plots</a></li>
+<li class="chapter" data-level="6.16" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-too-many-significant-digits"><i class="fa fa-check"></i><b>6.16</b> Avoid Too Many Significant Digits</a></li>
+<li class="chapter" data-level="6.17" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-3"><i class="fa fa-check"></i><b>6.17</b> Assessment - Data Visualization Principles, Part 3</a></li>
+<li class="chapter" data-level="6.18" data-path="section-5-overview.html"><a href="section-5-overview.html#titanic-survival-exercises"><i class="fa fa-check"></i><b>6.18</b> Titanic Survival Exercises</a></li>
+<li class="chapter" data-level="6.19" data-path="section-5-overview.html"><a href="section-5-overview.html#properties-of-stars-exercises"><i class="fa fa-check"></i><b>6.19</b> Properties of Stars Exercises</a></li>
+<li class="chapter" data-level="6.20" data-path="section-5-overview.html"><a href="section-5-overview.html#climate-change-exercises"><i class="fa fa-check"></i><b>6.20</b> Climate Change Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-3-overview" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Section 3 Overview</h1>
+<p>Section 3 introduces you to summarizing with dplyr.</p>
+<p>After completing Section 3, you will:</p>
+<ul>
+<li>understand the importance of summarizing data in exploratory data analysis.</li>
+<li>be able to use the “summarize” verb in dplyr to facilitate summarizing data.</li>
+<li>be able to use the “group_by” verb in dplyr to facilitate summarizing data.</li>
+<li>be able to access values using the dot placeholder.</li>
+<li>be able to use “arrange” to examine data after sorting.</li>
+</ul>
+<div id="dplyr" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> dplyr</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#summarizing-data">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li><code>summarize</code> from the dplyr/tidyverse package computes summary statistics from the data frame. It returns a data frame whose column names are defined within the function call.</li>
+<li><code>summarize</code> can compute any summary function that operates on vectors and returns a single value, but it cannot operate on functions that return multiple values.</li>
+<li>Like most dplyr functions, <code>summarize</code> is aware of variable names within data frames and can use them directly.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-3-overview.html#cb150-1" aria-hidden="true"></a><span class="co"># compute average and standard deviation for males</span></span>
+<span id="cb150-2"><a href="section-3-overview.html#cb150-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span></span>
+<span id="cb150-3"><a href="section-3-overview.html#cb150-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb150-4"><a href="section-3-overview.html#cb150-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
+<span id="cb150-5"><a href="section-3-overview.html#cb150-5" aria-hidden="true"></a>    </span>
+<span id="cb150-6"><a href="section-3-overview.html#cb150-6" aria-hidden="true"></a><span class="co"># access average and standard deviation from summary table</span></span>
+<span id="cb150-7"><a href="section-3-overview.html#cb150-7" aria-hidden="true"></a>s<span class="op">$</span>average</span></code></pre></div>
+<pre><code>## [1] 69.3</code></pre>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="section-3-overview.html#cb152-1" aria-hidden="true"></a>s<span class="op">$</span>standard_deviation</span></code></pre></div>
+<pre><code>## [1] 3.61</code></pre>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="section-3-overview.html#cb154-1" aria-hidden="true"></a><span class="co"># compute median, min and max</span></span>
+<span id="cb154-2"><a href="section-3-overview.html#cb154-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb154-3"><a href="section-3-overview.html#cb154-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb154-4"><a href="section-3-overview.html#cb154-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(height),</span>
+<span id="cb154-5"><a href="section-3-overview.html#cb154-5" aria-hidden="true"></a>                       <span class="dt">minimum =</span> <span class="kw">min</span>(height),</span>
+<span id="cb154-6"><a href="section-3-overview.html#cb154-6" aria-hidden="true"></a>                       <span class="dt">maximum =</span> <span class="kw">max</span>(height))</span></code></pre></div>
+<pre><code>##   median minimum maximum
+## 1     69      50    82.7</code></pre>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="section-3-overview.html#cb156-1" aria-hidden="true"></a><span class="co"># alternative way to get min, median, max in base R</span></span>
+<span id="cb156-2"><a href="section-3-overview.html#cb156-2" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>##   0%  50% 100% 
+## 50.0 68.5 82.7</code></pre>
+<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="section-3-overview.html#cb158-1" aria-hidden="true"></a><span class="co"># generates an error: summarize can only take functions that return a single value</span></span>
+<span id="cb158-2"><a href="section-3-overview.html#cb158-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb158-3"><a href="section-3-overview.html#cb158-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb158-4"><a href="section-3-overview.html#cb158-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
+</div>
+<div id="the-dot-placeholder" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> The Dot Placeholder</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#the-dot-operator">here</a></p>
+<p>Note that a common replacement for the dot operator is the pull function. Here is the <a href="https://rafalab.github.io/dsbook/tidyverse.html#pull">textbook section on the pull function</a>.</p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The dot operator allows you to access values stored in data that is being piped in using the <code>%&gt;%</code> character. The dot is a placeholder for the data being passed in through the pipe.</li>
+<li>The dot operator allows <code>dplyr</code> functions to return single vectors or numbers instead of only data frames.</li>
+<li><code>us_murder_rate %&gt;% .$rate</code> is equivalent to <code>us_murder_rate$rate</code>.</li>
+<li>Note that an equivalent way to extract a single column using the pipe is <code>us_murder_rate %&gt;% pull(rate)</code>. The pull function will be used in later course material.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="section-3-overview.html#cb159-1" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>)</span>
+<span id="cb159-2"><a href="section-3-overview.html#cb159-2" aria-hidden="true"></a><span class="kw">summarize</span>(murders, <span class="kw">mean</span>(murder_rate))</span></code></pre></div>
+<pre><code>##   mean(murder_rate)
+## 1              2.78</code></pre>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="section-3-overview.html#cb161-1" aria-hidden="true"></a><span class="co"># calculate US murder rate, generating a data frame</span></span>
+<span id="cb161-2"><a href="section-3-overview.html#cb161-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb161-3"><a href="section-3-overview.html#cb161-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb161-4"><a href="section-3-overview.html#cb161-4" aria-hidden="true"></a>us_murder_rate</span></code></pre></div>
+<pre><code>##   rate
+## 1 3.03</code></pre>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="section-3-overview.html#cb163-1" aria-hidden="true"></a><span class="co"># extract the numeric US murder rate with the dot operator</span></span>
+<span id="cb163-2"><a href="section-3-overview.html#cb163-2" aria-hidden="true"></a>us_murder_rate <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>rate</span></code></pre></div>
+<pre><code>## [1] 3.03</code></pre>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="section-3-overview.html#cb165-1" aria-hidden="true"></a><span class="co"># calculate and extract the murder rate with one pipe</span></span>
+<span id="cb165-2"><a href="section-3-overview.html#cb165-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb165-3"><a href="section-3-overview.html#cb165-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb165-4"><a href="section-3-overview.html#cb165-4" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>rate</span></code></pre></div>
+</div>
+<div id="group-by" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Group By</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#group-by">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The <code>group_by</code> function from <strong>dplyr</strong> converts a data frame to a grouped data frame, creating groups using one or more variables.</li>
+<li><code>summarize</code> and some other <strong>dplyr</strong> functions will behave differently on grouped data frames.</li>
+<li>Using <code>summarize</code> on a grouped data frame computes the summary statistics for each of the separate groups.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="section-3-overview.html#cb166-1" aria-hidden="true"></a><span class="co"># compute separate average and standard deviation for male/female heights</span></span>
+<span id="cb166-2"><a href="section-3-overview.html#cb166-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb166-3"><a href="section-3-overview.html#cb166-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></span>
+<span id="cb166-4"><a href="section-3-overview.html#cb166-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 2 x 3
+##   sex    average standard_deviation
+##   &lt;fct&gt;    &lt;dbl&gt;              &lt;dbl&gt;
+## 1 Female    64.9               3.76
+## 2 Male      69.3               3.61</code></pre>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="section-3-overview.html#cb169-1" aria-hidden="true"></a><span class="co"># compute median murder rate in 4 regions of country</span></span>
+<span id="cb169-2"><a href="section-3-overview.html#cb169-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb169-3"><a href="section-3-overview.html#cb169-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb169-4"><a href="section-3-overview.html#cb169-4" aria-hidden="true"></a>murders <span class="op">%&gt;%</span></span>
+<span id="cb169-5"><a href="section-3-overview.html#cb169-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
+<span id="cb169-6"><a href="section-3-overview.html#cb169-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median_rate =</span> <span class="kw">median</span>(murder_rate))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 4 x 2
+##   region        median_rate
+##   &lt;fct&gt;               &lt;dbl&gt;
+## 1 Northeast            1.80
+## 2 South                3.40
+## 3 North Central        1.97
+## 4 West                 1.29</code></pre>
+</div>
+<div id="sorting-data-tables" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Sorting Data Tables</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#sorting-data-frames">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The <code>arrange</code> function from <strong>dplyr</strong> sorts a data frame by a given column.</li>
+<li>By default, <code>arrange</code> sorts in ascending order (lowest to highest). To instead sort in descending order, use the function <code>desc</code> inside of <code>arrange</code>.</li>
+<li>You can <code>arrange</code> by multiple levels: within equivalent values of the first level, observations are sorted by the second level, and so on.</li>
+<li>The <code>top_n</code> function shows the top results ranked by a given variable, but the results are not ordered. You can combine <code>top_n</code> with <code>arrange</code> to return the top results in order.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="section-3-overview.html#cb172-1" aria-hidden="true"></a><span class="co"># set up murders object</span></span>
+<span id="cb172-2"><a href="section-3-overview.html#cb172-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb172-3"><a href="section-3-overview.html#cb172-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb172-4"><a href="section-3-overview.html#cb172-4" aria-hidden="true"></a></span>
+<span id="cb172-5"><a href="section-3-overview.html#cb172-5" aria-hidden="true"></a><span class="co"># arrange by population column, smallest to largest</span></span>
+<span id="cb172-6"><a href="section-3-overview.html#cb172-6" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(population) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>##                  state abb        region population total murder_rate
+## 1              Wyoming  WY          West     563626     5       0.887
+## 2 District of Columbia  DC         South     601723    99      16.453
+## 3              Vermont  VT     Northeast     625741     2       0.320
+## 4         North Dakota  ND North Central     672591     4       0.595
+## 5               Alaska  AK          West     710231    19       2.675
+## 6         South Dakota  SD North Central     814180     8       0.983</code></pre>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="section-3-overview.html#cb174-1" aria-hidden="true"></a><span class="co"># arrange by murder rate, smallest to largest</span></span>
+<span id="cb174-2"><a href="section-3-overview.html#cb174-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>##           state abb        region population total murder_rate
+## 1       Vermont  VT     Northeast     625741     2       0.320
+## 2 New Hampshire  NH     Northeast    1316470     5       0.380
+## 3        Hawaii  HI          West    1360301     7       0.515
+## 4  North Dakota  ND North Central     672591     4       0.595
+## 5          Iowa  IA North Central    3046355    21       0.689
+## 6         Idaho  ID          West    1567582    12       0.766</code></pre>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="section-3-overview.html#cb176-1" aria-hidden="true"></a><span class="co"># arrange by murder rate in descending order</span></span>
+<span id="cb176-2"><a href="section-3-overview.html#cb176-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>##                  state abb        region population total murder_rate
+## 1 District of Columbia  DC         South     601723    99       16.45
+## 2            Louisiana  LA         South    4533372   351        7.74
+## 3             Missouri  MO North Central    5988927   321        5.36
+## 4             Maryland  MD         South    5773552   293        5.07
+## 5       South Carolina  SC         South    4625364   207        4.48
+## 6             Delaware  DE         South     897934    38        4.23</code></pre>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="section-3-overview.html#cb178-1" aria-hidden="true"></a><span class="co"># arrange by region alphabetically, then by murder rate within each region</span></span>
+<span id="cb178-2"><a href="section-3-overview.html#cb178-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(region, murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<pre><code>##           state abb    region population total murder_rate
+## 1       Vermont  VT Northeast     625741     2       0.320
+## 2 New Hampshire  NH Northeast    1316470     5       0.380
+## 3         Maine  ME Northeast    1328361    11       0.828
+## 4  Rhode Island  RI Northeast    1052567    16       1.520
+## 5 Massachusetts  MA Northeast    6547629   118       1.802
+## 6      New York  NY Northeast   19378102   517       2.668</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="section-3-overview.html#cb180-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, not ordered by rate</span></span>
+<span id="cb180-2"><a href="section-3-overview.html#cb180-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>, murder_rate)</span></code></pre></div>
+<pre><code>##                   state abb        region population total murder_rate
+## 1               Arizona  AZ          West    6392017   232        3.63
+## 2              Delaware  DE         South     897934    38        4.23
+## 3  District of Columbia  DC         South     601723    99       16.45
+## 4               Georgia  GA         South    9920000   376        3.79
+## 5             Louisiana  LA         South    4533372   351        7.74
+## 6              Maryland  MD         South    5773552   293        5.07
+## 7              Michigan  MI North Central    9883640   413        4.18
+## 8           Mississippi  MS         South    2967297   120        4.04
+## 9              Missouri  MO North Central    5988927   321        5.36
+## 10       South Carolina  SC         South    4625364   207        4.48</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="section-3-overview.html#cb182-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, ordered by rate</span></span>
+<span id="cb182-2"><a href="section-3-overview.html#cb182-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## Selecting by murder_rate</code></pre>
+<pre><code>##                   state abb        region population total murder_rate
+## 1  District of Columbia  DC         South     601723    99       16.45
+## 2             Louisiana  LA         South    4533372   351        7.74
+## 3              Missouri  MO North Central    5988927   321        5.36
+## 4              Maryland  MD         South    5773552   293        5.07
+## 5        South Carolina  SC         South    4625364   207        4.48
+## 6              Delaware  DE         South     897934    38        4.23
+## 7              Michigan  MI North Central    9883640   413        4.18
+## 8           Mississippi  MS         South    2967297   120        4.04
+## 9               Georgia  GA         South    9920000   376        3.79
+## 10              Arizona  AZ          West    6392017   232        3.63</code></pre>
+</div>
+<div id="assessment---summarizing-with-dplyr" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Assessment - Summarizing with dplyr</h2>
+<p>To practice our dplyr skills we will be working with data from the survey collected by the United States National Center for Health Statistics (NCHS). This center has conducted a series of health and nutrition surveys since the 1960’s.</p>
+<p>Starting in 1999, about 5,000 individuals of all ages have been interviewed every year and then they complete the health examination component of the survey. Part of this dataset is made available via the NHANES package which can be loaded this way:</p>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="section-3-overview.html#cb185-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(NHANES)) <span class="kw">install.packages</span>(<span class="st">&quot;NHANES&quot;</span>)</span>
+<span id="cb185-2"><a href="section-3-overview.html#cb185-2" aria-hidden="true"></a></span>
+<span id="cb185-3"><a href="section-3-overview.html#cb185-3" aria-hidden="true"></a><span class="kw">library</span>(NHANES)</span>
+<span id="cb185-4"><a href="section-3-overview.html#cb185-4" aria-hidden="true"></a><span class="kw">data</span>(NHANES)</span></code></pre></div>
+<p>The NHANES data has many missing values. Remember that the main summarization function in R will return <code>NA</code> if any of the entries of the input vector is an <code>NA</code>. Here is an example:</p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-3-overview.html#cb186-1" aria-hidden="true"></a><span class="kw">data</span>(na_example)</span>
+<span id="cb186-2"><a href="section-3-overview.html#cb186-2" aria-hidden="true"></a><span class="kw">mean</span>(na_example)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="section-3-overview.html#cb188-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example)</span></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>To ignore the <code>NA</code>s, we can use the <code>na.rm</code> argument:</p>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="section-3-overview.html#cb190-1" aria-hidden="true"></a><span class="kw">mean</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 2.3</code></pre>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="section-3-overview.html#cb192-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 1.22</code></pre>
+<p>Try running this code, then let us know you are ready to proceed with the analysis.</p>
+<ol style="list-style-type: decimal">
+<li>Let’s explore the <code>NHANES</code> data. We will be exploring blood pressure in this dataset.</li>
+</ol>
+<p>First let’s select a group to set the standard. We will use 20-29 year old females. Note that the category is coded with <code>20-29</code>, with a space in front of the <code>20</code>! The <code>AgeDecade</code> is a categorical variable with these ages.</p>
+<p>To know if someone is female, you can look at the <code>Gender</code> variable.</p>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="section-3-overview.html#cb194-1" aria-hidden="true"></a><span class="co">## fill in what is needed</span></span>
+<span id="cb194-2"><a href="section-3-overview.html#cb194-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>)</span>
+<span id="cb194-3"><a href="section-3-overview.html#cb194-3" aria-hidden="true"></a><span class="kw">head</span>(tab)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 76
+##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education MaritalStatus HHIncome HHIncomeMid Poverty HomeRooms HomeOwn Work  Weight Length HeadCirc Height   BMI
+##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;     &lt;fct&gt;         &lt;fct&gt;          &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+## 1 51710 2009_10  female    26 &quot; 20-29&quot;        319 White &lt;NA&gt;  College … Married       &quot;75000-…       87500    5            4 Own     Work…   64.9     NA       NA   176.  21  
+## 2 51731 2009_10  female    28 &quot; 20-29&quot;        346 Black &lt;NA&gt;  High Sch… NeverMarried  &quot; 0-499…        2500    0.07         4 Rent    Work…  134.      NA       NA   170.  46.7
+## 3 51741 2009_10  female    21 &quot; 20-29&quot;        253 Black &lt;NA&gt;  Some Col… NeverMarried  &quot;45000-…       50000    2.04         4 Rent    Work…  104.      NA       NA   166.  37.3
+## 4 51741 2009_10  female    21 &quot; 20-29&quot;        253 Black &lt;NA&gt;  Some Col… NeverMarried  &quot;45000-…       50000    2.04         4 Rent    Work…  104.      NA       NA   166.  37.3
+## 5 51760 2009_10  female    27 &quot; 20-29&quot;        334 Hisp… &lt;NA&gt;  9 - 11th… NeverMarried   &lt;NA&gt;             NA    0.72         4 Rent    NotW…   69.9     NA       NA   166.  25.5
+## 6 51764 2009_10  female    29 &quot; 20-29&quot;        357 White &lt;NA&gt;  College … NeverMarried  &quot;10000-…       12500    1.11         4 Rent    Work…   87.8     NA       NA   164.  32.5
+## # … with 55 more variables: BMICatUnder20yrs &lt;fct&gt;, BMI_WHO &lt;fct&gt;, Pulse &lt;int&gt;, BPSysAve &lt;int&gt;, BPDiaAve &lt;int&gt;, BPSys1 &lt;int&gt;, BPDia1 &lt;int&gt;, BPSys2 &lt;int&gt;, BPDia2 &lt;int&gt;, BPSys3 &lt;int&gt;,
+## #   BPDia3 &lt;int&gt;, Testosterone &lt;dbl&gt;, DirectChol &lt;dbl&gt;, TotChol &lt;dbl&gt;, UrineVol1 &lt;int&gt;, UrineFlow1 &lt;dbl&gt;, UrineVol2 &lt;int&gt;, UrineFlow2 &lt;dbl&gt;, Diabetes &lt;fct&gt;, DiabetesAge &lt;int&gt;,
+## #   HealthGen &lt;fct&gt;, DaysPhysHlthBad &lt;int&gt;, DaysMentHlthBad &lt;int&gt;, LittleInterest &lt;fct&gt;, Depressed &lt;fct&gt;, nPregnancies &lt;int&gt;, nBabies &lt;int&gt;, Age1stBaby &lt;int&gt;, SleepHrsNight &lt;int&gt;,
+## #   SleepTrouble &lt;fct&gt;, PhysActive &lt;fct&gt;, PhysActiveDays &lt;int&gt;, TVHrsDay &lt;fct&gt;, CompHrsDay &lt;fct&gt;, TVHrsDayChild &lt;int&gt;, CompHrsDayChild &lt;int&gt;, Alcohol12PlusYr &lt;fct&gt;,
+## #   AlcoholDay &lt;int&gt;, AlcoholYear &lt;int&gt;, SmokeNow &lt;fct&gt;, Smoke100 &lt;fct&gt;, Smoke100n &lt;fct&gt;, SmokeAge &lt;int&gt;, Marijuana &lt;fct&gt;, AgeFirstMarij &lt;int&gt;, RegularMarij &lt;fct&gt;,
+## #   AgeRegMarij &lt;int&gt;, HardDrugs &lt;fct&gt;, SexEver &lt;fct&gt;, SexAge &lt;int&gt;, SexNumPartnLife &lt;int&gt;, SexNumPartYear &lt;int&gt;, SameSex &lt;fct&gt;, SexOrientation &lt;fct&gt;, PregnantNow &lt;fct&gt;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Now we will compute the average and standard deviation for the subgroup we defined in the previous exercise (20-29 year old females), which we will use reference for what is typical.</li>
+</ol>
+<p>You will determine the average and standard deviation of systolic blood pressure, which are stored in the <code>BPSysAve</code> variable in the NHANES dataset.</p>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="section-3-overview.html#cb196-1" aria-hidden="true"></a><span class="co">## complete this line of code.</span></span>
+<span id="cb196-2"><a href="section-3-overview.html#cb196-2" aria-hidden="true"></a>ref &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb196-3"><a href="section-3-overview.html#cb196-3" aria-hidden="true"></a>ref</span></code></pre></div>
+<pre><code>## # A tibble: 1 x 2
+##   average standard_deviation
+##     &lt;dbl&gt;              &lt;dbl&gt;
+## 1    108.               10.1</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now we will repeat the exercise and generate only the average blood pressure for 20-29 year old females.</li>
+</ol>
+<p>For this exercise, you should review how to use the place holder <code>.</code> in dplyr or the <code>pull</code> function.</p>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="section-3-overview.html#cb198-1" aria-hidden="true"></a><span class="co">## modify the code we wrote for previous exercise.</span></span>
+<span id="cb198-2"><a href="section-3-overview.html#cb198-2" aria-hidden="true"></a>ref_avg &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb198-3"><a href="section-3-overview.html#cb198-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb198-4"><a href="section-3-overview.html#cb198-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb198-5"><a href="section-3-overview.html#cb198-5" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>average</span>
+<span id="cb198-6"><a href="section-3-overview.html#cb198-6" aria-hidden="true"></a>ref_avg</span></code></pre></div>
+<pre><code>## [1] 108</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Let’s continue practicing by calculating two other data summaries: the minimum and the maximum.</li>
+</ol>
+<p>Again we will do it for the <code>BPSysAve</code> variable and the group of 20-29 year old females.</p>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="section-3-overview.html#cb200-1" aria-hidden="true"></a><span class="co">## complete the line</span></span>
+<span id="cb200-2"><a href="section-3-overview.html#cb200-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb200-3"><a href="section-3-overview.html#cb200-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span>  <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">minbp =</span> <span class="kw">min</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb200-4"><a href="section-3-overview.html#cb200-4" aria-hidden="true"></a>            <span class="dt">maxbp =</span> <span class="kw">max</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## # A tibble: 1 x 2
+##   minbp maxbp
+##   &lt;int&gt; &lt;int&gt;
+## 1    84   179</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Now let’s practice using the <code>group_by</code> function.</li>
+</ol>
+<p>What we are about to do is a very common operation in data science: you will split a data table into groups and then compute summary statistics for each group.</p>
+<p>We will compute the average and standard deviation of systolic blood pressure for females for each age group separately. Remember that the age groups are contained in <code>AgeDecade</code>.</p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="section-3-overview.html#cb202-1" aria-hidden="true"></a><span class="co">##complete the line with group_by and summarize</span></span>
+<span id="cb202-2"><a href="section-3-overview.html#cb202-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb202-3"><a href="section-3-overview.html#cb202-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb202-4"><a href="section-3-overview.html#cb202-4" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 9 x 3
+##   AgeDecade average standard_deviation
+##   &lt;fct&gt;       &lt;dbl&gt;              &lt;dbl&gt;
+## 1 &quot; 0-9&quot;       100.               9.07
+## 2 &quot; 10-19&quot;     104.               9.46
+## 3 &quot; 20-29&quot;     108.              10.1 
+## 4 &quot; 30-39&quot;     111.              12.3 
+## 5 &quot; 40-49&quot;     115.              14.5 
+## 6 &quot; 50-59&quot;     122.              16.2 
+## 7 &quot; 60-69&quot;     127.              17.1 
+## 8 &quot; 70+&quot;       134.              19.8 
+## 9  &lt;NA&gt;        142.              22.9</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Now let’s practice using <code>group_by</code> some more.</li>
+</ol>
+<p>We are going to repeat the previous exercise of calculating the average and standard deviation of systolic blood pressure, but for males instead of females.</p>
+<p>This time we will not provide much sample code. You are on your own!</p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="section-3-overview.html#cb205-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb205-2"><a href="section-3-overview.html#cb205-2" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb205-3"><a href="section-3-overview.html#cb205-3" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 9 x 3
+##   AgeDecade average standard_deviation
+##   &lt;fct&gt;       &lt;dbl&gt;              &lt;dbl&gt;
+## 1 &quot; 0-9&quot;       97.4               8.32
+## 2 &quot; 10-19&quot;    110.               11.2 
+## 3 &quot; 20-29&quot;    118.               11.3 
+## 4 &quot; 30-39&quot;    119.               12.3 
+## 5 &quot; 40-49&quot;    121.               14.0 
+## 6 &quot; 50-59&quot;    126.               17.8 
+## 7 &quot; 60-69&quot;    127.               17.5 
+## 8 &quot; 70+&quot;      130.               18.7 
+## 9  &lt;NA&gt;       136.               23.5</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>We can actually combine both of these summaries into a single line of code.</li>
+</ol>
+<p>This is because <code>group_by</code> permits us to group by more than one variable.</p>
+<p>We can use <code>group_by(AgeDecade, Gender)</code> to group by both age decades and gender.</p>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="section-3-overview.html#cb208-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade, Gender) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb208-2"><a href="section-3-overview.html#cb208-2" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<pre><code>## `summarise()` regrouping output by &#39;AgeDecade&#39; (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 18 x 4
+## # Groups:   AgeDecade [9]
+##    AgeDecade Gender average standard_deviation
+##    &lt;fct&gt;     &lt;fct&gt;    &lt;dbl&gt;              &lt;dbl&gt;
+##  1 &quot; 0-9&quot;    female   100.                9.07
+##  2 &quot; 0-9&quot;    male      97.4               8.32
+##  3 &quot; 10-19&quot;  female   104.                9.46
+##  4 &quot; 10-19&quot;  male     110.               11.2 
+##  5 &quot; 20-29&quot;  female   108.               10.1 
+##  6 &quot; 20-29&quot;  male     118.               11.3 
+##  7 &quot; 30-39&quot;  female   111.               12.3 
+##  8 &quot; 30-39&quot;  male     119.               12.3 
+##  9 &quot; 40-49&quot;  female   115.               14.5 
+## 10 &quot; 40-49&quot;  male     121.               14.0 
+## 11 &quot; 50-59&quot;  female   122.               16.2 
+## 12 &quot; 50-59&quot;  male     126.               17.8 
+## 13 &quot; 60-69&quot;  female   127.               17.1 
+## 14 &quot; 60-69&quot;  male     127.               17.5 
+## 15 &quot; 70+&quot;    female   134.               19.8 
+## 16 &quot; 70+&quot;    male     130.               18.7 
+## 17  &lt;NA&gt;     female   142.               22.9 
+## 18  &lt;NA&gt;     male     136.               23.5</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>Now we are going to explore differences in systolic blood pressure across races, as reported in the <code>Race1</code> variable.</li>
+</ol>
+<p>We will learn to use the <code>arrange</code> function to order the outcome acording to one variable.</p>
+<p>Note that this function can be used to order any table by a given outcome. Here is an example that arranges by systolic blood pressure.</p>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="section-3-overview.html#cb211-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(BPSysAve)</span></code></pre></div>
+<p>If we want it in descending order we can use the <code>desc</code> function like this:</p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-3-overview.html#cb212-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(BPSysAve))</span></code></pre></div>
+<p>In this example, we will compare systolic blood pressure across values of the <code>Race1</code> variable for males between the ages of 40-49.</p>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="section-3-overview.html#cb213-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 40-49&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Race1) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(average)</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 5 x 3
+##   Race1    average standard_deviation
+##   &lt;fct&gt;      &lt;dbl&gt;              &lt;dbl&gt;
+## 1 White       120.               13.4
+## 2 Other       120.               16.2
+## 3 Hispanic    122.               11.1
+## 4 Mexican     122.               13.9
+## 5 Black       126.               17.1</code></pre>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-2-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-4-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

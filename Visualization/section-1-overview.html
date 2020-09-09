@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Section 1 Overview | Data Science Visualization</title>
+  <meta name="description" content="2 Section 1 Overview | Data Science Visualization" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Section 1 Overview | Data Science Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Section 1 Overview | Data Science Visualization" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="learning-objectives.html"/>
+<link rel="next" href="section-2-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-introduction-to-data-visualization-and-distributions"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Introduction to Data Visualization and Distributions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-introduction-to-ggplot2"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Introduction to ggplot2</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-summarizing-with-dplyr"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Summarizing with dplyr</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-gapminder"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Gapminder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-data-visualization-principles"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Data Visualization Principles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-data-visualization"><i class="fa fa-check"></i><b>2.1</b> Introduction to Data Visualization</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-distributions"><i class="fa fa-check"></i><b>2.2</b> Introduction to Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#data-types"><i class="fa fa-check"></i><b>2.3</b> Data Types</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---data-types"><i class="fa fa-check"></i><b>2.4</b> Assessment - Data Types</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#describe-heights-to-et"><i class="fa fa-check"></i><b>2.5</b> Describe Heights to ET</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#smooth-density-plots"><i class="fa fa-check"></i><b>2.6</b> Smooth Density Plots</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---distributions"><i class="fa fa-check"></i><b>2.7</b> Assessment - Distributions</a></li>
+<li class="chapter" data-level="2.8" data-path="section-1-overview.html"><a href="section-1-overview.html#normal-distribution"><i class="fa fa-check"></i><b>2.8</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.9" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---normal-distribution"><i class="fa fa-check"></i><b>2.9</b> Assessment - Normal Distribution</a></li>
+<li class="chapter" data-level="2.10" data-path="section-1-overview.html"><a href="section-1-overview.html#quantile-quantile-plots"><i class="fa fa-check"></i><b>2.10</b> Quantile-Quantile Plots</a></li>
+<li class="chapter" data-level="2.11" data-path="section-1-overview.html"><a href="section-1-overview.html#percentiles"><i class="fa fa-check"></i><b>2.11</b> Percentiles</a></li>
+<li class="chapter" data-level="2.12" data-path="section-1-overview.html"><a href="section-1-overview.html#boxplots"><i class="fa fa-check"></i><b>2.12</b> Boxplots</a></li>
+<li class="chapter" data-level="2.13" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---quantiles-percentiles-and-boxplots"><i class="fa fa-check"></i><b>2.13</b> Assessment - Quantiles, percentiles, and boxplots</a></li>
+<li class="chapter" data-level="2.14" data-path="section-1-overview.html"><a href="section-1-overview.html#distribution-of-female-heights"><i class="fa fa-check"></i><b>2.14</b> Distribution of Female Heights</a></li>
+<li class="chapter" data-level="2.15" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---robust-summaries-with-outliers"><i class="fa fa-check"></i><b>2.15</b> Assessment - Robust Summaries With Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#ggplot"><i class="fa fa-check"></i><b>3.1</b> ggplot</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#graph-components"><i class="fa fa-check"></i><b>3.2</b> Graph Components</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#creating-a-new-plot"><i class="fa fa-check"></i><b>3.3</b> Creating a New Plot</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#layers"><i class="fa fa-check"></i><b>3.4</b> Layers</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#tinkering"><i class="fa fa-check"></i><b>3.5</b> Tinkering</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#scales-labels-and-colors"><i class="fa fa-check"></i><b>3.6</b> Scales, Labels, and Colors</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#add-on-packages"><i class="fa fa-check"></i><b>3.7</b> Add-on Packages</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#other-examples"><i class="fa fa-check"></i><b>3.8</b> Other Examples</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---ggplot2"><i class="fa fa-check"></i><b>3.9</b> Assessment - ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#dplyr"><i class="fa fa-check"></i><b>4.1</b> dplyr</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#the-dot-placeholder"><i class="fa fa-check"></i><b>4.2</b> The Dot Placeholder</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#group-by"><i class="fa fa-check"></i><b>4.3</b> Group By</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#sorting-data-tables"><i class="fa fa-check"></i><b>4.4</b> Sorting Data Tables</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---summarizing-with-dplyr"><i class="fa fa-check"></i><b>4.5</b> Assessment - Summarizing with dplyr</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#case-study-trends-in-world-health-and-economics"><i class="fa fa-check"></i><b>5.1</b> Case Study: Trends in World Health and Economics</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#gapminder-dataset"><i class="fa fa-check"></i><b>5.2</b> Gapminder Dataset</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#life-expectancy-and-fertility-rates"><i class="fa fa-check"></i><b>5.3</b> Life Expectancy and Fertility Rates</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#faceting"><i class="fa fa-check"></i><b>5.4</b> Faceting</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#time-series-plots"><i class="fa fa-check"></i><b>5.5</b> Time Series Plots</a></li>
+<li class="chapter" data-level="5.6" data-path="section-4-overview.html"><a href="section-4-overview.html#transformations"><i class="fa fa-check"></i><b>5.6</b> Transformations</a></li>
+<li class="chapter" data-level="5.7" data-path="section-4-overview.html"><a href="section-4-overview.html#stratify-and-boxplot"><i class="fa fa-check"></i><b>5.7</b> Stratify and Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="section-4-overview.html"><a href="section-4-overview.html#comparing-distributions"><i class="fa fa-check"></i><b>5.8</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="5.9" data-path="section-4-overview.html"><a href="section-4-overview.html#density-plots"><i class="fa fa-check"></i><b>5.9</b> Density Plots</a></li>
+<li class="chapter" data-level="5.10" data-path="section-4-overview.html"><a href="section-4-overview.html#ecological-fallacy"><i class="fa fa-check"></i><b>5.10</b> Ecological Fallacy</a></li>
+<li class="chapter" data-level="5.11" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---exploring-the-gapminder-dataset"><i class="fa fa-check"></i><b>5.11</b> Assessment - Exploring the Gapminder Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#introduction-to-data-visualization-principles"><i class="fa fa-check"></i><b>6.1</b> Introduction to Data Visualization Principles</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-data-using-visual-cues"><i class="fa fa-check"></i><b>6.2</b> Encoding Data Using Visual Cues</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#know-when-to-include-zero"><i class="fa fa-check"></i><b>6.3</b> Know When to Include Zero</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#do-not-distort-quantities"><i class="fa fa-check"></i><b>6.4</b> Do Not Distort Quantities</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#order-by-a-meaningful-value"><i class="fa fa-check"></i><b>6.5</b> Order by a Meaningful Value</a></li>
+<li class="chapter" data-level="6.6" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-1"><i class="fa fa-check"></i><b>6.6</b> Assessment - Data Visualization Principles, Part 1</a></li>
+<li class="chapter" data-level="6.7" data-path="section-5-overview.html"><a href="section-5-overview.html#show-the-data"><i class="fa fa-check"></i><b>6.7</b> Show the Data</a></li>
+<li class="chapter" data-level="6.8" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-use-common-axes"><i class="fa fa-check"></i><b>6.8</b> Ease Comparisons: Use Common Axes</a></li>
+<li class="chapter" data-level="6.9" data-path="section-5-overview.html"><a href="section-5-overview.html#consider-transformations"><i class="fa fa-check"></i><b>6.9</b> Consider Transformations</a></li>
+<li class="chapter" data-level="6.10" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-compared-visual-cues-should-be-adjacent"><i class="fa fa-check"></i><b>6.10</b> Ease Comparisons: Compared Visual Cues Should Be Adjacent</a></li>
+<li class="chapter" data-level="6.11" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-2"><i class="fa fa-check"></i><b>6.11</b> Assessment - Data Visualization Principles, Part 2</a></li>
+<li class="chapter" data-level="6.12" data-path="section-5-overview.html"><a href="section-5-overview.html#slope-charts"><i class="fa fa-check"></i><b>6.12</b> Slope Charts</a></li>
+<li class="chapter" data-level="6.13" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-a-third-variable"><i class="fa fa-check"></i><b>6.13</b> Encoding a Third Variable</a></li>
+<li class="chapter" data-level="6.14" data-path="section-5-overview.html"><a href="section-5-overview.html#case-study-vaccines"><i class="fa fa-check"></i><b>6.14</b> Case Study: Vaccines</a></li>
+<li class="chapter" data-level="6.15" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-pseudo-and-gratuitous-3d-plots"><i class="fa fa-check"></i><b>6.15</b> Avoid Pseudo and Gratuitous 3D Plots</a></li>
+<li class="chapter" data-level="6.16" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-too-many-significant-digits"><i class="fa fa-check"></i><b>6.16</b> Avoid Too Many Significant Digits</a></li>
+<li class="chapter" data-level="6.17" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-3"><i class="fa fa-check"></i><b>6.17</b> Assessment - Data Visualization Principles, Part 3</a></li>
+<li class="chapter" data-level="6.18" data-path="section-5-overview.html"><a href="section-5-overview.html#titanic-survival-exercises"><i class="fa fa-check"></i><b>6.18</b> Titanic Survival Exercises</a></li>
+<li class="chapter" data-level="6.19" data-path="section-5-overview.html"><a href="section-5-overview.html#properties-of-stars-exercises"><i class="fa fa-check"></i><b>6.19</b> Properties of Stars Exercises</a></li>
+<li class="chapter" data-level="6.20" data-path="section-5-overview.html"><a href="section-5-overview.html#climate-change-exercises"><i class="fa fa-check"></i><b>6.20</b> Climate Change Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-1-overview" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Section 1 Overview</h1>
+<p>Section 1 introduces you to Data Visualization and Distributions.</p>
+<p>After completing Section 1, you will:</p>
+<ul>
+<li>understand the importance of data visualization for communicating data-driven findings.</li>
+<li>be able to use distributions to summarize data.</li>
+<li>be able to use the average and the standard deviation to understand the normal distribution.</li>
+<li>be able to assess how well a normal distribution fits the data using a quantile-quantile plot.</li>
+<li>be able to interpret data from a boxplot.</li>
+</ul>
+<div id="introduction-to-data-visualization" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introduction to Data Visualization</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Plots of data easily communicate information that is difficult to extract from tables of raw values.</li>
+<li>Data visualization is a key component of exploratory data analysis (EDA), in which the properties of data are explored through visualization and summarization techniques.</li>
+<li>Data visualization can help discover biases, systematic errors, mistakes and other unexpected problems in data before those data are incorporated into potentially flawed analysis.</li>
+<li>This course covers the basics of data visualization and EDA in R using the <strong>ggplot2</strong> package and motivating examples from world health, economics and infectious disease.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb1-2"><a href="section-1-overview.html#cb1-2" aria-hidden="true"></a></span>
+<span id="cb1-3"><a href="section-1-overview.html#cb1-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb1-4"><a href="section-1-overview.html#cb1-4" aria-hidden="true"></a><span class="kw">data</span>(murders)</span>
+<span id="cb1-5"><a href="section-1-overview.html#cb1-5" aria-hidden="true"></a><span class="kw">head</span>(murders)</span></code></pre></div>
+<pre><code>##        state abb region population total
+## 1    Alabama  AL  South    4779736   135
+## 2     Alaska  AK   West     710231    19
+## 3    Arizona  AZ   West    6392017   232
+## 4   Arkansas  AR  South    2915918    93
+## 5 California  CA   West   37253956  1257
+## 6   Colorado  CO   West    5029196    65</code></pre>
+</div>
+<div id="introduction-to-distributions" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Introduction to Distributions</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The most basic statistical summary of a list of objects is its distribution.</li>
+<li>We will learn ways to visualize and analyze distributions in the upcoming videos.</li>
+<li>In some cases, data can be summarized by a two-number summary: the average and standard deviation. We will learn to use data visualization to determine when that is appropriate.</li>
+</ul>
+</div>
+<div id="data-types" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Data Types</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#variable-types">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Categorical data are variables that are defined by a small number of groups.
+<ul>
+<li>Ordinal categorical data have an inherent order to the categories (mild/medium/hot, for example).</li>
+<li>Non-ordinal categorical data have no order to the categories.</li>
+</ul></li>
+<li>Numerical data take a variety of numeric values.
+<ul>
+<li>Continuous variables can take any value.</li>
+<li>Discrete variables are limited to sets of specific values.</li>
+</ul></li>
+</ul>
+</div>
+<div id="assessment---data-types" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Assessment - Data Types</h2>
+<ol style="list-style-type: decimal">
+<li>The type of data we are working with will often influence the data visualization technique we use.</li>
+</ol>
+<p>We will be working with two types of variables: categorical and numeric. Each can be divided into two other groups: categorical can be ordinal or not, whereas numerical variables can be discrete or continuous.</p>
+<p>We will review data types using some of the examples provided in the <code>dslabs</code> package. For example, the <code>heights</code> dataset.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="section-1-overview.html#cb3-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb3-2"><a href="section-1-overview.html#cb3-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="section-1-overview.html#cb4-1" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb4-2"><a href="section-1-overview.html#cb4-2" aria-hidden="true"></a><span class="kw">names</span>(heights)</span></code></pre></div>
+<pre><code>## [1] &quot;sex&quot;    &quot;height&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>We saw that <code>sex</code> is the first variable. We know what values are represented by this variable and can confirm this by looking at the first few entires:</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="section-1-overview.html#cb6-1" aria-hidden="true"></a><span class="kw">head</span>(heights)</span></code></pre></div>
+<pre><code>##      sex height
+## 1   Male     75
+## 2   Male     70
+## 3   Male     68
+## 4   Male     74
+## 5   Male     61
+## 6 Female     65</code></pre>
+<p>What data type is the <code>sex</code> variable?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Continuous</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. Categorical</li>
+<li><input type="checkbox" disabled="" />
+C. Ordinal</li>
+<li><input type="checkbox" disabled="" />
+D. None of the above</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Keep in mind that discrete numeric data can be considered ordinal.</li>
+</ol>
+<p>Although this is technically true, we usually reserve the term ordinal data for variables belonging to a small number of different groups, with each group having many members.</p>
+<p>The <code>height</code> variable could be ordinal if, for example, we report a small number of values such as short, medium, and tall. Let’s explore how many unique values are used by the heights variable. For this we can use the <code>unique</code> function:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="section-1-overview.html#cb8-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb8-2"><a href="section-1-overview.html#cb8-2" aria-hidden="true"></a><span class="kw">unique</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="section-1-overview.html#cb9-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
+<span id="cb9-2"><a href="section-1-overview.html#cb9-2" aria-hidden="true"></a><span class="kw">length</span>(<span class="kw">unique</span>(x))</span></code></pre></div>
+<pre><code>## [1] 139</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>One of the useful outputs of data visualization is that we can learn about the distribution of variables.</li>
+</ol>
+<p>For categorical data we can construct this distribution by simply computing the frequency of each unique value. This can be done with the function <code>table</code>. Here is an example:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="section-1-overview.html#cb11-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb11-2"><a href="section-1-overview.html#cb11-2" aria-hidden="true"></a><span class="kw">table</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="section-1-overview.html#cb12-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
+<span id="cb12-2"><a href="section-1-overview.html#cb12-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(x)</span></code></pre></div>
+<ol start="5" style="list-style-type: decimal">
+<li>To see why treating the reported heights as an ordinal value is not useful in practice we note how many values are reported only once.</li>
+</ol>
+<p>In the previous exercise we computed the variable tab which reports the number of times each unique value appears. For values reported only once tab will be 1. Use logicals and the function sum to count the number of times this happens.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="section-1-overview.html#cb13-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(heights<span class="op">$</span>height)</span>
+<span id="cb13-2"><a href="section-1-overview.html#cb13-2" aria-hidden="true"></a><span class="kw">sum</span>(tab<span class="op">==</span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 63</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>Since there are a finite number of reported heights and technically the height can be considered ordinal, which of the following is true:</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. It is more effective to consider heights to be numerical given the number of unique values we observe and the fact that if we keep collecting data even more will be observed.</li>
+<li><input type="checkbox" disabled="" />
+B. It is actually preferable to consider heights ordinal since on a computer there are only a finite number of possibilities.</li>
+<li><input type="checkbox" disabled="" />
+C. This is actually a categorical variable: tall, medium or short.</li>
+<li><input type="checkbox" disabled="" />
+D. This is a numerical variable because numbers are used to represent it.</li>
+</ul>
+</div>
+<div id="describe-heights-to-et" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Describe Heights to ET</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#case-study-describing-student-heights">Case Study describing student heights</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#distribution-function">Distribution Function</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#cdf-intro">CDF Intro</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#histograms">Histograms</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>A distribution is a function or description that shows the possible values of a variable and how often those values occur.</li>
+<li>For categorical variables, the distribution describes the proportions of each category.</li>
+<li>A <em>frequency table</em> is the simplest way to show a categorical distribution. Use <code>prop.table</code> to convert a table of counts to a frequency table. <em>Barplots</em> display the distribution of categorical variables and are a way to visualize the information in frequency tables.</li>
+<li>For continuous numerical data, reporting the frequency of each unique entry is not an effective summary as many or most values are unique. Instead, a distribution function is required.</li>
+<li>The <em>cumulative distribution function (CDF)</em> is a function that reports the proportion of data below a value <em>a</em> for all values of <em>a</em>: <span class="math inline">\(F(a) = Pr(x \le a)\)</span>.</li>
+<li>The proportion of observations between any two values <em>a</em> and <em>b</em> can be computed from the CDF as <span class="math inline">\(F(b) - F(a)\)</span>.</li>
+<li>A <em>histogram</em> divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-1-overview.html#cb15-1" aria-hidden="true"></a><span class="co"># load the dataset</span></span>
+<span id="cb15-2"><a href="section-1-overview.html#cb15-2" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb15-3"><a href="section-1-overview.html#cb15-3" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="section-1-overview.html#cb16-1" aria-hidden="true"></a><span class="co"># make a table of category proportions</span></span>
+<span id="cb16-2"><a href="section-1-overview.html#cb16-2" aria-hidden="true"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(heights<span class="op">$</span>sex))</span></code></pre></div>
+<pre><code>## 
+## Female   Male 
+##  0.227  0.773</code></pre>
+</div>
+<div id="smooth-density-plots" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Smooth Density Plots</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#smoothed-density">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li><em>Smooth density plots</em> can be thought of as histograms where the bin width is extremely or infinitely small. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.</li>
+<li>The degree of smoothness can be controlled by an argument in the plotting function. (We will learn functions for plotting later.)</li>
+<li>While the histogram is an assumption-free summary, the smooth density plot is shaped by assumptions and choices you make as a data analyst.</li>
+<li>The y-axis is scaled so that the area under the density curve sums to 1. This means that interpreting values on the y-axis is not straightforward. To determine the proportion of data in between two values, compute the area under the smooth density curve in the region between those values.</li>
+<li>An advantage of smooth densities over histograms is that densities are easier to compare visually.</li>
+</ul>
+<p><strong>A further note on histograms</strong>: note that the choice of binwidth has a determinative effect on shape. There is no “true” choice for binwidth, and you can sometimes gain insights into the data by experimenting with binwidths.</p>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="assessment---distributions" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Assessment - Distributions</h2>
+<ol style="list-style-type: decimal">
+<li>You may have noticed that numerical data is often summarized with the average value.</li>
+</ol>
+<p>For example, the quality of a high school is sometimes summarized with one number: the average score on a standardized test. Occasionally, a second number is reported: the standard deviation. So, for example, you might read a report stating that scores were 680 plus or minus 50 (the standard deviation). The report has summarized an entire vector of scores with with just two numbers. Is this appropriate? Is there any important piece of information that we are missing by only looking at this summary rather than the entire list? We are going to learn when these 2 numbers are enough and when we need more elaborate summaries and plots to describe the data.</p>
+<p>Our first data visualization building block is learning to summarize lists of factors or numeric vectors. The most basic statistical summary of a list of objects or numbers is its distribution. Once a vector has been summarized as distribution, there are several data visualization techniques to effectively relay this information. In later assessments we will practice to write code for data visualization. Here we start with some multiple choice questions to test your understanding of distributions and related basic plots.</p>
+<p>In the murders dataset, the region is a categorical variable and on the right you can see its distribution. To the closest 5%, what proportion of the states are in the North Central region?</p>
+<div class="figure">
+<img src="images/Region%20vs%20Proportion.png" alt="" />
+<p class="caption">Region vs. Proportion</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 75%</li>
+<li><input type="checkbox" disabled="" />
+B. 50%</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. 20%</li>
+<li><input type="checkbox" disabled="" />
+D. 5%</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>In the murders dataset, the region is a categorical variable and to the right is its distribution.</li>
+</ol>
+<p>Which of the following is true:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. The graph above is a histogram.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. The graph above shows only four numbers with a bar plot.</li>
+<li><input type="checkbox" disabled="" />
+C. Categories are not numbers, so it does not make sense to graph the distribution.</li>
+<li><input type="checkbox" disabled="" />
+D. The colors, not the height of the bars, describe the distribution.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>The plot shows the eCDF for male heights.</li>
+</ol>
+<p>Based on the plot, what percentage of males are shorter than 75 inches?</p>
+<div class="figure">
+<img src="images/eCDF%20for%20male%20heights.png" alt="" />
+<p class="caption">eCDF for male heights</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 100%</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. 95%</li>
+<li><input type="checkbox" disabled="" />
+C. 80%</li>
+<li><input type="checkbox" disabled="" />
+D. 72 inches</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>To the closest inch, what height <code>m</code> has the property that 1/2 of the male students are taller than <code>m</code> and 1/2 are shorter?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 61 inches</li>
+<li><input type="checkbox" disabled="" />
+B. 64 inches</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. 69 inches</li>
+<li><input type="checkbox" disabled="" />
+D. 74 inches</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<ol start="5" style="list-style-type: decimal">
+<li>Here is an eCDF of the murder rates across states.</li>
+</ol>
+<div class="figure">
+<img src="images/eCDF%20murder%20rates%20across%20states.png" alt="" />
+<p class="caption">eCDF of the murder rates across states</p>
+</div>
+<p>Knowing that there are 51 states (counting DC) and based on this plot, how many states have murder rates larger than 10 per 100,000 people?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 1</li>
+<li><input type="checkbox" disabled="" />
+B. 5</li>
+<li><input type="checkbox" disabled="" />
+C. 10</li>
+<li><input type="checkbox" disabled="" />
+D. 50</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Based on the eCDF above, which of the following statements are true.</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. About half the states have murder rates above 7 per 100,000 and the other half below.</li>
+<li><input type="checkbox" disabled="" />
+B. Most states have murder rates below 2 per 100,000.</li>
+<li><input type="checkbox" disabled="" />
+C. All the states have murder rates above 2 per 100,000.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. With the exception of 4 states, the murder rates are below 5 per 100,000.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<ol start="7" style="list-style-type: decimal">
+<li>Here is a histogram of male heights in our <code>heights</code> dataset.</li>
+</ol>
+<p>Based on this plot, how many males are between 62.5 and 65.5?</p>
+<div class="figure">
+<img src="images/Histogram%20of%20male%20heights.png" alt="" />
+<p class="caption">Histogram of male heights</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 11</li>
+<li><input type="checkbox" disabled="" />
+B. 29</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. 58</li>
+<li><input type="checkbox" disabled="" />
+D. 99</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>About what percentage are shorter than 60 inches?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 1%</li>
+<li><input type="checkbox" disabled="" />
+B. 10%</li>
+<li><input type="checkbox" disabled="" />
+C. 25%</li>
+<li><input type="checkbox" disabled="" />
+D. 50%</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<ol start="9" style="list-style-type: decimal">
+<li>Based on this density plot, about what proportion of US states have populations larger than 10 million?</li>
+</ol>
+<div class="figure">
+<img src="images/Density%20plot%20population.png" alt="" />
+<p class="caption">Density plot population</p>
+</div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 0.02</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. 0.15</li>
+<li><input type="checkbox" disabled="" />
+C. 0.50</li>
+<li><input type="checkbox" disabled="" />
+D. 0.55</li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li>Below are three density plots. Is it possible that they are from the same dataset?</li>
+</ol>
+<div class="figure">
+<img src="images/Three%20density%20plots.png" alt="" />
+<p class="caption">Three density plots</p>
+</div>
+<p>Which of the following statements is true?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. It is impossible that they are from the same dataset.</li>
+<li><input type="checkbox" disabled="" />
+B. They are from the same dataset, but the plots are different due to code errors.</li>
+<li><input type="checkbox" disabled="" />
+C. They are the same dataset, but the first and second plot undersmooth and the third oversmooths.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. They are the same dataset, but the first is not in the log scale, the second undersmooths and the third oversmooths.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</div>
+<div id="normal-distribution" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Normal Distribution</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#normal-distribution">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li><p>The normal distribution:</p>
+<ul>
+<li>Is centered around one value, the <em>mean</em></li>
+<li>Is symmetric around the mean</li>
+<li>Is defined completely by its mean (<span class="math inline">\(\mu\)</span>) and standard deviation (<span class="math inline">\(\sigma\)</span>)</li>
+<li>Always has the same proportion of observations within a given distance of the mean (for example, 95% within 2 <span class="math inline">\(\sigma\)</span>)</li>
+</ul></li>
+<li><p>The standard deviation is the average distance between a value and the mean value.</p></li>
+<li><p>Calculate the mean using the <code>mean</code> function.</p></li>
+<li><p>Calculate the standard deviation using the <code>sd</code> function or manually.</p></li>
+<li><p>Standard units describe how many standard deviations a value is away from the mean. The z-score, or number of standard deviations an observation <em>x</em> is away from the mean (<span class="math inline">\(\mu\)</span>):</p>
+<p><span class="math inline">\(Z = \frac{x - \mu}{\sigma}\)</span></p></li>
+<li><p>Compute standard units with the <code>scale</code> function.</p></li>
+<li><p><strong>Important:</strong> to calculate the proportion of values that meet a certain condition, use the <code>mean</code> function on a logical vector. Because TRUE is converted to 1 and FALSE is converted to 0, taking the mean of this vector yields the proportion of TRUE.</p></li>
+</ul>
+<p><strong>Equation for the normal distribution</strong></p>
+<p>The normal distribution is mathematically defined by the following formula for any mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>:</p>
+<p><span class="math inline">\(Pr(a &lt; x &lt; b) = \int_{a}^{b} \frac{1}{\sqrt2\pi\sigma} e^-\frac{1}{2}(\frac{x - \mu}{\sigma})^2 dx\)</span></p>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="section-1-overview.html#cb18-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb18-2"><a href="section-1-overview.html#cb18-2" aria-hidden="true"></a></span>
+<span id="cb18-3"><a href="section-1-overview.html#cb18-3" aria-hidden="true"></a><span class="co"># define x as vector of male heights</span></span>
+<span id="cb18-4"><a href="section-1-overview.html#cb18-4" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb18-5"><a href="section-1-overview.html#cb18-5" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
+<span id="cb18-6"><a href="section-1-overview.html#cb18-6" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
+<span id="cb18-7"><a href="section-1-overview.html#cb18-7" aria-hidden="true"></a></span>
+<span id="cb18-8"><a href="section-1-overview.html#cb18-8" aria-hidden="true"></a><span class="co"># calculate the mean and standard deviation manually</span></span>
+<span id="cb18-9"><a href="section-1-overview.html#cb18-9" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">sum</span>(x)<span class="op">/</span><span class="kw">length</span>(x)</span>
+<span id="cb18-10"><a href="section-1-overview.html#cb18-10" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>((x <span class="op">-</span><span class="st"> </span>average)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="kw">length</span>(x))</span>
+<span id="cb18-11"><a href="section-1-overview.html#cb18-11" aria-hidden="true"></a></span>
+<span id="cb18-12"><a href="section-1-overview.html#cb18-12" aria-hidden="true"></a><span class="co"># built-in mean and sd functions - note that the audio and printed values disagree</span></span>
+<span id="cb18-13"><a href="section-1-overview.html#cb18-13" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb18-14"><a href="section-1-overview.html#cb18-14" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb18-15"><a href="section-1-overview.html#cb18-15" aria-hidden="true"></a><span class="kw">c</span>(<span class="dt">average =</span> average, <span class="dt">SD =</span> SD)</span></code></pre></div>
+<pre><code>## average      SD 
+##   69.31    3.61</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="section-1-overview.html#cb20-1" aria-hidden="true"></a><span class="co"># calculate standard units</span></span>
+<span id="cb20-2"><a href="section-1-overview.html#cb20-2" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
+<span id="cb20-3"><a href="section-1-overview.html#cb20-3" aria-hidden="true"></a></span>
+<span id="cb20-4"><a href="section-1-overview.html#cb20-4" aria-hidden="true"></a><span class="co"># calculate proportion of values within 2 SD of mean</span></span>
+<span id="cb20-5"><a href="section-1-overview.html#cb20-5" aria-hidden="true"></a><span class="kw">mean</span>(<span class="kw">abs</span>(z) <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.95</code></pre>
+<p><strong>Note about the sd function:</strong> The built-in R function <code>sd</code> calculates the standard deviation, but it divides by <code>length(x)-1</code> instead of <code>length(x)</code>. When the length of the list is large, this difference is negligible and you can use the built-in <code>sd</code> function. Otherwise, you should compute <span class="math inline">\(\sigma\)</span> by hand. For this course series, assume that you should use the <code>sd</code> function unless you are told not to do so.</p>
+</div>
+<div id="assessment---normal-distribution" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Assessment - Normal Distribution</h2>
+<ol style="list-style-type: decimal">
+<li>Histograms and density plots provide excellent summaries of a distribution.</li>
+</ol>
+<p>But can we summarize even further? We often see the average and standard deviation used as summary statistics: a two number summary! To understand what these summaries are and why they are so widely used, we need to understand the normal distribution.</p>
+<p>The normal distribution, also known as the bell curve and as the Gaussian distribution, is one of the most famous mathematical concepts in history. A reason for this is that approximately normal distributions occur in many situations. Examples include gambling winnings, heights, weights, blood pressure, standardized test scores, and experimental measurement errors. Often data visualization is needed to confirm that our data follows a normal distribution.</p>
+<p>Here we focus on how the normal distribution helps us summarize data and can be useful in practice.</p>
+<p>One way the normal distribution is useful is that it can be used to approximate the distribution of a list of numbers without having access to the entire list. We will demonstrate this with the heights dataset.</p>
+<p>Load the height data set and create a vector <code>x</code> with just the male heights:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="section-1-overview.html#cb22-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb22-2"><a href="section-1-overview.html#cb22-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb22-3"><a href="section-1-overview.html#cb22-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span></code></pre></div>
+<p>What proportion of the data is between 69 and 72 inches (taller than 69 but shorter or equal to 72)? A proportion is between 0 and 1.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="section-1-overview.html#cb23-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
+<span id="cb23-2"><a href="section-1-overview.html#cb23-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">69</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">72</span>)</span></code></pre></div>
+<pre><code>## [1] 0.334</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Suppose all you know about the height data from the previous exercise is the average and the standard deviation and that its distribution is approximated by the normal distribution.</li>
+</ol>
+<p>We can compute the average and standard deviation like this:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="section-1-overview.html#cb25-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb25-2"><a href="section-1-overview.html#cb25-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb25-3"><a href="section-1-overview.html#cb25-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb25-4"><a href="section-1-overview.html#cb25-4" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb25-5"><a href="section-1-overview.html#cb25-5" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
+<p>Suppose you only have <code>avg</code> and <code>stdev</code> below, but no access to <code>x</code>, can you approximate the proportion of the data that is between 69 and 72 inches?</p>
+<p>Given a normal distribution with a mean <code>mu</code> and standard deviation <code>sigma</code>, you can calculate the proportion of observations less than or equal to a certain <code>value</code> with <code>pnorm(value, mu, sigma)</code>. Notice that this is the CDF for the normal distribution. We will learn much more about <code>pnorm</code> later in the course series, but you can also learn more now with <code>?pnorm</code>.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="section-1-overview.html#cb26-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb26-2"><a href="section-1-overview.html#cb26-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb26-3"><a href="section-1-overview.html#cb26-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb26-4"><a href="section-1-overview.html#cb26-4" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">72</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">69</span>, avg, stdev)</span></code></pre></div>
+<pre><code>## [1] 0.306</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Notice that the approximation calculated in the second question is very close to the exact calculation in the first question.</li>
+</ol>
+<p>The normal distribution was a useful approximation for this case. However, the approximation is not always useful. An example is for the more extreme values, often called the “tails” of the distribution. Let’s look at an example. We can compute the proportion of heights between 79 and 81.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="section-1-overview.html#cb28-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)  </span>
+<span id="cb28-2"><a href="section-1-overview.html#cb28-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb28-3"><a href="section-1-overview.html#cb28-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]  </span>
+<span id="cb28-4"><a href="section-1-overview.html#cb28-4" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)  </span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="section-1-overview.html#cb29-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
+<span id="cb29-2"><a href="section-1-overview.html#cb29-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb29-3"><a href="section-1-overview.html#cb29-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb29-4"><a href="section-1-overview.html#cb29-4" aria-hidden="true"></a>exact &lt;-<span class="st"> </span><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)</span>
+<span id="cb29-5"><a href="section-1-overview.html#cb29-5" aria-hidden="true"></a>approx &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">81</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">79</span>, avg, stdev)</span>
+<span id="cb29-6"><a href="section-1-overview.html#cb29-6" aria-hidden="true"></a>exact</span></code></pre></div>
+<pre><code>## [1] 0.00493</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="section-1-overview.html#cb31-1" aria-hidden="true"></a>approx</span></code></pre></div>
+<pre><code>## [1] 0.00305</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="section-1-overview.html#cb33-1" aria-hidden="true"></a>exact<span class="op">/</span>approx</span></code></pre></div>
+<pre><code>## [1] 1.61</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Someone asks you what percent of seven footers are in the National Basketball Association (NBA). Can you provide an estimate? Let’s try using the normal approximation to answer this question.</li>
+</ol>
+<p>First, we will estimate the proportion of adult men that are 7 feet tall or taller.</p>
+<p>Assume that the distribution of adult men in the world as normally distributed with an average of 69 inches and a standard deviation of 3 inches.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="section-1-overview.html#cb35-1" aria-hidden="true"></a><span class="co"># use pnorm to calculate the proportion over 7 feet (7*12 inches)</span></span>
+<span id="cb35-2"><a href="section-1-overview.html#cb35-2" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 2.87e-07</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Now we have an approximation for the proportion, call it <code>p</code>, of men that are 7 feet tall or taller.</li>
+</ol>
+<p>We know that there are about 1 billion men between the ages of 18 and 40 in the world, the age range for the NBA.</p>
+<p>Can we use the normal distribution to estimate how many of these 1 billion men are at least seven feet tall?</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="section-1-overview.html#cb37-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb37-2"><a href="section-1-overview.html#cb37-2" aria-hidden="true"></a><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span></code></pre></div>
+<pre><code>## [1] 287</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>There are about 10 National Basketball Association (NBA) players that are 7 feet tall or higher.</li>
+</ol>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="section-1-overview.html#cb39-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb39-2"><a href="section-1-overview.html#cb39-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb39-3"><a href="section-1-overview.html#cb39-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.0348</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>In the previous exerceise we estimated the proportion of seven footers in the NBA using this simple code:</li>
+</ol>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="section-1-overview.html#cb41-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)  </span>
+<span id="cb41-2"><a href="section-1-overview.html#cb41-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)  </span>
+<span id="cb41-3"><a href="section-1-overview.html#cb41-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N  </span></code></pre></div>
+<p>Repeat the calculations performed in the previous question for Lebron James’ height: 6 feet 8 inches. There are about 150 players, instead of 10, that are at least that tall in the NBA.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="section-1-overview.html#cb42-1" aria-hidden="true"></a><span class="co">## Change the solution to previous answer</span></span>
+<span id="cb42-2"><a href="section-1-overview.html#cb42-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb42-3"><a href="section-1-overview.html#cb42-3" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb42-4"><a href="section-1-overview.html#cb42-4" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.0348</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="section-1-overview.html#cb44-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">6</span><span class="op">*</span><span class="dv">12</span><span class="op">+</span><span class="dv">8</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb44-2"><a href="section-1-overview.html#cb44-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb44-3"><a href="section-1-overview.html#cb44-3" aria-hidden="true"></a><span class="dv">150</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.00122</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>In answering the previous questions, we found that it is not at all rare for a seven footer to become an NBA player.</li>
+</ol>
+<p>What would be a fair critique of our calculations?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Practice and talent are what make a great basketball player, not height.</li>
+<li><input type="checkbox" disabled="" />
+B. The normal approximation is not appropriate for heights.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. As seen in exercise 3, the normal approximation tends to underestimate the extreme values. It’s possible that there are more seven footers than we predicted.</li>
+<li><input type="checkbox" disabled="" />
+D. As seen in exercise 3, the normal approximation tends to overestimate the extreme values. It’s possible that there are less seven footers than we predicted.</li>
+</ul>
+</div>
+<div id="quantile-quantile-plots" class="section level2" number="2.10">
+<h2><span class="header-section-number">2.10</span> Quantile-Quantile Plots</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#quantile-quantile-plots">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Quantile-quantile plots, or QQ-plots, are used to check whether distributions are well-approximated by a normal distribution.</li>
+<li>Given a proportion <em>p</em>, the quantile <em>q</em> is the value such that the proportion of values in the data below <em>q</em> is <em>p</em>.</li>
+<li>In a QQ-plot, the sample quantiles in the observed data are compared to the theoretical quantiles expected from the normal distribution. If the data are well-approximated by the normal distribution, then the points on the QQ-plot will fall near the identity line (sample = theoretical).</li>
+<li>Calculate sample quantiles (observed quantiles) using the <code>quantile</code> function.</li>
+<li>Calculate theoretical quantiles with the <code>qnorm</code> function. <code>qnorm</code> will calculate quantiles for the standard normal distribution (<span class="math inline">\(\mu = 0\)</span>, <span class="math inline">\(\sigma = 1\)</span>) by default, but it can calculate quantiles for any normal distribution given mean and <code>sd</code> arguments. We will learn more about <code>qnorm</code> in the probability course.</li>
+<li>Note that we will learn alternate ways to make QQ-plots with less code later in the series.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="section-1-overview.html#cb46-1" aria-hidden="true"></a><span class="co"># define x and z</span></span>
+<span id="cb46-2"><a href="section-1-overview.html#cb46-2" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
+<span id="cb46-3"><a href="section-1-overview.html#cb46-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
+<span id="cb46-4"><a href="section-1-overview.html#cb46-4" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
+<span id="cb46-5"><a href="section-1-overview.html#cb46-5" aria-hidden="true"></a></span>
+<span id="cb46-6"><a href="section-1-overview.html#cb46-6" aria-hidden="true"></a><span class="co"># proportion of data below 69.5</span></span>
+<span id="cb46-7"><a href="section-1-overview.html#cb46-7" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span></code></pre></div>
+<pre><code>## [1] 0.515</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="section-1-overview.html#cb48-1" aria-hidden="true"></a><span class="co"># calculate observed and theoretical quantiles</span></span>
+<span id="cb48-2"><a href="section-1-overview.html#cb48-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.05</span>)</span>
+<span id="cb48-3"><a href="section-1-overview.html#cb48-3" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, p)</span>
+<span id="cb48-4"><a href="section-1-overview.html#cb48-4" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="dt">mean =</span> <span class="kw">mean</span>(x), <span class="dt">sd =</span> <span class="kw">sd</span>(x))</span>
+<span id="cb48-5"><a href="section-1-overview.html#cb48-5" aria-hidden="true"></a></span>
+<span id="cb48-6"><a href="section-1-overview.html#cb48-6" aria-hidden="true"></a><span class="co"># make QQ-plot</span></span>
+<span id="cb48-7"><a href="section-1-overview.html#cb48-7" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
+<span id="cb48-8"><a href="section-1-overview.html#cb48-8" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="section-1-overview.html#cb49-1" aria-hidden="true"></a><span class="co"># make QQ-plot with scaled values</span></span>
+<span id="cb49-2"><a href="section-1-overview.html#cb49-2" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(z, p)</span>
+<span id="cb49-3"><a href="section-1-overview.html#cb49-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p) </span>
+<span id="cb49-4"><a href="section-1-overview.html#cb49-4" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
+<span id="cb49-5"><a href="section-1-overview.html#cb49-5" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+</div>
+<div id="percentiles" class="section level2" number="2.11">
+<h2><span class="header-section-number">2.11</span> Percentiles</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#percentiles">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li><em>Percentiles</em> are the quantiles obtained when defining <em>p</em> as <code>0.01,0.02,...,0.99</code>. They summarize the values at which a certain percent of the observations are equal to or less than that value.</li>
+<li>The 50th percentile is also known as the <em>median</em>.</li>
+<li>The <em>quartiles</em> are the 25th, 50th and 75th percentiles.</li>
+</ul>
+</div>
+<div id="boxplots" class="section level2" number="2.12">
+<h2><span class="header-section-number">2.12</span> Boxplots</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#boxplots">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).</li>
+<li>In a <em>boxplot</em>, the box is defined by the 25th and 75th percentiles and the median is a horizontal line through the box. The whiskers show the range excluding outliers, and outliers are plotted separately as individual points.</li>
+<li>The <em>interquartile</em> range is the distance between the 25th and 75th percentiles.</li>
+<li>Boxplots are particularly useful when comparing multiple distributions.</li>
+<li>We discuss outliers later.</li>
+</ul>
+</div>
+<div id="assessment---quantiles-percentiles-and-boxplots" class="section level2" number="2.13">
+<h2><span class="header-section-number">2.13</span> Assessment - Quantiles, percentiles, and boxplots</h2>
+<ol style="list-style-type: decimal">
+<li>When analyzing data it’s often important to know the number of measurements you have for each category.</li>
+</ol>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="section-1-overview.html#cb50-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb50-2"><a href="section-1-overview.html#cb50-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
+<span id="cb50-3"><a href="section-1-overview.html#cb50-3" aria-hidden="true"></a><span class="kw">length</span>(male)</span></code></pre></div>
+<pre><code>## [1] 812</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="section-1-overview.html#cb52-1" aria-hidden="true"></a><span class="kw">length</span>(female)</span></code></pre></div>
+<pre><code>## [1] 238</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Suppose we can’t make a plot and want to compare the distributions side by side. If the number of data points is large, listing all the numbers is inpractical. A more practical approach is to look at the percentiles. We can obtain percentiles using the <code>quantile</code> function like this</li>
+</ol>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="section-1-overview.html#cb54-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb54-2"><a href="section-1-overview.html#cb54-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb54-3"><a href="section-1-overview.html#cb54-3" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">seq</span>(.<span class="dv">01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="section-1-overview.html#cb55-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb55-2"><a href="section-1-overview.html#cb55-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
+<span id="cb55-3"><a href="section-1-overview.html#cb55-3" aria-hidden="true"></a>female_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(female, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
+<span id="cb55-4"><a href="section-1-overview.html#cb55-4" aria-hidden="true"></a>male_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(male, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
+<span id="cb55-5"><a href="section-1-overview.html#cb55-5" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">female =</span> (female_percentiles), <span class="dt">male =</span> (male_percentiles))</span>
+<span id="cb55-6"><a href="section-1-overview.html#cb55-6" aria-hidden="true"></a>df</span></code></pre></div>
+<pre><code>##     female male
+## 10%   61.0 65.0
+## 30%   63.0 68.0
+## 50%   65.0 69.0
+## 70%   66.5 71.0
+## 90%   69.0 73.2</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Study the boxplots summarizing the distributions of populations sizes by country.</li>
+</ol>
+<div class="figure">
+<img src="images/Continent%20vs%20Population.png" alt="" />
+<p class="caption">Continent vs Population</p>
+</div>
+<p>Which continent has the country with the largest population size?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Africa</li>
+<li><input type="checkbox" disabled="" />
+B. Americas</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. Asia</li>
+<li><input type="checkbox" disabled="" />
+D. Europe</li>
+<li><input type="checkbox" disabled="" />
+E. Oceania</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Study the boxplots summarizing the distributions of populations sizes by country.</li>
+</ol>
+<p>Which continent has median country with the largest population?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. Africa</li>
+<li><input type="checkbox" disabled="" />
+B. Americas</li>
+<li><input type="checkbox" disabled="" />
+C. Asia</li>
+<li><input type="checkbox" disabled="" />
+D. Europe</li>
+<li><input type="checkbox" disabled="" />
+E. Oceania</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Again, look at the boxplots summarizing the distributions of populations sizes by country.</li>
+</ol>
+<p>To the nearest million, what is the median population size for Africa?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. 100 million</li>
+<li><input type="checkbox" disabled="" />
+B. 25 million</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. 10 million</li>
+<li><input type="checkbox" disabled="" />
+D. 5 million</li>
+<li><input type="checkbox" disabled="" />
+E. 1 million</li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Examine the following boxplots and report approximately what proportion of countries in Europe have populations below 14 million?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. 0.75</li>
+<li><input type="checkbox" disabled="" />
+B. 0.50</li>
+<li><input type="checkbox" disabled="" />
+C. 0.25</li>
+<li><input type="checkbox" disabled="" />
+D. 0.01</li>
+</ul>
+<ol start="7" style="list-style-type: decimal">
+<li>Based on the boxplot, if we use a log transformation, which continent shown below has the largest interquartile range?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Africa</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. Americas</li>
+<li><input type="checkbox" disabled="" />
+C. Asia</li>
+<li><input type="checkbox" disabled="" />
+D. Europe</li>
+<li><input type="checkbox" disabled="" />
+E. Oceania</li>
+</ul>
+</div>
+<div id="distribution-of-female-heights" class="section level2" number="2.14">
+<h2><span class="header-section-number">2.14</span> Distribution of Female Heights</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#student-height-cont">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>If a distribution is not normal, it cannot be summarized with only the mean and standard deviation. Provide a histogram, smooth density or boxplot instead.</li>
+<li>A plot can force us to see unexpected results that make us question the quality or implications of our data.</li>
+</ul>
+</div>
+<div id="assessment---robust-summaries-with-outliers" class="section level2" number="2.15">
+<h2><span class="header-section-number">2.15</span> Assessment - Robust Summaries With Outliers</h2>
+<ol style="list-style-type: decimal">
+<li>For this chapter, we will use height data collected by Francis Galton for his genetics studies. Here we just use height of the children in the dataset:</li>
+</ol>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="section-1-overview.html#cb57-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb57-2"><a href="section-1-overview.html#cb57-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb57-3"><a href="section-1-overview.html#cb57-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="section-1-overview.html#cb58-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(HistData)) <span class="kw">install.packages</span>(<span class="st">&quot;HistData&quot;</span>)</span>
+<span id="cb58-2"><a href="section-1-overview.html#cb58-2" aria-hidden="true"></a></span>
+<span id="cb58-3"><a href="section-1-overview.html#cb58-3" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb58-4"><a href="section-1-overview.html#cb58-4" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb58-5"><a href="section-1-overview.html#cb58-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb58-6"><a href="section-1-overview.html#cb58-6" aria-hidden="true"></a><span class="kw">mean</span>(x)</span></code></pre></div>
+<pre><code>## [1] 68.1</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="section-1-overview.html#cb60-1" aria-hidden="true"></a><span class="kw">median</span>(x)</span></code></pre></div>
+<pre><code>## [1] 68.2</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Now for the same data compute the standard deviation and the median absolute deviation (MAD).</li>
+</ol>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="section-1-overview.html#cb62-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb62-2"><a href="section-1-overview.html#cb62-2" aria-hidden="true"></a><span class="kw">sd</span>(x)</span></code></pre></div>
+<pre><code>## [1] 2.52</code></pre>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="section-1-overview.html#cb64-1" aria-hidden="true"></a><span class="kw">mad</span>(x)</span></code></pre></div>
+<pre><code>## [1] 2.97</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>In the previous exercises we saw that the mean and median are very similar and so are the standard deviation and MAD. This is expected since the data is approximated by a normal distribution which has this property.</li>
+</ol>
+<p>Now suppose that suppose Galton made a mistake when entering the first value, forgetting to use the decimal point. You can imitate this error by typing:</p>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="section-1-overview.html#cb66-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb66-2"><a href="section-1-overview.html#cb66-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb66-3"><a href="section-1-overview.html#cb66-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb66-4"><a href="section-1-overview.html#cb66-4" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb66-5"><a href="section-1-overview.html#cb66-5" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span></code></pre></div>
+<p>The data now has an outlier that the normal approximation does not account for. Let’s see how this affects the average.</p>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="section-1-overview.html#cb67-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb67-2"><a href="section-1-overview.html#cb67-2" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb67-3"><a href="section-1-overview.html#cb67-3" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb67-4"><a href="section-1-overview.html#cb67-4" aria-hidden="true"></a>gem &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb67-5"><a href="section-1-overview.html#cb67-5" aria-hidden="true"></a>gem_error &lt;-<span class="st"> </span><span class="kw">mean</span>(x_with_error)</span>
+<span id="cb67-6"><a href="section-1-overview.html#cb67-6" aria-hidden="true"></a>gem_error <span class="op">-</span><span class="st"> </span>gem</span></code></pre></div>
+<pre><code>## [1] 0.598</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>In the previous exercise we saw how a simple mistake in 1 out of over 900 observations can result in the average of our data increasing more than half an inch, which is a large difference in practical terms.</li>
+</ol>
+<p>Now let’s explore the effect this outlier has on the standard deviation.</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="section-1-overview.html#cb69-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb69-2"><a href="section-1-overview.html#cb69-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb69-3"><a href="section-1-overview.html#cb69-3" aria-hidden="true"></a><span class="kw">sd</span>(x_with_error)<span class="op">-</span><span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
+<pre><code>## [1] 15.7</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>In the previous exercises we saw how one mistake can have a substantial effect on the average and the standard deviation.</li>
+</ol>
+<p>Now we are going to see how the median and MAD are much more resistant to outliers. For this reason we say that they are <em>robust</em> summaries.</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="section-1-overview.html#cb71-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb71-2"><a href="section-1-overview.html#cb71-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb71-3"><a href="section-1-overview.html#cb71-3" aria-hidden="true"></a>mediaan &lt;-<span class="st"> </span><span class="kw">median</span>(x)</span>
+<span id="cb71-4"><a href="section-1-overview.html#cb71-4" aria-hidden="true"></a>mediaan_error &lt;-<span class="st"> </span><span class="kw">median</span>(x_with_error)</span>
+<span id="cb71-5"><a href="section-1-overview.html#cb71-5" aria-hidden="true"></a>mediaan_error <span class="op">-</span><span class="st"> </span>mediaan</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>We saw that the median barely changes. Now let’s see how the MAD is affected.</li>
+</ol>
+<p>We saw that the median barely changes. Now let’s see how the MAD is affected.</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="section-1-overview.html#cb73-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb73-2"><a href="section-1-overview.html#cb73-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb73-3"><a href="section-1-overview.html#cb73-3" aria-hidden="true"></a>mad_normal &lt;-<span class="st"> </span><span class="kw">mad</span>(x)</span>
+<span id="cb73-4"><a href="section-1-overview.html#cb73-4" aria-hidden="true"></a>mad_error &lt;-<span class="st"> </span><span class="kw">mad</span>(x_with_error)</span>
+<span id="cb73-5"><a href="section-1-overview.html#cb73-5" aria-hidden="true"></a>mad_error <span class="op">-</span><span class="st"> </span>mad_normal</span></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>How could you use exploratory data analysis to detect that an error was made?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Since it is only one value out of many, we will not be able to detect this.</li>
+<li><input type="checkbox" disabled="" />
+B. We would see an obvious shift in the distribution.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. A boxplot, histogram, or qq-plot would reveal a clear outlier.</li>
+<li><input type="checkbox" disabled="" />
+D. A scatter plot would show high levels of measurement error.</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>We have seen how the average can be affected by outliers.</li>
+</ol>
+<p>But how large can this effect get? This of course depends on the size of the outlier and the size of the dataset.</p>
+<p>To see how outliers can affect the average of a dataset, let’s write a simple function that takes the size of the outlier as input and returns the average.</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="section-1-overview.html#cb75-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb75-2"><a href="section-1-overview.html#cb75-2" aria-hidden="true"></a>error_avg &lt;-<span class="st"> </span><span class="cf">function</span>(k){</span>
+<span id="cb75-3"><a href="section-1-overview.html#cb75-3" aria-hidden="true"></a>x[<span class="dv">1</span>] =<span class="st"> </span>k</span>
+<span id="cb75-4"><a href="section-1-overview.html#cb75-4" aria-hidden="true"></a><span class="kw">mean</span>(x)</span>
+<span id="cb75-5"><a href="section-1-overview.html#cb75-5" aria-hidden="true"></a>}</span>
+<span id="cb75-6"><a href="section-1-overview.html#cb75-6" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## [1] 78.8</code></pre>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="section-1-overview.html#cb77-1" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="op">-</span><span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## [1] 57.2</code></pre>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="learning-objectives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-2-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

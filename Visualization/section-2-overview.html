@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Section 2 Overview | Data Science Visualization</title>
+  <meta name="description" content="3 Section 2 Overview | Data Science Visualization" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Section 2 Overview | Data Science Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Section 2 Overview | Data Science Visualization" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-1-overview.html"/>
+<link rel="next" href="section-3-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-introduction-to-data-visualization-and-distributions"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Introduction to Data Visualization and Distributions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-introduction-to-ggplot2"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Introduction to ggplot2</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-summarizing-with-dplyr"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Summarizing with dplyr</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-gapminder"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Gapminder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-data-visualization-principles"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Data Visualization Principles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-data-visualization"><i class="fa fa-check"></i><b>2.1</b> Introduction to Data Visualization</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-distributions"><i class="fa fa-check"></i><b>2.2</b> Introduction to Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#data-types"><i class="fa fa-check"></i><b>2.3</b> Data Types</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---data-types"><i class="fa fa-check"></i><b>2.4</b> Assessment - Data Types</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#describe-heights-to-et"><i class="fa fa-check"></i><b>2.5</b> Describe Heights to ET</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#smooth-density-plots"><i class="fa fa-check"></i><b>2.6</b> Smooth Density Plots</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---distributions"><i class="fa fa-check"></i><b>2.7</b> Assessment - Distributions</a></li>
+<li class="chapter" data-level="2.8" data-path="section-1-overview.html"><a href="section-1-overview.html#normal-distribution"><i class="fa fa-check"></i><b>2.8</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.9" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---normal-distribution"><i class="fa fa-check"></i><b>2.9</b> Assessment - Normal Distribution</a></li>
+<li class="chapter" data-level="2.10" data-path="section-1-overview.html"><a href="section-1-overview.html#quantile-quantile-plots"><i class="fa fa-check"></i><b>2.10</b> Quantile-Quantile Plots</a></li>
+<li class="chapter" data-level="2.11" data-path="section-1-overview.html"><a href="section-1-overview.html#percentiles"><i class="fa fa-check"></i><b>2.11</b> Percentiles</a></li>
+<li class="chapter" data-level="2.12" data-path="section-1-overview.html"><a href="section-1-overview.html#boxplots"><i class="fa fa-check"></i><b>2.12</b> Boxplots</a></li>
+<li class="chapter" data-level="2.13" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---quantiles-percentiles-and-boxplots"><i class="fa fa-check"></i><b>2.13</b> Assessment - Quantiles, percentiles, and boxplots</a></li>
+<li class="chapter" data-level="2.14" data-path="section-1-overview.html"><a href="section-1-overview.html#distribution-of-female-heights"><i class="fa fa-check"></i><b>2.14</b> Distribution of Female Heights</a></li>
+<li class="chapter" data-level="2.15" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---robust-summaries-with-outliers"><i class="fa fa-check"></i><b>2.15</b> Assessment - Robust Summaries With Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#ggplot"><i class="fa fa-check"></i><b>3.1</b> ggplot</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#graph-components"><i class="fa fa-check"></i><b>3.2</b> Graph Components</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#creating-a-new-plot"><i class="fa fa-check"></i><b>3.3</b> Creating a New Plot</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#layers"><i class="fa fa-check"></i><b>3.4</b> Layers</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#tinkering"><i class="fa fa-check"></i><b>3.5</b> Tinkering</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#scales-labels-and-colors"><i class="fa fa-check"></i><b>3.6</b> Scales, Labels, and Colors</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#add-on-packages"><i class="fa fa-check"></i><b>3.7</b> Add-on Packages</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#other-examples"><i class="fa fa-check"></i><b>3.8</b> Other Examples</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---ggplot2"><i class="fa fa-check"></i><b>3.9</b> Assessment - ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#dplyr"><i class="fa fa-check"></i><b>4.1</b> dplyr</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#the-dot-placeholder"><i class="fa fa-check"></i><b>4.2</b> The Dot Placeholder</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#group-by"><i class="fa fa-check"></i><b>4.3</b> Group By</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#sorting-data-tables"><i class="fa fa-check"></i><b>4.4</b> Sorting Data Tables</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---summarizing-with-dplyr"><i class="fa fa-check"></i><b>4.5</b> Assessment - Summarizing with dplyr</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#case-study-trends-in-world-health-and-economics"><i class="fa fa-check"></i><b>5.1</b> Case Study: Trends in World Health and Economics</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#gapminder-dataset"><i class="fa fa-check"></i><b>5.2</b> Gapminder Dataset</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#life-expectancy-and-fertility-rates"><i class="fa fa-check"></i><b>5.3</b> Life Expectancy and Fertility Rates</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#faceting"><i class="fa fa-check"></i><b>5.4</b> Faceting</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#time-series-plots"><i class="fa fa-check"></i><b>5.5</b> Time Series Plots</a></li>
+<li class="chapter" data-level="5.6" data-path="section-4-overview.html"><a href="section-4-overview.html#transformations"><i class="fa fa-check"></i><b>5.6</b> Transformations</a></li>
+<li class="chapter" data-level="5.7" data-path="section-4-overview.html"><a href="section-4-overview.html#stratify-and-boxplot"><i class="fa fa-check"></i><b>5.7</b> Stratify and Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="section-4-overview.html"><a href="section-4-overview.html#comparing-distributions"><i class="fa fa-check"></i><b>5.8</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="5.9" data-path="section-4-overview.html"><a href="section-4-overview.html#density-plots"><i class="fa fa-check"></i><b>5.9</b> Density Plots</a></li>
+<li class="chapter" data-level="5.10" data-path="section-4-overview.html"><a href="section-4-overview.html#ecological-fallacy"><i class="fa fa-check"></i><b>5.10</b> Ecological Fallacy</a></li>
+<li class="chapter" data-level="5.11" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---exploring-the-gapminder-dataset"><i class="fa fa-check"></i><b>5.11</b> Assessment - Exploring the Gapminder Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#introduction-to-data-visualization-principles"><i class="fa fa-check"></i><b>6.1</b> Introduction to Data Visualization Principles</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-data-using-visual-cues"><i class="fa fa-check"></i><b>6.2</b> Encoding Data Using Visual Cues</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#know-when-to-include-zero"><i class="fa fa-check"></i><b>6.3</b> Know When to Include Zero</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#do-not-distort-quantities"><i class="fa fa-check"></i><b>6.4</b> Do Not Distort Quantities</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#order-by-a-meaningful-value"><i class="fa fa-check"></i><b>6.5</b> Order by a Meaningful Value</a></li>
+<li class="chapter" data-level="6.6" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-1"><i class="fa fa-check"></i><b>6.6</b> Assessment - Data Visualization Principles, Part 1</a></li>
+<li class="chapter" data-level="6.7" data-path="section-5-overview.html"><a href="section-5-overview.html#show-the-data"><i class="fa fa-check"></i><b>6.7</b> Show the Data</a></li>
+<li class="chapter" data-level="6.8" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-use-common-axes"><i class="fa fa-check"></i><b>6.8</b> Ease Comparisons: Use Common Axes</a></li>
+<li class="chapter" data-level="6.9" data-path="section-5-overview.html"><a href="section-5-overview.html#consider-transformations"><i class="fa fa-check"></i><b>6.9</b> Consider Transformations</a></li>
+<li class="chapter" data-level="6.10" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-compared-visual-cues-should-be-adjacent"><i class="fa fa-check"></i><b>6.10</b> Ease Comparisons: Compared Visual Cues Should Be Adjacent</a></li>
+<li class="chapter" data-level="6.11" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-2"><i class="fa fa-check"></i><b>6.11</b> Assessment - Data Visualization Principles, Part 2</a></li>
+<li class="chapter" data-level="6.12" data-path="section-5-overview.html"><a href="section-5-overview.html#slope-charts"><i class="fa fa-check"></i><b>6.12</b> Slope Charts</a></li>
+<li class="chapter" data-level="6.13" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-a-third-variable"><i class="fa fa-check"></i><b>6.13</b> Encoding a Third Variable</a></li>
+<li class="chapter" data-level="6.14" data-path="section-5-overview.html"><a href="section-5-overview.html#case-study-vaccines"><i class="fa fa-check"></i><b>6.14</b> Case Study: Vaccines</a></li>
+<li class="chapter" data-level="6.15" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-pseudo-and-gratuitous-3d-plots"><i class="fa fa-check"></i><b>6.15</b> Avoid Pseudo and Gratuitous 3D Plots</a></li>
+<li class="chapter" data-level="6.16" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-too-many-significant-digits"><i class="fa fa-check"></i><b>6.16</b> Avoid Too Many Significant Digits</a></li>
+<li class="chapter" data-level="6.17" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-3"><i class="fa fa-check"></i><b>6.17</b> Assessment - Data Visualization Principles, Part 3</a></li>
+<li class="chapter" data-level="6.18" data-path="section-5-overview.html"><a href="section-5-overview.html#titanic-survival-exercises"><i class="fa fa-check"></i><b>6.18</b> Titanic Survival Exercises</a></li>
+<li class="chapter" data-level="6.19" data-path="section-5-overview.html"><a href="section-5-overview.html#properties-of-stars-exercises"><i class="fa fa-check"></i><b>6.19</b> Properties of Stars Exercises</a></li>
+<li class="chapter" data-level="6.20" data-path="section-5-overview.html"><a href="section-5-overview.html#climate-change-exercises"><i class="fa fa-check"></i><b>6.20</b> Climate Change Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-2-overview" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Section 2 Overview</h1>
+<p>In Section 2, you will learn how to create data visualizations in R using ggplot2.</p>
+<p>After completing Section 2, you will:</p>
+<ul>
+<li>be able to use ggplot2 to create data visualizations in R.</li>
+<li>be able to explain what the data component of a graph is.</li>
+<li>be able to identify the geometry component of a graph and know when to use which type of geometry.</li>
+<li>be able to explain what the aesthetic mapping component of a graph is.</li>
+<li>be able to understand the scale component of a graph and select an appropriate scale component to use.</li>
+</ul>
+<p>Note that it can be hard to memorize all of the functions and arguments used by ggplot2, so we recommend that you have a <a href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">cheat sheet</a> handy to help you remember the necessary commands.</p>
+<div id="ggplot" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> ggplot</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/ggplot2.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Throughout the series, we will create plots with the <strong>ggplot2</strong> package. ggplot2 is part of the tidyverse, which you can load with <code>library(tidyverse)</code>.</li>
+<li>Note that you can also load ggplot2 alone using the command <code>library(ggplot2)</code>, instead of loading the entire tidyverse.</li>
+<li>ggplot2 uses a <em>grammar of graphics</em> to break plots into building blocks that have intuitive syntax, making it easy to create relatively complex and aesthetically pleasing plots with relatively simple and readable code.</li>
+<li>ggplot2 is designed to work exclusively with tidy data (rows are observations and columns are variables).</li>
+</ul>
+</div>
+<div id="graph-components" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Graph Components</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/ggplot2.html#the-components-of-a-graph">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Plots in ggplot2 consist of 3 main components:
+<ul>
+<li>Data: The dataset being summarized</li>
+<li>Geometry: The type of plot (scatterplot, boxplot, barplot, histogram, qqplot, smooth density, etc.)</li>
+<li>Aesthetic mapping: Variables mapped to visual cues, such as x-axis and y-axis values and color</li>
+</ul></li>
+<li>There are additional components:
+<ul>
+<li>Scale</li>
+<li>Labels, Title, Legend</li>
+<li>Theme/Style</li>
+</ul></li>
+</ul>
+</div>
+<div id="creating-a-new-plot" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Creating a New Plot</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/ggplot2.html#ggplot-objects">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>You can associate a dataset x with a ggplot object with any of the 3 commands:
+<ul>
+<li><code>ggplot(data = x)</code></li>
+<li><code>ggplot(x)</code></li>
+<li><code>x %&gt;% ggplot()</code></li>
+</ul></li>
+<li>You can assign a ggplot object to a variable. If the object is not assigned to a variable, it will automatically be displayed.</li>
+<li>You can display a ggplot object assigned to a variable by printing that variable.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="section-2-overview.html#cb79-1" aria-hidden="true"></a><span class="kw">ggplot</span>(<span class="dt">data =</span> murders)</span>
+<span id="cb79-2"><a href="section-2-overview.html#cb79-2" aria-hidden="true"></a></span>
+<span id="cb79-3"><a href="section-2-overview.html#cb79-3" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="section-2-overview.html#cb80-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> murders)</span>
+<span id="cb80-2"><a href="section-2-overview.html#cb80-2" aria-hidden="true"></a><span class="kw">class</span>(p)</span></code></pre></div>
+<pre><code>## [1] &quot;gg&quot;     &quot;ggplot&quot;</code></pre>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="section-2-overview.html#cb82-1" aria-hidden="true"></a><span class="kw">print</span>(p)    <span class="co"># this is equivalent to simply typing p</span></span></code></pre></div>
+<p>The functions above render a plot, in this case a blank slate since no geometry has been defined. The only style choice we see is a grey background.</p>
+</div>
+<div id="layers" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Layers</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#geometries">Geometries</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#aesthetic-mappings">Aesthetic mappings</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#layers">Layers</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In ggplot2, graphs are created by adding <em>layers</em> to the ggplot object:
+<code>DATA %&gt;% ggplot() + LAYER_1 + LAYER_2 + ... + LAYER_N</code></li>
+<li>The <em>geometry layer</em> defines the plot type and takes the format <code>geom_X</code> where X is the plot type.</li>
+<li><em>Aesthetic mappings</em> describe how properties of the data connect with features of the graph (axis position, color, size, etc.) Define aesthetic mappings with the <code>aes</code> function.</li>
+<li>aes uses variable names from the object component (for example, <code>total</code> rather than <code>murders$total</code>).</li>
+<li><code>geom_point</code> creates a scatterplot and requires x and y aesthetic mappings.</li>
+<li><code>geom_text</code> and <code>geom_label</code> add text to a scatterplot and require x, y, and label aesthetic mappings.</li>
+<li>To determine which aesthetic mappings are required for a geometry, read the help file for that geometry.</li>
+<li>You can add layers with different aesthetic mappings to the same graph.</li>
+</ul>
+<p><em>Code: Adding layers to a plot</em></p>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="section-2-overview.html#cb83-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb83-2"><a href="section-2-overview.html#cb83-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x =</span> population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, <span class="dt">y =</span> total))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="section-2-overview.html#cb84-1" aria-hidden="true"></a><span class="co"># add points layer to predefined ggplot object</span></span>
+<span id="cb84-2"><a href="section-2-overview.html#cb84-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> murders)</span>
+<span id="cb84-3"><a href="section-2-overview.html#cb84-3" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-2.png" width="672" /></p>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb85-1"><a href="section-2-overview.html#cb85-1" aria-hidden="true"></a><span class="co"># add text layer to scatterplot</span></span>
+<span id="cb85-2"><a href="section-2-overview.html#cb85-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total)) <span class="op">+</span></span>
+<span id="cb85-3"><a href="section-2-overview.html#cb85-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-3.png" width="672" /></p>
+<p><em>Code: Example of <strong>aes</strong> behavior</em></p>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="section-2-overview.html#cb86-1" aria-hidden="true"></a><span class="co"># no error from this call</span></span>
+<span id="cb86-2"><a href="section-2-overview.html#cb86-2" aria-hidden="true"></a>p_test &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb))</span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb87-1"><a href="section-2-overview.html#cb87-1" aria-hidden="true"></a><span class="co"># error - &quot;abb&quot; is not a globally defined variable and cannot be found outside of aes</span></span>
+<span id="cb87-2"><a href="section-2-overview.html#cb87-2" aria-hidden="true"></a>p_test &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total), <span class="dt">label =</span> abb)</span></code></pre></div>
+</div>
+<div id="tinkering" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Tinkering</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/ggplot2.html#tinkering-with-arguments">here</a> and <a href="https://rafalab.github.io/dsbook/ggplot2.html#global-versus-local-aesthetic-mappings">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>You can modify arguments to geometry functions other than aes and the data. Additional arguments can be found in the documentation for each geometry.</li>
+<li>These arguments are not aesthetic mappings: they affect all data points the same way.</li>
+<li><em>Global aesthetic mappings</em> apply to all geometries and can be defined when you initially call <code>ggplot</code>. All the geometries added as layers will default to this mapping. Local aesthetic mappings add additional information or override the default mappings.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="section-2-overview.html#cb88-1" aria-hidden="true"></a><span class="co"># change the size of the points</span></span>
+<span id="cb88-2"><a href="section-2-overview.html#cb88-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb88-3"><a href="section-2-overview.html#cb88-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="section-2-overview.html#cb89-1" aria-hidden="true"></a><span class="co"># move text labels slightly to the right</span></span>
+<span id="cb89-2"><a href="section-2-overview.html#cb89-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb89-3"><a href="section-2-overview.html#cb89-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb), <span class="dt">nudge_x =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-2.png" width="672" /></p>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="section-2-overview.html#cb90-1" aria-hidden="true"></a><span class="co"># simplify code by adding global aesthetic</span></span>
+<span id="cb90-2"><a href="section-2-overview.html#cb90-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb))</span>
+<span id="cb90-3"><a href="section-2-overview.html#cb90-3" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb90-4"><a href="section-2-overview.html#cb90-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">nudge_x =</span> <span class="fl">1.5</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-3.png" width="672" /></p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="section-2-overview.html#cb91-1" aria-hidden="true"></a><span class="co"># local aesthetics override global aesthetics</span></span>
+<span id="cb91-2"><a href="section-2-overview.html#cb91-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb91-3"><a href="section-2-overview.html#cb91-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">10</span>, <span class="dt">y =</span> <span class="dv">800</span>, <span class="dt">label =</span> <span class="st">&quot;Hello there!&quot;</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-4.png" width="672" /></p>
+</div>
+<div id="scales-labels-and-colors" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Scales, Labels, and Colors</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#scales">Scales</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#labels-and-titles">Labels and titles</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#categories-as-colors">Categories as colors</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#annotation-shapes-and-adjustments">Annotation, shapes and adjustments</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Convert the x-axis to log scale with <code>scale_x_continuous(trans = "log10")</code> or <code>scale_x_log10</code>. Similar functions exist for the y-axis.</li>
+<li>Add axis titles with <code>xlab</code> and <code>ylab</code> functions. Add a plot title with the <code>ggtitle</code> function.</li>
+<li>Add a color mapping that colors points by a variable by defining the <code>col</code> argument within <code>aes</code>. To color all points the same way, define <code>col</code> outside of <code>aes</code>.</li>
+<li>Add a line with the <code>geom_abline</code> geometry. <code>geom_abline</code> takes arguments <code>slope</code> (default = 1) and <code>intercept</code> (default = 0). Change the color with <code>col</code> or <code>color</code> and line type with <code>lty</code>.</li>
+<li>Placing the line layer after the point layer will overlay the line on top of the points. To overlay points on the line, place the line layer before the point layer.</li>
+<li>There are many additional ways to tweak your graph that can be found in the ggplot2 documentation, cheat sheet, or on the internet. For example, you can change the legend title with <code>scale_color_discrete</code>.</li>
+</ul>
+<p><em>Code: Log-scale the x- and y-axis</em></p>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="section-2-overview.html#cb92-1" aria-hidden="true"></a><span class="co"># define p</span></span>
+<span id="cb92-2"><a href="section-2-overview.html#cb92-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb))</span>
+<span id="cb92-3"><a href="section-2-overview.html#cb92-3" aria-hidden="true"></a></span>
+<span id="cb92-4"><a href="section-2-overview.html#cb92-4" aria-hidden="true"></a><span class="co"># log base 10 scale the x-axis and y-axis</span></span>
+<span id="cb92-5"><a href="section-2-overview.html#cb92-5" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb92-6"><a href="section-2-overview.html#cb92-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">nudge_x =</span> <span class="fl">0.05</span>) <span class="op">+</span></span>
+<span id="cb92-7"><a href="section-2-overview.html#cb92-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log10&quot;</span>) <span class="op">+</span></span>
+<span id="cb92-8"><a href="section-2-overview.html#cb92-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log10&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb93-1"><a href="section-2-overview.html#cb93-1" aria-hidden="true"></a><span class="co"># efficient log scaling of the axes</span></span>
+<span id="cb93-2"><a href="section-2-overview.html#cb93-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb93-3"><a href="section-2-overview.html#cb93-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">nudge_x =</span> <span class="fl">0.075</span>) <span class="op">+</span></span>
+<span id="cb93-4"><a href="section-2-overview.html#cb93-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb93-5"><a href="section-2-overview.html#cb93-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_log10</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-44-2.png" width="672" /></p>
+<p><em>Code: Add labels and title</em></p>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="section-2-overview.html#cb94-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb94-2"><a href="section-2-overview.html#cb94-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">nudge_x =</span> <span class="fl">0.075</span>) <span class="op">+</span></span>
+<span id="cb94-3"><a href="section-2-overview.html#cb94-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb94-4"><a href="section-2-overview.html#cb94-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_log10</span>() <span class="op">+</span></span>
+<span id="cb94-5"><a href="section-2-overview.html#cb94-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Population in millions (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb94-6"><a href="section-2-overview.html#cb94-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Total number of murders (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb94-7"><a href="section-2-overview.html#cb94-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Gun Murders in 2010&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p><em>Code: Change color of the points</em></p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="section-2-overview.html#cb95-1" aria-hidden="true"></a><span class="co"># redefine p to be everything except the points layer</span></span>
+<span id="cb95-2"><a href="section-2-overview.html#cb95-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb95-3"><a href="section-2-overview.html#cb95-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb)) <span class="op">+</span></span>
+<span id="cb95-4"><a href="section-2-overview.html#cb95-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">nudge_x =</span> <span class="fl">0.075</span>) <span class="op">+</span></span>
+<span id="cb95-5"><a href="section-2-overview.html#cb95-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb95-6"><a href="section-2-overview.html#cb95-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_log10</span>() <span class="op">+</span></span>
+<span id="cb95-7"><a href="section-2-overview.html#cb95-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Population in millions (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb95-8"><a href="section-2-overview.html#cb95-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Total number of murders (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb95-9"><a href="section-2-overview.html#cb95-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Gun Murders in 2010&quot;</span>)</span>
+<span id="cb95-10"><a href="section-2-overview.html#cb95-10" aria-hidden="true"></a></span>
+<span id="cb95-11"><a href="section-2-overview.html#cb95-11" aria-hidden="true"></a><span class="co"># make all points blue</span></span>
+<span id="cb95-12"><a href="section-2-overview.html#cb95-12" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="section-2-overview.html#cb96-1" aria-hidden="true"></a><span class="co"># color points by region</span></span>
+<span id="cb96-2"><a href="section-2-overview.html#cb96-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">col =</span> region), <span class="dt">size =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-46-2.png" width="672" /></p>
+<p><em>Code: Add a line with average murder rate</em></p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="section-2-overview.html#cb97-1" aria-hidden="true"></a><span class="co"># define average murder rate</span></span>
+<span id="cb97-2"><a href="section-2-overview.html#cb97-2" aria-hidden="true"></a>r &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb97-3"><a href="section-2-overview.html#cb97-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb97-4"><a href="section-2-overview.html#cb97-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(rate)</span>
+<span id="cb97-5"><a href="section-2-overview.html#cb97-5" aria-hidden="true"></a>    </span>
+<span id="cb97-6"><a href="section-2-overview.html#cb97-6" aria-hidden="true"></a><span class="co"># basic line with average murder rate for the country</span></span>
+<span id="cb97-7"><a href="section-2-overview.html#cb97-7" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">col =</span> region), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb97-8"><a href="section-2-overview.html#cb97-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>(<span class="dt">intercept =</span> <span class="kw">log10</span>(r))    <span class="co"># slope is default of 1</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="section-2-overview.html#cb98-1" aria-hidden="true"></a><span class="co"># change line to dashed and dark grey, line under points</span></span>
+<span id="cb98-2"><a href="section-2-overview.html#cb98-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span></span>
+<span id="cb98-3"><a href="section-2-overview.html#cb98-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>(<span class="dt">intercept =</span> <span class="kw">log10</span>(r), <span class="dt">lty =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;darkgrey&quot;</span>) <span class="op">+</span></span>
+<span id="cb98-4"><a href="section-2-overview.html#cb98-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">col =</span> region), <span class="dt">size =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-47-2.png" width="672" /></p>
+<p><em>Code: Change legend title</em></p>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="section-2-overview.html#cb99-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Region&quot;</span>)    <span class="co"># capitalize legend title</span></span></code></pre></div>
+</div>
+<div id="add-on-packages" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Add-on Packages</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/ggplot2.html#add-on-packages">here</a> and <a href="https://rafalab.github.io/dsbook/ggplot2.html#putting-it-all-together">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The style of a ggplot graph can be changed using the <code>theme</code> function.</li>
+<li>The <strong>ggthemes</strong> package adds additional themes.</li>
+<li>The <strong>ggrepel</strong> package includes a geometry that repels text labels, ensuring they do not overlap with each other: <code>geom_text_repel</code>.</li>
+</ul>
+<p><em>Code: Adding themes</em></p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="section-2-overview.html#cb100-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(ggthemes)) <span class="kw">install.packages</span>(<span class="st">&quot;ggthemes&quot;</span>)</span>
+<span id="cb100-2"><a href="section-2-overview.html#cb100-2" aria-hidden="true"></a></span>
+<span id="cb100-3"><a href="section-2-overview.html#cb100-3" aria-hidden="true"></a><span class="co"># theme used for graphs in the textbook and course</span></span>
+<span id="cb100-4"><a href="section-2-overview.html#cb100-4" aria-hidden="true"></a><span class="kw">ds_theme_set</span>()</span>
+<span id="cb100-5"><a href="section-2-overview.html#cb100-5" aria-hidden="true"></a></span>
+<span id="cb100-6"><a href="section-2-overview.html#cb100-6" aria-hidden="true"></a><span class="co"># themes from ggthemes</span></span>
+<span id="cb100-7"><a href="section-2-overview.html#cb100-7" aria-hidden="true"></a><span class="kw">library</span>(ggthemes)</span>
+<span id="cb100-8"><a href="section-2-overview.html#cb100-8" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">theme_economist</span>()    <span class="co"># style of the Economist magazine</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="section-2-overview.html#cb101-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">theme_fivethirtyeight</span>()    <span class="co"># style of the FiveThirtyEight website</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-49-2.png" width="672" /></p>
+<p><em>Code: Putting it all together to assemble the plot</em></p>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="section-2-overview.html#cb102-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(ggrepel)) <span class="kw">install.packages</span>(<span class="st">&quot;ggrepel&quot;</span>)</span>
+<span id="cb102-2"><a href="section-2-overview.html#cb102-2" aria-hidden="true"></a></span>
+<span id="cb102-3"><a href="section-2-overview.html#cb102-3" aria-hidden="true"></a><span class="co"># load libraries</span></span>
+<span id="cb102-4"><a href="section-2-overview.html#cb102-4" aria-hidden="true"></a><span class="kw">library</span>(ggrepel)</span>
+<span id="cb102-5"><a href="section-2-overview.html#cb102-5" aria-hidden="true"></a></span>
+<span id="cb102-6"><a href="section-2-overview.html#cb102-6" aria-hidden="true"></a><span class="co"># define the intercept</span></span>
+<span id="cb102-7"><a href="section-2-overview.html#cb102-7" aria-hidden="true"></a>r &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb102-8"><a href="section-2-overview.html#cb102-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb102-9"><a href="section-2-overview.html#cb102-9" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>rate</span>
+<span id="cb102-10"><a href="section-2-overview.html#cb102-10" aria-hidden="true"></a>    </span>
+<span id="cb102-11"><a href="section-2-overview.html#cb102-11" aria-hidden="true"></a><span class="co"># make the plot, combining all elements</span></span>
+<span id="cb102-12"><a href="section-2-overview.html#cb102-12" aria-hidden="true"></a>murders <span class="op">%&gt;%</span></span>
+<span id="cb102-13"><a href="section-2-overview.html#cb102-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>, total, <span class="dt">label =</span> abb)) <span class="op">+</span></span>
+<span id="cb102-14"><a href="section-2-overview.html#cb102-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>(<span class="dt">intercept =</span> <span class="kw">log10</span>(r), <span class="dt">lty =</span> <span class="dv">2</span>, <span class="dt">color =</span> <span class="st">&quot;darkgrey&quot;</span>) <span class="op">+</span></span>
+<span id="cb102-15"><a href="section-2-overview.html#cb102-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">col =</span> region), <span class="dt">size =</span> <span class="dv">3</span>) <span class="op">+</span></span>
+<span id="cb102-16"><a href="section-2-overview.html#cb102-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text_repel</span>() <span class="op">+</span></span>
+<span id="cb102-17"><a href="section-2-overview.html#cb102-17" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_log10</span>() <span class="op">+</span></span>
+<span id="cb102-18"><a href="section-2-overview.html#cb102-18" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_log10</span>() <span class="op">+</span></span>
+<span id="cb102-19"><a href="section-2-overview.html#cb102-19" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Population in millions (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb102-20"><a href="section-2-overview.html#cb102-20" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Total number of murders (log scale)&quot;</span>) <span class="op">+</span></span>
+<span id="cb102-21"><a href="section-2-overview.html#cb102-21" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;US Gun Murders in 2010&quot;</span>) <span class="op">+</span></span>
+<span id="cb102-22"><a href="section-2-overview.html#cb102-22" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_color_discrete</span>(<span class="dt">name =</span> <span class="st">&quot;Region&quot;</span>) <span class="op">+</span></span>
+<span id="cb102-23"><a href="section-2-overview.html#cb102-23" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme_economist</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+</div>
+<div id="other-examples" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Other Examples</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#histograms-1">Histograms</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#density-plots">Density plots</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#qq-plots">QQ-plots</a></li>
+<li><a href="https://rafalab.github.io/dsbook/ggplot2.html#grids-of-plots">Grids of plots</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li><code>geom_histogram</code> creates a histogram. Use the <code>binwidth</code> argument to change the width of bins, the <code>fill</code> argument to change the bar fill color, and the <code>col</code> argument to change bar outline color.</li>
+<li><code>geom_density</code> creates smooth density plots. Change the fill color of the plot with the <code>fill</code> argument.</li>
+<li><code>geom_qq</code> creates a quantile-quantile plot. This geometry requires the <code>sample</code> argument. By default, the data are compared to a standard normal distribution with a mean of 0 and standard deviation of 1. This can be changed with the <code>dparams</code> argument, or the sample data can be scaled.</li>
+<li>Plots can be arranged adjacent to each other using the <code>grid.arrange</code> function from the <code>gridExtra</code> package. First, create the plots and save them to objects (p1, p2, …). Then pass the plot objects to <code>grid.arrange</code>.</li>
+</ul>
+<p><em>Code: Histograms in ggplot2</em></p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="section-2-overview.html#cb103-1" aria-hidden="true"></a><span class="co"># define p</span></span>
+<span id="cb103-2"><a href="section-2-overview.html#cb103-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span></span>
+<span id="cb103-3"><a href="section-2-overview.html#cb103-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb103-4"><a href="section-2-overview.html#cb103-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> height))</span>
+<span id="cb103-5"><a href="section-2-overview.html#cb103-5" aria-hidden="true"></a>    </span>
+<span id="cb103-6"><a href="section-2-overview.html#cb103-6" aria-hidden="true"></a><span class="co"># basic histograms</span></span>
+<span id="cb103-7"><a href="section-2-overview.html#cb103-7" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="section-2-overview.html#cb105-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-51-2.png" width="672" /></p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="section-2-overview.html#cb106-1" aria-hidden="true"></a><span class="co"># histogram with blue fill, black outline, labels and title</span></span>
+<span id="cb106-2"><a href="section-2-overview.html#cb106-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb106-3"><a href="section-2-overview.html#cb106-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Male heights in inches&quot;</span>) <span class="op">+</span></span>
+<span id="cb106-4"><a href="section-2-overview.html#cb106-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-51-3.png" width="672" /></p>
+<p><em>Code: Smooth density plots in ggplot2</em></p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="section-2-overview.html#cb107-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="section-2-overview.html#cb108-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-2.png" width="672" /></p>
+<p><em>Code: Quantile-quantile plots in ggplot2</em></p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="section-2-overview.html#cb109-1" aria-hidden="true"></a><span class="co"># basic QQ-plot</span></span>
+<span id="cb109-2"><a href="section-2-overview.html#cb109-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb109-3"><a href="section-2-overview.html#cb109-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> height))</span>
+<span id="cb109-4"><a href="section-2-overview.html#cb109-4" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_qq</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="section-2-overview.html#cb110-1" aria-hidden="true"></a><span class="co"># QQ-plot against a normal distribution with same mean/sd as data</span></span>
+<span id="cb110-2"><a href="section-2-overview.html#cb110-2" aria-hidden="true"></a>params &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span></span>
+<span id="cb110-3"><a href="section-2-overview.html#cb110-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb110-4"><a href="section-2-overview.html#cb110-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(height), <span class="dt">sd =</span> <span class="kw">sd</span>(height))</span>
+<span id="cb110-5"><a href="section-2-overview.html#cb110-5" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_qq</span>(<span class="dt">dparams =</span> params) <span class="op">+</span></span>
+<span id="cb110-6"><a href="section-2-overview.html#cb110-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-2.png" width="672" /></p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="section-2-overview.html#cb111-1" aria-hidden="true"></a><span class="co"># QQ-plot of scaled data against the standard normal distribution</span></span>
+<span id="cb111-2"><a href="section-2-overview.html#cb111-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb111-3"><a href="section-2-overview.html#cb111-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> <span class="kw">scale</span>(height))) <span class="op">+</span></span>
+<span id="cb111-4"><a href="section-2-overview.html#cb111-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_qq</span>() <span class="op">+</span></span>
+<span id="cb111-5"><a href="section-2-overview.html#cb111-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-3.png" width="672" /></p>
+<p><em>Code: Grids of plots with the grid.extra package</em></p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="section-2-overview.html#cb112-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(gridExtra)) <span class="kw">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</span>
+<span id="cb112-2"><a href="section-2-overview.html#cb112-2" aria-hidden="true"></a></span>
+<span id="cb112-3"><a href="section-2-overview.html#cb112-3" aria-hidden="true"></a><span class="co"># define plots p1, p2, p3</span></span>
+<span id="cb112-4"><a href="section-2-overview.html#cb112-4" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> height))</span>
+<span id="cb112-5"><a href="section-2-overview.html#cb112-5" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb112-6"><a href="section-2-overview.html#cb112-6" aria-hidden="true"></a>p2 &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">2</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb112-7"><a href="section-2-overview.html#cb112-7" aria-hidden="true"></a>p3 &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">3</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb112-8"><a href="section-2-overview.html#cb112-8" aria-hidden="true"></a></span>
+<span id="cb112-9"><a href="section-2-overview.html#cb112-9" aria-hidden="true"></a><span class="co"># arrange plots next to each other in 1 row, 3 columns</span></span>
+<span id="cb112-10"><a href="section-2-overview.html#cb112-10" aria-hidden="true"></a><span class="kw">library</span>(gridExtra)</span>
+<span id="cb112-11"><a href="section-2-overview.html#cb112-11" aria-hidden="true"></a><span class="kw">grid.arrange</span>(p1, p2, p3, <span class="dt">ncol =</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+</div>
+<div id="assessment---ggplot2" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> Assessment - ggplot2</h2>
+<ol style="list-style-type: decimal">
+<li>Start by loading the dplyr and ggplot2 libraries as well as the <code>murders</code> data.</li>
+</ol>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="section-2-overview.html#cb113-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb113-2"><a href="section-2-overview.html#cb113-2" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb113-3"><a href="section-2-overview.html#cb113-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb113-4"><a href="section-2-overview.html#cb113-4" aria-hidden="true"></a><span class="kw">data</span>(murders)</span></code></pre></div>
+<p>Note that you can load both dplyr and ggplot2, as well as other packages, by installing and loading the tidyverse package.</p>
+<p>With ggplot2 plots can be saved as objects. For example we can associate a dataset with a plot object like this</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="section-2-overview.html#cb114-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data =</span> murders)</span></code></pre></div>
+<p>Because <code>data</code> is the first argument we don’t need to spell it out. So we can write this instead:</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="section-2-overview.html#cb115-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(murders)</span></code></pre></div>
+<p>or, if we load <code>dplyr</code>, we can use the pipe:</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="section-2-overview.html#cb116-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>()</span></code></pre></div>
+<p>Remember the pipe sends the object on the left of <code>%&gt;%</code> to be the first argument for the function the right of <code>%&gt;%</code>.</p>
+<p>Now let’s get an introduction to <code>ggplot</code>.</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="section-2-overview.html#cb117-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dplyr)) <span class="kw">install.packages</span>(<span class="st">&quot;dplyr&quot;</span>)</span>
+<span id="cb117-2"><a href="section-2-overview.html#cb117-2" aria-hidden="true"></a></span>
+<span id="cb117-3"><a href="section-2-overview.html#cb117-3" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb117-4"><a href="section-2-overview.html#cb117-4" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(murders)</span>
+<span id="cb117-5"><a href="section-2-overview.html#cb117-5" aria-hidden="true"></a><span class="kw">class</span>(p)</span></code></pre></div>
+<pre><code>## [1] &quot;gg&quot;     &quot;ggplot&quot;</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Remember that to print an object you can use the command <code>print</code> or simply type the object. For example, instead of</li>
+</ol>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="section-2-overview.html#cb119-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb119-2"><a href="section-2-overview.html#cb119-2" aria-hidden="true"></a><span class="kw">print</span>(x)</span></code></pre></div>
+<p>you can simply type</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="section-2-overview.html#cb120-1" aria-hidden="true"></a>x &lt;-<span class="dv">2</span></span>
+<span id="cb120-2"><a href="section-2-overview.html#cb120-2" aria-hidden="true"></a>x</span></code></pre></div>
+<p>Print the object <code>p</code> defined in exercise one</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="section-2-overview.html#cb121-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(murders)</span></code></pre></div>
+<p>and describe what you see.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Nothing happens.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. A blank slate plot.</li>
+<li><input type="checkbox" disabled="" />
+C. A scatter plot.</li>
+<li><input type="checkbox" disabled="" />
+D. A histogram.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Now we are going to review the use of pipes by seeing how they can be used with <code>ggplot</code>.</li>
+</ol>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="section-2-overview.html#cb122-1" aria-hidden="true"></a><span class="co"># define ggplot object called p like in the previous exercise but using a pipe </span></span>
+<span id="cb122-2"><a href="section-2-overview.html#cb122-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>()</span>
+<span id="cb122-3"><a href="section-2-overview.html#cb122-3" aria-hidden="true"></a>p <span class="co"># a blank slate plot</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Now we are going to add layers and the corresponding aesthetic mappings. For the murders data, we plotted total murders versus population sizes in the videos.</li>
+</ol>
+<p>Explore the <code>murders</code> data frame to remind yourself of the names for the two variables (total murders and population size) we want to plot and select the correct answer.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. state and abb.</li>
+<li><input type="checkbox" disabled="" />
+B. total_murders and population_size.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. total and population.</li>
+<li><input type="checkbox" disabled="" />
+D. murders and size.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>To create a scatter plot, we add a layer with the function <code>geom_point</code>.</li>
+</ol>
+<p>The aesthetic mappings require us to define the x-axis and y-axis variables respectively. So the code looks like this:</p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="section-2-overview.html#cb123-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> , <span class="dt">y =</span> )) <span class="op">+</span></span>
+<span id="cb123-2"><a href="section-2-overview.html#cb123-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p>except we have to fill in the blanks to define the two variables <code>x</code> and <code>y</code>.</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="section-2-overview.html#cb124-1" aria-hidden="true"></a><span class="co">## Fill in the blanks</span></span>
+<span id="cb124-2"><a href="section-2-overview.html#cb124-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span>population , <span class="dt">y =</span>total )) <span class="op">+</span></span>
+<span id="cb124-3"><a href="section-2-overview.html#cb124-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-65-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Note that if we don’t use argument names, we can obtain the same plot by making sure we enter the variable names in the desired order.</li>
+</ol>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="section-2-overview.html#cb125-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total)) <span class="op">+</span></span>
+<span id="cb125-2"><a href="section-2-overview.html#cb125-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-66-1.png" width="672" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li>If instead of points we want to add text, we can use the geom_text() or geom_label() geometries.</li>
+</ol>
+<p>However, note that the following code</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="section-2-overview.html#cb126-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total)) <span class="op">+</span></span>
+<span id="cb126-2"><a href="section-2-overview.html#cb126-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p>will give us the error message: <code>Error: geom_label requires the following missing aesthetics: label</code></p>
+<p>Why is this?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. We need to map a character to each point through the label argument in aes.</li>
+<li><input type="checkbox" disabled="" />
+B. We need to let geom_label know what character to use in the plot.</li>
+<li><input type="checkbox" disabled="" />
+C. The geom_label geometry does not require x-axis and y-axis values.</li>
+<li><input type="checkbox" disabled="" />
+D. geom_label is not a ggplot2 command.</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>You can also add labels to the points on a plot.</li>
+</ol>
+<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="section-2-overview.html#cb127-1" aria-hidden="true"></a><span class="co">## edit the next line to add the label</span></span>
+<span id="cb127-2"><a href="section-2-overview.html#cb127-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Now let’s change the color of the labels to blue. How can we do this?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. By adding a column called blue to murders</li>
+<li><input type="checkbox" disabled="" />
+B. By mapping the colors through aes because each label needs a different color</li>
+<li><input type="checkbox" disabled="" />
+C. By using the color argument in ggplot</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. By using the color argument in geom_label because we want all colors to be blue so we do not need to map colors</li>
+</ul>
+<ol start="10" style="list-style-type: decimal">
+<li>Now let’s go ahead and make the labels blue. We previously wrote this code to add labels to our plot:</li>
+</ol>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="section-2-overview.html#cb128-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label=</span> abb)) <span class="op">+</span></span>
+<span id="cb128-2"><a href="section-2-overview.html#cb128-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p>Now we will edit this code.</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="section-2-overview.html#cb129-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total,<span class="dt">label=</span> abb)) <span class="op">+</span></span>
+<span id="cb129-2"><a href="section-2-overview.html#cb129-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>(<span class="dt">color=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<ol start="11" style="list-style-type: decimal">
+<li>Now suppose we want to use color to represent the different regions.</li>
+</ol>
+<p>So the states from the West will be one color, states from the Northeast another, and so on.</p>
+<p>In this case, which of the following is most appropriate:</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Adding a column called color to murders with the color we want to use</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. Mapping the colors through the color argument of aes because each label needs a different color</li>
+<li><input type="checkbox" disabled="" />
+C. Using the color argument in ggplot</li>
+<li><input type="checkbox" disabled="" />
+D. Using the color argument in geom_label because we want all colors to be blue so we do not need to map colors</li>
+</ul>
+<ol start="12" style="list-style-type: decimal">
+<li>We previously used this code to make a plot using the state abbreviations as labels:</li>
+</ol>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="section-2-overview.html#cb130-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb)) <span class="op">+</span></span>
+<span id="cb130-2"><a href="section-2-overview.html#cb130-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p>We are now going to add color to represent the region.</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="section-2-overview.html#cb131-1" aria-hidden="true"></a><span class="co">## edit this code</span></span>
+<span id="cb131-2"><a href="section-2-overview.html#cb131-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb, <span class="dt">color=</span>region)) <span class="op">+</span></span>
+<span id="cb131-3"><a href="section-2-overview.html#cb131-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<ol start="13" style="list-style-type: decimal">
+<li>Now we are going to change the axes to log scales to account for the fact that the population distribution is skewed.</li>
+</ol>
+<p>Let’s start by defining an object <code>p</code> that holds the plot we have made up to now:</p>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="section-2-overview.html#cb132-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb, <span class="dt">color =</span> region)) <span class="op">+</span></span>
+<span id="cb132-2"><a href="section-2-overview.html#cb132-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span></code></pre></div>
+<p>To change the x-axis to a log scale we learned about the <code>scale_x_log10()</code> function. We can change the axis by adding this layer to the object <code>p</code> to change the scale and render the plot using the following code:</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="section-2-overview.html#cb133-1" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_log10</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="section-2-overview.html#cb134-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb, <span class="dt">color =</span> region)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_label</span>()</span>
+<span id="cb134-2"><a href="section-2-overview.html#cb134-2" aria-hidden="true"></a><span class="co">## add layers to p here</span></span>
+<span id="cb134-3"><a href="section-2-overview.html#cb134-3" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_log10</span>() <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_log10</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-75-1.png" width="672" /></p>
+<ol start="14" style="list-style-type: decimal">
+<li>In the previous exercises we created a plot using the following code:</li>
+</ol>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="section-2-overview.html#cb135-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb135-2"><a href="section-2-overview.html#cb135-2" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb135-3"><a href="section-2-overview.html#cb135-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb135-4"><a href="section-2-overview.html#cb135-4" aria-hidden="true"></a><span class="kw">data</span>(murders)</span>
+<span id="cb135-5"><a href="section-2-overview.html#cb135-5" aria-hidden="true"></a>p&lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb, <span class="dt">color =</span> region)) <span class="op">+</span></span>
+<span id="cb135-6"><a href="section-2-overview.html#cb135-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_label</span>()</span>
+<span id="cb135-7"><a href="section-2-overview.html#cb135-7" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_log10</span>() <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_log10</span>()</span></code></pre></div>
+<p>We are now going to add a title to this plot. We will do this by adding yet another layer, this time with the function <code>ggtitle</code>.</p>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="section-2-overview.html#cb136-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(population, total, <span class="dt">label =</span> abb, <span class="dt">color =</span> region)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_label</span>()</span>
+<span id="cb136-2"><a href="section-2-overview.html#cb136-2" aria-hidden="true"></a><span class="co"># add a layer to add title to the next line</span></span>
+<span id="cb136-3"><a href="section-2-overview.html#cb136-3" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_log10</span>() <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_log10</span>() <span class="op">+</span><span class="st"> </span><span class="kw">ggtitle</span>(<span class="st">&quot;Gun murder data&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<ol start="15" style="list-style-type: decimal">
+<li>We are going to shift our focus from the <code>murders</code> dataset to explore the <code>heights</code> dataset.</li>
+</ol>
+<p>We use the <code>geom_histogram</code> function to make a histogram of the heights in the <code>heights</code> data frame. When reading the documentation for this function we see that it requires just one mapping, the values to be used for the histogram.</p>
+<p>What is the variable containing the heights in inches in the <code>heights</code> data frame?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. sex</li>
+<li><input type="checkbox" disabled="" />
+B. heights</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. height</li>
+<li><input type="checkbox" disabled="" />
+D. heights$height</li>
+</ul>
+<ol start="16" style="list-style-type: decimal">
+<li>We are now going to make a histogram of the heights so we will load the heights dataset.</li>
+</ol>
+<p>The following code has been pre-run for you to load the heights dataset:</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="section-2-overview.html#cb137-1" aria-hidden="true"></a><span class="kw">library</span>(dplyr)</span>
+<span id="cb137-2"><a href="section-2-overview.html#cb137-2" aria-hidden="true"></a><span class="kw">library</span>(ggplot2)</span>
+<span id="cb137-3"><a href="section-2-overview.html#cb137-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb137-4"><a href="section-2-overview.html#cb137-4" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="section-2-overview.html#cb138-1" aria-hidden="true"></a><span class="co"># define p here</span></span>
+<span id="cb138-2"><a href="section-2-overview.html#cb138-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height))</span></code></pre></div>
+<ol start="17" style="list-style-type: decimal">
+<li>Now we are ready to add a layer to actually make the histogram.</li>
+</ol>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="section-2-overview.html#cb139-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb139-2"><a href="section-2-overview.html#cb139-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height))</span>
+<span id="cb139-3"><a href="section-2-overview.html#cb139-3" aria-hidden="true"></a><span class="co">## add a layer to p</span></span>
+<span id="cb139-4"><a href="section-2-overview.html#cb139-4" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<ol start="18" style="list-style-type: decimal">
+<li>Note that when we run the code from the previous exercise we get the following warning:</li>
+</ol>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="section-2-overview.html#cb141-1" aria-hidden="true"></a><span class="kw">stat_bin</span>() using bins =<span class="st"> </span><span class="fl">30.</span> Pick better value with binwidth.</span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="section-2-overview.html#cb142-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb142-2"><a href="section-2-overview.html#cb142-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height))</span>
+<span id="cb142-3"><a href="section-2-overview.html#cb142-3" aria-hidden="true"></a><span class="co">## add the geom_histogram layer but with the requested argument</span></span>
+<span id="cb142-4"><a href="section-2-overview.html#cb142-4" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<ol start="19" style="list-style-type: decimal">
+<li>Now instead of a histogram we are going to make a smooth density plot.</li>
+</ol>
+<p>In this case, we will not make an object <code>p</code>. Instead we will render the plot using a single line of code. In the previous exercise, we could have created a histogram using one line of code like this:</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="section-2-overview.html#cb143-1" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb143-2"><a href="section-2-overview.html#cb143-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height)) <span class="op">+</span></span>
+<span id="cb143-3"><a href="section-2-overview.html#cb143-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="section-2-overview.html#cb144-1" aria-hidden="true"></a><span class="co">## add the correct layer using +</span></span>
+<span id="cb144-2"><a href="section-2-overview.html#cb144-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb144-3"><a href="section-2-overview.html#cb144-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
+<ol start="20" style="list-style-type: decimal">
+<li>Now we are going to make density plots for males and females separately.</li>
+</ol>
+<p>We can do this using the <code>group</code> argument within the <code>aes</code> mapping. Because each point will be assigned to a different density depending on a variable from the dataset, we need to map within <code>aes</code>.</p>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="section-2-overview.html#cb145-1" aria-hidden="true"></a><span class="co">## add the group argument then a layer with +</span></span>
+<span id="cb145-2"><a href="section-2-overview.html#cb145-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb145-3"><a href="section-2-overview.html#cb145-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height, <span class="dt">group =</span> sex)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<ol start="21" style="list-style-type: decimal">
+<li>In the previous exercise we made the two density plots, one for each sex, using:</li>
+</ol>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="section-2-overview.html#cb146-1" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb146-2"><a href="section-2-overview.html#cb146-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height, <span class="dt">group =</span> sex)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb146-3"><a href="section-2-overview.html#cb146-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p>We can also assign groups through the <code>color</code> or <code>fill</code> argument. For example, if you type <code>color = sex</code> ggplot knows you want a different color for each sex. So two densities must be drawn. You can therefore skip the <code>group = sex</code> mapping. Using <code>color</code> has the added benefit that it uses color to distinguish the groups. Change the density plots from the previous exercise to add color.</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="section-2-overview.html#cb147-1" aria-hidden="true"></a><span class="co">## edit the next line to use color instead of group then add a density layer</span></span>
+<span id="cb147-2"><a href="section-2-overview.html#cb147-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb147-3"><a href="section-2-overview.html#cb147-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height, <span class="dt">color =</span> sex)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<ol start="22" style="list-style-type: decimal">
+<li>We can also assign groups using the <code>fill</code> argument.</li>
+</ol>
+<p>When using the <code>geom_density</code> geometry, <code>color</code> creates a colored line for the smooth density plot while <code>fill</code> colors in the area under the curve.</p>
+<p>We can see what this looks like by running the following code:</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="section-2-overview.html#cb148-1" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb148-2"><a href="section-2-overview.html#cb148-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb148-3"><a href="section-2-overview.html#cb148-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
+<p>However, here the second density is drawn over the other. We can change this by using something called <em>alpha blending</em>.</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="section-2-overview.html#cb149-1" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb149-2"><a href="section-2-overview.html#cb149-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(height, <span class="dt">fill =</span> sex)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb149-3"><a href="section-2-overview.html#cb149-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">alpha=</span><span class="fl">0.2</span>) </span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-1-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-3-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

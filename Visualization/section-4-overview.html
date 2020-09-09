@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Section 4 Overview | Data Science Visualization</title>
+  <meta name="description" content="5 Section 4 Overview | Data Science Visualization" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Section 4 Overview | Data Science Visualization" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Section 4 Overview | Data Science Visualization" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-3-overview.html"/>
+<link rel="next" href="section-5-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-introduction-to-data-visualization-and-distributions"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Introduction to Data Visualization and Distributions</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-introduction-to-ggplot2"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Introduction to ggplot2</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-summarizing-with-dplyr"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Summarizing with dplyr</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-gapminder"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Gapminder</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-data-visualization-principles"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Data Visualization Principles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-data-visualization"><i class="fa fa-check"></i><b>2.1</b> Introduction to Data Visualization</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#introduction-to-distributions"><i class="fa fa-check"></i><b>2.2</b> Introduction to Distributions</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#data-types"><i class="fa fa-check"></i><b>2.3</b> Data Types</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---data-types"><i class="fa fa-check"></i><b>2.4</b> Assessment - Data Types</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#describe-heights-to-et"><i class="fa fa-check"></i><b>2.5</b> Describe Heights to ET</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#smooth-density-plots"><i class="fa fa-check"></i><b>2.6</b> Smooth Density Plots</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---distributions"><i class="fa fa-check"></i><b>2.7</b> Assessment - Distributions</a></li>
+<li class="chapter" data-level="2.8" data-path="section-1-overview.html"><a href="section-1-overview.html#normal-distribution"><i class="fa fa-check"></i><b>2.8</b> Normal Distribution</a></li>
+<li class="chapter" data-level="2.9" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---normal-distribution"><i class="fa fa-check"></i><b>2.9</b> Assessment - Normal Distribution</a></li>
+<li class="chapter" data-level="2.10" data-path="section-1-overview.html"><a href="section-1-overview.html#quantile-quantile-plots"><i class="fa fa-check"></i><b>2.10</b> Quantile-Quantile Plots</a></li>
+<li class="chapter" data-level="2.11" data-path="section-1-overview.html"><a href="section-1-overview.html#percentiles"><i class="fa fa-check"></i><b>2.11</b> Percentiles</a></li>
+<li class="chapter" data-level="2.12" data-path="section-1-overview.html"><a href="section-1-overview.html#boxplots"><i class="fa fa-check"></i><b>2.12</b> Boxplots</a></li>
+<li class="chapter" data-level="2.13" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---quantiles-percentiles-and-boxplots"><i class="fa fa-check"></i><b>2.13</b> Assessment - Quantiles, percentiles, and boxplots</a></li>
+<li class="chapter" data-level="2.14" data-path="section-1-overview.html"><a href="section-1-overview.html#distribution-of-female-heights"><i class="fa fa-check"></i><b>2.14</b> Distribution of Female Heights</a></li>
+<li class="chapter" data-level="2.15" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---robust-summaries-with-outliers"><i class="fa fa-check"></i><b>2.15</b> Assessment - Robust Summaries With Outliers</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#ggplot"><i class="fa fa-check"></i><b>3.1</b> ggplot</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#graph-components"><i class="fa fa-check"></i><b>3.2</b> Graph Components</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#creating-a-new-plot"><i class="fa fa-check"></i><b>3.3</b> Creating a New Plot</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#layers"><i class="fa fa-check"></i><b>3.4</b> Layers</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#tinkering"><i class="fa fa-check"></i><b>3.5</b> Tinkering</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#scales-labels-and-colors"><i class="fa fa-check"></i><b>3.6</b> Scales, Labels, and Colors</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#add-on-packages"><i class="fa fa-check"></i><b>3.7</b> Add-on Packages</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#other-examples"><i class="fa fa-check"></i><b>3.8</b> Other Examples</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---ggplot2"><i class="fa fa-check"></i><b>3.9</b> Assessment - ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#dplyr"><i class="fa fa-check"></i><b>4.1</b> dplyr</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#the-dot-placeholder"><i class="fa fa-check"></i><b>4.2</b> The Dot Placeholder</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#group-by"><i class="fa fa-check"></i><b>4.3</b> Group By</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#sorting-data-tables"><i class="fa fa-check"></i><b>4.4</b> Sorting Data Tables</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---summarizing-with-dplyr"><i class="fa fa-check"></i><b>4.5</b> Assessment - Summarizing with dplyr</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#case-study-trends-in-world-health-and-economics"><i class="fa fa-check"></i><b>5.1</b> Case Study: Trends in World Health and Economics</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#gapminder-dataset"><i class="fa fa-check"></i><b>5.2</b> Gapminder Dataset</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#life-expectancy-and-fertility-rates"><i class="fa fa-check"></i><b>5.3</b> Life Expectancy and Fertility Rates</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#faceting"><i class="fa fa-check"></i><b>5.4</b> Faceting</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#time-series-plots"><i class="fa fa-check"></i><b>5.5</b> Time Series Plots</a></li>
+<li class="chapter" data-level="5.6" data-path="section-4-overview.html"><a href="section-4-overview.html#transformations"><i class="fa fa-check"></i><b>5.6</b> Transformations</a></li>
+<li class="chapter" data-level="5.7" data-path="section-4-overview.html"><a href="section-4-overview.html#stratify-and-boxplot"><i class="fa fa-check"></i><b>5.7</b> Stratify and Boxplot</a></li>
+<li class="chapter" data-level="5.8" data-path="section-4-overview.html"><a href="section-4-overview.html#comparing-distributions"><i class="fa fa-check"></i><b>5.8</b> Comparing Distributions</a></li>
+<li class="chapter" data-level="5.9" data-path="section-4-overview.html"><a href="section-4-overview.html#density-plots"><i class="fa fa-check"></i><b>5.9</b> Density Plots</a></li>
+<li class="chapter" data-level="5.10" data-path="section-4-overview.html"><a href="section-4-overview.html#ecological-fallacy"><i class="fa fa-check"></i><b>5.10</b> Ecological Fallacy</a></li>
+<li class="chapter" data-level="5.11" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---exploring-the-gapminder-dataset"><i class="fa fa-check"></i><b>5.11</b> Assessment - Exploring the Gapminder Dataset</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#introduction-to-data-visualization-principles"><i class="fa fa-check"></i><b>6.1</b> Introduction to Data Visualization Principles</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-data-using-visual-cues"><i class="fa fa-check"></i><b>6.2</b> Encoding Data Using Visual Cues</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#know-when-to-include-zero"><i class="fa fa-check"></i><b>6.3</b> Know When to Include Zero</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#do-not-distort-quantities"><i class="fa fa-check"></i><b>6.4</b> Do Not Distort Quantities</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#order-by-a-meaningful-value"><i class="fa fa-check"></i><b>6.5</b> Order by a Meaningful Value</a></li>
+<li class="chapter" data-level="6.6" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-1"><i class="fa fa-check"></i><b>6.6</b> Assessment - Data Visualization Principles, Part 1</a></li>
+<li class="chapter" data-level="6.7" data-path="section-5-overview.html"><a href="section-5-overview.html#show-the-data"><i class="fa fa-check"></i><b>6.7</b> Show the Data</a></li>
+<li class="chapter" data-level="6.8" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-use-common-axes"><i class="fa fa-check"></i><b>6.8</b> Ease Comparisons: Use Common Axes</a></li>
+<li class="chapter" data-level="6.9" data-path="section-5-overview.html"><a href="section-5-overview.html#consider-transformations"><i class="fa fa-check"></i><b>6.9</b> Consider Transformations</a></li>
+<li class="chapter" data-level="6.10" data-path="section-5-overview.html"><a href="section-5-overview.html#ease-comparisons-compared-visual-cues-should-be-adjacent"><i class="fa fa-check"></i><b>6.10</b> Ease Comparisons: Compared Visual Cues Should Be Adjacent</a></li>
+<li class="chapter" data-level="6.11" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-2"><i class="fa fa-check"></i><b>6.11</b> Assessment - Data Visualization Principles, Part 2</a></li>
+<li class="chapter" data-level="6.12" data-path="section-5-overview.html"><a href="section-5-overview.html#slope-charts"><i class="fa fa-check"></i><b>6.12</b> Slope Charts</a></li>
+<li class="chapter" data-level="6.13" data-path="section-5-overview.html"><a href="section-5-overview.html#encoding-a-third-variable"><i class="fa fa-check"></i><b>6.13</b> Encoding a Third Variable</a></li>
+<li class="chapter" data-level="6.14" data-path="section-5-overview.html"><a href="section-5-overview.html#case-study-vaccines"><i class="fa fa-check"></i><b>6.14</b> Case Study: Vaccines</a></li>
+<li class="chapter" data-level="6.15" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-pseudo-and-gratuitous-3d-plots"><i class="fa fa-check"></i><b>6.15</b> Avoid Pseudo and Gratuitous 3D Plots</a></li>
+<li class="chapter" data-level="6.16" data-path="section-5-overview.html"><a href="section-5-overview.html#avoid-too-many-significant-digits"><i class="fa fa-check"></i><b>6.16</b> Avoid Too Many Significant Digits</a></li>
+<li class="chapter" data-level="6.17" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---data-visualization-principles-part-3"><i class="fa fa-check"></i><b>6.17</b> Assessment - Data Visualization Principles, Part 3</a></li>
+<li class="chapter" data-level="6.18" data-path="section-5-overview.html"><a href="section-5-overview.html#titanic-survival-exercises"><i class="fa fa-check"></i><b>6.18</b> Titanic Survival Exercises</a></li>
+<li class="chapter" data-level="6.19" data-path="section-5-overview.html"><a href="section-5-overview.html#properties-of-stars-exercises"><i class="fa fa-check"></i><b>6.19</b> Properties of Stars Exercises</a></li>
+<li class="chapter" data-level="6.20" data-path="section-5-overview.html"><a href="section-5-overview.html#climate-change-exercises"><i class="fa fa-check"></i><b>6.20</b> Climate Change Exercises</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Visualization</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-4-overview" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Section 4 Overview</h1>
+<p>In Section 4, you will look at a case study involving data from the <a href="https://www.gapminder.org">Gapminder Foundation</a> about trends in world health and economics.</p>
+<p>After completing Section 4, you will:</p>
+<ul>
+<li>understand how Hans Rosling and the Gapminder Foundation use effective data visualization to convey data-based trends.</li>
+<li>be able to apply the ggplot2 techniques from the previous section to answer questions using data.</li>
+<li>understand how fixed scales across plots can ease comparisons.</li>
+<li>be able to modify graphs to improve data visualization.</li>
+</ul>
+<div id="case-study-trends-in-world-health-and-economics" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Case Study: Trends in World Health and Economics</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#case-study-new-insights-on-poverty">here</a></p>
+<p><strong>More about Gapminder</strong></p>
+<p>The original Gapminder TED talks are available and we encourage you to watch them.</p>
+<ul>
+<li><a href="https://www.ted.com/talks/hans_rosling_the_best_stats_you_ve_ever_seen?language=en">The Best Stats You’ve Ever Seen</a></li>
+<li><a href="https://www.ted.com/talks/hans_rosling_new_insights_on_poverty?language=en">New Insights on Poverty</a></li>
+</ul>
+<p>You can also find more information and raw data (in addition to what we analyze in class) <a href="https://www.gapminder.org/">at</a>.</p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Data visualization can be used to dispel common myths and educate the public and contradict sensationalist or outdated claims and stories.</li>
+<li>We will use real data to answer the following questions about world health and economics:
+<ul>
+<li>Is it still fair to consider the world as divided into the West and the developing world?</li>
+<li>Has income inequality across countries worsened over the last 40 years?</li>
+</ul></li>
+</ul>
+</div>
+<div id="gapminder-dataset" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Gapminder Dataset</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#case-study-new-insights-on-poverty">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>A selection of world health and economics statistics from the Gapminder project can be found in the <strong>dslabs</strong> package as <code>data(gapminder)</code>.</li>
+<li>Most people have misconceptions about world health and economics, which can be addressed by considering real data.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="section-4-overview.html#cb216-1" aria-hidden="true"></a><span class="co"># load and inspect gapminder data</span></span>
+<span id="cb216-2"><a href="section-4-overview.html#cb216-2" aria-hidden="true"></a><span class="kw">data</span>(gapminder)</span>
+<span id="cb216-3"><a href="section-4-overview.html#cb216-3" aria-hidden="true"></a><span class="kw">head</span>(gapminder)</span></code></pre></div>
+<pre><code>##               country year infant_mortality life_expectancy fertility population      gdp continent          region
+## 1             Albania 1960            115.4            62.9      6.19    1636054       NA    Europe Southern Europe
+## 2             Algeria 1960            148.2            47.5      7.65   11124892 1.38e+10    Africa Northern Africa
+## 3              Angola 1960            208.0            36.0      7.32    5270844       NA    Africa   Middle Africa
+## 4 Antigua and Barbuda 1960               NA            63.0      4.43      54681       NA  Americas       Caribbean
+## 5           Argentina 1960             59.9            65.4      3.11   20619075 1.08e+11  Americas   South America
+## 6             Armenia 1960               NA            66.9      4.55    1867396       NA      Asia    Western Asia</code></pre>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="section-4-overview.html#cb218-1" aria-hidden="true"></a><span class="co"># compare infant mortality in Sri Lanka and Turkey</span></span>
+<span id="cb218-2"><a href="section-4-overview.html#cb218-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb218-3"><a href="section-4-overview.html#cb218-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2015</span> <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Sri Lanka&quot;</span>, <span class="st">&quot;Turkey&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb218-4"><a href="section-4-overview.html#cb218-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(country, infant_mortality)</span></code></pre></div>
+<pre><code>##     country infant_mortality
+## 1 Sri Lanka              8.4
+## 2    Turkey             11.6</code></pre>
+</div>
+<div id="life-expectancy-and-fertility-rates" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Life Expectancy and Fertility Rates</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#scatterplots">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>A prevalent worldview is that the world is divided into two groups of countries:
+<ul>
+<li>Western world: high life expectancy, low fertility rate</li>
+<li>Developing world: lower life expectancy, higher fertility rate</li>
+</ul></li>
+<li>Gapminder data can be used to evaluate the validity of this view.</li>
+<li>A scatterplot of life expectancy versus fertility rate in 1962 suggests that this viewpoint was grounded in reality 50 years ago. Is it still the case today?</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="section-4-overview.html#cb220-1" aria-hidden="true"></a><span class="co"># basic scatterplot of life expectancy versus fertility</span></span>
+<span id="cb220-2"><a href="section-4-overview.html#cb220-2" aria-hidden="true"></a><span class="kw">ds_theme_set</span>()    <span class="co"># set plot theme</span></span>
+<span id="cb220-3"><a href="section-4-overview.html#cb220-3" aria-hidden="true"></a><span class="kw">filter</span>(gapminder, year <span class="op">==</span><span class="st"> </span><span class="dv">1962</span>) <span class="op">%&gt;%</span></span>
+<span id="cb220-4"><a href="section-4-overview.html#cb220-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy)) <span class="op">+</span></span>
+<span id="cb220-5"><a href="section-4-overview.html#cb220-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-109-1.png" width="672" /></p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="section-4-overview.html#cb221-1" aria-hidden="true"></a><span class="co"># add color as continent</span></span>
+<span id="cb221-2"><a href="section-4-overview.html#cb221-2" aria-hidden="true"></a><span class="kw">filter</span>(gapminder, year <span class="op">==</span><span class="st"> </span><span class="dv">1962</span>) <span class="op">%&gt;%</span></span>
+<span id="cb221-3"><a href="section-4-overview.html#cb221-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy, <span class="dt">color =</span> continent)) <span class="op">+</span></span>
+<span id="cb221-4"><a href="section-4-overview.html#cb221-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-109-2.png" width="672" /></p>
+</div>
+<div id="faceting" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Faceting</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#faceting">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Faceting makes multiple side-by-side plots stratified by some variable. This is a way to ease comparisons.</li>
+<li>The <code>facet_grid</code> function allows faceting by up to two variables, with rows faceted by one variable and columns faceted by the other variable. To facet by only one variable, use the dot operator as the other variable.</li>
+<li>The <code>facet_wrap</code> function facets by one variable and automatically wraps the series of plots so they have readable dimensions.</li>
+<li>Faceting keeps the axes fixed across all plots, easing comparisons between plots.</li>
+<li>The data suggest that the developing versus Western world view no longer makes sense in 2012.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="section-4-overview.html#cb222-1" aria-hidden="true"></a><span class="co"># facet by continent and year</span></span>
+<span id="cb222-2"><a href="section-4-overview.html#cb222-2" aria-hidden="true"></a><span class="kw">filter</span>(gapminder, year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1962</span>, <span class="dv">2012</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb222-3"><a href="section-4-overview.html#cb222-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy, <span class="dt">col =</span> continent)) <span class="op">+</span></span>
+<span id="cb222-4"><a href="section-4-overview.html#cb222-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb222-5"><a href="section-4-overview.html#cb222-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(continent <span class="op">~</span><span class="st"> </span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="section-4-overview.html#cb223-1" aria-hidden="true"></a><span class="co"># facet by year only</span></span>
+<span id="cb223-2"><a href="section-4-overview.html#cb223-2" aria-hidden="true"></a><span class="kw">filter</span>(gapminder, year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1962</span>, <span class="dv">2012</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb223-3"><a href="section-4-overview.html#cb223-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy, <span class="dt">col =</span> continent)) <span class="op">+</span></span>
+<span id="cb223-4"><a href="section-4-overview.html#cb223-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb223-5"><a href="section-4-overview.html#cb223-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-110-2.png" width="672" /></p>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="section-4-overview.html#cb224-1" aria-hidden="true"></a><span class="co"># facet by year, plots wrapped onto multiple rows</span></span>
+<span id="cb224-2"><a href="section-4-overview.html#cb224-2" aria-hidden="true"></a>years &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1962</span>, <span class="dv">1980</span>, <span class="dv">1990</span>, <span class="dv">2000</span>, <span class="dv">2012</span>)</span>
+<span id="cb224-3"><a href="section-4-overview.html#cb224-3" aria-hidden="true"></a>continents &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Europe&quot;</span>, <span class="st">&quot;Asia&quot;</span>)</span>
+<span id="cb224-4"><a href="section-4-overview.html#cb224-4" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb224-5"><a href="section-4-overview.html#cb224-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span>years <span class="op">&amp;</span><span class="st"> </span>continent <span class="op">%in%</span><span class="st"> </span>continents) <span class="op">%&gt;%</span></span>
+<span id="cb224-6"><a href="section-4-overview.html#cb224-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy, <span class="dt">col =</span> continent)) <span class="op">+</span></span>
+<span id="cb224-7"><a href="section-4-overview.html#cb224-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb224-8"><a href="section-4-overview.html#cb224-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_wrap</span>(<span class="op">~</span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-110-3.png" width="672" /></p>
+</div>
+<div id="time-series-plots" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Time Series Plots</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#time-series-plots">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Time series plots have time on the x-axis and a variable of interest on the y-axis.</li>
+<li>The <code>geom_line</code> geometry connects adjacent data points to form a continuous line. A line plot is appropriate when points are regularly spaced, densely packed and from a single data series.</li>
+<li>You can plot multiple lines on the same graph. Remember to group or color by a variable so that the lines are plotted independently.</li>
+<li>Labeling is usually preferred over legends. However, legends are easier to make and appear by default. Add a label with <code>geom_text</code>, specifying the coordinates where the label should appear on the graph.</li>
+</ul>
+<p><em>Code: Single time series</em></p>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="section-4-overview.html#cb225-1" aria-hidden="true"></a><span class="co"># scatterplot of US fertility by year</span></span>
+<span id="cb225-2"><a href="section-4-overview.html#cb225-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb225-3"><a href="section-4-overview.html#cb225-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(country <span class="op">==</span><span class="st"> &quot;United States&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb225-4"><a href="section-4-overview.html#cb225-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility)) <span class="op">+</span></span>
+<span id="cb225-5"><a href="section-4-overview.html#cb225-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_point).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-111-1.png" width="672" /></p>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="section-4-overview.html#cb227-1" aria-hidden="true"></a><span class="co"># line plot of US fertility by year</span></span>
+<span id="cb227-2"><a href="section-4-overview.html#cb227-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb227-3"><a href="section-4-overview.html#cb227-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(country <span class="op">==</span><span class="st"> &quot;United States&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb227-4"><a href="section-4-overview.html#cb227-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility)) <span class="op">+</span></span>
+<span id="cb227-5"><a href="section-4-overview.html#cb227-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 1 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-111-2.png" width="672" /></p>
+<p><em>Code: Multiple time series</em></p>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="section-4-overview.html#cb229-1" aria-hidden="true"></a><span class="co"># line plot fertility time series for two countries- only one line (incorrect)</span></span>
+<span id="cb229-2"><a href="section-4-overview.html#cb229-2" aria-hidden="true"></a>countries &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;South Korea&quot;</span>, <span class="st">&quot;Germany&quot;</span>)</span>
+<span id="cb229-3"><a href="section-4-overview.html#cb229-3" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(country <span class="op">%in%</span><span class="st"> </span>countries) <span class="op">%&gt;%</span></span>
+<span id="cb229-4"><a href="section-4-overview.html#cb229-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility)) <span class="op">+</span></span>
+<span id="cb229-5"><a href="section-4-overview.html#cb229-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-1.png" width="672" /></p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="section-4-overview.html#cb231-1" aria-hidden="true"></a><span class="co"># line plot fertility time series for two countries - one line per country</span></span>
+<span id="cb231-2"><a href="section-4-overview.html#cb231-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(country <span class="op">%in%</span><span class="st"> </span>countries) <span class="op">%&gt;%</span></span>
+<span id="cb231-3"><a href="section-4-overview.html#cb231-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility, <span class="dt">group =</span> country)) <span class="op">+</span></span>
+<span id="cb231-4"><a href="section-4-overview.html#cb231-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-2.png" width="672" /></p>
+<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="section-4-overview.html#cb233-1" aria-hidden="true"></a><span class="co"># fertility time series for two countries - lines colored by country</span></span>
+<span id="cb233-2"><a href="section-4-overview.html#cb233-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(country <span class="op">%in%</span><span class="st"> </span>countries) <span class="op">%&gt;%</span></span>
+<span id="cb233-3"><a href="section-4-overview.html#cb233-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility, <span class="dt">col =</span> country)) <span class="op">+</span></span>
+<span id="cb233-4"><a href="section-4-overview.html#cb233-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<pre><code>## Warning: Removed 2 row(s) containing missing values (geom_path).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-112-3.png" width="672" /></p>
+<p><em>Code: Adding text labels to a plot</em></p>
+<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="section-4-overview.html#cb235-1" aria-hidden="true"></a><span class="co"># life expectancy time series - lines colored by country and labeled, no legend</span></span>
+<span id="cb235-2"><a href="section-4-overview.html#cb235-2" aria-hidden="true"></a>labels &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">country =</span> countries, <span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1975</span>, <span class="dv">1965</span>), <span class="dt">y =</span> <span class="kw">c</span>(<span class="dv">60</span>, <span class="dv">72</span>))</span>
+<span id="cb235-3"><a href="section-4-overview.html#cb235-3" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(country <span class="op">%in%</span><span class="st"> </span>countries) <span class="op">%&gt;%</span></span>
+<span id="cb235-4"><a href="section-4-overview.html#cb235-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, life_expectancy, <span class="dt">col =</span> country)) <span class="op">+</span></span>
+<span id="cb235-5"><a href="section-4-overview.html#cb235-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb235-6"><a href="section-4-overview.html#cb235-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">data =</span> labels, <span class="kw">aes</span>(x, y, <span class="dt">label =</span> country), <span class="dt">size =</span> <span class="dv">5</span>) <span class="op">+</span></span>
+<span id="cb235-7"><a href="section-4-overview.html#cb235-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-113-1.png" width="672" /></p>
+</div>
+<div id="transformations" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Transformations</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#data-transformations">here</a> and <a href="https://rafalab.github.io/dsbook/gapminder.html#visualizing-multimodal-distributions">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>We use GDP data to compute income in US dollars per day, adjusted for inflation.</li>
+<li>Log transformations convert multiplicative changes into additive changes.</li>
+<li>Common transformations are the log base 2 transformation and the log base 10 transformation. The choice of base depends on the range of the data. The natural log is not recommended for visualization because it is difficult to interpret.</li>
+<li>The mode of a distribution is the value with the highest frequency. The mode of a normal distribution is the average. A distribution can have multiple local modes.</li>
+<li>There are two ways to use log transformations in plots: transform the data before plotting or transform the axes of the plot. Log scales have the advantage of showing the original values as axis labels, while log transformed values ease interpretation of intermediate values between labels.</li>
+<li>Scale the x-axis using <code>scale_x_continuous</code> or <code>scale_x_log10</code> layers in ggplot2. Similar functions exist for the y-axis.</li>
+<li>In 1970, income distribution is bimodal, consistent with the dichotomous Western versus developing worldview.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="section-4-overview.html#cb236-1" aria-hidden="true"></a><span class="co"># add dollars per day variable</span></span>
+<span id="cb236-2"><a href="section-4-overview.html#cb236-2" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb236-3"><a href="section-4-overview.html#cb236-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>)</span>
+<span id="cb236-4"><a href="section-4-overview.html#cb236-4" aria-hidden="true"></a></span>
+<span id="cb236-5"><a href="section-4-overview.html#cb236-5" aria-hidden="true"></a><span class="co"># histogram of dollars per day</span></span>
+<span id="cb236-6"><a href="section-4-overview.html#cb236-6" aria-hidden="true"></a>past_year &lt;-<span class="st"> </span><span class="dv">1970</span></span>
+<span id="cb236-7"><a href="section-4-overview.html#cb236-7" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb236-8"><a href="section-4-overview.html#cb236-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb236-9"><a href="section-4-overview.html#cb236-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb236-10"><a href="section-4-overview.html#cb236-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-114-1.png" width="672" /></p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="section-4-overview.html#cb237-1" aria-hidden="true"></a><span class="co"># repeat histogram with log2 scaled data</span></span>
+<span id="cb237-2"><a href="section-4-overview.html#cb237-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb237-3"><a href="section-4-overview.html#cb237-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb237-4"><a href="section-4-overview.html#cb237-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">log2</span>(dollars_per_day))) <span class="op">+</span></span>
+<span id="cb237-5"><a href="section-4-overview.html#cb237-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-114-2.png" width="672" /></p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="section-4-overview.html#cb238-1" aria-hidden="true"></a><span class="co"># repeat histogram with log2 scaled x-axis</span></span>
+<span id="cb238-2"><a href="section-4-overview.html#cb238-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb238-3"><a href="section-4-overview.html#cb238-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb238-4"><a href="section-4-overview.html#cb238-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb238-5"><a href="section-4-overview.html#cb238-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb238-6"><a href="section-4-overview.html#cb238-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-114-3.png" width="672" /></p>
+</div>
+<div id="stratify-and-boxplot" class="section level2" number="5.7">
+<h2><span class="header-section-number">5.7</span> Stratify and Boxplot</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#comparing-multiple-distributions-with-boxplots-and-ridge-plots">here</a>. Note that many boxplots from the video are instead dot plots in the textbook and that a different boxplot is constructed in the textbook. Also read that section to see an example of grouping factors with the <code>case_when</code> function.</p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Make boxplots stratified by a categorical variable using the <code>geom_boxplot</code> geometry.</li>
+<li>Rotate axis labels by changing the theme through <code>element_text</code>. You can change the angle and justification of the text labels.</li>
+<li>Consider ordering your factors by a meaningful value with the <code>reorder</code> function, which changes the order of factor levels based on a related numeric vector. This is a way to ease comparisons.</li>
+<li>Show the data by adding data points to the boxplot with a <code>geom_point</code> layer. This adds information beyond the five-number summary to your plot, but too many data points it can obfuscate your message.</li>
+</ul>
+<p><em>Code: Boxplot of GDP by region</em></p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="section-4-overview.html#cb239-1" aria-hidden="true"></a><span class="co"># add dollars per day variable</span></span>
+<span id="cb239-2"><a href="section-4-overview.html#cb239-2" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb239-3"><a href="section-4-overview.html#cb239-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>)</span>
+<span id="cb239-4"><a href="section-4-overview.html#cb239-4" aria-hidden="true"></a></span>
+<span id="cb239-5"><a href="section-4-overview.html#cb239-5" aria-hidden="true"></a><span class="co"># number of regions</span></span>
+<span id="cb239-6"><a href="section-4-overview.html#cb239-6" aria-hidden="true"></a><span class="kw">length</span>(<span class="kw">levels</span>(gapminder<span class="op">$</span>region))</span></code></pre></div>
+<pre><code>## [1] 22</code></pre>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="section-4-overview.html#cb241-1" aria-hidden="true"></a><span class="co"># boxplot of GDP by region in 1970</span></span>
+<span id="cb241-2"><a href="section-4-overview.html#cb241-2" aria-hidden="true"></a>past_year &lt;-<span class="st"> </span><span class="dv">1970</span></span>
+<span id="cb241-3"><a href="section-4-overview.html#cb241-3" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb241-4"><a href="section-4-overview.html#cb241-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb241-5"><a href="section-4-overview.html#cb241-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(region, dollars_per_day))</span>
+<span id="cb241-6"><a href="section-4-overview.html#cb241-6" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-115-1.png" width="672" /></p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="section-4-overview.html#cb242-1" aria-hidden="true"></a><span class="co"># rotate names on x-axis</span></span>
+<span id="cb242-2"><a href="section-4-overview.html#cb242-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb242-3"><a href="section-4-overview.html#cb242-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-115-2.png" width="672" /></p>
+<p><em>Code: The reorder function</em></p>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="section-4-overview.html#cb243-1" aria-hidden="true"></a><span class="co"># by default, factor order is alphabetical</span></span>
+<span id="cb243-2"><a href="section-4-overview.html#cb243-2" aria-hidden="true"></a>fac &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">c</span>(<span class="st">&quot;Asia&quot;</span>, <span class="st">&quot;Asia&quot;</span>, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;West&quot;</span>))</span>
+<span id="cb243-3"><a href="section-4-overview.html#cb243-3" aria-hidden="true"></a><span class="kw">levels</span>(fac)</span></code></pre></div>
+<pre><code>## [1] &quot;Asia&quot; &quot;West&quot;</code></pre>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="section-4-overview.html#cb245-1" aria-hidden="true"></a><span class="co"># reorder factor by the category means</span></span>
+<span id="cb245-2"><a href="section-4-overview.html#cb245-2" aria-hidden="true"></a>value &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">6</span>, <span class="dv">4</span>)</span>
+<span id="cb245-3"><a href="section-4-overview.html#cb245-3" aria-hidden="true"></a>fac &lt;-<span class="st"> </span><span class="kw">reorder</span>(fac, value, <span class="dt">FUN =</span> mean)</span>
+<span id="cb245-4"><a href="section-4-overview.html#cb245-4" aria-hidden="true"></a><span class="kw">levels</span>(fac)</span></code></pre></div>
+<pre><code>## [1] &quot;West&quot; &quot;Asia&quot;</code></pre>
+<p><em>Code: Enhanced boxplot ordered by median income, scaled, and showing data</em></p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="section-4-overview.html#cb247-1" aria-hidden="true"></a><span class="co"># reorder by median income and color by continent</span></span>
+<span id="cb247-2"><a href="section-4-overview.html#cb247-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb247-3"><a href="section-4-overview.html#cb247-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb247-4"><a href="section-4-overview.html#cb247-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">region =</span> <span class="kw">reorder</span>(region, dollars_per_day, <span class="dt">FUN =</span> median)) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># reorder</span></span>
+<span id="cb247-5"><a href="section-4-overview.html#cb247-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(region, dollars_per_day, <span class="dt">fill =</span> continent)) <span class="op">+</span><span class="st">    </span><span class="co"># color by continent</span></span>
+<span id="cb247-6"><a href="section-4-overview.html#cb247-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
+<span id="cb247-7"><a href="section-4-overview.html#cb247-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb247-8"><a href="section-4-overview.html#cb247-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb247-9"><a href="section-4-overview.html#cb247-9" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-117-1.png" width="672" /></p>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="section-4-overview.html#cb248-1" aria-hidden="true"></a><span class="co"># log2 scale y-axis</span></span>
+<span id="cb248-2"><a href="section-4-overview.html#cb248-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-117-2.png" width="672" /></p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="section-4-overview.html#cb249-1" aria-hidden="true"></a><span class="co"># add data points</span></span>
+<span id="cb249-2"><a href="section-4-overview.html#cb249-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-117-3.png" width="672" /></p>
+</div>
+<div id="comparing-distributions" class="section level2" number="5.8">
+<h2><span class="header-section-number">5.8</span> Comparing Distributions</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#example-1970-versus-2010-income-distributions">here</a>. Note that the boxplots are slightly different.</p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Use <code>intersect</code> to find the overlap between two vectors.</li>
+<li>To make boxplots where grouped variables are adjacaent, color the boxplot by a factor instead of faceting by that factor. This is a way to ease comparisons.</li>
+<li>The data suggest that the income gap between rich and poor countries has narrowed, not expanded.</li>
+</ul>
+<p><em>Code: Histogram of income in West versus developing world, 1970 and 2010</em></p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="section-4-overview.html#cb250-1" aria-hidden="true"></a><span class="co"># add dollars per day variable and define past year</span></span>
+<span id="cb250-2"><a href="section-4-overview.html#cb250-2" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb250-3"><a href="section-4-overview.html#cb250-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>)</span>
+<span id="cb250-4"><a href="section-4-overview.html#cb250-4" aria-hidden="true"></a>past_year &lt;-<span class="st"> </span><span class="dv">1970</span></span>
+<span id="cb250-5"><a href="section-4-overview.html#cb250-5" aria-hidden="true"></a></span>
+<span id="cb250-6"><a href="section-4-overview.html#cb250-6" aria-hidden="true"></a><span class="co"># define Western countries</span></span>
+<span id="cb250-7"><a href="section-4-overview.html#cb250-7" aria-hidden="true"></a>west &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Western Europe&quot;</span>, <span class="st">&quot;Northern Europe&quot;</span>, <span class="st">&quot;Southern Europe&quot;</span>, <span class="st">&quot;Northern America&quot;</span>, <span class="st">&quot;Australia and New Zealand&quot;</span>)</span>
+<span id="cb250-8"><a href="section-4-overview.html#cb250-8" aria-hidden="true"></a></span>
+<span id="cb250-9"><a href="section-4-overview.html#cb250-9" aria-hidden="true"></a><span class="co"># facet by West vs devloping</span></span>
+<span id="cb250-10"><a href="section-4-overview.html#cb250-10" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb250-11"><a href="section-4-overview.html#cb250-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb250-12"><a href="section-4-overview.html#cb250-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ifelse</span>(region <span class="op">%in%</span><span class="st"> </span>west, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;Developing&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb250-13"><a href="section-4-overview.html#cb250-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb250-14"><a href="section-4-overview.html#cb250-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb250-15"><a href="section-4-overview.html#cb250-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb250-16"><a href="section-4-overview.html#cb250-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>group)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-118-1.png" width="672" /></p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="section-4-overview.html#cb251-1" aria-hidden="true"></a><span class="co"># facet by West/developing and year</span></span>
+<span id="cb251-2"><a href="section-4-overview.html#cb251-2" aria-hidden="true"></a>present_year &lt;-<span class="st"> </span><span class="dv">2010</span></span>
+<span id="cb251-3"><a href="section-4-overview.html#cb251-3" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb251-4"><a href="section-4-overview.html#cb251-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(past_year, present_year) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp)) <span class="op">%&gt;%</span></span>
+<span id="cb251-5"><a href="section-4-overview.html#cb251-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ifelse</span>(region <span class="op">%in%</span><span class="st"> </span>west, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;Developing&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb251-6"><a href="section-4-overview.html#cb251-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb251-7"><a href="section-4-overview.html#cb251-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb251-8"><a href="section-4-overview.html#cb251-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb251-9"><a href="section-4-overview.html#cb251-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>group)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-118-2.png" width="672" /></p>
+<p><em>Code: Income distribution of West versus developing world, only countries with data</em></p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="section-4-overview.html#cb252-1" aria-hidden="true"></a><span class="co"># define countries that have data available in both years</span></span>
+<span id="cb252-2"><a href="section-4-overview.html#cb252-2" aria-hidden="true"></a>country_list_<span class="dv">1</span> &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb252-3"><a href="section-4-overview.html#cb252-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(dollars_per_day)) <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>country</span>
+<span id="cb252-4"><a href="section-4-overview.html#cb252-4" aria-hidden="true"></a>country_list_<span class="dv">2</span> &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb252-5"><a href="section-4-overview.html#cb252-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>present_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(dollars_per_day)) <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>country</span>
+<span id="cb252-6"><a href="section-4-overview.html#cb252-6" aria-hidden="true"></a>country_list &lt;-<span class="st"> </span><span class="kw">intersect</span>(country_list_<span class="dv">1</span>, country_list_<span class="dv">2</span>)</span>
+<span id="cb252-7"><a href="section-4-overview.html#cb252-7" aria-hidden="true"></a></span>
+<span id="cb252-8"><a href="section-4-overview.html#cb252-8" aria-hidden="true"></a><span class="co"># make histogram including only countries with data available in both years</span></span>
+<span id="cb252-9"><a href="section-4-overview.html#cb252-9" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb252-10"><a href="section-4-overview.html#cb252-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(past_year, present_year) <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># keep only selected countries</span></span>
+<span id="cb252-11"><a href="section-4-overview.html#cb252-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ifelse</span>(region <span class="op">%in%</span><span class="st"> </span>west, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;Developing&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb252-12"><a href="section-4-overview.html#cb252-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb252-13"><a href="section-4-overview.html#cb252-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
+<span id="cb252-14"><a href="section-4-overview.html#cb252-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb252-15"><a href="section-4-overview.html#cb252-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>group)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-119-1.png" width="672" /></p>
+<p><em>Code: Boxplots of income in West versus developing world, 1970 and 2010</em></p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="section-4-overview.html#cb253-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb253-2"><a href="section-4-overview.html#cb253-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(past_year, present_year) <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span></span>
+<span id="cb253-3"><a href="section-4-overview.html#cb253-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">region =</span> <span class="kw">reorder</span>(region, dollars_per_day, <span class="dt">FUN =</span> median)) <span class="op">%&gt;%</span></span>
+<span id="cb253-4"><a href="section-4-overview.html#cb253-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
+<span id="cb253-5"><a href="section-4-overview.html#cb253-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>)) <span class="op">+</span></span>
+<span id="cb253-6"><a href="section-4-overview.html#cb253-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>)</span>
+<span id="cb253-7"><a href="section-4-overview.html#cb253-7" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(region, dollars_per_day, <span class="dt">fill =</span> continent)) <span class="op">+</span></span>
+<span id="cb253-8"><a href="section-4-overview.html#cb253-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-120-1.png" width="672" /></p>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="section-4-overview.html#cb254-1" aria-hidden="true"></a><span class="co"># arrange matching boxplots next to each other, colored by year</span></span>
+<span id="cb254-2"><a href="section-4-overview.html#cb254-2" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="kw">aes</span>(region, dollars_per_day, <span class="dt">fill =</span> <span class="kw">factor</span>(year)))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-120-2.png" width="672" /></p>
+</div>
+<div id="density-plots" class="section level2" number="5.9">
+<h2><span class="header-section-number">5.9</span> Density Plots</h2>
+<p>The textbook for this section is available:</p>
+<ul>
+<li><a href="https://rafalab.github.io/dsbook/gapminder.html#example-1970-versus-2010-income-distributions">1970 versus 2010 income distributions</a></li>
+<li><a href="https://rafalab.github.io/dsbook/gapminder.html#accessing-computed-variables">Accessing computed variables</a></li>
+<li><a href="https://rafalab.github.io/dsbook/gapminder.html#weighted-densities">Weighted densities</a></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Change the y-axis of density plots to variable counts using <code>..count..</code> as the y argument.</li>
+<li>The <code>case_when</code> function defines a factor whose levels are defined by a variety of logical operations to group data.</li>
+<li>Plot stacked density plots using <code>position="stack"</code>.</li>
+<li>Define a weight <code>aesthetic</code> mapping to change the relative weights of density plots - for example, this allows weighting of plots by population rather than number of countries.</li>
+</ul>
+<p><em>Code: Faceted smooth density plots</em></p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="section-4-overview.html#cb255-1" aria-hidden="true"></a><span class="co"># smooth density plots - area under each curve adds to 1</span></span>
+<span id="cb255-2"><a href="section-4-overview.html#cb255-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb255-3"><a href="section-4-overview.html#cb255-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span></span>
+<span id="cb255-4"><a href="section-4-overview.html#cb255-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ifelse</span>(region <span class="op">%in%</span><span class="st"> </span>west, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;Developing&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(group) <span class="op">%&gt;%</span></span>
+<span id="cb255-5"><a href="section-4-overview.html#cb255-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">n =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span>knitr<span class="op">::</span><span class="kw">kable</span>()</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">group</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Developing</td>
+<td align="right">87</td>
+</tr>
+<tr class="even">
+<td align="left">West</td>
+<td align="right">21</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="section-4-overview.html#cb257-1" aria-hidden="true"></a><span class="co"># smooth density plots - variable counts on y-axis</span></span>
+<span id="cb257-2"><a href="section-4-overview.html#cb257-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb257-3"><a href="section-4-overview.html#cb257-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span>past_year <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span></span>
+<span id="cb257-4"><a href="section-4-overview.html#cb257-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">ifelse</span>(region <span class="op">%in%</span><span class="st"> </span>west, <span class="st">&quot;West&quot;</span>, <span class="st">&quot;Developing&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb257-5"><a href="section-4-overview.html#cb257-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> group)) <span class="op">+</span></span>
+<span id="cb257-6"><a href="section-4-overview.html#cb257-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>)</span>
+<span id="cb257-7"><a href="section-4-overview.html#cb257-7" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">bw =</span> <span class="fl">0.75</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
+<p><em>Code: Add new region groups with case_when</em></p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="section-4-overview.html#cb258-1" aria-hidden="true"></a><span class="co"># add group as a factor, grouping regions</span></span>
+<span id="cb258-2"><a href="section-4-overview.html#cb258-2" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb258-3"><a href="section-4-overview.html#cb258-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">case_when</span>(</span>
+<span id="cb258-4"><a href="section-4-overview.html#cb258-4" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span>west <span class="op">~</span><span class="st"> &quot;West&quot;</span>,</span>
+<span id="cb258-5"><a href="section-4-overview.html#cb258-5" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Eastern Asia&quot;</span>, <span class="st">&quot;South-Eastern Asia&quot;</span>) <span class="op">~</span><span class="st"> &quot;East Asia&quot;</span>,</span>
+<span id="cb258-6"><a href="section-4-overview.html#cb258-6" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Caribbean&quot;</span>, <span class="st">&quot;Central America&quot;</span>, <span class="st">&quot;South America&quot;</span>) <span class="op">~</span><span class="st"> &quot;Latin America&quot;</span>,</span>
+<span id="cb258-7"><a href="section-4-overview.html#cb258-7" aria-hidden="true"></a>        .<span class="op">$</span>continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>.<span class="op">$</span>region <span class="op">!=</span><span class="st"> &quot;Northern Africa&quot;</span> <span class="op">~</span><span class="st"> &quot;Sub-Saharan Africa&quot;</span>,</span>
+<span id="cb258-8"><a href="section-4-overview.html#cb258-8" aria-hidden="true"></a>        <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> &quot;Others&quot;</span>))</span>
+<span id="cb258-9"><a href="section-4-overview.html#cb258-9" aria-hidden="true"></a></span>
+<span id="cb258-10"><a href="section-4-overview.html#cb258-10" aria-hidden="true"></a><span class="co"># reorder factor levels</span></span>
+<span id="cb258-11"><a href="section-4-overview.html#cb258-11" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb258-12"><a href="section-4-overview.html#cb258-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">factor</span>(group, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Others&quot;</span>, <span class="st">&quot;Latin America&quot;</span>, <span class="st">&quot;East Asia&quot;</span>, <span class="st">&quot;Sub-Saharan Africa&quot;</span>, <span class="st">&quot;West&quot;</span>)))</span></code></pre></div>
+<p><em>Code: Stacked density plot</em></p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="section-4-overview.html#cb259-1" aria-hidden="true"></a><span class="co"># note you must redefine p with the new gapminder object first</span></span>
+<span id="cb259-2"><a href="section-4-overview.html#cb259-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb259-3"><a href="section-4-overview.html#cb259-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(past_year, present_year) <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span></span>
+<span id="cb259-4"><a href="section-4-overview.html#cb259-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, <span class="dt">fill =</span> group)) <span class="op">+</span></span>
+<span id="cb259-5"><a href="section-4-overview.html#cb259-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>)</span>
+<span id="cb259-6"><a href="section-4-overview.html#cb259-6" aria-hidden="true"></a></span>
+<span id="cb259-7"><a href="section-4-overview.html#cb259-7" aria-hidden="true"></a><span class="co"># stacked density plot</span></span>
+<span id="cb259-8"><a href="section-4-overview.html#cb259-8" aria-hidden="true"></a>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">bw =</span> <span class="fl">0.75</span>, <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="op">+</span></span>
+<span id="cb259-9"><a href="section-4-overview.html#cb259-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-123-1.png" width="672" /></p>
+<p><em>Code: Weighted stacked density plot</em></p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="section-4-overview.html#cb260-1" aria-hidden="true"></a><span class="co"># weighted stacked density plot</span></span>
+<span id="cb260-2"><a href="section-4-overview.html#cb260-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb260-3"><a href="section-4-overview.html#cb260-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(past_year, present_year) <span class="op">&amp;</span><span class="st"> </span>country <span class="op">%in%</span><span class="st"> </span>country_list) <span class="op">%&gt;%</span></span>
+<span id="cb260-4"><a href="section-4-overview.html#cb260-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(year) <span class="op">%&gt;%</span></span>
+<span id="cb260-5"><a href="section-4-overview.html#cb260-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">weight =</span> population<span class="op">/</span><span class="kw">sum</span>(population<span class="op">*</span><span class="dv">2</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb260-6"><a href="section-4-overview.html#cb260-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb260-7"><a href="section-4-overview.html#cb260-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, <span class="dt">fill =</span> group, <span class="dt">weight =</span> weight)) <span class="op">+</span></span>
+<span id="cb260-8"><a href="section-4-overview.html#cb260-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
+<span id="cb260-9"><a href="section-4-overview.html#cb260-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">bw =</span> <span class="fl">0.75</span>, <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-124-1.png" width="672" /></p>
+</div>
+<div id="ecological-fallacy" class="section level2" number="5.10">
+<h2><span class="header-section-number">5.10</span> Ecological Fallacy</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/gapminder.html#the-ecological-fallacy-and-importance-of-showing-the-data">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The <em>breaks</em> argument allows us to set the location of the axis labels and tick marks.</li>
+<li>The <em>logistic</em> or <em>logit transformation</em> is defined as <span class="math inline">\(f(p) = log \frac{p}{1-p}\)</span>, or the log of odds. This scale is useful for highlighting differences near 0 or near 1 and converts fold changes into constant increases.</li>
+<li>The <em>ecological fallacy</em> is assuming that conclusions made from the average of a group apply to all members of that group.</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="section-4-overview.html#cb261-1" aria-hidden="true"></a><span class="co"># add additional cases</span></span>
+<span id="cb261-2"><a href="section-4-overview.html#cb261-2" aria-hidden="true"></a>gapminder &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb261-3"><a href="section-4-overview.html#cb261-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">group =</span> <span class="kw">case_when</span>(</span>
+<span id="cb261-4"><a href="section-4-overview.html#cb261-4" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span>west <span class="op">~</span><span class="st"> &quot;The West&quot;</span>,</span>
+<span id="cb261-5"><a href="section-4-overview.html#cb261-5" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> &quot;Northern Africa&quot;</span> <span class="op">~</span><span class="st"> &quot;Northern Africa&quot;</span>,</span>
+<span id="cb261-6"><a href="section-4-overview.html#cb261-6" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Eastern Asia&quot;</span>, <span class="st">&quot;South-Eastern Asia&quot;</span>) <span class="op">~</span><span class="st"> &quot;East Asia&quot;</span>,</span>
+<span id="cb261-7"><a href="section-4-overview.html#cb261-7" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">==</span><span class="st"> &quot;Southern Asia&quot;</span> <span class="op">~</span><span class="st"> &quot;Southern Asia&quot;</span>,</span>
+<span id="cb261-8"><a href="section-4-overview.html#cb261-8" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Central America&quot;</span>, <span class="st">&quot;South America&quot;</span>, <span class="st">&quot;Caribbean&quot;</span>) <span class="op">~</span><span class="st"> &quot;Latin America&quot;</span>,</span>
+<span id="cb261-9"><a href="section-4-overview.html#cb261-9" aria-hidden="true"></a>        .<span class="op">$</span>continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>.<span class="op">$</span>region <span class="op">!=</span><span class="st"> &quot;Northern Africa&quot;</span> <span class="op">~</span><span class="st"> &quot;Sub-Saharan Africa&quot;</span>,</span>
+<span id="cb261-10"><a href="section-4-overview.html#cb261-10" aria-hidden="true"></a>        .<span class="op">$</span>region <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Melanesia&quot;</span>, <span class="st">&quot;Micronesia&quot;</span>, <span class="st">&quot;Polynesia&quot;</span>) <span class="op">~</span><span class="st"> &quot;Pacific Islands&quot;</span>))</span>
+<span id="cb261-11"><a href="section-4-overview.html#cb261-11" aria-hidden="true"></a></span>
+<span id="cb261-12"><a href="section-4-overview.html#cb261-12" aria-hidden="true"></a><span class="co"># define a data frame with group average income and average infant survival rate</span></span>
+<span id="cb261-13"><a href="section-4-overview.html#cb261-13" aria-hidden="true"></a>surv_income &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb261-14"><a href="section-4-overview.html#cb261-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(year <span class="op">%in%</span><span class="st"> </span>present_year <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(infant_mortality) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(group)) <span class="op">%&gt;%</span></span>
+<span id="cb261-15"><a href="section-4-overview.html#cb261-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(group) <span class="op">%&gt;%</span></span>
+<span id="cb261-16"><a href="section-4-overview.html#cb261-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">income =</span> <span class="kw">sum</span>(gdp)<span class="op">/</span><span class="kw">sum</span>(population)<span class="op">/</span><span class="dv">365</span>,</span>
+<span id="cb261-17"><a href="section-4-overview.html#cb261-17" aria-hidden="true"></a>                        <span class="dt">infant_survival_rate =</span> <span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">sum</span>(infant_mortality<span class="op">/</span><span class="dv">1000</span><span class="op">*</span>population)<span class="op">/</span><span class="kw">sum</span>(population))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="section-4-overview.html#cb263-1" aria-hidden="true"></a>surv_income <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(income)</span></code></pre></div>
+<pre><code>## # A tibble: 7 x 3
+##   group              income infant_survival_rate
+##   &lt;chr&gt;               &lt;dbl&gt;                &lt;dbl&gt;
+## 1 Sub-Saharan Africa   1.76                0.936
+## 2 Southern Asia        2.07                0.952
+## 3 Pacific Islands      2.70                0.956
+## 4 Northern Africa      4.94                0.970
+## 5 Latin America       13.2                 0.983
+## 6 East Asia           13.4                 0.985
+## 7 The West            77.1                 0.995</code></pre>
+<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="section-4-overview.html#cb265-1" aria-hidden="true"></a><span class="co"># plot infant survival versus income, with transformed axes</span></span>
+<span id="cb265-2"><a href="section-4-overview.html#cb265-2" aria-hidden="true"></a>surv_income <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(income, infant_survival_rate, <span class="dt">label =</span> group, <span class="dt">color =</span> group)) <span class="op">+</span></span>
+<span id="cb265-3"><a href="section-4-overview.html#cb265-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="dv">150</span>)) <span class="op">+</span></span>
+<span id="cb265-4"><a href="section-4-overview.html#cb265-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;logit&quot;</span>, <span class="dt">limit =</span> <span class="kw">c</span>(<span class="fl">0.875</span>, <span class="fl">.9981</span>),</span>
+<span id="cb265-5"><a href="section-4-overview.html#cb265-5" aria-hidden="true"></a>                                       <span class="dt">breaks =</span> <span class="kw">c</span>(.<span class="dv">85</span>, <span class="fl">.90</span>, <span class="fl">.95</span>, <span class="fl">.99</span>, <span class="fl">.995</span>, <span class="fl">.998</span>)) <span class="op">+</span></span>
+<span id="cb265-6"><a href="section-4-overview.html#cb265-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_label</span>(<span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">show.legend =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-125-1.png" width="672" /></p>
+</div>
+<div id="assessment---exploring-the-gapminder-dataset" class="section level2" number="5.11">
+<h2><span class="header-section-number">5.11</span> Assessment - Exploring the Gapminder Dataset</h2>
+<ol style="list-style-type: decimal">
+<li>The <a href="https://www.gapminder.org">Gapminder Foundation</a> is a non-profit organization based in Sweden that promotes global development through the use of statistics that can help reduce misconceptions about global development.</li>
+</ol>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="section-4-overview.html#cb266-1" aria-hidden="true"></a><span class="co">## fill out the missing parts in filter and aes</span></span>
+<span id="cb266-2"><a href="section-4-overview.html#cb266-2" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2012</span> <span class="op">&amp;</span><span class="st"> </span>continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb266-3"><a href="section-4-overview.html#cb266-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy)) <span class="op">+</span></span>
+<span id="cb266-4"><a href="section-4-overview.html#cb266-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Note that there is quite a bit of variability in life expectancy and fertility with some African countries having very high life expectancies.</li>
+</ol>
+<p>There also appear to be three clusters in the plot.</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="section-4-overview.html#cb267-1" aria-hidden="true"></a>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2012</span> <span class="op">&amp;</span><span class="st"> </span>continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb267-2"><a href="section-4-overview.html#cb267-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(fertility, life_expectancy, <span class="dt">color =</span> region)) <span class="op">+</span></span>
+<span id="cb267-3"><a href="section-4-overview.html#cb267-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-127-1.png" width="672" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>While many of the countries in the high life expectancy/low fertility cluster are from Northern Africa, three countries are not.</li>
+</ol>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="section-4-overview.html#cb268-1" aria-hidden="true"></a>df &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">==</span><span class="st"> </span><span class="dv">2012</span> <span class="op">&amp;</span><span class="st"> </span>continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span>, fertility <span class="op">&lt;=</span><span class="st"> </span><span class="dv">3</span> <span class="op">&amp;</span><span class="st"> </span>life_expectancy <span class="op">&gt;=</span><span class="st"> </span><span class="dv">70</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(country, region)</span>
+<span id="cb268-2"><a href="section-4-overview.html#cb268-2" aria-hidden="true"></a>df</span></code></pre></div>
+<pre><code>##      country          region
+## 1    Algeria Northern Africa
+## 2 Cape Verde  Western Africa
+## 3      Egypt Northern Africa
+## 4      Libya Northern Africa
+## 5  Mauritius  Eastern Africa
+## 6    Morocco Northern Africa
+## 7 Seychelles  Eastern Africa
+## 8    Tunisia Northern Africa</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>The Vietnam War lasted from 1955 to 1975.</li>
+</ol>
+<p>Do the data support war having a negative effect on life expectancy? We will create a time series plot that covers the period from 1960 to 2010 of life expectancy for Vietnam and the United States, using color to distinguish the two countries. In this start we start the analysis by generating a table.</p>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="section-4-overview.html#cb270-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">&gt;=</span><span class="st"> </span><span class="dv">1960</span> <span class="op">&amp;</span><span class="st"> </span>year <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span>country<span class="op">%in%</span><span class="kw">c</span>(<span class="st">&quot;Vietnam&quot;</span>, <span class="st">&quot;United States&quot;</span>))</span>
+<span id="cb270-2"><a href="section-4-overview.html#cb270-2" aria-hidden="true"></a>tab</span></code></pre></div>
+<pre><code>##          country year infant_mortality life_expectancy fertility population      gdp continent             region dollars_per_day     group
+## 1  United States 1960             25.9            69.9      3.67   1.86e+08 2.48e+12  Americas   Northern America          36.486  The West
+## 2        Vietnam 1960             75.6            58.5      6.35   3.27e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 3  United States 1961             25.4            70.3      3.63   1.89e+08 2.54e+12  Americas   Northern America          36.753  The West
+## 4        Vietnam 1961             72.6            59.2      6.39   3.37e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 5  United States 1962             24.9            70.2      3.48   1.92e+08 2.69e+12  Americas   Northern America          38.429  The West
+## 6        Vietnam 1962             69.9            59.8      6.43   3.47e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 7  United States 1963             24.4            70.0      3.35   1.95e+08 2.81e+12  Americas   Northern America          39.572  The West
+## 8        Vietnam 1963             67.3            60.4      6.45   3.57e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 9  United States 1964             23.8            70.3      3.22   1.97e+08 2.97e+12  Americas   Northern America          41.333  The West
+## 10       Vietnam 1964             61.7            61.0      6.46   3.68e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 11 United States 1965             23.3            70.4      2.93   1.99e+08 3.16e+12  Americas   Northern America          43.455  The West
+## 12       Vietnam 1965             60.7            61.3      6.48   3.79e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 13 United States 1966             22.7            70.4      2.71   2.02e+08 3.37e+12  Americas   Northern America          45.768  The West
+## 14       Vietnam 1966             59.9            61.4      6.49   3.90e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 15 United States 1967             22.0            70.8      2.56   2.04e+08 3.45e+12  Americas   Northern America          46.433  The West
+## 16       Vietnam 1967             59.0            61.1      6.49   4.01e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 17 United States 1968             21.3            70.4      2.47   2.06e+08 3.62e+12  Americas   Northern America          48.195  The West
+## 18       Vietnam 1968             58.2            60.5      6.49   4.12e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 19 United States 1969             20.6            70.7      2.46   2.08e+08 3.73e+12  Americas   Northern America          49.231  The West
+## 20       Vietnam 1969             57.3            59.6      6.49   4.23e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 21 United States 1970             19.9            70.9      2.46   2.09e+08 3.74e+12  Americas   Northern America          48.885  The West
+## 22       Vietnam 1970             56.4            58.8      6.47   4.34e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 23 United States 1971             19.1            71.2      2.27   2.11e+08 3.87e+12  Americas   Northern America          50.128  The West
+## 24       Vietnam 1971             55.5            58.2      6.42   4.45e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 25 United States 1972             18.3            71.3      2.01   2.13e+08 4.08e+12  Americas   Northern America          52.434  The West
+## 26       Vietnam 1972             54.7            58.0      6.35   4.55e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 27 United States 1973             17.5            71.5      1.87   2.15e+08 4.32e+12  Americas   Northern America          55.050  The West
+## 28       Vietnam 1973             53.8            58.4      6.25   4.66e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 29 United States 1974             16.7            72.1      1.83   2.17e+08 4.30e+12  Americas   Northern America          54.282  The West
+## 30       Vietnam 1974             52.8            59.2      6.13   4.77e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 31 United States 1975             16.0            72.7      1.77   2.19e+08 4.29e+12  Americas   Northern America          53.690  The West
+## 32       Vietnam 1975             51.8            60.5      5.97   4.87e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 33 United States 1976             15.2            73.0      1.74   2.21e+08 4.52e+12  Americas   Northern America          56.080  The West
+## 34       Vietnam 1976             50.9            62.1      5.80   4.98e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 35 United States 1977             14.5            73.4      1.78   2.23e+08 4.73e+12  Americas   Northern America          58.129  The West
+## 36       Vietnam 1977             49.8            63.6      5.61   5.09e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 37 United States 1978             13.8            73.6      1.75   2.25e+08 5.00e+12  Americas   Northern America          60.814  The West
+## 38       Vietnam 1978             48.8            64.9      5.42   5.20e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 39 United States 1979             13.2            74.0      1.80   2.27e+08 5.16e+12  Americas   Northern America          62.129  The West
+## 40       Vietnam 1979             47.8            65.8      5.23   5.32e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 41 United States 1980             12.6            73.9      1.82   2.30e+08 5.14e+12  Americas   Northern America          61.363  The West
+## 42       Vietnam 1980             46.8            66.5      5.05   5.44e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 43 United States 1981             12.1            74.4      1.81   2.32e+08 5.27e+12  Americas   Northern America          62.331  The West
+## 44       Vietnam 1981             45.8            66.9      4.87   5.56e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 45 United States 1982             11.7            74.7      1.81   2.34e+08 5.17e+12  Americas   Northern America          60.526  The West
+## 46       Vietnam 1982             44.8            67.1      4.69   5.69e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 47 United States 1983             11.2            74.7      1.78   2.36e+08 5.40e+12  Americas   Northern America          62.668  The West
+## 48       Vietnam 1983             43.9            67.3      4.52   5.83e+07       NA      Asia South-Eastern Asia              NA East Asia
+## 49 United States 1984             10.9            74.8      1.79   2.38e+08 5.79e+12  Americas   Northern America          66.545  The West
+## 50       Vietnam 1984             43.0            67.5      4.36   5.97e+07 1.15e+10      Asia South-Eastern Asia           0.526 East Asia
+## 51 United States 1985             10.6            74.8      1.84   2.41e+08 6.03e+12  Americas   Northern America          68.622  The West
+## 52       Vietnam 1985             42.0            67.8      4.21   6.10e+07 1.19e+10      Asia South-Eastern Asia           0.534 East Asia
+## 53 United States 1986             10.4            74.9      1.84   2.43e+08 6.24e+12  Americas   Northern America          70.291  The West
+## 54       Vietnam 1986             41.0            68.1      4.06   6.25e+07 1.22e+10      Asia South-Eastern Asia           0.536 East Asia
+## 55 United States 1987             10.2            75.0      1.87   2.45e+08 6.43e+12  Americas   Northern America          71.810  The West
+## 56       Vietnam 1987             40.0            68.4      3.93   6.39e+07 1.27e+10      Asia South-Eastern Asia           0.543 East Asia
+## 57 United States 1988             10.0            75.0      1.92   2.48e+08 6.70e+12  Americas   Northern America          74.018  The West
+## 58       Vietnam 1988             38.9            68.7      3.81   6.53e+07 1.33e+10      Asia South-Eastern Asia           0.558 East Asia
+## 59 United States 1989              9.7            75.1      2.00   2.50e+08 6.94e+12  Americas   Northern America          75.899  The West
+## 60       Vietnam 1989             37.7            69.0      3.68   6.68e+07 1.43e+10      Asia South-Eastern Asia           0.586 East Asia
+## 61 United States 1990              9.4            75.4      2.07   2.53e+08 7.06e+12  Americas   Northern America          76.541  The West
+## 62       Vietnam 1990             36.6            69.3      3.56   6.82e+07 1.50e+10      Asia South-Eastern Asia           0.603 East Asia
+## 63 United States 1991              9.1            75.5      2.06   2.55e+08 7.05e+12  Americas   Northern America          75.588  The West
+## 64       Vietnam 1991             35.4            69.6      3.42   6.97e+07 1.59e+10      Asia South-Eastern Asia           0.626 East Asia
+## 65 United States 1992              8.8            75.8      2.04   2.58e+08 7.29e+12  Americas   Northern America          77.392  The West
+## 66       Vietnam 1992             34.3            69.8      3.26   7.11e+07 1.73e+10      Asia South-Eastern Asia           0.666 East Asia
+## 67 United States 1993              8.5            75.7      2.02   2.61e+08 7.49e+12  Americas   Northern America          78.814  The West
+## 68       Vietnam 1993             33.1            70.1      3.07   7.26e+07 1.87e+10      Asia South-Eastern Asia           0.706 East Asia
+## 69 United States 1994              8.2            75.8      2.00   2.63e+08 7.80e+12  Americas   Northern America          81.193  The West
+## 70       Vietnam 1994             32.0            70.3      2.88   7.39e+07 2.03e+10      Asia South-Eastern Asia           0.754 East Asia
+## 71 United States 1995              8.0            75.9      1.98   2.66e+08 8.00e+12  Americas   Northern America          82.332  The West
+## 72       Vietnam 1995             30.9            70.6      2.68   7.52e+07 2.23e+10      Asia South-Eastern Asia           0.812 East Asia
+## 73 United States 1996              7.7            76.3      1.98   2.69e+08 8.30e+12  Americas   Northern America          84.432  The West
+## 74       Vietnam 1996             29.9            70.9      2.48   7.64e+07 2.44e+10      Asia South-Eastern Asia           0.874 East Asia
+## 75 United States 1997              7.5            76.6      1.97   2.73e+08 8.68e+12  Americas   Northern America          87.137  The West
+## 76       Vietnam 1997             28.9            71.1      2.31   7.75e+07 2.63e+10      Asia South-Eastern Asia           0.932 East Asia
+## 77 United States 1998              7.3            76.8      2.00   2.76e+08 9.06e+12  Americas   Northern America          89.830  The West
+## 78       Vietnam 1998             27.9            71.5      2.17   7.85e+07 2.79e+10      Asia South-Eastern Asia           0.973 East Asia
+## 79 United States 1999              7.2            76.9      2.01   2.80e+08 9.50e+12  Americas   Northern America          93.066  The West
+## 80       Vietnam 1999             27.0            71.7      2.06   7.94e+07 2.92e+10      Asia South-Eastern Asia           1.007 East Asia
+## 81 United States 2000              7.1            76.9      2.05   2.83e+08 9.90e+12  Americas   Northern America          95.866  The West
+## 82       Vietnam 2000             26.1            72.0      1.98   8.03e+07 3.12e+10      Asia South-Eastern Asia           1.064 East Asia
+## 83 United States 2001              7.0            76.9      2.03   2.86e+08 1.00e+13  Americas   Northern America          95.930  The West
+## 84       Vietnam 2001             25.3            72.2      1.94   8.11e+07 3.33e+10      Asia South-Eastern Asia           1.125 East Asia
+## 85 United States 2002              6.9            77.1      2.02   2.88e+08 1.02e+13  Americas   Northern America          96.778  The West
+## 86       Vietnam 2002             24.6            72.5      1.92   8.19e+07 3.57e+10      Asia South-Eastern Asia           1.193 East Asia
+## 87 United States 2003              6.8            77.3      2.05   2.91e+08 1.05e+13  Americas   Northern America          98.384  The West
+## 88       Vietnam 2003             23.9            72.8      1.91   8.27e+07 3.83e+10      Asia South-Eastern Asia           1.269 East Asia
+## 89 United States 2004              6.9            77.6      2.06   2.94e+08 1.08e+13  Americas   Northern America         100.932  The West
+## 90       Vietnam 2004             23.2            73.0      1.90   8.34e+07 4.13e+10      Asia South-Eastern Asia           1.356 East Asia
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 12 rows ]</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Now that you have created the data table in Exercise 4, it is time to plot the data for the two countries.</li>
+</ol>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="section-4-overview.html#cb272-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year,life_expectancy,<span class="dt">color=</span>country)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
+<span id="cb272-2"><a href="section-4-overview.html#cb272-2" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Cambodia was also involved in this conflict and, after the war, Pol Pot and his communist Khmer Rouge took control and ruled Cambodia from 1975 to 1979.</li>
+</ol>
+<p>He is considered one of the most brutal dictators in history. Do the data support this claim?</p>
+<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="section-4-overview.html#cb273-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">&gt;=</span><span class="st"> </span><span class="dv">1960</span> <span class="op">&amp;</span><span class="st"> </span>year <span class="op">&lt;=</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span>country <span class="op">==</span><span class="st"> &quot;Cambodia&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, life_expectancy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span>
+<span id="cb273-2"><a href="section-4-overview.html#cb273-2" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Now we are going to calculate and plot dollars per day for African countries in 2010 using GDP data.</li>
+</ol>
+<p>In the first part of this analysis, we will create the dollars per day variable.</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="section-4-overview.html#cb274-1" aria-hidden="true"></a>daydollars &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb274-2"><a href="section-4-overview.html#cb274-2" aria-hidden="true"></a><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year <span class="op">==</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp))</span>
+<span id="cb274-3"><a href="section-4-overview.html#cb274-3" aria-hidden="true"></a>daydollars</span></code></pre></div>
+<pre><code>##                     country year infant_mortality life_expectancy fertility population      gdp continent          region dollars_per_day              group
+## 1                   Algeria 2010             23.5            76.0      2.82   3.60e+07 7.92e+10    Africa Northern Africa           6.019    Northern Africa
+## 2                    Angola 2010            109.6            57.6      6.22   2.12e+07 2.61e+10    Africa   Middle Africa           3.373 Sub-Saharan Africa
+## 3                     Benin 2010             71.0            60.8      5.10   9.51e+06 3.34e+09    Africa  Western Africa           0.961 Sub-Saharan Africa
+## 4                  Botswana 2010             39.8            55.6      2.76   2.05e+06 8.41e+09    Africa Southern Africa          11.249 Sub-Saharan Africa
+## 5              Burkina Faso 2010             69.7            59.0      5.87   1.56e+07 4.66e+09    Africa  Western Africa           0.816 Sub-Saharan Africa
+## 6                   Burundi 2010             63.8            60.4      6.30   9.46e+06 1.16e+09    Africa  Eastern Africa           0.336 Sub-Saharan Africa
+## 7                  Cameroon 2010             66.2            57.8      5.02   2.06e+07 1.40e+10    Africa   Middle Africa           1.861 Sub-Saharan Africa
+## 8                Cape Verde 2010             23.3            71.1      2.43   4.90e+05 9.72e+08    Africa  Western Africa           5.428 Sub-Saharan Africa
+## 9  Central African Republic 2010            101.7            47.9      4.63   4.44e+06 1.05e+09    Africa   Middle Africa           0.650 Sub-Saharan Africa
+## 10                     Chad 2010             93.6            55.8      6.60   1.19e+07 3.37e+09    Africa   Middle Africa           0.776 Sub-Saharan Africa
+## 11                  Comoros 2010             63.1            67.7      4.92   6.99e+05 2.47e+08    Africa  Eastern Africa           0.969 Sub-Saharan Africa
+## 12         Congo, Dem. Rep. 2010             84.8            58.4      6.25   6.59e+07 6.96e+09    Africa   Middle Africa           0.289 Sub-Saharan Africa
+## 13              Congo, Rep. 2010             42.2            60.4      5.07   4.07e+06 5.07e+09    Africa   Middle Africa           3.414 Sub-Saharan Africa
+## 14            Cote d&#39;Ivoire 2010             76.9            56.6      4.91   2.01e+07 1.16e+10    Africa  Western Africa           1.579 Sub-Saharan Africa
+## 15                    Egypt 2010             24.3            70.1      2.88   8.20e+07 1.60e+11    Africa Northern Africa           5.352    Northern Africa
+## 16        Equatorial Guinea 2010             78.9            58.6      5.14   7.29e+05 5.98e+09    Africa   Middle Africa          22.480 Sub-Saharan Africa
+## 17                  Eritrea 2010             39.4            60.1      4.97   4.69e+06 7.71e+08    Africa  Eastern Africa           0.450 Sub-Saharan Africa
+## 18                 Ethiopia 2010             50.8            62.1      4.90   8.76e+07 1.83e+10    Africa  Eastern Africa           0.572 Sub-Saharan Africa
+## 19                    Gabon 2010             42.8            63.0      4.21   1.54e+06 6.34e+09    Africa   Middle Africa          11.272 Sub-Saharan Africa
+## 20                   Gambia 2010             51.7            66.5      5.80   1.69e+06 1.22e+09    Africa  Western Africa           1.970 Sub-Saharan Africa
+## 21                    Ghana 2010             50.2            62.9      4.05   2.43e+07 8.78e+09    Africa  Western Africa           0.989 Sub-Saharan Africa
+## 22                   Guinea 2010             71.2            57.9      5.17   1.10e+07 5.49e+09    Africa  Western Africa           1.367 Sub-Saharan Africa
+## 23            Guinea-Bissau 2010             73.4            54.3      5.12   1.63e+06 2.44e+08    Africa  Western Africa           0.410 Sub-Saharan Africa
+## 24                    Kenya 2010             42.4            62.9      4.62   4.03e+07 1.90e+10    Africa  Eastern Africa           1.290 Sub-Saharan Africa
+## 25                  Lesotho 2010             75.2            46.4      3.21   2.01e+06 1.08e+09    Africa Southern Africa           1.467 Sub-Saharan Africa
+## 26                  Liberia 2010             65.2            60.8      5.02   3.96e+06 1.04e+09    Africa  Western Africa           0.720 Sub-Saharan Africa
+## 27               Madagascar 2010             42.1            62.4      4.65   2.11e+07 5.03e+09    Africa  Eastern Africa           0.653 Sub-Saharan Africa
+## 28                   Malawi 2010             57.5            55.4      5.64   1.48e+07 2.76e+09    Africa  Eastern Africa           0.512 Sub-Saharan Africa
+## 29                     Mali 2010             82.9            59.2      6.84   1.52e+07 4.20e+09    Africa  Western Africa           0.759 Sub-Saharan Africa
+## 30               Mauritania 2010             70.1            68.6      4.84   3.59e+06 2.11e+09    Africa  Western Africa           1.608 Sub-Saharan Africa
+## 31                Mauritius 2010             13.3            73.4      1.52   1.25e+06 6.64e+09    Africa  Eastern Africa          14.569 Sub-Saharan Africa
+## 32                  Morocco 2010             28.5            73.7      2.58   3.21e+07 5.99e+10    Africa Northern Africa           5.112    Northern Africa
+## 33               Mozambique 2010             71.9            54.4      5.41   2.43e+07 8.97e+09    Africa  Eastern Africa           1.011 Sub-Saharan Africa
+## 34                  Namibia 2010             37.5            61.4      3.23   2.19e+06 6.16e+09    Africa Southern Africa           7.688 Sub-Saharan Africa
+## 35                    Niger 2010             66.1            59.2      7.58   1.63e+07 2.78e+09    Africa  Western Africa           0.468 Sub-Saharan Africa
+## 36                  Nigeria 2010             81.5            61.2      6.02   1.59e+08 8.56e+10    Africa  Western Africa           1.471 Sub-Saharan Africa
+## 37                   Rwanda 2010             43.8            65.1      4.84   1.03e+07 3.58e+09    Africa  Eastern Africa           0.954 Sub-Saharan Africa
+## 38                  Senegal 2010             46.7            64.2      5.05   1.30e+07 6.98e+09    Africa  Western Africa           1.477 Sub-Saharan Africa
+## 39               Seychelles 2010             12.2            73.1      2.26   9.31e+04 7.60e+08    Africa  Eastern Africa          22.380 Sub-Saharan Africa
+## 40             Sierra Leone 2010            107.0            55.0      4.94   5.78e+06 1.57e+09    Africa  Western Africa           0.747 Sub-Saharan Africa
+## 41             South Africa 2010             38.2            54.9      2.47   5.16e+07 1.88e+11    Africa Southern Africa           9.959 Sub-Saharan Africa
+## 42                    Sudan 2010             53.3            66.1      4.64   3.61e+07 2.28e+10    Africa Northern Africa           1.731    Northern Africa
+## 43                Swaziland 2010             59.1            46.4      3.56   1.19e+06 1.91e+09    Africa Southern Africa           4.389 Sub-Saharan Africa
+## 44                 Tanzania 2010             42.4            61.4      5.43   4.56e+07 2.00e+10    Africa  Eastern Africa           1.198 Sub-Saharan Africa
+## 45                     Togo 2010             59.3            58.7      4.79   6.39e+06 1.60e+09    Africa  Western Africa           0.684 Sub-Saharan Africa
+## 46                  Tunisia 2010             14.9            77.1      2.04   1.06e+07 3.32e+10    Africa Northern Africa           8.539    Northern Africa
+## 47                   Uganda 2010             49.5            57.8      6.16   3.31e+07 1.27e+10    Africa  Eastern Africa           1.050 Sub-Saharan Africa
+## 48                   Zambia 2010             52.9            53.1      5.81   1.39e+07 5.59e+09    Africa  Eastern Africa           1.100 Sub-Saharan Africa
+## 49                 Zimbabwe 2010             55.8            49.1      3.72   1.40e+07 4.03e+09    Africa  Eastern Africa           0.791 Sub-Saharan Africa</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>Now we are going to calculate and plot dollars per day for African countries in 2010 using GDP data.</li>
+</ol>
+<p>In the second part of this analysis, we will plot the smooth density plot using a log (base 2) x axis.</p>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="section-4-overview.html#cb276-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>daydollars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb276-2"><a href="section-4-overview.html#cb276-2" aria-hidden="true"></a><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>()</span>
+<span id="cb276-3"><a href="section-4-overview.html#cb276-3" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-133-1.png" width="672" /></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Now we are going to combine the plotting tools we have used in the past two exercises to create density plots for multiple years.</li>
+</ol>
+<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="section-4-overview.html#cb277-1" aria-hidden="true"></a>daydollars &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb277-2"><a href="section-4-overview.html#cb277-2" aria-hidden="true"></a><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year<span class="op">%in%</span><span class="kw">c</span>(<span class="dv">1970</span>,<span class="dv">2010</span>) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp))</span>
+<span id="cb277-3"><a href="section-4-overview.html#cb277-3" aria-hidden="true"></a>daydollars</span></code></pre></div>
+<pre><code>##                     country year infant_mortality life_expectancy fertility population      gdp continent          region dollars_per_day              group
+## 1                   Algeria 1970            146.0            52.4      7.64   1.46e+07 1.97e+10    Africa Northern Africa           3.717    Northern Africa
+## 2                     Benin 1970            157.1            43.9      6.75   2.91e+06 8.32e+08    Africa  Western Africa           0.784 Sub-Saharan Africa
+## 3                  Botswana 1970             85.3            54.3      6.64   6.93e+05 2.84e+08    Africa Southern Africa           1.122 Sub-Saharan Africa
+## 4              Burkina Faso 1970            149.3            40.3      6.62   5.62e+06 7.95e+08    Africa  Western Africa           0.387 Sub-Saharan Africa
+## 5                   Burundi 1970            146.4            42.8      7.31   3.46e+06 5.24e+08    Africa  Eastern Africa           0.415 Sub-Saharan Africa
+## 6                  Cameroon 1970            126.2            49.0      6.21   6.77e+06 3.37e+09    Africa   Middle Africa           1.364 Sub-Saharan Africa
+## 7  Central African Republic 1970            137.0            43.4      5.95   1.83e+06 6.48e+08    Africa   Middle Africa           0.970 Sub-Saharan Africa
+## 8                      Chad 1970            135.9            45.7      6.53   3.64e+06 8.29e+08    Africa   Middle Africa           0.623 Sub-Saharan Africa
+## 9          Congo, Dem. Rep. 1970            149.0            48.1      6.21   2.00e+07 6.73e+09    Africa   Middle Africa           0.921 Sub-Saharan Africa
+## 10              Congo, Rep. 1970             88.5            52.9      6.26   1.34e+06 9.40e+08    Africa   Middle Africa           1.928 Sub-Saharan Africa
+## 11            Cote d&#39;Ivoire 1970            161.0            45.4      7.91   5.24e+06 4.62e+09    Africa  Western Africa           2.415 Sub-Saharan Africa
+## 12                    Egypt 1970            162.0            52.5      5.94   3.48e+07 2.03e+10    Africa Northern Africa           1.600    Northern Africa
+## 13                    Gabon 1970               NA            45.5      5.08   5.90e+05 1.72e+09    Africa   Middle Africa           7.998 Sub-Saharan Africa
+## 14                   Gambia 1970            126.0            43.3      6.09   4.47e+05 2.47e+08    Africa  Western Africa           1.516 Sub-Saharan Africa
+## 15                    Ghana 1970            120.1            50.1      6.95   8.60e+06 2.55e+09    Africa  Western Africa           0.813 Sub-Saharan Africa
+## 16            Guinea-Bissau 1970               NA            45.5      6.07   7.12e+05 1.04e+08    Africa  Western Africa           0.400 Sub-Saharan Africa
+## 17                    Kenya 1970             91.3            53.8      8.08   1.13e+07 3.28e+09    Africa  Eastern Africa           0.798 Sub-Saharan Africa
+## 18                  Lesotho 1970            131.6            49.7      5.81   1.03e+06 1.85e+08    Africa Southern Africa           0.490 Sub-Saharan Africa
+## 19                  Liberia 1970            191.3            40.1      6.70   1.42e+06 1.09e+09    Africa  Western Africa           2.111 Sub-Saharan Africa
+## 20               Madagascar 1970             93.2            47.8      7.33   6.58e+06 2.81e+09    Africa  Eastern Africa           1.169 Sub-Saharan Africa
+## 21                   Malawi 1970            207.7            41.6      7.30   4.60e+06 5.49e+08    Africa  Eastern Africa           0.327 Sub-Saharan Africa
+## 22                     Mali 1970            195.7            34.5      6.90   5.95e+06 1.04e+09    Africa  Western Africa           0.478 Sub-Saharan Africa
+## 23               Mauritania 1970            108.5            49.8      6.78   1.15e+06 7.01e+08    Africa  Western Africa           1.671 Sub-Saharan Africa
+## 24                  Morocco 1970            120.8            54.3      6.69   1.60e+07 1.21e+10    Africa Northern Africa           2.066    Northern Africa
+## 25                    Niger 1970            137.6            38.2      7.42   4.50e+06 1.34e+09    Africa  Western Africa           0.819 Sub-Saharan Africa
+## 26                  Nigeria 1970            168.9            41.8      6.47   5.61e+07 1.98e+10    Africa  Western Africa           0.966 Sub-Saharan Africa
+## 27                   Rwanda 1970            129.4            45.6      8.23   3.75e+06 8.10e+08    Africa  Eastern Africa           0.591 Sub-Saharan Africa
+## 28                  Senegal 1970            121.7            39.6      7.34   4.22e+06 2.27e+09    Africa  Western Africa           1.472 Sub-Saharan Africa
+## 29               Seychelles 1970             54.1            64.6      5.76   5.24e+04 1.42e+08    Africa  Eastern Africa           7.424 Sub-Saharan Africa
+## 30             Sierra Leone 1970            191.0            43.1      6.70   2.51e+06 7.40e+08    Africa  Western Africa           0.806 Sub-Saharan Africa
+## 31             South Africa 1970               NA            52.8      5.59   2.25e+07 6.86e+10    Africa Southern Africa           8.347 Sub-Saharan Africa
+## 32                    Sudan 1970             94.7            54.3      6.89   1.02e+07 3.90e+09    Africa Northern Africa           1.045    Northern Africa
+## 33                Swaziland 1970            119.3            48.8      6.88   4.46e+05 2.57e+08    Africa Southern Africa           1.580 Sub-Saharan Africa
+## 34                     Togo 1970            132.8            47.7      7.08   2.12e+06 6.19e+08    Africa  Western Africa           0.801 Sub-Saharan Africa
+## 35                  Tunisia 1970            122.2            52.9      6.44   5.06e+06 4.69e+09    Africa Northern Africa           2.538    Northern Africa
+## 36                   Zambia 1970            109.3            53.9      7.44   4.19e+06 2.38e+09    Africa  Eastern Africa           1.561 Sub-Saharan Africa
+## 37                 Zimbabwe 1970             72.4            57.2      7.42   5.21e+06 2.68e+09    Africa  Eastern Africa           1.412 Sub-Saharan Africa
+## 38                  Algeria 2010             23.5            76.0      2.82   3.60e+07 7.92e+10    Africa Northern Africa           6.019    Northern Africa
+## 39                   Angola 2010            109.6            57.6      6.22   2.12e+07 2.61e+10    Africa   Middle Africa           3.373 Sub-Saharan Africa
+## 40                    Benin 2010             71.0            60.8      5.10   9.51e+06 3.34e+09    Africa  Western Africa           0.961 Sub-Saharan Africa
+## 41                 Botswana 2010             39.8            55.6      2.76   2.05e+06 8.41e+09    Africa Southern Africa          11.249 Sub-Saharan Africa
+## 42             Burkina Faso 2010             69.7            59.0      5.87   1.56e+07 4.66e+09    Africa  Western Africa           0.816 Sub-Saharan Africa
+## 43                  Burundi 2010             63.8            60.4      6.30   9.46e+06 1.16e+09    Africa  Eastern Africa           0.336 Sub-Saharan Africa
+## 44                 Cameroon 2010             66.2            57.8      5.02   2.06e+07 1.40e+10    Africa   Middle Africa           1.861 Sub-Saharan Africa
+## 45               Cape Verde 2010             23.3            71.1      2.43   4.90e+05 9.72e+08    Africa  Western Africa           5.428 Sub-Saharan Africa
+## 46 Central African Republic 2010            101.7            47.9      4.63   4.44e+06 1.05e+09    Africa   Middle Africa           0.650 Sub-Saharan Africa
+## 47                     Chad 2010             93.6            55.8      6.60   1.19e+07 3.37e+09    Africa   Middle Africa           0.776 Sub-Saharan Africa
+## 48                  Comoros 2010             63.1            67.7      4.92   6.99e+05 2.47e+08    Africa  Eastern Africa           0.969 Sub-Saharan Africa
+## 49         Congo, Dem. Rep. 2010             84.8            58.4      6.25   6.59e+07 6.96e+09    Africa   Middle Africa           0.289 Sub-Saharan Africa
+## 50              Congo, Rep. 2010             42.2            60.4      5.07   4.07e+06 5.07e+09    Africa   Middle Africa           3.414 Sub-Saharan Africa
+## 51            Cote d&#39;Ivoire 2010             76.9            56.6      4.91   2.01e+07 1.16e+10    Africa  Western Africa           1.579 Sub-Saharan Africa
+## 52                    Egypt 2010             24.3            70.1      2.88   8.20e+07 1.60e+11    Africa Northern Africa           5.352    Northern Africa
+## 53        Equatorial Guinea 2010             78.9            58.6      5.14   7.29e+05 5.98e+09    Africa   Middle Africa          22.480 Sub-Saharan Africa
+## 54                  Eritrea 2010             39.4            60.1      4.97   4.69e+06 7.71e+08    Africa  Eastern Africa           0.450 Sub-Saharan Africa
+## 55                 Ethiopia 2010             50.8            62.1      4.90   8.76e+07 1.83e+10    Africa  Eastern Africa           0.572 Sub-Saharan Africa
+## 56                    Gabon 2010             42.8            63.0      4.21   1.54e+06 6.34e+09    Africa   Middle Africa          11.272 Sub-Saharan Africa
+## 57                   Gambia 2010             51.7            66.5      5.80   1.69e+06 1.22e+09    Africa  Western Africa           1.970 Sub-Saharan Africa
+## 58                    Ghana 2010             50.2            62.9      4.05   2.43e+07 8.78e+09    Africa  Western Africa           0.989 Sub-Saharan Africa
+## 59                   Guinea 2010             71.2            57.9      5.17   1.10e+07 5.49e+09    Africa  Western Africa           1.367 Sub-Saharan Africa
+## 60            Guinea-Bissau 2010             73.4            54.3      5.12   1.63e+06 2.44e+08    Africa  Western Africa           0.410 Sub-Saharan Africa
+## 61                    Kenya 2010             42.4            62.9      4.62   4.03e+07 1.90e+10    Africa  Eastern Africa           1.290 Sub-Saharan Africa
+## 62                  Lesotho 2010             75.2            46.4      3.21   2.01e+06 1.08e+09    Africa Southern Africa           1.467 Sub-Saharan Africa
+## 63                  Liberia 2010             65.2            60.8      5.02   3.96e+06 1.04e+09    Africa  Western Africa           0.720 Sub-Saharan Africa
+## 64               Madagascar 2010             42.1            62.4      4.65   2.11e+07 5.03e+09    Africa  Eastern Africa           0.653 Sub-Saharan Africa
+## 65                   Malawi 2010             57.5            55.4      5.64   1.48e+07 2.76e+09    Africa  Eastern Africa           0.512 Sub-Saharan Africa
+## 66                     Mali 2010             82.9            59.2      6.84   1.52e+07 4.20e+09    Africa  Western Africa           0.759 Sub-Saharan Africa
+## 67               Mauritania 2010             70.1            68.6      4.84   3.59e+06 2.11e+09    Africa  Western Africa           1.608 Sub-Saharan Africa
+## 68                Mauritius 2010             13.3            73.4      1.52   1.25e+06 6.64e+09    Africa  Eastern Africa          14.569 Sub-Saharan Africa
+## 69                  Morocco 2010             28.5            73.7      2.58   3.21e+07 5.99e+10    Africa Northern Africa           5.112    Northern Africa
+## 70               Mozambique 2010             71.9            54.4      5.41   2.43e+07 8.97e+09    Africa  Eastern Africa           1.011 Sub-Saharan Africa
+## 71                  Namibia 2010             37.5            61.4      3.23   2.19e+06 6.16e+09    Africa Southern Africa           7.688 Sub-Saharan Africa
+## 72                    Niger 2010             66.1            59.2      7.58   1.63e+07 2.78e+09    Africa  Western Africa           0.468 Sub-Saharan Africa
+## 73                  Nigeria 2010             81.5            61.2      6.02   1.59e+08 8.56e+10    Africa  Western Africa           1.471 Sub-Saharan Africa
+## 74                   Rwanda 2010             43.8            65.1      4.84   1.03e+07 3.58e+09    Africa  Eastern Africa           0.954 Sub-Saharan Africa
+## 75                  Senegal 2010             46.7            64.2      5.05   1.30e+07 6.98e+09    Africa  Western Africa           1.477 Sub-Saharan Africa
+## 76               Seychelles 2010             12.2            73.1      2.26   9.31e+04 7.60e+08    Africa  Eastern Africa          22.380 Sub-Saharan Africa
+## 77             Sierra Leone 2010            107.0            55.0      4.94   5.78e+06 1.57e+09    Africa  Western Africa           0.747 Sub-Saharan Africa
+## 78             South Africa 2010             38.2            54.9      2.47   5.16e+07 1.88e+11    Africa Southern Africa           9.959 Sub-Saharan Africa
+## 79                    Sudan 2010             53.3            66.1      4.64   3.61e+07 2.28e+10    Africa Northern Africa           1.731    Northern Africa
+## 80                Swaziland 2010             59.1            46.4      3.56   1.19e+06 1.91e+09    Africa Southern Africa           4.389 Sub-Saharan Africa
+## 81                 Tanzania 2010             42.4            61.4      5.43   4.56e+07 2.00e+10    Africa  Eastern Africa           1.198 Sub-Saharan Africa
+## 82                     Togo 2010             59.3            58.7      4.79   6.39e+06 1.60e+09    Africa  Western Africa           0.684 Sub-Saharan Africa
+## 83                  Tunisia 2010             14.9            77.1      2.04   1.06e+07 3.32e+10    Africa Northern Africa           8.539    Northern Africa
+## 84                   Uganda 2010             49.5            57.8      6.16   3.31e+07 1.27e+10    Africa  Eastern Africa           1.050 Sub-Saharan Africa
+## 85                   Zambia 2010             52.9            53.1      5.81   1.39e+07 5.59e+09    Africa  Eastern Africa           1.100 Sub-Saharan Africa
+## 86                 Zimbabwe 2010             55.8            49.1      3.72   1.40e+07 4.03e+09    Africa  Eastern Africa           0.791 Sub-Saharan Africa</code></pre>
+<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="section-4-overview.html#cb279-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span>daydollars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day)) <span class="op">+</span></span>
+<span id="cb279-2"><a href="section-4-overview.html#cb279-2" aria-hidden="true"></a><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>() <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(.<span class="op">~</span>year)</span>
+<span id="cb279-3"><a href="section-4-overview.html#cb279-3" aria-hidden="true"></a>p</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-134-1.png" width="672" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Now we are going to edit the code from Exercise 9 to show stacked histograms of each region in Africa.</li>
+</ol>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="section-4-overview.html#cb280-1" aria-hidden="true"></a>daydollars &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb280-2"><a href="section-4-overview.html#cb280-2" aria-hidden="true"></a><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year<span class="op">%in%</span><span class="kw">c</span>(<span class="dv">1970</span>,<span class="dv">2010</span>) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp))</span>
+<span id="cb280-3"><a href="section-4-overview.html#cb280-3" aria-hidden="true"></a>daydollars</span></code></pre></div>
+<pre><code>##                     country year infant_mortality life_expectancy fertility population      gdp continent          region dollars_per_day              group
+## 1                   Algeria 1970            146.0            52.4      7.64   1.46e+07 1.97e+10    Africa Northern Africa           3.717    Northern Africa
+## 2                     Benin 1970            157.1            43.9      6.75   2.91e+06 8.32e+08    Africa  Western Africa           0.784 Sub-Saharan Africa
+## 3                  Botswana 1970             85.3            54.3      6.64   6.93e+05 2.84e+08    Africa Southern Africa           1.122 Sub-Saharan Africa
+## 4              Burkina Faso 1970            149.3            40.3      6.62   5.62e+06 7.95e+08    Africa  Western Africa           0.387 Sub-Saharan Africa
+## 5                   Burundi 1970            146.4            42.8      7.31   3.46e+06 5.24e+08    Africa  Eastern Africa           0.415 Sub-Saharan Africa
+## 6                  Cameroon 1970            126.2            49.0      6.21   6.77e+06 3.37e+09    Africa   Middle Africa           1.364 Sub-Saharan Africa
+## 7  Central African Republic 1970            137.0            43.4      5.95   1.83e+06 6.48e+08    Africa   Middle Africa           0.970 Sub-Saharan Africa
+## 8                      Chad 1970            135.9            45.7      6.53   3.64e+06 8.29e+08    Africa   Middle Africa           0.623 Sub-Saharan Africa
+## 9          Congo, Dem. Rep. 1970            149.0            48.1      6.21   2.00e+07 6.73e+09    Africa   Middle Africa           0.921 Sub-Saharan Africa
+## 10              Congo, Rep. 1970             88.5            52.9      6.26   1.34e+06 9.40e+08    Africa   Middle Africa           1.928 Sub-Saharan Africa
+## 11            Cote d&#39;Ivoire 1970            161.0            45.4      7.91   5.24e+06 4.62e+09    Africa  Western Africa           2.415 Sub-Saharan Africa
+## 12                    Egypt 1970            162.0            52.5      5.94   3.48e+07 2.03e+10    Africa Northern Africa           1.600    Northern Africa
+## 13                    Gabon 1970               NA            45.5      5.08   5.90e+05 1.72e+09    Africa   Middle Africa           7.998 Sub-Saharan Africa
+## 14                   Gambia 1970            126.0            43.3      6.09   4.47e+05 2.47e+08    Africa  Western Africa           1.516 Sub-Saharan Africa
+## 15                    Ghana 1970            120.1            50.1      6.95   8.60e+06 2.55e+09    Africa  Western Africa           0.813 Sub-Saharan Africa
+## 16            Guinea-Bissau 1970               NA            45.5      6.07   7.12e+05 1.04e+08    Africa  Western Africa           0.400 Sub-Saharan Africa
+## 17                    Kenya 1970             91.3            53.8      8.08   1.13e+07 3.28e+09    Africa  Eastern Africa           0.798 Sub-Saharan Africa
+## 18                  Lesotho 1970            131.6            49.7      5.81   1.03e+06 1.85e+08    Africa Southern Africa           0.490 Sub-Saharan Africa
+## 19                  Liberia 1970            191.3            40.1      6.70   1.42e+06 1.09e+09    Africa  Western Africa           2.111 Sub-Saharan Africa
+## 20               Madagascar 1970             93.2            47.8      7.33   6.58e+06 2.81e+09    Africa  Eastern Africa           1.169 Sub-Saharan Africa
+## 21                   Malawi 1970            207.7            41.6      7.30   4.60e+06 5.49e+08    Africa  Eastern Africa           0.327 Sub-Saharan Africa
+## 22                     Mali 1970            195.7            34.5      6.90   5.95e+06 1.04e+09    Africa  Western Africa           0.478 Sub-Saharan Africa
+## 23               Mauritania 1970            108.5            49.8      6.78   1.15e+06 7.01e+08    Africa  Western Africa           1.671 Sub-Saharan Africa
+## 24                  Morocco 1970            120.8            54.3      6.69   1.60e+07 1.21e+10    Africa Northern Africa           2.066    Northern Africa
+## 25                    Niger 1970            137.6            38.2      7.42   4.50e+06 1.34e+09    Africa  Western Africa           0.819 Sub-Saharan Africa
+## 26                  Nigeria 1970            168.9            41.8      6.47   5.61e+07 1.98e+10    Africa  Western Africa           0.966 Sub-Saharan Africa
+## 27                   Rwanda 1970            129.4            45.6      8.23   3.75e+06 8.10e+08    Africa  Eastern Africa           0.591 Sub-Saharan Africa
+## 28                  Senegal 1970            121.7            39.6      7.34   4.22e+06 2.27e+09    Africa  Western Africa           1.472 Sub-Saharan Africa
+## 29               Seychelles 1970             54.1            64.6      5.76   5.24e+04 1.42e+08    Africa  Eastern Africa           7.424 Sub-Saharan Africa
+## 30             Sierra Leone 1970            191.0            43.1      6.70   2.51e+06 7.40e+08    Africa  Western Africa           0.806 Sub-Saharan Africa
+## 31             South Africa 1970               NA            52.8      5.59   2.25e+07 6.86e+10    Africa Southern Africa           8.347 Sub-Saharan Africa
+## 32                    Sudan 1970             94.7            54.3      6.89   1.02e+07 3.90e+09    Africa Northern Africa           1.045    Northern Africa
+## 33                Swaziland 1970            119.3            48.8      6.88   4.46e+05 2.57e+08    Africa Southern Africa           1.580 Sub-Saharan Africa
+## 34                     Togo 1970            132.8            47.7      7.08   2.12e+06 6.19e+08    Africa  Western Africa           0.801 Sub-Saharan Africa
+## 35                  Tunisia 1970            122.2            52.9      6.44   5.06e+06 4.69e+09    Africa Northern Africa           2.538    Northern Africa
+## 36                   Zambia 1970            109.3            53.9      7.44   4.19e+06 2.38e+09    Africa  Eastern Africa           1.561 Sub-Saharan Africa
+## 37                 Zimbabwe 1970             72.4            57.2      7.42   5.21e+06 2.68e+09    Africa  Eastern Africa           1.412 Sub-Saharan Africa
+## 38                  Algeria 2010             23.5            76.0      2.82   3.60e+07 7.92e+10    Africa Northern Africa           6.019    Northern Africa
+## 39                   Angola 2010            109.6            57.6      6.22   2.12e+07 2.61e+10    Africa   Middle Africa           3.373 Sub-Saharan Africa
+## 40                    Benin 2010             71.0            60.8      5.10   9.51e+06 3.34e+09    Africa  Western Africa           0.961 Sub-Saharan Africa
+## 41                 Botswana 2010             39.8            55.6      2.76   2.05e+06 8.41e+09    Africa Southern Africa          11.249 Sub-Saharan Africa
+## 42             Burkina Faso 2010             69.7            59.0      5.87   1.56e+07 4.66e+09    Africa  Western Africa           0.816 Sub-Saharan Africa
+## 43                  Burundi 2010             63.8            60.4      6.30   9.46e+06 1.16e+09    Africa  Eastern Africa           0.336 Sub-Saharan Africa
+## 44                 Cameroon 2010             66.2            57.8      5.02   2.06e+07 1.40e+10    Africa   Middle Africa           1.861 Sub-Saharan Africa
+## 45               Cape Verde 2010             23.3            71.1      2.43   4.90e+05 9.72e+08    Africa  Western Africa           5.428 Sub-Saharan Africa
+## 46 Central African Republic 2010            101.7            47.9      4.63   4.44e+06 1.05e+09    Africa   Middle Africa           0.650 Sub-Saharan Africa
+## 47                     Chad 2010             93.6            55.8      6.60   1.19e+07 3.37e+09    Africa   Middle Africa           0.776 Sub-Saharan Africa
+## 48                  Comoros 2010             63.1            67.7      4.92   6.99e+05 2.47e+08    Africa  Eastern Africa           0.969 Sub-Saharan Africa
+## 49         Congo, Dem. Rep. 2010             84.8            58.4      6.25   6.59e+07 6.96e+09    Africa   Middle Africa           0.289 Sub-Saharan Africa
+## 50              Congo, Rep. 2010             42.2            60.4      5.07   4.07e+06 5.07e+09    Africa   Middle Africa           3.414 Sub-Saharan Africa
+## 51            Cote d&#39;Ivoire 2010             76.9            56.6      4.91   2.01e+07 1.16e+10    Africa  Western Africa           1.579 Sub-Saharan Africa
+## 52                    Egypt 2010             24.3            70.1      2.88   8.20e+07 1.60e+11    Africa Northern Africa           5.352    Northern Africa
+## 53        Equatorial Guinea 2010             78.9            58.6      5.14   7.29e+05 5.98e+09    Africa   Middle Africa          22.480 Sub-Saharan Africa
+## 54                  Eritrea 2010             39.4            60.1      4.97   4.69e+06 7.71e+08    Africa  Eastern Africa           0.450 Sub-Saharan Africa
+## 55                 Ethiopia 2010             50.8            62.1      4.90   8.76e+07 1.83e+10    Africa  Eastern Africa           0.572 Sub-Saharan Africa
+## 56                    Gabon 2010             42.8            63.0      4.21   1.54e+06 6.34e+09    Africa   Middle Africa          11.272 Sub-Saharan Africa
+## 57                   Gambia 2010             51.7            66.5      5.80   1.69e+06 1.22e+09    Africa  Western Africa           1.970 Sub-Saharan Africa
+## 58                    Ghana 2010             50.2            62.9      4.05   2.43e+07 8.78e+09    Africa  Western Africa           0.989 Sub-Saharan Africa
+## 59                   Guinea 2010             71.2            57.9      5.17   1.10e+07 5.49e+09    Africa  Western Africa           1.367 Sub-Saharan Africa
+## 60            Guinea-Bissau 2010             73.4            54.3      5.12   1.63e+06 2.44e+08    Africa  Western Africa           0.410 Sub-Saharan Africa
+## 61                    Kenya 2010             42.4            62.9      4.62   4.03e+07 1.90e+10    Africa  Eastern Africa           1.290 Sub-Saharan Africa
+## 62                  Lesotho 2010             75.2            46.4      3.21   2.01e+06 1.08e+09    Africa Southern Africa           1.467 Sub-Saharan Africa
+## 63                  Liberia 2010             65.2            60.8      5.02   3.96e+06 1.04e+09    Africa  Western Africa           0.720 Sub-Saharan Africa
+## 64               Madagascar 2010             42.1            62.4      4.65   2.11e+07 5.03e+09    Africa  Eastern Africa           0.653 Sub-Saharan Africa
+## 65                   Malawi 2010             57.5            55.4      5.64   1.48e+07 2.76e+09    Africa  Eastern Africa           0.512 Sub-Saharan Africa
+## 66                     Mali 2010             82.9            59.2      6.84   1.52e+07 4.20e+09    Africa  Western Africa           0.759 Sub-Saharan Africa
+## 67               Mauritania 2010             70.1            68.6      4.84   3.59e+06 2.11e+09    Africa  Western Africa           1.608 Sub-Saharan Africa
+## 68                Mauritius 2010             13.3            73.4      1.52   1.25e+06 6.64e+09    Africa  Eastern Africa          14.569 Sub-Saharan Africa
+## 69                  Morocco 2010             28.5            73.7      2.58   3.21e+07 5.99e+10    Africa Northern Africa           5.112    Northern Africa
+## 70               Mozambique 2010             71.9            54.4      5.41   2.43e+07 8.97e+09    Africa  Eastern Africa           1.011 Sub-Saharan Africa
+## 71                  Namibia 2010             37.5            61.4      3.23   2.19e+06 6.16e+09    Africa Southern Africa           7.688 Sub-Saharan Africa
+## 72                    Niger 2010             66.1            59.2      7.58   1.63e+07 2.78e+09    Africa  Western Africa           0.468 Sub-Saharan Africa
+## 73                  Nigeria 2010             81.5            61.2      6.02   1.59e+08 8.56e+10    Africa  Western Africa           1.471 Sub-Saharan Africa
+## 74                   Rwanda 2010             43.8            65.1      4.84   1.03e+07 3.58e+09    Africa  Eastern Africa           0.954 Sub-Saharan Africa
+## 75                  Senegal 2010             46.7            64.2      5.05   1.30e+07 6.98e+09    Africa  Western Africa           1.477 Sub-Saharan Africa
+## 76               Seychelles 2010             12.2            73.1      2.26   9.31e+04 7.60e+08    Africa  Eastern Africa          22.380 Sub-Saharan Africa
+## 77             Sierra Leone 2010            107.0            55.0      4.94   5.78e+06 1.57e+09    Africa  Western Africa           0.747 Sub-Saharan Africa
+## 78             South Africa 2010             38.2            54.9      2.47   5.16e+07 1.88e+11    Africa Southern Africa           9.959 Sub-Saharan Africa
+## 79                    Sudan 2010             53.3            66.1      4.64   3.61e+07 2.28e+10    Africa Northern Africa           1.731    Northern Africa
+## 80                Swaziland 2010             59.1            46.4      3.56   1.19e+06 1.91e+09    Africa Southern Africa           4.389 Sub-Saharan Africa
+## 81                 Tanzania 2010             42.4            61.4      5.43   4.56e+07 2.00e+10    Africa  Eastern Africa           1.198 Sub-Saharan Africa
+## 82                     Togo 2010             59.3            58.7      4.79   6.39e+06 1.60e+09    Africa  Western Africa           0.684 Sub-Saharan Africa
+## 83                  Tunisia 2010             14.9            77.1      2.04   1.06e+07 3.32e+10    Africa Northern Africa           8.539    Northern Africa
+## 84                   Uganda 2010             49.5            57.8      6.16   3.31e+07 1.27e+10    Africa  Eastern Africa           1.050 Sub-Saharan Africa
+## 85                   Zambia 2010             52.9            53.1      5.81   1.39e+07 5.59e+09    Africa  Eastern Africa           1.100 Sub-Saharan Africa
+## 86                 Zimbabwe 2010             55.8            49.1      3.72   1.40e+07 4.03e+09    Africa  Eastern Africa           0.791 Sub-Saharan Africa</code></pre>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="section-4-overview.html#cb282-1" aria-hidden="true"></a>daydollars <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, <span class="dt">fill =</span> region)) <span class="op">+</span></span>
+<span id="cb282-2"><a href="section-4-overview.html#cb282-2" aria-hidden="true"></a><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_density</span>(<span class="dt">bw =</span> <span class="fl">0.5</span>, <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(.<span class="op">~</span>year)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<ol start="11" style="list-style-type: decimal">
+<li>We are going to continue looking at patterns in the gapminder dataset by plotting infant mortality rates versus dollars per day for African countries.</li>
+</ol>
+<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="section-4-overview.html#cb283-1" aria-hidden="true"></a>gapminder_Africa_<span class="dv">2010</span> &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span></span>
+<span id="cb283-2"><a href="section-4-overview.html#cb283-2" aria-hidden="true"></a><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year <span class="op">==</span><span class="st"> </span><span class="dv">2010</span> <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp))</span>
+<span id="cb283-3"><a href="section-4-overview.html#cb283-3" aria-hidden="true"></a><span class="co"># now make the scatter plot</span></span>
+<span id="cb283-4"><a href="section-4-overview.html#cb283-4" aria-hidden="true"></a>gapminder_Africa_<span class="dv">2010</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, infant_mortality, <span class="dt">color =</span> region)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
+<ol start="12" style="list-style-type: decimal">
+<li>Now we are going to transform the x axis of the plot from the previous exercise.</li>
+</ol>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="section-4-overview.html#cb284-1" aria-hidden="true"></a>gapminder_Africa_<span class="dv">2010</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, infant_mortality, <span class="dt">color =</span> region)) <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-137-1.png" width="672" /></p>
+<ol start="13" style="list-style-type: decimal">
+<li>Note that there is a large variation in infant mortality and dollars per day among African countries.</li>
+</ol>
+<p>As an example, one country has infant mortality rates of less than 20 per 1000 and dollars per day of 16, while another country has infant mortality rates over 10% and dollars per day of about 1.</p>
+<p>In this exercise, we will remake the plot from Exercise 12 with country names instead of points so we can identify which countries are which.</p>
+<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="section-4-overview.html#cb285-1" aria-hidden="true"></a>gapminder_Africa_<span class="dv">2010</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, infant_mortality, <span class="dt">color =</span> region, <span class="dt">label =</span> country)) <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-138-1.png" width="672" /></p>
+<ol start="14" style="list-style-type: decimal">
+<li>Now we are going to look at changes in the infant mortality and dollars per day patterns African countries between 1970 and 2010.</li>
+</ol>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="section-4-overview.html#cb286-1" aria-hidden="true"></a>gapminder_Africa_<span class="dv">1970</span>_<span class="dv">2019</span> &lt;-<span class="st"> </span>gapminder <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">dollars_per_day =</span> gdp<span class="op">/</span>population<span class="op">/</span><span class="dv">365</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(continent <span class="op">==</span><span class="st"> &quot;Africa&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year<span class="op">%in%</span><span class="kw">c</span>(<span class="dv">1970</span>,<span class="dv">2010</span>) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(gdp) <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(infant_mortality))</span>
+<span id="cb286-2"><a href="section-4-overview.html#cb286-2" aria-hidden="true"></a>gapminder_Africa_<span class="dv">1970</span>_<span class="dv">2019</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(dollars_per_day, infant_mortality, <span class="dt">color =</span> region, <span class="dt">label =</span> country)) <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>() <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(year <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-3-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-5-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
