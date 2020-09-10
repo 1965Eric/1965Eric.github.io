@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Section 1 Overview | Data Science Inference and Modeling</title>
+  <meta name="description" content="2 Section 1 Overview | Data Science Inference and Modeling" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Section 1 Overview | Data Science Inference and Modeling" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Section 1 Overview | Data Science Inference and Modeling" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="learning-objectives.html"/>
+<link rel="next" href="section-2-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-parameters-and-estimates"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Parameters and Estimates</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Confidence Intervals and p-Values</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-statistical-models"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Statistical Models</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-bayesian-statistics"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Bayesian Statistics</a></li>
+<li class="chapter" data-level="1.1.6" data-path="learning-objectives.html"><a href="learning-objectives.html#section-6-election-forecasting"><i class="fa fa-check"></i><b>1.1.6</b> Section 6: Election Forecasting</a></li>
+<li class="chapter" data-level="1.1.7" data-path="learning-objectives.html"><a href="learning-objectives.html#section-7-association-tests"><i class="fa fa-check"></i><b>1.1.7</b> Section 7: Association Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#introduction-to-inference"><i class="fa fa-check"></i><b>1.2</b> Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#sampling-model-parameters-and-estimates"><i class="fa fa-check"></i><b>2.1</b> Sampling Model Parameters and Estimates</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#the-sample-average"><i class="fa fa-check"></i><b>2.2</b> The Sample Average</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#polling-versus-forecasting"><i class="fa fa-check"></i><b>2.3</b> Polling versus Forecasting</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#properties-of-our-estimate"><i class="fa fa-check"></i><b>2.4</b> Properties of Our Estimate</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---parameters-and-estimates"><i class="fa fa-check"></i><b>2.5</b> Assessment - Parameters and Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>3.1</b> The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#margin-of-error"><i class="fa fa-check"></i><b>3.2</b> Margin of Error</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#a-monte-carlo-simulation-for-the-clt"><i class="fa fa-check"></i><b>3.3</b> A Monte Carlo Simulation for the CLT</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#the-spread"><i class="fa fa-check"></i><b>3.4</b> The Spread</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#bias-why-not-run-a-very-large-poll"><i class="fa fa-check"></i><b>3.5</b> Bias: Why Not Run a Very Large Poll?</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---introduction-to-inference"><i class="fa fa-check"></i><b>3.6</b> Assessment - Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#confidence-intervals"><i class="fa fa-check"></i><b>4.1</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#a-monte-carlo-simulation-for-confidence-intervals"><i class="fa fa-check"></i><b>4.2</b> A Monte Carlo Simulation for Confidence Intervals</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#the-correct-language"><i class="fa fa-check"></i><b>4.3</b> The Correct Language</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#power"><i class="fa fa-check"></i><b>4.4</b> Power</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#p-values"><i class="fa fa-check"></i><b>4.5</b> p-Values</a></li>
+<li class="chapter" data-level="4.6" data-path="section-3-overview.html"><a href="section-3-overview.html#another-explanation-of-p-values"><i class="fa fa-check"></i><b>4.6</b> Another Explanation of p-Values</a></li>
+<li class="chapter" data-level="4.7" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>4.7</b> Assessment - Confidence Intervals and p-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-aggregators"><i class="fa fa-check"></i><b>5.1</b> Poll Aggregators</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#pollsters-and-multilevel-models"><i class="fa fa-check"></i><b>5.2</b> Pollsters and Multilevel Models</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-data-and-pollster-bias"><i class="fa fa-check"></i><b>5.3</b> Poll Data and Pollster Bias</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#data-driven-models"><i class="fa fa-check"></i><b>5.4</b> Data-Driven Models</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---statistical-models"><i class="fa fa-check"></i><b>5.5</b> Assessment - Statistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#bayesian-statistics"><i class="fa fa-check"></i><b>6.1</b> Bayesian Statistics</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-theorem"><i class="fa fa-check"></i><b>6.2</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-in-practice"><i class="fa fa-check"></i><b>6.3</b> Bayes in Practice</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#the-hierarchical-model"><i class="fa fa-check"></i><b>6.4</b> The Hierarchical Model</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---bayesian-statistics"><i class="fa fa-check"></i><b>6.5</b> Assessment - Bayesian Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="section-6-overview.html"><a href="section-6-overview.html"><i class="fa fa-check"></i><b>7</b> Section 6 Overview</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="section-6-overview.html"><a href="section-6-overview.html#election-forecasting"><i class="fa fa-check"></i><b>7.1</b> Election Forecasting</a></li>
+<li class="chapter" data-level="7.2" data-path="section-6-overview.html"><a href="section-6-overview.html#mathematical-representations-of-models"><i class="fa fa-check"></i><b>7.2</b> Mathematical Representations of Models</a></li>
+<li class="chapter" data-level="7.3" data-path="section-6-overview.html"><a href="section-6-overview.html#predicting-the-electoral-college"><i class="fa fa-check"></i><b>7.3</b> Predicting the Electoral College</a></li>
+<li class="chapter" data-level="7.4" data-path="section-6-overview.html"><a href="section-6-overview.html#forecasting"><i class="fa fa-check"></i><b>7.4</b> Forecasting</a></li>
+<li class="chapter" data-level="7.5" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---election-forecasting"><i class="fa fa-check"></i><b>7.5</b> Assessment - Election Forecasting</a></li>
+<li class="chapter" data-level="7.6" data-path="section-6-overview.html"><a href="section-6-overview.html#the-t-distribution"><i class="fa fa-check"></i><b>7.6</b> The t-Distribution</a></li>
+<li class="chapter" data-level="7.7" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---the-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Assessment - The t-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="section-7-overview.html"><a href="section-7-overview.html"><i class="fa fa-check"></i><b>8</b> Section 7 Overview</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="section-7-overview.html"><a href="section-7-overview.html#association-tests"><i class="fa fa-check"></i><b>8.1</b> Association Tests</a></li>
+<li class="chapter" data-level="8.2" data-path="section-7-overview.html"><a href="section-7-overview.html#chi-squared-tests"><i class="fa fa-check"></i><b>8.2</b> Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.3" data-path="section-7-overview.html"><a href="section-7-overview.html#assessment---association-and-chi-squared-tests"><i class="fa fa-check"></i><b>8.3</b> Assessment - Association and Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.4" data-path="section-7-overview.html"><a href="section-7-overview.html#comprehensive-assessment-brexit"><i class="fa fa-check"></i><b>8.4</b> Comprehensive Assessment: Brexit</a></li>
+<li class="chapter" data-level="8.5" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-1"><i class="fa fa-check"></i><b>8.5</b> Brexit poll analysis - Part 1</a></li>
+<li class="chapter" data-level="8.6" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-2"><i class="fa fa-check"></i><b>8.6</b> Brexit poll analysis - Part 2</a></li>
+<li class="chapter" data-level="8.7" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-3"><i class="fa fa-check"></i><b>8.7</b> Brexit poll analysis - Part 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Inference and Modeling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-1-overview" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Section 1 Overview</h1>
+<p>Section 1 introduces you to parameters and estimates.</p>
+<p>After completing Section 1, you will be able to:</p>
+<ul>
+<li>Understand how to use a sampling model to perform a poll.</li>
+<li>Explain the terms <strong>population</strong>, <strong>parameter</strong>, and <strong>sample</strong> as they relate to statistical inference.</li>
+<li>Use a sample to estimate the population proportion from the sample average.</li>
+<li>Calculate the expected value and standard error of the sample average.</li>
+</ul>
+<div id="sampling-model-parameters-and-estimates" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Sampling Model Parameters and Estimates</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sampling-model-for-polls">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#populations-samples-parameters-and-estimates">here; first part</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The task of statistical inference is to estimate an unknown population parameter using observed data from a sample.</li>
+<li>In a sampling model, the collection of elements in the urn is called the <em>population</em>.</li>
+<li>A <em>parameter</em> is a number that summarizes data for an entire population.</li>
+<li>A <em>sample</em> is observed data from a subset of the population.</li>
+<li>An <em>estimate</em> is a summary of the observed data about a parameter that we believe is informative. It is a data-driven guess of the population parameter.</li>
+<li>We want to predict the proportion of the blue beads in the urn, the parameter <span class="math inline">\(p\)</span> . The proportion of red beads in the urn is <span class="math inline">\(1 - p\)</span> and the <em>spread</em> is <span class="math inline">\(2p - 1\)</span>.</li>
+<li>The sample proportion is a random variable. Sampling gives random results drawn from the population distribution.</li>
+</ul>
+<p><em>Code: Function for taking a random draw from a specific urn</em></p>
+<p>The <strong>dslabs</strong> package includes a function for taking a random draw of size <span class="math inline">\(n\)</span> from the urn:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb1-2"><a href="section-1-overview.html#cb1-2" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
+<span id="cb1-3"><a href="section-1-overview.html#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="section-1-overview.html#cb1-4" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="section-1-overview.html#cb1-5" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb1-6"><a href="section-1-overview.html#cb1-6" aria-hidden="true"></a><span class="kw">take_poll</span>(<span class="dv">25</span>)    <span class="co"># draw 25 beads</span></span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="the-sample-average" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> The Sample Average</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sample-average">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#parameters">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Many common data science tasks can be framed as estimating a parameter from a sample.</li>
+<li>We illustrate statistical inference by walking through the process to estimate <span class="math inline">\(p\)</span>. From the estimate of <span class="math inline">\(p\)</span>, we can easily calculate an estimate of the spread, <span class="math inline">\(2p - 1\)</span>.</li>
+<li>Consider the random variable <span class="math inline">\(X\)</span> that is 1 if a blue bead is chosen and 0 if a red bead is chosen. The proportion of blue beads in <span class="math inline">\(N\)</span> draws is the average of the draws <span class="math inline">\(X_1,...,X_N\)</span>.</li>
+<li><span class="math inline">\(\bar{X}\)</span> is the <em>sample average</em>. In statistics, a bar on top of a symbol denotes the average. <span class="math inline">\(\bar{X}\)</span> is a random variable because it is the average of random draws - each time we take a sample, <span class="math inline">\(\bar{X}\)</span> is different.</li>
+</ul>
+<p><span class="math inline">\(\bar{X} = \frac{X_1+X_2+...+X_N}{N}\)</span></p>
+<ul>
+<li>The number of blue beads drawn in N draws, <span class="math inline">\(N\bar{X}\)</span>, is <span class="math inline">\(N\)</span> times the proportion of values in the urn. However, we do not know the true proportion: we are trying to estimate this parameter <span class="math inline">\(p\)</span>.</li>
+</ul>
+</div>
+<div id="polling-versus-forecasting" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Polling versus Forecasting</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#polling-versus-forecasting">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>A poll taken in advance of an election estimates <span class="math inline">\(p\)</span> for that moment, not for election day.</li>
+<li>In order to predict election results, forecasters try to use early estimates of <span class="math inline">\(p\)</span> to predict <span class="math inline">\(p\)</span> on election day. We discuss some approaches in later sections.</li>
+</ul>
+</div>
+<div id="properties-of-our-estimate" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Properties of Our Estimate</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#properties-of-our-estimate-expected-value-and-standard-error">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>When interpreting values of <span class="math inline">\(\bar{X}\)</span>, it is important to remember that <span class="math inline">\(\bar{X}\)</span> is a random variable with an expected value and standard error that represents the sample proportion of positive events.</li>
+<li>The expected value of <span class="math inline">\(\bar{X}\)</span> is the parameter of interest <span class="math inline">\(p\)</span>. This follows from the fact that <span class="math inline">\(\bar{X}\)</span> is the sum of independent draws of a random variable times a constant <span class="math inline">\(1/N\)</span>.</li>
+</ul>
+<p><span class="math inline">\(\mbox{E}(\bar{X}) = p\)</span></p>
+<ul>
+<li>As the number of draws <span class="math inline">\(N\)</span> increases, the standard error of our estimate <span class="math inline">\(\bar{X}\)</span> decreases. The standard error of the average of <span class="math inline">\(\bar{X}\)</span> over <span class="math inline">\(N\)</span> draws is:</li>
+</ul>
+<p><span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt{p(1-p)/N}\)</span></p>
+<ul>
+<li>In theory, we can get more accurate estimates of <span class="math inline">\(p\)</span> by increasing <span class="math inline">\(N\)</span>. In practice, there are limits on the size of <span class="math inline">\(N\)</span> due to costs, as well as other factors we discuss later.</li>
+<li>We can also use other random variable equations to determine the expected value of the sum of draws <span class="math inline">\(\mbox{E}(S)\)</span> and standard error of the sum of draws <span class="math inline">\(\mbox{SE}(S)\)</span>.</li>
+</ul>
+<p><span class="math inline">\(\mbox{E}(S) = Np\)</span></p>
+<p><span class="math inline">\(\mbox{SE}(S) = \sqrt{Np(1-p)}\)</span></p>
+</div>
+<div id="assessment---parameters-and-estimates" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Assessment - Parameters and Estimates</h2>
+<ol style="list-style-type: decimal">
+<li>Suppose you poll a population in which a proportion <span class="math inline">\(p\)</span> of voters are Democrats and <span class="math inline">\(1-p\)</span> are Republicans.</li>
+</ol>
+<p>Your sample size is <span class="math inline">\(N = 25\)</span>. Consider the random variable <span class="math inline">\(S\)</span>, which is the <strong>total</strong> number of Democrats in your sample.</p>
+<p>What is the expected value of this random variable <span class="math inline">\(S\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <span class="math inline">\(\mbox{E}(S) = 25(1−p)\)</span></li>
+<li><input type="checkbox" disabled="" checked="" />
+B. <span class="math inline">\(\mbox{E}(S) = 25p\)</span></li>
+<li><input type="checkbox" disabled="" />
+C. <span class="math inline">\(\mbox{E}(S) = \sqrt{25p(1−p)}\)</span></li>
+<li><input type="checkbox" disabled="" />
+D. <span class="math inline">\(\mbox{E}(S) = p\)</span></li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Again, consider the random variable <span class="math inline">\(S\)</span>, which is the <strong>total</strong> number of Democrats in your sample of 25 voters.</li>
+</ol>
+<p>The variable <span class="math inline">\(p\)</span> describes the proportion of Democrats in the sample, whereas <span class="math inline">\(1-p\)</span> describes the proportion of Republicans.</p>
+<p>What is the standard error of <span class="math inline">\(S\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <span class="math inline">\(\mbox{SE}(S) = 25p(1−p)\)</span></li>
+<li><input type="checkbox" disabled="" />
+B. <span class="math inline">\(\mbox{SE}(S) = \sqrt{25p}\)</span></li>
+<li><input type="checkbox" disabled="" />
+C. <span class="math inline">\(\mbox{SE}(S) = 25(1−p)\)</span></li>
+<li><input type="checkbox" disabled="" checked="" />
+D. <span class="math inline">\(\mbox{SE}(S) = \sqrt{25p(1−p)}\)</span></li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Consider the random variable <span class="math inline">\(S/N\)</span>, which is equivalent to the sample average that we have been denoting as <span class="math inline">\(\bar{X}\)</span>.</li>
+</ol>
+<p>The variable <span class="math inline">\(N\)</span> represents the sample size and <span class="math inline">\(p\)</span> is the proportion of Democrats in the population.</p>
+<p>What is the expected value of <span class="math inline">\(\bar{X}\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. <span class="math inline">\(\mbox{E}(\bar{X}) = p\)</span></li>
+<li><input type="checkbox" disabled="" />
+B. <span class="math inline">\(\mbox{E}(\bar{X}) = Np\)</span></li>
+<li><input type="checkbox" disabled="" />
+C. <span class="math inline">\(\mbox{E}(\bar{X}) = N(1−p)\)</span></li>
+<li><input type="checkbox" disabled="" />
+D. <span class="math inline">\(\mbox{E}(\bar{X}) = 1−p\)</span></li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>What is the standard error of the sample average, <span class="math inline">\(\bar{X}\)</span>?</li>
+</ol>
+<p>The variable <span class="math inline">\(N\)</span> represents the sample size and <span class="math inline">\(p\)</span> is the proportion of Democrats in the population.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt{Np(1−p)}\)</span></li>
+<li><input type="checkbox" disabled="" checked="" />
+B. <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt{p(1−p)/N}\)</span></li>
+<li><input type="checkbox" disabled="" />
+C. <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt{p(1−p)}\)</span></li>
+<li><input type="checkbox" disabled="" />
+D. <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt N\)</span></li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Write a line of code that calculates the standard error <code>se</code> of a sample average when you poll 25 people in the population.</li>
+</ol>
+<p>Generate a sequence of 100 proportions of Democrats <code>p</code> that vary from 0 (no Democrats) to 1 (all Democrats).</p>
+<p>Plot <code>se</code> versus <code>p</code> for the 100 different proportions.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="section-1-overview.html#cb2-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
+<span id="cb2-2"><a href="section-1-overview.html#cb2-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
+<span id="cb2-3"><a href="section-1-overview.html#cb2-3" aria-hidden="true"></a></span>
+<span id="cb2-4"><a href="section-1-overview.html#cb2-4" aria-hidden="true"></a><span class="co"># Create a variable `p` that contains 100 proportions ranging from 0 to 1 using the `seq` function</span></span>
+<span id="cb2-5"><a href="section-1-overview.html#cb2-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb2-6"><a href="section-1-overview.html#cb2-6" aria-hidden="true"></a></span>
+<span id="cb2-7"><a href="section-1-overview.html#cb2-7" aria-hidden="true"></a><span class="co"># Create a variable `se` that contains the standard error of each sample average</span></span>
+<span id="cb2-8"><a href="section-1-overview.html#cb2-8" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
+<span id="cb2-9"><a href="section-1-overview.html#cb2-9" aria-hidden="true"></a></span>
+<span id="cb2-10"><a href="section-1-overview.html#cb2-10" aria-hidden="true"></a><span class="co"># Plot `p` on the x-axis and `se` on the y-axis</span></span>
+<span id="cb2-11"><a href="section-1-overview.html#cb2-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Using the same code as in the previous exercise, create a for-loop that generates three plots of <code>p</code> versus <code>se</code> when the sample sizes equal <span class="math inline">\(N = 25\)</span>, <span class="math inline">\(N = 100\)</span>, and <span class="math inline">\(N = 1000\)</span>.</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="section-1-overview.html#cb3-1" aria-hidden="true"></a><span class="co"># The vector `p` contains 100 proportions of Democrats ranging from 0 to 1 using the `seq` function</span></span>
+<span id="cb3-2"><a href="section-1-overview.html#cb3-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb3-3"><a href="section-1-overview.html#cb3-3" aria-hidden="true"></a></span>
+<span id="cb3-4"><a href="section-1-overview.html#cb3-4" aria-hidden="true"></a><span class="co"># The vector `sample_sizes` contains the three sample sizes</span></span>
+<span id="cb3-5"><a href="section-1-overview.html#cb3-5" aria-hidden="true"></a>sample_sizes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">1000</span>)</span>
+<span id="cb3-6"><a href="section-1-overview.html#cb3-6" aria-hidden="true"></a></span>
+<span id="cb3-7"><a href="section-1-overview.html#cb3-7" aria-hidden="true"></a><span class="co"># Write a for-loop that calculates the standard error `se` for every value of `p` for each of the three samples sizes `N` in the vector `sample_sizes`. Plot the three graphs, using the `ylim` argument to standardize the y-axis across all three plots.</span></span>
+<span id="cb3-8"><a href="section-1-overview.html#cb3-8" aria-hidden="true"></a><span class="cf">for</span> (N <span class="cf">in</span> sample_sizes)</span>
+<span id="cb3-9"><a href="section-1-overview.html#cb3-9" aria-hidden="true"></a>{</span>
+<span id="cb3-10"><a href="section-1-overview.html#cb3-10" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
+<span id="cb3-11"><a href="section-1-overview.html#cb3-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se,<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.1</span>))</span>
+<span id="cb3-12"><a href="section-1-overview.html#cb3-12" aria-hidden="true"></a>}</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-3-2.png" width="672" /><img src="_main_files/figure-html/unnamed-chunk-3-3.png" width="672" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Our estimate for the difference in proportions of Democrats and Republicans is <span class="math inline">\(d = \bar{X} − (1 − \bar{X})\)</span>.</li>
+</ol>
+<p>Which derivation correctly uses the rules we learned about sums of random variables and scaled random variables to derive the expected value of <span class="math inline">\(d\)</span></p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <span class="math inline">\(\mbox{E} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{E} \left[2 \bar{X} − 1 \right] = 2\mbox{E} \left[\bar{X} \right] - 1 = N(2p − 1) = Np − N(1 − p)\)</span></li>
+<li><input type="checkbox" disabled="" />
+B. <span class="math inline">\(\mbox{E} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{E} \left[\bar{X} − 1 \right] = \mbox{E} \left[\bar{X} \right] − 1 = p − 1\)</span></li>
+<li><input type="checkbox" disabled="" />
+C. <span class="math inline">\(\mbox{E} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{E} \left[2 \bar{X} − 1 \right] = 2\mbox{E} \left[\bar{X} \right] - 1 = 2 \sqrt{p(1 − p)} − 1 = p − (1 − p)\)</span></li>
+<li><input type="checkbox" disabled="" checked="" />
+D. <span class="math inline">\(\mbox{E} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{E} \left[2 \bar{X} − 1 \right] = 2\mbox{E} \left[\bar{X} \right] - 1 = 2p − 1 = p − (1 − p)\)</span></li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li>Our estimate for the difference in proportions of Democrats and Republicans is <span class="math inline">\(d = \bar{X} − (1 − \bar{X})\)</span>.</li>
+</ol>
+<p>Which derivation correctly uses the rules we learned about sums of random variables and scaled random variables to derive the standard error of <span class="math inline">\(d\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <span class="math inline">\(\mbox{SE} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{SE} \left[2 \bar{X} − 1 \right] = 2\mbox{SE} \left[\bar{X} \right] = 2 \sqrt{p/N}\)</span></li>
+<li><input type="checkbox" disabled="" />
+B. <span class="math inline">\(\mbox{SE} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{SE} \left[2 \bar{X} − 1 \right] = 2\mbox{SE} \left[\bar{X} - 1 \right] = 2 \sqrt{p(1 − p)/N} − 1\)</span></li>
+<li><input type="checkbox" disabled="" checked="" />
+C. <span class="math inline">\(\mbox{SE} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{SE} \left[2 \bar{X} − 1 \right] = 2\mbox{SE} \left[\bar{X} \right] = 2 \sqrt{p(1 − p)/N}\)</span></li>
+<li><input type="checkbox" disabled="" />
+D. <span class="math inline">\(\mbox{SE} \left[\bar{X} − (1 − \bar{X}) \right] = \mbox{SE} \left[\bar{X} − 1 \right] = \mbox{SE} \left [\bar{X} \right] = \sqrt{p(1 − p)/N}\)</span></li>
+</ul>
+<ol start="9" style="list-style-type: decimal">
+<li>Say the actual proportion of Democratic voters is <span class="math inline">\(p = 0.45\)</span>.</li>
+</ol>
+<p>In this case, the Republican party is winning by a relatively large margin of <span class="math inline">\(d = -0.1\)</span>, or a 10% margin of victory. What is the standard error of the spread <span class="math inline">\(2 \bar{X} − 1\)</span> in this case?</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="section-1-overview.html#cb4-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
+<span id="cb4-2"><a href="section-1-overview.html#cb4-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
+<span id="cb4-3"><a href="section-1-overview.html#cb4-3" aria-hidden="true"></a></span>
+<span id="cb4-4"><a href="section-1-overview.html#cb4-4" aria-hidden="true"></a><span class="co"># `p` represents the proportion of Democratic voters</span></span>
+<span id="cb4-5"><a href="section-1-overview.html#cb4-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb4-6"><a href="section-1-overview.html#cb4-6" aria-hidden="true"></a></span>
+<span id="cb4-7"><a href="section-1-overview.html#cb4-7" aria-hidden="true"></a><span class="co"># Calculate the standard error of the spread. Print this value to the console.</span></span>
+<span id="cb4-8"><a href="section-1-overview.html#cb4-8" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>((p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
+<pre><code>## [1] 0.199</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>So far we have said that the difference between the proportion of Democratic voters and Republican voters is about 10% and that the standard error of this spread is about 0.2 when <span class="math inline">\(N = 25\)</span>.</li>
+</ol>
+<p>Select the statement that explains why this sample size is sufficient or not.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. This sample size is sufficient because the expected value of our estimate <span class="math inline">\(2 \bar{X} − 1\)</span> is <span class="math inline">\(d\)</span> so our prediction will be right on.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. This sample size is too small because the standard error is larger than the spread.</li>
+<li><input type="checkbox" disabled="" />
+C. This sample size is sufficient because the standard error of about 0.2 is much smaller than the spread of 10%.</li>
+<li><input type="checkbox" disabled="" />
+D. Without knowing <code>p</code>, we have no way of knowing that increasing our sample size would actually improve our standard error.</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="learning-objectives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-2-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Section 6 Overview | Data Science Inference and Modeling</title>
+  <meta name="description" content="7 Section 6 Overview | Data Science Inference and Modeling" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Section 6 Overview | Data Science Inference and Modeling" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Section 6 Overview | Data Science Inference and Modeling" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-5-overview.html"/>
+<link rel="next" href="section-7-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-parameters-and-estimates"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Parameters and Estimates</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Confidence Intervals and p-Values</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-statistical-models"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Statistical Models</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-bayesian-statistics"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Bayesian Statistics</a></li>
+<li class="chapter" data-level="1.1.6" data-path="learning-objectives.html"><a href="learning-objectives.html#section-6-election-forecasting"><i class="fa fa-check"></i><b>1.1.6</b> Section 6: Election Forecasting</a></li>
+<li class="chapter" data-level="1.1.7" data-path="learning-objectives.html"><a href="learning-objectives.html#section-7-association-tests"><i class="fa fa-check"></i><b>1.1.7</b> Section 7: Association Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#introduction-to-inference"><i class="fa fa-check"></i><b>1.2</b> Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#sampling-model-parameters-and-estimates"><i class="fa fa-check"></i><b>2.1</b> Sampling Model Parameters and Estimates</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#the-sample-average"><i class="fa fa-check"></i><b>2.2</b> The Sample Average</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#polling-versus-forecasting"><i class="fa fa-check"></i><b>2.3</b> Polling versus Forecasting</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#properties-of-our-estimate"><i class="fa fa-check"></i><b>2.4</b> Properties of Our Estimate</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---parameters-and-estimates"><i class="fa fa-check"></i><b>2.5</b> Assessment - Parameters and Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>3.1</b> The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#margin-of-error"><i class="fa fa-check"></i><b>3.2</b> Margin of Error</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#a-monte-carlo-simulation-for-the-clt"><i class="fa fa-check"></i><b>3.3</b> A Monte Carlo Simulation for the CLT</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#the-spread"><i class="fa fa-check"></i><b>3.4</b> The Spread</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#bias-why-not-run-a-very-large-poll"><i class="fa fa-check"></i><b>3.5</b> Bias: Why Not Run a Very Large Poll?</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---introduction-to-inference"><i class="fa fa-check"></i><b>3.6</b> Assessment - Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#confidence-intervals"><i class="fa fa-check"></i><b>4.1</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#a-monte-carlo-simulation-for-confidence-intervals"><i class="fa fa-check"></i><b>4.2</b> A Monte Carlo Simulation for Confidence Intervals</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#the-correct-language"><i class="fa fa-check"></i><b>4.3</b> The Correct Language</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#power"><i class="fa fa-check"></i><b>4.4</b> Power</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#p-values"><i class="fa fa-check"></i><b>4.5</b> p-Values</a></li>
+<li class="chapter" data-level="4.6" data-path="section-3-overview.html"><a href="section-3-overview.html#another-explanation-of-p-values"><i class="fa fa-check"></i><b>4.6</b> Another Explanation of p-Values</a></li>
+<li class="chapter" data-level="4.7" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>4.7</b> Assessment - Confidence Intervals and p-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-aggregators"><i class="fa fa-check"></i><b>5.1</b> Poll Aggregators</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#pollsters-and-multilevel-models"><i class="fa fa-check"></i><b>5.2</b> Pollsters and Multilevel Models</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-data-and-pollster-bias"><i class="fa fa-check"></i><b>5.3</b> Poll Data and Pollster Bias</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#data-driven-models"><i class="fa fa-check"></i><b>5.4</b> Data-Driven Models</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---statistical-models"><i class="fa fa-check"></i><b>5.5</b> Assessment - Statistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#bayesian-statistics"><i class="fa fa-check"></i><b>6.1</b> Bayesian Statistics</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-theorem"><i class="fa fa-check"></i><b>6.2</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-in-practice"><i class="fa fa-check"></i><b>6.3</b> Bayes in Practice</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#the-hierarchical-model"><i class="fa fa-check"></i><b>6.4</b> The Hierarchical Model</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---bayesian-statistics"><i class="fa fa-check"></i><b>6.5</b> Assessment - Bayesian Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="section-6-overview.html"><a href="section-6-overview.html"><i class="fa fa-check"></i><b>7</b> Section 6 Overview</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="section-6-overview.html"><a href="section-6-overview.html#election-forecasting"><i class="fa fa-check"></i><b>7.1</b> Election Forecasting</a></li>
+<li class="chapter" data-level="7.2" data-path="section-6-overview.html"><a href="section-6-overview.html#mathematical-representations-of-models"><i class="fa fa-check"></i><b>7.2</b> Mathematical Representations of Models</a></li>
+<li class="chapter" data-level="7.3" data-path="section-6-overview.html"><a href="section-6-overview.html#predicting-the-electoral-college"><i class="fa fa-check"></i><b>7.3</b> Predicting the Electoral College</a></li>
+<li class="chapter" data-level="7.4" data-path="section-6-overview.html"><a href="section-6-overview.html#forecasting"><i class="fa fa-check"></i><b>7.4</b> Forecasting</a></li>
+<li class="chapter" data-level="7.5" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---election-forecasting"><i class="fa fa-check"></i><b>7.5</b> Assessment - Election Forecasting</a></li>
+<li class="chapter" data-level="7.6" data-path="section-6-overview.html"><a href="section-6-overview.html#the-t-distribution"><i class="fa fa-check"></i><b>7.6</b> The t-Distribution</a></li>
+<li class="chapter" data-level="7.7" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---the-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Assessment - The t-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="section-7-overview.html"><a href="section-7-overview.html"><i class="fa fa-check"></i><b>8</b> Section 7 Overview</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="section-7-overview.html"><a href="section-7-overview.html#association-tests"><i class="fa fa-check"></i><b>8.1</b> Association Tests</a></li>
+<li class="chapter" data-level="8.2" data-path="section-7-overview.html"><a href="section-7-overview.html#chi-squared-tests"><i class="fa fa-check"></i><b>8.2</b> Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.3" data-path="section-7-overview.html"><a href="section-7-overview.html#assessment---association-and-chi-squared-tests"><i class="fa fa-check"></i><b>8.3</b> Assessment - Association and Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.4" data-path="section-7-overview.html"><a href="section-7-overview.html#comprehensive-assessment-brexit"><i class="fa fa-check"></i><b>8.4</b> Comprehensive Assessment: Brexit</a></li>
+<li class="chapter" data-level="8.5" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-1"><i class="fa fa-check"></i><b>8.5</b> Brexit poll analysis - Part 1</a></li>
+<li class="chapter" data-level="8.6" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-2"><i class="fa fa-check"></i><b>8.6</b> Brexit poll analysis - Part 2</a></li>
+<li class="chapter" data-level="8.7" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-3"><i class="fa fa-check"></i><b>8.7</b> Brexit poll analysis - Part 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Inference and Modeling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-6-overview" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Section 6 Overview</h1>
+<p>In Section 6, you will learn about election forecasting, building on what you’ve learned in the previous sections about statistical modeling and Bayesian statistics.</p>
+<p>After completing Section 6, you will be able to:</p>
+<ul>
+<li>Understand how pollsters use hierarchical models to forecast the results of elections.</li>
+<li>Incorporate multiple sources of variability into a mathematical model to make predictions.</li>
+<li>Construct confidence intervals that better model deviations such as those seen in election data using the t-distribution.</li>
+</ul>
+<div id="election-forecasting" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Election Forecasting</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayesian-approach">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In our model:
+<ul>
+<li>The spread <span class="math inline">\(d \sim N(\mu, \tau)\)</span> describes our best guess in the absence of polling data. We set <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\tau = 0.035\)</span> using historical data.</li>
+<li>The average of observed data <span class="math inline">\(\bar{X} \mid d \sim N(d, \sigma)\)</span> describes randomness due to sampling and the pollster effect.</li>
+</ul></li>
+<li>Because the posterior distribution is normal, we can report a 95% <em>credible interval</em> that has a 95% chance of overlapping the parameter using <span class="math inline">\(\mbox{E}(p \mid Y)\)</span> and <span class="math inline">\(\mbox{SE}(p \mid Y)\)</span>.</li>
+<li>Given an estimate of <span class="math inline">\(\mbox{E}(p \mid Y)\)</span> and <span class="math inline">\(\mbox{SE}(p \mid Y)\)</span>, we can use <code>pnorm</code> to compute the probability that <span class="math inline">\(d&gt;0\)</span>.</li>
+<li>It is common to see a general bias that affects all pollsters in the same way. This bias cannot be predicted or measured before the election. We will include a term in later models to account for this variability.</li>
+</ul>
+<p><em>Code: Definition of results object</em></p>
+<p>This code defines the results object used for empirical Bayes election forecasting.</p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="section-6-overview.html#cb177-1" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb177-2"><a href="section-6-overview.html#cb177-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-31&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb177-3"><a href="section-6-overview.html#cb177-3" aria-hidden="true"></a><span class="st">                 </span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;A-&quot;</span>, <span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade))) <span class="op">%&gt;%</span></span>
+<span id="cb177-4"><a href="section-6-overview.html#cb177-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
+<span id="cb177-5"><a href="section-6-overview.html#cb177-5" aria-hidden="true"></a></span>
+<span id="cb177-6"><a href="section-6-overview.html#cb177-6" aria-hidden="true"></a>one_poll_per_pollster &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb177-7"><a href="section-6-overview.html#cb177-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(enddate <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(enddate)) <span class="op">%&gt;%</span></span>
+<span id="cb177-8"><a href="section-6-overview.html#cb177-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
+<span id="cb177-9"><a href="section-6-overview.html#cb177-9" aria-hidden="true"></a></span>
+<span id="cb177-10"><a href="section-6-overview.html#cb177-10" aria-hidden="true"></a>results &lt;-<span class="st"> </span>one_poll_per_pollster <span class="op">%&gt;%</span></span>
+<span id="cb177-11"><a href="section-6-overview.html#cb177-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">se =</span> <span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(spread))) <span class="op">%&gt;%</span></span>
+<span id="cb177-12"><a href="section-6-overview.html#cb177-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">start =</span> avg <span class="op">-</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se, <span class="dt">end =</span> avg <span class="op">+</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se)</span></code></pre></div>
+<p><em>Code: Computing the posterior mean, standard error, credible interval and probability</em></p>
+<p>Note that to compute an exact 95% credible interval, we would use <code>qnorm(.975)</code> instead of 1.96.</p>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="section-6-overview.html#cb178-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb178-2"><a href="section-6-overview.html#cb178-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.035</span></span>
+<span id="cb178-3"><a href="section-6-overview.html#cb178-3" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
+<span id="cb178-4"><a href="section-6-overview.html#cb178-4" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb178-5"><a href="section-6-overview.html#cb178-5" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb178-6"><a href="section-6-overview.html#cb178-6" aria-hidden="true"></a>posterior_mean &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
+<span id="cb178-7"><a href="section-6-overview.html#cb178-7" aria-hidden="true"></a>posterior_se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
+<span id="cb178-8"><a href="section-6-overview.html#cb178-8" aria-hidden="true"></a></span>
+<span id="cb178-9"><a href="section-6-overview.html#cb178-9" aria-hidden="true"></a>posterior_mean</span></code></pre></div>
+<pre><code>## [1] 0.0281</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="section-6-overview.html#cb180-1" aria-hidden="true"></a>posterior_se</span></code></pre></div>
+<pre><code>## [1] 0.00615</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="section-6-overview.html#cb182-1" aria-hidden="true"></a><span class="co"># 95% credible interval</span></span>
+<span id="cb182-2"><a href="section-6-overview.html#cb182-2" aria-hidden="true"></a>posterior_mean <span class="op">+</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="fl">1.96</span>, <span class="fl">1.96</span>)<span class="op">*</span>posterior_se</span></code></pre></div>
+<pre><code>## [1] 0.0160 0.0401</code></pre>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="section-6-overview.html#cb184-1" aria-hidden="true"></a><span class="co"># probability of d &gt; 0</span></span>
+<span id="cb184-2"><a href="section-6-overview.html#cb184-2" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">0</span>, posterior_mean, posterior_se)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+</div>
+<div id="mathematical-representations-of-models" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Mathematical Representations of Models</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#mathematical-representations-of-models">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>If we collect several polls with measured spreads <span class="math inline">\(X_1, ..., X_j\)</span> with a sample size of <span class="math inline">\(N\)</span> , these random variables have expected value <span class="math inline">\(d\)</span> and standard error <span class="math inline">\(2\sqrt{p(1-p)/N}\)</span>.</li>
+<li>We represent each measurement as <span class="math inline">\(X_{i,j} = d + b + h_i + \epsilon_{i,j}\)</span> where:
+<ul>
+<li>The index <span class="math inline">\(i\)</span> represents the different pollsters</li>
+<li>The index <span class="math inline">\(j\)</span> represents the different polls</li>
+<li><span class="math inline">\(X_{i,j}\)</span> is the <span class="math inline">\(j\)</span>th poll by the <span class="math inline">\(i\)</span>th pollster</li>
+<li><span class="math inline">\(d\)</span> is the actual spread of the election</li>
+<li><span class="math inline">\(b\)</span> is the general bias affecting all pollsters</li>
+<li><span class="math inline">\(h_i\)</span> represents the house effect for the <span class="math inline">\(i\)</span>th pollster</li>
+<li><span class="math inline">\(\epsilon_{i,j}\)</span> represents the random error associated with the <span class="math inline">\(i,j\)</span>th poll.</li>
+</ul></li>
+<li>The sample average is now <span class="math inline">\(\bar{X} = d + b + \frac{1}{N} \sum\limits_{i=1}^{N} X_i\)</span> with standard deviation <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt{\sigma^2/N + \sigma_b^2}\)</span>.</li>
+<li>The standard error of the general bias <span class="math inline">\(\sigma_b\)</span> does not get reduced by averaging multiple polls, which increases the variability of our final estimate.</li>
+</ul>
+<p><em>Code: Simulated data with <span class="math inline">\(X_j = d + \epsilon_j\)</span></em></p>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-6-overview.html#cb186-1" aria-hidden="true"></a>J &lt;-<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb186-2"><a href="section-6-overview.html#cb186-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">2000</span></span>
+<span id="cb186-3"><a href="section-6-overview.html#cb186-3" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="fl">.021</span></span>
+<span id="cb186-4"><a href="section-6-overview.html#cb186-4" aria-hidden="true"></a>p &lt;-<span class="st"> </span>(d<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb186-5"><a href="section-6-overview.html#cb186-5" aria-hidden="true"></a>X &lt;-<span class="st"> </span>d <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(J, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
+<p><em>Code: Simulated data with <span class="math inline">\(X_j = d + \epsilon_{i,j}\)</span></em></p>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="section-6-overview.html#cb187-1" aria-hidden="true"></a>I &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb187-2"><a href="section-6-overview.html#cb187-2" aria-hidden="true"></a>J &lt;-<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb187-3"><a href="section-6-overview.html#cb187-3" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">2000</span></span>
+<span id="cb187-4"><a href="section-6-overview.html#cb187-4" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="fl">.021</span></span>
+<span id="cb187-5"><a href="section-6-overview.html#cb187-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span>(d<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb187-6"><a href="section-6-overview.html#cb187-6" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span>I, <span class="cf">function</span>(i){</span>
+<span id="cb187-7"><a href="section-6-overview.html#cb187-7" aria-hidden="true"></a>    d <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(J, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span>
+<span id="cb187-8"><a href="section-6-overview.html#cb187-8" aria-hidden="true"></a>})</span></code></pre></div>
+<p><em>Code: Simulated data with <span class="math inline">\(X_{i,j} = d + h_i + \epsilon_{i,j}\)</span></em></p>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="section-6-overview.html#cb188-1" aria-hidden="true"></a>I &lt;-<span class="st"> </span><span class="dv">5</span></span>
+<span id="cb188-2"><a href="section-6-overview.html#cb188-2" aria-hidden="true"></a>J &lt;-<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb188-3"><a href="section-6-overview.html#cb188-3" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">2000</span></span>
+<span id="cb188-4"><a href="section-6-overview.html#cb188-4" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="fl">.021</span></span>
+<span id="cb188-5"><a href="section-6-overview.html#cb188-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span>(d<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb188-6"><a href="section-6-overview.html#cb188-6" aria-hidden="true"></a>h &lt;-<span class="st"> </span><span class="kw">rnorm</span>(I, <span class="dv">0</span>, <span class="fl">0.025</span>)    <span class="co"># assume standard error of pollster-to-pollster variability is 0.025</span></span>
+<span id="cb188-7"><a href="section-6-overview.html#cb188-7" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span>I, <span class="cf">function</span>(i){</span>
+<span id="cb188-8"><a href="section-6-overview.html#cb188-8" aria-hidden="true"></a>    d <span class="op">+</span><span class="st"> </span><span class="kw">rnorm</span>(J, <span class="dv">0</span>, <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span>
+<span id="cb188-9"><a href="section-6-overview.html#cb188-9" aria-hidden="true"></a>})</span></code></pre></div>
+<p><em>Code: Calculating probability of <span class="math inline">\(d &gt; 0\)</span> with general bias</em></p>
+<p>Note that <code>sigma</code> now includes an estimate of the variability due to general bias <span class="math inline">\(\sigma_b = .025\)</span>.</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="section-6-overview.html#cb189-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb189-2"><a href="section-6-overview.html#cb189-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.035</span></span>
+<span id="cb189-3"><a href="section-6-overview.html#cb189-3" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(results<span class="op">$</span>se<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="fl">.025</span><span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb189-4"><a href="section-6-overview.html#cb189-4" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb189-5"><a href="section-6-overview.html#cb189-5" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb189-6"><a href="section-6-overview.html#cb189-6" aria-hidden="true"></a></span>
+<span id="cb189-7"><a href="section-6-overview.html#cb189-7" aria-hidden="true"></a>posterior_mean &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
+<span id="cb189-8"><a href="section-6-overview.html#cb189-8" aria-hidden="true"></a>posterior_se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
+<span id="cb189-9"><a href="section-6-overview.html#cb189-9" aria-hidden="true"></a></span>
+<span id="cb189-10"><a href="section-6-overview.html#cb189-10" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">0</span>, posterior_mean, posterior_se)</span></code></pre></div>
+<pre><code>## [1] 0.817</code></pre>
+</div>
+<div id="predicting-the-electoral-college" class="section level2" number="7.3">
+<h2><span class="header-section-number">7.3</span> Predicting the Electoral College</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#predicting-the-electoral-college">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In the US election, each state has a certain number of votes that are won all-or-nothing based on the popular vote result in that state (with minor exceptions not discussed here).</li>
+<li>We use the <code>left_join()</code> function to combine the number of electoral votes with our poll results.</li>
+<li>For each state, we apply a Bayesian approach to generate an Election Day <span class="math inline">\(d\)</span> . We keep our prior simple by assuming an expected value of 0 and a standard deviation based on recent history of 0.02.</li>
+<li>We can run a Monte Carlo simulation that for each iteration simulates poll results in each state using that state’s average and standard deviation, awards electoral votes for each state to Clinton if the spread is greater than 0, then compares the number of electoral votes won to the number of votes required to win the election (over 269).</li>
+<li>If we run a Monte Carlo simulation for the electoral college without accounting for general bias, we overestimate Clinton’s chances of winning at over 99%.</li>
+<li>If we include a general bias term, the estimated probability of Clinton winning decreases significantly.</li>
+</ul>
+<p><em>Code: Top 5 states ranked by electoral votes</em></p>
+<p>The results_us_election_2016 object is defined in the <strong>dslabs</strong> package:</p>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="section-6-overview.html#cb191-1" aria-hidden="true"></a><span class="kw">head</span>(results_us_election_<span class="dv">2016</span>)</span></code></pre></div>
+<pre><code>##          state electoral_votes clinton trump others
+## 1   California              55    61.7  31.6    6.7
+## 2        Texas              38    43.2  52.2    4.5
+## 3      Florida              29    47.8  49.0    3.2
+## 4     New York              29    59.0  36.5    4.5
+## 5     Illinois              20    55.8  38.8    5.4
+## 6 Pennsylvania              20    47.9  48.6    3.6</code></pre>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="section-6-overview.html#cb193-1" aria-hidden="true"></a>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(electoral_votes)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">5</span>, electoral_votes)</span></code></pre></div>
+<pre><code>##          state electoral_votes clinton trump others
+## 1   California              55    61.7  31.6    6.7
+## 2        Texas              38    43.2  52.2    4.5
+## 3      Florida              29    47.8  49.0    3.2
+## 4     New York              29    59.0  36.5    4.5
+## 5     Illinois              20    55.8  38.8    5.4
+## 6 Pennsylvania              20    47.9  48.6    3.6</code></pre>
+<p><em>Code: Computing the average and standard deviation for each state</em></p>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="section-6-overview.html#cb195-1" aria-hidden="true"></a>results &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb195-2"><a href="section-6-overview.html#cb195-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">!=</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb195-3"><a href="section-6-overview.html#cb195-3" aria-hidden="true"></a><span class="st">            </span><span class="op">!</span><span class="kw">grepl</span>(<span class="st">&quot;CD&quot;</span>, <span class="st">&quot;state&quot;</span>) <span class="op">&amp;</span></span>
+<span id="cb195-4"><a href="section-6-overview.html#cb195-4" aria-hidden="true"></a><span class="st">            </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-31&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb195-5"><a href="section-6-overview.html#cb195-5" aria-hidden="true"></a><span class="st">            </span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;A-&quot;</span>, <span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade))) <span class="op">%&gt;%</span></span>
+<span id="cb195-6"><a href="section-6-overview.html#cb195-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb195-7"><a href="section-6-overview.html#cb195-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span></span>
+<span id="cb195-8"><a href="section-6-overview.html#cb195-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">sd =</span> <span class="kw">sd</span>(spread), <span class="dt">n =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb195-9"><a href="section-6-overview.html#cb195-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">as.character</span>(state))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="section-6-overview.html#cb197-1" aria-hidden="true"></a><span class="co"># 10 closest races = battleground states</span></span>
+<span id="cb197-2"><a href="section-6-overview.html#cb197-2" aria-hidden="true"></a>results <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">abs</span>(avg))</span></code></pre></div>
+<pre><code>## # A tibble: 47 x 4
+##    state               avg     sd     n
+##    &lt;chr&gt;             &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;
+##  1 Florida         0.00356 0.0163     7
+##  2 North Carolina -0.00730 0.0306     9
+##  3 Ohio           -0.0104  0.0252     6
+##  4 Nevada          0.0169  0.0441     7
+##  5 Iowa           -0.0197  0.0437     3
+##  6 Michigan        0.0209  0.0203     6
+##  7 Arizona        -0.0326  0.0270     9
+##  8 Pennsylvania    0.0353  0.0116     9
+##  9 New Mexico      0.0389  0.0226     6
+## 10 Georgia        -0.0448  0.0238     4
+## # … with 37 more rows</code></pre>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="section-6-overview.html#cb199-1" aria-hidden="true"></a><span class="co"># joining electoral college votes and results</span></span>
+<span id="cb199-2"><a href="section-6-overview.html#cb199-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span><span class="kw">left_join</span>(results, results_us_election_<span class="dv">2016</span>, <span class="dt">by=</span><span class="st">&quot;state&quot;</span>)</span>
+<span id="cb199-3"><a href="section-6-overview.html#cb199-3" aria-hidden="true"></a></span>
+<span id="cb199-4"><a href="section-6-overview.html#cb199-4" aria-hidden="true"></a><span class="co"># states with no polls: note Rhode Island and District of Columbia = Democrat</span></span>
+<span id="cb199-5"><a href="section-6-overview.html#cb199-5" aria-hidden="true"></a>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="op">!</span>state <span class="op">%in%</span><span class="st"> </span>results<span class="op">$</span>state)</span></code></pre></div>
+<pre><code>##                  state electoral_votes clinton trump others
+## 1         Rhode Island               4    54.4  38.9    6.7
+## 2               Alaska               3    36.6  51.3   12.2
+## 3              Wyoming               3    21.9  68.2   10.0
+## 4 District of Columbia               3    90.9   4.1    5.0</code></pre>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="section-6-overview.html#cb201-1" aria-hidden="true"></a><span class="co"># assigns sd to states with just one poll as median of other sd values</span></span>
+<span id="cb201-2"><a href="section-6-overview.html#cb201-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span>results <span class="op">%&gt;%</span></span>
+<span id="cb201-3"><a href="section-6-overview.html#cb201-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">sd =</span> <span class="kw">ifelse</span>(<span class="kw">is.na</span>(sd), <span class="kw">median</span>(results<span class="op">$</span>sd, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), sd))</span></code></pre></div>
+<p><em>Code: Calculating the posterior mean and posterior standard error</em></p>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="section-6-overview.html#cb202-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb202-2"><a href="section-6-overview.html#cb202-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.02</span></span>
+<span id="cb202-3"><a href="section-6-overview.html#cb202-3" aria-hidden="true"></a>results <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sigma =</span> sd<span class="op">/</span><span class="kw">sqrt</span>(n),</span>
+<span id="cb202-4"><a href="section-6-overview.html#cb202-4" aria-hidden="true"></a>                   <span class="dt">B =</span> sigma<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb202-5"><a href="section-6-overview.html#cb202-5" aria-hidden="true"></a>                   <span class="dt">posterior_mean =</span> B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>avg,</span>
+<span id="cb202-6"><a href="section-6-overview.html#cb202-6" aria-hidden="true"></a>                   <span class="dt">posterior_se =</span> <span class="kw">sqrt</span>( <span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))) <span class="op">%&gt;%</span></span>
+<span id="cb202-7"><a href="section-6-overview.html#cb202-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">arrange</span>(<span class="kw">abs</span>(posterior_mean))</span></code></pre></div>
+<pre><code>## # A tibble: 47 x 12
+##    state               avg     sd     n electoral_votes clinton trump others   sigma      B posterior_mean posterior_se
+##    &lt;chr&gt;             &lt;dbl&gt;  &lt;dbl&gt; &lt;int&gt;           &lt;int&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;          &lt;dbl&gt;        &lt;dbl&gt;
+##  1 Florida         0.00356 0.0163     7              29    47.8  49      3.2 0.00618 0.0871        0.00325      0.00590
+##  2 North Carolina -0.00730 0.0306     9              15    46.2  49.8    4   0.0102  0.207        -0.00579      0.00909
+##  3 Iowa           -0.0197  0.0437     3               6    41.7  51.1    7.1 0.0252  0.614        -0.00762      0.0157 
+##  4 Ohio           -0.0104  0.0252     6              18    43.5  51.7    4.8 0.0103  0.210        -0.00823      0.00916
+##  5 Nevada          0.0169  0.0441     7               6    47.9  45.5    6.6 0.0167  0.410         0.00995      0.0128 
+##  6 Michigan        0.0209  0.0203     6              16    47.3  47.5    5.2 0.00827 0.146         0.0179       0.00764
+##  7 Arizona        -0.0326  0.0270     9              11    45.1  48.7    6.2 0.00898 0.168        -0.0272       0.00820
+##  8 New Mexico      0.0389  0.0226     6               5    48.3  40     11.7 0.00921 0.175         0.0321       0.00836
+##  9 Georgia        -0.0448  0.0238     4              16    45.9  51      3.1 0.0119  0.262        -0.0331       0.0102 
+## 10 Pennsylvania    0.0353  0.0116     9              20    47.9  48.6    3.6 0.00387 0.0361        0.0341       0.00380
+## # … with 37 more rows</code></pre>
+<p><em>Code: Monte Carlo simulation of Election Night results (no general bias)</em></p>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="section-6-overview.html#cb204-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb204-2"><a href="section-6-overview.html#cb204-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.02</span></span>
+<span id="cb204-3"><a href="section-6-overview.html#cb204-3" aria-hidden="true"></a>clinton_EV &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, {</span>
+<span id="cb204-4"><a href="section-6-overview.html#cb204-4" aria-hidden="true"></a>    results <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sigma =</span> sd<span class="op">/</span><span class="kw">sqrt</span>(n),</span>
+<span id="cb204-5"><a href="section-6-overview.html#cb204-5" aria-hidden="true"></a>                       <span class="dt">B =</span> sigma<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb204-6"><a href="section-6-overview.html#cb204-6" aria-hidden="true"></a>                       <span class="dt">posterior_mean =</span> B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>avg,</span>
+<span id="cb204-7"><a href="section-6-overview.html#cb204-7" aria-hidden="true"></a>                       <span class="dt">posterior_se =</span> <span class="kw">sqrt</span>( <span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>)),</span>
+<span id="cb204-8"><a href="section-6-overview.html#cb204-8" aria-hidden="true"></a>                       <span class="dt">simulated_result =</span> <span class="kw">rnorm</span>(<span class="kw">length</span>(posterior_mean), posterior_mean, posterior_se),</span>
+<span id="cb204-9"><a href="section-6-overview.html#cb204-9" aria-hidden="true"></a>                       <span class="dt">clinton =</span> <span class="kw">ifelse</span>(simulated_result <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>, electoral_votes, <span class="dv">0</span>)) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># award votes if Clinton wins state</span></span>
+<span id="cb204-10"><a href="section-6-overview.html#cb204-10" aria-hidden="true"></a><span class="st">        </span><span class="kw">summarize</span>(<span class="dt">clinton =</span> <span class="kw">sum</span>(clinton)) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># total votes for Clinton</span></span>
+<span id="cb204-11"><a href="section-6-overview.html#cb204-11" aria-hidden="true"></a><span class="st">        </span>.<span class="op">$</span>clinton <span class="op">+</span><span class="st"> </span><span class="dv">7</span>    <span class="co"># 7 votes for Rhode Island and DC</span></span>
+<span id="cb204-12"><a href="section-6-overview.html#cb204-12" aria-hidden="true"></a>})</span>
+<span id="cb204-13"><a href="section-6-overview.html#cb204-13" aria-hidden="true"></a><span class="kw">mean</span>(clinton_EV <span class="op">&gt;</span><span class="st"> </span><span class="dv">269</span>)    <span class="co"># over 269 votes wins election</span></span></code></pre></div>
+<pre><code>## [1] 0.998</code></pre>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="section-6-overview.html#cb206-1" aria-hidden="true"></a><span class="co"># histogram of outcomes</span></span>
+<span id="cb206-2"><a href="section-6-overview.html#cb206-2" aria-hidden="true"></a><span class="kw">data.frame</span>(clinton_EV) <span class="op">%&gt;%</span></span>
+<span id="cb206-3"><a href="section-6-overview.html#cb206-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(clinton_EV)) <span class="op">+</span></span>
+<span id="cb206-4"><a href="section-6-overview.html#cb206-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb206-5"><a href="section-6-overview.html#cb206-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">269</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p><em>Code: Monte Carlo simulation including general bias</em></p>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="section-6-overview.html#cb207-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb207-2"><a href="section-6-overview.html#cb207-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.02</span></span>
+<span id="cb207-3"><a href="section-6-overview.html#cb207-3" aria-hidden="true"></a>bias_sd &lt;-<span class="st"> </span><span class="fl">0.03</span></span>
+<span id="cb207-4"><a href="section-6-overview.html#cb207-4" aria-hidden="true"></a>clinton_EV_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="dv">1000</span>, {</span>
+<span id="cb207-5"><a href="section-6-overview.html#cb207-5" aria-hidden="true"></a>    results <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">sigma =</span> <span class="kw">sqrt</span>(sd<span class="op">^</span><span class="dv">2</span><span class="op">/</span>(n) <span class="op">+</span><span class="st"> </span>bias_sd<span class="op">^</span><span class="dv">2</span>),    <span class="co"># added bias_sd term</span></span>
+<span id="cb207-6"><a href="section-6-overview.html#cb207-6" aria-hidden="true"></a>                        <span class="dt">B =</span> sigma<span class="op">^</span><span class="dv">2</span><span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>),</span>
+<span id="cb207-7"><a href="section-6-overview.html#cb207-7" aria-hidden="true"></a>                        <span class="dt">posterior_mean =</span> B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>avg,</span>
+<span id="cb207-8"><a href="section-6-overview.html#cb207-8" aria-hidden="true"></a>                        <span class="dt">posterior_se =</span> <span class="kw">sqrt</span>( <span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>)),</span>
+<span id="cb207-9"><a href="section-6-overview.html#cb207-9" aria-hidden="true"></a>                        <span class="dt">simulated_result =</span> <span class="kw">rnorm</span>(<span class="kw">length</span>(posterior_mean), posterior_mean, posterior_se),</span>
+<span id="cb207-10"><a href="section-6-overview.html#cb207-10" aria-hidden="true"></a>                        <span class="dt">clinton =</span> <span class="kw">ifelse</span>(simulated_result <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>, electoral_votes, <span class="dv">0</span>)) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># award votes if Clinton wins state</span></span>
+<span id="cb207-11"><a href="section-6-overview.html#cb207-11" aria-hidden="true"></a><span class="st">        </span><span class="kw">summarize</span>(<span class="dt">clinton =</span> <span class="kw">sum</span>(clinton)) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># total votes for Clinton</span></span>
+<span id="cb207-12"><a href="section-6-overview.html#cb207-12" aria-hidden="true"></a><span class="st">        </span>.<span class="op">$</span>clinton <span class="op">+</span><span class="st"> </span><span class="dv">7</span>    <span class="co"># 7 votes for Rhode Island and DC</span></span>
+<span id="cb207-13"><a href="section-6-overview.html#cb207-13" aria-hidden="true"></a>})</span>
+<span id="cb207-14"><a href="section-6-overview.html#cb207-14" aria-hidden="true"></a><span class="kw">mean</span>(clinton_EV_<span class="dv">2</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">269</span>)    <span class="co"># over 269 votes wins election</span></span></code></pre></div>
+<pre><code>## [1] 0.832</code></pre>
+</div>
+<div id="forecasting" class="section level2" number="7.4">
+<h2><span class="header-section-number">7.4</span> Forecasting</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#forecasting">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In poll results, <span class="math inline">\(p\)</span> is not fixed over time. Variability within a single pollster comes from time variation.</li>
+<li>In order to forecast, our model must include a bias term <span class="math inline">\(b_t\)</span> to model the time effect.</li>
+<li>Pollsters also try to estimate <span class="math inline">\(f(t)\)</span>, the trend of <span class="math inline">\(p\)</span> given time <span class="math inline">\(t\)</span> using a model like:</li>
+</ul>
+<p><span class="math inline">\(Y_{i, j, t} = d + b + h_j + b_t + f(t) + \epsilon_{i, j, t}\)</span></p>
+<ul>
+<li>Once we decide on a model, we can use historical data and current data to estimate the necessary parameters to make predictions.</li>
+</ul>
+<p><em>Code: Variability across one pollster</em></p>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="section-6-overview.html#cb209-1" aria-hidden="true"></a><span class="co"># select all national polls by one pollster</span></span>
+<span id="cb209-2"><a href="section-6-overview.html#cb209-2" aria-hidden="true"></a>one_pollster &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb209-3"><a href="section-6-overview.html#cb209-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(pollster <span class="op">==</span><span class="st"> &quot;Ipsos&quot;</span> <span class="op">&amp;</span><span class="st"> </span>state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb209-4"><a href="section-6-overview.html#cb209-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
+<span id="cb209-5"><a href="section-6-overview.html#cb209-5" aria-hidden="true"></a></span>
+<span id="cb209-6"><a href="section-6-overview.html#cb209-6" aria-hidden="true"></a><span class="co"># the observed standard error is higher than theory predicts</span></span>
+<span id="cb209-7"><a href="section-6-overview.html#cb209-7" aria-hidden="true"></a>se &lt;-<span class="st"> </span>one_pollster <span class="op">%&gt;%</span></span>
+<span id="cb209-8"><a href="section-6-overview.html#cb209-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">empirical =</span> <span class="kw">sd</span>(spread),</span>
+<span id="cb209-9"><a href="section-6-overview.html#cb209-9" aria-hidden="true"></a>            <span class="dt">theoretical =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(<span class="kw">mean</span>(spread)<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span><span class="kw">mean</span>(spread))<span class="op">/</span><span class="kw">min</span>(samplesize)))</span>
+<span id="cb209-10"><a href="section-6-overview.html#cb209-10" aria-hidden="true"></a>se</span></code></pre></div>
+<pre><code>##   empirical theoretical
+## 1    0.0403      0.0326</code></pre>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="section-6-overview.html#cb211-1" aria-hidden="true"></a><span class="co"># the distribution of the data is not normal</span></span>
+<span id="cb211-2"><a href="section-6-overview.html#cb211-2" aria-hidden="true"></a>one_pollster <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span></span>
+<span id="cb211-3"><a href="section-6-overview.html#cb211-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.01</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p><em>Code: Trend across time for several pollsters</em></p>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-6-overview.html#cb212-1" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb212-2"><a href="section-6-overview.html#cb212-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-07-01&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb212-3"><a href="section-6-overview.html#cb212-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb212-4"><a href="section-6-overview.html#cb212-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span></span>
+<span id="cb212-5"><a href="section-6-overview.html#cb212-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb212-6"><a href="section-6-overview.html#cb212-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb212-7"><a href="section-6-overview.html#cb212-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, spread)) <span class="op">+</span></span>
+<span id="cb212-8"><a href="section-6-overview.html#cb212-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.1</span>) <span class="op">+</span></span>
+<span id="cb212-9"><a href="section-6-overview.html#cb212-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> pollster), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.6</span>)</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><em>Code: Plotting raw percentages across time</em></p>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="section-6-overview.html#cb214-1" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb214-2"><a href="section-6-overview.html#cb214-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-07-01&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb214-3"><a href="section-6-overview.html#cb214-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(enddate, pollster, rawpoll_clinton, rawpoll_trump) <span class="op">%&gt;%</span></span>
+<span id="cb214-4"><a href="section-6-overview.html#cb214-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">rename</span>(<span class="dt">Clinton =</span> rawpoll_clinton, <span class="dt">Trump =</span> rawpoll_trump) <span class="op">%&gt;%</span></span>
+<span id="cb214-5"><a href="section-6-overview.html#cb214-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">gather</span>(candidate, percentage, <span class="op">-</span>enddate, <span class="op">-</span>pollster) <span class="op">%&gt;%</span></span>
+<span id="cb214-6"><a href="section-6-overview.html#cb214-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">candidate =</span> <span class="kw">factor</span>(candidate, <span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;Trump&quot;</span>, <span class="st">&quot;Clinton&quot;</span>))) <span class="op">%&gt;%</span></span>
+<span id="cb214-7"><a href="section-6-overview.html#cb214-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb214-8"><a href="section-6-overview.html#cb214-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>) <span class="op">%&gt;%</span></span>
+<span id="cb214-9"><a href="section-6-overview.html#cb214-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb214-10"><a href="section-6-overview.html#cb214-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, percentage, <span class="dt">color =</span> candidate)) <span class="op">+</span></span>
+<span id="cb214-11"><a href="section-6-overview.html#cb214-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.4</span>) <span class="op">+</span></span>
+<span id="cb214-12"><a href="section-6-overview.html#cb214-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.15</span>) <span class="op">+</span></span>
+<span id="cb214-13"><a href="section-6-overview.html#cb214-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">limits =</span> <span class="kw">c</span>(<span class="dv">30</span>, <span class="dv">50</span>))</span></code></pre></div>
+<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
+<pre><code>## Warning: Removed 22 rows containing missing values (geom_point).</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+</div>
+<div id="assessment---election-forecasting" class="section level2" number="7.5">
+<h2><span class="header-section-number">7.5</span> Assessment - Election Forecasting</h2>
+<ol style="list-style-type: decimal">
+<li>For each poll in the polling data set, use the CLT to create a 95% confidence interval for the spread.</li>
+</ol>
+<p>Create a new table called <code>cis</code> that contains columns for the lower and upper limits of the confidence intervals.</p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="section-6-overview.html#cb218-1" aria-hidden="true"></a><span class="co"># Create a table called `polls` that filters by  state, date, and reports the spread</span></span>
+<span id="cb218-2"><a href="section-6-overview.html#cb218-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb218-3"><a href="section-6-overview.html#cb218-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(state <span class="op">!=</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-31&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb218-4"><a href="section-6-overview.html#cb218-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
+<span id="cb218-5"><a href="section-6-overview.html#cb218-5" aria-hidden="true"></a></span>
+<span id="cb218-6"><a href="section-6-overview.html#cb218-6" aria-hidden="true"></a><span class="co"># Create an object called `cis` that has the columns indicated in the instructions</span></span>
+<span id="cb218-7"><a href="section-6-overview.html#cb218-7" aria-hidden="true"></a>cis &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">X_hat =</span> (spread<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>, <span class="dt">se =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span>samplesize), <span class="dt">lower =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se, <span class="dt">upper =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, startdate, enddate, pollster, grade, spread, lower, upper)</span></code></pre></div>
+<ol start="2" style="list-style-type: decimal">
+<li>You can add the final result to the <code>cis</code> table you just created using the <code>left_join</code> function as shown in the sample code.</li>
+</ol>
+<p>Now determine how often the 95% confidence interval includes the actual result.</p>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="section-6-overview.html#cb219-1" aria-hidden="true"></a><span class="co"># Add the actual results to the `cis` data set</span></span>
+<span id="cb219-2"><a href="section-6-overview.html#cb219-2" aria-hidden="true"></a>add &lt;-<span class="st"> </span>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">actual_spread =</span> clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, actual_spread)</span>
+<span id="cb219-3"><a href="section-6-overview.html#cb219-3" aria-hidden="true"></a>ci_data &lt;-<span class="st"> </span>cis <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">as.character</span>(state)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(add, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
+<span id="cb219-4"><a href="section-6-overview.html#cb219-4" aria-hidden="true"></a></span>
+<span id="cb219-5"><a href="section-6-overview.html#cb219-5" aria-hidden="true"></a><span class="co"># Create an object called `p_hits` that summarizes the proportion of confidence intervals that contain the actual value. Print this object to the console.</span></span>
+<span id="cb219-6"><a href="section-6-overview.html#cb219-6" aria-hidden="true"></a>p_hits &lt;-<span class="st"> </span>ci_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">hit =</span> lower <span class="op">&lt;=</span><span class="st"> </span>actual_spread <span class="op">&amp;</span><span class="st"> </span>upper <span class="op">&gt;=</span><span class="st"> </span>actual_spread) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">proportion_hits =</span> <span class="kw">mean</span>(hit))</span>
+<span id="cb219-7"><a href="section-6-overview.html#cb219-7" aria-hidden="true"></a>p_hits</span></code></pre></div>
+<pre><code>##   proportion_hits
+## 1           0.661</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Now find the proportion of hits for each pollster.</li>
+</ol>
+<p>Show only pollsters with at least 5 polls and order them from best to worst. Show the number of polls conducted by each pollster and the FiveThirtyEight grade of each pollster.</p>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="section-6-overview.html#cb221-1" aria-hidden="true"></a><span class="co"># The `cis` data have already been loaded for you</span></span>
+<span id="cb221-2"><a href="section-6-overview.html#cb221-2" aria-hidden="true"></a>add &lt;-<span class="st"> </span>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">actual_spread =</span> clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, actual_spread)</span>
+<span id="cb221-3"><a href="section-6-overview.html#cb221-3" aria-hidden="true"></a>ci_data &lt;-<span class="st"> </span>cis <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">as.character</span>(state)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(add, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
+<span id="cb221-4"><a href="section-6-overview.html#cb221-4" aria-hidden="true"></a></span>
+<span id="cb221-5"><a href="section-6-overview.html#cb221-5" aria-hidden="true"></a><span class="co"># Create an object called `p_hits` that summarizes the proportion of hits for each pollster that has at least 5 polls.</span></span>
+<span id="cb221-6"><a href="section-6-overview.html#cb221-6" aria-hidden="true"></a>p_hits &lt;-<span class="st"> </span>ci_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">hit =</span> lower <span class="op">&lt;=</span><span class="st"> </span>actual_spread <span class="op">&amp;</span><span class="st"> </span>upper <span class="op">&gt;=</span><span class="st"> </span>actual_spread) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st">  </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">proportion_hits =</span> <span class="kw">mean</span>(hit), <span class="dt">n =</span> <span class="kw">n</span>(), <span class="dt">grade =</span> grade[<span class="dv">1</span>]) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(proportion_hits))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="section-6-overview.html#cb223-1" aria-hidden="true"></a>p_hits</span></code></pre></div>
+<pre><code>## # A tibble: 13 x 4
+##    pollster                                 proportion_hits     n grade
+##    &lt;fct&gt;                                              &lt;dbl&gt; &lt;int&gt; &lt;fct&gt;
+##  1 Quinnipiac University                              1         6 A-   
+##  2 Emerson College                                    0.909    11 B    
+##  3 Public Policy Polling                              0.889     9 B+   
+##  4 University of New Hampshire                        0.857     7 B+   
+##  5 Ipsos                                              0.807   119 A-   
+##  6 Mitchell Research &amp; Communications                 0.8       5 D    
+##  7 Gravis Marketing                                   0.783    23 B-   
+##  8 Trafalgar Group                                    0.778     9 C    
+##  9 Rasmussen Reports/Pulse Opinion Research           0.774    31 C+   
+## 10 Remington                                          0.667     9 &lt;NA&gt; 
+## 11 Google Consumer Surveys                            0.588   102 B    
+## 12 SurveyMonkey                                       0.577   357 C-   
+## 13 YouGov                                             0.544    57 B</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Repeat the previous exercise, but instead of pollster, stratify by state. Here we can’t show grades.</li>
+</ol>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="section-6-overview.html#cb225-1" aria-hidden="true"></a><span class="co"># The `cis` data have already been loaded for you</span></span>
+<span id="cb225-2"><a href="section-6-overview.html#cb225-2" aria-hidden="true"></a>add &lt;-<span class="st"> </span>results_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">actual_spread =</span> clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, actual_spread)</span>
+<span id="cb225-3"><a href="section-6-overview.html#cb225-3" aria-hidden="true"></a>ci_data &lt;-<span class="st"> </span>cis <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">as.character</span>(state)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">left_join</span>(add, <span class="dt">by =</span> <span class="st">&quot;state&quot;</span>)</span>
+<span id="cb225-4"><a href="section-6-overview.html#cb225-4" aria-hidden="true"></a></span>
+<span id="cb225-5"><a href="section-6-overview.html#cb225-5" aria-hidden="true"></a><span class="co"># Create an object called `p_hits` that summarizes the proportion of hits for each state that has more than 5 polls.</span></span>
+<span id="cb225-6"><a href="section-6-overview.html#cb225-6" aria-hidden="true"></a>p_hits &lt;-<span class="st"> </span>ci_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">hit =</span> lower <span class="op">&lt;=</span><span class="st"> </span>actual_spread <span class="op">&amp;</span><span class="st"> </span>upper <span class="op">&gt;=</span><span class="st"> </span>actual_spread) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st">  </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">proportion_hits =</span> <span class="kw">mean</span>(hit), <span class="dt">n =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(proportion_hits))</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="section-6-overview.html#cb227-1" aria-hidden="true"></a>p_hits</span></code></pre></div>
+<pre><code>## # A tibble: 51 x 3
+##    state        proportion_hits     n
+##    &lt;chr&gt;                  &lt;dbl&gt; &lt;int&gt;
+##  1 Connecticut            1        13
+##  2 Delaware               1        12
+##  3 Rhode Island           1        10
+##  4 New Mexico             0.941    17
+##  5 Washington             0.933    15
+##  6 Oregon                 0.929    14
+##  7 Illinois               0.923    13
+##  8 Nevada                 0.923    26
+##  9 Maine                  0.917    12
+## 10 Montana                0.917    12
+## # … with 41 more rows</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Make a barplot based on the result from the previous exercise.</li>
+</ol>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="section-6-overview.html#cb229-1" aria-hidden="true"></a><span class="co"># The `p_hits` data have already been loaded for you. Use the `head` function to examine it.</span></span>
+<span id="cb229-2"><a href="section-6-overview.html#cb229-2" aria-hidden="true"></a><span class="kw">head</span>(p_hits)</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 3
+##   state        proportion_hits     n
+##   &lt;chr&gt;                  &lt;dbl&gt; &lt;int&gt;
+## 1 Connecticut            1        13
+## 2 Delaware               1        12
+## 3 Rhode Island           1        10
+## 4 New Mexico             0.941    17
+## 5 Washington             0.933    15
+## 6 Oregon                 0.929    14</code></pre>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="section-6-overview.html#cb231-1" aria-hidden="true"></a><span class="co"># Make a barplot of the proportion of hits for each state</span></span>
+<span id="cb231-2"><a href="section-6-overview.html#cb231-2" aria-hidden="true"></a>p_hits <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, proportion_hits)) <span class="op">%&gt;%</span></span>
+<span id="cb231-3"><a href="section-6-overview.html#cb231-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, proportion_hits)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb231-4"><a href="section-6-overview.html#cb231-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
+<span id="cb231-5"><a href="section-6-overview.html#cb231-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Even if a forecaster’s confidence interval is incorrect, the overall predictions will do better if they correctly called the right winner.</li>
+</ol>
+<p>Add two columns to the <code>cis</code> table by computing, for each poll, the difference between the predicted spread and the actual spread, and define a column <code>hit</code> that is true if the signs are the same.</p>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="section-6-overview.html#cb232-1" aria-hidden="true"></a><span class="co"># The `cis` data have already been loaded. Examine it using the `head` function.</span></span>
+<span id="cb232-2"><a href="section-6-overview.html#cb232-2" aria-hidden="true"></a><span class="kw">head</span>(cis)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade spread    lower     upper
+## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.00133  0.041331
+## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.00563  0.105635
+## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.13913 -0.000875
+## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.00477  0.115226
+## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.06930  0.069295
+## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554</code></pre>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="section-6-overview.html#cb234-1" aria-hidden="true"></a><span class="co"># Create an object called `errors` that calculates the difference between the predicted and actual spread and indicates if the correct winner was predicted</span></span>
+<span id="cb234-2"><a href="section-6-overview.html#cb234-2" aria-hidden="true"></a>errors &lt;-<span class="st"> </span>cis <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">error =</span> spread <span class="op">-</span><span class="st"> </span>ci_data<span class="op">$</span>actual_spread, <span class="dt">hit =</span> <span class="kw">sign</span>(spread) <span class="op">==</span><span class="st"> </span><span class="kw">sign</span>(ci_data<span class="op">$</span>actual_spread))</span>
+<span id="cb234-3"><a href="section-6-overview.html#cb234-3" aria-hidden="true"></a></span>
+<span id="cb234-4"><a href="section-6-overview.html#cb234-4" aria-hidden="true"></a><span class="co"># Examine the last 6 rows of `errors`</span></span>
+<span id="cb234-5"><a href="section-6-overview.html#cb234-5" aria-hidden="true"></a><span class="kw">tail</span>(errors)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade  spread     lower   upper   error  hit
+## 807         Utah 2016-10-04 2016-11-06                  YouGov     B -0.0910 -0.166070 -0.0159  0.0890 TRUE
+## 808         Utah 2016-10-25 2016-10-31 Google Consumer Surveys     B -0.0121 -0.137308  0.1131  0.1679 TRUE
+## 809 South Dakota 2016-10-28 2016-11-02                   Ipsos    A- -0.1875 -0.335156 -0.0398  0.1105 TRUE
+## 810   Washington 2016-10-21 2016-11-02                   Ipsos    A-  0.0838 -0.000403  0.1680 -0.0782 TRUE
+## 811         Utah 2016-11-01 2016-11-07 Google Consumer Surveys     B -0.1372 -0.251999 -0.0224  0.0428 TRUE
+## 812       Oregon 2016-10-21 2016-11-02                   Ipsos    A-  0.0905 -0.001926  0.1829 -0.0195 TRUE</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Create an object called <code>p_hits</code> that contains the proportion of instances when the sign of the actual spread matches the predicted spread for states with 5 or more polls.</li>
+</ol>
+<p>Make a barplot based on the result from the previous exercise that shows the proportion of times the sign of the spread matched the actual result for the data in <code>p_hits</code>.</p>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="section-6-overview.html#cb236-1" aria-hidden="true"></a><span class="co"># Create an object called `errors` that calculates the difference between the predicted and actual spread and indicates if the correct winner was predicted</span></span>
+<span id="cb236-2"><a href="section-6-overview.html#cb236-2" aria-hidden="true"></a>errors &lt;-<span class="st"> </span>cis <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">error =</span> spread <span class="op">-</span><span class="st"> </span>ci_data<span class="op">$</span>actual_spread, <span class="dt">hit =</span> <span class="kw">sign</span>(spread) <span class="op">==</span><span class="st"> </span><span class="kw">sign</span>(ci_data<span class="op">$</span>actual_spread))</span>
+<span id="cb236-3"><a href="section-6-overview.html#cb236-3" aria-hidden="true"></a></span>
+<span id="cb236-4"><a href="section-6-overview.html#cb236-4" aria-hidden="true"></a><span class="co"># Create an object called `p_hits` that summarizes the proportion of hits for each state that has 5 or more polls</span></span>
+<span id="cb236-5"><a href="section-6-overview.html#cb236-5" aria-hidden="true"></a>p_hits &lt;-<span class="st"> </span>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st">  </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">proportion_hits =</span> <span class="kw">mean</span>(hit), <span class="dt">n =</span> <span class="kw">n</span>())</span></code></pre></div>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="section-6-overview.html#cb238-1" aria-hidden="true"></a><span class="co"># Make a barplot of the proportion of hits for each state</span></span>
+<span id="cb238-2"><a href="section-6-overview.html#cb238-2" aria-hidden="true"></a>p_hits <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, proportion_hits)) <span class="op">%&gt;%</span></span>
+<span id="cb238-3"><a href="section-6-overview.html#cb238-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, proportion_hits)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb238-4"><a href="section-6-overview.html#cb238-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
+<span id="cb238-5"><a href="section-6-overview.html#cb238-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li>In the previous graph, we see that most states’ polls predicted the correct winner 100% of the time.</li>
+</ol>
+<p>Only a few states polls’ were incorrect more than 25% of the time. Wisconsin got every single poll wrong. In Pennsylvania and Michigan, more than 90% of the polls had the signs wrong.</p>
+<p>Make a histogram of the errors. What is the median of these errors?</p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="section-6-overview.html#cb239-1" aria-hidden="true"></a><span class="co"># The `errors` data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb239-2"><a href="section-6-overview.html#cb239-2" aria-hidden="true"></a><span class="kw">head</span>(errors)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade spread    lower     upper  error   hit
+## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.00133  0.041331 -0.063  TRUE
+## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.00563  0.105635 -0.004  TRUE
+## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.13913 -0.000875  0.024  TRUE
+## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.00477  0.115226  0.067 FALSE
+## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.06930  0.069295  0.036 FALSE
+## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="section-6-overview.html#cb241-1" aria-hidden="true"></a><span class="co"># Generate a histogram of the error</span></span>
+<span id="cb241-2"><a href="section-6-overview.html#cb241-2" aria-hidden="true"></a><span class="kw">hist</span>(errors<span class="op">$</span>error)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="section-6-overview.html#cb242-1" aria-hidden="true"></a><span class="co"># Calculate the median of the errors. Print this value to the console.</span></span>
+<span id="cb242-2"><a href="section-6-overview.html#cb242-2" aria-hidden="true"></a><span class="kw">median</span>(errors<span class="op">$</span>error)</span></code></pre></div>
+<pre><code>## [1] 0.037</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>We see that, at the state level, the median error was slightly in favor of Clinton. The distribution is not centered at 0, but at 0.037. This value represents the general bias we described in an earlier section.</li>
+</ol>
+<p>Create a boxplot to examine if the bias was general to all states or if it affected some states differently. Filter the data to include only pollsters with grades B+ or higher.</p>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="section-6-overview.html#cb244-1" aria-hidden="true"></a><span class="co"># The `errors` data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb244-2"><a href="section-6-overview.html#cb244-2" aria-hidden="true"></a><span class="kw">head</span>(errors)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade spread    lower     upper  error   hit
+## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.00133  0.041331 -0.063  TRUE
+## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.00563  0.105635 -0.004  TRUE
+## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.13913 -0.000875  0.024  TRUE
+## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.00477  0.115226  0.067 FALSE
+## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.06930  0.069295  0.036 FALSE
+## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="section-6-overview.html#cb246-1" aria-hidden="true"></a><span class="co"># Create a boxplot showing the errors by state for polls with grades B+ or higher</span></span>
+<span id="cb246-2"><a href="section-6-overview.html#cb246-2" aria-hidden="true"></a>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>,<span class="st">&quot;A&quot;</span>,<span class="st">&quot;A-&quot;</span>,<span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, error)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, error)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>Some of these states only have a few polls.</li>
+</ol>
+<p>Repeat the previous exercise to plot the errors for each state, but only include states with five good polls or more.</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="section-6-overview.html#cb247-1" aria-hidden="true"></a><span class="co"># The `errors` data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb247-2"><a href="section-6-overview.html#cb247-2" aria-hidden="true"></a><span class="kw">head</span>(errors)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade spread    lower     upper  error   hit
+## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.00133  0.041331 -0.063  TRUE
+## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.00563  0.105635 -0.004  TRUE
+## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.13913 -0.000875  0.024  TRUE
+## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.00477  0.115226  0.067 FALSE
+## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.06930  0.069295  0.036 FALSE
+## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
+<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="section-6-overview.html#cb249-1" aria-hidden="true"></a><span class="co"># Create a boxplot showing the errors by state for states with at least 5 polls with grades B+ or higher</span></span>
+<span id="cb249-2"><a href="section-6-overview.html#cb249-2" aria-hidden="true"></a>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>,<span class="st">&quot;A&quot;</span>,<span class="st">&quot;A-&quot;</span>,<span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, error)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, error)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+</div>
+<div id="the-t-distribution" class="section level2" number="7.6">
+<h2><span class="header-section-number">7.6</span> The t-Distribution</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#t-dist">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>In models where we must estimate two parameters, <span class="math inline">\(p\)</span> and <span class="math inline">\(\sigma\)</span>, the Central Limit Theorem can result in overconfident confidence intervals for sample sizes smaller than approximately 30.</li>
+<li>If the population data are known to follow a normal distribution, theory tells us how much larger to make confidence intervals to account for estimation of <span class="math inline">\(\sigma\)</span>.</li>
+<li>Given <span class="math inline">\(s\)</span> as an estimate of <span class="math inline">\(\sigma\)</span>, then <span class="math inline">\(Z = \frac{\bar{X} - d}{s/\sqrt{N}}\)</span> follows a t-distribution with <span class="math inline">\(N - 1\)</span> degrees of freedom.</li>
+<li>Degrees of freedom determine the weight of the tails of the distribution. Small values of degrees of freedom lead to increased probabilities of extreme values.</li>
+<li>We can determine confidence intervals using the t-distribution instead of the normal distribution by calculating the desired quantile with the function <code>qt()</code>.</li>
+</ul>
+<p><em>Code: Calculating 95% confidence intervals with the t-distribution</em></p>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="section-6-overview.html#cb250-1" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">qt</span>(<span class="fl">0.975</span>, <span class="kw">nrow</span>(one_poll_per_pollster) <span class="op">-</span><span class="st"> </span><span class="dv">1</span>)</span>
+<span id="cb250-2"><a href="section-6-overview.html#cb250-2" aria-hidden="true"></a>one_poll_per_pollster <span class="op">%&gt;%</span></span>
+<span id="cb250-3"><a href="section-6-overview.html#cb250-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">moe =</span> z<span class="op">*</span><span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(spread))) <span class="op">%&gt;%</span></span>
+<span id="cb250-4"><a href="section-6-overview.html#cb250-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">start =</span> avg <span class="op">-</span><span class="st"> </span>moe, <span class="dt">end =</span> avg <span class="op">+</span><span class="st"> </span>moe)</span></code></pre></div>
+<pre><code>## # A tibble: 1 x 4
+##      avg    moe  start    end
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 0.0290 0.0134 0.0156 0.0424</code></pre>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="section-6-overview.html#cb252-1" aria-hidden="true"></a><span class="co"># quantile from t-distribution versus normal distribution</span></span>
+<span id="cb252-2"><a href="section-6-overview.html#cb252-2" aria-hidden="true"></a><span class="kw">qt</span>(<span class="fl">0.975</span>, <span class="dv">14</span>)    <span class="co"># 14 = nrow(one_poll_per_pollster) - 1</span></span></code></pre></div>
+<pre><code>## [1] 2.14</code></pre>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="section-6-overview.html#cb254-1" aria-hidden="true"></a><span class="kw">qnorm</span>(<span class="fl">0.975</span>)</span></code></pre></div>
+<pre><code>## [1] 1.96</code></pre>
+</div>
+<div id="assessment---the-t-distribution" class="section level2" number="7.7">
+<h2><span class="header-section-number">7.7</span> Assessment - The t-Distribution</h2>
+<ol style="list-style-type: decimal">
+<li>We know that, with a normal distribution, only 5% of values are more than 2 standard deviations away from the mean.</li>
+</ol>
+<p>Calculate the probability of seeing t-distributed random variables being more than 2 in absolute value when the degrees of freedom are 3.</p>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="section-6-overview.html#cb256-1" aria-hidden="true"></a><span class="co"># Calculate the probability of seeing t-distributed random variables being more than 2 in absolute value when &#39;df = 3&#39;.</span></span>
+<span id="cb256-2"><a href="section-6-overview.html#cb256-2" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pt</span>(<span class="dv">2</span>, <span class="dt">df =</span> <span class="dv">3</span>) <span class="op">+</span><span class="st"> </span><span class="kw">pt</span>(<span class="op">-</span><span class="dv">2</span>, <span class="dt">df =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 0.139</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Now use <code>sapply</code> to compute the same probability for degrees of freedom from 3 to 50.</li>
+</ol>
+<p>Make a plot and notice when this probability converges to the normal distribution’s 5%.</p>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="section-6-overview.html#cb258-1" aria-hidden="true"></a><span class="co"># Generate a vector &#39;df&#39; that contains a sequence of numbers from 3 to 50</span></span>
+<span id="cb258-2"><a href="section-6-overview.html#cb258-2" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span><span class="op">:</span><span class="dv">50</span>)</span>
+<span id="cb258-3"><a href="section-6-overview.html#cb258-3" aria-hidden="true"></a></span>
+<span id="cb258-4"><a href="section-6-overview.html#cb258-4" aria-hidden="true"></a><span class="co"># Make a function called &#39;pt_func&#39; that calculates the probability that a value is more than |2| for any degrees of freedom </span></span>
+<span id="cb258-5"><a href="section-6-overview.html#cb258-5" aria-hidden="true"></a>pt_function &lt;-<span class="st"> </span><span class="cf">function</span>(f) {</span>
+<span id="cb258-6"><a href="section-6-overview.html#cb258-6" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pt</span>(<span class="dv">2</span>, f) <span class="op">+</span><span class="st"> </span><span class="kw">pt</span>(<span class="op">-</span><span class="dv">2</span>, f)</span>
+<span id="cb258-7"><a href="section-6-overview.html#cb258-7" aria-hidden="true"></a>}</span>
+<span id="cb258-8"><a href="section-6-overview.html#cb258-8" aria-hidden="true"></a></span>
+<span id="cb258-9"><a href="section-6-overview.html#cb258-9" aria-hidden="true"></a><span class="co"># Generate a vector &#39;probs&#39; that uses the `pt_func` function to calculate the probabilities</span></span>
+<span id="cb258-10"><a href="section-6-overview.html#cb258-10" aria-hidden="true"></a>probs &lt;-<span class="st"> </span><span class="kw">sapply</span>(df, pt_function)</span>
+<span id="cb258-11"><a href="section-6-overview.html#cb258-11" aria-hidden="true"></a></span>
+<span id="cb258-12"><a href="section-6-overview.html#cb258-12" aria-hidden="true"></a><span class="co"># Plot &#39;df&#39; on the x-axis and &#39;probs&#39; on the y-axis</span></span>
+<span id="cb258-13"><a href="section-6-overview.html#cb258-13" aria-hidden="true"></a><span class="kw">plot</span>(df, probs)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>In a previous section, we repeatedly took random samples of 50 heights from a distribution of heights.</li>
+</ol>
+<p>We noticed that about 95% of the samples had confidence intervals spanning the true population mean.</p>
+<p>Re-do this Monte Carlo simulation, but now instead of <span class="math inline">\(N = 50\)</span>, use <span class="math inline">\(N = 15\)</span>. Notice what happens to the proportion of hits.</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="section-6-overview.html#cb259-1" aria-hidden="true"></a><span class="co"># Use the sample code to generate &#39;x&#39;, a vector of male heights</span></span>
+<span id="cb259-2"><a href="section-6-overview.html#cb259-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb259-3"><a href="section-6-overview.html#cb259-3" aria-hidden="true"></a><span class="st">  </span>.<span class="op">$</span>height</span>
+<span id="cb259-4"><a href="section-6-overview.html#cb259-4" aria-hidden="true"></a></span>
+<span id="cb259-5"><a href="section-6-overview.html#cb259-5" aria-hidden="true"></a><span class="co"># Create variables for the mean height &#39;mu&#39;, the sample size &#39;N&#39;, and the number of times the simulation should run &#39;B&#39;</span></span>
+<span id="cb259-6"><a href="section-6-overview.html#cb259-6" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb259-7"><a href="section-6-overview.html#cb259-7" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">15</span></span>
+<span id="cb259-8"><a href="section-6-overview.html#cb259-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb259-9"><a href="section-6-overview.html#cb259-9" aria-hidden="true"></a></span>
+<span id="cb259-10"><a href="section-6-overview.html#cb259-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb259-11"><a href="section-6-overview.html#cb259-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb259-12"><a href="section-6-overview.html#cb259-12" aria-hidden="true"></a></span>
+<span id="cb259-13"><a href="section-6-overview.html#cb259-13" aria-hidden="true"></a><span class="co"># Generate a logical vector &#39;res&#39; that contains the results of the simulations</span></span>
+<span id="cb259-14"><a href="section-6-overview.html#cb259-14" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb259-15"><a href="section-6-overview.html#cb259-15" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb259-16"><a href="section-6-overview.html#cb259-16" aria-hidden="true"></a>interval &lt;-<span class="st"> </span><span class="kw">mean</span>(X) <span class="op">+</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)<span class="op">*</span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span><span class="kw">sd</span>(X)<span class="op">/</span><span class="kw">sqrt</span>(N)</span>
+<span id="cb259-17"><a href="section-6-overview.html#cb259-17" aria-hidden="true"></a><span class="kw">between</span>(mu, interval[<span class="dv">1</span>], interval[<span class="dv">2</span>])</span>
+<span id="cb259-18"><a href="section-6-overview.html#cb259-18" aria-hidden="true"></a>}</span>
+<span id="cb259-19"><a href="section-6-overview.html#cb259-19" aria-hidden="true"></a>)</span>
+<span id="cb259-20"><a href="section-6-overview.html#cb259-20" aria-hidden="true"></a></span>
+<span id="cb259-21"><a href="section-6-overview.html#cb259-21" aria-hidden="true"></a><span class="co"># Calculate the proportion of times the simulation produced values within the 95% confidence interval. Print this value to the console.</span></span>
+<span id="cb259-22"><a href="section-6-overview.html#cb259-22" aria-hidden="true"></a>p_hit &lt;-<span class="st"> </span><span class="kw">mean</span>(res)</span>
+<span id="cb259-23"><a href="section-6-overview.html#cb259-23" aria-hidden="true"></a>p_hit</span></code></pre></div>
+<pre><code>## [1] 0.933</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li><span class="math inline">\(N = 15\)</span> is not that big. We know that heights are normally distributed, so the t-distribution should apply.</li>
+</ol>
+<p>Repeat the previous Monte Carlo simulation using the t-distribution instead of using the normal distribution to construct the confidence intervals.</p>
+<p>What are the proportion of 95% confidence intervals that span the actual mean height now?</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="section-6-overview.html#cb261-1" aria-hidden="true"></a><span class="co"># The vector of filtered heights &#39;x&#39; has already been loaded for you. Calculate the mean.</span></span>
+<span id="cb261-2"><a href="section-6-overview.html#cb261-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb261-3"><a href="section-6-overview.html#cb261-3" aria-hidden="true"></a></span>
+<span id="cb261-4"><a href="section-6-overview.html#cb261-4" aria-hidden="true"></a><span class="co"># Use the same sampling parameters as in the previous exercise.</span></span>
+<span id="cb261-5"><a href="section-6-overview.html#cb261-5" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb261-6"><a href="section-6-overview.html#cb261-6" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">15</span></span>
+<span id="cb261-7"><a href="section-6-overview.html#cb261-7" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb261-8"><a href="section-6-overview.html#cb261-8" aria-hidden="true"></a></span>
+<span id="cb261-9"><a href="section-6-overview.html#cb261-9" aria-hidden="true"></a><span class="co"># Generate a logical vector &#39;res&#39; that contains the results of the simulations using the t-distribution</span></span>
+<span id="cb261-10"><a href="section-6-overview.html#cb261-10" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb261-11"><a href="section-6-overview.html#cb261-11" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb261-12"><a href="section-6-overview.html#cb261-12" aria-hidden="true"></a>interval &lt;-<span class="st"> </span><span class="kw">mean</span>(X) <span class="op">+</span><span class="st"> </span><span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>)<span class="op">*</span><span class="kw">qt</span>(<span class="fl">0.975</span>, N <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) <span class="op">*</span><span class="st"> </span><span class="kw">sd</span>(X) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(N)</span>
+<span id="cb261-13"><a href="section-6-overview.html#cb261-13" aria-hidden="true"></a><span class="kw">between</span>(mu, interval[<span class="dv">1</span>], interval[<span class="dv">2</span>])</span>
+<span id="cb261-14"><a href="section-6-overview.html#cb261-14" aria-hidden="true"></a>}</span>
+<span id="cb261-15"><a href="section-6-overview.html#cb261-15" aria-hidden="true"></a>)</span>
+<span id="cb261-16"><a href="section-6-overview.html#cb261-16" aria-hidden="true"></a></span>
+<span id="cb261-17"><a href="section-6-overview.html#cb261-17" aria-hidden="true"></a><span class="co"># Calculate the proportion of times the simulation produced values within the 95% confidence interval. Print this value to the console.</span></span>
+<span id="cb261-18"><a href="section-6-overview.html#cb261-18" aria-hidden="true"></a>p_hit &lt;-<span class="st"> </span><span class="kw">mean</span>(res)</span>
+<span id="cb261-19"><a href="section-6-overview.html#cb261-19" aria-hidden="true"></a>p_hit</span></code></pre></div>
+<pre><code>## [1] 0.951</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Why did the t-distribution confidence intervals work so much better?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. The t-distribution takes the variability into account and generates larger confidence intervals.</li>
+<li><input type="checkbox" disabled="" />
+B. Because the t-distribution shifts the intervals in the direction towards the actual mean.</li>
+<li><input type="checkbox" disabled="" />
+C. This was just a chance occurrence. If we run it again, the CLT will work better.</li>
+<li><input type="checkbox" disabled="" />
+D. The t-distribution is always a better approximation than the normal distribution.</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-5-overview.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="section-7-overview.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
