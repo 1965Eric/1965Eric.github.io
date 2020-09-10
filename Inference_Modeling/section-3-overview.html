@@ -252,7 +252,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb30-5"><a href="section-3-overview.html#cb30-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_smooth</span>() <span class="op">+</span></span>
 <span id="cb30-6"><a href="section-3-overview.html#cb30-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Average Yearly Temperatures in New Haven&quot;</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-19-1.png" width="672" /></p>
 <p><em>Code: Monte Carlo simulation of confidence intervals</em></p>
 <p>Note that to compute the exact 95% confidence interval, we would use <code>qnorm(.975)*SE_hat</code> instead of <code>2*SE_hat</code>.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="section-3-overview.html#cb32-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
@@ -676,7 +676,7 @@ D. 0.95</li>
 <span id="cb85-4"><a href="section-3-overview.html#cb85-4" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> pollster, <span class="dt">y =</span> error)) <span class="op">+</span></span>
 <span id="cb85-5"><a href="section-3-overview.html#cb85-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
 <span id="cb85-6"><a href="section-3-overview.html#cb85-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-32-1.png" width="672" /></p>
 <ol start="9" style="list-style-type: decimal">
 <li>Remake the plot you made for the previous exercise, but only for pollsters that took five or more polls.</li>
 </ol>
@@ -722,7 +722,7 @@ D. 0.95</li>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="section-3-overview.html#cb91-1" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> pollster, <span class="dt">y =</span> error)) <span class="op">+</span></span>
 <span id="cb91-2"><a href="section-3-overview.html#cb91-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
 <span id="cb91-3"><a href="section-3-overview.html#cb91-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-34-1.png" width="672" /></p>
 </div>
 </div>
             </section>

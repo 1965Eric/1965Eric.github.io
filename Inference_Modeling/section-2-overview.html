@@ -303,7 +303,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-11"><a href="section-2-overview.html#cb9-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;X_hat&quot;</span>) <span class="op">+</span></span>
 <span id="cb9-12"><a href="section-2-overview.html#cb9-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Theoretical normal&quot;</span>)</span>
 <span id="cb9-13"><a href="section-2-overview.html#cb9-13" aria-hidden="true"></a><span class="kw">grid.arrange</span>(p1, p2, <span class="dt">nrow=</span><span class="dv">1</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="the-spread" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> The Spread</h2>
@@ -332,7 +332,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-4"><a href="section-2-overview.html#cb10-4" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">p =</span> p, <span class="dt">SE =</span> SE) <span class="op">%&gt;%</span></span>
 <span id="cb10-5"><a href="section-2-overview.html#cb10-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(p, SE)) <span class="op">+</span></span>
 <span id="cb10-6"><a href="section-2-overview.html#cb10-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="assessment---introduction-to-inference" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Assessment - Introduction to Inference</h2>
@@ -382,7 +382,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb13-17"><a href="section-2-overview.html#cb13-17" aria-hidden="true"></a><span class="kw">mean</span>(errors)</span></code></pre></div>
 <pre><code>## [1] -4.9e-05</code></pre>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-2-overview.html#cb15-1" aria-hidden="true"></a><span class="kw">hist</span>(errors)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-10-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>In the last exercise, you made a vector of differences between the actual value for <span class="math inline">\(p\)</span> and an estimate, <span class="math inline">\(\bar{X}\)</span>.</li>
 </ol>
@@ -489,7 +489,7 @@ D. The errors range from -1 to 1.</li>
 <span id="cb24-2"><a href="section-2-overview.html#cb24-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
 <span id="cb24-3"><a href="section-2-overview.html#cb24-3" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span>
 <span id="cb24-4"><a href="section-2-overview.html#cb24-4" aria-hidden="true"></a><span class="kw">plot</span>(se, N)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Based on this plot, how large does the sample size have to be to have a standard error of about 1%?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -549,7 +549,7 @@ D. not a random variable.</li>
 <span id="cb25-16"><a href="section-2-overview.html#cb25-16" aria-hidden="true"></a><span class="co"># Generate a qq-plot of `errors` with a qq-line showing a normal distribution</span></span>
 <span id="cb25-17"><a href="section-2-overview.html#cb25-17" aria-hidden="true"></a><span class="kw">qqnorm</span>(errors)</span>
 <span id="cb25-18"><a href="section-2-overview.html#cb25-18" aria-hidden="true"></a><span class="kw">qqline</span>(errors)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-16-1.png" width="672" /></p>
 <ol start="12" style="list-style-type: decimal">
 <li>If <span class="math inline">\(p = 0.45\)</span> and <span class="math inline">\(N = 100\)</span>, use the central limit theorem to estimate the probability that <span class="math inline">\(\bar{X} &gt; 0.5\)</span>.</li>
 </ol>

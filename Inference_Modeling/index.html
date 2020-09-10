@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data Science Inference and Modeling</title>
+  <meta name="description" content="Data Science Inference and Modeling" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Data Science Inference and Modeling" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Inference and Modeling" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="section-1-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-parameters-and-estimates"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Parameters and Estimates</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: Confidence Intervals and p-Values</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-statistical-models"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Statistical Models</a></li>
+<li class="chapter" data-level="1.1.5" data-path="learning-objectives.html"><a href="learning-objectives.html#section-5-bayesian-statistics"><i class="fa fa-check"></i><b>1.1.5</b> Section 5: Bayesian Statistics</a></li>
+<li class="chapter" data-level="1.1.6" data-path="learning-objectives.html"><a href="learning-objectives.html#section-6-election-forecasting"><i class="fa fa-check"></i><b>1.1.6</b> Section 6: Election Forecasting</a></li>
+<li class="chapter" data-level="1.1.7" data-path="learning-objectives.html"><a href="learning-objectives.html#section-7-association-tests"><i class="fa fa-check"></i><b>1.1.7</b> Section 7: Association Tests</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#introduction-to-inference"><i class="fa fa-check"></i><b>1.2</b> Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#sampling-model-parameters-and-estimates"><i class="fa fa-check"></i><b>2.1</b> Sampling Model Parameters and Estimates</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#the-sample-average"><i class="fa fa-check"></i><b>2.2</b> The Sample Average</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#polling-versus-forecasting"><i class="fa fa-check"></i><b>2.3</b> Polling versus Forecasting</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#properties-of-our-estimate"><i class="fa fa-check"></i><b>2.4</b> Properties of Our Estimate</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment---parameters-and-estimates"><i class="fa fa-check"></i><b>2.5</b> Assessment - Parameters and Estimates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#the-central-limit-theorem-in-practice"><i class="fa fa-check"></i><b>3.1</b> The Central Limit Theorem in Practice</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#margin-of-error"><i class="fa fa-check"></i><b>3.2</b> Margin of Error</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#a-monte-carlo-simulation-for-the-clt"><i class="fa fa-check"></i><b>3.3</b> A Monte Carlo Simulation for the CLT</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#the-spread"><i class="fa fa-check"></i><b>3.4</b> The Spread</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#bias-why-not-run-a-very-large-poll"><i class="fa fa-check"></i><b>3.5</b> Bias: Why Not Run a Very Large Poll?</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---introduction-to-inference"><i class="fa fa-check"></i><b>3.6</b> Assessment - Introduction to Inference</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#confidence-intervals"><i class="fa fa-check"></i><b>4.1</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#a-monte-carlo-simulation-for-confidence-intervals"><i class="fa fa-check"></i><b>4.2</b> A Monte Carlo Simulation for Confidence Intervals</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#the-correct-language"><i class="fa fa-check"></i><b>4.3</b> The Correct Language</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#power"><i class="fa fa-check"></i><b>4.4</b> Power</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#p-values"><i class="fa fa-check"></i><b>4.5</b> p-Values</a></li>
+<li class="chapter" data-level="4.6" data-path="section-3-overview.html"><a href="section-3-overview.html#another-explanation-of-p-values"><i class="fa fa-check"></i><b>4.6</b> Another Explanation of p-Values</a></li>
+<li class="chapter" data-level="4.7" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---confidence-intervals-and-p-values"><i class="fa fa-check"></i><b>4.7</b> Assessment - Confidence Intervals and p-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-aggregators"><i class="fa fa-check"></i><b>5.1</b> Poll Aggregators</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#pollsters-and-multilevel-models"><i class="fa fa-check"></i><b>5.2</b> Pollsters and Multilevel Models</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#poll-data-and-pollster-bias"><i class="fa fa-check"></i><b>5.3</b> Poll Data and Pollster Bias</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#data-driven-models"><i class="fa fa-check"></i><b>5.4</b> Data-Driven Models</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment---statistical-models"><i class="fa fa-check"></i><b>5.5</b> Assessment - Statistical Models</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="section-5-overview.html"><a href="section-5-overview.html"><i class="fa fa-check"></i><b>6</b> Section 5 Overview</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="section-5-overview.html"><a href="section-5-overview.html#bayesian-statistics"><i class="fa fa-check"></i><b>6.1</b> Bayesian Statistics</a></li>
+<li class="chapter" data-level="6.2" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-theorem"><i class="fa fa-check"></i><b>6.2</b> Bayes’ Theorem</a></li>
+<li class="chapter" data-level="6.3" data-path="section-5-overview.html"><a href="section-5-overview.html#bayes-in-practice"><i class="fa fa-check"></i><b>6.3</b> Bayes in Practice</a></li>
+<li class="chapter" data-level="6.4" data-path="section-5-overview.html"><a href="section-5-overview.html#the-hierarchical-model"><i class="fa fa-check"></i><b>6.4</b> The Hierarchical Model</a></li>
+<li class="chapter" data-level="6.5" data-path="section-5-overview.html"><a href="section-5-overview.html#assessment---bayesian-statistics"><i class="fa fa-check"></i><b>6.5</b> Assessment - Bayesian Statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="section-6-overview.html"><a href="section-6-overview.html"><i class="fa fa-check"></i><b>7</b> Section 6 Overview</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="section-6-overview.html"><a href="section-6-overview.html#election-forecasting"><i class="fa fa-check"></i><b>7.1</b> Election Forecasting</a></li>
+<li class="chapter" data-level="7.2" data-path="section-6-overview.html"><a href="section-6-overview.html#mathematical-representations-of-models"><i class="fa fa-check"></i><b>7.2</b> Mathematical Representations of Models</a></li>
+<li class="chapter" data-level="7.3" data-path="section-6-overview.html"><a href="section-6-overview.html#predicting-the-electoral-college"><i class="fa fa-check"></i><b>7.3</b> Predicting the Electoral College</a></li>
+<li class="chapter" data-level="7.4" data-path="section-6-overview.html"><a href="section-6-overview.html#forecasting"><i class="fa fa-check"></i><b>7.4</b> Forecasting</a></li>
+<li class="chapter" data-level="7.5" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---election-forecasting"><i class="fa fa-check"></i><b>7.5</b> Assessment - Election Forecasting</a></li>
+<li class="chapter" data-level="7.6" data-path="section-6-overview.html"><a href="section-6-overview.html#the-t-distribution"><i class="fa fa-check"></i><b>7.6</b> The t-Distribution</a></li>
+<li class="chapter" data-level="7.7" data-path="section-6-overview.html"><a href="section-6-overview.html#assessment---the-t-distribution"><i class="fa fa-check"></i><b>7.7</b> Assessment - The t-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="section-7-overview.html"><a href="section-7-overview.html"><i class="fa fa-check"></i><b>8</b> Section 7 Overview</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="section-7-overview.html"><a href="section-7-overview.html#association-tests"><i class="fa fa-check"></i><b>8.1</b> Association Tests</a></li>
+<li class="chapter" data-level="8.2" data-path="section-7-overview.html"><a href="section-7-overview.html#chi-squared-tests"><i class="fa fa-check"></i><b>8.2</b> Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.3" data-path="section-7-overview.html"><a href="section-7-overview.html#assessment---association-and-chi-squared-tests"><i class="fa fa-check"></i><b>8.3</b> Assessment - Association and Chi-Squared Tests</a></li>
+<li class="chapter" data-level="8.4" data-path="section-7-overview.html"><a href="section-7-overview.html#comprehensive-assessment-brexit"><i class="fa fa-check"></i><b>8.4</b> Comprehensive Assessment: Brexit</a></li>
+<li class="chapter" data-level="8.5" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-1"><i class="fa fa-check"></i><b>8.5</b> Brexit poll analysis - Part 1</a></li>
+<li class="chapter" data-level="8.6" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-2"><i class="fa fa-check"></i><b>8.6</b> Brexit poll analysis - Part 2</a></li>
+<li class="chapter" data-level="8.7" data-path="section-7-overview.html"><a href="section-7-overview.html#brexit-poll-analysis---part-3"><i class="fa fa-check"></i><b>8.7</b> Brexit poll analysis - Part 3</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Inference and Modeling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Data Science Inference and Modeling</h1>
+</div>
+<div id="learning-objectives" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Learning Objectives</h1>
+<ul>
+<li>The concepts necessary to define estimates and margins of errors of populations, parameters, estimates, and standard errors in order to make predictions about data</li>
+<li>How to use models to aggregate data from different sources</li>
+<li>The very basics of Bayesian statistics and predictive modeling</li>
+</ul>
+<div id="course-overview" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Course Overview</h2>
+<div id="section-1-parameters-and-estimates" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Section 1: Parameters and Estimates</h3>
+<p>You will learn how to estimate population parameters.</p>
+</div>
+<div id="section-2-the-central-limit-theorem-in-practice" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Section 2: The Central Limit Theorem in Practice</h3>
+<p>You will apply the central limit theorem to assess how close a sample estimate is to the population parameter of interest.</p>
+</div>
+<div id="section-3-confidence-intervals-and-p-values" class="section level3" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Section 3: Confidence Intervals and p-Values</h3>
+<p>You will learn how to calculate confidence intervals and learn about the relationship between confidence intervals and p-values.</p>
+</div>
+<div id="section-4-statistical-models" class="section level3" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Section 4: Statistical Models</h3>
+<p>You will learn about statistical models in the context of election forecasting.</p>
+</div>
+<div id="section-5-bayesian-statistics" class="section level3" number="1.1.5">
+<h3><span class="header-section-number">1.1.5</span> Section 5: Bayesian Statistics</h3>
+<p>You will learn about Bayesian statistics through looking at examples from rare disease diagnosis and baseball.</p>
+</div>
+<div id="section-6-election-forecasting" class="section level3" number="1.1.6">
+<h3><span class="header-section-number">1.1.6</span> Section 6: Election Forecasting</h3>
+<p>You will learn about election forecasting, building on what you’ve learned in the previous sections about statistical modeling and Bayesian statistics.</p>
+</div>
+<div id="section-7-association-tests" class="section level3" number="1.1.7">
+<h3><span class="header-section-number">1.1.7</span> Section 7: Association Tests</h3>
+<p>You will learn how to use association and chi-squared tests to perform inference for binary, categorical, and ordinal data through an example looking at research funding rates.</p>
+</div>
+</div>
+<div id="introduction-to-inference" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Introduction to Inference</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#polls">here</a></p>
+<p>In this course, we will learn:</p>
+<ul>
+<li><em>statistical inference</em>, the process of deducing characteristics of a population using data from a random sample</li>
+<li>the statistical concepts necessary to define <em>estimates</em> and <em>margins of errors</em></li>
+<li>how to <em>forecast future results</em> and estimate the precision of our forecast</li>
+<li>how to calculate and interpret <em>confidence intervals and p-values</em></li>
+</ul>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Information gathered from a small random sample can be used to infer characteristics of the entire population.</li>
+<li>Opinion polls are useful when asking everyone in the population is impossible.</li>
+<li>A common use for opinion polls is determining voter preferences in political elections for the purposes of forecasting election results.</li>
+<li>The <em>spread</em> of a poll is the estimated difference between support two candidates or options.</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="section-1-overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

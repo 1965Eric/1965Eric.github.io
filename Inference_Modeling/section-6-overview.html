@@ -449,7 +449,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb206-3"><a href="section-6-overview.html#cb206-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(clinton_EV)) <span class="op">+</span></span>
 <span id="cb206-4"><a href="section-6-overview.html#cb206-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="dv">1</span>) <span class="op">+</span></span>
 <span id="cb206-5"><a href="section-6-overview.html#cb206-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">269</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-67-1.png" width="672" /></p>
 <p><em>Code: Monte Carlo simulation including general bias</em></p>
 <div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="section-6-overview.html#cb207-1" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
 <span id="cb207-2"><a href="section-6-overview.html#cb207-2" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.02</span></span>
@@ -496,7 +496,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="section-6-overview.html#cb211-1" aria-hidden="true"></a><span class="co"># the distribution of the data is not normal</span></span>
 <span id="cb211-2"><a href="section-6-overview.html#cb211-2" aria-hidden="true"></a>one_pollster <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span></span>
 <span id="cb211-3"><a href="section-6-overview.html#cb211-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.01</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-69-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-69-1.png" width="672" /></p>
 <p><em>Code: Trend across time for several pollsters</em></p>
 <div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-6-overview.html#cb212-1" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
 <span id="cb212-2"><a href="section-6-overview.html#cb212-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-07-01&quot;</span>) <span class="op">%&gt;%</span></span>
@@ -508,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb212-8"><a href="section-6-overview.html#cb212-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.1</span>) <span class="op">+</span></span>
 <span id="cb212-9"><a href="section-6-overview.html#cb212-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> pollster), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>, <span class="dt">alpha =</span> <span class="fl">0.6</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-70-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-70-1.png" width="672" /></p>
 <p><em>Code: Plotting raw percentages across time</em></p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="section-6-overview.html#cb214-1" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
 <span id="cb214-2"><a href="section-6-overview.html#cb214-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-07-01&quot;</span>) <span class="op">%&gt;%</span></span>
@@ -526,7 +526,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <pre><code>## Warning: Removed 22 rows containing non-finite values (stat_smooth).</code></pre>
 <pre><code>## Warning: Removed 22 rows containing missing values (geom_point).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-71-1.png" width="672" /></p>
 </div>
 <div id="assessment---election-forecasting" class="section level2" number="7.5">
 <h2><span class="header-section-number">7.5</span> Assessment - Election Forecasting</h2>
@@ -626,7 +626,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb231-3"><a href="section-6-overview.html#cb231-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, proportion_hits)) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb231-4"><a href="section-6-overview.html#cb231-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
 <span id="cb231-5"><a href="section-6-overview.html#cb231-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-76-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-76-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Even if a forecaster’s confidence interval is incorrect, the overall predictions will do better if they correctly called the right winner.</li>
 </ol>
@@ -667,7 +667,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb238-3"><a href="section-6-overview.html#cb238-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, proportion_hits)) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb238-4"><a href="section-6-overview.html#cb238-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
 <span id="cb238-5"><a href="section-6-overview.html#cb238-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-78-1.png" width="672" /></p>
 <ol start="8" style="list-style-type: decimal">
 <li>In the previous graph, we see that most states’ polls predicted the correct winner 100% of the time.</li>
 </ol>
@@ -684,7 +684,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
 <div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="section-6-overview.html#cb241-1" aria-hidden="true"></a><span class="co"># Generate a histogram of the error</span></span>
 <span id="cb241-2"><a href="section-6-overview.html#cb241-2" aria-hidden="true"></a><span class="kw">hist</span>(errors<span class="op">$</span>error)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-79-1.png" width="672" /></p>
 <div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="section-6-overview.html#cb242-1" aria-hidden="true"></a><span class="co"># Calculate the median of the errors. Print this value to the console.</span></span>
 <span id="cb242-2"><a href="section-6-overview.html#cb242-2" aria-hidden="true"></a><span class="kw">median</span>(errors<span class="op">$</span>error)</span></code></pre></div>
 <pre><code>## [1] 0.037</code></pre>
@@ -703,7 +703,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
 <div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="section-6-overview.html#cb246-1" aria-hidden="true"></a><span class="co"># Create a boxplot showing the errors by state for polls with grades B+ or higher</span></span>
 <span id="cb246-2"><a href="section-6-overview.html#cb246-2" aria-hidden="true"></a>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>,<span class="st">&quot;A&quot;</span>,<span class="st">&quot;A-&quot;</span>,<span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, error)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, error)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-80-1.png" width="672" /></p>
 <ol start="10" style="list-style-type: decimal">
 <li>Some of these states only have a few polls.</li>
 </ol>
@@ -719,7 +719,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
 <div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="section-6-overview.html#cb249-1" aria-hidden="true"></a><span class="co"># Create a boxplot showing the errors by state for states with at least 5 polls with grades B+ or higher</span></span>
 <span id="cb249-2"><a href="section-6-overview.html#cb249-2" aria-hidden="true"></a>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>,<span class="st">&quot;A&quot;</span>,<span class="st">&quot;A-&quot;</span>,<span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(state) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, error)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, error)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-81-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-81-1.png" width="672" /></p>
 </div>
 <div id="the-t-distribution" class="section level2" number="7.6">
 <h2><span class="header-section-number">7.6</span> The t-Distribution</h2>
@@ -773,7 +773,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb258-11"><a href="section-6-overview.html#cb258-11" aria-hidden="true"></a></span>
 <span id="cb258-12"><a href="section-6-overview.html#cb258-12" aria-hidden="true"></a><span class="co"># Plot &#39;df&#39; on the x-axis and &#39;probs&#39; on the y-axis</span></span>
 <span id="cb258-13"><a href="section-6-overview.html#cb258-13" aria-hidden="true"></a><span class="kw">plot</span>(df, probs)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-84-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>In a previous section, we repeatedly took random samples of 50 heights from a distribution of heights.</li>
 </ol>
