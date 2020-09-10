@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="section-4-overview.html#cb296-1" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">losses_in_millions =</span> losses<span class="op">/</span><span class="dv">10</span><span class="op">^</span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
 <span id="cb296-2"><a href="section-4-overview.html#cb296-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(losses_in_millions)) <span class="op">+</span></span>
 <span id="cb296-3"><a href="section-4-overview.html#cb296-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.6</span>, <span class="dt">col =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-139-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-139-1.png" width="672" /></p>
 <p><em>Code: Expected value and standard error of the sum of 1,000 loans</em></p>
 <div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="section-4-overview.html#cb297-1" aria-hidden="true"></a>n<span class="op">*</span>(p<span class="op">*</span>loss_per_foreclosure <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">*</span><span class="dv">0</span>)    <span class="co"># expected value </span></span></code></pre></div>
 <pre><code>## [1] -4e+06</code></pre>
@@ -410,7 +410,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb333-21"><a href="section-4-overview.html#cb333-21" aria-hidden="true"></a></span>
 <span id="cb333-22"><a href="section-4-overview.html#cb333-22" aria-hidden="true"></a><span class="co"># Plot a histogram of &#39;S&#39;.  Ignore any warnings for now.</span></span>
 <span id="cb333-23"><a href="section-4-overview.html#cb333-23" aria-hidden="true"></a><span class="kw">hist</span>(S)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-150-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>What is the expected value of <span class="math inline">\(S\)</span>, the sum of losses over 10,000 loans? For now, assume a bank makes no money if the loan is paid.</li>
 </ol>
