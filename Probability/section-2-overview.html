@@ -267,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>Code: Discretization and the normal approximation</em></p>
 <div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-2-overview.html#cb150-1" aria-hidden="true"></a><span class="co"># plot distribution of exact heights in data</span></span>
 <span id="cb150-2"><a href="section-2-overview.html#cb150-2" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(x)), <span class="dt">xlab =</span> <span class="st">&quot;a = Height in inches&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Pr(x = a)&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-77-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-77-1.png" width="672" /></p>
 <div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="section-2-overview.html#cb151-1" aria-hidden="true"></a><span class="co"># probabilities in actual data over length 1 ranges containing an integer</span></span>
 <span id="cb151-2"><a href="section-2-overview.html#cb151-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">67.5</span>)</span></code></pre></div>
 <pre><code>## [1] 0.115</code></pre>
@@ -328,7 +328,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb167-14"><a href="section-2-overview.html#cb167-14" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">simulated_heights =</span> simulated_heights) <span class="op">%&gt;%</span></span>
 <span id="cb167-15"><a href="section-2-overview.html#cb167-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(simulated_heights)) <span class="op">+</span></span>
 <span id="cb167-16"><a href="section-2-overview.html#cb167-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-78-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-78-1.png" width="672" /></p>
 <p><em>Code: Monte Carlo simulation of probability of tallest person being over 7 feet</em></p>
 <div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="section-2-overview.html#cb168-1" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
 <span id="cb168-2"><a href="section-2-overview.html#cb168-2" aria-hidden="true"></a>tallest &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
@@ -354,7 +354,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb170-2"><a href="section-2-overview.html#cb170-2" aria-hidden="true"></a><span class="kw">data.frame</span>(x, <span class="dt">f =</span> <span class="kw">dnorm</span>(x)) <span class="op">%&gt;%</span></span>
 <span id="cb170-3"><a href="section-2-overview.html#cb170-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x,f)) <span class="op">+</span></span>
 <span id="cb170-4"><a href="section-2-overview.html#cb170-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-80-1.png" width="672" /></p>
 </div>
 <div id="assessment---continuous-probability" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Assessment - Continuous Probability</h2>
@@ -460,7 +460,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb183-12"><a href="section-2-overview.html#cb183-12" aria-hidden="true"></a></span>
 <span id="cb183-13"><a href="section-2-overview.html#cb183-13" aria-hidden="true"></a><span class="co"># Make a histogram of the highest IQ scores.</span></span>
 <span id="cb183-14"><a href="section-2-overview.html#cb183-14" aria-hidden="true"></a><span class="kw">hist</span>(highestIQ)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-87-1.png" width="672" /></p>
 </div>
 <div id="assessment---act-scores-part-1" class="section level2" number="3.7">
 <h2><span class="header-section-number">3.7</span> Assessment - ACT scores, part 1</h2>
@@ -498,7 +498,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb196-3"><a href="section-2-overview.html#cb196-3" aria-hidden="true"></a><span class="kw">data.frame</span>(x, f_x) <span class="op">%&gt;%</span></span>
 <span id="cb196-4"><a href="section-2-overview.html#cb196-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, f_x)) <span class="op">+</span></span>
 <span id="cb196-5"><a href="section-2-overview.html#cb196-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-93-1.png" width="672" /></p>
 <p>Which of the following plots is correct?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -556,7 +556,7 @@ B.</li>
 <span id="cb209-2"><a href="section-2-overview.html#cb209-2" aria-hidden="true"></a>sample_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(act_scores, p)</span>
 <span id="cb209-3"><a href="section-2-overview.html#cb209-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
 <span id="cb209-4"><a href="section-2-overview.html#cb209-4" aria-hidden="true"></a><span class="kw">qplot</span>(theoretical_quantiles, sample_quantiles) <span class="op">+</span><span class="st"> </span><span class="kw">geom_abline</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-100-1.png" width="672" /></p>
 <p>Which of the following graphs is correct?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
