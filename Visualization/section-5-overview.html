@@ -351,10 +351,10 @@ Jitter is adding a small random shift to each point in order to minimize the num
 <p><em>Code</em></p>
 <div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="section-5-overview.html#cb287-1" aria-hidden="true"></a><span class="co"># dot plot showing the data</span></span>
 <span id="cb287-2"><a href="section-5-overview.html#cb287-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(sex, height)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-140-1.png" width="672" /></p>
 <div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="section-5-overview.html#cb288-1" aria-hidden="true"></a><span class="co"># jittered, alpha blended point plot</span></span>
 <span id="cb288-2"><a href="section-5-overview.html#cb288-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(sex, height)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.1</span>, <span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-140-2.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-140-2.png" width="672" /></p>
 </div>
 <div id="ease-comparisons-use-common-axes" class="section level2" number="6.8">
 <h2><span class="header-section-number">6.8</span> Ease Comparisons: Use Common Axes</h2>
@@ -397,7 +397,7 @@ Jitter is adding a small random shift to each point in order to minimize the num
 <span id="cb289-4"><a href="section-5-overview.html#cb289-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, y, <span class="dt">color =</span> col)) <span class="op">+</span></span>
 <span id="cb289-5"><a href="section-5-overview.html#cb289-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">size =</span> <span class="dv">5</span>)</span>
 <span id="cb289-6"><a href="section-5-overview.html#cb289-6" aria-hidden="true"></a>p1 <span class="op">+</span><span class="st"> </span><span class="kw">scale_color_manual</span>(<span class="dt">values =</span> color_blind_friendly_cols)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-141-1.png" width="672" /></p>
 </div>
 <div id="assessment---data-visualization-principles-part-2" class="section level2" number="6.11">
 <h2><span class="header-section-number">6.11</span> Assessment - Data Visualization Principles, Part 2</h2>
@@ -426,7 +426,7 @@ Jitter is adding a small random shift to each point in order to minimize the num
 <span id="cb292-3"><a href="section-5-overview.html#cb292-3" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">state =</span> <span class="kw">reorder</span>(state, rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(state, rate)) <span class="op">+</span></span>
 <span id="cb292-4"><a href="section-5-overview.html#cb292-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat=</span><span class="st">&quot;identity&quot;</span>) <span class="op">+</span></span>
 <span id="cb292-5"><a href="section-5-overview.html#cb292-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">coord_flip</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-143-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-143-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Say we are interested in comparing gun homicide rates across regions of the US.</li>
 </ol>
@@ -461,7 +461,7 @@ D. The Northeast has the lowest average.</li>
 <li>To further investigate whether moving to the western region is a wise decision, let’s make a box plot of murder rates by region, showing all points.</li>
 </ol>
 <div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="section-5-overview.html#cb294-1" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">region =</span> <span class="kw">reorder</span>(region, rate, <span class="dt">FUN =</span> median)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(region, rate)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-145-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-145-1.png" width="672" /></p>
 </div>
 <div id="slope-charts" class="section level2" number="6.12">
 <h2><span class="header-section-number">6.12</span> Slope Charts</h2>
@@ -488,7 +488,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb295-13"><a href="section-5-overview.html#cb295-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> location, <span class="dt">label =</span> country, <span class="dt">hjust =</span> hjust), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span></span>
 <span id="cb295-14"><a href="section-5-overview.html#cb295-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
 <span id="cb295-15"><a href="section-5-overview.html#cb295-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Life Expectancy&quot;</span>)    </span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-146-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-146-1.png" width="672" /></p>
 <p><em>Code: Bland-Altman plot</em></p>
 <div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="section-5-overview.html#cb296-1" aria-hidden="true"></a>dat <span class="op">%&gt;%</span></span>
 <span id="cb296-2"><a href="section-5-overview.html#cb296-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">year =</span> <span class="kw">paste0</span>(<span class="st">&quot;life_expectancy_&quot;</span>, year)) <span class="op">%&gt;%</span></span>
@@ -501,7 +501,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb296-9"><a href="section-5-overview.html#cb296-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>(<span class="dt">lty =</span> <span class="dv">2</span>) <span class="op">+</span></span>
 <span id="cb296-10"><a href="section-5-overview.html#cb296-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Average of 2010 and 2015&quot;</span>) <span class="op">+</span></span>
 <span id="cb296-11"><a href="section-5-overview.html#cb296-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Difference between 2015 and 2010&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-147-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-147-1.png" width="672" /></p>
 </div>
 <div id="encoding-a-third-variable" class="section level2" number="6.13">
 <h2><span class="header-section-number">6.13</span> Encoding a Third Variable</h2>
@@ -545,7 +545,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb299-11"><a href="section-5-overview.html#cb299-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
 <span id="cb299-12"><a href="section-5-overview.html#cb299-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Cases per 10,000&quot;</span>) <span class="op">+</span></span>
 <span id="cb299-13"><a href="section-5-overview.html#cb299-13" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-148-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-148-1.png" width="672" /></p>
 <div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="section-5-overview.html#cb300-1" aria-hidden="true"></a><span class="co"># tile plot of disease rate by state and year</span></span>
 <span id="cb300-2"><a href="section-5-overview.html#cb300-2" aria-hidden="true"></a>dat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, state, <span class="dt">fill=</span>rate)) <span class="op">+</span></span>
 <span id="cb300-3"><a href="section-5-overview.html#cb300-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_tile</span>(<span class="dt">color =</span> <span class="st">&quot;grey50&quot;</span>) <span class="op">+</span></span>
@@ -556,7 +556,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb300-8"><a href="section-5-overview.html#cb300-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(the_disease) <span class="op">+</span></span>
 <span id="cb300-9"><a href="section-5-overview.html#cb300-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
 <span id="cb300-10"><a href="section-5-overview.html#cb300-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-148-2.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-148-2.png" width="672" /></p>
 <p><em>Code: Line plot of measles rate by year and state</em></p>
 <div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="section-5-overview.html#cb301-1" aria-hidden="true"></a><span class="co"># compute US average measles rate by year</span></span>
 <span id="cb301-2"><a href="section-5-overview.html#cb301-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span>us_contagious_diseases <span class="op">%&gt;%</span></span>
@@ -577,7 +577,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb303-12"><a href="section-5-overview.html#cb303-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="dv">1955</span>, <span class="dt">y =</span> <span class="dv">50</span>),</span>
 <span id="cb303-13"><a href="section-5-overview.html#cb303-13" aria-hidden="true"></a>        <span class="dt">mapping =</span> <span class="kw">aes</span>(x, y, <span class="dt">label =</span> <span class="st">&quot;US average&quot;</span>), <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>) <span class="op">+</span></span>
 <span id="cb303-14"><a href="section-5-overview.html#cb303-14" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-149-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-149-1.png" width="672" /></p>
 </div>
 <div id="avoid-pseudo-and-gratuitous-3d-plots" class="section level2" number="6.15">
 <h2><span class="header-section-number">6.15</span> Avoid Pseudo and Gratuitous 3D Plots</h2>
@@ -619,7 +619,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb304-17"><a href="section-5-overview.html#cb304-17" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(the_disease) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb304-18"><a href="section-5-overview.html#cb304-18" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb304-19"><a href="section-5-overview.html#cb304-19" aria-hidden="true"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-150-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-150-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>The sample code given creates a time series plot showing the rate of measles cases per population by state.</li>
 </ol>
@@ -644,7 +644,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb307-8"><a href="section-5-overview.html#cb307-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
 <span id="cb307-9"><a href="section-5-overview.html#cb307-9" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x=</span><span class="dv">1955</span>, <span class="dt">y=</span><span class="dv">50</span>), <span class="dt">mapping =</span> <span class="kw">aes</span>(x, y, <span class="dt">label=</span><span class="st">&quot;US average&quot;</span>), <span class="dt">color=</span><span class="st">&quot;black&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb307-10"><a href="section-5-overview.html#cb307-10" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept=</span><span class="dv">1963</span>, <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-151-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-151-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Now we are going to look at the rates of all diseases in one state.</li>
 </ol>
@@ -655,7 +655,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb308-4"><a href="section-5-overview.html#cb308-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, rate, <span class="dt">color =</span> disease)) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb308-5"><a href="section-5-overview.html#cb308-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
 <pre><code>## `summarise()` regrouping output by &#39;year&#39; (override with `.groups` argument)</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-152-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-152-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Now we are going to make a time series plot for the rates of all diseases in the United States.</li>
 </ol>
@@ -666,7 +666,7 @@ D. The Northeast has the lowest average.</li>
 <span id="cb310-4"><a href="section-5-overview.html#cb310-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, rate, <span class="dt">color =</span> disease)) <span class="op">+</span><span class="st"> </span></span>
 <span id="cb310-5"><a href="section-5-overview.html#cb310-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
 <pre><code>## `summarise()` regrouping output by &#39;year&#39; (override with `.groups` argument)</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-153-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-153-1.png" width="672" /></p>
 </div>
 <div id="titanic-survival-exercises" class="section level2" number="6.18">
 <h2><span class="header-section-number">6.18</span> Titanic Survival Exercises</h2>
@@ -708,19 +708,19 @@ D. The Northeast has the lowest average.</li>
 <span id="cb313-3"><a href="section-5-overview.html#cb313-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>) <span class="op">+</span></span>
 <span id="cb313-4"><a href="section-5-overview.html#cb313-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(Sex <span class="op">~</span><span class="st"> </span>.)</span></code></pre></div>
 <pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-155-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-155-1.png" width="672" /></p>
 <p>A stacked density plot with count on the y-axis is useful for answering B, C and D. The main mode is around age 25 and a second smaller mode is around age 4-5. There are more males than females as indicated by a higher total area and higher counts at almost all ages. With count on the y-axis, it is clear that more males than females are age 40.</p>
 <div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="section-5-overview.html#cb315-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb315-2"><a href="section-5-overview.html#cb315-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
 <span id="cb315-3"><a href="section-5-overview.html#cb315-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>, <span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-156-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-156-1.png" width="672" /></p>
 <p>A plot filled by sex with alpha blending helps reveal the answers to E, F and G. There is a higher proportion of females than males below age 17, a higher proportion of males than females for ages 18-35, approximately the same proportion of males and females age 35-55, and a higher proportion of males over age 55. The oldest individuals are male.</p>
 <div class="sourceCode" id="cb317"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb317-1"><a href="section-5-overview.html#cb317-1" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb317-2"><a href="section-5-overview.html#cb317-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
 <span id="cb317-3"><a href="section-5-overview.html#cb317-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-157-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-157-1.png" width="672" /></p>
 <p>Which of the following are true? Select all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -751,7 +751,7 @@ G. The oldest passengers were female.</li>
 <span id="cb319-7"><a href="section-5-overview.html#cb319-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> Age)) <span class="op">+</span></span>
 <span id="cb319-8"><a href="section-5-overview.html#cb319-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_qq</span>(<span class="dt">dparams =</span> params) <span class="op">+</span></span>
 <span id="cb319-9"><a href="section-5-overview.html#cb319-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-158-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-158-1.png" width="672" /></p>
 <p>What is the correct plot according to the instructions above? <code>QQ-plot C</code></p>
 <div class="figure">
 <img src="images/qqplotC.png" alt="" />
@@ -767,17 +767,17 @@ G. The oldest passengers were female.</li>
 <span id="cb320-2"><a href="section-5-overview.html#cb320-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb320-3"><a href="section-5-overview.html#cb320-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
 <span id="cb320-4"><a href="section-5-overview.html#cb320-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-159-1.png" width="672" /></p>
 <div class="sourceCode" id="cb321"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb321-1"><a href="section-5-overview.html#cb321-1" aria-hidden="true"></a><span class="co"># plot 2 - survival filled by sex with position_dodge</span></span>
 <span id="cb321-2"><a href="section-5-overview.html#cb321-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb321-3"><a href="section-5-overview.html#cb321-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Sex)) <span class="op">+</span></span>
 <span id="cb321-4"><a href="section-5-overview.html#cb321-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_dodge</span>())</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-159-2.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-159-2.png" width="672" /></p>
 <div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="section-5-overview.html#cb322-1" aria-hidden="true"></a><span class="co">#plot 3 - sex filled by survival</span></span>
 <span id="cb322-2"><a href="section-5-overview.html#cb322-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb322-3"><a href="section-5-overview.html#cb322-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Sex, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
 <span id="cb322-4"><a href="section-5-overview.html#cb322-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-159-3.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-159-3.png" width="672" /></p>
 <p>Which of the following are true? Select all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -797,7 +797,7 @@ D. Most of the females survived.</li>
 <span id="cb323-2"><a href="section-5-overview.html#cb323-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Age, <span class="dt">y =</span> ..count.., <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
 <span id="cb323-3"><a href="section-5-overview.html#cb323-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-160-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-160-1.png" width="672" /></p>
 <p>Which age group is the only group more likely to survive than die?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -853,7 +853,7 @@ F. 70-80</li>
 <span id="cb325-4"><a href="section-5-overview.html#cb325-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_boxplot</span>() <span class="op">+</span></span>
 <span id="cb325-5"><a href="section-5-overview.html#cb325-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
 <span id="cb325-6"><a href="section-5-overview.html#cb325-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_jitter</span>(<span class="dt">alpha =</span> <span class="fl">0.2</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-161-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-161-1.png" width="672" /></p>
 <p>Which of the following are true? Select all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -876,19 +876,19 @@ E. Most individuals who paid a fare around $8 did not survive.</li>
 <span id="cb326-3"><a href="section-5-overview.html#cb326-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Pclass, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
 <span id="cb326-4"><a href="section-5-overview.html#cb326-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>() <span class="op">+</span></span>
 <span id="cb326-5"><a href="section-5-overview.html#cb326-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-162-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-162-1.png" width="672" /></p>
 <div class="sourceCode" id="cb327"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb327-1"><a href="section-5-overview.html#cb327-1" aria-hidden="true"></a><span class="co"># barplot of passenger class filled by survival with position_fill</span></span>
 <span id="cb327-2"><a href="section-5-overview.html#cb327-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb327-3"><a href="section-5-overview.html#cb327-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Pclass, <span class="dt">fill =</span> Survived)) <span class="op">+</span></span>
 <span id="cb327-4"><a href="section-5-overview.html#cb327-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_fill</span>()) <span class="op">+</span></span>
 <span id="cb327-5"><a href="section-5-overview.html#cb327-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-162-2.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-162-2.png" width="672" /></p>
 <div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="section-5-overview.html#cb328-1" aria-hidden="true"></a><span class="co"># barplot of survival filled by passenger class with position_fill</span></span>
 <span id="cb328-2"><a href="section-5-overview.html#cb328-2" aria-hidden="true"></a>titanic <span class="op">%&gt;%</span></span>
 <span id="cb328-3"><a href="section-5-overview.html#cb328-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(Survived, <span class="dt">fill =</span> Pclass)) <span class="op">+</span></span>
 <span id="cb328-4"><a href="section-5-overview.html#cb328-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="kw">position_fill</span>()) <span class="op">+</span></span>
 <span id="cb328-5"><a href="section-5-overview.html#cb328-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Proportion&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-162-3.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-162-3.png" width="672" /></p>
 <p>Which of the following are true? Select all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -913,7 +913,7 @@ F. The majority of those who did not survive were from third class.</li>
 <span id="cb329-3"><a href="section-5-overview.html#cb329-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_density</span>(<span class="dt">position =</span> <span class="st">&quot;stack&quot;</span>) <span class="op">+</span></span>
 <span id="cb329-4"><a href="section-5-overview.html#cb329-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">facet_grid</span>(Sex <span class="op">~</span><span class="st"> </span>Pclass)</span></code></pre></div>
 <pre><code>## Warning: Removed 177 rows containing non-finite values (stat_density).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-163-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-163-1.png" width="672" /></p>
 <p>Which of the following are true? Select all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -952,7 +952,7 @@ E. Almost all second-class males did not survive, with the exception of children
 <div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="section-5-overview.html#cb336-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
 <span id="cb336-2"><a href="section-5-overview.html#cb336-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(magnitude)) <span class="op">+</span></span>
 <span id="cb336-3"><a href="section-5-overview.html#cb336-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-167-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-167-1.png" width="672" /></p>
 <p>How many peaks are there in the data?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -970,7 +970,7 @@ D. 4</li>
 <div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="section-5-overview.html#cb337-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
 <span id="cb337-2"><a href="section-5-overview.html#cb337-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(temp)) <span class="op">+</span></span>
 <span id="cb337-3"><a href="section-5-overview.html#cb337-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_density</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-168-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-168-1.png" width="672" /></p>
 <p>Which of these statements best characterizes the temperature distribution?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -989,7 +989,7 @@ D. There are equal numbers of stars across the temperature range.</li>
 <div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="section-5-overview.html#cb338-1" aria-hidden="true"></a>stars <span class="op">%&gt;%</span></span>
 <span id="cb338-2"><a href="section-5-overview.html#cb338-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(temp, magnitude)) <span class="op">+</span></span>
 <span id="cb338-3"><a href="section-5-overview.html#cb338-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-169-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-169-1.png" width="672" /></p>
 <p>Fill in the blank:</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -1009,7 +1009,7 @@ D. increasing exponential</li>
 <span id="cb339-3"><a href="section-5-overview.html#cb339-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
 <span id="cb339-4"><a href="section-5-overview.html#cb339-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_y_reverse</span>() <span class="op">+</span></span>
 <span id="cb339-5"><a href="section-5-overview.html#cb339-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-170-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-170-1.png" width="672" /></p>
 <p>Fill in the blanks in the statements below to describe the resulting plot.</p>
 <p>The brighest, highest temperature stars are in the ______________ corner of the plot.</p>
 <ul class="task-list">
@@ -1058,7 +1058,7 @@ D. 20000K</li>
 <span id="cb340-4"><a href="section-5-overview.html#cb340-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label =</span> star)) <span class="op">+</span></span>
 <span id="cb340-5"><a href="section-5-overview.html#cb340-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
 <span id="cb340-6"><a href="section-5-overview.html#cb340-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-171-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-171-1.png" width="672" /></p>
 <p>Fill in the blanks in the statements below:</p>
 <p>The least lumninous star in the sample with a surface temperature over 5000K is _________.</p>
 <ul class="task-list">
@@ -1103,7 +1103,7 @@ C. white dwarf</li>
 <span id="cb341-3"><a href="section-5-overview.html#cb341-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
 <span id="cb341-4"><a href="section-5-overview.html#cb341-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_x_reverse</span>() <span class="op">+</span></span>
 <span id="cb341-5"><a href="section-5-overview.html#cb341-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">scale_y_reverse</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-172-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-172-1.png" width="672" /></p>
 <p>Which star type has the lowest temperature? <code>M</code></p>
 <p>Which star type has the highest temperature? <code>O</code></p>
 <p>The Sun is classified as a G-type star. Is the most luminous G-type star in this dataset also the hottest? <code>No</code></p>
@@ -1252,7 +1252,7 @@ D.</li>
 <span id="cb367-5"><a href="section-5-overview.html#cb367-5" aria-hidden="true"></a></span>
 <span id="cb367-6"><a href="section-5-overview.html#cb367-6" aria-hidden="true"></a>p &lt;-<span class="st"> </span>p <span class="op">+</span><span class="st"> </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="dv">0</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>)</span>
 <span id="cb367-7"><a href="section-5-overview.html#cb367-7" aria-hidden="true"></a>p</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-189-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-189-1.png" width="672" /></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Continue working with <code>p</code>, the plot created in the previous question.</li>
 </ol>
@@ -1291,7 +1291,7 @@ D.</li>
 <span id="cb371-7"><a href="section-5-overview.html#cb371-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>) <span class="op">+</span></span>
 <span id="cb371-8"><a href="section-5-overview.html#cb371-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label=</span><span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col=</span><span class="st">&#39;blue&#39;</span>)</span>
 <span id="cb371-9"><a href="section-5-overview.html#cb371-9" aria-hidden="true"></a>p</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-193-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-193-1.png" width="672" /></p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 E.</li>
@@ -1312,7 +1312,7 @@ E.</li>
 <span id="cb373-7"><a href="section-5-overview.html#cb373-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">x =</span> <span class="dv">2000</span>, <span class="dt">y =</span> <span class="fl">0.05</span>, <span class="dt">label =</span> <span class="st">&quot;20th century mean&quot;</span>), <span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span></span>
 <span id="cb373-8"><a href="section-5-overview.html#cb373-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">1880</span>, <span class="dv">2018</span>)) <span class="op">+</span></span>
 <span id="cb373-9"><a href="section-5-overview.html#cb373-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly relative to 20th century mean, 1880-2018&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-195-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-195-1.png" width="672" /></p>
 <p>When was the earliest year with a temperature above the 20th century mean? <code>1940</code></p>
 <p>When was the last year with an average temperature below the 20th century mean? <code>1976</code></p>
 <p>In what year did the temperature anomaly exceed 0.5 degrees Celsius for the first time? <code>1997</code></p>
@@ -1329,7 +1329,7 @@ E.</li>
 <span id="cb374-7"><a href="section-5-overview.html#cb374-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Temperature anomaly (degrees C)&quot;</span>) <span class="op">+</span></span>
 <span id="cb374-8"><a href="section-5-overview.html#cb374-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlim</span>(<span class="kw">c</span>(<span class="dv">1880</span>, <span class="dv">2018</span>)) <span class="op">+</span></span>
 <span id="cb374-9"><a href="section-5-overview.html#cb374-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Temperature anomaly on land and ocean&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-196-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-196-1.png" width="672" /></p>
 <p>Which region has the largest 2018 temperature anomaly relative to the 20th century mean? <code>Land</code></p>
 <p>Which region has the largest change in temperature since 1880? <code>Land</code></p>
 <p>Which region has a temperature anomaly pattern that more closely matches the global pattern? <code>Ocean</code></p>
@@ -1345,7 +1345,7 @@ E.</li>
 <span id="cb375-5"><a href="section-5-overview.html#cb375-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">1850</span>, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>) <span class="op">+</span></span>
 <span id="cb375-6"><a href="section-5-overview.html#cb375-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Concentration (ch4/n2o ppb, co2 ppm)&quot;</span>) <span class="op">+</span></span>
 <span id="cb375-7"><a href="section-5-overview.html#cb375-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric greenhouse gas concentration by year, 0-2000&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-197-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-197-1.png" width="672" /></p>
 <p>What code fills the first blank? <code>year, concentration</code></p>
 <p>What code fills the second blank? Make sure to align plots vertically. <code>gas ~ .</code></p>
 <p>What code fills the third blank? <code>geom_vline(xintercept = 1850)</code></p>
@@ -1367,7 +1367,7 @@ E.</li>
 <span id="cb376-4"><a href="section-5-overview.html#cb376-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
 <span id="cb376-5"><a href="section-5-overview.html#cb376-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Carbon emissions (metric tons)&quot;</span>) <span class="op">+</span></span>
 <span id="cb376-6"><a href="section-5-overview.html#cb376-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggtitle</span>(<span class="st">&quot;Annual global carbon emissions, 1751-2014&quot;</span>)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-198-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-198-1.png" width="672" /></p>
 <p>Which of the following are true about the trend of carbon emissions? Check all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -1394,7 +1394,7 @@ F. Carbon emissions change with the same trend as atmospheric greenhouse gas lev
 <span id="cb377-5"><a href="section-5-overview.html#cb377-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Atmospheric CO2 concentration, -800,000 BC to today&quot;</span>) <span class="op">+</span></span>
 <span id="cb377-6"><a href="section-5-overview.html#cb377-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
 <span id="cb377-7"><a href="section-5-overview.html#cb377-7" aria-hidden="true"></a>co2_time</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-199-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-199-1.png" width="672" /></p>
 <p>Which of the following are true about <code>co2_time</code>, the time series of <code>co2</code> over the last 800,000 years? Check all correct answers.</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -1418,7 +1418,7 @@ D. co2 concentration has been at least 200 ppm for the last 800,000 years.</li>
 <span id="cb378-5"><a href="section-5-overview.html#cb378-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
 <span id="cb378-6"><a href="section-5-overview.html#cb378-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">800000</span>, <span class="dv">-775000</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-200-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-200-1.png" width="672" /></p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 A. 100</li>
@@ -1437,7 +1437,7 @@ D. 10,000</li>
 <span id="cb380-5"><a href="section-5-overview.html#cb380-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
 <span id="cb380-6"><a href="section-5-overview.html#cb380-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">375000</span>, <span class="dv">-330000</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-201-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-201-1.png" width="672" /></p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 A. 3,000</li>
@@ -1456,7 +1456,7 @@ D. 25,000</li>
 <span id="cb382-5"><a href="section-5-overview.html#cb382-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
 <span id="cb382-6"><a href="section-5-overview.html#cb382-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">140000</span>, <span class="dv">-120000</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 683 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-202-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-202-1.png" width="672" /></p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 A. 3200</li>
@@ -1475,7 +1475,7 @@ D. 9,000</li>
 <span id="cb384-5"><a href="section-5-overview.html#cb384-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;co2 (ppmv)&quot;</span>)</span>
 <span id="cb384-6"><a href="section-5-overview.html#cb384-6" aria-hidden="true"></a>co2_time <span class="op">+</span><span class="st"> </span><span class="kw">xlim</span>(<span class="op">-</span><span class="dv">3000</span>, <span class="dv">2018</span>)</span></code></pre></div>
 <pre><code>## Warning: Removed 539 row(s) containing missing values (geom_path).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-203-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-203-1.png" width="672" /></p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
 A. 250</li>
