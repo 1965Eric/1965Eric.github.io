@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Section 4 Overview | Data Science Wrangling</title>
+  <meta name="description" content="5 Section 4 Overview | Data Science Wrangling" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Section 4 Overview | Data Science Wrangling" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Section 4 Overview | Data Science Wrangling" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="section-3-overview.html"/>
+
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-data-import"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Data Import</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-tidy-data"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Tidy Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-string-processing"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: String Processing</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-dates-times-and-text-mining"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Dates, Times, and Text Mining</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#introduction-to-wrangling"><i class="fa fa-check"></i><b>1.2</b> Introduction to Wrangling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#importing-spreadsheets"><i class="fa fa-check"></i><b>2.1</b> Importing Spreadsheets</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#paths-and-the-working-directory"><i class="fa fa-check"></i><b>2.2</b> Paths and the Working Directory</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#the-readr-and-readxl-packages"><i class="fa fa-check"></i><b>2.3</b> The readr and readxl Packages</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#importing-data-using-r-base-functions"><i class="fa fa-check"></i><b>2.4</b> Importing Data Using R-base Functions</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#downloading-files-from-the-internet"><i class="fa fa-check"></i><b>2.5</b> Downloading Files from the Internet</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment-part-1---data-import"><i class="fa fa-check"></i><b>2.6</b> Assessment Part 1 - Data Import</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment-part-2---data-import"><i class="fa fa-check"></i><b>2.7</b> Assessment Part 2 - Data Import</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#tidy-data"><i class="fa fa-check"></i><b>3.1</b> Tidy Data</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#reshaping-data"><i class="fa fa-check"></i><b>3.2</b> Reshaping Data</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#separate-and-unite"><i class="fa fa-check"></i><b>3.3</b> Separate and Unite</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment-part-1---reshaping-data"><i class="fa fa-check"></i><b>3.4</b> Assessment Part 1 - Reshaping Data</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment-part-2---reshaping-data"><i class="fa fa-check"></i><b>3.5</b> Assessment Part 2 - Reshaping Data</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#combining-tables"><i class="fa fa-check"></i><b>3.6</b> Combining Tables</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#binding"><i class="fa fa-check"></i><b>3.7</b> Binding</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#set-operators"><i class="fa fa-check"></i><b>3.8</b> Set Operators</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---combining-tables"><i class="fa fa-check"></i><b>3.9</b> Assessment - Combining Tables</a></li>
+<li class="chapter" data-level="3.10" data-path="section-2-overview.html"><a href="section-2-overview.html#web-scraping"><i class="fa fa-check"></i><b>3.10</b> Web Scraping</a></li>
+<li class="chapter" data-level="3.11" data-path="section-2-overview.html"><a href="section-2-overview.html#css-selectors"><i class="fa fa-check"></i><b>3.11</b> CSS Selectors</a></li>
+<li class="chapter" data-level="3.12" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---web-scraping"><i class="fa fa-check"></i><b>3.12</b> Assessment - Web Scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#string-parsing"><i class="fa fa-check"></i><b>4.1</b> String Parsing</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#defining-strings-single-and-double-quotes-and-how-to-escape"><i class="fa fa-check"></i><b>4.2</b> Defining Strings: Single and Double Quotes and How to Escape</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#stringr-package"><i class="fa fa-check"></i><b>4.3</b> stringr Package</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study-1-us-murders-data"><i class="fa fa-check"></i><b>4.4</b> Case Study 1: US Murders Data</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-1"><i class="fa fa-check"></i><b>4.5</b> Assessment - String Processing Part 1</a></li>
+<li class="chapter" data-level="4.6" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study-2-reported-heights"><i class="fa fa-check"></i><b>4.6</b> Case Study 2: Reported Heights</a></li>
+<li class="chapter" data-level="4.7" data-path="section-3-overview.html"><a href="section-3-overview.html#regex"><i class="fa fa-check"></i><b>4.7</b> Regex</a></li>
+<li class="chapter" data-level="4.8" data-path="section-3-overview.html"><a href="section-3-overview.html#character-classes-anchors-and-quantifiers"><i class="fa fa-check"></i><b>4.8</b> Character Classes, Anchors and Quantifiers</a></li>
+<li class="chapter" data-level="4.9" data-path="section-3-overview.html"><a href="section-3-overview.html#search-and-replace-with-regex"><i class="fa fa-check"></i><b>4.9</b> Search and Replace with Regex</a></li>
+<li class="chapter" data-level="4.10" data-path="section-3-overview.html"><a href="section-3-overview.html#groups-with-regex"><i class="fa fa-check"></i><b>4.10</b> Groups with Regex</a></li>
+<li class="chapter" data-level="4.11" data-path="section-3-overview.html"><a href="section-3-overview.html#testing-and-improving"><i class="fa fa-check"></i><b>4.11</b> Testing and Improving</a></li>
+<li class="chapter" data-level="4.12" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-2"><i class="fa fa-check"></i><b>4.12</b> Assessment - String Processing Part 2</a></li>
+<li class="chapter" data-level="4.13" data-path="section-3-overview.html"><a href="section-3-overview.html#separate-with-regex"><i class="fa fa-check"></i><b>4.13</b> Separate with Regex</a></li>
+<li class="chapter" data-level="4.14" data-path="section-3-overview.html"><a href="section-3-overview.html#using-groups-and-quantifiers"><i class="fa fa-check"></i><b>4.14</b> Using Groups and Quantifiers</a></li>
+<li class="chapter" data-level="4.15" data-path="section-3-overview.html"><a href="section-3-overview.html#putting-it-all-together"><i class="fa fa-check"></i><b>4.15</b> Putting it All Together</a></li>
+<li class="chapter" data-level="4.16" data-path="section-3-overview.html"><a href="section-3-overview.html#string-splitting"><i class="fa fa-check"></i><b>4.16</b> String Splitting</a></li>
+<li class="chapter" data-level="4.17" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study---extracting-a-table-from-a-pdf"><i class="fa fa-check"></i><b>4.17</b> Case Study - Extracting a Table from a PDF</a></li>
+<li class="chapter" data-level="4.18" data-path="section-3-overview.html"><a href="section-3-overview.html#recoding"><i class="fa fa-check"></i><b>4.18</b> Recoding</a></li>
+<li class="chapter" data-level="4.19" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-3"><i class="fa fa-check"></i><b>4.19</b> Assessment - String Processing Part 3</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#dates-and-times"><i class="fa fa-check"></i><b>5.1</b> Dates and Times</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#text-mining"><i class="fa fa-check"></i><b>5.2</b> Text mining</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment-part-1---dates-times-and-text-mining"><i class="fa fa-check"></i><b>5.3</b> Assessment Part 1 - Dates, Times, and Text Mining</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment-part-2---dates-times-and-text-mining"><i class="fa fa-check"></i><b>5.4</b> Assessment Part 2 - Dates, Times, and Text Mining</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#final-comprehensive-assessment"><i class="fa fa-check"></i><b>5.5</b> Final: Comprehensive Assessment</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#comprehensive-assessment-puerto-rico-hurricane-mortality"><i class="fa fa-check"></i><b>5.5.1</b> Comprehensive Assessment: Puerto Rico Hurricane Mortality</a></li>
+<li class="chapter" data-level="5.5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#project-introduction"><i class="fa fa-check"></i><b>5.5.2</b> Project Introduction</a></li>
+<li class="chapter" data-level="5.5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#puerto-rico-hurricane-mortality---part-1"><i class="fa fa-check"></i><b>5.5.3</b> Puerto Rico Hurricane Mortality - Part 1</a></li>
+<li class="chapter" data-level="5.5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#puerto-rico-hurricane-mortality---part-2"><i class="fa fa-check"></i><b>5.5.4</b> Puerto Rico Hurricane Mortality - Part 2</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Wrangling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-4-overview" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Section 4 Overview</h1>
+<p>In the <strong>Dates, Times, and Text Mining</strong> section, you will learn how to deal with dates and times in R and also how to generate numerical summaries from text data.</p>
+<p>After completing this section, you will be able to:</p>
+<ul>
+<li>Handle <strong>dates</strong> and <strong>times</strong> in R.</li>
+<li>Use the <strong>lubridate</strong> package to parse dates and times in different formats.</li>
+<li>Generate <strong>numerical summaries from text data</strong> and apply data visualization and analysis techniques to those data.</li>
+</ul>
+<div id="dates-and-times" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Dates and Times</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/parsing-dates-and-times.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>Dates are a separate data type in R.The <strong>tidyverse</strong> includes functionality for dealing with dates through the <strong>lubridate</strong> package.</li>
+<li>Extract the year, month and day from a date object with the <code>year()</code>, <code>month()</code> and <code>day()</code> functions.</li>
+<li>Parsers convert strings into dates with the standard YYYY-MM-DD format (ISO 8601 format). Use the parser with the name corresponding to the string format of year, month and day (<code>ymd()</code>, <code>ydm()</code>, <code>myd()</code>, <code>mdy()</code>, <code>dmy()</code>, <code>dym()</code>).</li>
+<li>Get the current time with the <code>Sys.time()</code> function. Use the <code>now()</code> function instead to specify a time zone.</li>
+<li>You can extract values from time objects with the <code>hour()</code>, <code>minute()</code> and <code>second()</code> functions.</li>
+<li>Parsers convert strings into times (for example, <code>hms()</code>). Parsers can also create combined date-time objects (for example, <code>mdy_hms()</code>).</li>
+</ul>
+<p><em>Code</em></p>
+<div class="sourceCode" id="cb492"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb492-1"><a href="section-4-overview.html#cb492-1" aria-hidden="true"></a><span class="co"># inspect the startdate column of 2016 polls data, a Date type</span></span>
+<span id="cb492-2"><a href="section-4-overview.html#cb492-2" aria-hidden="true"></a><span class="kw">data</span>(<span class="st">&quot;polls_us_election_2016&quot;</span>)</span>
+<span id="cb492-3"><a href="section-4-overview.html#cb492-3" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span><span class="op">$</span>startdate <span class="op">%&gt;%</span><span class="st"> </span>head</span></code></pre></div>
+<pre><code>## [1] &quot;2016-11-03&quot; &quot;2016-11-01&quot; &quot;2016-11-02&quot; &quot;2016-11-04&quot; &quot;2016-11-03&quot; &quot;2016-11-03&quot;</code></pre>
+<div class="sourceCode" id="cb494"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb494-1"><a href="section-4-overview.html#cb494-1" aria-hidden="true"></a><span class="kw">class</span>(polls_us_election_<span class="dv">2016</span><span class="op">$</span>startdate)</span></code></pre></div>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<div class="sourceCode" id="cb496"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb496-1"><a href="section-4-overview.html#cb496-1" aria-hidden="true"></a><span class="kw">as.numeric</span>(polls_us_election_<span class="dv">2016</span><span class="op">$</span>startdate) <span class="op">%&gt;%</span><span class="st"> </span>head</span></code></pre></div>
+<pre><code>## [1] 17108 17106 17107 17109 17108 17108</code></pre>
+<div class="sourceCode" id="cb498"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb498-1"><a href="section-4-overview.html#cb498-1" aria-hidden="true"></a><span class="co"># ggplot is aware of dates</span></span>
+<span id="cb498-2"><a href="section-4-overview.html#cb498-2" aria-hidden="true"></a>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(pollster <span class="op">==</span><span class="st"> &quot;Ipsos&quot;</span> <span class="op">&amp;</span><span class="st"> </span>state <span class="op">==</span><span class="st">&quot;U.S.&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb498-3"><a href="section-4-overview.html#cb498-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(startdate, rawpoll_trump)) <span class="op">+</span></span>
+<span id="cb498-4"><a href="section-4-overview.html#cb498-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-185-1.png" width="672" /></p>
+<div class="sourceCode" id="cb499"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb499-1"><a href="section-4-overview.html#cb499-1" aria-hidden="true"></a><span class="co"># lubridate: the tidyverse date package</span></span>
+<span id="cb499-2"><a href="section-4-overview.html#cb499-2" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(lubridate)) <span class="kw">install.packages</span>(<span class="st">&quot;lubridate&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: lubridate</code></pre>
+<pre><code>## 
+## Attaching package: &#39;lubridate&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     date, intersect, setdiff, union</code></pre>
+<div class="sourceCode" id="cb503"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb503-1"><a href="section-4-overview.html#cb503-1" aria-hidden="true"></a><span class="kw">library</span>(lubridate)</span>
+<span id="cb503-2"><a href="section-4-overview.html#cb503-2" aria-hidden="true"></a></span>
+<span id="cb503-3"><a href="section-4-overview.html#cb503-3" aria-hidden="true"></a><span class="co"># select some random dates from polls</span></span>
+<span id="cb503-4"><a href="section-4-overview.html#cb503-4" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">2</span>)</span>
+<span id="cb503-5"><a href="section-4-overview.html#cb503-5" aria-hidden="true"></a>dates &lt;-<span class="st"> </span><span class="kw">sample</span>(polls_us_election_<span class="dv">2016</span><span class="op">$</span>startdate, <span class="dv">10</span>) <span class="op">%&gt;%</span><span class="st"> </span>sort</span>
+<span id="cb503-6"><a href="section-4-overview.html#cb503-6" aria-hidden="true"></a>dates</span></code></pre></div>
+<pre><code>##  [1] &quot;2016-01-19&quot; &quot;2016-08-06&quot; &quot;2016-08-26&quot; &quot;2016-09-09&quot; &quot;2016-09-14&quot; &quot;2016-09-16&quot; &quot;2016-09-29&quot; &quot;2016-10-04&quot; &quot;2016-10-12&quot; &quot;2016-10-23&quot;</code></pre>
+<div class="sourceCode" id="cb505"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb505-1"><a href="section-4-overview.html#cb505-1" aria-hidden="true"></a><span class="co"># extract month, day, year from date strings</span></span>
+<span id="cb505-2"><a href="section-4-overview.html#cb505-2" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">date =</span> dates, </span>
+<span id="cb505-3"><a href="section-4-overview.html#cb505-3" aria-hidden="true"></a>           <span class="dt">month =</span> <span class="kw">month</span>(dates),</span>
+<span id="cb505-4"><a href="section-4-overview.html#cb505-4" aria-hidden="true"></a>           <span class="dt">day =</span> <span class="kw">day</span>(dates),</span>
+<span id="cb505-5"><a href="section-4-overview.html#cb505-5" aria-hidden="true"></a>           <span class="dt">year =</span> <span class="kw">year</span>(dates))</span></code></pre></div>
+<pre><code>##          date month day year
+## 1  2016-01-19     1  19 2016
+## 2  2016-08-06     8   6 2016
+## 3  2016-08-26     8  26 2016
+## 4  2016-09-09     9   9 2016
+## 5  2016-09-14     9  14 2016
+## 6  2016-09-16     9  16 2016
+## 7  2016-09-29     9  29 2016
+## 8  2016-10-04    10   4 2016
+## 9  2016-10-12    10  12 2016
+## 10 2016-10-23    10  23 2016</code></pre>
+<div class="sourceCode" id="cb507"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb507-1"><a href="section-4-overview.html#cb507-1" aria-hidden="true"></a><span class="kw">month</span>(dates, <span class="dt">label =</span> <span class="ot">TRUE</span>)    <span class="co"># extract month label</span></span></code></pre></div>
+<pre><code>##  [1] jan aug aug sep sep sep sep okt okt okt
+## Levels: jan &lt; feb &lt; mrt &lt; apr &lt; mei &lt; jun &lt; jul &lt; aug &lt; sep &lt; okt &lt; nov &lt; dec</code></pre>
+<div class="sourceCode" id="cb509"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb509-1"><a href="section-4-overview.html#cb509-1" aria-hidden="true"></a><span class="co"># ymd works on mixed date styles</span></span>
+<span id="cb509-2"><a href="section-4-overview.html#cb509-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20090101</span>, <span class="st">&quot;2009-01-02&quot;</span>, <span class="st">&quot;2009 01 03&quot;</span>, <span class="st">&quot;2009-1-4&quot;</span>,</span>
+<span id="cb509-3"><a href="section-4-overview.html#cb509-3" aria-hidden="true"></a>       <span class="st">&quot;2009-1, 5&quot;</span>, <span class="st">&quot;Created on 2009 1 6&quot;</span>, <span class="st">&quot;200901 !!! 07&quot;</span>)</span>
+<span id="cb509-4"><a href="section-4-overview.html#cb509-4" aria-hidden="true"></a><span class="kw">ymd</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2009-01-01&quot; &quot;2009-01-02&quot; &quot;2009-01-03&quot; &quot;2009-01-04&quot; &quot;2009-01-05&quot; &quot;2009-01-06&quot; &quot;2009-01-07&quot;</code></pre>
+<div class="sourceCode" id="cb511"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb511-1"><a href="section-4-overview.html#cb511-1" aria-hidden="true"></a><span class="co"># different parsers extract year, month and day in different orders</span></span>
+<span id="cb511-2"><a href="section-4-overview.html#cb511-2" aria-hidden="true"></a>x &lt;-<span class="st"> &quot;09/01/02&quot;</span></span>
+<span id="cb511-3"><a href="section-4-overview.html#cb511-3" aria-hidden="true"></a><span class="kw">ymd</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2009-01-02&quot;</code></pre>
+<div class="sourceCode" id="cb513"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb513-1"><a href="section-4-overview.html#cb513-1" aria-hidden="true"></a><span class="kw">mdy</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2002-09-01&quot;</code></pre>
+<div class="sourceCode" id="cb515"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb515-1"><a href="section-4-overview.html#cb515-1" aria-hidden="true"></a><span class="kw">ydm</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2009-02-01&quot;</code></pre>
+<div class="sourceCode" id="cb517"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb517-1"><a href="section-4-overview.html#cb517-1" aria-hidden="true"></a><span class="kw">myd</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2001-09-02&quot;</code></pre>
+<div class="sourceCode" id="cb519"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb519-1"><a href="section-4-overview.html#cb519-1" aria-hidden="true"></a><span class="kw">dmy</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2002-01-09&quot;</code></pre>
+<div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb521-1"><a href="section-4-overview.html#cb521-1" aria-hidden="true"></a><span class="kw">dym</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2001-02-09&quot;</code></pre>
+<div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb523-1"><a href="section-4-overview.html#cb523-1" aria-hidden="true"></a><span class="kw">now</span>()    <span class="co"># current time in your time zone</span></span></code></pre></div>
+<pre><code>## [1] &quot;2020-08-17 16:29:08 CEST&quot;</code></pre>
+<div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb525-1"><a href="section-4-overview.html#cb525-1" aria-hidden="true"></a><span class="kw">now</span>(<span class="st">&quot;GMT&quot;</span>)    <span class="co"># current time in GMT</span></span></code></pre></div>
+<pre><code>## [1] &quot;2020-08-17 14:29:08 GMT&quot;</code></pre>
+<div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="section-4-overview.html#cb527-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">hour</span>()    <span class="co"># current hour</span></span></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<div class="sourceCode" id="cb529"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb529-1"><a href="section-4-overview.html#cb529-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">minute</span>()    <span class="co"># current minute</span></span></code></pre></div>
+<pre><code>## [1] 29</code></pre>
+<div class="sourceCode" id="cb531"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb531-1"><a href="section-4-overview.html#cb531-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">second</span>()    <span class="co"># current second</span></span></code></pre></div>
+<pre><code>## [1] 8.364374</code></pre>
+<div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb533-1"><a href="section-4-overview.html#cb533-1" aria-hidden="true"></a><span class="co"># parse time</span></span>
+<span id="cb533-2"><a href="section-4-overview.html#cb533-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;12:34:56&quot;</span>)</span>
+<span id="cb533-3"><a href="section-4-overview.html#cb533-3" aria-hidden="true"></a><span class="kw">hms</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;12H 34M 56S&quot;</code></pre>
+<div class="sourceCode" id="cb535"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb535-1"><a href="section-4-overview.html#cb535-1" aria-hidden="true"></a><span class="co">#parse datetime</span></span>
+<span id="cb535-2"><a href="section-4-overview.html#cb535-2" aria-hidden="true"></a>x &lt;-<span class="st"> &quot;Nov/2/2012 12:34:56&quot;</span></span>
+<span id="cb535-3"><a href="section-4-overview.html#cb535-3" aria-hidden="true"></a><span class="kw">mdy_hms</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;2012-11-02 12:34:56 UTC&quot;</code></pre>
+</div>
+<div id="text-mining" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Text mining</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/text-mining.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The <strong>tidytext</strong> package helps us convert free form text into a tidy table.</li>
+<li>Use <code>unnest_tokens()</code> to extract individual words and other meaningful chunks of text.</li>
+<li>Sentiment analysis assigns emotions or a positive/negative score to tokens. You can extract sentiments using <code>get_sentiments()</code>. Common lexicons for sentiment analysis are “bing”, “afinn”, “nrc” and “loughran”.</li>
+</ul>
+<p>With the exception of labels used to represent categorical data, we have focused on numerical data, but in many applications data starts as text. Well known examples are spam filtering, cyber-crime prevention, counter-terrorism and sentiment analysis.</p>
+<p>In all these examples, the raw data is composed of free form texts. Our task is to extract insights from these data. In this section, we learn how to generate useful numerical summaries from text data to which we can apply some of the powerful data visualization and analysis techniques we have learned.</p>
+<p><strong>Case study: Trump Tweets</strong></p>
+<p>See my <a href="https://github.com/1965Eric/trump-tweets.git">GitHub-repository on Trump Tweets</a></p>
+</div>
+<div id="assessment-part-1---dates-times-and-text-mining" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> Assessment Part 1 - Dates, Times, and Text Mining</h2>
+<div class="sourceCode" id="cb537"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb537-1"><a href="section-4-overview.html#cb537-1" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)    <span class="co"># 3 significant digits</span></span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Which of the following is the standard ISO 8601 format for dates?</li>
+</ol>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. MM-DD-YY</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. YYYY-MM-DD</li>
+<li><input type="checkbox" disabled="" />
+C. YYYYMMDD</li>
+<li><input type="checkbox" disabled="" />
+D. YY-MM-DD</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Which of the following commands could convert this string into the correct date format?</li>
+</ol>
+<div class="sourceCode" id="cb538"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb538-1"><a href="section-4-overview.html#cb538-1" aria-hidden="true"></a>dates &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;09-01-02&quot;</span>, <span class="st">&quot;01-12-07&quot;</span>, <span class="st">&quot;02-03-04&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. <code>ymd(dates)</code></li>
+<li><input type="checkbox" disabled="" />
+B. <code>mdy(dates)</code></li>
+<li><input type="checkbox" disabled="" />
+C. <code>dmy(dates)</code></li>
+<li><input type="checkbox" disabled="" checked="" />
+D. It is impossible to know which format is correct without additional information.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Load the <code>brexit_polls</code> data frame from dslabs:</li>
+</ol>
+<div class="sourceCode" id="cb539"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb539-1"><a href="section-4-overview.html#cb539-1" aria-hidden="true"></a><span class="kw">data</span>(brexit_polls)</span></code></pre></div>
+<p>How many polls had a start date (startdate) in April (month number 4)?</p>
+<div class="sourceCode" id="cb540"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb540-1"><a href="section-4-overview.html#cb540-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="kw">month</span>(brexit_polls<span class="op">$</span>startdate) <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 25</code></pre>
+<p>Use the <code>round_date()</code> function on the <code>enddate</code> column with the argument <code>unit="week"</code>. How many polls ended the week of 2016-06-12?</p>
+<p>Read the documentation to learn more about <code>round_date()</code>.</p>
+<div class="sourceCode" id="cb542"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb542-1"><a href="section-4-overview.html#cb542-1" aria-hidden="true"></a><span class="kw">sum</span>(<span class="kw">round_date</span>(brexit_polls<span class="op">$</span>enddate, <span class="dt">unit =</span> <span class="st">&quot;week&quot;</span>) <span class="op">==</span><span class="st"> &quot;2016-06-12&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 13</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Use the <code>weekdays()</code> function from <strong>lubridate</strong> to determine the weekday on which each poll ended (<code>enddate</code>).</li>
+</ol>
+<p>On which weekday did the greatest number of polls end?</p>
+<div class="sourceCode" id="cb544"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb544-1"><a href="section-4-overview.html#cb544-1" aria-hidden="true"></a><span class="kw">table</span>(<span class="kw">weekdays</span>(brexit_polls<span class="op">$</span>enddate))</span></code></pre></div>
+<pre><code>## 
+##   dinsdag donderdag   maandag   vrijdag  woensdag  zaterdag    zondag 
+##        23        17        20        14        12         4        37</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. Monday</li>
+<li><input type="checkbox" disabled="" />
+B. Tuesday</li>
+<li><input type="checkbox" disabled="" />
+C. Wednesday</li>
+<li><input type="checkbox" disabled="" />
+D. Thursday</li>
+<li><input type="checkbox" disabled="" />
+E. Friday</li>
+<li><input type="checkbox" disabled="" />
+F. Saturday</li>
+<li><input type="checkbox" disabled="" checked="" />
+G. Sunday</li>
+</ul>
+<div class="sourceCode" id="cb546"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb546-1"><a href="section-4-overview.html#cb546-1" aria-hidden="true"></a><span class="kw">max</span>(<span class="kw">weekdays</span>(brexit_polls<span class="op">$</span>enddate))</span></code></pre></div>
+<pre><code>## [1] &quot;zondag&quot;</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Load the <code>movielens</code> data frame from <strong>dslabs</strong>.</li>
+</ol>
+<div class="sourceCode" id="cb548"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb548-1"><a href="section-4-overview.html#cb548-1" aria-hidden="true"></a><span class="kw">data</span>(movielens)</span></code></pre></div>
+<p>This data frame contains a set of about 100,000 movie reviews. The <code>timestamp</code> column contains the review date as the number of seconds since 1970-01-01 (epoch time).</p>
+<p>Convert the <code>timestamp</code> column to dates using the <strong>lubridate</strong> as_datetime() function.</p>
+<p>Which year had the most movie reviews?</p>
+<div class="sourceCode" id="cb549"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb549-1"><a href="section-4-overview.html#cb549-1" aria-hidden="true"></a>dates &lt;-<span class="st"> </span><span class="kw">as_datetime</span>(movielens<span class="op">$</span>timestamp) </span>
+<span id="cb549-2"><a href="section-4-overview.html#cb549-2" aria-hidden="true"></a>reviews_by_year &lt;-<span class="st"> </span><span class="kw">table</span>(<span class="kw">year</span>(dates))</span>
+<span id="cb549-3"><a href="section-4-overview.html#cb549-3" aria-hidden="true"></a><span class="kw">names</span>(<span class="kw">which.max</span>(reviews_by_year))</span></code></pre></div>
+<pre><code>## [1] &quot;2000&quot;</code></pre>
+<p>Which hour of the day had the most movie reviews?</p>
+<div class="sourceCode" id="cb551"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb551-1"><a href="section-4-overview.html#cb551-1" aria-hidden="true"></a>reviews_by_hour &lt;-<span class="st"> </span><span class="kw">table</span>(<span class="kw">hour</span>(dates))</span>
+<span id="cb551-2"><a href="section-4-overview.html#cb551-2" aria-hidden="true"></a><span class="kw">names</span>(<span class="kw">which.max</span>(reviews_by_hour))</span></code></pre></div>
+<pre><code>## [1] &quot;20&quot;</code></pre>
+</div>
+<div id="assessment-part-2---dates-times-and-text-mining" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Assessment Part 2 - Dates, Times, and Text Mining</h2>
+<ol start="6" style="list-style-type: decimal">
+<li>Project Gutenberg is a digital archive of public domain books. The R package <strong>gutenbergr</strong> facilitates the importation of these texts into R. We will combine this with the <strong>tidyverse</strong> and <strong>tidytext</strong> libraries to practice text mining.</li>
+</ol>
+<p>Use these libraries and options:</p>
+<div class="sourceCode" id="cb553"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb553-1"><a href="section-4-overview.html#cb553-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(gutenbergr)) <span class="kw">install.packages</span>(<span class="st">&quot;gutenbergr&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: gutenbergr</code></pre>
+<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb555-1"><a href="section-4-overview.html#cb555-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidytext)) <span class="kw">install.packages</span>(<span class="st">&quot;tidytext&quot;</span>)</span>
+<span id="cb555-2"><a href="section-4-overview.html#cb555-2" aria-hidden="true"></a></span>
+<span id="cb555-3"><a href="section-4-overview.html#cb555-3" aria-hidden="true"></a><span class="kw">library</span>(gutenbergr)</span>
+<span id="cb555-4"><a href="section-4-overview.html#cb555-4" aria-hidden="true"></a><span class="kw">library</span>(tidytext)</span></code></pre></div>
+<p>You can see the books and documents available in <strong>gutenbergr</strong> like this:</p>
+<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb556-1"><a href="section-4-overview.html#cb556-1" aria-hidden="true"></a>gutenberg_metadata</span></code></pre></div>
+<pre><code>## # A tibble: 51,997 x 8
+##    gutenberg_id title                                                  author              gutenberg_author_… language gutenberg_bookshelf                     rights         has_text
+##           &lt;int&gt; &lt;chr&gt;                                                  &lt;chr&gt;                            &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                                   &lt;chr&gt;          &lt;lgl&gt;   
+##  1            0  &lt;NA&gt;                                                  &lt;NA&gt;                                NA en       &lt;NA&gt;                                    Public domain… TRUE    
+##  2            1 &quot;The Declaration of Independence of the United States… Jefferson, Thomas                 1638 en       United States Law/American Revolutiona… Public domain… TRUE    
+##  3            2 &quot;The United States Bill of Rights\r\nThe Ten Original… United States                        1 en       American Revolutionary War/Politics/Un… Public domain… TRUE    
+##  4            3 &quot;John F. Kennedy&#39;s Inaugural Address&quot;                  Kennedy, John F. (…               1666 en       &lt;NA&gt;                                    Public domain… TRUE    
+##  5            4 &quot;Lincoln&#39;s Gettysburg Address\r\nGiven November 19, 1… Lincoln, Abraham                     3 en       US Civil War                            Public domain… TRUE    
+##  6            5 &quot;The United States Constitution&quot;                       United States                        1 en       American Revolutionary War/Politics/Un… Public domain… TRUE    
+##  7            6 &quot;Give Me Liberty or Give Me Death&quot;                     Henry, Patrick                       4 en       American Revolutionary War              Public domain… TRUE    
+##  8            7 &quot;The Mayflower Compact&quot;                                &lt;NA&gt;                                NA en       &lt;NA&gt;                                    Public domain… TRUE    
+##  9            8 &quot;Abraham Lincoln&#39;s Second Inaugural Address&quot;           Lincoln, Abraham                     3 en       US Civil War                            Public domain… TRUE    
+## 10            9 &quot;Abraham Lincoln&#39;s First Inaugural Address&quot;            Lincoln, Abraham                     3 en       US Civil War                            Public domain… TRUE    
+## # … with 51,987 more rows</code></pre>
+<p>Use <code>str_detect()</code> to find the ID of the novel <em>Pride and Prejudice</em>.</p>
+<p>How many different ID numbers are returned?</p>
+<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="section-4-overview.html#cb558-1" aria-hidden="true"></a>gutenberg_metadata <span class="op">%&gt;%</span></span>
+<span id="cb558-2"><a href="section-4-overview.html#cb558-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">str_detect</span>(title, <span class="st">&quot;Pride and Prejudice&quot;</span>))</span></code></pre></div>
+<pre><code>## # A tibble: 6 x 8
+##   gutenberg_id title                                                 author       gutenberg_author_id language gutenberg_bookshelf                    rights                  has_text
+##          &lt;int&gt; &lt;chr&gt;                                                 &lt;chr&gt;                      &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                                  &lt;chr&gt;                   &lt;lgl&gt;   
+## 1         1342 Pride and Prejudice                                   Austen, Jane                  68 en       Best Books Ever Listings/Harvard Clas… Public domain in the U… TRUE    
+## 2        20686 Pride and Prejudice                                   Austen, Jane                  68 en       Harvard Classics/Best Books Ever List… Public domain in the U… FALSE   
+## 3        20687 Pride and Prejudice                                   Austen, Jane                  68 en       Harvard Classics/Best Books Ever List… Public domain in the U… FALSE   
+## 4        26301 Pride and Prejudice                                   Austen, Jane                  68 en       Best Books Ever Listings               Public domain in the U… FALSE   
+## 5        37431 Pride and Prejudice, a play founded on Jane Austen&#39;s… &lt;NA&gt;                          NA en       &lt;NA&gt;                                   Public domain in the U… TRUE    
+## 6        42671 Pride and Prejudice                                   Austen, Jane                  68 en       Best Books Ever Listings               Public domain in the U… TRUE</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>Notice that there are several versions of the book. The <code>gutenberg_works()</code> function filters this table to remove replicates and include only English language works. Use this function to find the ID for <em>Pride and Prejudice</em>.</li>
+</ol>
+<p>What is the correct ID number?</p>
+<p>Read the <code>gutenberg_works()</code> documentation to learn how to use the function.</p>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="section-4-overview.html#cb560-1" aria-hidden="true"></a><span class="kw">gutenberg_works</span>(title <span class="op">==</span><span class="st"> &quot;Pride and Prejudice&quot;</span>)<span class="op">$</span>gutenberg_id</span></code></pre></div>
+<pre><code>## Warning: `filter_()` is deprecated as of dplyr 0.7.0.
+## Please use `filter()` instead.
+## See vignette(&#39;programming&#39;) for more help
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>## Warning: `distinct_()` is deprecated as of dplyr 0.7.0.
+## Please use `distinct()` instead.
+## See vignette(&#39;programming&#39;) for more help
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>## [1] 1342</code></pre>
+<ol start="8" style="list-style-type: decimal">
+<li>Use the <code>gutenberg_download()</code> function to download the text for Pride and Prejudice. Use the <strong>tidytext</strong> package to create a tidy table with all the words in the text. Save this object as `<code>words</code>.</li>
+</ol>
+<p>How many words are present in the book?</p>
+<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="section-4-overview.html#cb564-1" aria-hidden="true"></a>book &lt;-<span class="st"> </span><span class="kw">gutenberg_download</span>(<span class="dv">1342</span>)</span></code></pre></div>
+<pre><code>## Determining mirror for Project Gutenberg from http://www.gutenberg.org/robot/harvest</code></pre>
+<pre><code>## Using mirror http://aleph.gutenberg.org</code></pre>
+<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb567-1"><a href="section-4-overview.html#cb567-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>book <span class="op">%&gt;%</span></span>
+<span id="cb567-2"><a href="section-4-overview.html#cb567-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">unnest_tokens</span>(word, text)</span>
+<span id="cb567-3"><a href="section-4-overview.html#cb567-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
+<pre><code>## [1] 122204</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Remove stop words from the <code>words</code> object. Recall that stop words are defined in the <code>stop_words</code> data frame from the <strong>tidytext</strong> package.</li>
+</ol>
+<p>How many words remain?</p>
+<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="section-4-overview.html#cb569-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">anti_join</span>(stop_words) </span></code></pre></div>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="section-4-overview.html#cb571-1" aria-hidden="true"></a><span class="kw">nrow</span>(words) </span></code></pre></div>
+<pre><code>## [1] 37246</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>After removing stop words, detect and then filter out any token that contains a digit from `<code>words</code>.</li>
+</ol>
+<p>How many words remain?</p>
+<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb573-1"><a href="section-4-overview.html#cb573-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span></span>
+<span id="cb573-2"><a href="section-4-overview.html#cb573-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">str_detect</span>(word, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d&quot;</span>))</span>
+<span id="cb573-3"><a href="section-4-overview.html#cb573-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
+<pre><code>## [1] 37180</code></pre>
+<ol start="11" style="list-style-type: decimal">
+<li>Analyze the most frequent words in the novel after removing stop words and tokens with digits.</li>
+</ol>
+<p>How many words appear more than 100 times in the book?</p>
+<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb575-1"><a href="section-4-overview.html#cb575-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
+<span id="cb575-2"><a href="section-4-overview.html#cb575-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
+<span id="cb575-3"><a href="section-4-overview.html#cb575-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb575-4"><a href="section-4-overview.html#cb575-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">nrow</span>()</span></code></pre></div>
+<pre><code>## [1] 23</code></pre>
+<p>What is the most common word in the book?</p>
+<div class="sourceCode" id="cb577"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb577-1"><a href="section-4-overview.html#cb577-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
+<span id="cb577-2"><a href="section-4-overview.html#cb577-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
+<span id="cb577-3"><a href="section-4-overview.html#cb577-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">top_n</span>(<span class="dv">1</span>, n) <span class="op">%&gt;%</span></span>
+<span id="cb577-4"><a href="section-4-overview.html#cb577-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(word)</span></code></pre></div>
+<pre><code>## [1] &quot;elizabeth&quot;</code></pre>
+<p>How many times does that most common word appear?</p>
+<div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb579-1"><a href="section-4-overview.html#cb579-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
+<span id="cb579-2"><a href="section-4-overview.html#cb579-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
+<span id="cb579-3"><a href="section-4-overview.html#cb579-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">top_n</span>(<span class="dv">1</span>, n) <span class="op">%&gt;%</span></span>
+<span id="cb579-4"><a href="section-4-overview.html#cb579-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(n)</span></code></pre></div>
+<pre><code>## [1] 597</code></pre>
+<ol start="12" style="list-style-type: decimal">
+<li>Define the afinn lexicon.</li>
+</ol>
+<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb581-1"><a href="section-4-overview.html#cb581-1" aria-hidden="true"></a>afinn &lt;-<span class="st"> </span><span class="kw">get_sentiments</span>(<span class="st">&quot;afinn&quot;</span>)</span></code></pre></div>
+<p>Note that this command will trigger a question in the R Console asking if you want to download the AFINN lexicon. Press 1 to select “Yes” (if using RStudio, enter this in the Console tab).</p>
+<p>Use this <code>afinn</code> lexicon to assign sentiment values to <code>words</code>. Keep only words that are present in both <code>words</code> and the <code>afinn</code> lexicon. Save this data frame as <code>afinn_sentiments</code>.</p>
+<p>How many elements of words have sentiments in the afinn lexicon?</p>
+<div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb582-1"><a href="section-4-overview.html#cb582-1" aria-hidden="true"></a>afinn_sentiments &lt;-<span class="st"> </span><span class="kw">inner_join</span>(afinn, words)</span></code></pre></div>
+<pre><code>## Joining, by = &quot;word&quot;</code></pre>
+<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="section-4-overview.html#cb584-1" aria-hidden="true"></a><span class="kw">nrow</span>(afinn_sentiments)</span></code></pre></div>
+<pre><code>## [1] 6065</code></pre>
+<p>What proportion of words in afinn_sentiments have a positive value?</p>
+<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="section-4-overview.html#cb586-1" aria-hidden="true"></a><span class="kw">mean</span>(afinn_sentiments<span class="op">$</span>value <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## [1] 0.563</code></pre>
+<p>How many elements of afinn_sentiments have a value of 4?</p>
+<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="section-4-overview.html#cb588-1" aria-hidden="true"></a><span class="kw">sum</span>(afinn_sentiments<span class="op">$</span>value <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
+<pre><code>## [1] 51</code></pre>
+</div>
+<div id="final-comprehensive-assessment" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Final: Comprehensive Assessment</h2>
+<div id="comprehensive-assessment-puerto-rico-hurricane-mortality" class="section level3" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Comprehensive Assessment: Puerto Rico Hurricane Mortality</h3>
+</div>
+<div id="project-introduction" class="section level3" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Project Introduction</h3>
+<p>On September 20, 2017, Hurricane Maria made landfall on Puerto Rico. It was the worst natural disaster on record in Puerto Rico and the deadliest Atlantic hurricane since 2004. However, Puerto Rico’s official death statistics only tallied 64 deaths caused directly by the hurricane (due to structural collapse, debris, floods and drownings), an undercount that slowed disaster recovery funding. The majority of the deaths resulted from infrastructure damage that made it difficult to access resources like clean food, water, power, healthcare and communications in the months after the disaster, and although these deaths were due to effects of the hurricane, they were not initially counted.</p>
+<p>In order to correct the misconception that few lives were lost in Hurricane Maria, statisticians analyzed how death rates in Puerto Rico changed after the hurricane and estimated the excess number of deaths likely caused by the storm. <a href="https://drive.google.com/file/d/16X9qtnPaD--2dPhpcwu7S53esafH59i9/preview">This analysis</a> suggested that the actual number of deaths in Puerto Rico was 2,975 (95% CI: 2,658-3,290) over the 4 months following the hurricane, much higher than the original count.</p>
+<p>We will use your new data wrangling skills to extract actual daily mortality data from Puerto Rico and investigate whether the Hurricane Maria had an immediate effect on daily mortality compared to unaffected days in September 2015-2017.</p>
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="section-4-overview.html#cb590-1" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)    <span class="co"># report 3 significant digits</span></span></code></pre></div>
+</div>
+<div id="puerto-rico-hurricane-mortality---part-1" class="section level3" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Puerto Rico Hurricane Mortality - Part 1</h3>
+<ol style="list-style-type: decimal">
+<li>In the <code>extdata</code> directory of the <strong>dslabs</strong> package, you will find a PDF file containing daily mortality data for Puerto Rico from Jan 1, 2015 to May 31, 2018. You can find the file like this:</li>
+</ol>
+<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb591-1"><a href="section-4-overview.html#cb591-1" aria-hidden="true"></a>fn &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;RD-Mortality-Report_2015-18-180531.pdf&quot;</span>, <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<p>Find and open the file or open it directly from RStudio. On a Mac, you can type:</p>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="section-4-overview.html#cb592-1" aria-hidden="true"></a><span class="kw">system2</span>(<span class="st">&quot;open&quot;</span>, <span class="dt">args =</span> fn)</span></code></pre></div>
+<p>and on Windows, you can type:</p>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="section-4-overview.html#cb593-1" aria-hidden="true"></a><span class="kw">system</span>(<span class="st">&quot;cmd.exe&quot;</span>, <span class="dt">input =</span> <span class="kw">paste</span>(<span class="st">&quot;start&quot;</span>, fn))</span></code></pre></div>
+<p>Which of the following best describes this file?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. It is a table. Extracting the data will be easy.</li>
+<li><input type="checkbox" disabled="" />
+B. It is a report written in prose. Extracting the data will be impossible.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. It is a report combining graphs and tables. Extracting the data seems possible.</li>
+<li><input type="checkbox" disabled="" />
+D. It shows graphs of the data. Extracting the data will be difficult.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>We are going to create a tidy dataset with each row representing one observation. The variables in this dataset will be year, month, day and deaths.</li>
+</ol>
+<p>Use the <strong>pdftools</strong> package to read in <code>fn</code> using the <code>pdf_text</code> function. Store the results in an object called txt.</p>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="section-4-overview.html#cb594-1" aria-hidden="true"></a>txt &lt;-<span class="st"> </span><span class="kw">pdf_text</span>(fn)</span>
+<span id="cb594-2"><a href="section-4-overview.html#cb594-2" aria-hidden="true"></a><span class="kw">class</span>(txt)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="section-4-overview.html#cb596-1" aria-hidden="true"></a><span class="kw">str</span>(txt)</span></code></pre></div>
+<pre><code>##  chr [1:12] &quot;6/4/2018                       Departamento de Salud - Registro Demográfico - División de Calidad y Estadística&quot;| __truncated__ ...</code></pre>
+<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="section-4-overview.html#cb598-1" aria-hidden="true"></a><span class="kw">length</span>(txt)</span></code></pre></div>
+<pre><code>## [1] 12</code></pre>
+<p>Describe what you see in <code>txt</code>.</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. A table with the mortality data.</li>
+<li><input type="checkbox" disabled="" checked="" />
+B. A character string of length 12. Each entry represents the text in each page. The mortality data is in there somewhere.</li>
+<li><input type="checkbox" disabled="" />
+C. A character string with one entry containing all the information in the PDF file.</li>
+<li><input type="checkbox" disabled="" />
+D. An html document.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Extract the ninth page of the PDF file from the object <code>txt</code>, then use the <code>str_split</code> function from the <strong>stringr</strong> package so that you have each line in a different entry. The new line character is <code>\n</code>. Call this string vector <code>x</code>.</li>
+</ol>
+<p>Look at <code>x</code>. What best describes what you see?</p>
+<p>What kind of object is <code>x</code>?</p>
+<p>How many entries does <code>x</code> have?</p>
+<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="section-4-overview.html#cb600-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">str_split</span>(txt[<span class="dv">9</span>], <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb600-2"><a href="section-4-overview.html#cb600-2" aria-hidden="true"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<pre><code>## [1] &quot;list&quot;</code></pre>
+<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb602-1"><a href="section-4-overview.html#cb602-1" aria-hidden="true"></a><span class="kw">length</span>(x)</span></code></pre></div>
+<pre><code>## [1] 1</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. It is an empty string.</li>
+<li><input type="checkbox" disabled="" />
+B. I can see the figure shown in page 1.</li>
+<li><input type="checkbox" disabled="" />
+C. It is a tidy table.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. I can see the table! But there is a bunch of other stuff we need to get rid of.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Define <code>s</code> to be the first entry of the <code>x</code> object.</li>
+</ol>
+<p>What kind of object is s?</p>
+<p>How many entries does s have?</p>
+<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="section-4-overview.html#cb604-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span>x[[<span class="dv">1</span>]]</span>
+<span id="cb604-2"><a href="section-4-overview.html#cb604-2" aria-hidden="true"></a><span class="kw">class</span>(s)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="section-4-overview.html#cb606-1" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
+<pre><code>## [1] 40</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>When inspecting the string we obtained above, we see a common problem: white space before and after the other characters. Trimming is a common first step in string processing. These extra spaces will eventually make splitting the strings hard so we start by removing them.</li>
+</ol>
+<p>We learned about the command <code>str_trim</code>that removes spaces at the start or end of the strings. Use this function to trim <code>s</code> and assign the result to <code>s</code> again.</p>
+<p>After trimming, what single character is the last character of element 1 of <code>s</code>?</p>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="section-4-overview.html#cb608-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_trim</span>(s)</span>
+<span id="cb608-2"><a href="section-4-overview.html#cb608-2" aria-hidden="true"></a>s[<span class="dv">1</span>] <span class="co"># print string, visually inspect last character</span></span></code></pre></div>
+<pre><code>## [1] &quot;6/4/2018                               Departamento de Salud - Registro Demográfico - División de Calidad y Estadísticas Vitales&quot;</code></pre>
+<ol start="6" style="list-style-type: decimal">
+<li>We want to extract the numbers from the strings stored in <code>s</code>. However, there are a lot of non-numeric characters that will get in the way. We can remove these, but before doing this we want to preserve the string with the column header, which includes the month abbreviation.</li>
+</ol>
+<p>Use the <code>str_which</code> function to find the row with the header. Save this result to <code>header_index</code>.<br />
+Hint: find the first string that matches the pattern <code>"2015"</code> using the <code>str_which</code> function.</p>
+<p>What is the value of <code>header_index</code>?</p>
+<div class="sourceCode" id="cb610"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb610-1"><a href="section-4-overview.html#cb610-1" aria-hidden="true"></a>header_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="dt">pattern=</span><span class="st">&quot;2015&quot;</span>)[<span class="dv">1</span>]</span>
+<span id="cb610-2"><a href="section-4-overview.html#cb610-2" aria-hidden="true"></a>header_index</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<ol start="7" style="list-style-type: decimal">
+<li>We want to extract two objects from the header row: <code>month</code> will store the month and <code>header</code> will store the column names.<br />
+Save the content of the header row into an object called <code>header</code>, then use <code>str_split</code> to help define the two objects we need.</li>
+</ol>
+<p>What is the value of month? Use <code>header_index</code> to extract the row. The separator here is one or more spaces. Also, consider using the <code>simplify</code> argument.</p>
+<p>What is the third value in header?</p>
+<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="section-4-overview.html#cb612-1" aria-hidden="true"></a>tmp &lt;-<span class="st"> </span><span class="kw">str_split</span>(s[header_index], <span class="dt">pattern=</span><span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">simplify=</span><span class="ot">TRUE</span>)</span>
+<span id="cb612-2"><a href="section-4-overview.html#cb612-2" aria-hidden="true"></a>month &lt;-<span class="st"> </span>tmp[<span class="dv">1</span>]</span>
+<span id="cb612-3"><a href="section-4-overview.html#cb612-3" aria-hidden="true"></a>header &lt;-<span class="st"> </span>tmp[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb612-4"><a href="section-4-overview.html#cb612-4" aria-hidden="true"></a>month</span></code></pre></div>
+<pre><code>## [1] &quot;SEP&quot;</code></pre>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="section-4-overview.html#cb614-1" aria-hidden="true"></a>header[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;2017&quot;</code></pre>
+</div>
+<div id="puerto-rico-hurricane-mortality---part-2" class="section level3" number="5.5.4">
+<h3><span class="header-section-number">5.5.4</span> Puerto Rico Hurricane Mortality - Part 2</h3>
+<ol start="8" style="list-style-type: decimal">
+<li>Notice that towards the end of the page defined by <code>s</code> you see a <em>“Total”</em> row followed by rows with other summary statistics. Create an object called <code>tail_index</code> with the index of the <em>“Total”</em> entry.</li>
+</ol>
+<p>What is the value of <code>tail_index</code>?</p>
+<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="section-4-overview.html#cb616-1" aria-hidden="true"></a>tail_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb616-2"><a href="section-4-overview.html#cb616-2" aria-hidden="true"></a>tail_index</span></code></pre></div>
+<pre><code>## [1] 35</code></pre>
+<ol start="9" style="list-style-type: decimal">
+<li>Because our PDF page includes graphs with numbers, some of our rows have just one number (from the y-axis of the plot). Use the <code>str_count</code> function to create an object <code>n</code> with the count of numbers in each row.</li>
+</ol>
+<p>How many rows have a single number in them? You can write a regex for a number like this <code>\\d+</code>.</p>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="section-4-overview.html#cb618-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="kw">str_count</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d+&quot;</span>)</span>
+<span id="cb618-2"><a href="section-4-overview.html#cb618-2" aria-hidden="true"></a><span class="kw">sum</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<ol start="10" style="list-style-type: decimal">
+<li>We are now ready to remove entries from rows that we know we don’t need. The entry <code>header_index</code> and everything before it should be removed. Entries for which <code>n</code> is 1 should also be removed, and the entry <code>tail_index</code> and everything that comes after it should be removed as well.</li>
+</ol>
+<p>How many entries remain in <code>s</code>?</p>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="section-4-overview.html#cb620-1" aria-hidden="true"></a>out &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>header_index, <span class="kw">which</span>(n<span class="op">==</span><span class="dv">1</span>), tail_index<span class="op">:</span><span class="kw">length</span>(s))</span>
+<span id="cb620-2"><a href="section-4-overview.html#cb620-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>s[<span class="op">-</span>out]</span>
+<span id="cb620-3"><a href="section-4-overview.html#cb620-3" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
+<pre><code>## [1] 30</code></pre>
+<ol start="11" style="list-style-type: decimal">
+<li>Now we are ready to remove all text that is not a digit or space. Do this using regular expressions (regex) and the <code>str_remove_all</code> function.
+In regex, using the <code>^</code> inside the square brackets <code>[]</code> means <em>not</em>, like the <code>!</code> means <em>not</em> in <code>!=</code>. To define the regex pattern to catch all non-numbers, you can type <code>[^\\d]</code>. But remember you also want to keep spaces.</li>
+</ol>
+<p>Which of these commands produces the correct output?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A.</li>
+</ul>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="section-4-overview.html#cb622-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+B.</li>
+</ul>
+<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="section-4-overview.html#cb623-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+C.</li>
+</ul>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="section-4-overview.html#cb624-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+D.</li>
+</ul>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="section-4-overview.html#cb625-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
+<ol start="12" style="list-style-type: decimal">
+<li>Use the <code>str_split_fixed</code> function to convert <code>s</code> into a data matrix with just the day and death count data:</li>
+</ol>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="section-4-overview.html#cb626-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_split_fixed</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">n =</span> <span class="dv">6</span>)[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span></code></pre></div>
+<p>Now you are almost ready to finish. Add column names to the matrix: the first column should be <code>day</code> and the next columns should be the <code>header</code>. Convert all values to numeric. Also, add a column with the month. Call the resulting object <code>tab</code>.</p>
+<p>What was the mean number of deaths per day in September 2015?</p>
+<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="section-4-overview.html#cb627-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>s <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb627-2"><a href="section-4-overview.html#cb627-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">as_data_frame</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb627-3"><a href="section-4-overview.html#cb627-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">setNames</span>(<span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, header)) <span class="op">%&gt;%</span></span>
+<span id="cb627-4"><a href="section-4-overview.html#cb627-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate_all</span>(as.numeric)</span>
+<span id="cb627-5"><a href="section-4-overview.html#cb627-5" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">&quot;2015&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] 75.3</code></pre>
+<p>What is the mean number of deaths per day in September 2016?</p>
+<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="section-4-overview.html#cb629-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2016</span><span class="st">`</span>)</span></code></pre></div>
+<pre><code>## [1] 78.9</code></pre>
+<p>Hurricane Maria hit Puerto Rico on September 20, 2017. What was the mean number of deaths per day from September 1-19, 2017, before the hurricane hit?</p>
+<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="section-4-overview.html#cb631-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span></code></pre></div>
+<pre><code>## [1] 83.7</code></pre>
+<p>What was the mean number of deaths per day from September 20-30, 2017, after the hurricane hit?</p>
+<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="section-4-overview.html#cb633-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">20</span><span class="op">:</span><span class="dv">30</span>])</span></code></pre></div>
+<pre><code>## [1] 122</code></pre>
+<ol start="13" style="list-style-type: decimal">
+<li>Finish it up by changing <code>tab</code> to a tidy format, starting from this code outline:</li>
+</ol>
+<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="section-4-overview.html#cb635-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">________</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb635-2"><a href="section-4-overview.html#cb635-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
+<span id="cb635-3"><a href="section-4-overview.html#cb635-3" aria-hidden="true"></a>tab</span></code></pre></div>
+<p>What code fills the blank to generate a data frame with columns named “day”, “year” and “deaths”?</p>
+<div class="sourceCode" id="cb636"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb636-1"><a href="section-4-overview.html#cb636-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb636-2"><a href="section-4-overview.html#cb636-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
+<span id="cb636-3"><a href="section-4-overview.html#cb636-3" aria-hidden="true"></a>tab</span></code></pre></div>
+<pre><code>## # A tibble: 120 x 3
+##      day year  deaths
+##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
+##  1     1 2015      75
+##  2     2 2015      77
+##  3     3 2015      67
+##  4     4 2015      71
+##  5     5 2015      62
+##  6     6 2015      77
+##  7     7 2015      85
+##  8     8 2015      84
+##  9     9 2015      79
+## 10    10 2015      66
+## # … with 110 more rows</code></pre>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />
+A. separate</li>
+<li><input type="checkbox" disabled="" />
+B. unite</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. gather</li>
+<li><input type="checkbox" disabled="" />
+D. spread</li>
+</ul>
+<ol start="14" style="list-style-type: decimal">
+<li>Make a plot of deaths versus day with color to denote year. Exclude 2018 since we have no data. Add a vertical line at day 20, the day that Hurricane Maria hit in 2017.</li>
+</ol>
+<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="section-4-overview.html#cb638-1" aria-hidden="true"></a>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">&lt;</span><span class="st"> </span><span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb638-2"><a href="section-4-overview.html#cb638-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, deaths, <span class="dt">color =</span> year)) <span class="op">+</span></span>
+<span id="cb638-3"><a href="section-4-overview.html#cb638-3" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb638-4"><a href="section-4-overview.html#cb638-4" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">20</span>) <span class="op">+</span></span>
+<span id="cb638-5"><a href="section-4-overview.html#cb638-5" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-234-1.png" width="672" /></p>
+<p>Which of the following are TRUE?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />
+A. September 2015 and 2016 deaths by day are roughly equal to each other.</li>
+<li><input type="checkbox" disabled="" />
+B. The day with the most deaths was the day of the hurricane: September 20, 2017.</li>
+<li><input type="checkbox" disabled="" checked="" />
+C. After the hurricane in September 2017, there were over 100 deaths per day every day for the rest of the month.</li>
+<li><input type="checkbox" disabled="" checked="" />
+D. No days before September 20, 2017 have over 100 deaths per day.</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="section-3-overview.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
