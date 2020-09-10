@@ -256,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb60-3"><a href="section-2-overview.html#cb60-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility, <span class="dt">color =</span> country)) <span class="op">+</span></span>
 <span id="cb60-4"><a href="section-2-overview.html#cb60-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-15-1.png" width="672" /></p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="section-2-overview.html#cb62-1" aria-hidden="true"></a><span class="co"># import and inspect example of original Gapminder data in wide format</span></span>
 <span id="cb62-2"><a href="section-2-overview.html#cb62-2" aria-hidden="true"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span>
 <span id="cb62-3"><a href="section-2-overview.html#cb62-3" aria-hidden="true"></a>filename &lt;-<span class="st"> </span><span class="kw">file.path</span>(path,  <span class="st">&quot;fertility-two-countries-example.csv&quot;</span>)</span>
@@ -330,7 +330,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb78-2"><a href="section-2-overview.html#cb78-2" aria-hidden="true"></a>new_tidy_data <span class="op">%&gt;%</span></span>
 <span id="cb78-3"><a href="section-2-overview.html#cb78-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, fertility, <span class="dt">color =</span> country)) <span class="op">+</span></span>
 <span id="cb78-4"><a href="section-2-overview.html#cb78-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-16-1.png" width="672" /></p>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="section-2-overview.html#cb79-1" aria-hidden="true"></a><span class="co"># spread tidy data to generate wide data</span></span>
 <span id="cb79-2"><a href="section-2-overview.html#cb79-2" aria-hidden="true"></a>new_wide_data &lt;-<span class="st"> </span>new_tidy_data <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(year, fertility)</span>
 <span id="cb79-3"><a href="section-2-overview.html#cb79-3" aria-hidden="true"></a><span class="kw">select</span>(new_wide_data, country, <span class="st">`</span><span class="dt">1960</span><span class="st">`</span><span class="op">:</span><span class="st">`</span><span class="dt">1967</span><span class="st">`</span>)</span></code></pre></div>
@@ -915,7 +915,7 @@ D. <code>co2_tidy &lt;- gather(co2_wide,month,co2,-year)</code></li>
 <li>Use <code>co2_tidy</code> to plot CO2 versus month with a different curve for each year:</li>
 </ol>
 <div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-2-overview.html#cb150-1" aria-hidden="true"></a>co2_tidy <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">as.numeric</span>(month), co2, <span class="dt">color =</span> year)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-54-1.png" width="672" /></p>
 <p>What can be concluded from this plot?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -1079,7 +1079,7 @@ D. <code>unite()</code></li>
 <span id="cb169-6"><a href="section-2-overview.html#cb169-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans =</span> <span class="st">&quot;log2&quot;</span>) <span class="op">+</span></span>
 <span id="cb169-7"><a href="section-2-overview.html#cb169-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se =</span> <span class="ot">FALSE</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-61-1.png" width="672" /></p>
 <div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="section-2-overview.html#cb171-1" aria-hidden="true"></a><span class="co"># make two smaller tables to demonstrate joins</span></span>
 <span id="cb171-2"><a href="section-2-overview.html#cb171-2" aria-hidden="true"></a>tab1 &lt;-<span class="st"> </span><span class="kw">slice</span>(murders, <span class="dv">1</span><span class="op">:</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(state, population)</span>
 <span id="cb171-3"><a href="section-2-overview.html#cb171-3" aria-hidden="true"></a>tab1</span></code></pre></div>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Data Science Wrangling</title>
+  <meta name="description" content="Data Science Wrangling" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Data Science Wrangling" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data Science Wrangling" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="section-1-overview.html"/>
+<script src="libs/header-attrs-2.3/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="learning-objectives.html"><a href="learning-objectives.html"><i class="fa fa-check"></i><b>1</b> Learning Objectives</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#course-overview"><i class="fa fa-check"></i><b>1.1</b> Course Overview</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="learning-objectives.html"><a href="learning-objectives.html#section-1-data-import"><i class="fa fa-check"></i><b>1.1.1</b> Section 1: Data Import</a></li>
+<li class="chapter" data-level="1.1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#section-2-tidy-data"><i class="fa fa-check"></i><b>1.1.2</b> Section 2: Tidy Data</a></li>
+<li class="chapter" data-level="1.1.3" data-path="learning-objectives.html"><a href="learning-objectives.html#section-3-string-processing"><i class="fa fa-check"></i><b>1.1.3</b> Section 3: String Processing</a></li>
+<li class="chapter" data-level="1.1.4" data-path="learning-objectives.html"><a href="learning-objectives.html#section-4-dates-times-and-text-mining"><i class="fa fa-check"></i><b>1.1.4</b> Section 4: Dates, Times, and Text Mining</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="learning-objectives.html"><a href="learning-objectives.html#introduction-to-wrangling"><i class="fa fa-check"></i><b>1.2</b> Introduction to Wrangling</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="section-1-overview.html"><a href="section-1-overview.html"><i class="fa fa-check"></i><b>2</b> Section 1 Overview</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="section-1-overview.html"><a href="section-1-overview.html#importing-spreadsheets"><i class="fa fa-check"></i><b>2.1</b> Importing Spreadsheets</a></li>
+<li class="chapter" data-level="2.2" data-path="section-1-overview.html"><a href="section-1-overview.html#paths-and-the-working-directory"><i class="fa fa-check"></i><b>2.2</b> Paths and the Working Directory</a></li>
+<li class="chapter" data-level="2.3" data-path="section-1-overview.html"><a href="section-1-overview.html#the-readr-and-readxl-packages"><i class="fa fa-check"></i><b>2.3</b> The readr and readxl Packages</a></li>
+<li class="chapter" data-level="2.4" data-path="section-1-overview.html"><a href="section-1-overview.html#importing-data-using-r-base-functions"><i class="fa fa-check"></i><b>2.4</b> Importing Data Using R-base Functions</a></li>
+<li class="chapter" data-level="2.5" data-path="section-1-overview.html"><a href="section-1-overview.html#downloading-files-from-the-internet"><i class="fa fa-check"></i><b>2.5</b> Downloading Files from the Internet</a></li>
+<li class="chapter" data-level="2.6" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment-part-1---data-import"><i class="fa fa-check"></i><b>2.6</b> Assessment Part 1 - Data Import</a></li>
+<li class="chapter" data-level="2.7" data-path="section-1-overview.html"><a href="section-1-overview.html#assessment-part-2---data-import"><i class="fa fa-check"></i><b>2.7</b> Assessment Part 2 - Data Import</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="section-2-overview.html"><a href="section-2-overview.html"><i class="fa fa-check"></i><b>3</b> Section 2 Overview</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="section-2-overview.html"><a href="section-2-overview.html#tidy-data"><i class="fa fa-check"></i><b>3.1</b> Tidy Data</a></li>
+<li class="chapter" data-level="3.2" data-path="section-2-overview.html"><a href="section-2-overview.html#reshaping-data"><i class="fa fa-check"></i><b>3.2</b> Reshaping Data</a></li>
+<li class="chapter" data-level="3.3" data-path="section-2-overview.html"><a href="section-2-overview.html#separate-and-unite"><i class="fa fa-check"></i><b>3.3</b> Separate and Unite</a></li>
+<li class="chapter" data-level="3.4" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment-part-1---reshaping-data"><i class="fa fa-check"></i><b>3.4</b> Assessment Part 1 - Reshaping Data</a></li>
+<li class="chapter" data-level="3.5" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment-part-2---reshaping-data"><i class="fa fa-check"></i><b>3.5</b> Assessment Part 2 - Reshaping Data</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2-overview.html"><a href="section-2-overview.html#combining-tables"><i class="fa fa-check"></i><b>3.6</b> Combining Tables</a></li>
+<li class="chapter" data-level="3.7" data-path="section-2-overview.html"><a href="section-2-overview.html#binding"><i class="fa fa-check"></i><b>3.7</b> Binding</a></li>
+<li class="chapter" data-level="3.8" data-path="section-2-overview.html"><a href="section-2-overview.html#set-operators"><i class="fa fa-check"></i><b>3.8</b> Set Operators</a></li>
+<li class="chapter" data-level="3.9" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---combining-tables"><i class="fa fa-check"></i><b>3.9</b> Assessment - Combining Tables</a></li>
+<li class="chapter" data-level="3.10" data-path="section-2-overview.html"><a href="section-2-overview.html#web-scraping"><i class="fa fa-check"></i><b>3.10</b> Web Scraping</a></li>
+<li class="chapter" data-level="3.11" data-path="section-2-overview.html"><a href="section-2-overview.html#css-selectors"><i class="fa fa-check"></i><b>3.11</b> CSS Selectors</a></li>
+<li class="chapter" data-level="3.12" data-path="section-2-overview.html"><a href="section-2-overview.html#assessment---web-scraping"><i class="fa fa-check"></i><b>3.12</b> Assessment - Web Scraping</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="section-3-overview.html"><a href="section-3-overview.html"><i class="fa fa-check"></i><b>4</b> Section 3 Overview</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="section-3-overview.html"><a href="section-3-overview.html#string-parsing"><i class="fa fa-check"></i><b>4.1</b> String Parsing</a></li>
+<li class="chapter" data-level="4.2" data-path="section-3-overview.html"><a href="section-3-overview.html#defining-strings-single-and-double-quotes-and-how-to-escape"><i class="fa fa-check"></i><b>4.2</b> Defining Strings: Single and Double Quotes and How to Escape</a></li>
+<li class="chapter" data-level="4.3" data-path="section-3-overview.html"><a href="section-3-overview.html#stringr-package"><i class="fa fa-check"></i><b>4.3</b> stringr Package</a></li>
+<li class="chapter" data-level="4.4" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study-1-us-murders-data"><i class="fa fa-check"></i><b>4.4</b> Case Study 1: US Murders Data</a></li>
+<li class="chapter" data-level="4.5" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-1"><i class="fa fa-check"></i><b>4.5</b> Assessment - String Processing Part 1</a></li>
+<li class="chapter" data-level="4.6" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study-2-reported-heights"><i class="fa fa-check"></i><b>4.6</b> Case Study 2: Reported Heights</a></li>
+<li class="chapter" data-level="4.7" data-path="section-3-overview.html"><a href="section-3-overview.html#regex"><i class="fa fa-check"></i><b>4.7</b> Regex</a></li>
+<li class="chapter" data-level="4.8" data-path="section-3-overview.html"><a href="section-3-overview.html#character-classes-anchors-and-quantifiers"><i class="fa fa-check"></i><b>4.8</b> Character Classes, Anchors and Quantifiers</a></li>
+<li class="chapter" data-level="4.9" data-path="section-3-overview.html"><a href="section-3-overview.html#search-and-replace-with-regex"><i class="fa fa-check"></i><b>4.9</b> Search and Replace with Regex</a></li>
+<li class="chapter" data-level="4.10" data-path="section-3-overview.html"><a href="section-3-overview.html#groups-with-regex"><i class="fa fa-check"></i><b>4.10</b> Groups with Regex</a></li>
+<li class="chapter" data-level="4.11" data-path="section-3-overview.html"><a href="section-3-overview.html#testing-and-improving"><i class="fa fa-check"></i><b>4.11</b> Testing and Improving</a></li>
+<li class="chapter" data-level="4.12" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-2"><i class="fa fa-check"></i><b>4.12</b> Assessment - String Processing Part 2</a></li>
+<li class="chapter" data-level="4.13" data-path="section-3-overview.html"><a href="section-3-overview.html#separate-with-regex"><i class="fa fa-check"></i><b>4.13</b> Separate with Regex</a></li>
+<li class="chapter" data-level="4.14" data-path="section-3-overview.html"><a href="section-3-overview.html#using-groups-and-quantifiers"><i class="fa fa-check"></i><b>4.14</b> Using Groups and Quantifiers</a></li>
+<li class="chapter" data-level="4.15" data-path="section-3-overview.html"><a href="section-3-overview.html#putting-it-all-together"><i class="fa fa-check"></i><b>4.15</b> Putting it All Together</a></li>
+<li class="chapter" data-level="4.16" data-path="section-3-overview.html"><a href="section-3-overview.html#string-splitting"><i class="fa fa-check"></i><b>4.16</b> String Splitting</a></li>
+<li class="chapter" data-level="4.17" data-path="section-3-overview.html"><a href="section-3-overview.html#case-study---extracting-a-table-from-a-pdf"><i class="fa fa-check"></i><b>4.17</b> Case Study - Extracting a Table from a PDF</a></li>
+<li class="chapter" data-level="4.18" data-path="section-3-overview.html"><a href="section-3-overview.html#recoding"><i class="fa fa-check"></i><b>4.18</b> Recoding</a></li>
+<li class="chapter" data-level="4.19" data-path="section-3-overview.html"><a href="section-3-overview.html#assessment---string-processing-part-3"><i class="fa fa-check"></i><b>4.19</b> Assessment - String Processing Part 3</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="section-4-overview.html"><a href="section-4-overview.html"><i class="fa fa-check"></i><b>5</b> Section 4 Overview</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#dates-and-times"><i class="fa fa-check"></i><b>5.1</b> Dates and Times</a></li>
+<li class="chapter" data-level="5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#text-mining"><i class="fa fa-check"></i><b>5.2</b> Text mining</a></li>
+<li class="chapter" data-level="5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment-part-1---dates-times-and-text-mining"><i class="fa fa-check"></i><b>5.3</b> Assessment Part 1 - Dates, Times, and Text Mining</a></li>
+<li class="chapter" data-level="5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#assessment-part-2---dates-times-and-text-mining"><i class="fa fa-check"></i><b>5.4</b> Assessment Part 2 - Dates, Times, and Text Mining</a></li>
+<li class="chapter" data-level="5.5" data-path="section-4-overview.html"><a href="section-4-overview.html#final-comprehensive-assessment"><i class="fa fa-check"></i><b>5.5</b> Final: Comprehensive Assessment</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="section-4-overview.html"><a href="section-4-overview.html#comprehensive-assessment-puerto-rico-hurricane-mortality"><i class="fa fa-check"></i><b>5.5.1</b> Comprehensive Assessment: Puerto Rico Hurricane Mortality</a></li>
+<li class="chapter" data-level="5.5.2" data-path="section-4-overview.html"><a href="section-4-overview.html#project-introduction"><i class="fa fa-check"></i><b>5.5.2</b> Project Introduction</a></li>
+<li class="chapter" data-level="5.5.3" data-path="section-4-overview.html"><a href="section-4-overview.html#puerto-rico-hurricane-mortality---part-1"><i class="fa fa-check"></i><b>5.5.3</b> Puerto Rico Hurricane Mortality - Part 1</a></li>
+<li class="chapter" data-level="5.5.4" data-path="section-4-overview.html"><a href="section-4-overview.html#puerto-rico-hurricane-mortality---part-2"><i class="fa fa-check"></i><b>5.5.4</b> Puerto Rico Hurricane Mortality - Part 2</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Science Wrangling</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Data Science Wrangling</h1>
+</div>
+<div id="learning-objectives" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Learning Objectives</h1>
+<ul>
+<li>How to import data into R from different file formats</li>
+<li>How to scrape data from the web</li>
+<li>How to tidy data using the tidyverse to better facilitate analysis</li>
+<li>How to process strings with regular expressions (regex)</li>
+<li>How to wrangle data using dplyr</li>
+<li>How to work with dates and times as file formats</li>
+<li>How to mine text</li>
+</ul>
+<div id="course-overview" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Course Overview</h2>
+<div id="section-1-data-import" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Section 1: Data Import</h3>
+<p>You will learn how to import data from different sources.</p>
+</div>
+<div id="section-2-tidy-data" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Section 2: Tidy Data</h3>
+<p>You will learn the first pieces of converting data into a tidy format.</p>
+</div>
+<div id="section-3-string-processing" class="section level3" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Section 3: String Processing</h3>
+<p>You will learn how to process strings using regular expressions (regex).</p>
+</div>
+<div id="section-4-dates-times-and-text-mining" class="section level3" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Section 4: Dates, Times, and Text Mining</h3>
+<p>You will learn how to work with dates and times as file formats and how to mine text.</p>
+</div>
+</div>
+<div id="introduction-to-wrangling" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Introduction to Wrangling</h2>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/introduction-to-data-wrangling.html">here</a></p>
+<p><strong>Key points</strong></p>
+<ul>
+<li>The first step in data analysis is importing, tidying and cleaning the data. This is the process of data wrangling.</li>
+<li>In this course, we cover several common steps of the data wrangling process: tidying data, string processing, html parsing, working with dates and times, and text mining.</li>
+</ul>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="section-1-overview.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
