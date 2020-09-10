@@ -578,7 +578,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>##  [1] 1.00 1.41 1.73 2.00 2.24 2.45 2.65 2.83 3.00 3.16</code></pre>
 <div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="section-1-overview.html#cb67-1" aria-hidden="true"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(n, compute_prob)    <span class="co"># element-wise application of compute_prob to n</span></span>
 <span id="cb67-2"><a href="section-1-overview.html#cb67-2" aria-hidden="true"></a><span class="kw">plot</span>(n, prob)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-31-1.png" width="672" /></p>
 <p><em>Computing birthday problem probabilities with sapply</em></p>
 <div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="section-1-overview.html#cb68-1" aria-hidden="true"></a><span class="co"># function for computing exact probability of shared birthdays for any n</span></span>
 <span id="cb68-2"><a href="section-1-overview.html#cb68-2" aria-hidden="true"></a>exact_prob &lt;-<span class="st"> </span><span class="cf">function</span>(n){</span>
@@ -592,7 +592,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb68-10"><a href="section-1-overview.html#cb68-10" aria-hidden="true"></a><span class="co"># plotting Monte Carlo results and exact probabilities on same graph</span></span>
 <span id="cb68-11"><a href="section-1-overview.html#cb68-11" aria-hidden="true"></a><span class="kw">plot</span>(n, prob)    <span class="co"># plot Monte Carlo results</span></span>
 <span id="cb68-12"><a href="section-1-overview.html#cb68-12" aria-hidden="true"></a><span class="kw">lines</span>(n, eprob, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)    <span class="co"># add line for exact prob</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-32-1.png" width="672" /></p>
 </div>
 <div id="how-many-monte-carlo-experiments-are-enough" class="section level2" number="2.11">
 <h2><span class="header-section-number">2.11</span> How many Monte Carlo Experiments are enough?</h2>
@@ -615,7 +615,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb69-8"><a href="section-1-overview.html#cb69-8" aria-hidden="true"></a>}</span>
 <span id="cb69-9"><a href="section-1-overview.html#cb69-9" aria-hidden="true"></a>prob &lt;-<span class="st"> </span><span class="kw">sapply</span>(B, compute_prob)    <span class="co"># apply compute_prob to many values of B</span></span>
 <span id="cb69-10"><a href="section-1-overview.html#cb69-10" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">log10</span>(B), prob, <span class="dt">type =</span> <span class="st">&quot;l&quot;</span>)    <span class="co"># plot a line graph of estimates</span></span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-33-1.png" width="672" /></p>
 </div>
 <div id="assessment---combinations-and-permutations" class="section level2" number="2.12">
 <h2><span class="header-section-number">2.12</span> Assessment - Combinations and Permutations</h2>
@@ -799,7 +799,7 @@ D. Both situations describe independent events.</li>
 <span id="cb86-16"><a href="section-1-overview.html#cb86-16" aria-hidden="true"></a></span>
 <span id="cb86-17"><a href="section-1-overview.html#cb86-17" aria-hidden="true"></a><span class="co"># Plot the probability &#39;p&#39; on the x-axis and &#39;Pr&#39; on the y-axis.</span></span>
 <span id="cb86-18"><a href="section-1-overview.html#cb86-18" aria-hidden="true"></a><span class="kw">plot</span>(p,Pr)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-42-1.png" width="672" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Repeat the previous exercise, but now keep the probability that team <span class="math inline">\(A\)</span> wins fixed at <code>p &lt;- 0.75</code> and compute the probability for different series lengths.</li>
 </ol>
@@ -822,7 +822,7 @@ D. Both situations describe independent events.</li>
 <span id="cb87-16"><a href="section-1-overview.html#cb87-16" aria-hidden="true"></a></span>
 <span id="cb87-17"><a href="section-1-overview.html#cb87-17" aria-hidden="true"></a><span class="co"># Plot the number of games in the series &#39;N&#39; on the x-axis and &#39;Pr&#39; on the y-axis.</span></span>
 <span id="cb87-18"><a href="section-1-overview.html#cb87-18" aria-hidden="true"></a><span class="kw">plot</span>(N,Pr)</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p><img src="img/figures/unnamed-chunk-43-1.png" width="672" /></p>
 </div>
 <div id="assessment---olympic-running" class="section level2" number="2.16">
 <h2><span class="header-section-number">2.16</span> Assessment - Olympic Running</h2>
