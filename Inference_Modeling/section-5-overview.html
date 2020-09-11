@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="bayesian-statistics" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Bayesian Statistics</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayesian-statistics">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayesian-statistics" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>In the urn model, it does not make sense to talk about the probability of <span class="math inline">\(p\)</span> being greater than a certain value because <span class="math inline">\(p\)</span> is a fixed value.</li>
@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="bayes-theorem" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Bayes’ Theorem</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayes-theorem">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayes-theorem" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Bayes’ Theorem states that the probability of event A happening given event B is equal to the probability of both A and B divided by the probability of event B:</li>
@@ -264,20 +264,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Substituting known values, we obtain:</p>
 <p><span class="math inline">\(\frac{0.99⋅0.00025}{0.99⋅0.00025 + 0.01⋅0.99975} = 0.02\)</span></p>
 <p><em>Code: Monte Carlo simulation</em></p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="section-5-overview.html#cb156-1" aria-hidden="true"></a>prev &lt;-<span class="st"> </span><span class="fl">0.00025</span>    <span class="co"># disease prevalence</span></span>
-<span id="cb156-2"><a href="section-5-overview.html#cb156-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100000</span>    <span class="co"># number of tests</span></span>
-<span id="cb156-3"><a href="section-5-overview.html#cb156-3" aria-hidden="true"></a>outcome &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;Disease&quot;</span>, <span class="st">&quot;Healthy&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(prev, <span class="dv">1</span><span class="op">-</span>prev))</span>
-<span id="cb156-4"><a href="section-5-overview.html#cb156-4" aria-hidden="true"></a></span>
-<span id="cb156-5"><a href="section-5-overview.html#cb156-5" aria-hidden="true"></a>N_D &lt;-<span class="st"> </span><span class="kw">sum</span>(outcome <span class="op">==</span><span class="st"> &quot;Disease&quot;</span>)    <span class="co"># number with disease</span></span>
-<span id="cb156-6"><a href="section-5-overview.html#cb156-6" aria-hidden="true"></a>N_H &lt;-<span class="st"> </span><span class="kw">sum</span>(outcome <span class="op">==</span><span class="st"> &quot;Healthy&quot;</span>)    <span class="co"># number healthy</span></span>
-<span id="cb156-7"><a href="section-5-overview.html#cb156-7" aria-hidden="true"></a></span>
-<span id="cb156-8"><a href="section-5-overview.html#cb156-8" aria-hidden="true"></a><span class="co"># for each person, randomly determine if test is + or -</span></span>
-<span id="cb156-9"><a href="section-5-overview.html#cb156-9" aria-hidden="true"></a>accuracy &lt;-<span class="st"> </span><span class="fl">0.99</span></span>
-<span id="cb156-10"><a href="section-5-overview.html#cb156-10" aria-hidden="true"></a>test &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&quot;character&quot;</span>, N)</span>
-<span id="cb156-11"><a href="section-5-overview.html#cb156-11" aria-hidden="true"></a>test[outcome <span class="op">==</span><span class="st"> &quot;Disease&quot;</span>] &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>), N_D, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(accuracy, <span class="dv">1</span><span class="op">-</span>accuracy))</span>
-<span id="cb156-12"><a href="section-5-overview.html#cb156-12" aria-hidden="true"></a>test[outcome <span class="op">==</span><span class="st"> &quot;Healthy&quot;</span>] &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;+&quot;</span>), N_H, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(accuracy, <span class="dv">1</span><span class="op">-</span>accuracy))</span>
-<span id="cb156-13"><a href="section-5-overview.html#cb156-13" aria-hidden="true"></a></span>
-<span id="cb156-14"><a href="section-5-overview.html#cb156-14" aria-hidden="true"></a><span class="kw">table</span>(outcome, test)</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="section-5-overview.html#cb167-1" aria-hidden="true"></a>prev &lt;-<span class="st"> </span><span class="fl">0.00025</span>    <span class="co"># disease prevalence</span></span>
+<span id="cb167-2"><a href="section-5-overview.html#cb167-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100000</span>    <span class="co"># number of tests</span></span>
+<span id="cb167-3"><a href="section-5-overview.html#cb167-3" aria-hidden="true"></a>outcome &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;Disease&quot;</span>, <span class="st">&quot;Healthy&quot;</span>), N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(prev, <span class="dv">1</span><span class="op">-</span>prev))</span>
+<span id="cb167-4"><a href="section-5-overview.html#cb167-4" aria-hidden="true"></a></span>
+<span id="cb167-5"><a href="section-5-overview.html#cb167-5" aria-hidden="true"></a>N_D &lt;-<span class="st"> </span><span class="kw">sum</span>(outcome <span class="op">==</span><span class="st"> &quot;Disease&quot;</span>)    <span class="co"># number with disease</span></span>
+<span id="cb167-6"><a href="section-5-overview.html#cb167-6" aria-hidden="true"></a>N_H &lt;-<span class="st"> </span><span class="kw">sum</span>(outcome <span class="op">==</span><span class="st"> &quot;Healthy&quot;</span>)    <span class="co"># number healthy</span></span>
+<span id="cb167-7"><a href="section-5-overview.html#cb167-7" aria-hidden="true"></a></span>
+<span id="cb167-8"><a href="section-5-overview.html#cb167-8" aria-hidden="true"></a><span class="co"># for each person, randomly determine if test is + or -</span></span>
+<span id="cb167-9"><a href="section-5-overview.html#cb167-9" aria-hidden="true"></a>accuracy &lt;-<span class="st"> </span><span class="fl">0.99</span></span>
+<span id="cb167-10"><a href="section-5-overview.html#cb167-10" aria-hidden="true"></a>test &lt;-<span class="st"> </span><span class="kw">vector</span>(<span class="st">&quot;character&quot;</span>, N)</span>
+<span id="cb167-11"><a href="section-5-overview.html#cb167-11" aria-hidden="true"></a>test[outcome <span class="op">==</span><span class="st"> &quot;Disease&quot;</span>] &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;+&quot;</span>, <span class="st">&quot;-&quot;</span>), N_D, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(accuracy, <span class="dv">1</span><span class="op">-</span>accuracy))</span>
+<span id="cb167-12"><a href="section-5-overview.html#cb167-12" aria-hidden="true"></a>test[outcome <span class="op">==</span><span class="st"> &quot;Healthy&quot;</span>] &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="st">&quot;-&quot;</span>, <span class="st">&quot;+&quot;</span>), N_H, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(accuracy, <span class="dv">1</span><span class="op">-</span>accuracy))</span>
+<span id="cb167-13"><a href="section-5-overview.html#cb167-13" aria-hidden="true"></a></span>
+<span id="cb167-14"><a href="section-5-overview.html#cb167-14" aria-hidden="true"></a><span class="kw">table</span>(outcome, test)</span></code></pre></div>
 <pre><code>##          test
 ## outcome       -     +
 ##   Disease     0    27
@@ -285,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="bayes-in-practice" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> Bayes in Practice</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayes-in-practice">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#bayes-in-practice" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The techniques we have used up until now are referred to as <em>frequentist statistics</em> as they consider only the frequency of outcomes in a dataset and do not include any outside information. Frequentist statistics allow us to compute confidence intervals and p-values.</li>
@@ -295,7 +295,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="the-hierarchical-model" class="section level2" number="6.4">
 <h2><span class="header-section-number">6.4</span> The Hierarchical Model</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#hierarchical-models">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#hierarchical-models" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Hierarchical models use multiple levels of variability to model results. They are hierarchical because values in the lower levels of the model are computed using values from higher levels of the model.</li>
@@ -317,7 +317,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="assessment---bayesian-statistics" class="section level2" number="6.5">
 <h2><span class="header-section-number">6.5</span> Assessment - Bayesian Statistics</h2>
 <ol style="list-style-type: decimal">
-<li>In 1999 in England <a href="https://en.wikipedia.org/wiki/Sally_Clark">Sally Clark</a> was found guilty of the murder of two of her sons.</li>
+<li>In 1999 in England <a href="https://en.wikipedia.org/wiki/Sally_Clark" target="_blank">Sally Clark</a> was found guilty of the murder of two of her sons.</li>
 </ol>
 <p>Both infants were found dead in the morning, one in 1996 and another in 1998, and she claimed the cause of death was sudden infant death syndrome (SIDS). No evidence of physical harm was found on the two infants so the main piece of evidence against her was the testimony of Professor Sir Roy Meadow, who testified that the chances of two infants dying of SIDS was 1 in 73 million. He arrived at this figure by finding that the rate of SIDS was 1 in 8,500 and then calculating that the chance of two SIDS cases was <span class="math inline">\(8,500 × 8,500 \approx \text{73 million}\)</span>.</p>
 <p>Based on what we’ve learned throughout this course, which statement best describes a potential flaw in Sir Meadow’s reasoning?</p>
@@ -335,15 +335,15 @@ D. The rate of SIDS is too low to perform these types of statistics.</li>
 <li>Let’s assume that there is in fact a genetic component to SIDS and the the probability of <span class="math inline">\(\mbox{Pr}(\text{second case of SIDS} \mid \text{first case of SIDS}) = 1/100\)</span>, is much higher than 1 in 8,500.</li>
 </ol>
 <p>What is the probability of both of Sally Clark’s sons dying of SIDS?</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="section-5-overview.html#cb158-1" aria-hidden="true"></a><span class="co"># Define `Pr_1` as the probability of the first son dying of SIDS</span></span>
-<span id="cb158-2"><a href="section-5-overview.html#cb158-2" aria-hidden="true"></a>Pr_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">8500</span></span>
-<span id="cb158-3"><a href="section-5-overview.html#cb158-3" aria-hidden="true"></a></span>
-<span id="cb158-4"><a href="section-5-overview.html#cb158-4" aria-hidden="true"></a><span class="co"># Define `Pr_2` as the probability of the second son dying of SIDS</span></span>
-<span id="cb158-5"><a href="section-5-overview.html#cb158-5" aria-hidden="true"></a>Pr_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">100</span></span>
-<span id="cb158-6"><a href="section-5-overview.html#cb158-6" aria-hidden="true"></a></span>
-<span id="cb158-7"><a href="section-5-overview.html#cb158-7" aria-hidden="true"></a><span class="co"># Calculate the probability of both sons dying of SIDS. Print this value to the console.</span></span>
-<span id="cb158-8"><a href="section-5-overview.html#cb158-8" aria-hidden="true"></a>Pr_<span class="dv">1</span> <span class="op">*</span><span class="st"> </span>Pr_<span class="dv">2</span></span></code></pre></div>
-<pre><code>## [1] 1.18e-06</code></pre>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="section-5-overview.html#cb169-1" aria-hidden="true"></a><span class="co"># Define `Pr_1` as the probability of the first son dying of SIDS</span></span>
+<span id="cb169-2"><a href="section-5-overview.html#cb169-2" aria-hidden="true"></a>Pr_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">8500</span></span>
+<span id="cb169-3"><a href="section-5-overview.html#cb169-3" aria-hidden="true"></a></span>
+<span id="cb169-4"><a href="section-5-overview.html#cb169-4" aria-hidden="true"></a><span class="co"># Define `Pr_2` as the probability of the second son dying of SIDS</span></span>
+<span id="cb169-5"><a href="section-5-overview.html#cb169-5" aria-hidden="true"></a>Pr_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">100</span></span>
+<span id="cb169-6"><a href="section-5-overview.html#cb169-6" aria-hidden="true"></a></span>
+<span id="cb169-7"><a href="section-5-overview.html#cb169-7" aria-hidden="true"></a><span class="co"># Calculate the probability of both sons dying of SIDS. Print this value to the console.</span></span>
+<span id="cb169-8"><a href="section-5-overview.html#cb169-8" aria-hidden="true"></a>Pr_<span class="dv">1</span> <span class="op">*</span><span class="st"> </span>Pr_<span class="dv">2</span></span></code></pre></div>
+<pre><code>## [1] 1.176471e-06</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Many press reports stated that the expert claimed the probability of Sally Clark being innocent as 1 in 73 million.</li>
 </ol>
@@ -368,24 +368,24 @@ D. 1/8500</li>
 <p><span class="math inline">\(\mbox{Pr}(\text{mother is a murderer}) = 1/1,000,000\)</span></p>
 <p>According to Bayes’ rule, what is the probability of:</p>
 <p><span class="math inline">\(\mbox{Pr}(\text{mother is a murderer} \mid \text{two children found dead with no evidence of harm})\)</span></p>
-<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="section-5-overview.html#cb160-1" aria-hidden="true"></a><span class="co"># Define `Pr_1` as the probability of the first son dying of SIDS</span></span>
-<span id="cb160-2"><a href="section-5-overview.html#cb160-2" aria-hidden="true"></a>Pr_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">8500</span></span>
-<span id="cb160-3"><a href="section-5-overview.html#cb160-3" aria-hidden="true"></a></span>
-<span id="cb160-4"><a href="section-5-overview.html#cb160-4" aria-hidden="true"></a><span class="co"># Define `Pr_2` as the probability of the second son dying of SIDS</span></span>
-<span id="cb160-5"><a href="section-5-overview.html#cb160-5" aria-hidden="true"></a>Pr_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">100</span></span>
-<span id="cb160-6"><a href="section-5-overview.html#cb160-6" aria-hidden="true"></a></span>
-<span id="cb160-7"><a href="section-5-overview.html#cb160-7" aria-hidden="true"></a><span class="co"># Define `Pr_B` as the probability of both sons dying of SIDS</span></span>
-<span id="cb160-8"><a href="section-5-overview.html#cb160-8" aria-hidden="true"></a>Pr_B &lt;-<span class="st"> </span>Pr_<span class="dv">1</span><span class="op">*</span>Pr_<span class="dv">2</span></span>
-<span id="cb160-9"><a href="section-5-overview.html#cb160-9" aria-hidden="true"></a></span>
-<span id="cb160-10"><a href="section-5-overview.html#cb160-10" aria-hidden="true"></a><span class="co"># Define Pr_A as the rate of mothers that are murderers</span></span>
-<span id="cb160-11"><a href="section-5-overview.html#cb160-11" aria-hidden="true"></a>Pr_A &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">1000000</span></span>
-<span id="cb160-12"><a href="section-5-overview.html#cb160-12" aria-hidden="true"></a></span>
-<span id="cb160-13"><a href="section-5-overview.html#cb160-13" aria-hidden="true"></a><span class="co"># Define Pr_BA as the probability that two children die without evidence of harm, given that their mother is a murderer</span></span>
-<span id="cb160-14"><a href="section-5-overview.html#cb160-14" aria-hidden="true"></a>Pr_BA &lt;-<span class="st"> </span><span class="fl">0.50</span></span>
-<span id="cb160-15"><a href="section-5-overview.html#cb160-15" aria-hidden="true"></a></span>
-<span id="cb160-16"><a href="section-5-overview.html#cb160-16" aria-hidden="true"></a><span class="co"># Define Pr_AB as the probability that a mother is a murderer, given that her two children died with no evidence of physical harm. Print this value to the console.</span></span>
-<span id="cb160-17"><a href="section-5-overview.html#cb160-17" aria-hidden="true"></a>Pr_AB &lt;-<span class="st"> </span>(Pr_BA <span class="op">*</span><span class="st"> </span>Pr_A)<span class="op">/</span>Pr_B</span>
-<span id="cb160-18"><a href="section-5-overview.html#cb160-18" aria-hidden="true"></a>Pr_AB</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="section-5-overview.html#cb171-1" aria-hidden="true"></a><span class="co"># Define `Pr_1` as the probability of the first son dying of SIDS</span></span>
+<span id="cb171-2"><a href="section-5-overview.html#cb171-2" aria-hidden="true"></a>Pr_<span class="dv">1</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">8500</span></span>
+<span id="cb171-3"><a href="section-5-overview.html#cb171-3" aria-hidden="true"></a></span>
+<span id="cb171-4"><a href="section-5-overview.html#cb171-4" aria-hidden="true"></a><span class="co"># Define `Pr_2` as the probability of the second son dying of SIDS</span></span>
+<span id="cb171-5"><a href="section-5-overview.html#cb171-5" aria-hidden="true"></a>Pr_<span class="dv">2</span> &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">100</span></span>
+<span id="cb171-6"><a href="section-5-overview.html#cb171-6" aria-hidden="true"></a></span>
+<span id="cb171-7"><a href="section-5-overview.html#cb171-7" aria-hidden="true"></a><span class="co"># Define `Pr_B` as the probability of both sons dying of SIDS</span></span>
+<span id="cb171-8"><a href="section-5-overview.html#cb171-8" aria-hidden="true"></a>Pr_B &lt;-<span class="st"> </span>Pr_<span class="dv">1</span><span class="op">*</span>Pr_<span class="dv">2</span></span>
+<span id="cb171-9"><a href="section-5-overview.html#cb171-9" aria-hidden="true"></a></span>
+<span id="cb171-10"><a href="section-5-overview.html#cb171-10" aria-hidden="true"></a><span class="co"># Define Pr_A as the rate of mothers that are murderers</span></span>
+<span id="cb171-11"><a href="section-5-overview.html#cb171-11" aria-hidden="true"></a>Pr_A &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">1000000</span></span>
+<span id="cb171-12"><a href="section-5-overview.html#cb171-12" aria-hidden="true"></a></span>
+<span id="cb171-13"><a href="section-5-overview.html#cb171-13" aria-hidden="true"></a><span class="co"># Define Pr_BA as the probability that two children die without evidence of harm, given that their mother is a murderer</span></span>
+<span id="cb171-14"><a href="section-5-overview.html#cb171-14" aria-hidden="true"></a>Pr_BA &lt;-<span class="st"> </span><span class="fl">0.50</span></span>
+<span id="cb171-15"><a href="section-5-overview.html#cb171-15" aria-hidden="true"></a></span>
+<span id="cb171-16"><a href="section-5-overview.html#cb171-16" aria-hidden="true"></a><span class="co"># Define Pr_AB as the probability that a mother is a murderer, given that her two children died with no evidence of physical harm. Print this value to the console.</span></span>
+<span id="cb171-17"><a href="section-5-overview.html#cb171-17" aria-hidden="true"></a>Pr_AB &lt;-<span class="st"> </span>(Pr_BA <span class="op">*</span><span class="st"> </span>Pr_A)<span class="op">/</span>Pr_B</span>
+<span id="cb171-18"><a href="section-5-overview.html#cb171-18" aria-hidden="true"></a>Pr_AB</span></code></pre></div>
 <pre><code>## [1] 0.425</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>After Sally Clark was found guilty, the Royal Statistical Society issued a statement saying that there was “no statistical basis” for the expert’s claim.</li>
@@ -407,32 +407,32 @@ D. He did not take into account murder rates in the population.</li>
 </ol>
 <p>Create a table with the poll spread results from Florida taken during the last days before the election using the sample code.</p>
 <p>The CLT tells us that the average of these spreads is approximately normal. Calculate a spread average and provide an estimate of the standard error.</p>
-<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="section-5-overview.html#cb162-1" aria-hidden="true"></a><span class="co"># Create an object `polls` that contains the spread of predictions for each candidate in Florida during the last polling days</span></span>
-<span id="cb162-2"><a href="section-5-overview.html#cb162-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb162-3"><a href="section-5-overview.html#cb162-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Florida&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-11-04&quot;</span> ) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb162-4"><a href="section-5-overview.html#cb162-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
-<span id="cb162-5"><a href="section-5-overview.html#cb162-5" aria-hidden="true"></a></span>
-<span id="cb162-6"><a href="section-5-overview.html#cb162-6" aria-hidden="true"></a><span class="co"># Examine the `polls` object using the `head` function</span></span>
-<span id="cb162-7"><a href="section-5-overview.html#cb162-7" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="section-5-overview.html#cb173-1" aria-hidden="true"></a><span class="co"># Create an object `polls` that contains the spread of predictions for each candidate in Florida during the last polling days</span></span>
+<span id="cb173-2"><a href="section-5-overview.html#cb173-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb173-3"><a href="section-5-overview.html#cb173-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;Florida&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-11-04&quot;</span> ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb173-4"><a href="section-5-overview.html#cb173-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
+<span id="cb173-5"><a href="section-5-overview.html#cb173-5" aria-hidden="true"></a></span>
+<span id="cb173-6"><a href="section-5-overview.html#cb173-6" aria-hidden="true"></a><span class="co"># Examine the `polls` object using the `head` function</span></span>
+<span id="cb173-7"><a href="section-5-overview.html#cb173-7" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
 <pre><code>##     state  startdate    enddate                                 pollster grade samplesize population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin adjpoll_clinton
-## 1 Florida 2016-11-03 2016-11-06                    Quinnipiac University    A-        884         lv            46.0          45.0            2.00               NA            46.4
-## 2 Florida 2016-11-02 2016-11-04                                   YouGov     B       1188         rv            45.0          45.0              NA               NA            47.1
-## 3 Florida 2016-11-01 2016-11-07                             SurveyMonkey    C-       4092         lv            47.0          45.0            4.00               NA            45.6
-## 4 Florida 2016-11-06 2016-11-06                          Trafalgar Group     C       1100         lv            46.1          49.7            2.43               NA            45.8
-## 5 Florida 2016-11-05 2016-11-06           Opinion Savvy/InsiderAdvantage    C-        843         lv            48.4          46.4            3.00               NA            47.4
-## 6 Florida 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+        525         lv            47.0          45.0            2.00               NA            47.6
+## 1 Florida 2016-11-03 2016-11-06                    Quinnipiac University    A-        884         lv           46.00         45.00            2.00               NA        46.44315
+## 2 Florida 2016-11-02 2016-11-04                                   YouGov     B       1188         rv           45.00         45.00              NA               NA        47.07455
+## 3 Florida 2016-11-01 2016-11-07                             SurveyMonkey    C-       4092         lv           47.00         45.00            4.00               NA        45.59190
+## 4 Florida 2016-11-06 2016-11-06                          Trafalgar Group     C       1100         lv           46.13         49.72            2.43               NA        45.75904
+## 5 Florida 2016-11-05 2016-11-06           Opinion Savvy/InsiderAdvantage    C-        843         lv           48.40         46.40            3.00               NA        47.37976
+## 6 Florida 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+        525         lv           47.00         45.00            2.00               NA        47.55885
 ##   adjpoll_trump adjpoll_johnson adjpoll_mcmullin  spread
-## 1          43.9            2.10               NA  0.0100
-## 2          47.0              NA               NA  0.0000
-## 3          44.3            1.69               NA  0.0200
-## 4          46.8            3.50               NA -0.0359
-## 5          45.7            2.72               NA  0.0200
-## 6          45.1            2.42               NA  0.0200</code></pre>
-<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="section-5-overview.html#cb164-1" aria-hidden="true"></a><span class="co"># Create an object called `results` that has two columns containing the average spread (`avg`) and the standard error (`se`). Print the results to the console.</span></span>
-<span id="cb164-2"><a href="section-5-overview.html#cb164-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread),  <span class="dt">se =</span> <span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">n</span>()))</span>
-<span id="cb164-3"><a href="section-5-overview.html#cb164-3" aria-hidden="true"></a>results</span></code></pre></div>
-<pre><code>##       avg      se
-## 1 0.00415 0.00722</code></pre>
+## 1      43.93999        2.098310               NA  0.0100
+## 2      46.99468              NA               NA  0.0000
+## 3      44.32744        1.692430               NA  0.0200
+## 4      46.82230        3.495849               NA -0.0359
+## 5      45.68637        2.721857               NA  0.0200
+## 6      45.13673        2.418502               NA  0.0200</code></pre>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="section-5-overview.html#cb175-1" aria-hidden="true"></a><span class="co"># Create an object called `results` that has two columns containing the average spread (`avg`) and the standard error (`se`). Print the results to the console.</span></span>
+<span id="cb175-2"><a href="section-5-overview.html#cb175-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread),  <span class="dt">se =</span> <span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">n</span>()))</span>
+<span id="cb175-3"><a href="section-5-overview.html#cb175-3" aria-hidden="true"></a>results</span></code></pre></div>
+<pre><code>##           avg          se
+## 1 0.004154545 0.007218692</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Assume a Bayesian model sets the prior distribution for Florida’s election night spread <span class="math inline">\(d\)</span> to be normal with expected value <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\tau\)</span>.</li>
 </ol>
@@ -451,95 +451,95 @@ D. The choice of prior has no effect on the Bayesian analysis.</li>
 <li>The CLT tells us that our estimate of the spread <span class="math inline">\(\hat{d}\)</span> has a normal distribution with expected value <span class="math inline">\(d\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>, which we calculated in a previous exercise.</li>
 </ol>
 <p>Use the formulas for the posterior distribution to calculate the expected value of the posterior distribution if we set <span class="math inline">\(\mu = 0\)</span> and <span class="math inline">\(\tau = 0.01\)</span>.</p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="section-5-overview.html#cb166-1" aria-hidden="true"></a><span class="co"># The results` object has already been loaded. Examine the values stored: `avg` and `se` of the spread</span></span>
-<span id="cb166-2"><a href="section-5-overview.html#cb166-2" aria-hidden="true"></a>results</span></code></pre></div>
-<pre><code>##       avg      se
-## 1 0.00415 0.00722</code></pre>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="section-5-overview.html#cb168-1" aria-hidden="true"></a><span class="co"># Define `mu` and `tau`</span></span>
-<span id="cb168-2"><a href="section-5-overview.html#cb168-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb168-3"><a href="section-5-overview.html#cb168-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
-<span id="cb168-4"><a href="section-5-overview.html#cb168-4" aria-hidden="true"></a></span>
-<span id="cb168-5"><a href="section-5-overview.html#cb168-5" aria-hidden="true"></a><span class="co"># Define a variable called `sigma` that contains the standard error in the object `results`</span></span>
-<span id="cb168-6"><a href="section-5-overview.html#cb168-6" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
-<span id="cb168-7"><a href="section-5-overview.html#cb168-7" aria-hidden="true"></a></span>
-<span id="cb168-8"><a href="section-5-overview.html#cb168-8" aria-hidden="true"></a><span class="co"># Define a variable called `Y` that contains the average in the object `results`</span></span>
-<span id="cb168-9"><a href="section-5-overview.html#cb168-9" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
-<span id="cb168-10"><a href="section-5-overview.html#cb168-10" aria-hidden="true"></a></span>
-<span id="cb168-11"><a href="section-5-overview.html#cb168-11" aria-hidden="true"></a><span class="co"># Define a variable `B` using `sigma` and `tau`. Print this value to the console.</span></span>
-<span id="cb168-12"><a href="section-5-overview.html#cb168-12" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span><span class="op">/</span>(sigma<span class="op">^</span><span class="dv">2</span><span class="op">+</span>tau<span class="op">^</span><span class="dv">2</span>)</span>
-<span id="cb168-13"><a href="section-5-overview.html#cb168-13" aria-hidden="true"></a></span>
-<span id="cb168-14"><a href="section-5-overview.html#cb168-14" aria-hidden="true"></a><span class="co"># Calculate the expected value of the posterior distribution</span></span>
-<span id="cb168-15"><a href="section-5-overview.html#cb168-15" aria-hidden="true"></a>EV &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
-<span id="cb168-16"><a href="section-5-overview.html#cb168-16" aria-hidden="true"></a>EV</span></code></pre></div>
-<pre><code>## [1] 0.00273</code></pre>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="section-5-overview.html#cb177-1" aria-hidden="true"></a><span class="co"># The results` object has already been loaded. Examine the values stored: `avg` and `se` of the spread</span></span>
+<span id="cb177-2"><a href="section-5-overview.html#cb177-2" aria-hidden="true"></a>results</span></code></pre></div>
+<pre><code>##           avg          se
+## 1 0.004154545 0.007218692</code></pre>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="section-5-overview.html#cb179-1" aria-hidden="true"></a><span class="co"># Define `mu` and `tau`</span></span>
+<span id="cb179-2"><a href="section-5-overview.html#cb179-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb179-3"><a href="section-5-overview.html#cb179-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
+<span id="cb179-4"><a href="section-5-overview.html#cb179-4" aria-hidden="true"></a></span>
+<span id="cb179-5"><a href="section-5-overview.html#cb179-5" aria-hidden="true"></a><span class="co"># Define a variable called `sigma` that contains the standard error in the object `results`</span></span>
+<span id="cb179-6"><a href="section-5-overview.html#cb179-6" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
+<span id="cb179-7"><a href="section-5-overview.html#cb179-7" aria-hidden="true"></a></span>
+<span id="cb179-8"><a href="section-5-overview.html#cb179-8" aria-hidden="true"></a><span class="co"># Define a variable called `Y` that contains the average in the object `results`</span></span>
+<span id="cb179-9"><a href="section-5-overview.html#cb179-9" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb179-10"><a href="section-5-overview.html#cb179-10" aria-hidden="true"></a></span>
+<span id="cb179-11"><a href="section-5-overview.html#cb179-11" aria-hidden="true"></a><span class="co"># Define a variable `B` using `sigma` and `tau`. Print this value to the console.</span></span>
+<span id="cb179-12"><a href="section-5-overview.html#cb179-12" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span><span class="op">/</span>(sigma<span class="op">^</span><span class="dv">2</span><span class="op">+</span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb179-13"><a href="section-5-overview.html#cb179-13" aria-hidden="true"></a></span>
+<span id="cb179-14"><a href="section-5-overview.html#cb179-14" aria-hidden="true"></a><span class="co"># Calculate the expected value of the posterior distribution</span></span>
+<span id="cb179-15"><a href="section-5-overview.html#cb179-15" aria-hidden="true"></a>EV &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
+<span id="cb179-16"><a href="section-5-overview.html#cb179-16" aria-hidden="true"></a>EV</span></code></pre></div>
+<pre><code>## [1] 0.002731286</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Compute the standard error of the posterior distribution.</li>
 </ol>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="section-5-overview.html#cb170-1" aria-hidden="true"></a><span class="co"># Here are the variables we have defined</span></span>
-<span id="cb170-2"><a href="section-5-overview.html#cb170-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb170-3"><a href="section-5-overview.html#cb170-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
-<span id="cb170-4"><a href="section-5-overview.html#cb170-4" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
-<span id="cb170-5"><a href="section-5-overview.html#cb170-5" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
-<span id="cb170-6"><a href="section-5-overview.html#cb170-6" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
-<span id="cb170-7"><a href="section-5-overview.html#cb170-7" aria-hidden="true"></a></span>
-<span id="cb170-8"><a href="section-5-overview.html#cb170-8" aria-hidden="true"></a><span class="co"># Compute the standard error of the posterior distribution. Print this value to the console.</span></span>
-<span id="cb170-9"><a href="section-5-overview.html#cb170-9" aria-hidden="true"></a>SE &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span><span class="op">/</span>((<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span>)<span class="op">+</span>(<span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>)))</span>
-<span id="cb170-10"><a href="section-5-overview.html#cb170-10" aria-hidden="true"></a>SE</span></code></pre></div>
-<pre><code>## [1] 0.00585</code></pre>
+<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="section-5-overview.html#cb181-1" aria-hidden="true"></a><span class="co"># Here are the variables we have defined</span></span>
+<span id="cb181-2"><a href="section-5-overview.html#cb181-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb181-3"><a href="section-5-overview.html#cb181-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
+<span id="cb181-4"><a href="section-5-overview.html#cb181-4" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
+<span id="cb181-5"><a href="section-5-overview.html#cb181-5" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb181-6"><a href="section-5-overview.html#cb181-6" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb181-7"><a href="section-5-overview.html#cb181-7" aria-hidden="true"></a></span>
+<span id="cb181-8"><a href="section-5-overview.html#cb181-8" aria-hidden="true"></a><span class="co"># Compute the standard error of the posterior distribution. Print this value to the console.</span></span>
+<span id="cb181-9"><a href="section-5-overview.html#cb181-9" aria-hidden="true"></a>SE &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span><span class="op">/</span>((<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span>)<span class="op">+</span>(<span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>)))</span>
+<span id="cb181-10"><a href="section-5-overview.html#cb181-10" aria-hidden="true"></a>SE</span></code></pre></div>
+<pre><code>## [1] 0.005853024</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>Using the fact that the posterior distribution is normal, create an interval that has a 95% of occurring centered at the posterior expected value.</li>
 </ol>
 <p>Note that we call these credible intervals.</p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="section-5-overview.html#cb172-1" aria-hidden="true"></a><span class="co"># Here are the variables we have defined in previous exercises</span></span>
-<span id="cb172-2"><a href="section-5-overview.html#cb172-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb172-3"><a href="section-5-overview.html#cb172-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
-<span id="cb172-4"><a href="section-5-overview.html#cb172-4" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
-<span id="cb172-5"><a href="section-5-overview.html#cb172-5" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
-<span id="cb172-6"><a href="section-5-overview.html#cb172-6" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
-<span id="cb172-7"><a href="section-5-overview.html#cb172-7" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>( <span class="dv">1</span><span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
-<span id="cb172-8"><a href="section-5-overview.html#cb172-8" aria-hidden="true"></a></span>
-<span id="cb172-9"><a href="section-5-overview.html#cb172-9" aria-hidden="true"></a><span class="co"># Construct the 95% credible interval. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
-<span id="cb172-10"><a href="section-5-overview.html#cb172-10" aria-hidden="true"></a>ev &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
-<span id="cb172-11"><a href="section-5-overview.html#cb172-11" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(ev <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>se, ev <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>se)</span>
-<span id="cb172-12"><a href="section-5-overview.html#cb172-12" aria-hidden="true"></a>ci</span></code></pre></div>
-<pre><code>## [1] -0.00874  0.01420</code></pre>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="section-5-overview.html#cb183-1" aria-hidden="true"></a><span class="co"># Here are the variables we have defined in previous exercises</span></span>
+<span id="cb183-2"><a href="section-5-overview.html#cb183-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb183-3"><a href="section-5-overview.html#cb183-3" aria-hidden="true"></a>tau &lt;-<span class="st"> </span><span class="fl">0.01</span></span>
+<span id="cb183-4"><a href="section-5-overview.html#cb183-4" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
+<span id="cb183-5"><a href="section-5-overview.html#cb183-5" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb183-6"><a href="section-5-overview.html#cb183-6" aria-hidden="true"></a>B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb183-7"><a href="section-5-overview.html#cb183-7" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>( <span class="dv">1</span><span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
+<span id="cb183-8"><a href="section-5-overview.html#cb183-8" aria-hidden="true"></a></span>
+<span id="cb183-9"><a href="section-5-overview.html#cb183-9" aria-hidden="true"></a><span class="co"># Construct the 95% credible interval. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
+<span id="cb183-10"><a href="section-5-overview.html#cb183-10" aria-hidden="true"></a>ev &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
+<span id="cb183-11"><a href="section-5-overview.html#cb183-11" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(ev <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>se, ev <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>se)</span>
+<span id="cb183-12"><a href="section-5-overview.html#cb183-12" aria-hidden="true"></a>ci</span></code></pre></div>
+<pre><code>## [1] -0.008740432  0.014203003</code></pre>
 <ol start="11" style="list-style-type: decimal">
 <li>According to this analysis, what was the probability that Trump wins Florida?</li>
 </ol>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="section-5-overview.html#cb174-1" aria-hidden="true"></a><span class="co"># Assign the expected value of the posterior distribution to the variable `exp_value`</span></span>
-<span id="cb174-2"><a href="section-5-overview.html#cb174-2" aria-hidden="true"></a>exp_value &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y </span>
-<span id="cb174-3"><a href="section-5-overview.html#cb174-3" aria-hidden="true"></a></span>
-<span id="cb174-4"><a href="section-5-overview.html#cb174-4" aria-hidden="true"></a><span class="co"># Assign the standard error of the posterior distribution to the variable `se`</span></span>
-<span id="cb174-5"><a href="section-5-overview.html#cb174-5" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>( <span class="dv">1</span><span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
-<span id="cb174-6"><a href="section-5-overview.html#cb174-6" aria-hidden="true"></a></span>
-<span id="cb174-7"><a href="section-5-overview.html#cb174-7" aria-hidden="true"></a><span class="co"># Using the `pnorm` function, calculate the probability that the actual spread was less than 0 (in Trump&#39;s favor). Print this value to the console.</span></span>
-<span id="cb174-8"><a href="section-5-overview.html#cb174-8" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">0</span>, exp_value, se)</span></code></pre></div>
-<pre><code>## [1] 0.32</code></pre>
+<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="section-5-overview.html#cb185-1" aria-hidden="true"></a><span class="co"># Assign the expected value of the posterior distribution to the variable `exp_value`</span></span>
+<span id="cb185-2"><a href="section-5-overview.html#cb185-2" aria-hidden="true"></a>exp_value &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y </span>
+<span id="cb185-3"><a href="section-5-overview.html#cb185-3" aria-hidden="true"></a></span>
+<span id="cb185-4"><a href="section-5-overview.html#cb185-4" aria-hidden="true"></a><span class="co"># Assign the standard error of the posterior distribution to the variable `se`</span></span>
+<span id="cb185-5"><a href="section-5-overview.html#cb185-5" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>( <span class="dv">1</span><span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
+<span id="cb185-6"><a href="section-5-overview.html#cb185-6" aria-hidden="true"></a></span>
+<span id="cb185-7"><a href="section-5-overview.html#cb185-7" aria-hidden="true"></a><span class="co"># Using the `pnorm` function, calculate the probability that the actual spread was less than 0 (in Trump&#39;s favor). Print this value to the console.</span></span>
+<span id="cb185-8"><a href="section-5-overview.html#cb185-8" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">0</span>, exp_value, se)</span></code></pre></div>
+<pre><code>## [1] 0.3203769</code></pre>
 <ol start="12" style="list-style-type: decimal">
 <li>We had set the prior variance <span class="math inline">\(\tau\)</span> to 0.01, reflecting that these races are often close.</li>
 </ol>
 <p>Change the prior variance to include values ranging from 0.005 to 0.05 and observe how the probability of Trump winning Florida changes by making a plot.</p>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="section-5-overview.html#cb176-1" aria-hidden="true"></a><span class="co"># Define the variables from previous exercises</span></span>
-<span id="cb176-2"><a href="section-5-overview.html#cb176-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb176-3"><a href="section-5-overview.html#cb176-3" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
-<span id="cb176-4"><a href="section-5-overview.html#cb176-4" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
-<span id="cb176-5"><a href="section-5-overview.html#cb176-5" aria-hidden="true"></a></span>
-<span id="cb176-6"><a href="section-5-overview.html#cb176-6" aria-hidden="true"></a><span class="co"># Define a variable `taus` as different values of tau</span></span>
-<span id="cb176-7"><a href="section-5-overview.html#cb176-7" aria-hidden="true"></a>taus &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.005</span>, <span class="fl">0.05</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
-<span id="cb176-8"><a href="section-5-overview.html#cb176-8" aria-hidden="true"></a></span>
-<span id="cb176-9"><a href="section-5-overview.html#cb176-9" aria-hidden="true"></a><span class="co"># Create a function called `p_calc` that generates `B` and calculates the probability of the spread being less than 0</span></span>
-<span id="cb176-10"><a href="section-5-overview.html#cb176-10" aria-hidden="true"></a>p_calc &lt;-<span class="st"> </span><span class="cf">function</span>(tau) {</span>
-<span id="cb176-11"><a href="section-5-overview.html#cb176-11" aria-hidden="true"></a>    B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
-<span id="cb176-12"><a href="section-5-overview.html#cb176-12" aria-hidden="true"></a>    ev &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
-<span id="cb176-13"><a href="section-5-overview.html#cb176-13" aria-hidden="true"></a>    se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
-<span id="cb176-14"><a href="section-5-overview.html#cb176-14" aria-hidden="true"></a>    <span class="kw">pnorm</span>(<span class="dv">0</span>,ev,se)</span>
-<span id="cb176-15"><a href="section-5-overview.html#cb176-15" aria-hidden="true"></a>}</span>
-<span id="cb176-16"><a href="section-5-overview.html#cb176-16" aria-hidden="true"></a></span>
-<span id="cb176-17"><a href="section-5-overview.html#cb176-17" aria-hidden="true"></a><span class="co"># Create a vector called `ps` by applying the function `p_calc` across values in `taus`</span></span>
-<span id="cb176-18"><a href="section-5-overview.html#cb176-18" aria-hidden="true"></a>ps &lt;-<span class="st"> </span><span class="kw">p_calc</span>(taus)</span>
-<span id="cb176-19"><a href="section-5-overview.html#cb176-19" aria-hidden="true"></a></span>
-<span id="cb176-20"><a href="section-5-overview.html#cb176-20" aria-hidden="true"></a><span class="co"># Plot `taus` on the x-axis and `ps` on the y-axis</span></span>
-<span id="cb176-21"><a href="section-5-overview.html#cb176-21" aria-hidden="true"></a><span class="kw">plot</span>(taus, ps)</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb187-1"><a href="section-5-overview.html#cb187-1" aria-hidden="true"></a><span class="co"># Define the variables from previous exercises</span></span>
+<span id="cb187-2"><a href="section-5-overview.html#cb187-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb187-3"><a href="section-5-overview.html#cb187-3" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>results<span class="op">$</span>se</span>
+<span id="cb187-4"><a href="section-5-overview.html#cb187-4" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>results<span class="op">$</span>avg</span>
+<span id="cb187-5"><a href="section-5-overview.html#cb187-5" aria-hidden="true"></a></span>
+<span id="cb187-6"><a href="section-5-overview.html#cb187-6" aria-hidden="true"></a><span class="co"># Define a variable `taus` as different values of tau</span></span>
+<span id="cb187-7"><a href="section-5-overview.html#cb187-7" aria-hidden="true"></a>taus &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.005</span>, <span class="fl">0.05</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
+<span id="cb187-8"><a href="section-5-overview.html#cb187-8" aria-hidden="true"></a></span>
+<span id="cb187-9"><a href="section-5-overview.html#cb187-9" aria-hidden="true"></a><span class="co"># Create a function called `p_calc` that generates `B` and calculates the probability of the spread being less than 0</span></span>
+<span id="cb187-10"><a href="section-5-overview.html#cb187-10" aria-hidden="true"></a>p_calc &lt;-<span class="st"> </span><span class="cf">function</span>(tau) {</span>
+<span id="cb187-11"><a href="section-5-overview.html#cb187-11" aria-hidden="true"></a>    B &lt;-<span class="st"> </span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span>(sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span>tau<span class="op">^</span><span class="dv">2</span>)</span>
+<span id="cb187-12"><a href="section-5-overview.html#cb187-12" aria-hidden="true"></a>    ev &lt;-<span class="st"> </span>B<span class="op">*</span>mu <span class="op">+</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>B)<span class="op">*</span>Y</span>
+<span id="cb187-13"><a href="section-5-overview.html#cb187-13" aria-hidden="true"></a>    se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="dv">1</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">/</span>sigma<span class="op">^</span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">1</span><span class="op">/</span>tau<span class="op">^</span><span class="dv">2</span>))</span>
+<span id="cb187-14"><a href="section-5-overview.html#cb187-14" aria-hidden="true"></a>    <span class="kw">pnorm</span>(<span class="dv">0</span>,ev,se)</span>
+<span id="cb187-15"><a href="section-5-overview.html#cb187-15" aria-hidden="true"></a>}</span>
+<span id="cb187-16"><a href="section-5-overview.html#cb187-16" aria-hidden="true"></a></span>
+<span id="cb187-17"><a href="section-5-overview.html#cb187-17" aria-hidden="true"></a><span class="co"># Create a vector called `ps` by applying the function `p_calc` across values in `taus`</span></span>
+<span id="cb187-18"><a href="section-5-overview.html#cb187-18" aria-hidden="true"></a>ps &lt;-<span class="st"> </span><span class="kw">p_calc</span>(taus)</span>
+<span id="cb187-19"><a href="section-5-overview.html#cb187-19" aria-hidden="true"></a></span>
+<span id="cb187-20"><a href="section-5-overview.html#cb187-20" aria-hidden="true"></a><span class="co"># Plot `taus` on the x-axis and `ps` on the y-axis</span></span>
+<span id="cb187-21"><a href="section-5-overview.html#cb187-21" aria-hidden="true"></a><span class="kw">plot</span>(taus, ps)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-57-1.png" width="672" /></p>
 </div>
 </div>

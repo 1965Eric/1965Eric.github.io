@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="sampling-model-parameters-and-estimates" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Sampling Model Parameters and Estimates</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sampling-model-for-polls">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#populations-samples-parameters-and-estimates">here; first part</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sampling-model-for-polls" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#populations-samples-parameters-and-estimates" target="_blank">here; first part</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The task of statistical inference is to estimate an unknown population parameter using observed data from a sample.</li>
@@ -246,17 +246,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code: Function for taking a random draw from a specific urn</em></p>
 <p>The <strong>dslabs</strong> package includes a function for taking a random draw of size <span class="math inline">\(n\)</span> from the urn:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb1-2"><a href="section-1-overview.html#cb1-2" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb1-3"><a href="section-1-overview.html#cb1-3" aria-hidden="true"></a></span>
-<span id="cb1-4"><a href="section-1-overview.html#cb1-4" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb1-5"><a href="section-1-overview.html#cb1-5" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb1-6"><a href="section-1-overview.html#cb1-6" aria-hidden="true"></a><span class="kw">take_poll</span>(<span class="dv">25</span>)    <span class="co"># draw 25 beads</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: tidyverse</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="section-1-overview.html#cb6-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: dslabs</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="section-1-overview.html#cb8-1" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb8-2"><a href="section-1-overview.html#cb8-2" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb8-3"><a href="section-1-overview.html#cb8-3" aria-hidden="true"></a><span class="kw">take_poll</span>(<span class="dv">25</span>)    <span class="co"># draw 25 beads</span></span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
 <div id="the-sample-average" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> The Sample Average</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sample-average">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#parameters">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-sample-average" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#parameters" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Many common data science tasks can be framed as estimating a parameter from a sample.</li>
@@ -271,7 +280,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="polling-versus-forecasting" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Polling versus Forecasting</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#polling-versus-forecasting">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#polling-versus-forecasting" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>A poll taken in advance of an election estimates <span class="math inline">\(p\)</span> for that moment, not for election day.</li>
@@ -280,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="properties-of-our-estimate" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Properties of Our Estimate</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#properties-of-our-estimate-expected-value-and-standard-error">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#properties-of-our-estimate-expected-value-and-standard-error" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>When interpreting values of <span class="math inline">\(\bar{X}\)</span>, it is important to remember that <span class="math inline">\(\bar{X}\)</span> is a random variable with an expected value and standard error that represents the sample proportion of positive events.</li>
@@ -364,33 +373,33 @@ D. <span class="math inline">\(\mbox{SE}(\bar{X}) = \sqrt N\)</span></li>
 </ol>
 <p>Generate a sequence of 100 proportions of Democrats <code>p</code> that vary from 0 (no Democrats) to 1 (all Democrats).</p>
 <p>Plot <code>se</code> versus <code>p</code> for the 100 different proportions.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="section-1-overview.html#cb2-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
-<span id="cb2-2"><a href="section-1-overview.html#cb2-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
-<span id="cb2-3"><a href="section-1-overview.html#cb2-3" aria-hidden="true"></a></span>
-<span id="cb2-4"><a href="section-1-overview.html#cb2-4" aria-hidden="true"></a><span class="co"># Create a variable `p` that contains 100 proportions ranging from 0 to 1 using the `seq` function</span></span>
-<span id="cb2-5"><a href="section-1-overview.html#cb2-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
-<span id="cb2-6"><a href="section-1-overview.html#cb2-6" aria-hidden="true"></a></span>
-<span id="cb2-7"><a href="section-1-overview.html#cb2-7" aria-hidden="true"></a><span class="co"># Create a variable `se` that contains the standard error of each sample average</span></span>
-<span id="cb2-8"><a href="section-1-overview.html#cb2-8" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
-<span id="cb2-9"><a href="section-1-overview.html#cb2-9" aria-hidden="true"></a></span>
-<span id="cb2-10"><a href="section-1-overview.html#cb2-10" aria-hidden="true"></a><span class="co"># Plot `p` on the x-axis and `se` on the y-axis</span></span>
-<span id="cb2-11"><a href="section-1-overview.html#cb2-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="section-1-overview.html#cb9-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
+<span id="cb9-2"><a href="section-1-overview.html#cb9-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
+<span id="cb9-3"><a href="section-1-overview.html#cb9-3" aria-hidden="true"></a></span>
+<span id="cb9-4"><a href="section-1-overview.html#cb9-4" aria-hidden="true"></a><span class="co"># Create a variable `p` that contains 100 proportions ranging from 0 to 1 using the `seq` function</span></span>
+<span id="cb9-5"><a href="section-1-overview.html#cb9-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb9-6"><a href="section-1-overview.html#cb9-6" aria-hidden="true"></a></span>
+<span id="cb9-7"><a href="section-1-overview.html#cb9-7" aria-hidden="true"></a><span class="co"># Create a variable `se` that contains the standard error of each sample average</span></span>
+<span id="cb9-8"><a href="section-1-overview.html#cb9-8" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
+<span id="cb9-9"><a href="section-1-overview.html#cb9-9" aria-hidden="true"></a></span>
+<span id="cb9-10"><a href="section-1-overview.html#cb9-10" aria-hidden="true"></a><span class="co"># Plot `p` on the x-axis and `se` on the y-axis</span></span>
+<span id="cb9-11"><a href="section-1-overview.html#cb9-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-2-1.png" width="672" /></p>
 <ol start="6" style="list-style-type: decimal">
 <li>Using the same code as in the previous exercise, create a for-loop that generates three plots of <code>p</code> versus <code>se</code> when the sample sizes equal <span class="math inline">\(N = 25\)</span>, <span class="math inline">\(N = 100\)</span>, and <span class="math inline">\(N = 1000\)</span>.</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="section-1-overview.html#cb3-1" aria-hidden="true"></a><span class="co"># The vector `p` contains 100 proportions of Democrats ranging from 0 to 1 using the `seq` function</span></span>
-<span id="cb3-2"><a href="section-1-overview.html#cb3-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
-<span id="cb3-3"><a href="section-1-overview.html#cb3-3" aria-hidden="true"></a></span>
-<span id="cb3-4"><a href="section-1-overview.html#cb3-4" aria-hidden="true"></a><span class="co"># The vector `sample_sizes` contains the three sample sizes</span></span>
-<span id="cb3-5"><a href="section-1-overview.html#cb3-5" aria-hidden="true"></a>sample_sizes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">1000</span>)</span>
-<span id="cb3-6"><a href="section-1-overview.html#cb3-6" aria-hidden="true"></a></span>
-<span id="cb3-7"><a href="section-1-overview.html#cb3-7" aria-hidden="true"></a><span class="co"># Write a for-loop that calculates the standard error `se` for every value of `p` for each of the three samples sizes `N` in the vector `sample_sizes`. Plot the three graphs, using the `ylim` argument to standardize the y-axis across all three plots.</span></span>
-<span id="cb3-8"><a href="section-1-overview.html#cb3-8" aria-hidden="true"></a><span class="cf">for</span> (N <span class="cf">in</span> sample_sizes)</span>
-<span id="cb3-9"><a href="section-1-overview.html#cb3-9" aria-hidden="true"></a>{</span>
-<span id="cb3-10"><a href="section-1-overview.html#cb3-10" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
-<span id="cb3-11"><a href="section-1-overview.html#cb3-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se,<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.1</span>))</span>
-<span id="cb3-12"><a href="section-1-overview.html#cb3-12" aria-hidden="true"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="section-1-overview.html#cb10-1" aria-hidden="true"></a><span class="co"># The vector `p` contains 100 proportions of Democrats ranging from 0 to 1 using the `seq` function</span></span>
+<span id="cb10-2"><a href="section-1-overview.html#cb10-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb10-3"><a href="section-1-overview.html#cb10-3" aria-hidden="true"></a></span>
+<span id="cb10-4"><a href="section-1-overview.html#cb10-4" aria-hidden="true"></a><span class="co"># The vector `sample_sizes` contains the three sample sizes</span></span>
+<span id="cb10-5"><a href="section-1-overview.html#cb10-5" aria-hidden="true"></a>sample_sizes &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">25</span>, <span class="dv">100</span>, <span class="dv">1000</span>)</span>
+<span id="cb10-6"><a href="section-1-overview.html#cb10-6" aria-hidden="true"></a></span>
+<span id="cb10-7"><a href="section-1-overview.html#cb10-7" aria-hidden="true"></a><span class="co"># Write a for-loop that calculates the standard error `se` for every value of `p` for each of the three samples sizes `N` in the vector `sample_sizes`. Plot the three graphs, using the `ylim` argument to standardize the y-axis across all three plots.</span></span>
+<span id="cb10-8"><a href="section-1-overview.html#cb10-8" aria-hidden="true"></a><span class="cf">for</span> (N <span class="cf">in</span> sample_sizes)</span>
+<span id="cb10-9"><a href="section-1-overview.html#cb10-9" aria-hidden="true"></a>{</span>
+<span id="cb10-10"><a href="section-1-overview.html#cb10-10" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p)<span class="op">/</span>N)</span>
+<span id="cb10-11"><a href="section-1-overview.html#cb10-11" aria-hidden="true"></a><span class="kw">plot</span>(p,se,<span class="dt">ylim =</span> <span class="kw">c</span>(<span class="dv">0</span>,<span class="fl">0.1</span>))</span>
+<span id="cb10-12"><a href="section-1-overview.html#cb10-12" aria-hidden="true"></a>}</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-3-1.png" width="672" /><img src="img/figures/unnamed-chunk-3-2.png" width="672" /><img src="img/figures/unnamed-chunk-3-3.png" width="672" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li>Our estimate for the difference in proportions of Democrats and Republicans is <span class="math inline">\(d = \bar{X} − (1 − \bar{X})\)</span>.</li>
@@ -424,15 +433,15 @@ D. <span class="math inline">\(\mbox{SE} \left[\bar{X} − (1 − \bar{X}) \righ
 <li>Say the actual proportion of Democratic voters is <span class="math inline">\(p = 0.45\)</span>.</li>
 </ol>
 <p>In this case, the Republican party is winning by a relatively large margin of <span class="math inline">\(d = -0.1\)</span>, or a 10% margin of victory. What is the standard error of the spread <span class="math inline">\(2 \bar{X} − 1\)</span> in this case?</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="section-1-overview.html#cb4-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
-<span id="cb4-2"><a href="section-1-overview.html#cb4-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
-<span id="cb4-3"><a href="section-1-overview.html#cb4-3" aria-hidden="true"></a></span>
-<span id="cb4-4"><a href="section-1-overview.html#cb4-4" aria-hidden="true"></a><span class="co"># `p` represents the proportion of Democratic voters</span></span>
-<span id="cb4-5"><a href="section-1-overview.html#cb4-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb4-6"><a href="section-1-overview.html#cb4-6" aria-hidden="true"></a></span>
-<span id="cb4-7"><a href="section-1-overview.html#cb4-7" aria-hidden="true"></a><span class="co"># Calculate the standard error of the spread. Print this value to the console.</span></span>
-<span id="cb4-8"><a href="section-1-overview.html#cb4-8" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>((p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
-<pre><code>## [1] 0.199</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="section-1-overview.html#cb11-1" aria-hidden="true"></a><span class="co"># `N` represents the number of people polled</span></span>
+<span id="cb11-2"><a href="section-1-overview.html#cb11-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">25</span></span>
+<span id="cb11-3"><a href="section-1-overview.html#cb11-3" aria-hidden="true"></a></span>
+<span id="cb11-4"><a href="section-1-overview.html#cb11-4" aria-hidden="true"></a><span class="co"># `p` represents the proportion of Democratic voters</span></span>
+<span id="cb11-5"><a href="section-1-overview.html#cb11-5" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb11-6"><a href="section-1-overview.html#cb11-6" aria-hidden="true"></a></span>
+<span id="cb11-7"><a href="section-1-overview.html#cb11-7" aria-hidden="true"></a><span class="co"># Calculate the standard error of the spread. Print this value to the console.</span></span>
+<span id="cb11-8"><a href="section-1-overview.html#cb11-8" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>((p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
+<pre><code>## [1] 0.1989975</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>So far we have said that the difference between the proportion of Democratic voters and Republican voters is about 10% and that the standard error of this spread is about 0.2 when <span class="math inline">\(N = 25\)</span>.</li>
 </ol>

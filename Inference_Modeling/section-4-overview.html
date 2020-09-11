@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="poll-aggregators" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Poll Aggregators</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html">here</a> and <a href="https://rafalab.github.io/dsbook/models.html#poll-aggregators">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/models.html#poll-aggregators" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Poll aggregators combine the results of many polls to simulate polls with a large sample size and therefore generate more precise estimates than individual polls.</li>
@@ -242,52 +242,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code: Simulating polls</em></p>
 <p>Note that to compute the exact 95% confidence interval, we would use <code>qnorm(.975)*SE_hat</code> instead of <code>2*SE_hat</code>.</p>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="section-4-overview.html#cb92-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="fl">0.039</span></span>
-<span id="cb92-2"><a href="section-4-overview.html#cb92-2" aria-hidden="true"></a>Ns &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1298</span>, <span class="dv">533</span>, <span class="dv">1342</span>, <span class="dv">897</span>, <span class="dv">774</span>, <span class="dv">254</span>, <span class="dv">812</span>, <span class="dv">324</span>, <span class="dv">1291</span>, <span class="dv">1056</span>, <span class="dv">2172</span>, <span class="dv">516</span>)</span>
-<span id="cb92-3"><a href="section-4-overview.html#cb92-3" aria-hidden="true"></a>p &lt;-<span class="st"> </span>(d<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb92-4"><a href="section-4-overview.html#cb92-4" aria-hidden="true"></a></span>
-<span id="cb92-5"><a href="section-4-overview.html#cb92-5" aria-hidden="true"></a><span class="co"># calculate confidence intervals of the spread</span></span>
-<span id="cb92-6"><a href="section-4-overview.html#cb92-6" aria-hidden="true"></a>confidence_intervals &lt;-<span class="st"> </span><span class="kw">sapply</span>(Ns, <span class="cf">function</span>(N){</span>
-<span id="cb92-7"><a href="section-4-overview.html#cb92-7" aria-hidden="true"></a>    X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size=</span>N, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb92-8"><a href="section-4-overview.html#cb92-8" aria-hidden="true"></a>    X_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
-<span id="cb92-9"><a href="section-4-overview.html#cb92-9" aria-hidden="true"></a>    SE_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span>N)</span>
-<span id="cb92-10"><a href="section-4-overview.html#cb92-10" aria-hidden="true"></a>    <span class="dv">2</span><span class="op">*</span><span class="kw">c</span>(X_hat, X_hat <span class="op">-</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>SE_hat, X_hat <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>SE_hat) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
-<span id="cb92-11"><a href="section-4-overview.html#cb92-11" aria-hidden="true"></a>})</span>
-<span id="cb92-12"><a href="section-4-overview.html#cb92-12" aria-hidden="true"></a></span>
-<span id="cb92-13"><a href="section-4-overview.html#cb92-13" aria-hidden="true"></a><span class="co"># generate a data frame storing results</span></span>
-<span id="cb92-14"><a href="section-4-overview.html#cb92-14" aria-hidden="true"></a>polls &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">poll =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(confidence_intervals),</span>
-<span id="cb92-15"><a href="section-4-overview.html#cb92-15" aria-hidden="true"></a>                    <span class="kw">t</span>(confidence_intervals), <span class="dt">sample_size =</span> Ns)</span>
-<span id="cb92-16"><a href="section-4-overview.html#cb92-16" aria-hidden="true"></a><span class="kw">names</span>(polls) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;poll&quot;</span>, <span class="st">&quot;estimate&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;high&quot;</span>, <span class="st">&quot;sample_size&quot;</span>)</span>
-<span id="cb92-17"><a href="section-4-overview.html#cb92-17" aria-hidden="true"></a>polls</span></code></pre></div>
-<pre><code>##    poll estimate       low   high sample_size
-## 1     1  0.02003 -0.035471 0.0755        1298
-## 2     2  0.00938 -0.077245 0.0960         533
-## 3     3  0.00596 -0.048633 0.0606        1342
-## 4     4  0.03010 -0.036647 0.0968         897
-## 5     5  0.08527  0.013645 0.1569         774
-## 6     6  0.07087 -0.054310 0.1960         254
-## 7     7  0.02956 -0.040599 0.0997         812
-## 8     8  0.08642 -0.024276 0.1971         324
-## 9     9  0.02711 -0.028532 0.0828        1291
-## 10   10  0.02273 -0.038803 0.0843        1056
-## 11   11  0.04236 -0.000518 0.0852        2172
-## 12   12  0.11240  0.024916 0.1999         516</code></pre>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="section-4-overview.html#cb103-1" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="fl">0.039</span></span>
+<span id="cb103-2"><a href="section-4-overview.html#cb103-2" aria-hidden="true"></a>Ns &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1298</span>, <span class="dv">533</span>, <span class="dv">1342</span>, <span class="dv">897</span>, <span class="dv">774</span>, <span class="dv">254</span>, <span class="dv">812</span>, <span class="dv">324</span>, <span class="dv">1291</span>, <span class="dv">1056</span>, <span class="dv">2172</span>, <span class="dv">516</span>)</span>
+<span id="cb103-3"><a href="section-4-overview.html#cb103-3" aria-hidden="true"></a>p &lt;-<span class="st"> </span>(d<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb103-4"><a href="section-4-overview.html#cb103-4" aria-hidden="true"></a></span>
+<span id="cb103-5"><a href="section-4-overview.html#cb103-5" aria-hidden="true"></a><span class="co"># calculate confidence intervals of the spread</span></span>
+<span id="cb103-6"><a href="section-4-overview.html#cb103-6" aria-hidden="true"></a>confidence_intervals &lt;-<span class="st"> </span><span class="kw">sapply</span>(Ns, <span class="cf">function</span>(N){</span>
+<span id="cb103-7"><a href="section-4-overview.html#cb103-7" aria-hidden="true"></a>    X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size=</span>N, <span class="dt">replace=</span><span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb103-8"><a href="section-4-overview.html#cb103-8" aria-hidden="true"></a>    X_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
+<span id="cb103-9"><a href="section-4-overview.html#cb103-9" aria-hidden="true"></a>    SE_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span>N)</span>
+<span id="cb103-10"><a href="section-4-overview.html#cb103-10" aria-hidden="true"></a>    <span class="dv">2</span><span class="op">*</span><span class="kw">c</span>(X_hat, X_hat <span class="op">-</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>SE_hat, X_hat <span class="op">+</span><span class="st"> </span><span class="dv">2</span><span class="op">*</span>SE_hat) <span class="op">-</span><span class="st"> </span><span class="dv">1</span></span>
+<span id="cb103-11"><a href="section-4-overview.html#cb103-11" aria-hidden="true"></a>})</span>
+<span id="cb103-12"><a href="section-4-overview.html#cb103-12" aria-hidden="true"></a></span>
+<span id="cb103-13"><a href="section-4-overview.html#cb103-13" aria-hidden="true"></a><span class="co"># generate a data frame storing results</span></span>
+<span id="cb103-14"><a href="section-4-overview.html#cb103-14" aria-hidden="true"></a>polls &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">poll =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">ncol</span>(confidence_intervals),</span>
+<span id="cb103-15"><a href="section-4-overview.html#cb103-15" aria-hidden="true"></a>                    <span class="kw">t</span>(confidence_intervals), <span class="dt">sample_size =</span> Ns)</span>
+<span id="cb103-16"><a href="section-4-overview.html#cb103-16" aria-hidden="true"></a><span class="kw">names</span>(polls) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;poll&quot;</span>, <span class="st">&quot;estimate&quot;</span>, <span class="st">&quot;low&quot;</span>, <span class="st">&quot;high&quot;</span>, <span class="st">&quot;sample_size&quot;</span>)</span>
+<span id="cb103-17"><a href="section-4-overview.html#cb103-17" aria-hidden="true"></a>polls</span></code></pre></div>
+<pre><code>##    poll    estimate           low       high sample_size
+## 1     1 0.020030817 -0.0354707836 0.07553242        1298
+## 2     2 0.009380863 -0.0772449415 0.09600667         533
+## 3     3 0.005961252 -0.0486328871 0.06055539        1342
+## 4     4 0.030100334 -0.0366474636 0.09684813         897
+## 5     5 0.085271318  0.0136446370 0.15689800         774
+## 6     6 0.070866142 -0.0543095137 0.19604180         254
+## 7     7 0.029556650 -0.0405989265 0.09971223         812
+## 8     8 0.086419753 -0.0242756708 0.19711518         324
+## 9     9 0.027110767 -0.0285318074 0.08275334        1291
+## 10   10 0.022727273 -0.0388025756 0.08425712        1056
+## 11   11 0.042357274 -0.0005183189 0.08523287        2172
+## 12   12 0.112403101  0.0249159791 0.19989022         516</code></pre>
 <p><em>Code: Calculating the spread of combined polls</em></p>
 <p>Note that to compute the exact 95% confidence interval, we would use <code>qnorm(.975)</code> instead of <code>1.96</code>.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="section-4-overview.html#cb94-1" aria-hidden="true"></a>d_hat &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
-<span id="cb94-2"><a href="section-4-overview.html#cb94-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">sum</span>(estimate<span class="op">*</span>sample_size) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(sample_size)) <span class="op">%&gt;%</span></span>
-<span id="cb94-3"><a href="section-4-overview.html#cb94-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>avg</span>
-<span id="cb94-4"><a href="section-4-overview.html#cb94-4" aria-hidden="true"></a></span>
-<span id="cb94-5"><a href="section-4-overview.html#cb94-5" aria-hidden="true"></a>p_hat &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>d_hat)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb94-6"><a href="section-4-overview.html#cb94-6" aria-hidden="true"></a>moe &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span><span class="fl">1.96</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span><span class="kw">sum</span>(polls<span class="op">$</span>sample_size))   </span>
-<span id="cb94-7"><a href="section-4-overview.html#cb94-7" aria-hidden="true"></a><span class="kw">round</span>(d_hat<span class="op">*</span><span class="dv">100</span>,<span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="section-4-overview.html#cb105-1" aria-hidden="true"></a>d_hat &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
+<span id="cb105-2"><a href="section-4-overview.html#cb105-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">sum</span>(estimate<span class="op">*</span>sample_size) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(sample_size)) <span class="op">%&gt;%</span></span>
+<span id="cb105-3"><a href="section-4-overview.html#cb105-3" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>avg</span>
+<span id="cb105-4"><a href="section-4-overview.html#cb105-4" aria-hidden="true"></a></span>
+<span id="cb105-5"><a href="section-4-overview.html#cb105-5" aria-hidden="true"></a>p_hat &lt;-<span class="st"> </span>(<span class="dv">1</span><span class="op">+</span>d_hat)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb105-6"><a href="section-4-overview.html#cb105-6" aria-hidden="true"></a>moe &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span><span class="fl">1.96</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span><span class="kw">sum</span>(polls<span class="op">$</span>sample_size))   </span>
+<span id="cb105-7"><a href="section-4-overview.html#cb105-7" aria-hidden="true"></a><span class="kw">round</span>(d_hat<span class="op">*</span><span class="dv">100</span>,<span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 3.6</code></pre>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="section-4-overview.html#cb96-1" aria-hidden="true"></a><span class="kw">round</span>(moe<span class="op">*</span><span class="dv">100</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="section-4-overview.html#cb107-1" aria-hidden="true"></a><span class="kw">round</span>(moe<span class="op">*</span><span class="dv">100</span>, <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 1.8</code></pre>
 </div>
 <div id="pollsters-and-multilevel-models" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Pollsters and Multilevel Models</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#poll-aggregators">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#poll-aggregators" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Different poll aggregators generate different models of election results from the same poll data. This is because they use different statistical models.</li>
@@ -296,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="poll-data-and-pollster-bias" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Poll Data and Pollster Bias</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#poll-data">here</a> and <a href="https://rafalab.github.io/dsbook/models.html#pollster-bias">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#poll-data" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/models.html#pollster-bias" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>We analyze real 2016 US polling data organized by FiveThirtyEight. We start by using reliable national polls taken within the week before the election to generate an urn model.</li>
@@ -307,35 +307,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The urn model does not account for pollster bias. We will develop a more flexible data-driven model that can account for effects like bias.</li>
 </ul>
 <p><em>Code: Generating simulated poll data</em></p>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="section-4-overview.html#cb98-1" aria-hidden="true"></a><span class="kw">names</span>(polls_us_election_<span class="dv">2016</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="section-4-overview.html#cb109-1" aria-hidden="true"></a><span class="kw">names</span>(polls_us_election_<span class="dv">2016</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;state&quot;            &quot;startdate&quot;        &quot;enddate&quot;          &quot;pollster&quot;         &quot;grade&quot;            &quot;samplesize&quot;       &quot;population&quot;       &quot;rawpoll_clinton&quot;  &quot;rawpoll_trump&quot;   
 ## [10] &quot;rawpoll_johnson&quot;  &quot;rawpoll_mcmullin&quot; &quot;adjpoll_clinton&quot;  &quot;adjpoll_trump&quot;    &quot;adjpoll_johnson&quot;  &quot;adjpoll_mcmullin&quot;</code></pre>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="section-4-overview.html#cb100-1" aria-hidden="true"></a><span class="co"># keep only national polls from week before election with a grade considered reliable</span></span>
-<span id="cb100-2"><a href="section-4-overview.html#cb100-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
-<span id="cb100-3"><a href="section-4-overview.html#cb100-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-31&quot;</span> <span class="op">&amp;</span></span>
-<span id="cb100-4"><a href="section-4-overview.html#cb100-4" aria-hidden="true"></a><span class="st">               </span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;A-&quot;</span>, <span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)))</span>
-<span id="cb100-5"><a href="section-4-overview.html#cb100-5" aria-hidden="true"></a></span>
-<span id="cb100-6"><a href="section-4-overview.html#cb100-6" aria-hidden="true"></a><span class="co"># add spread estimate</span></span>
-<span id="cb100-7"><a href="section-4-overview.html#cb100-7" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
-<span id="cb100-8"><a href="section-4-overview.html#cb100-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
-<span id="cb100-9"><a href="section-4-overview.html#cb100-9" aria-hidden="true"></a></span>
-<span id="cb100-10"><a href="section-4-overview.html#cb100-10" aria-hidden="true"></a><span class="co"># compute estimated spread for combined polls</span></span>
-<span id="cb100-11"><a href="section-4-overview.html#cb100-11" aria-hidden="true"></a>d_hat &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
-<span id="cb100-12"><a href="section-4-overview.html#cb100-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">d_hat =</span> <span class="kw">sum</span>(spread <span class="op">*</span><span class="st"> </span>samplesize) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(samplesize)) <span class="op">%&gt;%</span></span>
-<span id="cb100-13"><a href="section-4-overview.html#cb100-13" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>d_hat</span>
-<span id="cb100-14"><a href="section-4-overview.html#cb100-14" aria-hidden="true"></a></span>
-<span id="cb100-15"><a href="section-4-overview.html#cb100-15" aria-hidden="true"></a><span class="co"># compute margin of error</span></span>
-<span id="cb100-16"><a href="section-4-overview.html#cb100-16" aria-hidden="true"></a>p_hat &lt;-<span class="st"> </span>(d_hat<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
-<span id="cb100-17"><a href="section-4-overview.html#cb100-17" aria-hidden="true"></a>moe &lt;-<span class="st"> </span><span class="fl">1.96</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span><span class="kw">sum</span>(polls<span class="op">$</span>samplesize))</span>
-<span id="cb100-18"><a href="section-4-overview.html#cb100-18" aria-hidden="true"></a></span>
-<span id="cb100-19"><a href="section-4-overview.html#cb100-19" aria-hidden="true"></a><span class="co"># histogram of the spread</span></span>
-<span id="cb100-20"><a href="section-4-overview.html#cb100-20" aria-hidden="true"></a>polls <span class="op">%&gt;%</span></span>
-<span id="cb100-21"><a href="section-4-overview.html#cb100-21" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span></span>
-<span id="cb100-22"><a href="section-4-overview.html#cb100-22" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">.01</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="section-4-overview.html#cb111-1" aria-hidden="true"></a><span class="co"># keep only national polls from week before election with a grade considered reliable</span></span>
+<span id="cb111-2"><a href="section-4-overview.html#cb111-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span></span>
+<span id="cb111-3"><a href="section-4-overview.html#cb111-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span> <span class="op">&amp;</span><span class="st"> </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-31&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb111-4"><a href="section-4-overview.html#cb111-4" aria-hidden="true"></a><span class="st">               </span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A+&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;A-&quot;</span>, <span class="st">&quot;B+&quot;</span>) <span class="op">|</span><span class="st"> </span><span class="kw">is.na</span>(grade)))</span>
+<span id="cb111-5"><a href="section-4-overview.html#cb111-5" aria-hidden="true"></a></span>
+<span id="cb111-6"><a href="section-4-overview.html#cb111-6" aria-hidden="true"></a><span class="co"># add spread estimate</span></span>
+<span id="cb111-7"><a href="section-4-overview.html#cb111-7" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
+<span id="cb111-8"><a href="section-4-overview.html#cb111-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>)</span>
+<span id="cb111-9"><a href="section-4-overview.html#cb111-9" aria-hidden="true"></a></span>
+<span id="cb111-10"><a href="section-4-overview.html#cb111-10" aria-hidden="true"></a><span class="co"># compute estimated spread for combined polls</span></span>
+<span id="cb111-11"><a href="section-4-overview.html#cb111-11" aria-hidden="true"></a>d_hat &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span></span>
+<span id="cb111-12"><a href="section-4-overview.html#cb111-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">d_hat =</span> <span class="kw">sum</span>(spread <span class="op">*</span><span class="st"> </span>samplesize) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(samplesize)) <span class="op">%&gt;%</span></span>
+<span id="cb111-13"><a href="section-4-overview.html#cb111-13" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>d_hat</span>
+<span id="cb111-14"><a href="section-4-overview.html#cb111-14" aria-hidden="true"></a></span>
+<span id="cb111-15"><a href="section-4-overview.html#cb111-15" aria-hidden="true"></a><span class="co"># compute margin of error</span></span>
+<span id="cb111-16"><a href="section-4-overview.html#cb111-16" aria-hidden="true"></a>p_hat &lt;-<span class="st"> </span>(d_hat<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span></span>
+<span id="cb111-17"><a href="section-4-overview.html#cb111-17" aria-hidden="true"></a>moe &lt;-<span class="st"> </span><span class="fl">1.96</span> <span class="op">*</span><span class="st"> </span><span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span><span class="kw">sum</span>(polls<span class="op">$</span>samplesize))</span>
+<span id="cb111-18"><a href="section-4-overview.html#cb111-18" aria-hidden="true"></a></span>
+<span id="cb111-19"><a href="section-4-overview.html#cb111-19" aria-hidden="true"></a><span class="co"># histogram of the spread</span></span>
+<span id="cb111-20"><a href="section-4-overview.html#cb111-20" aria-hidden="true"></a>polls <span class="op">%&gt;%</span></span>
+<span id="cb111-21"><a href="section-4-overview.html#cb111-21" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span></span>
+<span id="cb111-22"><a href="section-4-overview.html#cb111-22" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="fl">.01</span>)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-37-1.png" width="672" /></p>
 <p><em>Code: Investigating poll data and pollster bias</em></p>
-<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="section-4-overview.html#cb101-1" aria-hidden="true"></a><span class="co"># number of polls per pollster in week before election</span></span>
-<span id="cb101-2"><a href="section-4-overview.html#cb101-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="kw">n</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="section-4-overview.html#cb112-1" aria-hidden="true"></a><span class="co"># number of polls per pollster in week before election</span></span>
+<span id="cb112-2"><a href="section-4-overview.html#cb112-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="kw">n</span>())</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 15 x 2
 ##    pollster                                                   `n()`
@@ -355,17 +355,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 13 Selzer &amp; Company                                               1
 ## 14 The Times-Picayune/Lucid                                       8
 ## 15 USC Dornsife/LA Times                                          8</code></pre>
-<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="section-4-overview.html#cb104-1" aria-hidden="true"></a><span class="co"># plot results by pollsters with at least 6 polls</span></span>
-<span id="cb104-2"><a href="section-4-overview.html#cb104-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
-<span id="cb104-3"><a href="section-4-overview.html#cb104-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
-<span id="cb104-4"><a href="section-4-overview.html#cb104-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(pollster, spread)) <span class="op">+</span></span>
-<span id="cb104-5"><a href="section-4-overview.html#cb104-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb104-6"><a href="section-4-overview.html#cb104-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="section-4-overview.html#cb115-1" aria-hidden="true"></a><span class="co"># plot results by pollsters with at least 6 polls</span></span>
+<span id="cb115-2"><a href="section-4-overview.html#cb115-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb115-3"><a href="section-4-overview.html#cb115-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb115-4"><a href="section-4-overview.html#cb115-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(pollster, spread)) <span class="op">+</span></span>
+<span id="cb115-5"><a href="section-4-overview.html#cb115-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb115-6"><a href="section-4-overview.html#cb115-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text.x =</span> <span class="kw">element_text</span>(<span class="dt">angle =</span> <span class="dv">90</span>, <span class="dt">hjust =</span> <span class="dv">1</span>))</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-38-1.png" width="672" /></p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="section-4-overview.html#cb105-1" aria-hidden="true"></a><span class="co"># standard errors within each pollster</span></span>
-<span id="cb105-2"><a href="section-4-overview.html#cb105-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
-<span id="cb105-3"><a href="section-4-overview.html#cb105-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
-<span id="cb105-4"><a href="section-4-overview.html#cb105-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">se =</span> <span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p_hat <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>p_hat) <span class="op">/</span><span class="st"> </span><span class="kw">median</span>(samplesize)))</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="section-4-overview.html#cb116-1" aria-hidden="true"></a><span class="co"># standard errors within each pollster</span></span>
+<span id="cb116-2"><a href="section-4-overview.html#cb116-2" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb116-3"><a href="section-4-overview.html#cb116-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">6</span>) <span class="op">%&gt;%</span></span>
+<span id="cb116-4"><a href="section-4-overview.html#cb116-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">se =</span> <span class="dv">2</span> <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p_hat <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>p_hat) <span class="op">/</span><span class="st"> </span><span class="kw">median</span>(samplesize)))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 5 x 2
 ##   pollster                     se
@@ -378,7 +378,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="data-driven-models" class="section level2" number="5.4">
 <h2><span class="header-section-number">5.4</span> Data-Driven Models</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#data-driven-model">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/models.html#data-driven-model" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Instead of using an urn model where each poll is a random draw from the same distribution of voters, we instead define a model using an urn that contains poll results from all possible pollsters.</li>
@@ -389,20 +389,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code</em></p>
 <p>Note that to compute the exact 95% confidence interval, we would use <code>qnorm(.975)</code> instead of <code>1.96</code>.</p>
-<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="section-4-overview.html#cb108-1" aria-hidden="true"></a><span class="co"># collect last result before the election for each pollster</span></span>
-<span id="cb108-2"><a href="section-4-overview.html#cb108-2" aria-hidden="true"></a>one_poll_per_pollster &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
-<span id="cb108-3"><a href="section-4-overview.html#cb108-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(enddate <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(enddate)) <span class="op">%&gt;%</span><span class="st">      </span><span class="co"># keep latest poll</span></span>
-<span id="cb108-4"><a href="section-4-overview.html#cb108-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
-<span id="cb108-5"><a href="section-4-overview.html#cb108-5" aria-hidden="true"></a></span>
-<span id="cb108-6"><a href="section-4-overview.html#cb108-6" aria-hidden="true"></a><span class="co"># histogram of spread estimates</span></span>
-<span id="cb108-7"><a href="section-4-overview.html#cb108-7" aria-hidden="true"></a>one_poll_per_pollster <span class="op">%&gt;%</span></span>
-<span id="cb108-8"><a href="section-4-overview.html#cb108-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.01</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="section-4-overview.html#cb119-1" aria-hidden="true"></a><span class="co"># collect last result before the election for each pollster</span></span>
+<span id="cb119-2"><a href="section-4-overview.html#cb119-2" aria-hidden="true"></a>one_poll_per_pollster &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb119-3"><a href="section-4-overview.html#cb119-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(enddate <span class="op">==</span><span class="st"> </span><span class="kw">max</span>(enddate)) <span class="op">%&gt;%</span><span class="st">      </span><span class="co"># keep latest poll</span></span>
+<span id="cb119-4"><a href="section-4-overview.html#cb119-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ungroup</span>()</span>
+<span id="cb119-5"><a href="section-4-overview.html#cb119-5" aria-hidden="true"></a></span>
+<span id="cb119-6"><a href="section-4-overview.html#cb119-6" aria-hidden="true"></a><span class="co"># histogram of spread estimates</span></span>
+<span id="cb119-7"><a href="section-4-overview.html#cb119-7" aria-hidden="true"></a>one_poll_per_pollster <span class="op">%&gt;%</span></span>
+<span id="cb119-8"><a href="section-4-overview.html#cb119-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(spread)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.01</span>)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-39-1.png" width="672" /></p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="section-4-overview.html#cb109-1" aria-hidden="true"></a><span class="co"># construct 95% confidence interval</span></span>
-<span id="cb109-2"><a href="section-4-overview.html#cb109-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span>one_poll_per_pollster <span class="op">%&gt;%</span></span>
-<span id="cb109-3"><a href="section-4-overview.html#cb109-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">se =</span> <span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(spread))) <span class="op">%&gt;%</span></span>
-<span id="cb109-4"><a href="section-4-overview.html#cb109-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">start =</span> avg <span class="op">-</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se, <span class="dt">end =</span> avg <span class="op">+</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se)</span>
-<span id="cb109-5"><a href="section-4-overview.html#cb109-5" aria-hidden="true"></a><span class="kw">round</span>(results<span class="op">*</span><span class="dv">100</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb120-1"><a href="section-4-overview.html#cb120-1" aria-hidden="true"></a><span class="co"># construct 95% confidence interval</span></span>
+<span id="cb120-2"><a href="section-4-overview.html#cb120-2" aria-hidden="true"></a>results &lt;-<span class="st"> </span>one_poll_per_pollster <span class="op">%&gt;%</span></span>
+<span id="cb120-3"><a href="section-4-overview.html#cb120-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">se =</span> <span class="kw">sd</span>(spread)<span class="op">/</span><span class="kw">sqrt</span>(<span class="kw">length</span>(spread))) <span class="op">%&gt;%</span></span>
+<span id="cb120-4"><a href="section-4-overview.html#cb120-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">start =</span> avg <span class="op">-</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se, <span class="dt">end =</span> avg <span class="op">+</span><span class="st"> </span><span class="fl">1.96</span><span class="op">*</span>se)</span>
+<span id="cb120-5"><a href="section-4-overview.html#cb120-5" aria-hidden="true"></a><span class="kw">round</span>(results<span class="op">*</span><span class="dv">100</span>, <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>##   avg  se start end
 ## 1 2.9 0.6   1.7 4.1</code></pre>
 </div>
@@ -414,45 +414,46 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>However, most data science applications are not related to data obtained from urns. More common are data that come from individuals. Probability plays a role because the data come from a random sample. The random sample is taken from a population and the urn serves as an analogy for the population.</p>
 <p>Let’s revisit the heights dataset. For now, consider <code>x</code> to be the heights of all males in the data set. Mathematically speaking, <code>x</code> is our population. Using the urn analogy, we have an urn with the values of <code>x</code> in it.</p>
 <p>What are the population average and standard deviation of our population?</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="section-4-overview.html#cb111-1" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb111-2"><a href="section-4-overview.html#cb111-2" aria-hidden="true"></a></span>
-<span id="cb111-3"><a href="section-4-overview.html#cb111-3" aria-hidden="true"></a><span class="co"># Make a vector of heights from all males in the population</span></span>
-<span id="cb111-4"><a href="section-4-overview.html#cb111-4" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb111-5"><a href="section-4-overview.html#cb111-5" aria-hidden="true"></a><span class="st">  </span>.<span class="op">$</span>height</span>
-<span id="cb111-6"><a href="section-4-overview.html#cb111-6" aria-hidden="true"></a></span>
-<span id="cb111-7"><a href="section-4-overview.html#cb111-7" aria-hidden="true"></a><span class="co"># Calculate the population average. Print this value to the console.</span></span>
-<span id="cb111-8"><a href="section-4-overview.html#cb111-8" aria-hidden="true"></a>gemiddelde_lengte &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb111-9"><a href="section-4-overview.html#cb111-9" aria-hidden="true"></a>gemiddelde_lengte</span></code></pre></div>
-<pre><code>## [1] 69.3</code></pre>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="section-4-overview.html#cb113-1" aria-hidden="true"></a><span class="co"># Calculate the population standard deviation. Print this value to the console.</span></span>
-<span id="cb113-2"><a href="section-4-overview.html#cb113-2" aria-hidden="true"></a>standaard_deviatie &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb113-3"><a href="section-4-overview.html#cb113-3" aria-hidden="true"></a>standaard_deviatie</span></code></pre></div>
-<pre><code>## [1] 3.61</code></pre>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="section-4-overview.html#cb122-1" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb122-2"><a href="section-4-overview.html#cb122-2" aria-hidden="true"></a></span>
+<span id="cb122-3"><a href="section-4-overview.html#cb122-3" aria-hidden="true"></a><span class="co"># Make a vector of heights from all males in the population</span></span>
+<span id="cb122-4"><a href="section-4-overview.html#cb122-4" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb122-5"><a href="section-4-overview.html#cb122-5" aria-hidden="true"></a><span class="st">  </span>.<span class="op">$</span>height</span>
+<span id="cb122-6"><a href="section-4-overview.html#cb122-6" aria-hidden="true"></a></span>
+<span id="cb122-7"><a href="section-4-overview.html#cb122-7" aria-hidden="true"></a><span class="co"># Calculate the population average. Print this value to the console.</span></span>
+<span id="cb122-8"><a href="section-4-overview.html#cb122-8" aria-hidden="true"></a>gemiddelde_lengte &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb122-9"><a href="section-4-overview.html#cb122-9" aria-hidden="true"></a>gemiddelde_lengte</span></code></pre></div>
+<pre><code>## [1] 69.31475</code></pre>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="section-4-overview.html#cb124-1" aria-hidden="true"></a><span class="co"># Calculate the population standard deviation. Print this value to the console.</span></span>
+<span id="cb124-2"><a href="section-4-overview.html#cb124-2" aria-hidden="true"></a>standaard_deviatie &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb124-3"><a href="section-4-overview.html#cb124-3" aria-hidden="true"></a>standaard_deviatie</span></code></pre></div>
+<pre><code>## [1] 3.611024</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Call the population average computed above <span class="math inline">\(\mu\)</span> and the standard deviation <span class="math inline">\(\sigma\)</span>. Now take a sample of size 50, with replacement, and construct an estimate for <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>.</li>
 </ol>
-<div class="sourceCode" id="cb115"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb115-1"><a href="section-4-overview.html#cb115-1" aria-hidden="true"></a><span class="co"># The vector of all male heights in our population `x` has already been loaded for you. You can examine the first six elements using `head`.</span></span>
-<span id="cb115-2"><a href="section-4-overview.html#cb115-2" aria-hidden="true"></a><span class="kw">head</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="section-4-overview.html#cb126-1" aria-hidden="true"></a><span class="co"># The vector of all male heights in our population `x` has already been loaded for you. You can examine the first six elements using `head`.</span></span>
+<span id="cb126-2"><a href="section-4-overview.html#cb126-2" aria-hidden="true"></a><span class="kw">head</span>(x)</span></code></pre></div>
 <pre><code>## [1] 75 70 68 74 61 67</code></pre>
-<div class="sourceCode" id="cb117"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb117-1"><a href="section-4-overview.html#cb117-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb117-2"><a href="section-4-overview.html#cb117-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb117-3"><a href="section-4-overview.html#cb117-3" aria-hidden="true"></a></span>
-<span id="cb117-4"><a href="section-4-overview.html#cb117-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
-<span id="cb117-5"><a href="section-4-overview.html#cb117-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
-<span id="cb117-6"><a href="section-4-overview.html#cb117-6" aria-hidden="true"></a></span>
-<span id="cb117-7"><a href="section-4-overview.html#cb117-7" aria-hidden="true"></a><span class="co"># Define `X` as a random sample from our population `x`</span></span>
-<span id="cb117-8"><a href="section-4-overview.html#cb117-8" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb117-9"><a href="section-4-overview.html#cb117-9" aria-hidden="true"></a>X</span></code></pre></div>
-<pre><code>##  [1] 71.0 69.0 70.0 66.9 68.5 79.0 72.0 72.0 69.0 66.0 69.0 70.9 72.0 66.0 70.0 73.0 69.0 76.0 72.4 72.4 74.0 74.0 74.0 63.0 69.0 70.9 68.5 72.0 70.0 68.0 70.0 72.0 68.0 67.0 76.0
-## [36] 70.0 73.0 68.0 69.0 77.2 72.0 66.0 67.5 68.0 72.0 63.4 73.0 78.0 68.0 68.0</code></pre>
-<div class="sourceCode" id="cb119"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb119-1"><a href="section-4-overview.html#cb119-1" aria-hidden="true"></a><span class="co"># Calculate the sample average. Print this value to the console.</span></span>
-<span id="cb119-2"><a href="section-4-overview.html#cb119-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
-<span id="cb119-3"><a href="section-4-overview.html#cb119-3" aria-hidden="true"></a>mu</span></code></pre></div>
-<pre><code>## [1] 70.5</code></pre>
-<div class="sourceCode" id="cb121"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb121-1"><a href="section-4-overview.html#cb121-1" aria-hidden="true"></a><span class="co"># Calculate the sample standard deviation. Print this value to the console.</span></span>
-<span id="cb121-2"><a href="section-4-overview.html#cb121-2" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(X)</span>
-<span id="cb121-3"><a href="section-4-overview.html#cb121-3" aria-hidden="true"></a>sigma</span></code></pre></div>
-<pre><code>## [1] 3.43</code></pre>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="section-4-overview.html#cb128-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb128-2"><a href="section-4-overview.html#cb128-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb128-3"><a href="section-4-overview.html#cb128-3" aria-hidden="true"></a></span>
+<span id="cb128-4"><a href="section-4-overview.html#cb128-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
+<span id="cb128-5"><a href="section-4-overview.html#cb128-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
+<span id="cb128-6"><a href="section-4-overview.html#cb128-6" aria-hidden="true"></a></span>
+<span id="cb128-7"><a href="section-4-overview.html#cb128-7" aria-hidden="true"></a><span class="co"># Define `X` as a random sample from our population `x`</span></span>
+<span id="cb128-8"><a href="section-4-overview.html#cb128-8" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb128-9"><a href="section-4-overview.html#cb128-9" aria-hidden="true"></a>X</span></code></pre></div>
+<pre><code>##  [1] 71.00000 69.00000 70.00000 66.92913 68.50000 79.05000 72.00000 72.00000 69.00000 66.00000 69.00000 70.86614 72.00000 66.00000 70.00000 73.00000 69.00000 76.00000 72.44000
+## [20] 72.44000 74.00000 74.00000 74.00000 63.00000 69.00000 70.86614 68.50394 72.00000 70.00000 68.00000 70.00000 72.00000 68.00000 67.00000 76.00000 70.00000 73.00000 68.00000
+## [39] 69.00000 77.16540 72.00000 66.00000 67.50000 68.00000 72.00000 63.38583 73.00000 78.00000 68.00000 68.00000</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="section-4-overview.html#cb130-1" aria-hidden="true"></a><span class="co"># Calculate the sample average. Print this value to the console.</span></span>
+<span id="cb130-2"><a href="section-4-overview.html#cb130-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
+<span id="cb130-3"><a href="section-4-overview.html#cb130-3" aria-hidden="true"></a>mu</span></code></pre></div>
+<pre><code>## [1] 70.47293</code></pre>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="section-4-overview.html#cb132-1" aria-hidden="true"></a><span class="co"># Calculate the sample standard deviation. Print this value to the console.</span></span>
+<span id="cb132-2"><a href="section-4-overview.html#cb132-2" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(X)</span>
+<span id="cb132-3"><a href="section-4-overview.html#cb132-3" aria-hidden="true"></a>sigma</span></code></pre></div>
+<pre><code>## [1] 3.426742</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>What does the central limit theory tell us about the sample average and how it is related to <span class="math inline">\(\mu\)</span>, the population average?</li>
 </ol>
@@ -470,69 +471,69 @@ D. It underestimates <span class="math inline">\(\mu\)</span>.</li>
 <li>We will use <span class="math inline">\(\bar{X}\)</span> as our estimate of the heights in the population from our sample size <span class="math inline">\(N\)</span>. We know from previous exercises that the standard estimate of our error <span class="math inline">\(\bar{X} - \mu\)</span> is <span class="math inline">\(\sigma / \sqrt{N}\)</span>.</li>
 </ol>
 <p>Construct a 95% confidence interval for <span class="math inline">\(\mu\)</span>.</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb123-1"><a href="section-4-overview.html#cb123-1" aria-hidden="true"></a><span class="co"># The vector of all male heights in our population `x` has already been loaded for you. You can examine the first six elements using `head`.</span></span>
-<span id="cb123-2"><a href="section-4-overview.html#cb123-2" aria-hidden="true"></a><span class="kw">head</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="section-4-overview.html#cb134-1" aria-hidden="true"></a><span class="co"># The vector of all male heights in our population `x` has already been loaded for you. You can examine the first six elements using `head`.</span></span>
+<span id="cb134-2"><a href="section-4-overview.html#cb134-2" aria-hidden="true"></a><span class="kw">head</span>(x)</span></code></pre></div>
 <pre><code>## [1] 75 70 68 74 61 67</code></pre>
-<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb125-1"><a href="section-4-overview.html#cb125-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb125-2"><a href="section-4-overview.html#cb125-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb125-3"><a href="section-4-overview.html#cb125-3" aria-hidden="true"></a></span>
-<span id="cb125-4"><a href="section-4-overview.html#cb125-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
-<span id="cb125-5"><a href="section-4-overview.html#cb125-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
-<span id="cb125-6"><a href="section-4-overview.html#cb125-6" aria-hidden="true"></a></span>
-<span id="cb125-7"><a href="section-4-overview.html#cb125-7" aria-hidden="true"></a><span class="co"># Define `X` as a random sample from our population `x`</span></span>
-<span id="cb125-8"><a href="section-4-overview.html#cb125-8" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb125-9"><a href="section-4-overview.html#cb125-9" aria-hidden="true"></a></span>
-<span id="cb125-10"><a href="section-4-overview.html#cb125-10" aria-hidden="true"></a><span class="co"># Define `se` as the standard error of the estimate. Print this value to the console.</span></span>
-<span id="cb125-11"><a href="section-4-overview.html#cb125-11" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
-<span id="cb125-12"><a href="section-4-overview.html#cb125-12" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sd</span>(X)<span class="op">/</span><span class="kw">sqrt</span>(N)</span>
-<span id="cb125-13"><a href="section-4-overview.html#cb125-13" aria-hidden="true"></a>se</span></code></pre></div>
-<pre><code>## [1] 0.485</code></pre>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="section-4-overview.html#cb127-1" aria-hidden="true"></a><span class="co"># Construct a 95% confidence interval for the population average based on our sample. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
-<span id="cb127-2"><a href="section-4-overview.html#cb127-2" aria-hidden="true"></a><span class="co"># Construct a 95% confidence interval for the population average based on our sample. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
-<span id="cb127-3"><a href="section-4-overview.html#cb127-3" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">qnorm</span>(<span class="fl">0.025</span>, X_hat, se), <span class="kw">qnorm</span>(<span class="fl">0.975</span>, X_hat, se))</span>
-<span id="cb127-4"><a href="section-4-overview.html#cb127-4" aria-hidden="true"></a>ci</span></code></pre></div>
-<pre><code>## [1] 69.5 71.4</code></pre>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="section-4-overview.html#cb136-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb136-2"><a href="section-4-overview.html#cb136-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb136-3"><a href="section-4-overview.html#cb136-3" aria-hidden="true"></a></span>
+<span id="cb136-4"><a href="section-4-overview.html#cb136-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
+<span id="cb136-5"><a href="section-4-overview.html#cb136-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
+<span id="cb136-6"><a href="section-4-overview.html#cb136-6" aria-hidden="true"></a></span>
+<span id="cb136-7"><a href="section-4-overview.html#cb136-7" aria-hidden="true"></a><span class="co"># Define `X` as a random sample from our population `x`</span></span>
+<span id="cb136-8"><a href="section-4-overview.html#cb136-8" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb136-9"><a href="section-4-overview.html#cb136-9" aria-hidden="true"></a></span>
+<span id="cb136-10"><a href="section-4-overview.html#cb136-10" aria-hidden="true"></a><span class="co"># Define `se` as the standard error of the estimate. Print this value to the console.</span></span>
+<span id="cb136-11"><a href="section-4-overview.html#cb136-11" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
+<span id="cb136-12"><a href="section-4-overview.html#cb136-12" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sd</span>(X)<span class="op">/</span><span class="kw">sqrt</span>(N)</span>
+<span id="cb136-13"><a href="section-4-overview.html#cb136-13" aria-hidden="true"></a>se</span></code></pre></div>
+<pre><code>## [1] 0.4846145</code></pre>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="section-4-overview.html#cb138-1" aria-hidden="true"></a><span class="co"># Construct a 95% confidence interval for the population average based on our sample. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
+<span id="cb138-2"><a href="section-4-overview.html#cb138-2" aria-hidden="true"></a><span class="co"># Construct a 95% confidence interval for the population average based on our sample. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
+<span id="cb138-3"><a href="section-4-overview.html#cb138-3" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">qnorm</span>(<span class="fl">0.025</span>, X_hat, se), <span class="kw">qnorm</span>(<span class="fl">0.975</span>, X_hat, se))</span>
+<span id="cb138-4"><a href="section-4-overview.html#cb138-4" aria-hidden="true"></a>ci</span></code></pre></div>
+<pre><code>## [1] 69.52310 71.42276</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Now run a Monte Carlo simulation in which you compute 10,000 confidence intervals as you have just done.</li>
 </ol>
 <p>What proportion of these intervals include <span class="math inline">\(\mu\)</span>?</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="section-4-overview.html#cb129-1" aria-hidden="true"></a><span class="co"># Define `mu` as the population average</span></span>
-<span id="cb129-2"><a href="section-4-overview.html#cb129-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb129-3"><a href="section-4-overview.html#cb129-3" aria-hidden="true"></a></span>
-<span id="cb129-4"><a href="section-4-overview.html#cb129-4" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb129-5"><a href="section-4-overview.html#cb129-5" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb129-6"><a href="section-4-overview.html#cb129-6" aria-hidden="true"></a></span>
-<span id="cb129-7"><a href="section-4-overview.html#cb129-7" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
-<span id="cb129-8"><a href="section-4-overview.html#cb129-8" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
-<span id="cb129-9"><a href="section-4-overview.html#cb129-9" aria-hidden="true"></a></span>
-<span id="cb129-10"><a href="section-4-overview.html#cb129-10" aria-hidden="true"></a><span class="co"># Define `B` as the number of times to run the model</span></span>
-<span id="cb129-11"><a href="section-4-overview.html#cb129-11" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb129-12"><a href="section-4-overview.html#cb129-12" aria-hidden="true"></a></span>
-<span id="cb129-13"><a href="section-4-overview.html#cb129-13" aria-hidden="true"></a><span class="co"># Define an object `res` that contains a logical vector for simulated intervals that contain mu</span></span>
-<span id="cb129-14"><a href="section-4-overview.html#cb129-14" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb129-15"><a href="section-4-overview.html#cb129-15" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb129-16"><a href="section-4-overview.html#cb129-16" aria-hidden="true"></a>  se &lt;-<span class="st"> </span><span class="kw">sd</span>(X) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(N)</span>
-<span id="cb129-17"><a href="section-4-overview.html#cb129-17" aria-hidden="true"></a>  interval &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">qnorm</span>(<span class="fl">0.025</span>, <span class="kw">mean</span>(X), se) , <span class="kw">qnorm</span>(<span class="fl">0.975</span>, <span class="kw">mean</span>(X), se))</span>
-<span id="cb129-18"><a href="section-4-overview.html#cb129-18" aria-hidden="true"></a>  <span class="kw">between</span>(mu, interval[<span class="dv">1</span>], interval[<span class="dv">2</span>])</span>
-<span id="cb129-19"><a href="section-4-overview.html#cb129-19" aria-hidden="true"></a>})</span>
-<span id="cb129-20"><a href="section-4-overview.html#cb129-20" aria-hidden="true"></a></span>
-<span id="cb129-21"><a href="section-4-overview.html#cb129-21" aria-hidden="true"></a><span class="co"># Calculate the proportion of results in `res` that include mu. Print this value to the console.</span></span>
-<span id="cb129-22"><a href="section-4-overview.html#cb129-22" aria-hidden="true"></a><span class="kw">mean</span>(res)</span></code></pre></div>
-<pre><code>## [1] 0.948</code></pre>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="section-4-overview.html#cb140-1" aria-hidden="true"></a><span class="co"># Define `mu` as the population average</span></span>
+<span id="cb140-2"><a href="section-4-overview.html#cb140-2" aria-hidden="true"></a>mu &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb140-3"><a href="section-4-overview.html#cb140-3" aria-hidden="true"></a></span>
+<span id="cb140-4"><a href="section-4-overview.html#cb140-4" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb140-5"><a href="section-4-overview.html#cb140-5" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb140-6"><a href="section-4-overview.html#cb140-6" aria-hidden="true"></a></span>
+<span id="cb140-7"><a href="section-4-overview.html#cb140-7" aria-hidden="true"></a><span class="co"># Define `N` as the number of people measured</span></span>
+<span id="cb140-8"><a href="section-4-overview.html#cb140-8" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">50</span></span>
+<span id="cb140-9"><a href="section-4-overview.html#cb140-9" aria-hidden="true"></a></span>
+<span id="cb140-10"><a href="section-4-overview.html#cb140-10" aria-hidden="true"></a><span class="co"># Define `B` as the number of times to run the model</span></span>
+<span id="cb140-11"><a href="section-4-overview.html#cb140-11" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb140-12"><a href="section-4-overview.html#cb140-12" aria-hidden="true"></a></span>
+<span id="cb140-13"><a href="section-4-overview.html#cb140-13" aria-hidden="true"></a><span class="co"># Define an object `res` that contains a logical vector for simulated intervals that contain mu</span></span>
+<span id="cb140-14"><a href="section-4-overview.html#cb140-14" aria-hidden="true"></a>res &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb140-15"><a href="section-4-overview.html#cb140-15" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(x, N, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb140-16"><a href="section-4-overview.html#cb140-16" aria-hidden="true"></a>  se &lt;-<span class="st"> </span><span class="kw">sd</span>(X) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(N)</span>
+<span id="cb140-17"><a href="section-4-overview.html#cb140-17" aria-hidden="true"></a>  interval &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="kw">qnorm</span>(<span class="fl">0.025</span>, <span class="kw">mean</span>(X), se) , <span class="kw">qnorm</span>(<span class="fl">0.975</span>, <span class="kw">mean</span>(X), se))</span>
+<span id="cb140-18"><a href="section-4-overview.html#cb140-18" aria-hidden="true"></a>  <span class="kw">between</span>(mu, interval[<span class="dv">1</span>], interval[<span class="dv">2</span>])</span>
+<span id="cb140-19"><a href="section-4-overview.html#cb140-19" aria-hidden="true"></a>})</span>
+<span id="cb140-20"><a href="section-4-overview.html#cb140-20" aria-hidden="true"></a></span>
+<span id="cb140-21"><a href="section-4-overview.html#cb140-21" aria-hidden="true"></a><span class="co"># Calculate the proportion of results in `res` that include mu. Print this value to the console.</span></span>
+<span id="cb140-22"><a href="section-4-overview.html#cb140-22" aria-hidden="true"></a><span class="kw">mean</span>(res)</span></code></pre></div>
+<pre><code>## [1] 0.9479</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>In this section, we used visualization to motivate the presence of pollster bias in election polls.</li>
 </ol>
 <p>Here we will examine that bias more rigorously. Lets consider two pollsters that conducted daily polls and look at national polls for the month before the election.</p>
 <p>Is there a poll bias? Make a plot of the spreads for each poll.</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="section-4-overview.html#cb131-1" aria-hidden="true"></a><span class="co"># These lines of code filter for the polls we want and calculate the spreads</span></span>
-<span id="cb131-2"><a href="section-4-overview.html#cb131-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb131-3"><a href="section-4-overview.html#cb131-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(pollster <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Rasmussen Reports/Pulse Opinion Research&quot;</span>,<span class="st">&quot;The Times-Picayune/Lucid&quot;</span>) <span class="op">&amp;</span></span>
-<span id="cb131-4"><a href="section-4-overview.html#cb131-4" aria-hidden="true"></a><span class="st">           </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-15&quot;</span> <span class="op">&amp;</span></span>
-<span id="cb131-5"><a href="section-4-overview.html#cb131-5" aria-hidden="true"></a><span class="st">           </span>state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb131-6"><a href="section-4-overview.html#cb131-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) </span>
-<span id="cb131-7"><a href="section-4-overview.html#cb131-7" aria-hidden="true"></a></span>
-<span id="cb131-8"><a href="section-4-overview.html#cb131-8" aria-hidden="true"></a><span class="co"># Make a boxplot with points of the spread for each pollster</span></span>
-<span id="cb131-9"><a href="section-4-overview.html#cb131-9" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(pollster, spread)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="section-4-overview.html#cb142-1" aria-hidden="true"></a><span class="co"># These lines of code filter for the polls we want and calculate the spreads</span></span>
+<span id="cb142-2"><a href="section-4-overview.html#cb142-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb142-3"><a href="section-4-overview.html#cb142-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(pollster <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Rasmussen Reports/Pulse Opinion Research&quot;</span>,<span class="st">&quot;The Times-Picayune/Lucid&quot;</span>) <span class="op">&amp;</span></span>
+<span id="cb142-4"><a href="section-4-overview.html#cb142-4" aria-hidden="true"></a><span class="st">           </span>enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-15&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb142-5"><a href="section-4-overview.html#cb142-5" aria-hidden="true"></a><span class="st">           </span>state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb142-6"><a href="section-4-overview.html#cb142-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) </span>
+<span id="cb142-7"><a href="section-4-overview.html#cb142-7" aria-hidden="true"></a></span>
+<span id="cb142-8"><a href="section-4-overview.html#cb142-8" aria-hidden="true"></a><span class="co"># Make a boxplot with points of the spread for each pollster</span></span>
+<span id="cb142-9"><a href="section-4-overview.html#cb142-9" aria-hidden="true"></a>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(pollster, spread)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-44-1.png" width="672" /></p>
 <ol start="7" style="list-style-type: decimal">
 <li>The data do seem to suggest there is a difference between the pollsters.</li>
@@ -628,27 +629,27 @@ D. <span class="math inline">\(\sigma_2^2/N_2 + \sigma_1^2/N_1\)</span></li>
 </ol>
 <p>We learned that we can estimate these values using the sample standard deviation.</p>
 <p>Compute the estimates of <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span>.</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="section-4-overview.html#cb132-1" aria-hidden="true"></a><span class="co"># The `polls` data have already been loaded for you. Use the `head` function to examine them.</span></span>
-<span id="cb132-2"><a href="section-4-overview.html#cb132-2" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="section-4-overview.html#cb143-1" aria-hidden="true"></a><span class="co"># The `polls` data have already been loaded for you. Use the `head` function to examine them.</span></span>
+<span id="cb143-2"><a href="section-4-overview.html#cb143-2" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
 <pre><code>##   state  startdate    enddate                                 pollster grade samplesize population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin adjpoll_clinton
-## 1  U.S. 2016-11-05 2016-11-07                 The Times-Picayune/Lucid  &lt;NA&gt;       2521         lv              45            40               5               NA            45.1
-## 2  U.S. 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              45            43               4               NA            45.6
-## 3  U.S. 2016-11-01 2016-11-03 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              44            44               4               NA            44.7
-## 4  U.S. 2016-11-04 2016-11-06                 The Times-Picayune/Lucid  &lt;NA&gt;       2584         lv              45            40               5               NA            45.2
-## 5  U.S. 2016-10-31 2016-11-02 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              42            45               4               NA            42.7
-## 6  U.S. 2016-11-03 2016-11-05                 The Times-Picayune/Lucid  &lt;NA&gt;       2526         lv              45            40               5               NA            45.3
+## 1  U.S. 2016-11-05 2016-11-07                 The Times-Picayune/Lucid  &lt;NA&gt;       2521         lv              45            40               5               NA        45.13966
+## 2  U.S. 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              45            43               4               NA        45.56041
+## 3  U.S. 2016-11-01 2016-11-03 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              44            44               4               NA        44.66353
+## 4  U.S. 2016-11-04 2016-11-06                 The Times-Picayune/Lucid  &lt;NA&gt;       2584         lv              45            40               5               NA        45.22830
+## 5  U.S. 2016-10-31 2016-11-02 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              42            45               4               NA        42.67626
+## 6  U.S. 2016-11-03 2016-11-05                 The Times-Picayune/Lucid  &lt;NA&gt;       2526         lv              45            40               5               NA        45.31041
 ##   adjpoll_trump adjpoll_johnson adjpoll_mcmullin spread
-## 1          42.3            3.68               NA   0.05
-## 2          43.1            4.42               NA   0.02
-## 3          44.3            4.33               NA   0.00
-## 4          42.3            3.77               NA   0.05
-## 5          45.4            4.24               NA  -0.03
-## 6          42.3            3.78               NA   0.05</code></pre>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="section-4-overview.html#cb134-1" aria-hidden="true"></a><span class="co"># Create an object called `sigma` that contains a column for `pollster` and a column for `s`, the standard deviation of the spread</span></span>
-<span id="cb134-2"><a href="section-4-overview.html#cb134-2" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">s =</span> <span class="kw">sd</span>(spread))</span></code></pre></div>
+## 1      42.26495        3.679914               NA   0.05
+## 2      43.13745        4.418502               NA   0.02
+## 3      44.28981        4.331246               NA   0.00
+## 4      42.30433        3.770880               NA   0.05
+## 5      45.41689        4.239500               NA  -0.03
+## 6      42.34422        3.779955               NA   0.05</code></pre>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="section-4-overview.html#cb145-1" aria-hidden="true"></a><span class="co"># Create an object called `sigma` that contains a column for `pollster` and a column for `s`, the standard deviation of the spread</span></span>
+<span id="cb145-2"><a href="section-4-overview.html#cb145-2" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">s =</span> <span class="kw">sd</span>(spread))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="section-4-overview.html#cb136-1" aria-hidden="true"></a><span class="co"># Print the contents of sigma to the console</span></span>
-<span id="cb136-2"><a href="section-4-overview.html#cb136-2" aria-hidden="true"></a>sigma</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="section-4-overview.html#cb147-1" aria-hidden="true"></a><span class="co"># Print the contents of sigma to the console</span></span>
+<span id="cb147-2"><a href="section-4-overview.html#cb147-2" aria-hidden="true"></a>sigma</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 2
 ##   pollster                                      s
 ##   &lt;fct&gt;                                     &lt;dbl&gt;
@@ -672,53 +673,53 @@ D. These data do not contain vectors of 0 and 1, so the central limit theorem do
 </ol>
 <p>If our model holds, then this random variable has an approximately normal distribution. The standard error of this random variable depends on <span class="math inline">\(\sigma_1\)</span> and <span class="math inline">\(\sigma_2\)</span>, but we can use the sample standard deviations we computed earlier. We have everything we need to answer our initial question: is <span class="math inline">\(b_2 − b_1\)</span> different from 0?</p>
 <p>Construct a 95% confidence interval for the difference <span class="math inline">\(b_2\)</span> and <span class="math inline">\(b_1\)</span>. Does this interval contain zero?</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="section-4-overview.html#cb138-1" aria-hidden="true"></a><span class="co"># The `polls` data have already been loaded for you. Use the `head` function to examine them.</span></span>
-<span id="cb138-2"><a href="section-4-overview.html#cb138-2" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="section-4-overview.html#cb149-1" aria-hidden="true"></a><span class="co"># The `polls` data have already been loaded for you. Use the `head` function to examine them.</span></span>
+<span id="cb149-2"><a href="section-4-overview.html#cb149-2" aria-hidden="true"></a><span class="kw">head</span>(polls)</span></code></pre></div>
 <pre><code>##   state  startdate    enddate                                 pollster grade samplesize population rawpoll_clinton rawpoll_trump rawpoll_johnson rawpoll_mcmullin adjpoll_clinton
-## 1  U.S. 2016-11-05 2016-11-07                 The Times-Picayune/Lucid  &lt;NA&gt;       2521         lv              45            40               5               NA            45.1
-## 2  U.S. 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              45            43               4               NA            45.6
-## 3  U.S. 2016-11-01 2016-11-03 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              44            44               4               NA            44.7
-## 4  U.S. 2016-11-04 2016-11-06                 The Times-Picayune/Lucid  &lt;NA&gt;       2584         lv              45            40               5               NA            45.2
-## 5  U.S. 2016-10-31 2016-11-02 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              42            45               4               NA            42.7
-## 6  U.S. 2016-11-03 2016-11-05                 The Times-Picayune/Lucid  &lt;NA&gt;       2526         lv              45            40               5               NA            45.3
+## 1  U.S. 2016-11-05 2016-11-07                 The Times-Picayune/Lucid  &lt;NA&gt;       2521         lv              45            40               5               NA        45.13966
+## 2  U.S. 2016-11-02 2016-11-06 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              45            43               4               NA        45.56041
+## 3  U.S. 2016-11-01 2016-11-03 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              44            44               4               NA        44.66353
+## 4  U.S. 2016-11-04 2016-11-06                 The Times-Picayune/Lucid  &lt;NA&gt;       2584         lv              45            40               5               NA        45.22830
+## 5  U.S. 2016-10-31 2016-11-02 Rasmussen Reports/Pulse Opinion Research    C+       1500         lv              42            45               4               NA        42.67626
+## 6  U.S. 2016-11-03 2016-11-05                 The Times-Picayune/Lucid  &lt;NA&gt;       2526         lv              45            40               5               NA        45.31041
 ##   adjpoll_trump adjpoll_johnson adjpoll_mcmullin spread
-## 1          42.3            3.68               NA   0.05
-## 2          43.1            4.42               NA   0.02
-## 3          44.3            4.33               NA   0.00
-## 4          42.3            3.77               NA   0.05
-## 5          45.4            4.24               NA  -0.03
-## 6          42.3            3.78               NA   0.05</code></pre>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="section-4-overview.html#cb140-1" aria-hidden="true"></a><span class="co"># Create an object called `res` that summarizes the average, standard deviation, and number of polls for the two pollsters.</span></span>
-<span id="cb140-2"><a href="section-4-overview.html#cb140-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread), <span class="dt">N=</span><span class="kw">n</span>())</span></code></pre></div>
+## 1      42.26495        3.679914               NA   0.05
+## 2      43.13745        4.418502               NA   0.02
+## 3      44.28981        4.331246               NA   0.00
+## 4      42.30433        3.770880               NA   0.05
+## 5      45.41689        4.239500               NA  -0.03
+## 6      42.34422        3.779955               NA   0.05</code></pre>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="section-4-overview.html#cb151-1" aria-hidden="true"></a><span class="co"># Create an object called `res` that summarizes the average, standard deviation, and number of polls for the two pollsters.</span></span>
+<span id="cb151-2"><a href="section-4-overview.html#cb151-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread), <span class="dt">N=</span><span class="kw">n</span>())</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="section-4-overview.html#cb142-1" aria-hidden="true"></a><span class="co"># Store the difference between the larger average and the smaller in a variable called `estimate`. Print this value to the console.</span></span>
-<span id="cb142-2"><a href="section-4-overview.html#cb142-2" aria-hidden="true"></a>estimate &lt;-<span class="st"> </span><span class="kw">max</span>(res<span class="op">$</span>avg) <span class="op">-</span><span class="st"> </span><span class="kw">min</span>(res<span class="op">$</span>avg)</span>
-<span id="cb142-3"><a href="section-4-overview.html#cb142-3" aria-hidden="true"></a>estimate</span></code></pre></div>
-<pre><code>## [1] 0.0523</code></pre>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="section-4-overview.html#cb144-1" aria-hidden="true"></a><span class="co"># Store the standard error of the estimates as a variable called `se_hat`. Print this value to the console.</span></span>
-<span id="cb144-2"><a href="section-4-overview.html#cb144-2" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(res<span class="op">$</span>s[<span class="dv">2</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>res<span class="op">$</span>s[<span class="dv">1</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">1</span>])</span>
-<span id="cb144-3"><a href="section-4-overview.html#cb144-3" aria-hidden="true"></a>se_hat</span></code></pre></div>
-<pre><code>## [1] 0.00703</code></pre>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="section-4-overview.html#cb146-1" aria-hidden="true"></a><span class="co"># Calculate the 95% confidence interval of the spreads. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
-<span id="cb146-2"><a href="section-4-overview.html#cb146-2" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(estimate <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_hat, estimate <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_hat)</span>
-<span id="cb146-3"><a href="section-4-overview.html#cb146-3" aria-hidden="true"></a>ci</span></code></pre></div>
-<pre><code>## [1] 0.0385 0.0661</code></pre>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="section-4-overview.html#cb153-1" aria-hidden="true"></a><span class="co"># Store the difference between the larger average and the smaller in a variable called `estimate`. Print this value to the console.</span></span>
+<span id="cb153-2"><a href="section-4-overview.html#cb153-2" aria-hidden="true"></a>estimate &lt;-<span class="st"> </span><span class="kw">max</span>(res<span class="op">$</span>avg) <span class="op">-</span><span class="st"> </span><span class="kw">min</span>(res<span class="op">$</span>avg)</span>
+<span id="cb153-3"><a href="section-4-overview.html#cb153-3" aria-hidden="true"></a>estimate</span></code></pre></div>
+<pre><code>## [1] 0.05229167</code></pre>
+<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="section-4-overview.html#cb155-1" aria-hidden="true"></a><span class="co"># Store the standard error of the estimates as a variable called `se_hat`. Print this value to the console.</span></span>
+<span id="cb155-2"><a href="section-4-overview.html#cb155-2" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(res<span class="op">$</span>s[<span class="dv">2</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>res<span class="op">$</span>s[<span class="dv">1</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">1</span>])</span>
+<span id="cb155-3"><a href="section-4-overview.html#cb155-3" aria-hidden="true"></a>se_hat</span></code></pre></div>
+<pre><code>## [1] 0.007031433</code></pre>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="section-4-overview.html#cb157-1" aria-hidden="true"></a><span class="co"># Calculate the 95% confidence interval of the spreads. Save the lower and then the upper confidence interval to a variable called `ci`.</span></span>
+<span id="cb157-2"><a href="section-4-overview.html#cb157-2" aria-hidden="true"></a>ci &lt;-<span class="st"> </span><span class="kw">c</span>(estimate <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_hat, estimate <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_hat)</span>
+<span id="cb157-3"><a href="section-4-overview.html#cb157-3" aria-hidden="true"></a>ci</span></code></pre></div>
+<pre><code>## [1] 0.03851031 0.06607302</code></pre>
 <ol start="16" style="list-style-type: decimal">
 <li>The confidence interval tells us there is relatively strong pollster effect resulting in a difference of about 5%.</li>
 </ol>
 <p>Random variability does not seem to explain it.</p>
 <p>Compute a p-value to relay the fact that chance does not explain the observed pollster effect.</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="section-4-overview.html#cb148-1" aria-hidden="true"></a><span class="co"># We made an object `res` to summarize the average, standard deviation, and number of polls for the two pollsters.</span></span>
-<span id="cb148-2"><a href="section-4-overview.html#cb148-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb148-3"><a href="section-4-overview.html#cb148-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread), <span class="dt">N =</span> <span class="kw">n</span>()) </span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="section-4-overview.html#cb159-1" aria-hidden="true"></a><span class="co"># We made an object `res` to summarize the average, standard deviation, and number of polls for the two pollsters.</span></span>
+<span id="cb159-2"><a href="section-4-overview.html#cb159-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb159-3"><a href="section-4-overview.html#cb159-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread), <span class="dt">N =</span> <span class="kw">n</span>()) </span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-4-overview.html#cb150-1" aria-hidden="true"></a><span class="co"># The variables `estimate` and `se_hat` contain the spread estimates and standard error, respectively.</span></span>
-<span id="cb150-2"><a href="section-4-overview.html#cb150-2" aria-hidden="true"></a>estimate &lt;-<span class="st"> </span>res<span class="op">$</span>avg[<span class="dv">2</span>] <span class="op">-</span><span class="st"> </span>res<span class="op">$</span>avg[<span class="dv">1</span>]</span>
-<span id="cb150-3"><a href="section-4-overview.html#cb150-3" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(res<span class="op">$</span>s[<span class="dv">2</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>res<span class="op">$</span>s[<span class="dv">1</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">1</span>])</span>
-<span id="cb150-4"><a href="section-4-overview.html#cb150-4" aria-hidden="true"></a></span>
-<span id="cb150-5"><a href="section-4-overview.html#cb150-5" aria-hidden="true"></a><span class="co"># Calculate the p-value</span></span>
-<span id="cb150-6"><a href="section-4-overview.html#cb150-6" aria-hidden="true"></a><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(estimate <span class="op">/</span><span class="st"> </span>se_hat, <span class="dv">0</span>, <span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## [1] 1.03e-13</code></pre>
+<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="section-4-overview.html#cb161-1" aria-hidden="true"></a><span class="co"># The variables `estimate` and `se_hat` contain the spread estimates and standard error, respectively.</span></span>
+<span id="cb161-2"><a href="section-4-overview.html#cb161-2" aria-hidden="true"></a>estimate &lt;-<span class="st"> </span>res<span class="op">$</span>avg[<span class="dv">2</span>] <span class="op">-</span><span class="st"> </span>res<span class="op">$</span>avg[<span class="dv">1</span>]</span>
+<span id="cb161-3"><a href="section-4-overview.html#cb161-3" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(res<span class="op">$</span>s[<span class="dv">2</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">2</span>] <span class="op">+</span><span class="st"> </span>res<span class="op">$</span>s[<span class="dv">1</span>]<span class="op">^</span><span class="dv">2</span><span class="op">/</span>res<span class="op">$</span>N[<span class="dv">1</span>])</span>
+<span id="cb161-4"><a href="section-4-overview.html#cb161-4" aria-hidden="true"></a></span>
+<span id="cb161-5"><a href="section-4-overview.html#cb161-5" aria-hidden="true"></a><span class="co"># Calculate the p-value</span></span>
+<span id="cb161-6"><a href="section-4-overview.html#cb161-6" aria-hidden="true"></a><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(estimate <span class="op">/</span><span class="st"> </span>se_hat, <span class="dv">0</span>, <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## [1] 1.030287e-13</code></pre>
 <ol start="17" style="list-style-type: decimal">
 <li>We compute statistic called the <em>t-statistic</em> by dividing our estimate of <span class="math inline">\(b_2 − b_1\)</span> by its estimated standard error:</li>
 </ol>
@@ -726,19 +727,19 @@ D. These data do not contain vectors of 0 and 1, so the central limit theorem do
 <p>Later we learn will learn of another approximation for the distribution of this statistic for values of <span class="math inline">\(N_2\)</span> and <span class="math inline">\(N_1\)</span> that aren’t large enough for the CLT.</p>
 <p>Note that our data has more than two pollsters. We can also test for pollster effect using all pollsters, not just two. The idea is to compare the variability across polls to variability within polls. We can construct statistics to test for effects and approximate their distribution. The area of statistics that does this is called Analysis of Variance or ANOVA. We do not cover it here, but ANOVA provides a very useful set of tools to answer questions such as: is there a pollster effect?</p>
 <p>Compute the average and standard deviation for each pollster and examine the variability across the averages and how it compares to the variability within the pollsters, summarized by the standard deviation.</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="section-4-overview.html#cb152-1" aria-hidden="true"></a><span class="co"># Execute the following lines of code to filter the polling data and calculate the spread</span></span>
-<span id="cb152-2"><a href="section-4-overview.html#cb152-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb152-3"><a href="section-4-overview.html#cb152-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-15&quot;</span> <span class="op">&amp;</span></span>
-<span id="cb152-4"><a href="section-4-overview.html#cb152-4" aria-hidden="true"></a><span class="st">           </span>state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb152-5"><a href="section-4-overview.html#cb152-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
-<span id="cb152-6"><a href="section-4-overview.html#cb152-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb152-7"><a href="section-4-overview.html#cb152-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
-<span id="cb152-8"><a href="section-4-overview.html#cb152-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">ungroup</span>()</span>
-<span id="cb152-9"><a href="section-4-overview.html#cb152-9" aria-hidden="true"></a></span>
-<span id="cb152-10"><a href="section-4-overview.html#cb152-10" aria-hidden="true"></a><span class="co"># Create an object called `var` that contains columns for the pollster, mean spread, and standard deviation. Print the contents of this object to the console.</span></span>
-<span id="cb152-11"><a href="section-4-overview.html#cb152-11" aria-hidden="true"></a>var &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread))</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="section-4-overview.html#cb163-1" aria-hidden="true"></a><span class="co"># Execute the following lines of code to filter the polling data and calculate the spread</span></span>
+<span id="cb163-2"><a href="section-4-overview.html#cb163-2" aria-hidden="true"></a>polls &lt;-<span class="st"> </span>polls_us_election_<span class="dv">2016</span> <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb163-3"><a href="section-4-overview.html#cb163-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-10-15&quot;</span> <span class="op">&amp;</span></span>
+<span id="cb163-4"><a href="section-4-overview.html#cb163-4" aria-hidden="true"></a><span class="st">           </span>state <span class="op">==</span><span class="st"> &quot;U.S.&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb163-5"><a href="section-4-overview.html#cb163-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb163-6"><a href="section-4-overview.html#cb163-6" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">n</span>() <span class="op">&gt;=</span><span class="st"> </span><span class="dv">5</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb163-7"><a href="section-4-overview.html#cb163-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">spread =</span> rawpoll_clinton<span class="op">/</span><span class="dv">100</span> <span class="op">-</span><span class="st"> </span>rawpoll_trump<span class="op">/</span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb163-8"><a href="section-4-overview.html#cb163-8" aria-hidden="true"></a><span class="st">  </span><span class="kw">ungroup</span>()</span>
+<span id="cb163-9"><a href="section-4-overview.html#cb163-9" aria-hidden="true"></a></span>
+<span id="cb163-10"><a href="section-4-overview.html#cb163-10" aria-hidden="true"></a><span class="co"># Create an object called `var` that contains columns for the pollster, mean spread, and standard deviation. Print the contents of this object to the console.</span></span>
+<span id="cb163-11"><a href="section-4-overview.html#cb163-11" aria-hidden="true"></a>var &lt;-<span class="st"> </span>polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarise</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(spread), <span class="dt">s =</span> <span class="kw">sd</span>(spread))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="section-4-overview.html#cb154-1" aria-hidden="true"></a>var</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="section-4-overview.html#cb165-1" aria-hidden="true"></a>var</span></code></pre></div>
 <pre><code>## # A tibble: 11 x 3
 ##    pollster                                       avg       s
 ##    &lt;fct&gt;                                        &lt;dbl&gt;   &lt;dbl&gt;

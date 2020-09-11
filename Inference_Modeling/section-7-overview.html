@@ -231,7 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="association-tests" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Association Tests</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#association-tests">here</a> up to and including the <a href="https://rafalab.github.io/dsbook/inference.html#two-by-two-tables">textbook section</a> on two-by-two tables.</p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#association-tests" target="_blank">here</a> up to and including the <a href="https://rafalab.github.io/dsbook/inference.html#two-by-two-tables" target="_blank">textbook section</a> on two-by-two tables.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>We learn how to determine the probability that an observation is due to random variability given categorical, binary or ordinal data.</li>
@@ -240,9 +240,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The p-value can be calculated from a two-by-two table using Fisher’s exact test with the function <code>fisher.test()</code>.</li>
 </ul>
 <p><em>Code: Research funding rates example</em></p>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="section-7-overview.html#cb263-1" aria-hidden="true"></a><span class="co"># load and inspect research funding rates object</span></span>
-<span id="cb263-2"><a href="section-7-overview.html#cb263-2" aria-hidden="true"></a><span class="kw">data</span>(research_funding_rates)</span>
-<span id="cb263-3"><a href="section-7-overview.html#cb263-3" aria-hidden="true"></a>research_funding_rates</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="section-7-overview.html#cb274-1" aria-hidden="true"></a><span class="co"># load and inspect research funding rates object</span></span>
+<span id="cb274-2"><a href="section-7-overview.html#cb274-2" aria-hidden="true"></a><span class="kw">data</span>(research_funding_rates)</span>
+<span id="cb274-3"><a href="section-7-overview.html#cb274-3" aria-hidden="true"></a>research_funding_rates</span></code></pre></div>
 <pre><code>##            discipline applications_total applications_men applications_women awards_total awards_men awards_women success_rates_total success_rates_men success_rates_women
 ## 1   Chemical sciences                122               83                 39           32         22           10                26.2              26.5                25.6
 ## 2   Physical sciences                174              135                 39           35         26            9                20.1              19.3                23.1
@@ -253,45 +253,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 7 Earth/life sciences                282              156                126           56         38           18                19.9              24.4                14.3
 ## 8     Social sciences                834              425                409          112         65           47                13.4              15.3                11.5
 ## 9    Medical sciences                505              245                260           75         46           29                14.9              18.8                11.2</code></pre>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="section-7-overview.html#cb265-1" aria-hidden="true"></a><span class="co"># compute totals that were successful or not successful</span></span>
-<span id="cb265-2"><a href="section-7-overview.html#cb265-2" aria-hidden="true"></a>totals &lt;-<span class="st"> </span>research_funding_rates <span class="op">%&gt;%</span></span>
-<span id="cb265-3"><a href="section-7-overview.html#cb265-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>discipline) <span class="op">%&gt;%</span></span>
-<span id="cb265-4"><a href="section-7-overview.html#cb265-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize_all</span>(<span class="kw">funs</span>(sum)) <span class="op">%&gt;%</span></span>
-<span id="cb265-5"><a href="section-7-overview.html#cb265-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">yes_men =</span> awards_men,</span>
-<span id="cb265-6"><a href="section-7-overview.html#cb265-6" aria-hidden="true"></a>                         <span class="dt">no_men =</span> applications_men <span class="op">-</span><span class="st"> </span>awards_men,</span>
-<span id="cb265-7"><a href="section-7-overview.html#cb265-7" aria-hidden="true"></a>                         <span class="dt">yes_women =</span> awards_women,</span>
-<span id="cb265-8"><a href="section-7-overview.html#cb265-8" aria-hidden="true"></a>                         <span class="dt">no_women =</span> applications_women <span class="op">-</span><span class="st"> </span>awards_women)</span>
-<span id="cb265-9"><a href="section-7-overview.html#cb265-9" aria-hidden="true"></a></span>
-<span id="cb265-10"><a href="section-7-overview.html#cb265-10" aria-hidden="true"></a><span class="co"># compare percentage of men/women with awards</span></span>
-<span id="cb265-11"><a href="section-7-overview.html#cb265-11" aria-hidden="true"></a>totals <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">percent_men =</span> yes_men<span class="op">/</span>(yes_men <span class="op">+</span><span class="st"> </span>no_men),</span>
-<span id="cb265-12"><a href="section-7-overview.html#cb265-12" aria-hidden="true"></a>                                          <span class="dt">percent_women =</span> yes_women<span class="op">/</span>(yes_women <span class="op">+</span><span class="st"> </span>no_women))</span></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="section-7-overview.html#cb276-1" aria-hidden="true"></a><span class="co"># compute totals that were successful or not successful</span></span>
+<span id="cb276-2"><a href="section-7-overview.html#cb276-2" aria-hidden="true"></a>totals &lt;-<span class="st"> </span>research_funding_rates <span class="op">%&gt;%</span></span>
+<span id="cb276-3"><a href="section-7-overview.html#cb276-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>discipline) <span class="op">%&gt;%</span></span>
+<span id="cb276-4"><a href="section-7-overview.html#cb276-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize_all</span>(<span class="kw">funs</span>(sum)) <span class="op">%&gt;%</span></span>
+<span id="cb276-5"><a href="section-7-overview.html#cb276-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">yes_men =</span> awards_men,</span>
+<span id="cb276-6"><a href="section-7-overview.html#cb276-6" aria-hidden="true"></a>                         <span class="dt">no_men =</span> applications_men <span class="op">-</span><span class="st"> </span>awards_men,</span>
+<span id="cb276-7"><a href="section-7-overview.html#cb276-7" aria-hidden="true"></a>                         <span class="dt">yes_women =</span> awards_women,</span>
+<span id="cb276-8"><a href="section-7-overview.html#cb276-8" aria-hidden="true"></a>                         <span class="dt">no_women =</span> applications_women <span class="op">-</span><span class="st"> </span>awards_women)</span></code></pre></div>
+<pre><code>## Warning: `funs()` is deprecated as of dplyr 0.8.0.
+## Please use a list of either functions or lambdas: 
+## 
+##   # Simple named list: 
+##   list(mean = mean, median = median)
+## 
+##   # Auto named with `tibble::lst()`: 
+##   tibble::lst(mean, median)
+## 
+##   # Using lambdas
+##   list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="section-7-overview.html#cb278-1" aria-hidden="true"></a><span class="co"># compare percentage of men/women with awards</span></span>
+<span id="cb278-2"><a href="section-7-overview.html#cb278-2" aria-hidden="true"></a>totals <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">percent_men =</span> yes_men<span class="op">/</span>(yes_men <span class="op">+</span><span class="st"> </span>no_men),</span>
+<span id="cb278-3"><a href="section-7-overview.html#cb278-3" aria-hidden="true"></a>                                          <span class="dt">percent_women =</span> yes_women<span class="op">/</span>(yes_women <span class="op">+</span><span class="st"> </span>no_women))</span></code></pre></div>
 <pre><code>##   percent_men percent_women
-## 1       0.177         0.149</code></pre>
+## 1     0.17737     0.1489899</code></pre>
 <p><em>Code: Two-by-two table and p-value for the Lady Tasting Tea problem</em></p>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="section-7-overview.html#cb267-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb267-2"><a href="section-7-overview.html#cb267-2" aria-hidden="true"></a><span class="kw">rownames</span>(tab) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Poured Before&quot;</span>, <span class="st">&quot;Poured After&quot;</span>)</span>
-<span id="cb267-3"><a href="section-7-overview.html#cb267-3" aria-hidden="true"></a><span class="kw">colnames</span>(tab) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Guessed Before&quot;</span>, <span class="st">&quot;Guessed After&quot;</span>)</span>
-<span id="cb267-4"><a href="section-7-overview.html#cb267-4" aria-hidden="true"></a>tab</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="section-7-overview.html#cb280-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">matrix</span>(<span class="kw">c</span>(<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">3</span>), <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb280-2"><a href="section-7-overview.html#cb280-2" aria-hidden="true"></a><span class="kw">rownames</span>(tab) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Poured Before&quot;</span>, <span class="st">&quot;Poured After&quot;</span>)</span>
+<span id="cb280-3"><a href="section-7-overview.html#cb280-3" aria-hidden="true"></a><span class="kw">colnames</span>(tab) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Guessed Before&quot;</span>, <span class="st">&quot;Guessed After&quot;</span>)</span>
+<span id="cb280-4"><a href="section-7-overview.html#cb280-4" aria-hidden="true"></a>tab</span></code></pre></div>
 <pre><code>##               Guessed Before Guessed After
 ## Poured Before              3             1
 ## Poured After               1             3</code></pre>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="section-7-overview.html#cb269-1" aria-hidden="true"></a><span class="co"># p-value calculation with Fisher&#39;s Exact Test</span></span>
-<span id="cb269-2"><a href="section-7-overview.html#cb269-2" aria-hidden="true"></a><span class="kw">fisher.test</span>(tab, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="section-7-overview.html#cb282-1" aria-hidden="true"></a><span class="co"># p-value calculation with Fisher&#39;s Exact Test</span></span>
+<span id="cb282-2"><a href="section-7-overview.html#cb282-2" aria-hidden="true"></a><span class="kw">fisher.test</span>(tab, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  Fisher&#39;s Exact Test for Count Data
 ## 
 ## data:  tab
-## p-value = 0.2
+## p-value = 0.2429
 ## alternative hypothesis: true odds ratio is greater than 1
 ## 95 percent confidence interval:
-##  0.314   Inf
+##  0.3135693       Inf
 ## sample estimates:
 ## odds ratio 
-##       6.41</code></pre>
+##   6.408309</code></pre>
 </div>
 <div id="chi-squared-tests" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Chi-Squared Tests</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#chi-square-test">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#odds-ratio">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#chi-square-test" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/inference.html#odds-ratio" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>If the sums of the rows and the sums of the columns in the two-by-two table are fixed, then the hypergeometric distribution and Fisher’s exact test can be used. Otherwise, we must use the chi-squared test.</li>
@@ -302,59 +314,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Because the odds ratio is a ratio of ratios, there is no simple way to use the Central Limit Theorem to compute confidence intervals. There are advanced methods for computing confidence intervals for odds ratios that we do not discuss here.</li>
 </ul>
 <p><em>Code: Chi-squared test</em></p>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="section-7-overview.html#cb271-1" aria-hidden="true"></a><span class="co"># compute overall funding rate</span></span>
-<span id="cb271-2"><a href="section-7-overview.html#cb271-2" aria-hidden="true"></a>funding_rate &lt;-<span class="st"> </span>totals <span class="op">%&gt;%</span></span>
-<span id="cb271-3"><a href="section-7-overview.html#cb271-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">percent_total =</span> (yes_men <span class="op">+</span><span class="st"> </span>yes_women) <span class="op">/</span><span class="st"> </span>(yes_men <span class="op">+</span><span class="st"> </span>no_men <span class="op">+</span><span class="st"> </span>yes_women <span class="op">+</span><span class="st"> </span>no_women)) <span class="op">%&gt;%</span></span>
-<span id="cb271-4"><a href="section-7-overview.html#cb271-4" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>percent_total</span>
-<span id="cb271-5"><a href="section-7-overview.html#cb271-5" aria-hidden="true"></a>funding_rate</span></code></pre></div>
-<pre><code>## [1] 0.165</code></pre>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="section-7-overview.html#cb273-1" aria-hidden="true"></a><span class="co"># construct two-by-two table for observed data</span></span>
-<span id="cb273-2"><a href="section-7-overview.html#cb273-2" aria-hidden="true"></a>two_by_two &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">awarded =</span> <span class="kw">c</span>(<span class="st">&quot;no&quot;</span>, <span class="st">&quot;yes&quot;</span>),</span>
-<span id="cb273-3"><a href="section-7-overview.html#cb273-3" aria-hidden="true"></a>                    <span class="dt">men =</span> <span class="kw">c</span>(totals<span class="op">$</span>no_men, totals<span class="op">$</span>yes_men),</span>
-<span id="cb273-4"><a href="section-7-overview.html#cb273-4" aria-hidden="true"></a>                     <span class="dt">women =</span> <span class="kw">c</span>(totals<span class="op">$</span>no_women, totals<span class="op">$</span>yes_women))</span>
-<span id="cb273-5"><a href="section-7-overview.html#cb273-5" aria-hidden="true"></a>two_by_two</span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="section-7-overview.html#cb284-1" aria-hidden="true"></a><span class="co"># compute overall funding rate</span></span>
+<span id="cb284-2"><a href="section-7-overview.html#cb284-2" aria-hidden="true"></a>funding_rate &lt;-<span class="st"> </span>totals <span class="op">%&gt;%</span></span>
+<span id="cb284-3"><a href="section-7-overview.html#cb284-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">percent_total =</span> (yes_men <span class="op">+</span><span class="st"> </span>yes_women) <span class="op">/</span><span class="st"> </span>(yes_men <span class="op">+</span><span class="st"> </span>no_men <span class="op">+</span><span class="st"> </span>yes_women <span class="op">+</span><span class="st"> </span>no_women)) <span class="op">%&gt;%</span></span>
+<span id="cb284-4"><a href="section-7-overview.html#cb284-4" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>percent_total</span>
+<span id="cb284-5"><a href="section-7-overview.html#cb284-5" aria-hidden="true"></a>funding_rate</span></code></pre></div>
+<pre><code>## [1] 0.1654269</code></pre>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="section-7-overview.html#cb286-1" aria-hidden="true"></a><span class="co"># construct two-by-two table for observed data</span></span>
+<span id="cb286-2"><a href="section-7-overview.html#cb286-2" aria-hidden="true"></a>two_by_two &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">awarded =</span> <span class="kw">c</span>(<span class="st">&quot;no&quot;</span>, <span class="st">&quot;yes&quot;</span>),</span>
+<span id="cb286-3"><a href="section-7-overview.html#cb286-3" aria-hidden="true"></a>                    <span class="dt">men =</span> <span class="kw">c</span>(totals<span class="op">$</span>no_men, totals<span class="op">$</span>yes_men),</span>
+<span id="cb286-4"><a href="section-7-overview.html#cb286-4" aria-hidden="true"></a>                     <span class="dt">women =</span> <span class="kw">c</span>(totals<span class="op">$</span>no_women, totals<span class="op">$</span>yes_women))</span>
+<span id="cb286-5"><a href="section-7-overview.html#cb286-5" aria-hidden="true"></a>two_by_two</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   awarded   men women
 ##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
 ## 1 no       1345  1011
 ## 2 yes       290   177</code></pre>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="section-7-overview.html#cb275-1" aria-hidden="true"></a><span class="co"># compute null hypothesis two-by-two table</span></span>
-<span id="cb275-2"><a href="section-7-overview.html#cb275-2" aria-hidden="true"></a><span class="kw">tibble</span>(<span class="dt">awarded =</span> <span class="kw">c</span>(<span class="st">&quot;no&quot;</span>, <span class="st">&quot;yes&quot;</span>),</span>
-<span id="cb275-3"><a href="section-7-overview.html#cb275-3" aria-hidden="true"></a>           <span class="dt">men =</span> (totals<span class="op">$</span>no_men <span class="op">+</span><span class="st"> </span>totals<span class="op">$</span>yes_men) <span class="op">*</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>funding_rate, funding_rate),</span>
-<span id="cb275-4"><a href="section-7-overview.html#cb275-4" aria-hidden="true"></a>           <span class="dt">women =</span> (totals<span class="op">$</span>no_women <span class="op">+</span><span class="st"> </span>totals<span class="op">$</span>yes_women) <span class="op">*</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>funding_rate, funding_rate))</span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="section-7-overview.html#cb288-1" aria-hidden="true"></a><span class="co"># compute null hypothesis two-by-two table</span></span>
+<span id="cb288-2"><a href="section-7-overview.html#cb288-2" aria-hidden="true"></a><span class="kw">tibble</span>(<span class="dt">awarded =</span> <span class="kw">c</span>(<span class="st">&quot;no&quot;</span>, <span class="st">&quot;yes&quot;</span>),</span>
+<span id="cb288-3"><a href="section-7-overview.html#cb288-3" aria-hidden="true"></a>           <span class="dt">men =</span> (totals<span class="op">$</span>no_men <span class="op">+</span><span class="st"> </span>totals<span class="op">$</span>yes_men) <span class="op">*</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>funding_rate, funding_rate),</span>
+<span id="cb288-4"><a href="section-7-overview.html#cb288-4" aria-hidden="true"></a>           <span class="dt">women =</span> (totals<span class="op">$</span>no_women <span class="op">+</span><span class="st"> </span>totals<span class="op">$</span>yes_women) <span class="op">*</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>funding_rate, funding_rate))</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   awarded   men women
 ##   &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
 ## 1 no      1365.  991.
 ## 2 yes      270.  197.</code></pre>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="section-7-overview.html#cb277-1" aria-hidden="true"></a><span class="co"># chi-squared test</span></span>
-<span id="cb277-2"><a href="section-7-overview.html#cb277-2" aria-hidden="true"></a>chisq_test &lt;-<span class="st"> </span>two_by_two <span class="op">%&gt;%</span></span>
-<span id="cb277-3"><a href="section-7-overview.html#cb277-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>awarded) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">chisq.test</span>()</span>
-<span id="cb277-4"><a href="section-7-overview.html#cb277-4" aria-hidden="true"></a>chisq_test<span class="op">$</span>p.value</span></code></pre></div>
-<pre><code>## [1] 0.0509</code></pre>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="section-7-overview.html#cb290-1" aria-hidden="true"></a><span class="co"># chi-squared test</span></span>
+<span id="cb290-2"><a href="section-7-overview.html#cb290-2" aria-hidden="true"></a>chisq_test &lt;-<span class="st"> </span>two_by_two <span class="op">%&gt;%</span></span>
+<span id="cb290-3"><a href="section-7-overview.html#cb290-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>awarded) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">chisq.test</span>()</span>
+<span id="cb290-4"><a href="section-7-overview.html#cb290-4" aria-hidden="true"></a>chisq_test<span class="op">$</span>p.value</span></code></pre></div>
+<pre><code>## [1] 0.05091372</code></pre>
 <p><em>Code: Odds ratio</em></p>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="section-7-overview.html#cb279-1" aria-hidden="true"></a><span class="co"># odds of getting funding for men</span></span>
-<span id="cb279-2"><a href="section-7-overview.html#cb279-2" aria-hidden="true"></a>odds_men &lt;-<span class="st"> </span>(two_by_two<span class="op">$</span>men[<span class="dv">2</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>men)) <span class="op">/</span></span>
-<span id="cb279-3"><a href="section-7-overview.html#cb279-3" aria-hidden="true"></a><span class="st">        </span>(two_by_two<span class="op">$</span>men[<span class="dv">1</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>men))</span>
-<span id="cb279-4"><a href="section-7-overview.html#cb279-4" aria-hidden="true"></a></span>
-<span id="cb279-5"><a href="section-7-overview.html#cb279-5" aria-hidden="true"></a><span class="co"># odds of getting funding for women</span></span>
-<span id="cb279-6"><a href="section-7-overview.html#cb279-6" aria-hidden="true"></a>odds_women &lt;-<span class="st"> </span>(two_by_two<span class="op">$</span>women[<span class="dv">2</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>women)) <span class="op">/</span></span>
-<span id="cb279-7"><a href="section-7-overview.html#cb279-7" aria-hidden="true"></a><span class="st">        </span>(two_by_two<span class="op">$</span>women[<span class="dv">1</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>women))</span>
-<span id="cb279-8"><a href="section-7-overview.html#cb279-8" aria-hidden="true"></a></span>
-<span id="cb279-9"><a href="section-7-overview.html#cb279-9" aria-hidden="true"></a><span class="co"># odds ratio - how many times larger odds are for men than women</span></span>
-<span id="cb279-10"><a href="section-7-overview.html#cb279-10" aria-hidden="true"></a>odds_men<span class="op">/</span>odds_women</span></code></pre></div>
-<pre><code>## [1] 1.23</code></pre>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="section-7-overview.html#cb292-1" aria-hidden="true"></a><span class="co"># odds of getting funding for men</span></span>
+<span id="cb292-2"><a href="section-7-overview.html#cb292-2" aria-hidden="true"></a>odds_men &lt;-<span class="st"> </span>(two_by_two<span class="op">$</span>men[<span class="dv">2</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>men)) <span class="op">/</span></span>
+<span id="cb292-3"><a href="section-7-overview.html#cb292-3" aria-hidden="true"></a><span class="st">        </span>(two_by_two<span class="op">$</span>men[<span class="dv">1</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>men))</span>
+<span id="cb292-4"><a href="section-7-overview.html#cb292-4" aria-hidden="true"></a></span>
+<span id="cb292-5"><a href="section-7-overview.html#cb292-5" aria-hidden="true"></a><span class="co"># odds of getting funding for women</span></span>
+<span id="cb292-6"><a href="section-7-overview.html#cb292-6" aria-hidden="true"></a>odds_women &lt;-<span class="st"> </span>(two_by_two<span class="op">$</span>women[<span class="dv">2</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>women)) <span class="op">/</span></span>
+<span id="cb292-7"><a href="section-7-overview.html#cb292-7" aria-hidden="true"></a><span class="st">        </span>(two_by_two<span class="op">$</span>women[<span class="dv">1</span>] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(two_by_two<span class="op">$</span>women))</span>
+<span id="cb292-8"><a href="section-7-overview.html#cb292-8" aria-hidden="true"></a></span>
+<span id="cb292-9"><a href="section-7-overview.html#cb292-9" aria-hidden="true"></a><span class="co"># odds ratio - how many times larger odds are for men than women</span></span>
+<span id="cb292-10"><a href="section-7-overview.html#cb292-10" aria-hidden="true"></a>odds_men<span class="op">/</span>odds_women</span></code></pre></div>
+<pre><code>## [1] 1.231554</code></pre>
 <p>Code: p-value and odds ratio responses to increasing sample size</p>
-<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="section-7-overview.html#cb281-1" aria-hidden="true"></a><span class="co"># multiplying all observations by 10 decreases p-value without changing odds ratio</span></span>
-<span id="cb281-2"><a href="section-7-overview.html#cb281-2" aria-hidden="true"></a>two_by_two <span class="op">%&gt;%</span></span>
-<span id="cb281-3"><a href="section-7-overview.html#cb281-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>awarded) <span class="op">%&gt;%</span></span>
-<span id="cb281-4"><a href="section-7-overview.html#cb281-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">men =</span> men<span class="op">*</span><span class="dv">10</span>, <span class="dt">women =</span> women<span class="op">*</span><span class="dv">10</span>) <span class="op">%&gt;%</span></span>
-<span id="cb281-5"><a href="section-7-overview.html#cb281-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">chisq.test</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="section-7-overview.html#cb294-1" aria-hidden="true"></a><span class="co"># multiplying all observations by 10 decreases p-value without changing odds ratio</span></span>
+<span id="cb294-2"><a href="section-7-overview.html#cb294-2" aria-hidden="true"></a>two_by_two <span class="op">%&gt;%</span></span>
+<span id="cb294-3"><a href="section-7-overview.html#cb294-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>awarded) <span class="op">%&gt;%</span></span>
+<span id="cb294-4"><a href="section-7-overview.html#cb294-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">men =</span> men<span class="op">*</span><span class="dv">10</span>, <span class="dt">women =</span> women<span class="op">*</span><span class="dv">10</span>) <span class="op">%&gt;%</span></span>
+<span id="cb294-5"><a href="section-7-overview.html#cb294-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">chisq.test</span>()</span></code></pre></div>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
 ## 
 ## data:  .
-## X-squared = 40, df = 1, p-value = 3e-10</code></pre>
+## X-squared = 39.935, df = 1, p-value = 2.625e-10</code></pre>
 </div>
 <div id="assessment---association-and-chi-squared-tests" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Assessment - Association and Chi-Squared Tests</h2>
@@ -363,73 +375,73 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>Each poll was also assigned a grade by the poll aggregator. Now we’re going to determine if polls rated A- made better predictions than polls rated C-.</p>
 <p>In this exercise, filter the errors data for just polls with grades A- and C-. Calculate the proportion of times each grade of poll predicted the correct winner.</p>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="section-7-overview.html#cb283-1" aria-hidden="true"></a><span class="co"># The &#39;errors&#39; data have already been loaded. Examine them using the `head` function.</span></span>
-<span id="cb283-2"><a href="section-7-overview.html#cb283-2" aria-hidden="true"></a><span class="kw">head</span>(errors)</span></code></pre></div>
-<pre><code>##            state  startdate    enddate                pollster grade spread    lower     upper  error   hit
-## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.00133  0.041331 -0.063  TRUE
-## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.00563  0.105635 -0.004  TRUE
-## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.13913 -0.000875  0.024  TRUE
-## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.00477  0.115226  0.067 FALSE
-## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.06930  0.069295  0.036 FALSE
-## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.08655  0.026554  0.021  TRUE</code></pre>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="section-7-overview.html#cb285-1" aria-hidden="true"></a><span class="co"># Generate an object called &#39;totals&#39; that contains the numbers of good and bad predictions for polls rated A- and C-</span></span>
-<span id="cb285-2"><a href="section-7-overview.html#cb285-2" aria-hidden="true"></a>totals &lt;-<span class="st"> </span>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A-&quot;</span>, <span class="st">&quot;C-&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb285-3"><a href="section-7-overview.html#cb285-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(grade,hit) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">num =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(grade, num)</span></code></pre></div>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="section-7-overview.html#cb296-1" aria-hidden="true"></a><span class="co"># The &#39;errors&#39; data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb296-2"><a href="section-7-overview.html#cb296-2" aria-hidden="true"></a><span class="kw">head</span>(errors)</span></code></pre></div>
+<pre><code>##            state  startdate    enddate                pollster grade spread        lower         upper  error   hit
+## 1     New Mexico 2016-11-06 2016-11-06                Zia Poll  &lt;NA&gt;   0.02 -0.001331221  0.0413312213 -0.063  TRUE
+## 2       Virginia 2016-11-03 2016-11-04   Public Policy Polling    B+   0.05 -0.005634504  0.1056345040 -0.004  TRUE
+## 3           Iowa 2016-11-01 2016-11-04        Selzer &amp; Company    A+  -0.07 -0.139125210 -0.0008747905  0.024  TRUE
+## 4      Wisconsin 2016-10-26 2016-10-31    Marquette University     A   0.06  0.004774064  0.1152259363  0.067 FALSE
+## 5 North Carolina 2016-11-04 2016-11-06           Siena College     A   0.00 -0.069295191  0.0692951912  0.036 FALSE
+## 6        Georgia 2016-11-06 2016-11-06 Landmark Communications     B  -0.03 -0.086553820  0.0265538203  0.021  TRUE</code></pre>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="section-7-overview.html#cb298-1" aria-hidden="true"></a><span class="co"># Generate an object called &#39;totals&#39; that contains the numbers of good and bad predictions for polls rated A- and C-</span></span>
+<span id="cb298-2"><a href="section-7-overview.html#cb298-2" aria-hidden="true"></a>totals &lt;-<span class="st"> </span>errors <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(grade <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A-&quot;</span>, <span class="st">&quot;C-&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb298-3"><a href="section-7-overview.html#cb298-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(grade,hit) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">num =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">spread</span>(grade, num)</span></code></pre></div>
 <pre><code>## `summarise()` regrouping output by &#39;grade&#39; (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="section-7-overview.html#cb287-1" aria-hidden="true"></a>totals</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="section-7-overview.html#cb300-1" aria-hidden="true"></a>totals</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   hit    `C-`  `A-`
 ##   &lt;lgl&gt; &lt;int&gt; &lt;int&gt;
 ## 1 FALSE    50    26
 ## 2 TRUE    311   106</code></pre>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="section-7-overview.html#cb289-1" aria-hidden="true"></a><span class="co"># Print the proportion of hits for grade A- polls to the console</span></span>
-<span id="cb289-2"><a href="section-7-overview.html#cb289-2" aria-hidden="true"></a>p_hitA &lt;-<span class="st"> </span>totals[[<span class="dv">2</span>,<span class="dv">3</span>]]<span class="op">/</span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]])</span>
-<span id="cb289-3"><a href="section-7-overview.html#cb289-3" aria-hidden="true"></a>p_hitA</span></code></pre></div>
-<pre><code>## [1] 0.803</code></pre>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="section-7-overview.html#cb291-1" aria-hidden="true"></a><span class="co"># Print the proportion of hits for grade C- polls to the console</span></span>
-<span id="cb291-2"><a href="section-7-overview.html#cb291-2" aria-hidden="true"></a>p_hitC &lt;-<span class="st"> </span>totals[[<span class="dv">2</span>,<span class="dv">2</span>]]<span class="op">/</span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]])</span>
-<span id="cb291-3"><a href="section-7-overview.html#cb291-3" aria-hidden="true"></a>p_hitC</span></code></pre></div>
-<pre><code>## [1] 0.861</code></pre>
+<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="section-7-overview.html#cb302-1" aria-hidden="true"></a><span class="co"># Print the proportion of hits for grade A- polls to the console</span></span>
+<span id="cb302-2"><a href="section-7-overview.html#cb302-2" aria-hidden="true"></a>p_hitA &lt;-<span class="st"> </span>totals[[<span class="dv">2</span>,<span class="dv">3</span>]]<span class="op">/</span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]])</span>
+<span id="cb302-3"><a href="section-7-overview.html#cb302-3" aria-hidden="true"></a>p_hitA</span></code></pre></div>
+<pre><code>## [1] 0.8030303</code></pre>
+<div class="sourceCode" id="cb304"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb304-1"><a href="section-7-overview.html#cb304-1" aria-hidden="true"></a><span class="co"># Print the proportion of hits for grade C- polls to the console</span></span>
+<span id="cb304-2"><a href="section-7-overview.html#cb304-2" aria-hidden="true"></a>p_hitC &lt;-<span class="st"> </span>totals[[<span class="dv">2</span>,<span class="dv">2</span>]]<span class="op">/</span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]])</span>
+<span id="cb304-3"><a href="section-7-overview.html#cb304-3" aria-hidden="true"></a>p_hitC</span></code></pre></div>
+<pre><code>## [1] 0.8614958</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>We found that the A- polls predicted the correct winner about 80% of the time in their states and C- polls predicted the correct winner about 86% of the time.</li>
 </ol>
 <p>Use a chi-squared test to determine if these proportions are different.</p>
-<div class="sourceCode" id="cb293"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb293-1"><a href="section-7-overview.html#cb293-1" aria-hidden="true"></a><span class="co"># The &#39;totals&#39; data have already been loaded. Examine them using the `head` function.</span></span>
-<span id="cb293-2"><a href="section-7-overview.html#cb293-2" aria-hidden="true"></a><span class="kw">head</span>(totals)</span></code></pre></div>
+<div class="sourceCode" id="cb306"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb306-1"><a href="section-7-overview.html#cb306-1" aria-hidden="true"></a><span class="co"># The &#39;totals&#39; data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb306-2"><a href="section-7-overview.html#cb306-2" aria-hidden="true"></a><span class="kw">head</span>(totals)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   hit    `C-`  `A-`
 ##   &lt;lgl&gt; &lt;int&gt; &lt;int&gt;
 ## 1 FALSE    50    26
 ## 2 TRUE    311   106</code></pre>
-<div class="sourceCode" id="cb295"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb295-1"><a href="section-7-overview.html#cb295-1" aria-hidden="true"></a><span class="co"># Perform a chi-squared test on the hit data. Save the results as an object called &#39;chisq_test&#39;.</span></span>
-<span id="cb295-2"><a href="section-7-overview.html#cb295-2" aria-hidden="true"></a>chisq_test &lt;-<span class="st"> </span>totals <span class="op">%&gt;%</span></span>
-<span id="cb295-3"><a href="section-7-overview.html#cb295-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>hit) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">chisq.test</span>()</span>
-<span id="cb295-4"><a href="section-7-overview.html#cb295-4" aria-hidden="true"></a></span>
-<span id="cb295-5"><a href="section-7-overview.html#cb295-5" aria-hidden="true"></a><span class="co"># Print the p-value of the chi-squared test to the console</span></span>
-<span id="cb295-6"><a href="section-7-overview.html#cb295-6" aria-hidden="true"></a>chisq_test<span class="op">$</span>p.value</span></code></pre></div>
-<pre><code>## [1] 0.147</code></pre>
+<div class="sourceCode" id="cb308"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb308-1"><a href="section-7-overview.html#cb308-1" aria-hidden="true"></a><span class="co"># Perform a chi-squared test on the hit data. Save the results as an object called &#39;chisq_test&#39;.</span></span>
+<span id="cb308-2"><a href="section-7-overview.html#cb308-2" aria-hidden="true"></a>chisq_test &lt;-<span class="st"> </span>totals <span class="op">%&gt;%</span></span>
+<span id="cb308-3"><a href="section-7-overview.html#cb308-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">select</span>(<span class="op">-</span>hit) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">chisq.test</span>()</span>
+<span id="cb308-4"><a href="section-7-overview.html#cb308-4" aria-hidden="true"></a></span>
+<span id="cb308-5"><a href="section-7-overview.html#cb308-5" aria-hidden="true"></a><span class="co"># Print the p-value of the chi-squared test to the console</span></span>
+<span id="cb308-6"><a href="section-7-overview.html#cb308-6" aria-hidden="true"></a>chisq_test<span class="op">$</span>p.value</span></code></pre></div>
+<pre><code>## [1] 0.1467902</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>It doesn’t look like the grade A- polls performed significantly differently than the grade C- polls in their states.</li>
 </ol>
 <p>Calculate the odds ratio to determine the magnitude of the difference in performance between these two grades of polls.</p>
-<div class="sourceCode" id="cb297"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb297-1"><a href="section-7-overview.html#cb297-1" aria-hidden="true"></a><span class="co"># The &#39;totals&#39; data have already been loaded. Examine them using the `head` function.</span></span>
-<span id="cb297-2"><a href="section-7-overview.html#cb297-2" aria-hidden="true"></a><span class="kw">head</span>(totals)</span></code></pre></div>
+<div class="sourceCode" id="cb310"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb310-1"><a href="section-7-overview.html#cb310-1" aria-hidden="true"></a><span class="co"># The &#39;totals&#39; data have already been loaded. Examine them using the `head` function.</span></span>
+<span id="cb310-2"><a href="section-7-overview.html#cb310-2" aria-hidden="true"></a><span class="kw">head</span>(totals)</span></code></pre></div>
 <pre><code>## # A tibble: 2 x 3
 ##   hit    `C-`  `A-`
 ##   &lt;lgl&gt; &lt;int&gt; &lt;int&gt;
 ## 1 FALSE    50    26
 ## 2 TRUE    311   106</code></pre>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="section-7-overview.html#cb299-1" aria-hidden="true"></a><span class="co"># Generate a variable called `odds_C` that contains the odds of getting the prediction right for grade C- polls</span></span>
-<span id="cb299-2"><a href="section-7-overview.html#cb299-2" aria-hidden="true"></a>odds_C &lt;-<span class="st"> </span>(totals[[<span class="dv">2</span>,<span class="dv">2</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]])) <span class="op">/</span><span class="st"> </span></span>
-<span id="cb299-3"><a href="section-7-overview.html#cb299-3" aria-hidden="true"></a><span class="st">  </span>(totals[[<span class="dv">1</span>,<span class="dv">2</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]]))</span>
-<span id="cb299-4"><a href="section-7-overview.html#cb299-4" aria-hidden="true"></a></span>
-<span id="cb299-5"><a href="section-7-overview.html#cb299-5" aria-hidden="true"></a><span class="co"># Generate a variable called `odds_A` that contains the odds of getting the prediction right for grade A- polls</span></span>
-<span id="cb299-6"><a href="section-7-overview.html#cb299-6" aria-hidden="true"></a>odds_A &lt;-<span class="st"> </span>(totals[[<span class="dv">2</span>,<span class="dv">3</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]])) <span class="op">/</span></span>
-<span id="cb299-7"><a href="section-7-overview.html#cb299-7" aria-hidden="true"></a><span class="st">        </span>(totals[[<span class="dv">1</span>,<span class="dv">3</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]]))</span>
-<span id="cb299-8"><a href="section-7-overview.html#cb299-8" aria-hidden="true"></a></span>
-<span id="cb299-9"><a href="section-7-overview.html#cb299-9" aria-hidden="true"></a><span class="co"># Calculate the odds ratio to determine how many times larger the odds ratio is for grade A- polls than grade C- polls</span></span>
-<span id="cb299-10"><a href="section-7-overview.html#cb299-10" aria-hidden="true"></a>odds_A<span class="op">/</span>odds_C</span></code></pre></div>
-<pre><code>## [1] 0.655</code></pre>
+<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="section-7-overview.html#cb312-1" aria-hidden="true"></a><span class="co"># Generate a variable called `odds_C` that contains the odds of getting the prediction right for grade C- polls</span></span>
+<span id="cb312-2"><a href="section-7-overview.html#cb312-2" aria-hidden="true"></a>odds_C &lt;-<span class="st"> </span>(totals[[<span class="dv">2</span>,<span class="dv">2</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]])) <span class="op">/</span><span class="st"> </span></span>
+<span id="cb312-3"><a href="section-7-overview.html#cb312-3" aria-hidden="true"></a><span class="st">  </span>(totals[[<span class="dv">1</span>,<span class="dv">2</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">2</span>]]))</span>
+<span id="cb312-4"><a href="section-7-overview.html#cb312-4" aria-hidden="true"></a></span>
+<span id="cb312-5"><a href="section-7-overview.html#cb312-5" aria-hidden="true"></a><span class="co"># Generate a variable called `odds_A` that contains the odds of getting the prediction right for grade A- polls</span></span>
+<span id="cb312-6"><a href="section-7-overview.html#cb312-6" aria-hidden="true"></a>odds_A &lt;-<span class="st"> </span>(totals[[<span class="dv">2</span>,<span class="dv">3</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]])) <span class="op">/</span></span>
+<span id="cb312-7"><a href="section-7-overview.html#cb312-7" aria-hidden="true"></a><span class="st">        </span>(totals[[<span class="dv">1</span>,<span class="dv">3</span>]] <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(totals[[<span class="dv">3</span>]]))</span>
+<span id="cb312-8"><a href="section-7-overview.html#cb312-8" aria-hidden="true"></a></span>
+<span id="cb312-9"><a href="section-7-overview.html#cb312-9" aria-hidden="true"></a><span class="co"># Calculate the odds ratio to determine how many times larger the odds ratio is for grade A- polls than grade C- polls</span></span>
+<span id="cb312-10"><a href="section-7-overview.html#cb312-10" aria-hidden="true"></a>odds_A<span class="op">/</span>odds_C</span></code></pre></div>
+<pre><code>## [1] 0.6554539</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>We did not find meaningful differences between the poll results from grade A- and grade C- polls in this subset of the data, which only contains polls for about a week before the election.</li>
 </ol>
@@ -462,81 +474,81 @@ D. The p-value is below 0.05 and the odds ratio indicates that grade A- polls pe
 <p><strong>Important definitions</strong></p>
 <p><strong><em>Data Import</em></strong></p>
 <p>Import the <code>brexit_polls</code> polling data from the <strong>dslabs</strong> package and set options for the analysis:</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="section-7-overview.html#cb301-1" aria-hidden="true"></a><span class="co"># suggested options</span></span>
-<span id="cb301-2"><a href="section-7-overview.html#cb301-2" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)</span>
-<span id="cb301-3"><a href="section-7-overview.html#cb301-3" aria-hidden="true"></a></span>
-<span id="cb301-4"><a href="section-7-overview.html#cb301-4" aria-hidden="true"></a><span class="co"># load brexit_polls object</span></span>
-<span id="cb301-5"><a href="section-7-overview.html#cb301-5" aria-hidden="true"></a><span class="kw">data</span>(brexit_polls)</span></code></pre></div>
+<div class="sourceCode" id="cb314"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb314-1"><a href="section-7-overview.html#cb314-1" aria-hidden="true"></a><span class="co"># suggested options</span></span>
+<span id="cb314-2"><a href="section-7-overview.html#cb314-2" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)</span>
+<span id="cb314-3"><a href="section-7-overview.html#cb314-3" aria-hidden="true"></a></span>
+<span id="cb314-4"><a href="section-7-overview.html#cb314-4" aria-hidden="true"></a><span class="co"># load brexit_polls object</span></span>
+<span id="cb314-5"><a href="section-7-overview.html#cb314-5" aria-hidden="true"></a><span class="kw">data</span>(brexit_polls)</span></code></pre></div>
 <p><strong><em>Final Brexit parameters</em></strong></p>
 <p>Define <span class="math inline">\(p = 0.481\)</span> as the actual percent voting “Remain” on the Brexit referendum and <span class="math inline">\(d = 2p - 1 = -0.038\)</span> as the actual spread of the Brexit referendum with “Remain” defined as the positive outcome:</p>
-<div class="sourceCode" id="cb302"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb302-1"><a href="section-7-overview.html#cb302-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.481</span>    <span class="co"># official proportion voting &quot;Remain&quot;</span></span>
-<span id="cb302-2"><a href="section-7-overview.html#cb302-2" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span>    <span class="co"># official spread</span></span></code></pre></div>
+<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="section-7-overview.html#cb315-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.481</span>    <span class="co"># official proportion voting &quot;Remain&quot;</span></span>
+<span id="cb315-2"><a href="section-7-overview.html#cb315-2" aria-hidden="true"></a>d &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span>    <span class="co"># official spread</span></span></code></pre></div>
 <div id="question-1-the-final-proportion-of-voters-choosing-remain-was-p0.481.-consider-a-poll-with-a-sample-of-n1500-voters." class="section level4" number="8.5.0.1">
 <h4><span class="header-section-number">8.5.0.1</span> Question 1: The final proportion of voters choosing “Remain” was p=0.481. Consider a poll with a sample of N=1500 voters.</h4>
 <p>What is the expected total number of voters in the sample choosing “Remain”?</p>
-<div class="sourceCode" id="cb303"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb303-1"><a href="section-7-overview.html#cb303-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.481</span></span>
-<span id="cb303-2"><a href="section-7-overview.html#cb303-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1500</span></span>
-<span id="cb303-3"><a href="section-7-overview.html#cb303-3" aria-hidden="true"></a>N<span class="op">*</span>p</span></code></pre></div>
+<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="section-7-overview.html#cb316-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.481</span></span>
+<span id="cb316-2"><a href="section-7-overview.html#cb316-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1500</span></span>
+<span id="cb316-3"><a href="section-7-overview.html#cb316-3" aria-hidden="true"></a>N<span class="op">*</span>p</span></code></pre></div>
 <pre><code>## [1] 722</code></pre>
 <p>What is the standard error of the total number of voters in the sample choosing “Remain”?</p>
-<div class="sourceCode" id="cb305"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb305-1"><a href="section-7-overview.html#cb305-1" aria-hidden="true"></a><span class="kw">sqrt</span>(N<span class="op">*</span>p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span></code></pre></div>
+<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="section-7-overview.html#cb318-1" aria-hidden="true"></a><span class="kw">sqrt</span>(N<span class="op">*</span>p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span></code></pre></div>
 <pre><code>## [1] 19.4</code></pre>
 <p>What is the expected value of <span class="math inline">\(\hat{X}\)</span>, the proportion of “Remain” voters?</p>
-<div class="sourceCode" id="cb307"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb307-1"><a href="section-7-overview.html#cb307-1" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span>p</span>
-<span id="cb307-2"><a href="section-7-overview.html#cb307-2" aria-hidden="true"></a>X_hat</span></code></pre></div>
+<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="section-7-overview.html#cb320-1" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span>p</span>
+<span id="cb320-2"><a href="section-7-overview.html#cb320-2" aria-hidden="true"></a>X_hat</span></code></pre></div>
 <pre><code>## [1] 0.481</code></pre>
 <p>What is the standard error of <span class="math inline">\(\hat{X}\)</span>, the proportion of “Remain” voters?</p>
-<div class="sourceCode" id="cb309"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb309-1"><a href="section-7-overview.html#cb309-1" aria-hidden="true"></a><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
+<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="section-7-overview.html#cb322-1" aria-hidden="true"></a><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
 <pre><code>## [1] 0.0129</code></pre>
 <p>What is the expected value of <span class="math inline">\(d\)</span>, the spread between the proportion of “Remain” voters and “Leave” voters?</p>
-<div class="sourceCode" id="cb311"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb311-1"><a href="section-7-overview.html#cb311-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span></span></code></pre></div>
+<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="section-7-overview.html#cb324-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span></span></code></pre></div>
 <pre><code>## [1] -0.038</code></pre>
 <p>What is the standard error of <span class="math inline">\(d\)</span>, the spread between the proportion of “Remain” voters and “Leave” voters?</p>
-<div class="sourceCode" id="cb313"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb313-1"><a href="section-7-overview.html#cb313-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="section-7-overview.html#cb326-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
 <pre><code>## [1] 0.0258</code></pre>
 </div>
 <div id="question-2-load-and-inspect-the-brexit_polls-dataset-from-dslabs-which-contains-actual-polling-data-for-the-6-months-before-the-brexit-vote." class="section level4" number="8.5.0.2">
 <h4><span class="header-section-number">8.5.0.2</span> Question 2: Load and inspect the <code>brexit_polls</code> dataset from dslabs, which contains actual polling data for the 6 months before the Brexit vote.</h4>
 <p>Raw proportions of voters preferring “Remain”, “Leave”, and “Undecided” are available (<code>remain</code>, <code>leave</code>, <code>undecided</code>) The spread is also available (<code>spread</code>), which is the difference in the raw proportion of voters choosing “Remain” and the raw proportion choosing “Leave”.</p>
 <p>Calculate <code>x_hat</code> for each poll, the estimate of the proportion of voters choosing “Remain” on the referendum day (<span class="math inline">\(p = 0.481\)</span>), given the observed <code>spread</code> and the relationship <span class="math inline">\(\hat{d} = 2\hat{X} - 1\)</span>. Use <code>mutate()</code> to add a variable <code>x_hat</code> to the `<code>brexit_polls</code> object by filling in the skeleton code below:</p>
-<div class="sourceCode" id="cb315"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb315-1"><a href="section-7-overview.html#cb315-1" aria-hidden="true"></a>brexit_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb315-2"><a href="section-7-overview.html#cb315-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">x_hat =</span> __________)</span></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="section-7-overview.html#cb328-1" aria-hidden="true"></a>brexit_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb328-2"><a href="section-7-overview.html#cb328-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">x_hat =</span> __________)</span></code></pre></div>
 <p>What is the average of the observed spreads (<code>spread</code>)?</p>
-<div class="sourceCode" id="cb316"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb316-1"><a href="section-7-overview.html#cb316-1" aria-hidden="true"></a>brexit_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb316-2"><a href="section-7-overview.html#cb316-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">x_hat =</span> (spread<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb316-3"><a href="section-7-overview.html#cb316-3" aria-hidden="true"></a></span>
-<span id="cb316-4"><a href="section-7-overview.html#cb316-4" aria-hidden="true"></a><span class="kw">mean</span>(brexit_polls<span class="op">$</span>spread)</span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb329-1"><a href="section-7-overview.html#cb329-1" aria-hidden="true"></a>brexit_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb329-2"><a href="section-7-overview.html#cb329-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">mutate</span>(<span class="dt">x_hat =</span> (spread<span class="op">+</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>)</span>
+<span id="cb329-3"><a href="section-7-overview.html#cb329-3" aria-hidden="true"></a></span>
+<span id="cb329-4"><a href="section-7-overview.html#cb329-4" aria-hidden="true"></a><span class="kw">mean</span>(brexit_polls<span class="op">$</span>spread)</span></code></pre></div>
 <pre><code>## [1] 0.0201</code></pre>
 <p>What is the standard deviation of the observed spreads?</p>
-<div class="sourceCode" id="cb318"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb318-1"><a href="section-7-overview.html#cb318-1" aria-hidden="true"></a><span class="kw">sd</span>(brexit_polls<span class="op">$</span>spread)</span></code></pre></div>
+<div class="sourceCode" id="cb331"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb331-1"><a href="section-7-overview.html#cb331-1" aria-hidden="true"></a><span class="kw">sd</span>(brexit_polls<span class="op">$</span>spread)</span></code></pre></div>
 <pre><code>## [1] 0.0588</code></pre>
 <p>What is the average of <code>x_hat</code>, the estimates of the parameter <span class="math inline">\(p\)</span>?</p>
-<div class="sourceCode" id="cb320"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb320-1"><a href="section-7-overview.html#cb320-1" aria-hidden="true"></a><span class="kw">mean</span>(brexit_polls<span class="op">$</span>x_hat)</span></code></pre></div>
+<div class="sourceCode" id="cb333"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb333-1"><a href="section-7-overview.html#cb333-1" aria-hidden="true"></a><span class="kw">mean</span>(brexit_polls<span class="op">$</span>x_hat)</span></code></pre></div>
 <pre><code>## [1] 0.51</code></pre>
 <p>What is the standard deviation of <code>x_hat</code>?</p>
-<div class="sourceCode" id="cb322"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb322-1"><a href="section-7-overview.html#cb322-1" aria-hidden="true"></a><span class="kw">sd</span>(brexit_polls<span class="op">$</span>x_hat)</span></code></pre></div>
+<div class="sourceCode" id="cb335"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb335-1"><a href="section-7-overview.html#cb335-1" aria-hidden="true"></a><span class="kw">sd</span>(brexit_polls<span class="op">$</span>x_hat)</span></code></pre></div>
 <pre><code>## [1] 0.0294</code></pre>
 </div>
 <div id="question-3-confidence-interval-of-a-brexit-poll" class="section level4" number="8.5.0.3">
 <h4><span class="header-section-number">8.5.0.3</span> Question 3: Confidence interval of a Brexit poll</h4>
 <p>Consider the first poll in <code>brexit_polls</code>, a YouGov poll run on the same day as the Brexit referendum:</p>
-<div class="sourceCode" id="cb324"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb324-1"><a href="section-7-overview.html#cb324-1" aria-hidden="true"></a>brexit_polls[<span class="dv">1</span>,]</span></code></pre></div>
+<div class="sourceCode" id="cb337"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb337-1"><a href="section-7-overview.html#cb337-1" aria-hidden="true"></a>brexit_polls[<span class="dv">1</span>,]</span></code></pre></div>
 <pre><code>##    startdate    enddate pollster poll_type samplesize remain leave undecided spread x_hat
 ## 1 2016-06-23 2016-06-23   YouGov    Online       4772   0.52  0.48         0   0.04  0.52</code></pre>
 <p>Use <code>qnorm</code> to compute the 95% confidence interval for <span class="math inline">\(\hat{X}\)</span>.</p>
 <p>What is the lower bound of the 95% confidence interval?</p>
-<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="section-7-overview.html#cb326-1" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="fl">0.52</span></span>
-<span id="cb326-2"><a href="section-7-overview.html#cb326-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">4772</span></span>
-<span id="cb326-3"><a href="section-7-overview.html#cb326-3" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(x_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x_hat)<span class="op">/</span>N)</span>
-<span id="cb326-4"><a href="section-7-overview.html#cb326-4" aria-hidden="true"></a>x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat</span></code></pre></div>
+<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="section-7-overview.html#cb339-1" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="fl">0.52</span></span>
+<span id="cb339-2"><a href="section-7-overview.html#cb339-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">4772</span></span>
+<span id="cb339-3"><a href="section-7-overview.html#cb339-3" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(x_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x_hat)<span class="op">/</span>N)</span>
+<span id="cb339-4"><a href="section-7-overview.html#cb339-4" aria-hidden="true"></a>x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat</span></code></pre></div>
 <pre><code>## [1] 0.506</code></pre>
 <p>What is the upper bound of the 95% confidence interval?</p>
-<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="section-7-overview.html#cb328-1" aria-hidden="true"></a>x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat</span></code></pre></div>
+<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="section-7-overview.html#cb341-1" aria-hidden="true"></a>x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat</span></code></pre></div>
 <pre><code>## [1] 0.534</code></pre>
 <p>Does the 95% confidence interval predict a winner (does not cover <span class="math inline">\(p = 0.5\)</span>)? Does the 95% confidence interval cover the true value of <span class="math inline">\(p\)</span> observed during the referendum?</p>
-<div class="sourceCode" id="cb330"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb330-1"><a href="section-7-overview.html#cb330-1" aria-hidden="true"></a><span class="op">!</span><span class="kw">between</span>(<span class="fl">0.5</span>, x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat, x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat)    <span class="co"># predicts winner</span></span></code></pre></div>
+<div class="sourceCode" id="cb343"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb343-1"><a href="section-7-overview.html#cb343-1" aria-hidden="true"></a><span class="op">!</span><span class="kw">between</span>(<span class="fl">0.5</span>, x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat, x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat)    <span class="co"># predicts winner</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb332"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb332-1"><a href="section-7-overview.html#cb332-1" aria-hidden="true"></a><span class="kw">between</span>(<span class="fl">0.481</span>, x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat, x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat)    <span class="co"># does not cover p</span></span></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="section-7-overview.html#cb345-1" aria-hidden="true"></a><span class="kw">between</span>(<span class="fl">0.481</span>, x_hat <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat, x_hat <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_hat)    <span class="co"># does not cover p</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -558,34 +570,34 @@ D. The interval does not predict a winner and does not cover the true value of <
 <p>First, use <code>mutate()</code> to calculate a plug-in estimate <code>se_x_hat</code> for the standard error of the estimate <span class="math inline">\(\hat{\mbox{SE}}[X]\)</span> for each poll given its sample size and value of <span class="math inline">\(\hat{X}\)</span> (<code>x_hat</code>). Second, use <code>mutate()</code> to calculate an estimate for the standard error of the spread for each poll given the value of <code>se_x_hat</code>.
 Then, use <code>mutate()</code> to calculate upper and lower bounds for 95% confidence intervals of the spread. Last, add a column <code>hit</code> that indicates whether the confidence interval for each poll covers the correct spread <span class="math inline">\(d = -0.038\)</span>.</p>
 <p>How many polls are in <code>june_polls</code>?</p>
-<div class="sourceCode" id="cb334"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb334-1"><a href="section-7-overview.html#cb334-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb334-2"><a href="section-7-overview.html#cb334-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">filter</span>(enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-06-01&quot;</span>)</span>
-<span id="cb334-3"><a href="section-7-overview.html#cb334-3" aria-hidden="true"></a>    <span class="kw">nrow</span>(june_polls)</span></code></pre></div>
+<div class="sourceCode" id="cb347"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb347-1"><a href="section-7-overview.html#cb347-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb347-2"><a href="section-7-overview.html#cb347-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">filter</span>(enddate <span class="op">&gt;=</span><span class="st"> &quot;2016-06-01&quot;</span>)</span>
+<span id="cb347-3"><a href="section-7-overview.html#cb347-3" aria-hidden="true"></a>    <span class="kw">nrow</span>(june_polls)</span></code></pre></div>
 <pre><code>## [1] 32</code></pre>
 <p>What proportion of polls have a confidence interval that covers the value 0?</p>
-<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="section-7-overview.html#cb336-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
-<span id="cb336-2"><a href="section-7-overview.html#cb336-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">mutate</span>(<span class="dt">se_x_hat =</span> <span class="kw">sqrt</span>(x_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x_hat)<span class="op">/</span>samplesize),</span>
-<span id="cb336-3"><a href="section-7-overview.html#cb336-3" aria-hidden="true"></a>                     <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span>se_x_hat,</span>
-<span id="cb336-4"><a href="section-7-overview.html#cb336-4" aria-hidden="true"></a>                     <span class="dt">ci_lower_spread =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_spread,</span>
-<span id="cb336-5"><a href="section-7-overview.html#cb336-5" aria-hidden="true"></a>                     <span class="dt">ci_upper_spread =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_spread)</span>
-<span id="cb336-6"><a href="section-7-overview.html#cb336-6" aria-hidden="true"></a>          <span class="kw">mean</span>(june_polls<span class="op">$</span>ci_lower_spread <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>june_polls<span class="op">$</span>ci_upper_spread <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb349"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb349-1"><a href="section-7-overview.html#cb349-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
+<span id="cb349-2"><a href="section-7-overview.html#cb349-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">mutate</span>(<span class="dt">se_x_hat =</span> <span class="kw">sqrt</span>(x_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x_hat)<span class="op">/</span>samplesize),</span>
+<span id="cb349-3"><a href="section-7-overview.html#cb349-3" aria-hidden="true"></a>                     <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span>se_x_hat,</span>
+<span id="cb349-4"><a href="section-7-overview.html#cb349-4" aria-hidden="true"></a>                     <span class="dt">ci_lower_spread =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_spread,</span>
+<span id="cb349-5"><a href="section-7-overview.html#cb349-5" aria-hidden="true"></a>                     <span class="dt">ci_upper_spread =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>)<span class="op">*</span>se_spread)</span>
+<span id="cb349-6"><a href="section-7-overview.html#cb349-6" aria-hidden="true"></a>          <span class="kw">mean</span>(june_polls<span class="op">$</span>ci_lower_spread <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span> <span class="op">&amp;</span><span class="st"> </span>june_polls<span class="op">$</span>ci_upper_spread <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0.625</code></pre>
 <p>What proportion of polls predict “Remain” (confidence interval entirely above 0)?</p>
-<div class="sourceCode" id="cb338"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb338-1"><a href="section-7-overview.html#cb338-1" aria-hidden="true"></a><span class="kw">mean</span>(june_polls<span class="op">$</span>ci_lower_spread <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb351"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb351-1"><a href="section-7-overview.html#cb351-1" aria-hidden="true"></a><span class="kw">mean</span>(june_polls<span class="op">$</span>ci_lower_spread <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0.125</code></pre>
 <p>What proportion of polls have a confidence interval covering the true value of <span class="math inline">\(d\)</span>?</p>
-<div class="sourceCode" id="cb340"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb340-1"><a href="section-7-overview.html#cb340-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
-<span id="cb340-2"><a href="section-7-overview.html#cb340-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">hit =</span> (<span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span> <span class="op">&gt;</span><span class="st"> </span>ci_lower_spread) <span class="op">&amp;</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span> <span class="op">&lt;</span><span class="st"> </span>ci_upper_spread))</span>
-<span id="cb340-3"><a href="section-7-overview.html#cb340-3" aria-hidden="true"></a>    <span class="kw">mean</span>(june_polls<span class="op">$</span>hit)</span></code></pre></div>
+<div class="sourceCode" id="cb353"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb353-1"><a href="section-7-overview.html#cb353-1" aria-hidden="true"></a>june_polls &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
+<span id="cb353-2"><a href="section-7-overview.html#cb353-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">hit =</span> (<span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span> <span class="op">&gt;</span><span class="st"> </span>ci_lower_spread) <span class="op">&amp;</span><span class="st"> </span>(<span class="dv">2</span><span class="op">*</span>p<span class="dv">-1</span> <span class="op">&lt;</span><span class="st"> </span>ci_upper_spread))</span>
+<span id="cb353-3"><a href="section-7-overview.html#cb353-3" aria-hidden="true"></a>    <span class="kw">mean</span>(june_polls<span class="op">$</span>hit)</span></code></pre></div>
 <pre><code>## [1] 0.562</code></pre>
 </div>
 <div id="question-5-group-and-summarize-the-june_polls-object-by-pollster-to-find-the-proportion-of-hits-for-each-pollster-and-the-number-of-polls-per-pollster." class="section level4" number="8.6.0.2">
 <h4><span class="header-section-number">8.6.0.2</span> Question 5: Group and summarize the <code>june_polls</code> object by pollster to find the proportion of hits for each pollster and the number of polls per pollster.</h4>
 <p>Use <code>arrange()</code> to sort by hit rate.</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="section-7-overview.html#cb342-1" aria-hidden="true"></a>june_polls <span class="op">%&gt;%</span></span>
-<span id="cb342-2"><a href="section-7-overview.html#cb342-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
-<span id="cb342-3"><a href="section-7-overview.html#cb342-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">hit_rate=</span><span class="kw">mean</span>(hit), <span class="kw">n</span>()) <span class="op">%&gt;%</span></span>
-<span id="cb342-4"><a href="section-7-overview.html#cb342-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">arrange</span>(hit_rate)</span></code></pre></div>
+<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="section-7-overview.html#cb355-1" aria-hidden="true"></a>june_polls <span class="op">%&gt;%</span></span>
+<span id="cb355-2"><a href="section-7-overview.html#cb355-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">group_by</span>(pollster) <span class="op">%&gt;%</span></span>
+<span id="cb355-3"><a href="section-7-overview.html#cb355-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">hit_rate=</span><span class="kw">mean</span>(hit), <span class="kw">n</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb355-4"><a href="section-7-overview.html#cb355-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">arrange</span>(hit_rate)</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 12 x 3
 ##    pollster           hit_rate `n()`
@@ -619,9 +631,9 @@ E. The results are consistent with a large general bias that affects all pollste
 <div id="question-6-boxplot-of-brexit-polls-by-poll-type" class="section level4" number="8.6.0.3">
 <h4><span class="header-section-number">8.6.0.3</span> Question 6: Boxplot of Brexit polls by poll type</h4>
 <p>Make a boxplot of the spread in <code>june_polls</code> by poll type.</p>
-<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="section-7-overview.html#cb345-1" aria-hidden="true"></a>june_polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
-<span id="cb345-2"><a href="section-7-overview.html#cb345-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(poll_type,spread)) <span class="op">+</span></span>
-<span id="cb345-3"><a href="section-7-overview.html#cb345-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="section-7-overview.html#cb358-1" aria-hidden="true"></a>june_polls <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
+<span id="cb358-2"><a href="section-7-overview.html#cb358-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(poll_type,spread)) <span class="op">+</span></span>
+<span id="cb358-3"><a href="section-7-overview.html#cb358-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_boxplot</span>()</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-117-1.png" width="672" /></p>
 <p>Which of the following are TRUE?</p>
 <ul class="task-list">
@@ -641,30 +653,30 @@ E. Poll type introduces a bias that affects poll results.</li>
 <h4><span class="header-section-number">8.6.0.4</span> Question 7: Calculate the confidence intervals of the spread combined across all polls in <code>june_polls</code>, grouping by poll type.</h4>
 <p>Recall that to determine the standard error of the spread, you will need to double the standard error of the estimate.</p>
 <p>Use this code (which determines the total sample size per poll type, gives each spread estimate a weight based on the poll’s sample size, and adds an estimate of p from the combined spread) to begin your analysis:</p>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="section-7-overview.html#cb346-1" aria-hidden="true"></a>combined_by_type &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
-<span id="cb346-2"><a href="section-7-overview.html#cb346-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
-<span id="cb346-3"><a href="section-7-overview.html#cb346-3" aria-hidden="true"></a><span class="st">        </span><span class="kw">summarize</span>(<span class="dt">N =</span> <span class="kw">sum</span>(samplesize),</span>
-<span id="cb346-4"><a href="section-7-overview.html#cb346-4" aria-hidden="true"></a>                  <span class="dt">spread =</span> <span class="kw">sum</span>(spread<span class="op">*</span>samplesize)<span class="op">/</span>N,</span>
-<span id="cb346-5"><a href="section-7-overview.html#cb346-5" aria-hidden="true"></a>                  <span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="section-7-overview.html#cb359-1" aria-hidden="true"></a>combined_by_type &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
+<span id="cb359-2"><a href="section-7-overview.html#cb359-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
+<span id="cb359-3"><a href="section-7-overview.html#cb359-3" aria-hidden="true"></a><span class="st">        </span><span class="kw">summarize</span>(<span class="dt">N =</span> <span class="kw">sum</span>(samplesize),</span>
+<span id="cb359-4"><a href="section-7-overview.html#cb359-4" aria-hidden="true"></a>                  <span class="dt">spread =</span> <span class="kw">sum</span>(spread<span class="op">*</span>samplesize)<span class="op">/</span>N,</span>
+<span id="cb359-5"><a href="section-7-overview.html#cb359-5" aria-hidden="true"></a>                  <span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <p>#What is the lower bound of the 95% confidence interval for online voters?</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="section-7-overview.html#cb348-1" aria-hidden="true"></a>combined_by_type &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
-<span id="cb348-2"><a href="section-7-overview.html#cb348-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
-<span id="cb348-3"><a href="section-7-overview.html#cb348-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">N =</span> <span class="kw">sum</span>(samplesize),</span>
-<span id="cb348-4"><a href="section-7-overview.html#cb348-4" aria-hidden="true"></a>              <span class="dt">spread =</span> <span class="kw">sum</span>(spread<span class="op">*</span>samplesize)<span class="op">/</span>N,</span>
-<span id="cb348-5"><a href="section-7-overview.html#cb348-5" aria-hidden="true"></a>              <span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>,</span>
-<span id="cb348-6"><a href="section-7-overview.html#cb348-6" aria-hidden="true"></a>              <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span>N),</span>
-<span id="cb348-7"><a href="section-7-overview.html#cb348-7" aria-hidden="true"></a>              <span class="dt">spread_lower =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
-<span id="cb348-8"><a href="section-7-overview.html#cb348-8" aria-hidden="true"></a>              <span class="dt">spread_upper =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread)</span></code></pre></div>
+<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="section-7-overview.html#cb361-1" aria-hidden="true"></a>combined_by_type &lt;-<span class="st"> </span>june_polls <span class="op">%&gt;%</span></span>
+<span id="cb361-2"><a href="section-7-overview.html#cb361-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
+<span id="cb361-3"><a href="section-7-overview.html#cb361-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">N =</span> <span class="kw">sum</span>(samplesize),</span>
+<span id="cb361-4"><a href="section-7-overview.html#cb361-4" aria-hidden="true"></a>              <span class="dt">spread =</span> <span class="kw">sum</span>(spread<span class="op">*</span>samplesize)<span class="op">/</span>N,</span>
+<span id="cb361-5"><a href="section-7-overview.html#cb361-5" aria-hidden="true"></a>              <span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>,</span>
+<span id="cb361-6"><a href="section-7-overview.html#cb361-6" aria-hidden="true"></a>              <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span>N),</span>
+<span id="cb361-7"><a href="section-7-overview.html#cb361-7" aria-hidden="true"></a>              <span class="dt">spread_lower =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
+<span id="cb361-8"><a href="section-7-overview.html#cb361-8" aria-hidden="true"></a>              <span class="dt">spread_upper =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread)</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="section-7-overview.html#cb350-1" aria-hidden="true"></a>combined_by_type <span class="op">%&gt;%</span></span>
-<span id="cb350-2"><a href="section-7-overview.html#cb350-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb350-3"><a href="section-7-overview.html#cb350-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(spread_lower)</span></code></pre></div>
+<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="section-7-overview.html#cb363-1" aria-hidden="true"></a>combined_by_type <span class="op">%&gt;%</span></span>
+<span id="cb363-2"><a href="section-7-overview.html#cb363-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb363-3"><a href="section-7-overview.html#cb363-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(spread_lower)</span></code></pre></div>
 <pre><code>## [1] -0.0165</code></pre>
 <p>What is the upper bound of the 95% confidence interval for online voters?</p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="section-7-overview.html#cb352-1" aria-hidden="true"></a>combined_by_type <span class="op">%&gt;%</span></span>
-<span id="cb352-2"><a href="section-7-overview.html#cb352-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb352-3"><a href="section-7-overview.html#cb352-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(spread_upper)</span></code></pre></div>
+<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="section-7-overview.html#cb365-1" aria-hidden="true"></a>combined_by_type <span class="op">%&gt;%</span></span>
+<span id="cb365-2"><a href="section-7-overview.html#cb365-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb365-3"><a href="section-7-overview.html#cb365-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(spread_upper)</span></code></pre></div>
 <pre><code>## [1] 0.00165</code></pre>
 </div>
 <div id="question-8-interpret-the-confidence-intervals-for-the-combined-spreads-for-each-poll-type-calculated-in-the-previous-problem." class="section level4" number="8.6.0.5">
@@ -689,29 +701,29 @@ E. Neither confidence interval covers the true value of 𝑑=−0.038.</li>
 <h2><span class="header-section-number">8.7</span> Brexit poll analysis - Part 3</h2>
 <div id="question-9-define-brexit_hit-with-the-following-code-which-computes-the-confidence-intervals-for-all-brexit-polls-in-2016-and-then-calculates-whether-the-confidence-interval-covers-the-actual-value-of-the-spread-d--0.038" class="section level4" number="8.7.0.1">
 <h4><span class="header-section-number">8.7.0.1</span> Question 9: Define <code>brexit_hit</code>, with the following code, which computes the confidence intervals for all Brexit polls in 2016 and then calculates whether the confidence interval covers the actual value of the spread <span class="math inline">\(d = -0.038\)</span>:</h4>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="section-7-overview.html#cb354-1" aria-hidden="true"></a>brexit_hit &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb354-2"><a href="section-7-overview.html#cb354-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>,</span>
-<span id="cb354-3"><a href="section-7-overview.html#cb354-3" aria-hidden="true"></a>         <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span>samplesize),</span>
-<span id="cb354-4"><a href="section-7-overview.html#cb354-4" aria-hidden="true"></a>         <span class="dt">spread_lower =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
-<span id="cb354-5"><a href="section-7-overview.html#cb354-5" aria-hidden="true"></a>         <span class="dt">spread_upper =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
-<span id="cb354-6"><a href="section-7-overview.html#cb354-6" aria-hidden="true"></a>         <span class="dt">hit =</span> spread_lower <span class="op">&lt;</span><span class="st"> </span>d <span class="op">&amp;</span><span class="st"> </span>spread_upper <span class="op">&gt;</span><span class="st"> </span>d) <span class="op">%&gt;%</span></span>
-<span id="cb354-7"><a href="section-7-overview.html#cb354-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(poll_type, hit)</span></code></pre></div>
+<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="section-7-overview.html#cb367-1" aria-hidden="true"></a>brexit_hit &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb367-2"><a href="section-7-overview.html#cb367-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">p_hat =</span> (spread <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)<span class="op">/</span><span class="dv">2</span>,</span>
+<span id="cb367-3"><a href="section-7-overview.html#cb367-3" aria-hidden="true"></a>         <span class="dt">se_spread =</span> <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(p_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p_hat)<span class="op">/</span>samplesize),</span>
+<span id="cb367-4"><a href="section-7-overview.html#cb367-4" aria-hidden="true"></a>         <span class="dt">spread_lower =</span> spread <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
+<span id="cb367-5"><a href="section-7-overview.html#cb367-5" aria-hidden="true"></a>         <span class="dt">spread_upper =</span> spread <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(.<span class="dv">975</span>)<span class="op">*</span>se_spread,</span>
+<span id="cb367-6"><a href="section-7-overview.html#cb367-6" aria-hidden="true"></a>         <span class="dt">hit =</span> spread_lower <span class="op">&lt;</span><span class="st"> </span>d <span class="op">&amp;</span><span class="st"> </span>spread_upper <span class="op">&gt;</span><span class="st"> </span>d) <span class="op">%&gt;%</span></span>
+<span id="cb367-7"><a href="section-7-overview.html#cb367-7" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(poll_type, hit)</span></code></pre></div>
 <p>Use <code>brexit_hit</code> to make a two-by-two table of poll type and hit status.
 Then use the <code>chisq.test()</code> function to perform a chi-squared test to determine whether the difference in hit rate is significant.</p>
 <p>What is the p-value of the chi-squared test comparing the hit rate of online and telephone polls?</p>
-<div class="sourceCode" id="cb355"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb355-1"><a href="section-7-overview.html#cb355-1" aria-hidden="true"></a>brexit_chisq &lt;-<span class="st"> </span><span class="kw">table</span>(brexit_hit<span class="op">$</span>poll_type, brexit_hit<span class="op">$</span>hit)</span>
-<span id="cb355-2"><a href="section-7-overview.html#cb355-2" aria-hidden="true"></a><span class="kw">chisq.test</span>(brexit_chisq)<span class="op">$</span>p.value</span></code></pre></div>
+<div class="sourceCode" id="cb368"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb368-1"><a href="section-7-overview.html#cb368-1" aria-hidden="true"></a>brexit_chisq &lt;-<span class="st"> </span><span class="kw">table</span>(brexit_hit<span class="op">$</span>poll_type, brexit_hit<span class="op">$</span>hit)</span>
+<span id="cb368-2"><a href="section-7-overview.html#cb368-2" aria-hidden="true"></a><span class="kw">chisq.test</span>(brexit_chisq)<span class="op">$</span>p.value</span></code></pre></div>
 <pre><code>## [1] 0.00101</code></pre>
 <p>Determine which poll type has a higher probability of producing a confidence interval that covers the correct value of the spread. Also determine whether this difference is statistically significant at a p-value cutoff of 0.05.</p>
-<div class="sourceCode" id="cb357"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb357-1"><a href="section-7-overview.html#cb357-1" aria-hidden="true"></a><span class="co"># online &gt; telephone</span></span>
-<span id="cb357-2"><a href="section-7-overview.html#cb357-2" aria-hidden="true"></a>hit_rate &lt;-<span class="st"> </span>brexit_hit <span class="op">%&gt;%</span></span>
-<span id="cb357-3"><a href="section-7-overview.html#cb357-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
-<span id="cb357-4"><a href="section-7-overview.html#cb357-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(hit))</span></code></pre></div>
+<div class="sourceCode" id="cb370"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb370-1"><a href="section-7-overview.html#cb370-1" aria-hidden="true"></a><span class="co"># online &gt; telephone</span></span>
+<span id="cb370-2"><a href="section-7-overview.html#cb370-2" aria-hidden="true"></a>hit_rate &lt;-<span class="st"> </span>brexit_hit <span class="op">%&gt;%</span></span>
+<span id="cb370-3"><a href="section-7-overview.html#cb370-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(poll_type) <span class="op">%&gt;%</span></span>
+<span id="cb370-4"><a href="section-7-overview.html#cb370-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">avg =</span> <span class="kw">mean</span>(hit))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
-<div class="sourceCode" id="cb359"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb359-1"><a href="section-7-overview.html#cb359-1" aria-hidden="true"></a>hit_rate<span class="op">$</span>avg[hit_rate<span class="op">$</span>poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>] <span class="op">&gt;</span><span class="st"> </span>hit_rate<span class="op">$</span>avg[hit_rate<span class="op">$</span>poll_type <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="section-7-overview.html#cb372-1" aria-hidden="true"></a>hit_rate<span class="op">$</span>avg[hit_rate<span class="op">$</span>poll_type <span class="op">==</span><span class="st"> &quot;Online&quot;</span>] <span class="op">&gt;</span><span class="st"> </span>hit_rate<span class="op">$</span>avg[hit_rate<span class="op">$</span>poll_type <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span>]</span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<div class="sourceCode" id="cb361"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb361-1"><a href="section-7-overview.html#cb361-1" aria-hidden="true"></a><span class="co"># statistically significant</span></span>
-<span id="cb361-2"><a href="section-7-overview.html#cb361-2" aria-hidden="true"></a><span class="kw">chisq.test</span>(brexit_chisq)<span class="op">$</span>p.value <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></span></code></pre></div>
+<div class="sourceCode" id="cb374"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb374-1"><a href="section-7-overview.html#cb374-1" aria-hidden="true"></a><span class="co"># statistically significant</span></span>
+<span id="cb374-2"><a href="section-7-overview.html#cb374-2" aria-hidden="true"></a><span class="kw">chisq.test</span>(brexit_chisq)<span class="op">$</span>p.value <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <p>Which of the following is true?</p>
 <ul class="task-list">
@@ -728,37 +740,37 @@ D. Telephone polls are more likely to cover the correct value of the spread, but
 <div id="question-10-use-the-two-by-two-table-constructed-in-the-previous-exercise-to-calculate-the-odds-ratio-between-the-hit-rate-of-online-and-telephone-polls-to-determine-the-magnitude-of-the-difference-in-performance-between-the-poll-types." class="section level4" number="8.7.0.2">
 <h4><span class="header-section-number">8.7.0.2</span> Question 10: Use the two-by-two table constructed in the previous exercise to calculate the odds ratio between the hit rate of online and telephone polls to determine the magnitude of the difference in performance between the poll types.</h4>
 <p>Calculate the odds that an online poll generates a confidence interval that covers the actual value of the spread.</p>
-<div class="sourceCode" id="cb363"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb363-1"><a href="section-7-overview.html#cb363-1" aria-hidden="true"></a><span class="co"># from previous question</span></span>
-<span id="cb363-2"><a href="section-7-overview.html#cb363-2" aria-hidden="true"></a>brexit_chisq &lt;-<span class="st"> </span><span class="kw">table</span>(brexit_hit<span class="op">$</span>poll_type, brexit_hit<span class="op">$</span>hit)</span>
-<span id="cb363-3"><a href="section-7-overview.html#cb363-3" aria-hidden="true"></a></span>
-<span id="cb363-4"><a href="section-7-overview.html#cb363-4" aria-hidden="true"></a><span class="co"># convert to data frame</span></span>
-<span id="cb363-5"><a href="section-7-overview.html#cb363-5" aria-hidden="true"></a>chisq_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(brexit_chisq)</span>
-<span id="cb363-6"><a href="section-7-overview.html#cb363-6" aria-hidden="true"></a></span>
-<span id="cb363-7"><a href="section-7-overview.html#cb363-7" aria-hidden="true"></a>online_true &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Online&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;TRUE&quot;</span>]</span>
-<span id="cb363-8"><a href="section-7-overview.html#cb363-8" aria-hidden="true"></a>online_false &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Online&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;FALSE&quot;</span>]</span>
-<span id="cb363-9"><a href="section-7-overview.html#cb363-9" aria-hidden="true"></a></span>
-<span id="cb363-10"><a href="section-7-overview.html#cb363-10" aria-hidden="true"></a>online_odds &lt;-<span class="st"> </span>online_true<span class="op">/</span>online_false</span>
-<span id="cb363-11"><a href="section-7-overview.html#cb363-11" aria-hidden="true"></a>online_odds</span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb376-1"><a href="section-7-overview.html#cb376-1" aria-hidden="true"></a><span class="co"># from previous question</span></span>
+<span id="cb376-2"><a href="section-7-overview.html#cb376-2" aria-hidden="true"></a>brexit_chisq &lt;-<span class="st"> </span><span class="kw">table</span>(brexit_hit<span class="op">$</span>poll_type, brexit_hit<span class="op">$</span>hit)</span>
+<span id="cb376-3"><a href="section-7-overview.html#cb376-3" aria-hidden="true"></a></span>
+<span id="cb376-4"><a href="section-7-overview.html#cb376-4" aria-hidden="true"></a><span class="co"># convert to data frame</span></span>
+<span id="cb376-5"><a href="section-7-overview.html#cb376-5" aria-hidden="true"></a>chisq_df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(brexit_chisq)</span>
+<span id="cb376-6"><a href="section-7-overview.html#cb376-6" aria-hidden="true"></a></span>
+<span id="cb376-7"><a href="section-7-overview.html#cb376-7" aria-hidden="true"></a>online_true &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Online&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;TRUE&quot;</span>]</span>
+<span id="cb376-8"><a href="section-7-overview.html#cb376-8" aria-hidden="true"></a>online_false &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Online&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;FALSE&quot;</span>]</span>
+<span id="cb376-9"><a href="section-7-overview.html#cb376-9" aria-hidden="true"></a></span>
+<span id="cb376-10"><a href="section-7-overview.html#cb376-10" aria-hidden="true"></a>online_odds &lt;-<span class="st"> </span>online_true<span class="op">/</span>online_false</span>
+<span id="cb376-11"><a href="section-7-overview.html#cb376-11" aria-hidden="true"></a>online_odds</span></code></pre></div>
 <pre><code>## [1] 1.3</code></pre>
 <p>Calculate the odds that a telephone poll generates a confidence interval that covers the actual value of the spread.</p>
-<div class="sourceCode" id="cb365"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb365-1"><a href="section-7-overview.html#cb365-1" aria-hidden="true"></a>phone_true &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;TRUE&quot;</span>]</span>
-<span id="cb365-2"><a href="section-7-overview.html#cb365-2" aria-hidden="true"></a>phone_false &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;FALSE&quot;</span>]</span>
-<span id="cb365-3"><a href="section-7-overview.html#cb365-3" aria-hidden="true"></a></span>
-<span id="cb365-4"><a href="section-7-overview.html#cb365-4" aria-hidden="true"></a>phone_odds &lt;-<span class="st"> </span>phone_true<span class="op">/</span>phone_false</span>
-<span id="cb365-5"><a href="section-7-overview.html#cb365-5" aria-hidden="true"></a>phone_odds</span></code></pre></div>
+<div class="sourceCode" id="cb378"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb378-1"><a href="section-7-overview.html#cb378-1" aria-hidden="true"></a>phone_true &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;TRUE&quot;</span>]</span>
+<span id="cb378-2"><a href="section-7-overview.html#cb378-2" aria-hidden="true"></a>phone_false &lt;-<span class="st"> </span>chisq_df<span class="op">$</span>Freq[chisq_df<span class="op">$</span>Var1 <span class="op">==</span><span class="st"> &quot;Telephone&quot;</span> <span class="op">&amp;</span><span class="st"> </span>chisq_df<span class="op">$</span>Var2 <span class="op">==</span><span class="st"> &quot;FALSE&quot;</span>]</span>
+<span id="cb378-3"><a href="section-7-overview.html#cb378-3" aria-hidden="true"></a></span>
+<span id="cb378-4"><a href="section-7-overview.html#cb378-4" aria-hidden="true"></a>phone_odds &lt;-<span class="st"> </span>phone_true<span class="op">/</span>phone_false</span>
+<span id="cb378-5"><a href="section-7-overview.html#cb378-5" aria-hidden="true"></a>phone_odds</span></code></pre></div>
 <pre><code>## [1] 0.312</code></pre>
 <p>Calculate the odds ratio to determine how many times larger the odds are for online polls to hit versus telephone polls.</p>
-<div class="sourceCode" id="cb367"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb367-1"><a href="section-7-overview.html#cb367-1" aria-hidden="true"></a>online_odds<span class="op">/</span>phone_odds</span></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb380-1"><a href="section-7-overview.html#cb380-1" aria-hidden="true"></a>online_odds<span class="op">/</span>phone_odds</span></code></pre></div>
 <pre><code>## [1] 4.15</code></pre>
 </div>
 <div id="question-11-use-brexit_polls-to-make-a-plot-of-the-spread-spread-over-time-enddate-colored-by-poll-type-poll_type." class="section level4" number="8.7.0.3">
 <h4><span class="header-section-number">8.7.0.3</span> Question 11: Use <code>brexit_polls</code> to make a plot of the spread (<code>spread</code>) over time (<code>enddate</code>) colored by poll type (<code>poll_type</code>).</h4>
 <p>Use <code>geom_smooth()</code> with <code>method = "loess"</code> to plot smooth curves with a span of 0.4. Include the individual data points colored by poll type. Add a horizontal line indicating the final value of <span class="math inline">\(d = -.038\)</span>.</p>
-<div class="sourceCode" id="cb369"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb369-1"><a href="section-7-overview.html#cb369-1" aria-hidden="true"></a>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb369-2"><a href="section-7-overview.html#cb369-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, spread, <span class="dt">color =</span> poll_type)) <span class="op">+</span></span>
-<span id="cb369-3"><a href="section-7-overview.html#cb369-3" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.4</span>) <span class="op">+</span></span>
-<span id="cb369-4"><a href="section-7-overview.html#cb369-4" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb369-5"><a href="section-7-overview.html#cb369-5" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="fl">-.038</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb382"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb382-1"><a href="section-7-overview.html#cb382-1" aria-hidden="true"></a>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb382-2"><a href="section-7-overview.html#cb382-2" aria-hidden="true"></a><span class="st">              </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, spread, <span class="dt">color =</span> poll_type)) <span class="op">+</span></span>
+<span id="cb382-3"><a href="section-7-overview.html#cb382-3" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span =</span> <span class="fl">0.4</span>) <span class="op">+</span></span>
+<span id="cb382-4"><a href="section-7-overview.html#cb382-4" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb382-5"><a href="section-7-overview.html#cb382-5" aria-hidden="true"></a><span class="st">              </span><span class="kw">geom_hline</span>(<span class="kw">aes</span>(<span class="dt">yintercept =</span> <span class="fl">-.038</span>))</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="img/figures/unnamed-chunk-127-1.png" width="672" /></p>
 <p>Which of the following plots is correct?</p>
@@ -773,14 +785,14 @@ B.</li>
 </div>
 <div id="question-12-use-the-following-code-to-create-the-object-brexit_long-which-has-a-column-vote-containing-the-three-possible-votes-on-a-brexit-poll-remain-leave-undecided-and-a-column-proportion-containing-the-raw-proportion-choosing-that-vote-option-on-the-given-poll" class="section level4" number="8.7.0.4">
 <h4><span class="header-section-number">8.7.0.4</span> Question 12: Use the following code to create the object <code>brexit_long</code>, which has a column <code>vote</code> containing the three possible votes on a Brexit poll (“remain”, “leave”, “undecided”) and a column <code>proportion</code> containing the raw proportion choosing that vote option on the given poll:</h4>
-<div class="sourceCode" id="cb371"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb371-1"><a href="section-7-overview.html#cb371-1" aria-hidden="true"></a>brexit_long &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
-<span id="cb371-2"><a href="section-7-overview.html#cb371-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">gather</span>(vote, proportion, <span class="st">&quot;remain&quot;</span><span class="op">:</span><span class="st">&quot;undecided&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb371-3"><a href="section-7-overview.html#cb371-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">vote =</span> <span class="kw">factor</span>(vote))</span></code></pre></div>
+<div class="sourceCode" id="cb384"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb384-1"><a href="section-7-overview.html#cb384-1" aria-hidden="true"></a>brexit_long &lt;-<span class="st"> </span>brexit_polls <span class="op">%&gt;%</span></span>
+<span id="cb384-2"><a href="section-7-overview.html#cb384-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">gather</span>(vote, proportion, <span class="st">&quot;remain&quot;</span><span class="op">:</span><span class="st">&quot;undecided&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb384-3"><a href="section-7-overview.html#cb384-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">vote =</span> <span class="kw">factor</span>(vote))</span></code></pre></div>
 <p>Make a graph of proportion over time colored by vote. Add a smooth trendline with <code>geom_smooth()</code> and <code>method = "loess"</code> with a span of 0.3.</p>
-<div class="sourceCode" id="cb372"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb372-1"><a href="section-7-overview.html#cb372-1" aria-hidden="true"></a>brexit_long <span class="op">%&gt;%</span></span>
-<span id="cb372-2"><a href="section-7-overview.html#cb372-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, proportion, <span class="dt">col=</span>vote)) <span class="op">+</span></span>
-<span id="cb372-3"><a href="section-7-overview.html#cb372-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
-<span id="cb372-4"><a href="section-7-overview.html#cb372-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span=</span><span class="fl">0.3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb385"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb385-1"><a href="section-7-overview.html#cb385-1" aria-hidden="true"></a>brexit_long <span class="op">%&gt;%</span></span>
+<span id="cb385-2"><a href="section-7-overview.html#cb385-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(enddate, proportion, <span class="dt">col=</span>vote)) <span class="op">+</span></span>
+<span id="cb385-3"><a href="section-7-overview.html#cb385-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_point</span>() <span class="op">+</span></span>
+<span id="cb385-4"><a href="section-7-overview.html#cb385-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">span=</span><span class="fl">0.3</span>)</span></code></pre></div>
 <pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
 <p><img src="img/figures/unnamed-chunk-129-1.png" width="672" /></p>
 <p>Which of the following are TRUE?</p>

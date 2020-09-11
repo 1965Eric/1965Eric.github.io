@@ -233,7 +233,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="the-central-limit-theorem-in-practice" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> The Central Limit Theorem in Practice</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#clt">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#clt" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Because <span class="math inline">\(\bar{X}\)</span> is the sum of random draws divided by a constant, the distribution of <span class="math inline">\(\bar{X}\)</span> is approximately normal.</li>
@@ -251,14 +251,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Using the CLT, the probability that <span class="math inline">\(\bar{X}\)</span> is within .01 of the actual value of <span class="math inline">\(p\)</span> is:</p>
 <p><span class="math inline">\(\mbox{Pr}(Z \le .01/\sqrt {\bar{X}(1 - \bar{X})/N}) - \mbox{Pr}(Z \le -.01/\sqrt {\bar{X}(1 - \bar{X})/N})\)</span></p>
 <p><em>Code: Computing the probability of <span class="math inline">\(\bar{X}\)</span> being within .01 of <span class="math inline">\(p\)</span></em></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="section-2-overview.html#cb6-1" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="fl">0.48</span></span>
-<span id="cb6-2"><a href="section-2-overview.html#cb6-2" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span><span class="dv">25</span>)</span>
-<span id="cb6-3"><a href="section-2-overview.html#cb6-3" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">0.01</span><span class="op">/</span>se) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">0.01</span><span class="op">/</span>se)</span></code></pre></div>
-<pre><code>## [1] 0.0797</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="section-2-overview.html#cb13-1" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="fl">0.48</span></span>
+<span id="cb13-2"><a href="section-2-overview.html#cb13-2" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span><span class="dv">25</span>)</span>
+<span id="cb13-3"><a href="section-2-overview.html#cb13-3" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">0.01</span><span class="op">/</span>se) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">0.01</span><span class="op">/</span>se)</span></code></pre></div>
+<pre><code>## [1] 0.07971926</code></pre>
 </div>
 <div id="margin-of-error" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Margin of Error</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#clt">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#clt" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The <em>margin of error</em> is defined as 2 times the standard error of the estimate <span class="math inline">\(\bar{X}\)</span>.</li>
@@ -267,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="a-monte-carlo-simulation-for-the-clt" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> A Monte Carlo Simulation for the CLT</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#a-monte-carlo-simulation">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#a-monte-carlo-simulation" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>We can run Monte Carlo simulations to compare with theoretical results assuming a value of <span class="math inline">\(p\)</span>.</li>
@@ -275,39 +275,44 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>One practical choice for <span class="math inline">\(p\)</span> when modeling is <span class="math inline">\(\bar{X}\)</span>, the observed value of <span class="math inline">\(\hat{X}\)</span> in a sample.</li>
 </ul>
 <p><em>Code: Monte Carlo simulation using a set value of p</em></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="section-2-overview.html#cb8-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span>    <span class="co"># unknown p to estimate</span></span>
-<span id="cb8-2"><a href="section-2-overview.html#cb8-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb8-3"><a href="section-2-overview.html#cb8-3" aria-hidden="true"></a></span>
-<span id="cb8-4"><a href="section-2-overview.html#cb8-4" aria-hidden="true"></a><span class="co"># simulate one poll of size N and determine x_hat</span></span>
-<span id="cb8-5"><a href="section-2-overview.html#cb8-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb8-6"><a href="section-2-overview.html#cb8-6" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb8-7"><a href="section-2-overview.html#cb8-7" aria-hidden="true"></a></span>
-<span id="cb8-8"><a href="section-2-overview.html#cb8-8" aria-hidden="true"></a><span class="co"># simulate B polls of size N and determine average x_hat</span></span>
-<span id="cb8-9"><a href="section-2-overview.html#cb8-9" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span>    <span class="co"># number of replicates</span></span>
-<span id="cb8-10"><a href="section-2-overview.html#cb8-10" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1000</span>    <span class="co"># sample size per replicate</span></span>
-<span id="cb8-11"><a href="section-2-overview.html#cb8-11" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb8-12"><a href="section-2-overview.html#cb8-12" aria-hidden="true"></a>    x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb8-13"><a href="section-2-overview.html#cb8-13" aria-hidden="true"></a>    <span class="kw">mean</span>(x)</span>
-<span id="cb8-14"><a href="section-2-overview.html#cb8-14" aria-hidden="true"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-2-overview.html#cb15-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span>    <span class="co"># unknown p to estimate</span></span>
+<span id="cb15-2"><a href="section-2-overview.html#cb15-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb15-3"><a href="section-2-overview.html#cb15-3" aria-hidden="true"></a></span>
+<span id="cb15-4"><a href="section-2-overview.html#cb15-4" aria-hidden="true"></a><span class="co"># simulate one poll of size N and determine x_hat</span></span>
+<span id="cb15-5"><a href="section-2-overview.html#cb15-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb15-6"><a href="section-2-overview.html#cb15-6" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb15-7"><a href="section-2-overview.html#cb15-7" aria-hidden="true"></a></span>
+<span id="cb15-8"><a href="section-2-overview.html#cb15-8" aria-hidden="true"></a><span class="co"># simulate B polls of size N and determine average x_hat</span></span>
+<span id="cb15-9"><a href="section-2-overview.html#cb15-9" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span>    <span class="co"># number of replicates</span></span>
+<span id="cb15-10"><a href="section-2-overview.html#cb15-10" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">1000</span>    <span class="co"># sample size per replicate</span></span>
+<span id="cb15-11"><a href="section-2-overview.html#cb15-11" aria-hidden="true"></a>x_hat &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb15-12"><a href="section-2-overview.html#cb15-12" aria-hidden="true"></a>    x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb15-13"><a href="section-2-overview.html#cb15-13" aria-hidden="true"></a>    <span class="kw">mean</span>(x)</span>
+<span id="cb15-14"><a href="section-2-overview.html#cb15-14" aria-hidden="true"></a>})</span></code></pre></div>
 <p><em>Code: Histogram and QQ-plot of Monte Carlo results</em></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="section-2-overview.html#cb9-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(gridExtra)) <span class="kw">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</span>
-<span id="cb9-2"><a href="section-2-overview.html#cb9-2" aria-hidden="true"></a></span>
-<span id="cb9-3"><a href="section-2-overview.html#cb9-3" aria-hidden="true"></a><span class="kw">library</span>(gridExtra)</span>
-<span id="cb9-4"><a href="section-2-overview.html#cb9-4" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x_hat =</span> x_hat) <span class="op">%&gt;%</span></span>
-<span id="cb9-5"><a href="section-2-overview.html#cb9-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x_hat)) <span class="op">+</span></span>
-<span id="cb9-6"><a href="section-2-overview.html#cb9-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.005</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span>
-<span id="cb9-7"><a href="section-2-overview.html#cb9-7" aria-hidden="true"></a>p2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x_hat =</span> x_hat) <span class="op">%&gt;%</span></span>
-<span id="cb9-8"><a href="section-2-overview.html#cb9-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> x_hat)) <span class="op">+</span></span>
-<span id="cb9-9"><a href="section-2-overview.html#cb9-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">stat_qq</span>(<span class="dt">dparams =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(x_hat), <span class="dt">sd =</span> <span class="kw">sd</span>(x_hat))) <span class="op">+</span></span>
-<span id="cb9-10"><a href="section-2-overview.html#cb9-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>() <span class="op">+</span></span>
-<span id="cb9-11"><a href="section-2-overview.html#cb9-11" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;X_hat&quot;</span>) <span class="op">+</span></span>
-<span id="cb9-12"><a href="section-2-overview.html#cb9-12" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Theoretical normal&quot;</span>)</span>
-<span id="cb9-13"><a href="section-2-overview.html#cb9-13" aria-hidden="true"></a><span class="kw">grid.arrange</span>(p1, p2, <span class="dt">nrow=</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="section-2-overview.html#cb16-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(gridExtra)) <span class="kw">install.packages</span>(<span class="st">&quot;gridExtra&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: gridExtra</code></pre>
+<pre><code>## 
+## Attaching package: &#39;gridExtra&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     combine</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="section-2-overview.html#cb20-1" aria-hidden="true"></a><span class="kw">library</span>(gridExtra)</span>
+<span id="cb20-2"><a href="section-2-overview.html#cb20-2" aria-hidden="true"></a>p1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x_hat =</span> x_hat) <span class="op">%&gt;%</span></span>
+<span id="cb20-3"><a href="section-2-overview.html#cb20-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x_hat)) <span class="op">+</span></span>
+<span id="cb20-4"><a href="section-2-overview.html#cb20-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth =</span> <span class="fl">0.005</span>, <span class="dt">color =</span> <span class="st">&quot;black&quot;</span>)</span>
+<span id="cb20-5"><a href="section-2-overview.html#cb20-5" aria-hidden="true"></a>p2 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x_hat =</span> x_hat) <span class="op">%&gt;%</span></span>
+<span id="cb20-6"><a href="section-2-overview.html#cb20-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">sample =</span> x_hat)) <span class="op">+</span></span>
+<span id="cb20-7"><a href="section-2-overview.html#cb20-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">stat_qq</span>(<span class="dt">dparams =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="kw">mean</span>(x_hat), <span class="dt">sd =</span> <span class="kw">sd</span>(x_hat))) <span class="op">+</span></span>
+<span id="cb20-8"><a href="section-2-overview.html#cb20-8" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_abline</span>() <span class="op">+</span></span>
+<span id="cb20-9"><a href="section-2-overview.html#cb20-9" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;X_hat&quot;</span>) <span class="op">+</span></span>
+<span id="cb20-10"><a href="section-2-overview.html#cb20-10" aria-hidden="true"></a><span class="st">    </span><span class="kw">xlab</span>(<span class="st">&quot;Theoretical normal&quot;</span>)</span>
+<span id="cb20-11"><a href="section-2-overview.html#cb20-11" aria-hidden="true"></a><span class="kw">grid.arrange</span>(p1, p2, <span class="dt">nrow=</span><span class="dv">1</span>)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="the-spread" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> The Spread</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-spread">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#the-spread" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The spread between two outcomes with probabilities <span class="math inline">\(p\)</span> and <span class="math inline">\(1 - p\)</span> is <span class="math inline">\(2p - 1\)</span>.</li>
@@ -318,7 +323,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="bias-why-not-run-a-very-large-poll" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Bias: Why Not Run a Very Large Poll?</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#bias-why-not-run-a-very-large-poll">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/inference.html#bias-why-not-run-a-very-large-poll" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>An extremely large poll would theoretically be able to predict election results almost perfectly.</li>
@@ -326,12 +331,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>These systematic errors in polling are called <em>bias</em>. We will learn more about bias in the future.</li>
 </ul>
 <p><em>Code: Plotting margin of error in an extremely large poll over a range of values of p</em></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="section-2-overview.html#cb10-1" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100000</span></span>
-<span id="cb10-2"><a href="section-2-overview.html#cb10-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.35</span>, <span class="fl">0.65</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
-<span id="cb10-3"><a href="section-2-overview.html#cb10-3" aria-hidden="true"></a>SE &lt;-<span class="st"> </span><span class="kw">sapply</span>(p, <span class="cf">function</span>(x) <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)<span class="op">/</span>N))</span>
-<span id="cb10-4"><a href="section-2-overview.html#cb10-4" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">p =</span> p, <span class="dt">SE =</span> SE) <span class="op">%&gt;%</span></span>
-<span id="cb10-5"><a href="section-2-overview.html#cb10-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(p, SE)) <span class="op">+</span></span>
-<span id="cb10-6"><a href="section-2-overview.html#cb10-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="section-2-overview.html#cb21-1" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100000</span></span>
+<span id="cb21-2"><a href="section-2-overview.html#cb21-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.35</span>, <span class="fl">0.65</span>, <span class="dt">length =</span> <span class="dv">100</span>)</span>
+<span id="cb21-3"><a href="section-2-overview.html#cb21-3" aria-hidden="true"></a>SE &lt;-<span class="st"> </span><span class="kw">sapply</span>(p, <span class="cf">function</span>(x) <span class="dv">2</span><span class="op">*</span><span class="kw">sqrt</span>(x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)<span class="op">/</span>N))</span>
+<span id="cb21-4"><a href="section-2-overview.html#cb21-4" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">p =</span> p, <span class="dt">SE =</span> SE) <span class="op">%&gt;%</span></span>
+<span id="cb21-5"><a href="section-2-overview.html#cb21-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(p, SE)) <span class="op">+</span></span>
+<span id="cb21-6"><a href="section-2-overview.html#cb21-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="assessment---introduction-to-inference" class="section level2" number="3.6">
@@ -340,48 +345,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Write function called <code>take_sample</code> that takes the proportion of Democrats <span class="math inline">\(p\)</span> and the sample size <span class="math inline">\(N\)</span> as arguments and returns the sample average of Democrats (1) and Republicans (0).</li>
 </ol>
 <p>Calculate the sample average if the proportion of Democrats equals 0.45 and the sample size is 100.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="section-2-overview.html#cb11-1" aria-hidden="true"></a><span class="co"># Write a function called `take_sample` that takes `p` and `N` as arguements and returns the average value of a randomly sampled population.</span></span>
-<span id="cb11-2"><a href="section-2-overview.html#cb11-2" aria-hidden="true"></a>take_sample &lt;-<span class="st"> </span><span class="cf">function</span>(p, N) {</span>
-<span id="cb11-3"><a href="section-2-overview.html#cb11-3" aria-hidden="true"></a>  x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb11-4"><a href="section-2-overview.html#cb11-4" aria-hidden="true"></a>  <span class="kw">return</span>(<span class="kw">mean</span>(x))</span>
-<span id="cb11-5"><a href="section-2-overview.html#cb11-5" aria-hidden="true"></a>}</span>
-<span id="cb11-6"><a href="section-2-overview.html#cb11-6" aria-hidden="true"></a></span>
-<span id="cb11-7"><a href="section-2-overview.html#cb11-7" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb11-8"><a href="section-2-overview.html#cb11-8" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb11-9"><a href="section-2-overview.html#cb11-9" aria-hidden="true"></a></span>
-<span id="cb11-10"><a href="section-2-overview.html#cb11-10" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb11-11"><a href="section-2-overview.html#cb11-11" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb11-12"><a href="section-2-overview.html#cb11-12" aria-hidden="true"></a></span>
-<span id="cb11-13"><a href="section-2-overview.html#cb11-13" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb11-14"><a href="section-2-overview.html#cb11-14" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb11-15"><a href="section-2-overview.html#cb11-15" aria-hidden="true"></a></span>
-<span id="cb11-16"><a href="section-2-overview.html#cb11-16" aria-hidden="true"></a><span class="co"># Call the `take_sample` function to determine the sample average of `N` randomly selected people from a population containing a proportion of Democrats equal to `p`. Print this value to the console.</span></span>
-<span id="cb11-17"><a href="section-2-overview.html#cb11-17" aria-hidden="true"></a><span class="kw">take_sample</span>(p, N)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="section-2-overview.html#cb22-1" aria-hidden="true"></a><span class="co"># Write a function called `take_sample` that takes `p` and `N` as arguements and returns the average value of a randomly sampled population.</span></span>
+<span id="cb22-2"><a href="section-2-overview.html#cb22-2" aria-hidden="true"></a>take_sample &lt;-<span class="st"> </span><span class="cf">function</span>(p, N) {</span>
+<span id="cb22-3"><a href="section-2-overview.html#cb22-3" aria-hidden="true"></a>  x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb22-4"><a href="section-2-overview.html#cb22-4" aria-hidden="true"></a>  <span class="kw">return</span>(<span class="kw">mean</span>(x))</span>
+<span id="cb22-5"><a href="section-2-overview.html#cb22-5" aria-hidden="true"></a>}</span>
+<span id="cb22-6"><a href="section-2-overview.html#cb22-6" aria-hidden="true"></a></span>
+<span id="cb22-7"><a href="section-2-overview.html#cb22-7" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb22-8"><a href="section-2-overview.html#cb22-8" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb22-9"><a href="section-2-overview.html#cb22-9" aria-hidden="true"></a></span>
+<span id="cb22-10"><a href="section-2-overview.html#cb22-10" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb22-11"><a href="section-2-overview.html#cb22-11" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb22-12"><a href="section-2-overview.html#cb22-12" aria-hidden="true"></a></span>
+<span id="cb22-13"><a href="section-2-overview.html#cb22-13" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb22-14"><a href="section-2-overview.html#cb22-14" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb22-15"><a href="section-2-overview.html#cb22-15" aria-hidden="true"></a></span>
+<span id="cb22-16"><a href="section-2-overview.html#cb22-16" aria-hidden="true"></a><span class="co"># Call the `take_sample` function to determine the sample average of `N` randomly selected people from a population containing a proportion of Democrats equal to `p`. Print this value to the console.</span></span>
+<span id="cb22-17"><a href="section-2-overview.html#cb22-17" aria-hidden="true"></a><span class="kw">take_sample</span>(p, N)</span></code></pre></div>
 <pre><code>## [1] 0.46</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Assume the proportion of Democrats in the population <span class="math inline">\(p\)</span> equals 0.45 and that your sample size <span class="math inline">\(N\)</span> is 100 polled voters.</li>
 </ol>
 <p>The <code>take_sample</code> function you defined previously generates our estimate, <span class="math inline">\(\bar{X}\)</span>.</p>
 <p>Replicate the random sampling 10,000 times and calculate <span class="math inline">\(p − \bar{X}\)</span> for each random sample. Save these differences as a vector called <code>errors</code>. Find the average of <code>errors</code> and plot a histogram of the distribution.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="section-2-overview.html#cb13-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb13-2"><a href="section-2-overview.html#cb13-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb13-3"><a href="section-2-overview.html#cb13-3" aria-hidden="true"></a></span>
-<span id="cb13-4"><a href="section-2-overview.html#cb13-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb13-5"><a href="section-2-overview.html#cb13-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb13-6"><a href="section-2-overview.html#cb13-6" aria-hidden="true"></a></span>
-<span id="cb13-7"><a href="section-2-overview.html#cb13-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
-<span id="cb13-8"><a href="section-2-overview.html#cb13-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb13-9"><a href="section-2-overview.html#cb13-9" aria-hidden="true"></a></span>
-<span id="cb13-10"><a href="section-2-overview.html#cb13-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb13-11"><a href="section-2-overview.html#cb13-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb13-12"><a href="section-2-overview.html#cb13-12" aria-hidden="true"></a></span>
-<span id="cb13-13"><a href="section-2-overview.html#cb13-13" aria-hidden="true"></a><span class="co"># Create an objected called `errors` that replicates subtracting the result of the `take_sample` function from `p` for `B` replications</span></span>
-<span id="cb13-14"><a href="section-2-overview.html#cb13-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
-<span id="cb13-15"><a href="section-2-overview.html#cb13-15" aria-hidden="true"></a></span>
-<span id="cb13-16"><a href="section-2-overview.html#cb13-16" aria-hidden="true"></a><span class="co"># Calculate the mean of the errors. Print this value to the console.</span></span>
-<span id="cb13-17"><a href="section-2-overview.html#cb13-17" aria-hidden="true"></a><span class="kw">mean</span>(errors)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="section-2-overview.html#cb24-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb24-2"><a href="section-2-overview.html#cb24-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb24-3"><a href="section-2-overview.html#cb24-3" aria-hidden="true"></a></span>
+<span id="cb24-4"><a href="section-2-overview.html#cb24-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb24-5"><a href="section-2-overview.html#cb24-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb24-6"><a href="section-2-overview.html#cb24-6" aria-hidden="true"></a></span>
+<span id="cb24-7"><a href="section-2-overview.html#cb24-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
+<span id="cb24-8"><a href="section-2-overview.html#cb24-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb24-9"><a href="section-2-overview.html#cb24-9" aria-hidden="true"></a></span>
+<span id="cb24-10"><a href="section-2-overview.html#cb24-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb24-11"><a href="section-2-overview.html#cb24-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb24-12"><a href="section-2-overview.html#cb24-12" aria-hidden="true"></a></span>
+<span id="cb24-13"><a href="section-2-overview.html#cb24-13" aria-hidden="true"></a><span class="co"># Create an objected called `errors` that replicates subtracting the result of the `take_sample` function from `p` for `B` replications</span></span>
+<span id="cb24-14"><a href="section-2-overview.html#cb24-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
+<span id="cb24-15"><a href="section-2-overview.html#cb24-15" aria-hidden="true"></a></span>
+<span id="cb24-16"><a href="section-2-overview.html#cb24-16" aria-hidden="true"></a><span class="co"># Calculate the mean of the errors. Print this value to the console.</span></span>
+<span id="cb24-17"><a href="section-2-overview.html#cb24-17" aria-hidden="true"></a><span class="kw">mean</span>(errors)</span></code></pre></div>
 <pre><code>## [1] -4.9e-05</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-2-overview.html#cb15-1" aria-hidden="true"></a><span class="kw">hist</span>(errors)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="section-2-overview.html#cb26-1" aria-hidden="true"></a><span class="kw">hist</span>(errors)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-10-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>In the last exercise, you made a vector of differences between the actual value for <span class="math inline">\(p\)</span> and an estimate, <span class="math inline">\(\bar{X}\)</span>.</li>
@@ -403,92 +408,92 @@ D. The errors range from -1 to 1.</li>
 </ol>
 <p>In practice, the error is not observed because we do not know the actual proportion of Democratic voters, <span class="math inline">\(p\)</span>. However, we can describe the size of the error by constructing a simulation.</p>
 <p>What is the average size of the error if we define the size by taking the absolute value <span class="math inline">\(|p - \bar{X}|\)</span>?</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="section-2-overview.html#cb16-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb16-2"><a href="section-2-overview.html#cb16-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb16-3"><a href="section-2-overview.html#cb16-3" aria-hidden="true"></a></span>
-<span id="cb16-4"><a href="section-2-overview.html#cb16-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb16-5"><a href="section-2-overview.html#cb16-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb16-6"><a href="section-2-overview.html#cb16-6" aria-hidden="true"></a></span>
-<span id="cb16-7"><a href="section-2-overview.html#cb16-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
-<span id="cb16-8"><a href="section-2-overview.html#cb16-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb16-9"><a href="section-2-overview.html#cb16-9" aria-hidden="true"></a></span>
-<span id="cb16-10"><a href="section-2-overview.html#cb16-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb16-11"><a href="section-2-overview.html#cb16-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb16-12"><a href="section-2-overview.html#cb16-12" aria-hidden="true"></a></span>
-<span id="cb16-13"><a href="section-2-overview.html#cb16-13" aria-hidden="true"></a><span class="co"># We generated `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
-<span id="cb16-14"><a href="section-2-overview.html#cb16-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
-<span id="cb16-15"><a href="section-2-overview.html#cb16-15" aria-hidden="true"></a></span>
-<span id="cb16-16"><a href="section-2-overview.html#cb16-16" aria-hidden="true"></a><span class="co"># Calculate the mean of the absolute value of each simulated error. Print this value to the console.</span></span>
-<span id="cb16-17"><a href="section-2-overview.html#cb16-17" aria-hidden="true"></a><span class="kw">mean</span>(<span class="kw">abs</span>(errors))</span></code></pre></div>
-<pre><code>## [1] 0.0393</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="section-2-overview.html#cb27-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb27-2"><a href="section-2-overview.html#cb27-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb27-3"><a href="section-2-overview.html#cb27-3" aria-hidden="true"></a></span>
+<span id="cb27-4"><a href="section-2-overview.html#cb27-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb27-5"><a href="section-2-overview.html#cb27-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb27-6"><a href="section-2-overview.html#cb27-6" aria-hidden="true"></a></span>
+<span id="cb27-7"><a href="section-2-overview.html#cb27-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
+<span id="cb27-8"><a href="section-2-overview.html#cb27-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb27-9"><a href="section-2-overview.html#cb27-9" aria-hidden="true"></a></span>
+<span id="cb27-10"><a href="section-2-overview.html#cb27-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb27-11"><a href="section-2-overview.html#cb27-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb27-12"><a href="section-2-overview.html#cb27-12" aria-hidden="true"></a></span>
+<span id="cb27-13"><a href="section-2-overview.html#cb27-13" aria-hidden="true"></a><span class="co"># We generated `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
+<span id="cb27-14"><a href="section-2-overview.html#cb27-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
+<span id="cb27-15"><a href="section-2-overview.html#cb27-15" aria-hidden="true"></a></span>
+<span id="cb27-16"><a href="section-2-overview.html#cb27-16" aria-hidden="true"></a><span class="co"># Calculate the mean of the absolute value of each simulated error. Print this value to the console.</span></span>
+<span id="cb27-17"><a href="section-2-overview.html#cb27-17" aria-hidden="true"></a><span class="kw">mean</span>(<span class="kw">abs</span>(errors))</span></code></pre></div>
+<pre><code>## [1] 0.039267</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>The standard error is related to the typical <strong>size</strong> of the error we make when predicting.</li>
 </ol>
 <p>We say <strong>size</strong> because, as we just saw, the errors are centered around 0. In that sense, the typical error is 0. For mathematical reasons related to the central limit theorem, we actually use the standard deviation of <code>errors</code> rather than the average of the absolute values.</p>
 <p>As we have discussed, the standard error is the square root of the average squared distance <span class="math inline">\((\bar{X} - p)^2\)</span>. The standard deviation is defined as the square root of the distance squared.</p>
 <p>Calculate the standard deviation of the spread.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="section-2-overview.html#cb18-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb18-2"><a href="section-2-overview.html#cb18-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb18-3"><a href="section-2-overview.html#cb18-3" aria-hidden="true"></a></span>
-<span id="cb18-4"><a href="section-2-overview.html#cb18-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb18-5"><a href="section-2-overview.html#cb18-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb18-6"><a href="section-2-overview.html#cb18-6" aria-hidden="true"></a></span>
-<span id="cb18-7"><a href="section-2-overview.html#cb18-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
-<span id="cb18-8"><a href="section-2-overview.html#cb18-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb18-9"><a href="section-2-overview.html#cb18-9" aria-hidden="true"></a></span>
-<span id="cb18-10"><a href="section-2-overview.html#cb18-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb18-11"><a href="section-2-overview.html#cb18-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb18-12"><a href="section-2-overview.html#cb18-12" aria-hidden="true"></a></span>
-<span id="cb18-13"><a href="section-2-overview.html#cb18-13" aria-hidden="true"></a><span class="co"># We generated `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
-<span id="cb18-14"><a href="section-2-overview.html#cb18-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
-<span id="cb18-15"><a href="section-2-overview.html#cb18-15" aria-hidden="true"></a></span>
-<span id="cb18-16"><a href="section-2-overview.html#cb18-16" aria-hidden="true"></a><span class="co"># Calculate the standard deviation of `errors`</span></span>
-<span id="cb18-17"><a href="section-2-overview.html#cb18-17" aria-hidden="true"></a><span class="kw">sqrt</span>(<span class="kw">mean</span>(errors<span class="op">^</span><span class="dv">2</span>))</span></code></pre></div>
-<pre><code>## [1] 0.0495</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="section-2-overview.html#cb29-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb29-2"><a href="section-2-overview.html#cb29-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb29-3"><a href="section-2-overview.html#cb29-3" aria-hidden="true"></a></span>
+<span id="cb29-4"><a href="section-2-overview.html#cb29-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb29-5"><a href="section-2-overview.html#cb29-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb29-6"><a href="section-2-overview.html#cb29-6" aria-hidden="true"></a></span>
+<span id="cb29-7"><a href="section-2-overview.html#cb29-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
+<span id="cb29-8"><a href="section-2-overview.html#cb29-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb29-9"><a href="section-2-overview.html#cb29-9" aria-hidden="true"></a></span>
+<span id="cb29-10"><a href="section-2-overview.html#cb29-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb29-11"><a href="section-2-overview.html#cb29-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb29-12"><a href="section-2-overview.html#cb29-12" aria-hidden="true"></a></span>
+<span id="cb29-13"><a href="section-2-overview.html#cb29-13" aria-hidden="true"></a><span class="co"># We generated `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
+<span id="cb29-14"><a href="section-2-overview.html#cb29-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
+<span id="cb29-15"><a href="section-2-overview.html#cb29-15" aria-hidden="true"></a></span>
+<span id="cb29-16"><a href="section-2-overview.html#cb29-16" aria-hidden="true"></a><span class="co"># Calculate the standard deviation of `errors`</span></span>
+<span id="cb29-17"><a href="section-2-overview.html#cb29-17" aria-hidden="true"></a><span class="kw">sqrt</span>(<span class="kw">mean</span>(errors<span class="op">^</span><span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] 0.04949939</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>The theory we just learned tells us what this standard deviation is going to be because it is the standard error of <span class="math inline">\(\bar{X}\)</span>.</li>
 </ol>
 <p>Estimate the standard error given an expected value of 0.45 and a sample size of 100.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="section-2-overview.html#cb20-1" aria-hidden="true"></a><span class="co"># Define `p` as the expected value equal to 0.45</span></span>
-<span id="cb20-2"><a href="section-2-overview.html#cb20-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb20-3"><a href="section-2-overview.html#cb20-3" aria-hidden="true"></a></span>
-<span id="cb20-4"><a href="section-2-overview.html#cb20-4" aria-hidden="true"></a><span class="co"># Define `N` as the sample size</span></span>
-<span id="cb20-5"><a href="section-2-overview.html#cb20-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb20-6"><a href="section-2-overview.html#cb20-6" aria-hidden="true"></a></span>
-<span id="cb20-7"><a href="section-2-overview.html#cb20-7" aria-hidden="true"></a><span class="co"># Calculate the standard error</span></span>
-<span id="cb20-8"><a href="section-2-overview.html#cb20-8" aria-hidden="true"></a><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
-<pre><code>## [1] 0.0497</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="section-2-overview.html#cb31-1" aria-hidden="true"></a><span class="co"># Define `p` as the expected value equal to 0.45</span></span>
+<span id="cb31-2"><a href="section-2-overview.html#cb31-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb31-3"><a href="section-2-overview.html#cb31-3" aria-hidden="true"></a></span>
+<span id="cb31-4"><a href="section-2-overview.html#cb31-4" aria-hidden="true"></a><span class="co"># Define `N` as the sample size</span></span>
+<span id="cb31-5"><a href="section-2-overview.html#cb31-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb31-6"><a href="section-2-overview.html#cb31-6" aria-hidden="true"></a></span>
+<span id="cb31-7"><a href="section-2-overview.html#cb31-7" aria-hidden="true"></a><span class="co"># Calculate the standard error</span></span>
+<span id="cb31-8"><a href="section-2-overview.html#cb31-8" aria-hidden="true"></a><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span></code></pre></div>
+<pre><code>## [1] 0.04974937</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>In practice, we don’t know <span class="math inline">\(p\)</span>, so we construct an estimate of the theoretical prediction based by plugging in <span class="math inline">\(\bar{X}\)</span> for <span class="math inline">\(p\)</span>. Calculate the standard error of the estimate: <span class="math inline">\(\hat{\mbox{SE}}(\bar{X})\)</span></li>
 </ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="section-2-overview.html#cb22-1" aria-hidden="true"></a><span class="co"># Define `p` as a proportion of Democratic voters to simulate</span></span>
-<span id="cb22-2"><a href="section-2-overview.html#cb22-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb22-3"><a href="section-2-overview.html#cb22-3" aria-hidden="true"></a></span>
-<span id="cb22-4"><a href="section-2-overview.html#cb22-4" aria-hidden="true"></a><span class="co"># Define `N` as the sample size</span></span>
-<span id="cb22-5"><a href="section-2-overview.html#cb22-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb22-6"><a href="section-2-overview.html#cb22-6" aria-hidden="true"></a></span>
-<span id="cb22-7"><a href="section-2-overview.html#cb22-7" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb22-8"><a href="section-2-overview.html#cb22-8" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb22-9"><a href="section-2-overview.html#cb22-9" aria-hidden="true"></a></span>
-<span id="cb22-10"><a href="section-2-overview.html#cb22-10" aria-hidden="true"></a><span class="co"># Define `X` as a random sample of `N` voters with a probability of picking a Democrat (&#39;1&#39;) equal to `p`</span></span>
-<span id="cb22-11"><a href="section-2-overview.html#cb22-11" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
-<span id="cb22-12"><a href="section-2-overview.html#cb22-12" aria-hidden="true"></a></span>
-<span id="cb22-13"><a href="section-2-overview.html#cb22-13" aria-hidden="true"></a><span class="co"># Define `X_bar` as the average sampled proportion</span></span>
-<span id="cb22-14"><a href="section-2-overview.html#cb22-14" aria-hidden="true"></a>X_bar &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
-<span id="cb22-15"><a href="section-2-overview.html#cb22-15" aria-hidden="true"></a></span>
-<span id="cb22-16"><a href="section-2-overview.html#cb22-16" aria-hidden="true"></a><span class="co"># Calculate the standard error of the estimate. Print the result to the console.</span></span>
-<span id="cb22-17"><a href="section-2-overview.html#cb22-17" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>((X_bar<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_bar)<span class="op">/</span>N))</span>
-<span id="cb22-18"><a href="section-2-overview.html#cb22-18" aria-hidden="true"></a>se</span></code></pre></div>
-<pre><code>## [1] 0.0498</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="section-2-overview.html#cb33-1" aria-hidden="true"></a><span class="co"># Define `p` as a proportion of Democratic voters to simulate</span></span>
+<span id="cb33-2"><a href="section-2-overview.html#cb33-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb33-3"><a href="section-2-overview.html#cb33-3" aria-hidden="true"></a></span>
+<span id="cb33-4"><a href="section-2-overview.html#cb33-4" aria-hidden="true"></a><span class="co"># Define `N` as the sample size</span></span>
+<span id="cb33-5"><a href="section-2-overview.html#cb33-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb33-6"><a href="section-2-overview.html#cb33-6" aria-hidden="true"></a></span>
+<span id="cb33-7"><a href="section-2-overview.html#cb33-7" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb33-8"><a href="section-2-overview.html#cb33-8" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb33-9"><a href="section-2-overview.html#cb33-9" aria-hidden="true"></a></span>
+<span id="cb33-10"><a href="section-2-overview.html#cb33-10" aria-hidden="true"></a><span class="co"># Define `X` as a random sample of `N` voters with a probability of picking a Democrat (&#39;1&#39;) equal to `p`</span></span>
+<span id="cb33-11"><a href="section-2-overview.html#cb33-11" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">size =</span> N, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">-</span>p, p))</span>
+<span id="cb33-12"><a href="section-2-overview.html#cb33-12" aria-hidden="true"></a></span>
+<span id="cb33-13"><a href="section-2-overview.html#cb33-13" aria-hidden="true"></a><span class="co"># Define `X_bar` as the average sampled proportion</span></span>
+<span id="cb33-14"><a href="section-2-overview.html#cb33-14" aria-hidden="true"></a>X_bar &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
+<span id="cb33-15"><a href="section-2-overview.html#cb33-15" aria-hidden="true"></a></span>
+<span id="cb33-16"><a href="section-2-overview.html#cb33-16" aria-hidden="true"></a><span class="co"># Calculate the standard error of the estimate. Print the result to the console.</span></span>
+<span id="cb33-17"><a href="section-2-overview.html#cb33-17" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>((X_bar<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_bar)<span class="op">/</span>N))</span>
+<span id="cb33-18"><a href="section-2-overview.html#cb33-18" aria-hidden="true"></a>se</span></code></pre></div>
+<pre><code>## [1] 0.04983974</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li>The standard error estimates obtained from the Monte Carlo simulation, the theoretical prediction, and the estimate of the theoretical prediction are all very close, which tells us that the theory is working.</li>
 </ol>
 <p>This gives us a practical approach to knowing the typical error we will make if we predict <span class="math inline">\(p\)</span> with <span class="math inline">\(\hat{X}\)</span>. The theoretical result gives us an idea of how large a sample size is required to obtain the precision we need. Earlier we learned that the largest standard errors occur for <span class="math inline">\(p = 0.5\)</span>.</p>
 <p>Create a plot of the largest standard error for <span class="math inline">\(N\)</span> ranging from 100 to 5,000.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="section-2-overview.html#cb24-1" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">100</span>, <span class="dv">5000</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
-<span id="cb24-2"><a href="section-2-overview.html#cb24-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
-<span id="cb24-3"><a href="section-2-overview.html#cb24-3" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span>
-<span id="cb24-4"><a href="section-2-overview.html#cb24-4" aria-hidden="true"></a><span class="kw">plot</span>(se, N)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="section-2-overview.html#cb35-1" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">100</span>, <span class="dv">5000</span>, <span class="dt">len =</span> <span class="dv">100</span>)</span>
+<span id="cb35-2"><a href="section-2-overview.html#cb35-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.5</span></span>
+<span id="cb35-3"><a href="section-2-overview.html#cb35-3" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N)</span>
+<span id="cb35-4"><a href="section-2-overview.html#cb35-4" aria-hidden="true"></a><span class="kw">plot</span>(se, N)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Based on this plot, how large does the sample size have to be to have a standard error of about 1%?</p>
 <ul class="task-list">
@@ -531,55 +536,55 @@ D. not a random variable.</li>
 <ol start="11" style="list-style-type: decimal">
 <li>Make a qq-plot of the <code>errors</code> you generated previously to see if they follow a normal distribution.</li>
 </ol>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="section-2-overview.html#cb25-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb25-2"><a href="section-2-overview.html#cb25-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb25-3"><a href="section-2-overview.html#cb25-3" aria-hidden="true"></a></span>
-<span id="cb25-4"><a href="section-2-overview.html#cb25-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb25-5"><a href="section-2-overview.html#cb25-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb25-6"><a href="section-2-overview.html#cb25-6" aria-hidden="true"></a></span>
-<span id="cb25-7"><a href="section-2-overview.html#cb25-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
-<span id="cb25-8"><a href="section-2-overview.html#cb25-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb25-9"><a href="section-2-overview.html#cb25-9" aria-hidden="true"></a></span>
-<span id="cb25-10"><a href="section-2-overview.html#cb25-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb25-11"><a href="section-2-overview.html#cb25-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb25-12"><a href="section-2-overview.html#cb25-12" aria-hidden="true"></a></span>
-<span id="cb25-13"><a href="section-2-overview.html#cb25-13" aria-hidden="true"></a><span class="co"># Generate `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
-<span id="cb25-14"><a href="section-2-overview.html#cb25-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
-<span id="cb25-15"><a href="section-2-overview.html#cb25-15" aria-hidden="true"></a></span>
-<span id="cb25-16"><a href="section-2-overview.html#cb25-16" aria-hidden="true"></a><span class="co"># Generate a qq-plot of `errors` with a qq-line showing a normal distribution</span></span>
-<span id="cb25-17"><a href="section-2-overview.html#cb25-17" aria-hidden="true"></a><span class="kw">qqnorm</span>(errors)</span>
-<span id="cb25-18"><a href="section-2-overview.html#cb25-18" aria-hidden="true"></a><span class="kw">qqline</span>(errors)</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="section-2-overview.html#cb36-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb36-2"><a href="section-2-overview.html#cb36-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb36-3"><a href="section-2-overview.html#cb36-3" aria-hidden="true"></a></span>
+<span id="cb36-4"><a href="section-2-overview.html#cb36-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb36-5"><a href="section-2-overview.html#cb36-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb36-6"><a href="section-2-overview.html#cb36-6" aria-hidden="true"></a></span>
+<span id="cb36-7"><a href="section-2-overview.html#cb36-7" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the sample to be replicated</span></span>
+<span id="cb36-8"><a href="section-2-overview.html#cb36-8" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb36-9"><a href="section-2-overview.html#cb36-9" aria-hidden="true"></a></span>
+<span id="cb36-10"><a href="section-2-overview.html#cb36-10" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb36-11"><a href="section-2-overview.html#cb36-11" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb36-12"><a href="section-2-overview.html#cb36-12" aria-hidden="true"></a></span>
+<span id="cb36-13"><a href="section-2-overview.html#cb36-13" aria-hidden="true"></a><span class="co"># Generate `errors` by subtracting the estimate from the actual proportion of Democratic voters</span></span>
+<span id="cb36-14"><a href="section-2-overview.html#cb36-14" aria-hidden="true"></a>errors &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, p <span class="op">-</span><span class="st"> </span><span class="kw">take_sample</span>(p, N))</span>
+<span id="cb36-15"><a href="section-2-overview.html#cb36-15" aria-hidden="true"></a></span>
+<span id="cb36-16"><a href="section-2-overview.html#cb36-16" aria-hidden="true"></a><span class="co"># Generate a qq-plot of `errors` with a qq-line showing a normal distribution</span></span>
+<span id="cb36-17"><a href="section-2-overview.html#cb36-17" aria-hidden="true"></a><span class="kw">qqnorm</span>(errors)</span>
+<span id="cb36-18"><a href="section-2-overview.html#cb36-18" aria-hidden="true"></a><span class="kw">qqline</span>(errors)</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-16-1.png" width="672" /></p>
 <ol start="12" style="list-style-type: decimal">
 <li>If <span class="math inline">\(p = 0.45\)</span> and <span class="math inline">\(N = 100\)</span>, use the central limit theorem to estimate the probability that <span class="math inline">\(\bar{X} &gt; 0.5\)</span>.</li>
 </ol>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="section-2-overview.html#cb26-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
-<span id="cb26-2"><a href="section-2-overview.html#cb26-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
-<span id="cb26-3"><a href="section-2-overview.html#cb26-3" aria-hidden="true"></a></span>
-<span id="cb26-4"><a href="section-2-overview.html#cb26-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb26-5"><a href="section-2-overview.html#cb26-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb26-6"><a href="section-2-overview.html#cb26-6" aria-hidden="true"></a></span>
-<span id="cb26-7"><a href="section-2-overview.html#cb26-7" aria-hidden="true"></a><span class="co"># Calculate the probability that the estimated proportion of Democrats in the population is greater than 0.5. Print this value to the console.</span></span>
-<span id="cb26-8"><a href="section-2-overview.html#cb26-8" aria-hidden="true"></a></span>
-<span id="cb26-9"><a href="section-2-overview.html#cb26-9" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="fl">0.5</span>, p, <span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
-<pre><code>## [1] 0.157</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="section-2-overview.html#cb37-1" aria-hidden="true"></a><span class="co"># Define `p` as the proportion of Democrats in the population being polled</span></span>
+<span id="cb37-2"><a href="section-2-overview.html#cb37-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.45</span></span>
+<span id="cb37-3"><a href="section-2-overview.html#cb37-3" aria-hidden="true"></a></span>
+<span id="cb37-4"><a href="section-2-overview.html#cb37-4" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb37-5"><a href="section-2-overview.html#cb37-5" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb37-6"><a href="section-2-overview.html#cb37-6" aria-hidden="true"></a></span>
+<span id="cb37-7"><a href="section-2-overview.html#cb37-7" aria-hidden="true"></a><span class="co"># Calculate the probability that the estimated proportion of Democrats in the population is greater than 0.5. Print this value to the console.</span></span>
+<span id="cb37-8"><a href="section-2-overview.html#cb37-8" aria-hidden="true"></a></span>
+<span id="cb37-9"><a href="section-2-overview.html#cb37-9" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="fl">0.5</span>, p, <span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)<span class="op">/</span>N))</span></code></pre></div>
+<pre><code>## [1] 0.1574393</code></pre>
 <ol start="13" style="list-style-type: decimal">
 <li>Assume you are in a practical situation and you don’t know <span class="math inline">\(p\)</span>.</li>
 </ol>
 <p>Take a sample of size <span class="math inline">\(N = 100\)</span> and obtain a sample average of <span class="math inline">\(\bar{X} = 0.51\)</span>.</p>
 <p>What is the CLT approximation for the probability that your error size is equal or larger than 0.01?</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="section-2-overview.html#cb28-1" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
-<span id="cb28-2"><a href="section-2-overview.html#cb28-2" aria-hidden="true"></a>N &lt;-<span class="dv">100</span></span>
-<span id="cb28-3"><a href="section-2-overview.html#cb28-3" aria-hidden="true"></a></span>
-<span id="cb28-4"><a href="section-2-overview.html#cb28-4" aria-hidden="true"></a><span class="co"># Define `X_hat` as the sample average</span></span>
-<span id="cb28-5"><a href="section-2-overview.html#cb28-5" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="fl">0.51</span></span>
-<span id="cb28-6"><a href="section-2-overview.html#cb28-6" aria-hidden="true"></a></span>
-<span id="cb28-7"><a href="section-2-overview.html#cb28-7" aria-hidden="true"></a><span class="co"># Define `se_hat` as the standard error of the sample average</span></span>
-<span id="cb28-8"><a href="section-2-overview.html#cb28-8" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span>N)</span>
-<span id="cb28-9"><a href="section-2-overview.html#cb28-9" aria-hidden="true"></a></span>
-<span id="cb28-10"><a href="section-2-overview.html#cb28-10" aria-hidden="true"></a><span class="co"># Calculate the probability that the error is 0.01 or larger</span></span>
-<span id="cb28-11"><a href="section-2-overview.html#cb28-11" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="fl">0.01</span>,<span class="dv">0</span>,se_hat) <span class="op">+</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">0.01</span>,<span class="dv">0</span>,se_hat)</span></code></pre></div>
-<pre><code>## [1] 0.841</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="section-2-overview.html#cb39-1" aria-hidden="true"></a><span class="co"># Define `N` as the number of people polled</span></span>
+<span id="cb39-2"><a href="section-2-overview.html#cb39-2" aria-hidden="true"></a>N &lt;-<span class="dv">100</span></span>
+<span id="cb39-3"><a href="section-2-overview.html#cb39-3" aria-hidden="true"></a></span>
+<span id="cb39-4"><a href="section-2-overview.html#cb39-4" aria-hidden="true"></a><span class="co"># Define `X_hat` as the sample average</span></span>
+<span id="cb39-5"><a href="section-2-overview.html#cb39-5" aria-hidden="true"></a>X_hat &lt;-<span class="st"> </span><span class="fl">0.51</span></span>
+<span id="cb39-6"><a href="section-2-overview.html#cb39-6" aria-hidden="true"></a></span>
+<span id="cb39-7"><a href="section-2-overview.html#cb39-7" aria-hidden="true"></a><span class="co"># Define `se_hat` as the standard error of the sample average</span></span>
+<span id="cb39-8"><a href="section-2-overview.html#cb39-8" aria-hidden="true"></a>se_hat &lt;-<span class="st"> </span><span class="kw">sqrt</span>(X_hat<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>X_hat)<span class="op">/</span>N)</span>
+<span id="cb39-9"><a href="section-2-overview.html#cb39-9" aria-hidden="true"></a></span>
+<span id="cb39-10"><a href="section-2-overview.html#cb39-10" aria-hidden="true"></a><span class="co"># Calculate the probability that the error is 0.01 or larger</span></span>
+<span id="cb39-11"><a href="section-2-overview.html#cb39-11" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="fl">0.01</span>,<span class="dv">0</span>,se_hat) <span class="op">+</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">0.01</span>,<span class="dv">0</span>,se_hat)</span></code></pre></div>
+<pre><code>## [1] 0.8414493</code></pre>
 </div>
 </div>
             </section>
