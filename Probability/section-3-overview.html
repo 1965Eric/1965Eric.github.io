@@ -225,28 +225,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="random-variables" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Random variables</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#random-variables-1">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#random-variables-1" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Random variables are numeric outcomes resulting from random processes.</li>
 <li>Statistical inference offers a framework for quantifying uncertainty due to randomness.</li>
 </ul>
 <p><em>Code: Modeling a random variable</em></p>
-<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="section-3-overview.html#cb210-1" aria-hidden="true"></a><span class="co"># define random variable x to be 1 if blue, 0 otherwise</span></span>
-<span id="cb210-2"><a href="section-3-overview.html#cb210-2" aria-hidden="true"></a>beads &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="dt">times =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>))</span>
-<span id="cb210-3"><a href="section-3-overview.html#cb210-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
-<span id="cb210-4"><a href="section-3-overview.html#cb210-4" aria-hidden="true"></a></span>
-<span id="cb210-5"><a href="section-3-overview.html#cb210-5" aria-hidden="true"></a><span class="co"># demonstrate that the random variable is different every time</span></span>
-<span id="cb210-6"><a href="section-3-overview.html#cb210-6" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="section-3-overview.html#cb219-1" aria-hidden="true"></a><span class="co"># define random variable x to be 1 if blue, 0 otherwise</span></span>
+<span id="cb219-2"><a href="section-3-overview.html#cb219-2" aria-hidden="true"></a>beads &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>), <span class="dt">times =</span> <span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">3</span>))</span>
+<span id="cb219-3"><a href="section-3-overview.html#cb219-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span>
+<span id="cb219-4"><a href="section-3-overview.html#cb219-4" aria-hidden="true"></a></span>
+<span id="cb219-5"><a href="section-3-overview.html#cb219-5" aria-hidden="true"></a><span class="co"># demonstrate that the random variable is different every time</span></span>
+<span id="cb219-6"><a href="section-3-overview.html#cb219-6" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-3-overview.html#cb212-1" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="section-3-overview.html#cb221-1" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="section-3-overview.html#cb214-1" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="section-3-overview.html#cb223-1" aria-hidden="true"></a><span class="kw">ifelse</span>(<span class="kw">sample</span>(beads, <span class="dv">1</span>) <span class="op">==</span><span class="st"> &quot;blue&quot;</span>, <span class="dv">1</span>, <span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 </div>
 <div id="sampling-models" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Sampling Models</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#sampling-models">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#sampling-models" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>A sampling model models the random behavior of a process as the sampling of draws from an urn.</li>
@@ -257,40 +257,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Monte Carlo simulation: Chance of casino losing money on roulette</em></p>
 <p>We build a sampling model for the random variable <span class="math inline">\(S\)</span> that represents the casino’s total winnings.</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="section-3-overview.html#cb216-1" aria-hidden="true"></a><span class="co"># sampling model 1: define urn, then sample</span></span>
-<span id="cb216-2"><a href="section-3-overview.html#cb216-2" aria-hidden="true"></a>color &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Black&quot;</span>, <span class="st">&quot;Red&quot;</span>, <span class="st">&quot;Green&quot;</span>), <span class="kw">c</span>(<span class="dv">18</span>, <span class="dv">18</span>, <span class="dv">2</span>)) <span class="co"># define the urn for the sampling model</span></span>
-<span id="cb216-3"><a href="section-3-overview.html#cb216-3" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb216-4"><a href="section-3-overview.html#cb216-4" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">ifelse</span>(color <span class="op">==</span><span class="st"> &quot;Red&quot;</span>, <span class="dv">-1</span>, <span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)    <span class="co"># 1000 draws from urn, -1 if red, else +1</span></span>
-<span id="cb216-5"><a href="section-3-overview.html#cb216-5" aria-hidden="true"></a>X[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]    <span class="co"># first 10 outcomes</span></span></code></pre></div>
+<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="section-3-overview.html#cb225-1" aria-hidden="true"></a><span class="co"># sampling model 1: define urn, then sample</span></span>
+<span id="cb225-2"><a href="section-3-overview.html#cb225-2" aria-hidden="true"></a>color &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="kw">c</span>(<span class="st">&quot;Black&quot;</span>, <span class="st">&quot;Red&quot;</span>, <span class="st">&quot;Green&quot;</span>), <span class="kw">c</span>(<span class="dv">18</span>, <span class="dv">18</span>, <span class="dv">2</span>)) <span class="co"># define the urn for the sampling model</span></span>
+<span id="cb225-3"><a href="section-3-overview.html#cb225-3" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb225-4"><a href="section-3-overview.html#cb225-4" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">ifelse</span>(color <span class="op">==</span><span class="st"> &quot;Red&quot;</span>, <span class="dv">-1</span>, <span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>)    <span class="co"># 1000 draws from urn, -1 if red, else +1</span></span>
+<span id="cb225-5"><a href="section-3-overview.html#cb225-5" aria-hidden="true"></a>X[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]    <span class="co"># first 10 outcomes</span></span></code></pre></div>
 <pre><code>##  [1]  1  1 -1 -1 -1  1  1 -1  1  1</code></pre>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="section-3-overview.html#cb218-1" aria-hidden="true"></a><span class="co"># sampling model 2: define urn inside sample function by noting probabilities</span></span>
-<span id="cb218-2"><a href="section-3-overview.html#cb218-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">9</span><span class="op">/</span><span class="dv">19</span>, <span class="dv">10</span><span class="op">/</span><span class="dv">19</span>))    <span class="co"># 1000 independent draws</span></span>
-<span id="cb218-3"><a href="section-3-overview.html#cb218-3" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">sum</span>(x)    <span class="co"># total winnings = sum of draws</span></span>
-<span id="cb218-4"><a href="section-3-overview.html#cb218-4" aria-hidden="true"></a>S</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="section-3-overview.html#cb227-1" aria-hidden="true"></a><span class="co"># sampling model 2: define urn inside sample function by noting probabilities</span></span>
+<span id="cb227-2"><a href="section-3-overview.html#cb227-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">9</span><span class="op">/</span><span class="dv">19</span>, <span class="dv">10</span><span class="op">/</span><span class="dv">19</span>))    <span class="co"># 1000 independent draws</span></span>
+<span id="cb227-3"><a href="section-3-overview.html#cb227-3" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">sum</span>(x)    <span class="co"># total winnings = sum of draws</span></span>
+<span id="cb227-4"><a href="section-3-overview.html#cb227-4" aria-hidden="true"></a>S</span></code></pre></div>
 <pre><code>## [1] 74</code></pre>
 <p>We use the sampling model to run a Monte Carlo simulation and use the results to estimate the probability of the casino losing money.</p>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="section-3-overview.html#cb220-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span>    <span class="co"># number of roulette players</span></span>
-<span id="cb220-2"><a href="section-3-overview.html#cb220-2" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span>    <span class="co"># number of Monte Carlo experiments</span></span>
-<span id="cb220-3"><a href="section-3-overview.html#cb220-3" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb220-4"><a href="section-3-overview.html#cb220-4" aria-hidden="true"></a>    X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">9</span><span class="op">/</span><span class="dv">19</span>, <span class="dv">10</span><span class="op">/</span><span class="dv">19</span>))    <span class="co"># simulate 1000 roulette spins</span></span>
-<span id="cb220-5"><a href="section-3-overview.html#cb220-5" aria-hidden="true"></a>    <span class="kw">sum</span>(X)    <span class="co"># determine total profit</span></span>
-<span id="cb220-6"><a href="section-3-overview.html#cb220-6" aria-hidden="true"></a>})</span>
-<span id="cb220-7"><a href="section-3-overview.html#cb220-7" aria-hidden="true"></a></span>
-<span id="cb220-8"><a href="section-3-overview.html#cb220-8" aria-hidden="true"></a><span class="kw">mean</span>(S <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>)    <span class="co"># probability of the casino losing money</span></span></code></pre></div>
+<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="section-3-overview.html#cb229-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span>    <span class="co"># number of roulette players</span></span>
+<span id="cb229-2"><a href="section-3-overview.html#cb229-2" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span>    <span class="co"># number of Monte Carlo experiments</span></span>
+<span id="cb229-3"><a href="section-3-overview.html#cb229-3" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb229-4"><a href="section-3-overview.html#cb229-4" aria-hidden="true"></a>    X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">1</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(<span class="dv">9</span><span class="op">/</span><span class="dv">19</span>, <span class="dv">10</span><span class="op">/</span><span class="dv">19</span>))    <span class="co"># simulate 1000 roulette spins</span></span>
+<span id="cb229-5"><a href="section-3-overview.html#cb229-5" aria-hidden="true"></a>    <span class="kw">sum</span>(X)    <span class="co"># determine total profit</span></span>
+<span id="cb229-6"><a href="section-3-overview.html#cb229-6" aria-hidden="true"></a>})</span>
+<span id="cb229-7"><a href="section-3-overview.html#cb229-7" aria-hidden="true"></a></span>
+<span id="cb229-8"><a href="section-3-overview.html#cb229-8" aria-hidden="true"></a><span class="kw">mean</span>(S <span class="op">&lt;</span><span class="st"> </span><span class="dv">0</span>)    <span class="co"># probability of the casino losing money</span></span></code></pre></div>
 <pre><code>## [1] 0.0447</code></pre>
 <p>We can plot a histogram of the observed values of S as well as the normal density curve based on the mean and standard deviation of S.</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="section-3-overview.html#cb222-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(S), <span class="kw">max</span>(S), <span class="dt">length =</span> <span class="dv">100</span>)    <span class="co"># sequence of 100 values across range of S</span></span>
-<span id="cb222-2"><a href="section-3-overview.html#cb222-2" aria-hidden="true"></a>normal_density &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">s =</span> s, <span class="dt">f =</span> <span class="kw">dnorm</span>(s, <span class="kw">mean</span>(S), <span class="kw">sd</span>(S))) <span class="co"># generate normal density for S</span></span>
-<span id="cb222-3"><a href="section-3-overview.html#cb222-3" aria-hidden="true"></a><span class="kw">data.frame</span> (<span class="dt">S =</span> S) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># make data frame of S for histogram</span></span>
-<span id="cb222-4"><a href="section-3-overview.html#cb222-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(S, ..density..)) <span class="op">+</span></span>
-<span id="cb222-5"><a href="section-3-overview.html#cb222-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">10</span>) <span class="op">+</span></span>
-<span id="cb222-6"><a href="section-3-overview.html#cb222-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Probability&quot;</span>) <span class="op">+</span></span>
-<span id="cb222-7"><a href="section-3-overview.html#cb222-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">data =</span> normal_density, <span class="dt">mapping =</span> <span class="kw">aes</span>(s, f), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-104-1.png" width="672" /></p>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="section-3-overview.html#cb231-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="kw">min</span>(S), <span class="kw">max</span>(S), <span class="dt">length =</span> <span class="dv">100</span>)    <span class="co"># sequence of 100 values across range of S</span></span>
+<span id="cb231-2"><a href="section-3-overview.html#cb231-2" aria-hidden="true"></a>normal_density &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">s =</span> s, <span class="dt">f =</span> <span class="kw">dnorm</span>(s, <span class="kw">mean</span>(S), <span class="kw">sd</span>(S))) <span class="co"># generate normal density for S</span></span>
+<span id="cb231-3"><a href="section-3-overview.html#cb231-3" aria-hidden="true"></a><span class="kw">data.frame</span> (<span class="dt">S =</span> S) <span class="op">%&gt;%</span><span class="st">    </span><span class="co"># make data frame of S for histogram</span></span>
+<span id="cb231-4"><a href="section-3-overview.html#cb231-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(S, ..density..)) <span class="op">+</span></span>
+<span id="cb231-5"><a href="section-3-overview.html#cb231-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">10</span>) <span class="op">+</span></span>
+<span id="cb231-6"><a href="section-3-overview.html#cb231-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">ylab</span>(<span class="st">&quot;Probability&quot;</span>) <span class="op">+</span></span>
+<span id="cb231-7"><a href="section-3-overview.html#cb231-7" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>(<span class="dt">data =</span> normal_density, <span class="dt">mapping =</span> <span class="kw">aes</span>(s, f), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-92-1.png" width="672" /></p>
 </div>
 <div id="distributions-versus-probability-distributions" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Distributions versus Probability Distributions</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#distributions-versus-probability-distributions">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#distributions-versus-probability-distributions" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>A random variable <span class="math inline">\(X\)</span> has a probability distribution function <span class="math inline">\(F(a)\)</span> that defines <span class="math inline">\(\mbox{Pr}(X \le a)\)</span> over all values of <span class="math inline">\(a\)</span>.</li>
@@ -306,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="notation-for-random-variables" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Notation for Random Variables</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#notation-for-random-variables">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#notation-for-random-variables" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Capital letters denote random variables (<span class="math inline">\(X\)</span>) and lowercase letters denote observed values (<span class="math inline">\(x\)</span>).</li>
@@ -315,7 +315,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="central-limit-theorem-clt" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Central Limit Theorem (CLT)</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#the-expected-value-and-standard-error">here</a> and <a href="https://rafalab.github.io/dsbook/random-variables.html#central-limit-theorem">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#the-expected-value-and-standard-error" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/random-variables.html#central-limit-theorem" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The Central Limit Theorem (CLT) says that the distribution of the sum of a random variable is approximated by a normal distribution.</li>
@@ -342,156 +342,156 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>Each red and black pocket is associated with a number from 1 to 36. The two remaining green slots feature “0” and “00”. Players place bets on which pocket they think a ball will land in after the wheel is spun. Players can bet on a specific number (0, 00, 1-36) or color (red, black, or green).</p>
 <p>What are the chances that the ball lands in a green pocket?</p>
-<div class="sourceCode" id="cb223"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb223-1"><a href="section-3-overview.html#cb223-1" aria-hidden="true"></a><span class="co"># The variables `green`, `black`, and `red` contain the number of pockets for each color</span></span>
-<span id="cb223-2"><a href="section-3-overview.html#cb223-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb223-3"><a href="section-3-overview.html#cb223-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb223-4"><a href="section-3-overview.html#cb223-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb223-5"><a href="section-3-overview.html#cb223-5" aria-hidden="true"></a></span>
-<span id="cb223-6"><a href="section-3-overview.html#cb223-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb223-7"><a href="section-3-overview.html#cb223-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">/</span>(<span class="dv">2</span><span class="op">+</span><span class="dv">18</span><span class="op">+</span><span class="dv">18</span>)</span>
-<span id="cb223-8"><a href="section-3-overview.html#cb223-8" aria-hidden="true"></a></span>
-<span id="cb223-9"><a href="section-3-overview.html#cb223-9" aria-hidden="true"></a><span class="co"># Print the variable `p_green` to the console</span></span>
-<span id="cb223-10"><a href="section-3-overview.html#cb223-10" aria-hidden="true"></a>p_green</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="section-3-overview.html#cb232-1" aria-hidden="true"></a><span class="co"># The variables `green`, `black`, and `red` contain the number of pockets for each color</span></span>
+<span id="cb232-2"><a href="section-3-overview.html#cb232-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb232-3"><a href="section-3-overview.html#cb232-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb232-4"><a href="section-3-overview.html#cb232-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb232-5"><a href="section-3-overview.html#cb232-5" aria-hidden="true"></a></span>
+<span id="cb232-6"><a href="section-3-overview.html#cb232-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb232-7"><a href="section-3-overview.html#cb232-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">/</span>(<span class="dv">2</span><span class="op">+</span><span class="dv">18</span><span class="op">+</span><span class="dv">18</span>)</span>
+<span id="cb232-8"><a href="section-3-overview.html#cb232-8" aria-hidden="true"></a></span>
+<span id="cb232-9"><a href="section-3-overview.html#cb232-9" aria-hidden="true"></a><span class="co"># Print the variable `p_green` to the console</span></span>
+<span id="cb232-10"><a href="section-3-overview.html#cb232-10" aria-hidden="true"></a>p_green</span></code></pre></div>
 <pre><code>## [1] 0.0526</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>In American roulette, the payout for winning on green is $17.</li>
 </ol>
 <p>This means that if you bet $1 and it lands on green, you get $17 as a prize.</p>
 <p>Create a model to predict your winnings from betting on green one time.</p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="section-3-overview.html#cb225-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
-<span id="cb225-2"><a href="section-3-overview.html#cb225-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb225-3"><a href="section-3-overview.html#cb225-3" aria-hidden="true"></a></span>
-<span id="cb225-4"><a href="section-3-overview.html#cb225-4" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb225-5"><a href="section-3-overview.html#cb225-5" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb225-6"><a href="section-3-overview.html#cb225-6" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb225-7"><a href="section-3-overview.html#cb225-7" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb225-8"><a href="section-3-overview.html#cb225-8" aria-hidden="true"></a></span>
-<span id="cb225-9"><a href="section-3-overview.html#cb225-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb225-10"><a href="section-3-overview.html#cb225-10" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb225-11"><a href="section-3-overview.html#cb225-11" aria-hidden="true"></a></span>
-<span id="cb225-12"><a href="section-3-overview.html#cb225-12" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb225-13"><a href="section-3-overview.html#cb225-13" aria-hidden="true"></a>p_not_green =<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
-<span id="cb225-14"><a href="section-3-overview.html#cb225-14" aria-hidden="true"></a></span>
-<span id="cb225-15"><a href="section-3-overview.html#cb225-15" aria-hidden="true"></a></span>
-<span id="cb225-16"><a href="section-3-overview.html#cb225-16" aria-hidden="true"></a><span class="co"># Create a model to predict the random variable `X`, your winnings from betting on green. Sample one time.</span></span>
-<span id="cb225-17"><a href="section-3-overview.html#cb225-17" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), <span class="dv">1</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green))</span>
-<span id="cb225-18"><a href="section-3-overview.html#cb225-18" aria-hidden="true"></a></span>
-<span id="cb225-19"><a href="section-3-overview.html#cb225-19" aria-hidden="true"></a><span class="co"># Print the value of `X` to the console</span></span>
-<span id="cb225-20"><a href="section-3-overview.html#cb225-20" aria-hidden="true"></a>X</span></code></pre></div>
+<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="section-3-overview.html#cb234-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
+<span id="cb234-2"><a href="section-3-overview.html#cb234-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb234-3"><a href="section-3-overview.html#cb234-3" aria-hidden="true"></a></span>
+<span id="cb234-4"><a href="section-3-overview.html#cb234-4" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb234-5"><a href="section-3-overview.html#cb234-5" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb234-6"><a href="section-3-overview.html#cb234-6" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb234-7"><a href="section-3-overview.html#cb234-7" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb234-8"><a href="section-3-overview.html#cb234-8" aria-hidden="true"></a></span>
+<span id="cb234-9"><a href="section-3-overview.html#cb234-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb234-10"><a href="section-3-overview.html#cb234-10" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb234-11"><a href="section-3-overview.html#cb234-11" aria-hidden="true"></a></span>
+<span id="cb234-12"><a href="section-3-overview.html#cb234-12" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb234-13"><a href="section-3-overview.html#cb234-13" aria-hidden="true"></a>p_not_green =<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
+<span id="cb234-14"><a href="section-3-overview.html#cb234-14" aria-hidden="true"></a></span>
+<span id="cb234-15"><a href="section-3-overview.html#cb234-15" aria-hidden="true"></a></span>
+<span id="cb234-16"><a href="section-3-overview.html#cb234-16" aria-hidden="true"></a><span class="co"># Create a model to predict the random variable `X`, your winnings from betting on green. Sample one time.</span></span>
+<span id="cb234-17"><a href="section-3-overview.html#cb234-17" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), <span class="dv">1</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green))</span>
+<span id="cb234-18"><a href="section-3-overview.html#cb234-18" aria-hidden="true"></a></span>
+<span id="cb234-19"><a href="section-3-overview.html#cb234-19" aria-hidden="true"></a><span class="co"># Print the value of `X` to the console</span></span>
+<span id="cb234-20"><a href="section-3-overview.html#cb234-20" aria-hidden="true"></a>X</span></code></pre></div>
 <pre><code>## [1] -1</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>In American roulette, the payout for winning on green is $17.</li>
 </ol>
 <p>This means that if you bet $1 and it lands on green, you get $17 as a prize. In the previous exercise, you created a model to predict your winnings from betting on green.</p>
 <p>Now, compute the expected value of <span class="math inline">\(X\)</span>, the random variable you generated previously.</p>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="section-3-overview.html#cb227-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb227-2"><a href="section-3-overview.html#cb227-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb227-3"><a href="section-3-overview.html#cb227-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb227-4"><a href="section-3-overview.html#cb227-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb227-5"><a href="section-3-overview.html#cb227-5" aria-hidden="true"></a></span>
-<span id="cb227-6"><a href="section-3-overview.html#cb227-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb227-7"><a href="section-3-overview.html#cb227-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb227-8"><a href="section-3-overview.html#cb227-8" aria-hidden="true"></a></span>
-<span id="cb227-9"><a href="section-3-overview.html#cb227-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb227-10"><a href="section-3-overview.html#cb227-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb227-11"><a href="section-3-overview.html#cb227-11" aria-hidden="true"></a></span>
-<span id="cb227-12"><a href="section-3-overview.html#cb227-12" aria-hidden="true"></a><span class="co"># Calculate the expected outcome if you win $17 if the ball lands on green and you lose $1 if the ball doesn&#39;t land on green</span></span>
-<span id="cb227-13"><a href="section-3-overview.html#cb227-13" aria-hidden="true"></a><span class="dv">17</span> <span class="op">*</span><span class="st"> </span>p_green <span class="op">+</span><span class="st"> </span>(<span class="op">-</span><span class="dv">1</span> <span class="op">*</span><span class="st"> </span>p_not_green)</span></code></pre></div>
+<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="section-3-overview.html#cb236-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb236-2"><a href="section-3-overview.html#cb236-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb236-3"><a href="section-3-overview.html#cb236-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb236-4"><a href="section-3-overview.html#cb236-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb236-5"><a href="section-3-overview.html#cb236-5" aria-hidden="true"></a></span>
+<span id="cb236-6"><a href="section-3-overview.html#cb236-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb236-7"><a href="section-3-overview.html#cb236-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb236-8"><a href="section-3-overview.html#cb236-8" aria-hidden="true"></a></span>
+<span id="cb236-9"><a href="section-3-overview.html#cb236-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb236-10"><a href="section-3-overview.html#cb236-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb236-11"><a href="section-3-overview.html#cb236-11" aria-hidden="true"></a></span>
+<span id="cb236-12"><a href="section-3-overview.html#cb236-12" aria-hidden="true"></a><span class="co"># Calculate the expected outcome if you win $17 if the ball lands on green and you lose $1 if the ball doesn&#39;t land on green</span></span>
+<span id="cb236-13"><a href="section-3-overview.html#cb236-13" aria-hidden="true"></a><span class="dv">17</span> <span class="op">*</span><span class="st"> </span>p_green <span class="op">+</span><span class="st"> </span>(<span class="op">-</span><span class="dv">1</span> <span class="op">*</span><span class="st"> </span>p_not_green)</span></code></pre></div>
 <pre><code>## [1] -0.0526</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>The standard error of a random variable <span class="math inline">\(X\)</span> tells us the difference between a random variable and its expected value. You calculated a random variable <span class="math inline">\(X\)</span> in exercise 2 and the expected value of that random variable in exercise 3.</li>
 </ol>
 <p>Now, compute the standard error of that random variable, which represents a single outcome after one spin of the roulette wheel.</p>
-<div class="sourceCode" id="cb229"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb229-1"><a href="section-3-overview.html#cb229-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb229-2"><a href="section-3-overview.html#cb229-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb229-3"><a href="section-3-overview.html#cb229-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb229-4"><a href="section-3-overview.html#cb229-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb229-5"><a href="section-3-overview.html#cb229-5" aria-hidden="true"></a></span>
-<span id="cb229-6"><a href="section-3-overview.html#cb229-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb229-7"><a href="section-3-overview.html#cb229-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb229-8"><a href="section-3-overview.html#cb229-8" aria-hidden="true"></a></span>
-<span id="cb229-9"><a href="section-3-overview.html#cb229-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb229-10"><a href="section-3-overview.html#cb229-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb229-11"><a href="section-3-overview.html#cb229-11" aria-hidden="true"></a></span>
-<span id="cb229-12"><a href="section-3-overview.html#cb229-12" aria-hidden="true"></a><span class="co"># Compute the standard error of the random variable</span></span>
-<span id="cb229-13"><a href="section-3-overview.html#cb229-13" aria-hidden="true"></a><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span></code></pre></div>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="section-3-overview.html#cb238-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb238-2"><a href="section-3-overview.html#cb238-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb238-3"><a href="section-3-overview.html#cb238-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb238-4"><a href="section-3-overview.html#cb238-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb238-5"><a href="section-3-overview.html#cb238-5" aria-hidden="true"></a></span>
+<span id="cb238-6"><a href="section-3-overview.html#cb238-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb238-7"><a href="section-3-overview.html#cb238-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb238-8"><a href="section-3-overview.html#cb238-8" aria-hidden="true"></a></span>
+<span id="cb238-9"><a href="section-3-overview.html#cb238-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb238-10"><a href="section-3-overview.html#cb238-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb238-11"><a href="section-3-overview.html#cb238-11" aria-hidden="true"></a></span>
+<span id="cb238-12"><a href="section-3-overview.html#cb238-12" aria-hidden="true"></a><span class="co"># Compute the standard error of the random variable</span></span>
+<span id="cb238-13"><a href="section-3-overview.html#cb238-13" aria-hidden="true"></a><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span></code></pre></div>
 <pre><code>## [1] 4.02</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>You modeled the outcome of a single spin of the roulette wheel, <span class="math inline">\(X\)</span>, in exercise 2.</li>
 </ol>
 <p>Now create a random variable <span class="math inline">\(S\)</span> that sums your winnings after betting on green 1,000 times.</p>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="section-3-overview.html#cb231-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb231-2"><a href="section-3-overview.html#cb231-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb231-3"><a href="section-3-overview.html#cb231-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb231-4"><a href="section-3-overview.html#cb231-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb231-5"><a href="section-3-overview.html#cb231-5" aria-hidden="true"></a></span>
-<span id="cb231-6"><a href="section-3-overview.html#cb231-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb231-7"><a href="section-3-overview.html#cb231-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb231-8"><a href="section-3-overview.html#cb231-8" aria-hidden="true"></a></span>
-<span id="cb231-9"><a href="section-3-overview.html#cb231-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb231-10"><a href="section-3-overview.html#cb231-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb231-11"><a href="section-3-overview.html#cb231-11" aria-hidden="true"></a></span>
-<span id="cb231-12"><a href="section-3-overview.html#cb231-12" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
-<span id="cb231-13"><a href="section-3-overview.html#cb231-13" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb231-14"><a href="section-3-overview.html#cb231-14" aria-hidden="true"></a></span>
-<span id="cb231-15"><a href="section-3-overview.html#cb231-15" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb231-16"><a href="section-3-overview.html#cb231-16" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb231-17"><a href="section-3-overview.html#cb231-17" aria-hidden="true"></a></span>
-<span id="cb231-18"><a href="section-3-overview.html#cb231-18" aria-hidden="true"></a><span class="co"># Create a vector called &#39;X&#39; that contains the outcomes of 1000 samples</span></span>
-<span id="cb231-19"><a href="section-3-overview.html#cb231-19" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green)) </span>
-<span id="cb231-20"><a href="section-3-overview.html#cb231-20" aria-hidden="true"></a></span>
-<span id="cb231-21"><a href="section-3-overview.html#cb231-21" aria-hidden="true"></a><span class="co"># Assign the sum of all 1000 outcomes to the variable &#39;S&#39;</span></span>
-<span id="cb231-22"><a href="section-3-overview.html#cb231-22" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">sum</span>(X)</span>
-<span id="cb231-23"><a href="section-3-overview.html#cb231-23" aria-hidden="true"></a></span>
-<span id="cb231-24"><a href="section-3-overview.html#cb231-24" aria-hidden="true"></a><span class="co"># Print the value of &#39;S&#39; to the console</span></span>
-<span id="cb231-25"><a href="section-3-overview.html#cb231-25" aria-hidden="true"></a>S</span></code></pre></div>
+<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="section-3-overview.html#cb240-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb240-2"><a href="section-3-overview.html#cb240-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb240-3"><a href="section-3-overview.html#cb240-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb240-4"><a href="section-3-overview.html#cb240-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb240-5"><a href="section-3-overview.html#cb240-5" aria-hidden="true"></a></span>
+<span id="cb240-6"><a href="section-3-overview.html#cb240-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb240-7"><a href="section-3-overview.html#cb240-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb240-8"><a href="section-3-overview.html#cb240-8" aria-hidden="true"></a></span>
+<span id="cb240-9"><a href="section-3-overview.html#cb240-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb240-10"><a href="section-3-overview.html#cb240-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb240-11"><a href="section-3-overview.html#cb240-11" aria-hidden="true"></a></span>
+<span id="cb240-12"><a href="section-3-overview.html#cb240-12" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling</span></span>
+<span id="cb240-13"><a href="section-3-overview.html#cb240-13" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb240-14"><a href="section-3-overview.html#cb240-14" aria-hidden="true"></a></span>
+<span id="cb240-15"><a href="section-3-overview.html#cb240-15" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb240-16"><a href="section-3-overview.html#cb240-16" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb240-17"><a href="section-3-overview.html#cb240-17" aria-hidden="true"></a></span>
+<span id="cb240-18"><a href="section-3-overview.html#cb240-18" aria-hidden="true"></a><span class="co"># Create a vector called &#39;X&#39; that contains the outcomes of 1000 samples</span></span>
+<span id="cb240-19"><a href="section-3-overview.html#cb240-19" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green)) </span>
+<span id="cb240-20"><a href="section-3-overview.html#cb240-20" aria-hidden="true"></a></span>
+<span id="cb240-21"><a href="section-3-overview.html#cb240-21" aria-hidden="true"></a><span class="co"># Assign the sum of all 1000 outcomes to the variable &#39;S&#39;</span></span>
+<span id="cb240-22"><a href="section-3-overview.html#cb240-22" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">sum</span>(X)</span>
+<span id="cb240-23"><a href="section-3-overview.html#cb240-23" aria-hidden="true"></a></span>
+<span id="cb240-24"><a href="section-3-overview.html#cb240-24" aria-hidden="true"></a><span class="co"># Print the value of &#39;S&#39; to the console</span></span>
+<span id="cb240-25"><a href="section-3-overview.html#cb240-25" aria-hidden="true"></a>S</span></code></pre></div>
 <pre><code>## [1] -10</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>In the previous exercise, you generated a vector of random outcomes, <span class="math inline">\(S\)</span>, after betting on green 1,000 times.</li>
 </ol>
 <p>What is the expected value of <span class="math inline">\(S\)</span>?</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="section-3-overview.html#cb233-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb233-2"><a href="section-3-overview.html#cb233-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb233-3"><a href="section-3-overview.html#cb233-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb233-4"><a href="section-3-overview.html#cb233-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb233-5"><a href="section-3-overview.html#cb233-5" aria-hidden="true"></a></span>
-<span id="cb233-6"><a href="section-3-overview.html#cb233-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb233-7"><a href="section-3-overview.html#cb233-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb233-8"><a href="section-3-overview.html#cb233-8" aria-hidden="true"></a></span>
-<span id="cb233-9"><a href="section-3-overview.html#cb233-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb233-10"><a href="section-3-overview.html#cb233-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb233-11"><a href="section-3-overview.html#cb233-11" aria-hidden="true"></a></span>
-<span id="cb233-12"><a href="section-3-overview.html#cb233-12" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb233-13"><a href="section-3-overview.html#cb233-13" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb233-14"><a href="section-3-overview.html#cb233-14" aria-hidden="true"></a></span>
-<span id="cb233-15"><a href="section-3-overview.html#cb233-15" aria-hidden="true"></a><span class="co"># Calculate the expected outcome of 1,000 spins if you win $17 when the ball lands on green and you lose $1 when the ball doesn&#39;t land on green</span></span>
-<span id="cb233-16"><a href="section-3-overview.html#cb233-16" aria-hidden="true"></a>n <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">*</span><span class="st"> </span>p_green <span class="op">+</span><span class="st"> </span>(<span class="op">-</span><span class="dv">1</span> <span class="op">*</span><span class="st"> </span>p_not_green))</span></code></pre></div>
+<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="section-3-overview.html#cb242-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb242-2"><a href="section-3-overview.html#cb242-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb242-3"><a href="section-3-overview.html#cb242-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb242-4"><a href="section-3-overview.html#cb242-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb242-5"><a href="section-3-overview.html#cb242-5" aria-hidden="true"></a></span>
+<span id="cb242-6"><a href="section-3-overview.html#cb242-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb242-7"><a href="section-3-overview.html#cb242-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb242-8"><a href="section-3-overview.html#cb242-8" aria-hidden="true"></a></span>
+<span id="cb242-9"><a href="section-3-overview.html#cb242-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb242-10"><a href="section-3-overview.html#cb242-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb242-11"><a href="section-3-overview.html#cb242-11" aria-hidden="true"></a></span>
+<span id="cb242-12"><a href="section-3-overview.html#cb242-12" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb242-13"><a href="section-3-overview.html#cb242-13" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb242-14"><a href="section-3-overview.html#cb242-14" aria-hidden="true"></a></span>
+<span id="cb242-15"><a href="section-3-overview.html#cb242-15" aria-hidden="true"></a><span class="co"># Calculate the expected outcome of 1,000 spins if you win $17 when the ball lands on green and you lose $1 when the ball doesn&#39;t land on green</span></span>
+<span id="cb242-16"><a href="section-3-overview.html#cb242-16" aria-hidden="true"></a>n <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">*</span><span class="st"> </span>p_green <span class="op">+</span><span class="st"> </span>(<span class="op">-</span><span class="dv">1</span> <span class="op">*</span><span class="st"> </span>p_not_green))</span></code></pre></div>
 <pre><code>## [1] -52.6</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>You generated the expected value of <span class="math inline">\(S\)</span>, the outcomes of 1,000 bets that the ball lands in the green pocket, in the previous exercise.</li>
 </ol>
 <p>What is the standard error of <span class="math inline">\(S\)</span>?</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="section-3-overview.html#cb235-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
-<span id="cb235-2"><a href="section-3-overview.html#cb235-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
-<span id="cb235-3"><a href="section-3-overview.html#cb235-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb235-4"><a href="section-3-overview.html#cb235-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
-<span id="cb235-5"><a href="section-3-overview.html#cb235-5" aria-hidden="true"></a></span>
-<span id="cb235-6"><a href="section-3-overview.html#cb235-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb235-7"><a href="section-3-overview.html#cb235-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
-<span id="cb235-8"><a href="section-3-overview.html#cb235-8" aria-hidden="true"></a></span>
-<span id="cb235-9"><a href="section-3-overview.html#cb235-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb235-10"><a href="section-3-overview.html#cb235-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb235-11"><a href="section-3-overview.html#cb235-11" aria-hidden="true"></a></span>
-<span id="cb235-12"><a href="section-3-overview.html#cb235-12" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb235-13"><a href="section-3-overview.html#cb235-13" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb235-14"><a href="section-3-overview.html#cb235-14" aria-hidden="true"></a></span>
-<span id="cb235-15"><a href="section-3-overview.html#cb235-15" aria-hidden="true"></a><span class="co"># Compute the standard error of the sum of 1,000 outcomes</span></span>
-<span id="cb235-16"><a href="section-3-overview.html#cb235-16" aria-hidden="true"></a><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span></code></pre></div>
+<div class="sourceCode" id="cb244"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb244-1"><a href="section-3-overview.html#cb244-1" aria-hidden="true"></a><span class="co"># The variables &#39;green&#39;, &#39;black&#39;, and &#39;red&#39; contain the number of pockets for each color</span></span>
+<span id="cb244-2"><a href="section-3-overview.html#cb244-2" aria-hidden="true"></a>green &lt;-<span class="st"> </span><span class="dv">2</span></span>
+<span id="cb244-3"><a href="section-3-overview.html#cb244-3" aria-hidden="true"></a>black &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb244-4"><a href="section-3-overview.html#cb244-4" aria-hidden="true"></a>red &lt;-<span class="st"> </span><span class="dv">18</span></span>
+<span id="cb244-5"><a href="section-3-overview.html#cb244-5" aria-hidden="true"></a></span>
+<span id="cb244-6"><a href="section-3-overview.html#cb244-6" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb244-7"><a href="section-3-overview.html#cb244-7" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span>green <span class="op">/</span><span class="st"> </span>(green<span class="op">+</span>black<span class="op">+</span>red)</span>
+<span id="cb244-8"><a href="section-3-overview.html#cb244-8" aria-hidden="true"></a></span>
+<span id="cb244-9"><a href="section-3-overview.html#cb244-9" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb244-10"><a href="section-3-overview.html#cb244-10" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb244-11"><a href="section-3-overview.html#cb244-11" aria-hidden="true"></a></span>
+<span id="cb244-12"><a href="section-3-overview.html#cb244-12" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb244-13"><a href="section-3-overview.html#cb244-13" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb244-14"><a href="section-3-overview.html#cb244-14" aria-hidden="true"></a></span>
+<span id="cb244-15"><a href="section-3-overview.html#cb244-15" aria-hidden="true"></a><span class="co"># Compute the standard error of the sum of 1,000 outcomes</span></span>
+<span id="cb244-16"><a href="section-3-overview.html#cb244-16" aria-hidden="true"></a><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span></code></pre></div>
 <pre><code>## [1] 127</code></pre>
 </div>
 <div id="averages-and-proportions" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Averages and Proportions</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#statistical-properties-of-averages">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#statistical-properties-of-averages" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Random variable times a constant</li>
@@ -526,7 +526,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="law-of-large-numbers" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Law of Large Numbers</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#law-of-large-numbers">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#law-of-large-numbers" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The law of large numbers states that as <span class="math inline">\(n\)</span> increases, the standard error of the average of a random variable decreases. In other words, when <span class="math inline">\(n\)</span> is large, the average of the draws converges to the average of the urn.</li>
@@ -536,8 +536,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="how-large-is-large-in-clt" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> How Large is Large in CLT?</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#how-large-is-large-in-the-central-limit-theorem">here</a></p>
-<p>You can read more about the Poisson distribution at <a href="https://en.wikipedia.org/wiki/Poisson_distribution">this link</a>.</p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/random-variables.html#how-large-is-large-in-the-central-limit-theorem" target="_blank">here</a>.</p>
+<p>You can read more about the Poisson distribution at <a href="https://en.wikipedia.org/wiki/Poisson_distribution" target="_blank">this link</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The sample size required for the Central Limit Theorem and Law of Large Numbers to apply differs based on the probability of success.
@@ -557,61 +557,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>In the previous chapter of exercises, you created a random variable <span class="math inline">\(S\)</span>
 that is the sum of your winnings after betting on green a number of times in American Roulette.</p>
 <p>What is the probability that you end up winning money if you bet on green 100 times?</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="section-3-overview.html#cb237-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb237-2"><a href="section-3-overview.html#cb237-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
-<span id="cb237-3"><a href="section-3-overview.html#cb237-3" aria-hidden="true"></a></span>
-<span id="cb237-4"><a href="section-3-overview.html#cb237-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb237-5"><a href="section-3-overview.html#cb237-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb237-6"><a href="section-3-overview.html#cb237-6" aria-hidden="true"></a></span>
-<span id="cb237-7"><a href="section-3-overview.html#cb237-7" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb237-8"><a href="section-3-overview.html#cb237-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb237-9"><a href="section-3-overview.html#cb237-9" aria-hidden="true"></a></span>
-<span id="cb237-10"><a href="section-3-overview.html#cb237-10" aria-hidden="true"></a><span class="co"># Calculate &#39;avg&#39;, the expected outcome of 100 spins if you win $17 when the ball lands on green and you lose $1 when the ball doesn&#39;t land on green</span></span>
-<span id="cb237-11"><a href="section-3-overview.html#cb237-11" aria-hidden="true"></a>avg &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span><span class="op">*</span>p_green <span class="op">+</span><span class="st"> </span><span class="dv">-1</span><span class="op">*</span>p_not_green)</span>
-<span id="cb237-12"><a href="section-3-overview.html#cb237-12" aria-hidden="true"></a></span>
-<span id="cb237-13"><a href="section-3-overview.html#cb237-13" aria-hidden="true"></a><span class="co"># Compute &#39;se&#39;, the standard error of the sum of 100 outcomes</span></span>
-<span id="cb237-14"><a href="section-3-overview.html#cb237-14" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>)<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span>
-<span id="cb237-15"><a href="section-3-overview.html#cb237-15" aria-hidden="true"></a></span>
-<span id="cb237-16"><a href="section-3-overview.html#cb237-16" aria-hidden="true"></a><span class="co"># Using the expected value &#39;avg&#39; and standard error &#39;se&#39;, compute the probability that you win money betting on green 100 times.</span></span>
-<span id="cb237-17"><a href="section-3-overview.html#cb237-17" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">0</span>,avg,se)</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="section-3-overview.html#cb246-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb246-2"><a href="section-3-overview.html#cb246-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
+<span id="cb246-3"><a href="section-3-overview.html#cb246-3" aria-hidden="true"></a></span>
+<span id="cb246-4"><a href="section-3-overview.html#cb246-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb246-5"><a href="section-3-overview.html#cb246-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb246-6"><a href="section-3-overview.html#cb246-6" aria-hidden="true"></a></span>
+<span id="cb246-7"><a href="section-3-overview.html#cb246-7" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb246-8"><a href="section-3-overview.html#cb246-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb246-9"><a href="section-3-overview.html#cb246-9" aria-hidden="true"></a></span>
+<span id="cb246-10"><a href="section-3-overview.html#cb246-10" aria-hidden="true"></a><span class="co"># Calculate &#39;avg&#39;, the expected outcome of 100 spins if you win $17 when the ball lands on green and you lose $1 when the ball doesn&#39;t land on green</span></span>
+<span id="cb246-11"><a href="section-3-overview.html#cb246-11" aria-hidden="true"></a>avg &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span><span class="op">*</span>p_green <span class="op">+</span><span class="st"> </span><span class="dv">-1</span><span class="op">*</span>p_not_green)</span>
+<span id="cb246-12"><a href="section-3-overview.html#cb246-12" aria-hidden="true"></a></span>
+<span id="cb246-13"><a href="section-3-overview.html#cb246-13" aria-hidden="true"></a><span class="co"># Compute &#39;se&#39;, the standard error of the sum of 100 outcomes</span></span>
+<span id="cb246-14"><a href="section-3-overview.html#cb246-14" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>)<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span>
+<span id="cb246-15"><a href="section-3-overview.html#cb246-15" aria-hidden="true"></a></span>
+<span id="cb246-16"><a href="section-3-overview.html#cb246-16" aria-hidden="true"></a><span class="co"># Using the expected value &#39;avg&#39; and standard error &#39;se&#39;, compute the probability that you win money betting on green 100 times.</span></span>
+<span id="cb246-17"><a href="section-3-overview.html#cb246-17" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">0</span>,avg,se)</span></code></pre></div>
 <pre><code>## [1] 0.448</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Create a Monte Carlo simulation that generates 10,000 outcomes of <span class="math inline">\(S\)</span>, the sum of 100 bets.</li>
 </ol>
 <p>Compute the average and standard deviation of the resulting list and compare them to the expected value (-5.263158) and standard error (40.19344) for <span class="math inline">\(S\)</span> that you calculated previously.</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="section-3-overview.html#cb239-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb239-2"><a href="section-3-overview.html#cb239-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
-<span id="cb239-3"><a href="section-3-overview.html#cb239-3" aria-hidden="true"></a></span>
-<span id="cb239-4"><a href="section-3-overview.html#cb239-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb239-5"><a href="section-3-overview.html#cb239-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
-<span id="cb239-6"><a href="section-3-overview.html#cb239-6" aria-hidden="true"></a></span>
-<span id="cb239-7"><a href="section-3-overview.html#cb239-7" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb239-8"><a href="section-3-overview.html#cb239-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
-<span id="cb239-9"><a href="section-3-overview.html#cb239-9" aria-hidden="true"></a></span>
-<span id="cb239-10"><a href="section-3-overview.html#cb239-10" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run. Let&#39;s run the Monte Carlo simulation 10,000 times.</span></span>
-<span id="cb239-11"><a href="section-3-overview.html#cb239-11" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb239-12"><a href="section-3-overview.html#cb239-12" aria-hidden="true"></a></span>
-<span id="cb239-13"><a href="section-3-overview.html#cb239-13" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
-<span id="cb239-14"><a href="section-3-overview.html#cb239-14" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb239-15"><a href="section-3-overview.html#cb239-15" aria-hidden="true"></a></span>
-<span id="cb239-16"><a href="section-3-overview.html#cb239-16" aria-hidden="true"></a><span class="co"># Create an object called `S` that replicates the sample code for `B` iterations and sums the outcomes.</span></span>
-<span id="cb239-17"><a href="section-3-overview.html#cb239-17" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B,{</span>
-<span id="cb239-18"><a href="section-3-overview.html#cb239-18" aria-hidden="true"></a>   X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">17</span>,<span class="op">-</span><span class="dv">1</span>), <span class="dt">size =</span> n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_green, p_not_green))</span>
-<span id="cb239-19"><a href="section-3-overview.html#cb239-19" aria-hidden="true"></a>   <span class="kw">sum</span>(X)</span>
-<span id="cb239-20"><a href="section-3-overview.html#cb239-20" aria-hidden="true"></a>   })</span>
-<span id="cb239-21"><a href="section-3-overview.html#cb239-21" aria-hidden="true"></a></span>
-<span id="cb239-22"><a href="section-3-overview.html#cb239-22" aria-hidden="true"></a><span class="co"># Compute the average value for &#39;S&#39;</span></span>
-<span id="cb239-23"><a href="section-3-overview.html#cb239-23" aria-hidden="true"></a><span class="kw">mean</span>(S)</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="section-3-overview.html#cb248-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb248-2"><a href="section-3-overview.html#cb248-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
+<span id="cb248-3"><a href="section-3-overview.html#cb248-3" aria-hidden="true"></a></span>
+<span id="cb248-4"><a href="section-3-overview.html#cb248-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb248-5"><a href="section-3-overview.html#cb248-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">-</span>p_green</span>
+<span id="cb248-6"><a href="section-3-overview.html#cb248-6" aria-hidden="true"></a></span>
+<span id="cb248-7"><a href="section-3-overview.html#cb248-7" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb248-8"><a href="section-3-overview.html#cb248-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">100</span></span>
+<span id="cb248-9"><a href="section-3-overview.html#cb248-9" aria-hidden="true"></a></span>
+<span id="cb248-10"><a href="section-3-overview.html#cb248-10" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run. Let&#39;s run the Monte Carlo simulation 10,000 times.</span></span>
+<span id="cb248-11"><a href="section-3-overview.html#cb248-11" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb248-12"><a href="section-3-overview.html#cb248-12" aria-hidden="true"></a></span>
+<span id="cb248-13"><a href="section-3-overview.html#cb248-13" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
+<span id="cb248-14"><a href="section-3-overview.html#cb248-14" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb248-15"><a href="section-3-overview.html#cb248-15" aria-hidden="true"></a></span>
+<span id="cb248-16"><a href="section-3-overview.html#cb248-16" aria-hidden="true"></a><span class="co"># Create an object called `S` that replicates the sample code for `B` iterations and sums the outcomes.</span></span>
+<span id="cb248-17"><a href="section-3-overview.html#cb248-17" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B,{</span>
+<span id="cb248-18"><a href="section-3-overview.html#cb248-18" aria-hidden="true"></a>   X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">17</span>,<span class="op">-</span><span class="dv">1</span>), <span class="dt">size =</span> n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_green, p_not_green))</span>
+<span id="cb248-19"><a href="section-3-overview.html#cb248-19" aria-hidden="true"></a>   <span class="kw">sum</span>(X)</span>
+<span id="cb248-20"><a href="section-3-overview.html#cb248-20" aria-hidden="true"></a>   })</span>
+<span id="cb248-21"><a href="section-3-overview.html#cb248-21" aria-hidden="true"></a></span>
+<span id="cb248-22"><a href="section-3-overview.html#cb248-22" aria-hidden="true"></a><span class="co"># Compute the average value for &#39;S&#39;</span></span>
+<span id="cb248-23"><a href="section-3-overview.html#cb248-23" aria-hidden="true"></a><span class="kw">mean</span>(S)</span></code></pre></div>
 <pre><code>## [1] -5.91</code></pre>
-<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="section-3-overview.html#cb241-1" aria-hidden="true"></a><span class="co"># Calculate the standard deviation of &#39;S&#39;</span></span>
-<span id="cb241-2"><a href="section-3-overview.html#cb241-2" aria-hidden="true"></a><span class="kw">sd</span>(S)</span></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="section-3-overview.html#cb250-1" aria-hidden="true"></a><span class="co"># Calculate the standard deviation of &#39;S&#39;</span></span>
+<span id="cb250-2"><a href="section-3-overview.html#cb250-2" aria-hidden="true"></a><span class="kw">sd</span>(S)</span></code></pre></div>
 <pre><code>## [1] 40.3</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>In this chapter, you calculated the probability of winning money in American roulette using the CLT.</li>
 </ol>
 <p>Now, calculate the probability of winning money from the Monte Carlo simulation. The Monte Carlo simulation from the previous exercise has already been pre-run for you, resulting in the variable <span class="math inline">\(S\)</span> that contains a list of 10,000 simulated outcomes.</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="section-3-overview.html#cb243-1" aria-hidden="true"></a><span class="co"># Calculate the proportion of outcomes in the vector `S` that exceed $0</span></span>
-<span id="cb243-2"><a href="section-3-overview.html#cb243-2" aria-hidden="true"></a><span class="kw">mean</span>(S <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="section-3-overview.html#cb252-1" aria-hidden="true"></a><span class="co"># Calculate the proportion of outcomes in the vector `S` that exceed $0</span></span>
+<span id="cb252-2"><a href="section-3-overview.html#cb252-2" aria-hidden="true"></a><span class="kw">mean</span>(S <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0.423</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>The Monte Carlo result and the CLT approximation for the probability of losing money after 100 bets are close, but not that close. What could account for this?</li>
@@ -629,100 +629,100 @@ D. The CLT only works for the averages.</li>
 <ol start="5" style="list-style-type: decimal">
 <li>Now create a random variable <span class="math inline">\(Y\)</span> that contains your average winnings per bet after betting on green 10,000 times.</li>
 </ol>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="section-3-overview.html#cb245-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
-<span id="cb245-2"><a href="section-3-overview.html#cb245-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb245-3"><a href="section-3-overview.html#cb245-3" aria-hidden="true"></a></span>
-<span id="cb245-4"><a href="section-3-overview.html#cb245-4" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb245-5"><a href="section-3-overview.html#cb245-5" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb245-6"><a href="section-3-overview.html#cb245-6" aria-hidden="true"></a></span>
-<span id="cb245-7"><a href="section-3-overview.html#cb245-7" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb245-8"><a href="section-3-overview.html#cb245-8" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
-<span id="cb245-9"><a href="section-3-overview.html#cb245-9" aria-hidden="true"></a></span>
-<span id="cb245-10"><a href="section-3-overview.html#cb245-10" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb245-11"><a href="section-3-overview.html#cb245-11" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
-<span id="cb245-12"><a href="section-3-overview.html#cb245-12" aria-hidden="true"></a></span>
-<span id="cb245-13"><a href="section-3-overview.html#cb245-13" aria-hidden="true"></a><span class="co"># Create a vector called `X` that contains the outcomes of `n` bets</span></span>
-<span id="cb245-14"><a href="section-3-overview.html#cb245-14" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green))</span>
-<span id="cb245-15"><a href="section-3-overview.html#cb245-15" aria-hidden="true"></a></span>
-<span id="cb245-16"><a href="section-3-overview.html#cb245-16" aria-hidden="true"></a><span class="co"># Define a variable `Y` that contains the mean outcome per bet. Print this mean to the console.</span></span>
-<span id="cb245-17"><a href="section-3-overview.html#cb245-17" aria-hidden="true"></a>Y &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
-<span id="cb245-18"><a href="section-3-overview.html#cb245-18" aria-hidden="true"></a>Y</span></code></pre></div>
+<div class="sourceCode" id="cb254"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb254-1"><a href="section-3-overview.html#cb254-1" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random sampling.</span></span>
+<span id="cb254-2"><a href="section-3-overview.html#cb254-2" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb254-3"><a href="section-3-overview.html#cb254-3" aria-hidden="true"></a></span>
+<span id="cb254-4"><a href="section-3-overview.html#cb254-4" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb254-5"><a href="section-3-overview.html#cb254-5" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb254-6"><a href="section-3-overview.html#cb254-6" aria-hidden="true"></a></span>
+<span id="cb254-7"><a href="section-3-overview.html#cb254-7" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb254-8"><a href="section-3-overview.html#cb254-8" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
+<span id="cb254-9"><a href="section-3-overview.html#cb254-9" aria-hidden="true"></a></span>
+<span id="cb254-10"><a href="section-3-overview.html#cb254-10" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb254-11"><a href="section-3-overview.html#cb254-11" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
+<span id="cb254-12"><a href="section-3-overview.html#cb254-12" aria-hidden="true"></a></span>
+<span id="cb254-13"><a href="section-3-overview.html#cb254-13" aria-hidden="true"></a><span class="co"># Create a vector called `X` that contains the outcomes of `n` bets</span></span>
+<span id="cb254-14"><a href="section-3-overview.html#cb254-14" aria-hidden="true"></a>X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="op">-</span><span class="dv">1</span>,<span class="dv">17</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_not_green, p_green))</span>
+<span id="cb254-15"><a href="section-3-overview.html#cb254-15" aria-hidden="true"></a></span>
+<span id="cb254-16"><a href="section-3-overview.html#cb254-16" aria-hidden="true"></a><span class="co"># Define a variable `Y` that contains the mean outcome per bet. Print this mean to the console.</span></span>
+<span id="cb254-17"><a href="section-3-overview.html#cb254-17" aria-hidden="true"></a>Y &lt;-<span class="st"> </span><span class="kw">mean</span>(X)</span>
+<span id="cb254-18"><a href="section-3-overview.html#cb254-18" aria-hidden="true"></a>Y</span></code></pre></div>
 <pre><code>## [1] 0.008</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>What is the expected value of <span class="math inline">\(Y\)</span>, the average outcome per bet after betting on green 10,000 times?</li>
 </ol>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="section-3-overview.html#cb247-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb247-2"><a href="section-3-overview.html#cb247-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
-<span id="cb247-3"><a href="section-3-overview.html#cb247-3" aria-hidden="true"></a></span>
-<span id="cb247-4"><a href="section-3-overview.html#cb247-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb247-5"><a href="section-3-overview.html#cb247-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
-<span id="cb247-6"><a href="section-3-overview.html#cb247-6" aria-hidden="true"></a></span>
-<span id="cb247-7"><a href="section-3-overview.html#cb247-7" aria-hidden="true"></a><span class="co"># Calculate the expected outcome of `Y`, the mean outcome per bet in 10,000 bets</span></span>
-<span id="cb247-8"><a href="section-3-overview.html#cb247-8" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>p_green <span class="op">*</span><span class="st"> </span><span class="dv">17</span> <span class="op">+</span><span class="st"> </span>p_not_green <span class="op">*</span><span class="st"> </span><span class="dv">-1</span></span>
-<span id="cb247-9"><a href="section-3-overview.html#cb247-9" aria-hidden="true"></a>Y</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="section-3-overview.html#cb256-1" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb256-2"><a href="section-3-overview.html#cb256-2" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
+<span id="cb256-3"><a href="section-3-overview.html#cb256-3" aria-hidden="true"></a></span>
+<span id="cb256-4"><a href="section-3-overview.html#cb256-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb256-5"><a href="section-3-overview.html#cb256-5" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
+<span id="cb256-6"><a href="section-3-overview.html#cb256-6" aria-hidden="true"></a></span>
+<span id="cb256-7"><a href="section-3-overview.html#cb256-7" aria-hidden="true"></a><span class="co"># Calculate the expected outcome of `Y`, the mean outcome per bet in 10,000 bets</span></span>
+<span id="cb256-8"><a href="section-3-overview.html#cb256-8" aria-hidden="true"></a>Y &lt;-<span class="st"> </span>p_green <span class="op">*</span><span class="st"> </span><span class="dv">17</span> <span class="op">+</span><span class="st"> </span>p_not_green <span class="op">*</span><span class="st"> </span><span class="dv">-1</span></span>
+<span id="cb256-9"><a href="section-3-overview.html#cb256-9" aria-hidden="true"></a>Y</span></code></pre></div>
 <pre><code>## [1] -0.0526</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>What is the standard error of <span class="math inline">\(Y\)</span>, the average result of 10,000 spins?</li>
 </ol>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="section-3-overview.html#cb249-1" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
-<span id="cb249-2"><a href="section-3-overview.html#cb249-2" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb249-3"><a href="section-3-overview.html#cb249-3" aria-hidden="true"></a></span>
-<span id="cb249-4"><a href="section-3-overview.html#cb249-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
-<span id="cb249-5"><a href="section-3-overview.html#cb249-5" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
-<span id="cb249-6"><a href="section-3-overview.html#cb249-6" aria-hidden="true"></a></span>
-<span id="cb249-7"><a href="section-3-overview.html#cb249-7" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
-<span id="cb249-8"><a href="section-3-overview.html#cb249-8" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
-<span id="cb249-9"><a href="section-3-overview.html#cb249-9" aria-hidden="true"></a></span>
-<span id="cb249-10"><a href="section-3-overview.html#cb249-10" aria-hidden="true"></a><span class="co"># Compute the standard error of &#39;Y&#39;, the mean outcome per bet from 10,000 bets.</span></span>
-<span id="cb249-11"><a href="section-3-overview.html#cb249-11" aria-hidden="true"></a>Y &lt;-<span class="st"> </span><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(n)</span>
-<span id="cb249-12"><a href="section-3-overview.html#cb249-12" aria-hidden="true"></a>Y</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="section-3-overview.html#cb258-1" aria-hidden="true"></a><span class="co"># Define the number of bets using the variable &#39;n&#39;</span></span>
+<span id="cb258-2"><a href="section-3-overview.html#cb258-2" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb258-3"><a href="section-3-overview.html#cb258-3" aria-hidden="true"></a></span>
+<span id="cb258-4"><a href="section-3-overview.html#cb258-4" aria-hidden="true"></a><span class="co"># Assign a variable `p_green` as the probability of the ball landing in a green pocket</span></span>
+<span id="cb258-5"><a href="section-3-overview.html#cb258-5" aria-hidden="true"></a>p_green &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">/</span><span class="st"> </span><span class="dv">38</span></span>
+<span id="cb258-6"><a href="section-3-overview.html#cb258-6" aria-hidden="true"></a></span>
+<span id="cb258-7"><a href="section-3-overview.html#cb258-7" aria-hidden="true"></a><span class="co"># Assign a variable `p_not_green` as the probability of the ball not landing in a green pocket</span></span>
+<span id="cb258-8"><a href="section-3-overview.html#cb258-8" aria-hidden="true"></a>p_not_green &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span>p_green</span>
+<span id="cb258-9"><a href="section-3-overview.html#cb258-9" aria-hidden="true"></a></span>
+<span id="cb258-10"><a href="section-3-overview.html#cb258-10" aria-hidden="true"></a><span class="co"># Compute the standard error of &#39;Y&#39;, the mean outcome per bet from 10,000 bets.</span></span>
+<span id="cb258-11"><a href="section-3-overview.html#cb258-11" aria-hidden="true"></a>Y &lt;-<span class="st"> </span><span class="kw">abs</span>((<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>))<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green) <span class="op">/</span><span class="st"> </span><span class="kw">sqrt</span>(n)</span>
+<span id="cb258-12"><a href="section-3-overview.html#cb258-12" aria-hidden="true"></a>Y</span></code></pre></div>
 <pre><code>## [1] 0.0402</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li>What is the probability that your winnings are positive after betting on green 10,000 times?</li>
 </ol>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="section-3-overview.html#cb251-1" aria-hidden="true"></a><span class="co"># We defined the average using the following code</span></span>
-<span id="cb251-2"><a href="section-3-overview.html#cb251-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="dv">17</span><span class="op">*</span>p_green <span class="op">+</span><span class="st"> </span><span class="dv">-1</span><span class="op">*</span>p_not_green</span>
-<span id="cb251-3"><a href="section-3-overview.html#cb251-3" aria-hidden="true"></a></span>
-<span id="cb251-4"><a href="section-3-overview.html#cb251-4" aria-hidden="true"></a><span class="co"># We defined standard error using this equation</span></span>
-<span id="cb251-5"><a href="section-3-overview.html#cb251-5" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>)<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span>
-<span id="cb251-6"><a href="section-3-overview.html#cb251-6" aria-hidden="true"></a></span>
-<span id="cb251-7"><a href="section-3-overview.html#cb251-7" aria-hidden="true"></a><span class="co"># Given this average and standard error, determine the probability of winning more than $0. Print the result to the console.</span></span>
-<span id="cb251-8"><a href="section-3-overview.html#cb251-8" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">0</span>,avg,se)</span></code></pre></div>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="section-3-overview.html#cb260-1" aria-hidden="true"></a><span class="co"># We defined the average using the following code</span></span>
+<span id="cb260-2"><a href="section-3-overview.html#cb260-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="dv">17</span><span class="op">*</span>p_green <span class="op">+</span><span class="st"> </span><span class="dv">-1</span><span class="op">*</span>p_not_green</span>
+<span id="cb260-3"><a href="section-3-overview.html#cb260-3" aria-hidden="true"></a></span>
+<span id="cb260-4"><a href="section-3-overview.html#cb260-4" aria-hidden="true"></a><span class="co"># We defined standard error using this equation</span></span>
+<span id="cb260-5"><a href="section-3-overview.html#cb260-5" aria-hidden="true"></a>se &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>(<span class="dv">17</span> <span class="op">-</span><span class="st"> </span><span class="dv">-1</span>)<span class="op">*</span><span class="kw">sqrt</span>(p_green<span class="op">*</span>p_not_green)</span>
+<span id="cb260-6"><a href="section-3-overview.html#cb260-6" aria-hidden="true"></a></span>
+<span id="cb260-7"><a href="section-3-overview.html#cb260-7" aria-hidden="true"></a><span class="co"># Given this average and standard error, determine the probability of winning more than $0. Print the result to the console.</span></span>
+<span id="cb260-8"><a href="section-3-overview.html#cb260-8" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">0</span>,avg,se)</span></code></pre></div>
 <pre><code>## [1] 0.0952</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Create a Monte Carlo simulation that generates 10,000 outcomes of <span class="math inline">\(S\)</span>, the average outcome from 10,000 bets on green.</li>
 </ol>
 <p>Compute the average and standard deviation of the resulting list to confirm the results from previous exercises using the Central Limit Theorem.</p>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="section-3-overview.html#cb253-1" aria-hidden="true"></a><span class="co">## Make sure you fully follow instructions, including printing values to the console and correctly running the `replicate` loop. If not, you may encounter &quot;Session Expired&quot; errors.</span></span>
-<span id="cb253-2"><a href="section-3-overview.html#cb253-2" aria-hidden="true"></a></span>
-<span id="cb253-3"><a href="section-3-overview.html#cb253-3" aria-hidden="true"></a><span class="co"># The variable `n` specifies the number of independent bets on green</span></span>
-<span id="cb253-4"><a href="section-3-overview.html#cb253-4" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb253-5"><a href="section-3-overview.html#cb253-5" aria-hidden="true"></a></span>
-<span id="cb253-6"><a href="section-3-overview.html#cb253-6" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run</span></span>
-<span id="cb253-7"><a href="section-3-overview.html#cb253-7" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb253-8"><a href="section-3-overview.html#cb253-8" aria-hidden="true"></a></span>
-<span id="cb253-9"><a href="section-3-overview.html#cb253-9" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random number generation</span></span>
-<span id="cb253-10"><a href="section-3-overview.html#cb253-10" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb253-11"><a href="section-3-overview.html#cb253-11" aria-hidden="true"></a></span>
-<span id="cb253-12"><a href="section-3-overview.html#cb253-12" aria-hidden="true"></a><span class="co"># Generate a vector `S` that contains the the average outcomes of 10,000 bets modeled 10,000 times</span></span>
-<span id="cb253-13"><a href="section-3-overview.html#cb253-13" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B,{  </span>
-<span id="cb253-14"><a href="section-3-overview.html#cb253-14" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">17</span>,<span class="op">-</span><span class="dv">1</span>), <span class="dt">size =</span> n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_green, p_not_green))</span>
-<span id="cb253-15"><a href="section-3-overview.html#cb253-15" aria-hidden="true"></a>  <span class="kw">mean</span>(X)</span>
-<span id="cb253-16"><a href="section-3-overview.html#cb253-16" aria-hidden="true"></a>})</span>
-<span id="cb253-17"><a href="section-3-overview.html#cb253-17" aria-hidden="true"></a></span>
-<span id="cb253-18"><a href="section-3-overview.html#cb253-18" aria-hidden="true"></a><span class="co"># Compute the average of `S`</span></span>
-<span id="cb253-19"><a href="section-3-overview.html#cb253-19" aria-hidden="true"></a><span class="kw">mean</span>(S)</span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="section-3-overview.html#cb262-1" aria-hidden="true"></a><span class="co">## Make sure you fully follow instructions, including printing values to the console and correctly running the `replicate` loop. If not, you may encounter &quot;Session Expired&quot; errors.</span></span>
+<span id="cb262-2"><a href="section-3-overview.html#cb262-2" aria-hidden="true"></a></span>
+<span id="cb262-3"><a href="section-3-overview.html#cb262-3" aria-hidden="true"></a><span class="co"># The variable `n` specifies the number of independent bets on green</span></span>
+<span id="cb262-4"><a href="section-3-overview.html#cb262-4" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb262-5"><a href="section-3-overview.html#cb262-5" aria-hidden="true"></a></span>
+<span id="cb262-6"><a href="section-3-overview.html#cb262-6" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run</span></span>
+<span id="cb262-7"><a href="section-3-overview.html#cb262-7" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb262-8"><a href="section-3-overview.html#cb262-8" aria-hidden="true"></a></span>
+<span id="cb262-9"><a href="section-3-overview.html#cb262-9" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random number generation</span></span>
+<span id="cb262-10"><a href="section-3-overview.html#cb262-10" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb262-11"><a href="section-3-overview.html#cb262-11" aria-hidden="true"></a></span>
+<span id="cb262-12"><a href="section-3-overview.html#cb262-12" aria-hidden="true"></a><span class="co"># Generate a vector `S` that contains the the average outcomes of 10,000 bets modeled 10,000 times</span></span>
+<span id="cb262-13"><a href="section-3-overview.html#cb262-13" aria-hidden="true"></a>S &lt;-<span class="st"> </span><span class="kw">replicate</span>(B,{  </span>
+<span id="cb262-14"><a href="section-3-overview.html#cb262-14" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">17</span>,<span class="op">-</span><span class="dv">1</span>), <span class="dt">size =</span> n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p_green, p_not_green))</span>
+<span id="cb262-15"><a href="section-3-overview.html#cb262-15" aria-hidden="true"></a>  <span class="kw">mean</span>(X)</span>
+<span id="cb262-16"><a href="section-3-overview.html#cb262-16" aria-hidden="true"></a>})</span>
+<span id="cb262-17"><a href="section-3-overview.html#cb262-17" aria-hidden="true"></a></span>
+<span id="cb262-18"><a href="section-3-overview.html#cb262-18" aria-hidden="true"></a><span class="co"># Compute the average of `S`</span></span>
+<span id="cb262-19"><a href="section-3-overview.html#cb262-19" aria-hidden="true"></a><span class="kw">mean</span>(S)</span></code></pre></div>
 <pre><code>## [1] -0.0522</code></pre>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="section-3-overview.html#cb255-1" aria-hidden="true"></a><span class="co"># Compute the standard deviation of `S`</span></span>
-<span id="cb255-2"><a href="section-3-overview.html#cb255-2" aria-hidden="true"></a><span class="kw">sd</span>(S)</span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="section-3-overview.html#cb264-1" aria-hidden="true"></a><span class="co"># Compute the standard deviation of `S`</span></span>
+<span id="cb264-2"><a href="section-3-overview.html#cb264-2" aria-hidden="true"></a><span class="kw">sd</span>(S)</span></code></pre></div>
 <pre><code>## [1] 0.04</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>In a previous exercise, you found the probability of winning more than $0 after betting on green 10,000 times using the Central Limit Theorem.</li>
 </ol>
 <p>Then, you used a Monte Carlo simulation to model the average result of betting on green 10,000 times over 10,000 simulated series of bets.</p>
 <p>What is the probability of winning more than $0 as estimated by your Monte Carlo simulation? The code to generate the vector <span class="math inline">\(S\)</span> that contains the the average outcomes of 10,000 bets modeled 10,000 times has already been run for you.</p>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="section-3-overview.html#cb257-1" aria-hidden="true"></a><span class="co"># Compute the proportion of outcomes in the vector &#39;S&#39; where you won more than $0</span></span>
-<span id="cb257-2"><a href="section-3-overview.html#cb257-2" aria-hidden="true"></a><span class="kw">mean</span>(S<span class="op">&gt;</span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="section-3-overview.html#cb266-1" aria-hidden="true"></a><span class="co"># Compute the proportion of outcomes in the vector &#39;S&#39; where you won more than $0</span></span>
+<span id="cb266-2"><a href="section-3-overview.html#cb266-2" aria-hidden="true"></a><span class="kw">mean</span>(S<span class="op">&gt;</span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0.0977</code></pre>
 <ol start="11" style="list-style-type: decimal">
 <li>The Monte Carlo result and the CLT approximation are now much closer than when we calculated the probability of winning for 100 bets on green. What could account for this difference?</li>
@@ -746,66 +746,66 @@ D. It is not closer. The difference is within rounding error.</li>
 <p>This is a 6-part question asking you to determine some probabilities of what happens when a student guessed for all of their answers on the SAT. Use the information below to inform your answers for the following questions.</p>
 <p>An old version of the SAT college entrance exam had a -0.25 point penalty for every incorrect answer and awarded 1 point for a correct answer. The quantitative test consisted of 44 multiple-choice questions each with 5 answer choices. Suppose a student chooses answers by guessing for all questions on the test.</p>
 <p>1a. What is the probability of guessing correctly for one question?</p>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="section-3-overview.html#cb259-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">5</span> <span class="co"># one correct choice of 5 options</span></span>
-<span id="cb259-2"><a href="section-3-overview.html#cb259-2" aria-hidden="true"></a>p</span></code></pre></div>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="section-3-overview.html#cb268-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">5</span> <span class="co"># one correct choice of 5 options</span></span>
+<span id="cb268-2"><a href="section-3-overview.html#cb268-2" aria-hidden="true"></a>p</span></code></pre></div>
 <pre><code>## [1] 0.2</code></pre>
 <p>1b. What is the expected value of points for guessing on one question?</p>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="section-3-overview.html#cb261-1" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb261-2"><a href="section-3-overview.html#cb261-2" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="fl">-0.25</span></span>
-<span id="cb261-3"><a href="section-3-overview.html#cb261-3" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
-<span id="cb261-4"><a href="section-3-overview.html#cb261-4" aria-hidden="true"></a>mu</span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="section-3-overview.html#cb270-1" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb270-2"><a href="section-3-overview.html#cb270-2" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="fl">-0.25</span></span>
+<span id="cb270-3"><a href="section-3-overview.html#cb270-3" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
+<span id="cb270-4"><a href="section-3-overview.html#cb270-4" aria-hidden="true"></a>mu</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <p>1c. What is the expected score of guessing on all 44 questions?</p>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="section-3-overview.html#cb263-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
-<span id="cb263-2"><a href="section-3-overview.html#cb263-2" aria-hidden="true"></a>n<span class="op">*</span>mu</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="section-3-overview.html#cb272-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
+<span id="cb272-2"><a href="section-3-overview.html#cb272-2" aria-hidden="true"></a>n<span class="op">*</span>mu</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <p>1d. What is the standard error of guessing on all 44 questions?</p>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="section-3-overview.html#cb265-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
-<span id="cb265-2"><a href="section-3-overview.html#cb265-2" aria-hidden="true"></a>sigma</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="section-3-overview.html#cb274-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
+<span id="cb274-2"><a href="section-3-overview.html#cb274-2" aria-hidden="true"></a>sigma</span></code></pre></div>
 <pre><code>## [1] 3.32</code></pre>
 <p>1e. Use the Central Limit Theorem to determine the probability that a guessing student scores 8 points or higher on the test.</p>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="section-3-overview.html#cb267-1" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">8</span>, mu, sigma)</span></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="section-3-overview.html#cb276-1" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">8</span>, mu, sigma)</span></code></pre></div>
 <pre><code>## [1] 0.00793</code></pre>
 <p>1f. Set the seed to 21, then run a Monte Carlo simulation of 10,000 students guessing on the test.</p>
 <p>(IMPORTANT! If you use R 3.6 or later, you will need to use the command <code>set.seed(x, sample.kind = "Rounding")</code> instead of <code>set.seed(x)</code>. Your R version will be printed at the top of the Console window when you start RStudio.)</p>
 <p>What is the probability that a guessing student scores 8 points or higher?</p>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="section-3-overview.html#cb269-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">21</span>, <span class="dt">sample.kind =</span> <span class="st">&quot;Rounding&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="section-3-overview.html#cb278-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">21</span>, <span class="dt">sample.kind =</span> <span class="st">&quot;Rounding&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning in set.seed(21, sample.kind = &quot;Rounding&quot;): non-uniform &#39;Rounding&#39; sampler used</code></pre>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="section-3-overview.html#cb271-1" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb271-2"><a href="section-3-overview.html#cb271-2" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
-<span id="cb271-3"><a href="section-3-overview.html#cb271-3" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.2</span></span>
-<span id="cb271-4"><a href="section-3-overview.html#cb271-4" aria-hidden="true"></a>tests &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb271-5"><a href="section-3-overview.html#cb271-5" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="fl">-0.25</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span><span class="op">-</span>p))</span>
-<span id="cb271-6"><a href="section-3-overview.html#cb271-6" aria-hidden="true"></a>  <span class="kw">sum</span>(X)</span>
-<span id="cb271-7"><a href="section-3-overview.html#cb271-7" aria-hidden="true"></a>})</span>
-<span id="cb271-8"><a href="section-3-overview.html#cb271-8" aria-hidden="true"></a><span class="kw">mean</span>(tests <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="section-3-overview.html#cb280-1" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb280-2"><a href="section-3-overview.html#cb280-2" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
+<span id="cb280-3"><a href="section-3-overview.html#cb280-3" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="fl">0.2</span></span>
+<span id="cb280-4"><a href="section-3-overview.html#cb280-4" aria-hidden="true"></a>tests &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb280-5"><a href="section-3-overview.html#cb280-5" aria-hidden="true"></a>  X &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="fl">-0.25</span>), n, <span class="dt">replace =</span> <span class="ot">TRUE</span>, <span class="dt">prob =</span> <span class="kw">c</span>(p, <span class="dv">1</span><span class="op">-</span>p))</span>
+<span id="cb280-6"><a href="section-3-overview.html#cb280-6" aria-hidden="true"></a>  <span class="kw">sum</span>(X)</span>
+<span id="cb280-7"><a href="section-3-overview.html#cb280-7" aria-hidden="true"></a>})</span>
+<span id="cb280-8"><a href="section-3-overview.html#cb280-8" aria-hidden="true"></a><span class="kw">mean</span>(tests <span class="op">&gt;=</span><span class="st"> </span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## [1] 0.008</code></pre>
 <p>The SAT was recently changed to reduce the number of multiple choice options from 5 to 4 and also to eliminate the penalty for guessing.</p>
 <p>In this three-part question, you’ll explore how that affected the expected values for the test.</p>
 <p>2a. Suppose that the number of multiple choice options is 4 and that there is no penalty for guessing - that is, an incorrect question gives a score of 0.</p>
 <p>What is the expected value of the score when guessing on this new test?</p>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="section-3-overview.html#cb273-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">4</span></span>
-<span id="cb273-2"><a href="section-3-overview.html#cb273-2" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
-<span id="cb273-3"><a href="section-3-overview.html#cb273-3" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="dv">0</span></span>
-<span id="cb273-4"><a href="section-3-overview.html#cb273-4" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
-<span id="cb273-5"><a href="section-3-overview.html#cb273-5" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
-<span id="cb273-6"><a href="section-3-overview.html#cb273-6" aria-hidden="true"></a>mu</span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="section-3-overview.html#cb282-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">/</span><span class="dv">4</span></span>
+<span id="cb282-2"><a href="section-3-overview.html#cb282-2" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">1</span></span>
+<span id="cb282-3"><a href="section-3-overview.html#cb282-3" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="dv">0</span></span>
+<span id="cb282-4"><a href="section-3-overview.html#cb282-4" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">44</span></span>
+<span id="cb282-5"><a href="section-3-overview.html#cb282-5" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
+<span id="cb282-6"><a href="section-3-overview.html#cb282-6" aria-hidden="true"></a>mu</span></code></pre></div>
 <pre><code>## [1] 11</code></pre>
 <p>2b. Using the normal approximation, what is the estimated probability of scoring over 30 when guessing?</p>
 <p>Report your answer using scientific notation with 3 significant digits in the format <code>x.xx*10^y</code>. Do not round the values passed to <code>pnorm</code> or you will lose precision and have an incorrect answer.</p>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="section-3-overview.html#cb275-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
-<span id="cb275-2"><a href="section-3-overview.html#cb275-2" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">30</span>, mu, sigma)</span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="section-3-overview.html#cb284-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
+<span id="cb284-2"><a href="section-3-overview.html#cb284-2" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">30</span>, mu, sigma)</span></code></pre></div>
 <pre><code>## [1] 1.86e-11</code></pre>
 <p>2c. Consider a range of correct answer probabilities <code>p &lt;- seq(0.25, 0.95, 0.05)</code> representing a range of student skills.</p>
 <p>What is the lowest <code>p</code> such that the probability of scoring over 35 exceeds 80%?</p>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="section-3-overview.html#cb277-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.25</span>, <span class="fl">0.95</span>, <span class="fl">0.05</span>)</span>
-<span id="cb277-2"><a href="section-3-overview.html#cb277-2" aria-hidden="true"></a>exp_val &lt;-<span class="st"> </span><span class="kw">sapply</span>(p, <span class="cf">function</span>(x){</span>
-<span id="cb277-3"><a href="section-3-overview.html#cb277-3" aria-hidden="true"></a>  mu &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>a<span class="op">*</span>x <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)</span>
-<span id="cb277-4"><a href="section-3-overview.html#cb277-4" aria-hidden="true"></a>  sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x))</span>
-<span id="cb277-5"><a href="section-3-overview.html#cb277-5" aria-hidden="true"></a>  <span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">35</span>, mu, sigma)</span>
-<span id="cb277-6"><a href="section-3-overview.html#cb277-6" aria-hidden="true"></a>})</span>
-<span id="cb277-7"><a href="section-3-overview.html#cb277-7" aria-hidden="true"></a></span>
-<span id="cb277-8"><a href="section-3-overview.html#cb277-8" aria-hidden="true"></a><span class="kw">min</span>(p[<span class="kw">which</span>(exp_val <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.8</span>)])</span></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="section-3-overview.html#cb286-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.25</span>, <span class="fl">0.95</span>, <span class="fl">0.05</span>)</span>
+<span id="cb286-2"><a href="section-3-overview.html#cb286-2" aria-hidden="true"></a>exp_val &lt;-<span class="st"> </span><span class="kw">sapply</span>(p, <span class="cf">function</span>(x){</span>
+<span id="cb286-3"><a href="section-3-overview.html#cb286-3" aria-hidden="true"></a>  mu &lt;-<span class="st"> </span>n <span class="op">*</span><span class="st"> </span>a<span class="op">*</span>x <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x)</span>
+<span id="cb286-4"><a href="section-3-overview.html#cb286-4" aria-hidden="true"></a>  sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(x<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>x))</span>
+<span id="cb286-5"><a href="section-3-overview.html#cb286-5" aria-hidden="true"></a>  <span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>(<span class="dv">35</span>, mu, sigma)</span>
+<span id="cb286-6"><a href="section-3-overview.html#cb286-6" aria-hidden="true"></a>})</span>
+<span id="cb286-7"><a href="section-3-overview.html#cb286-7" aria-hidden="true"></a></span>
+<span id="cb286-8"><a href="section-3-overview.html#cb286-8" aria-hidden="true"></a><span class="kw">min</span>(p[<span class="kw">which</span>(exp_val <span class="op">&gt;</span><span class="st"> </span><span class="fl">0.8</span>)])</span></code></pre></div>
 <pre><code>## [1] 0.85</code></pre>
 </div>
 <div id="assessment---betting-on-roulette" class="section level2" number="4.12">
@@ -815,33 +815,33 @@ D. It is not closer. The difference is within rounding error.</li>
 </ol>
 <p>The following 7-part question asks you to do some calculations related to this scenario.</p>
 <p>3a. What is the expected value of the payout for one bet?</p>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="section-3-overview.html#cb279-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">/</span><span class="dv">38</span></span>
-<span id="cb279-2"><a href="section-3-overview.html#cb279-2" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">6</span></span>
-<span id="cb279-3"><a href="section-3-overview.html#cb279-3" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="dv">-1</span></span>
-<span id="cb279-4"><a href="section-3-overview.html#cb279-4" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
-<span id="cb279-5"><a href="section-3-overview.html#cb279-5" aria-hidden="true"></a>mu</span></code></pre></div>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="section-3-overview.html#cb288-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">5</span><span class="op">/</span><span class="dv">38</span></span>
+<span id="cb288-2"><a href="section-3-overview.html#cb288-2" aria-hidden="true"></a>a &lt;-<span class="st"> </span><span class="dv">6</span></span>
+<span id="cb288-3"><a href="section-3-overview.html#cb288-3" aria-hidden="true"></a>b &lt;-<span class="st"> </span><span class="dv">-1</span></span>
+<span id="cb288-4"><a href="section-3-overview.html#cb288-4" aria-hidden="true"></a>mu &lt;-<span class="st"> </span>a<span class="op">*</span>p <span class="op">+</span><span class="st"> </span>b<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p)</span>
+<span id="cb288-5"><a href="section-3-overview.html#cb288-5" aria-hidden="true"></a>mu</span></code></pre></div>
 <pre><code>## [1] -0.0789</code></pre>
 <p>3b. What is the standard error of the payout for one bet?</p>
-<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="section-3-overview.html#cb281-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
-<span id="cb281-2"><a href="section-3-overview.html#cb281-2" aria-hidden="true"></a>sigma</span></code></pre></div>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="section-3-overview.html#cb290-1" aria-hidden="true"></a>sigma &lt;-<span class="st"> </span><span class="kw">abs</span>(b<span class="op">-</span>a) <span class="op">*</span><span class="st"> </span><span class="kw">sqrt</span>(p<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>p))</span>
+<span id="cb290-2"><a href="section-3-overview.html#cb290-2" aria-hidden="true"></a>sigma</span></code></pre></div>
 <pre><code>## [1] 2.37</code></pre>
 <p>3c. What is the expected value of the average payout over 500 bets?</p>
 <p>Remember there is a difference between expected value of the average and expected value of the sum.</p>
-<div class="sourceCode" id="cb283"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb283-1"><a href="section-3-overview.html#cb283-1" aria-hidden="true"></a>mu</span></code></pre></div>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="section-3-overview.html#cb292-1" aria-hidden="true"></a>mu</span></code></pre></div>
 <pre><code>## [1] -0.0789</code></pre>
 <p>3d. What is the standard error of the average payout over 500 bets?</p>
 <p>Remember there is a difference between the standard error of the average and standard error of the sum.</p>
-<div class="sourceCode" id="cb285"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb285-1"><a href="section-3-overview.html#cb285-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">500</span></span>
-<span id="cb285-2"><a href="section-3-overview.html#cb285-2" aria-hidden="true"></a>sigma<span class="op">/</span><span class="kw">sqrt</span>(n)</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="section-3-overview.html#cb294-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="dv">500</span></span>
+<span id="cb294-2"><a href="section-3-overview.html#cb294-2" aria-hidden="true"></a>sigma<span class="op">/</span><span class="kw">sqrt</span>(n)</span></code></pre></div>
 <pre><code>## [1] 0.106</code></pre>
 <p>3e. What is the expected value of the sum of 500 bets?</p>
-<div class="sourceCode" id="cb287"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb287-1"><a href="section-3-overview.html#cb287-1" aria-hidden="true"></a>n<span class="op">*</span>mu</span></code></pre></div>
+<div class="sourceCode" id="cb296"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb296-1"><a href="section-3-overview.html#cb296-1" aria-hidden="true"></a>n<span class="op">*</span>mu</span></code></pre></div>
 <pre><code>## [1] -39.5</code></pre>
 <p>3f. What is the standard error of the sum of 500 bets?</p>
-<div class="sourceCode" id="cb289"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb289-1"><a href="section-3-overview.html#cb289-1" aria-hidden="true"></a><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>sigma</span></code></pre></div>
+<div class="sourceCode" id="cb298"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb298-1"><a href="section-3-overview.html#cb298-1" aria-hidden="true"></a><span class="kw">sqrt</span>(n) <span class="op">*</span><span class="st"> </span>sigma</span></code></pre></div>
 <pre><code>## [1] 52.9</code></pre>
 <p>3g. Use <code>pnorm</code> with the expected value of the sum and standard error of the sum to calculate the probability of losing money over 500 bets, <span class="math inline">\(\mbox{Pr}(X \le 0)\)</span>.</p>
-<div class="sourceCode" id="cb291"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb291-1"><a href="section-3-overview.html#cb291-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">0</span>, n<span class="op">*</span>mu, <span class="kw">sqrt</span>(n)<span class="op">*</span>sigma)</span></code></pre></div>
+<div class="sourceCode" id="cb300"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb300-1"><a href="section-3-overview.html#cb300-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">0</span>, n<span class="op">*</span>mu, <span class="kw">sqrt</span>(n)<span class="op">*</span>sigma)</span></code></pre></div>
 <pre><code>## [1] 0.772</code></pre>
 </div>
 </div>

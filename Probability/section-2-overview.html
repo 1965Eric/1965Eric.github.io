@@ -220,8 +220,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="continuous-probability" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Continuous Probability</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#continuous-probability">here</a></p>
-<p>The previous discussion of CDF is from the Data Visualization course. Here is the <a href="https://rafalab.github.io/dsbook/distributions.html#cdf-intro">textbook section on the CDF</a>.</p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#continuous-probability" target="_blank">here</a>.</p>
+<p>The previous discussion of CDF is from the Data Visualization course. Here is the <a href="https://rafalab.github.io/dsbook/distributions.html#cdf-intro" target="_blank">textbook section on the CDF</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The <em>cumulative distribution function (CDF)</em> is a distribution function for continuous data <span class="math inline">\(x\)</span> that reports the proportion of the data below <span class="math inline">\(a\)</span> for all values of <span class="math inline">\(a\)</span>:</li>
@@ -236,20 +236,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code: Cumulative distribution function</em></p>
 <p>Define <strong>x</strong> as male heights from the <strong>dslabs</strong> dataset:</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="section-2-overview.html#cb144-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb144-2"><a href="section-2-overview.html#cb144-2" aria-hidden="true"></a></span>
-<span id="cb144-3"><a href="section-2-overview.html#cb144-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb144-4"><a href="section-2-overview.html#cb144-4" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb144-5"><a href="section-2-overview.html#cb144-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="section-2-overview.html#cb151-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: dslabs</code></pre>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="section-2-overview.html#cb153-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb153-2"><a href="section-2-overview.html#cb153-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb153-3"><a href="section-2-overview.html#cb153-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
 <p>Given a vector <strong>x</strong>, we can define a function for computing the CDF of <strong>x</strong> using:</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="section-2-overview.html#cb145-1" aria-hidden="true"></a>F &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span>a)</span>
-<span id="cb145-2"><a href="section-2-overview.html#cb145-2" aria-hidden="true"></a></span>
-<span id="cb145-3"><a href="section-2-overview.html#cb145-3" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">F</span>(<span class="dv">70</span>)    <span class="co"># probability of male taller than 70 inches</span></span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="section-2-overview.html#cb154-1" aria-hidden="true"></a>F &lt;-<span class="st"> </span><span class="cf">function</span>(a) <span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span>a)</span>
+<span id="cb154-2"><a href="section-2-overview.html#cb154-2" aria-hidden="true"></a></span>
+<span id="cb154-3"><a href="section-2-overview.html#cb154-3" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">F</span>(<span class="dv">70</span>)    <span class="co"># probability of male taller than 70 inches</span></span></code></pre></div>
 <pre><code>## [1] 0.377</code></pre>
 </div>
 <div id="theoretical-distribution" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Theoretical Distribution</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#theoretical-continuous-distributions">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#theoretical-continuous-distributions" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><strong>pnorm(a, avg, s)</strong> gives the value of the cumulative distribution function <span class="math inline">\(F(a)\)</span> for the normal distribution defined by average <strong>avg</strong> and standard deviation <strong>s</strong>.</li>
@@ -260,37 +260,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code: Using <strong>pnorm</strong> to calculate probabilities</em></p>
 <p>Given male heights <strong>x</strong>:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="section-2-overview.html#cb147-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="section-2-overview.html#cb156-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span></code></pre></div>
 <p>We can estimate the probability that a male is taller than 70.5 inches using:</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="section-2-overview.html#cb148-1" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="section-2-overview.html#cb157-1" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
 <pre><code>## [1] 0.371</code></pre>
 <p><em>Code: Discretization and the normal approximation</em></p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-2-overview.html#cb150-1" aria-hidden="true"></a><span class="co"># plot distribution of exact heights in data</span></span>
-<span id="cb150-2"><a href="section-2-overview.html#cb150-2" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(x)), <span class="dt">xlab =</span> <span class="st">&quot;a = Height in inches&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Pr(x = a)&quot;</span>)</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-77-1.png" width="672" /></p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="section-2-overview.html#cb151-1" aria-hidden="true"></a><span class="co"># probabilities in actual data over length 1 ranges containing an integer</span></span>
-<span id="cb151-2"><a href="section-2-overview.html#cb151-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">67.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="section-2-overview.html#cb159-1" aria-hidden="true"></a><span class="co"># plot distribution of exact heights in data</span></span>
+<span id="cb159-2"><a href="section-2-overview.html#cb159-2" aria-hidden="true"></a><span class="kw">plot</span>(<span class="kw">prop.table</span>(<span class="kw">table</span>(x)), <span class="dt">xlab =</span> <span class="st">&quot;a = Height in inches&quot;</span>, <span class="dt">ylab =</span> <span class="st">&quot;Pr(x = a)&quot;</span>)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-65-1.png" width="672" /></p>
+<div class="sourceCode" id="cb160"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb160-1"><a href="section-2-overview.html#cb160-1" aria-hidden="true"></a><span class="co"># probabilities in actual data over length 1 ranges containing an integer</span></span>
+<span id="cb160-2"><a href="section-2-overview.html#cb160-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">67.5</span>)</span></code></pre></div>
 <pre><code>## [1] 0.115</code></pre>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="section-2-overview.html#cb153-1" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="section-2-overview.html#cb162-1" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">68.5</span>)</span></code></pre></div>
 <pre><code>## [1] 0.119</code></pre>
-<div class="sourceCode" id="cb155"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb155-1"><a href="section-2-overview.html#cb155-1" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="section-2-overview.html#cb164-1" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.5</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span></code></pre></div>
 <pre><code>## [1] 0.122</code></pre>
-<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="section-2-overview.html#cb157-1" aria-hidden="true"></a><span class="co"># probabilities in normal approximation match well</span></span>
-<span id="cb157-2"><a href="section-2-overview.html#cb157-2" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">68.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">67.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="section-2-overview.html#cb166-1" aria-hidden="true"></a><span class="co"># probabilities in normal approximation match well</span></span>
+<span id="cb166-2"><a href="section-2-overview.html#cb166-2" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">68.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">67.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
 <pre><code>## [1] 0.103</code></pre>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="section-2-overview.html#cb159-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">69.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">68.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="section-2-overview.html#cb168-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">69.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">68.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
 <pre><code>## [1] 0.11</code></pre>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="section-2-overview.html#cb161-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">70.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">69.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="section-2-overview.html#cb170-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">70.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">69.5</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
 <pre><code>## [1] 0.108</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="section-2-overview.html#cb163-1" aria-hidden="true"></a><span class="co"># probabilities in actual data over other ranges don&#39;t match normal approx as well</span></span>
-<span id="cb163-2"><a href="section-2-overview.html#cb163-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.9</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="section-2-overview.html#cb172-1" aria-hidden="true"></a><span class="co"># probabilities in actual data over other ranges don&#39;t match normal approx as well</span></span>
+<span id="cb172-2"><a href="section-2-overview.html#cb172-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.9</span>) <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">70.1</span>)</span></code></pre></div>
 <pre><code>## [1] 0.0222</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="section-2-overview.html#cb165-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">70.9</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.1</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="section-2-overview.html#cb174-1" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="fl">70.9</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x)) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="fl">70.1</span>, <span class="kw">mean</span>(x), <span class="kw">sd</span>(x))</span></code></pre></div>
 <pre><code>## [1] 0.0836</code></pre>
 </div>
 <div id="probability-density" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> Probability Density</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#the-probability-density">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#the-probability-density" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The probability of a single value is not defined for a continuous distribution.</li>
@@ -305,42 +305,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="monte-carlo-simulations-1" class="section level2" number="3.4">
 <h2><span class="header-section-number">3.4</span> Monte Carlo simulations</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#monte-carlo-simulations-for-continuous-variables">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#monte-carlo-simulations-for-continuous-variables" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><strong>rnorm(n, avg, s)</strong> generates <strong>n</strong> random numbers from the normal distribution with average <strong>avg</strong> and standard deviation <strong>s</strong>.</li>
 <li>By generating random numbers from the normal distribution, we can simulate height data with similar properties to our dataset. Here we generate simulated height data using the normal distribution.</li>
 </ul>
 <p><em>Code: Generating normally distributed random numbers for Monte Carlo simulations</em></p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="section-2-overview.html#cb167-1" aria-hidden="true"></a><span class="co"># define x as male heights from dslabs data</span></span>
-<span id="cb167-2"><a href="section-2-overview.html#cb167-2" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb167-3"><a href="section-2-overview.html#cb167-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb167-4"><a href="section-2-overview.html#cb167-4" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb167-5"><a href="section-2-overview.html#cb167-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span>
-<span id="cb167-6"><a href="section-2-overview.html#cb167-6" aria-hidden="true"></a></span>
-<span id="cb167-7"><a href="section-2-overview.html#cb167-7" aria-hidden="true"></a><span class="co"># generate simulated height data using normal distribution - both datasets should have n observations</span></span>
-<span id="cb167-8"><a href="section-2-overview.html#cb167-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="kw">length</span>(x)</span>
-<span id="cb167-9"><a href="section-2-overview.html#cb167-9" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb167-10"><a href="section-2-overview.html#cb167-10" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb167-11"><a href="section-2-overview.html#cb167-11" aria-hidden="true"></a>simulated_heights &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, avg, s)</span>
-<span id="cb167-12"><a href="section-2-overview.html#cb167-12" aria-hidden="true"></a></span>
-<span id="cb167-13"><a href="section-2-overview.html#cb167-13" aria-hidden="true"></a><span class="co"># plot distribution of simulated_heights</span></span>
-<span id="cb167-14"><a href="section-2-overview.html#cb167-14" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">simulated_heights =</span> simulated_heights) <span class="op">%&gt;%</span></span>
-<span id="cb167-15"><a href="section-2-overview.html#cb167-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(simulated_heights)) <span class="op">+</span></span>
-<span id="cb167-16"><a href="section-2-overview.html#cb167-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-78-1.png" width="672" /></p>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="section-2-overview.html#cb176-1" aria-hidden="true"></a><span class="co"># define x as male heights from dslabs data</span></span>
+<span id="cb176-2"><a href="section-2-overview.html#cb176-2" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb176-3"><a href="section-2-overview.html#cb176-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb176-4"><a href="section-2-overview.html#cb176-4" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb176-5"><a href="section-2-overview.html#cb176-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pull</span>(height)</span>
+<span id="cb176-6"><a href="section-2-overview.html#cb176-6" aria-hidden="true"></a></span>
+<span id="cb176-7"><a href="section-2-overview.html#cb176-7" aria-hidden="true"></a><span class="co"># generate simulated height data using normal distribution - both datasets should have n observations</span></span>
+<span id="cb176-8"><a href="section-2-overview.html#cb176-8" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="kw">length</span>(x)</span>
+<span id="cb176-9"><a href="section-2-overview.html#cb176-9" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb176-10"><a href="section-2-overview.html#cb176-10" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb176-11"><a href="section-2-overview.html#cb176-11" aria-hidden="true"></a>simulated_heights &lt;-<span class="st"> </span><span class="kw">rnorm</span>(n, avg, s)</span>
+<span id="cb176-12"><a href="section-2-overview.html#cb176-12" aria-hidden="true"></a></span>
+<span id="cb176-13"><a href="section-2-overview.html#cb176-13" aria-hidden="true"></a><span class="co"># plot distribution of simulated_heights</span></span>
+<span id="cb176-14"><a href="section-2-overview.html#cb176-14" aria-hidden="true"></a><span class="kw">data.frame</span>(<span class="dt">simulated_heights =</span> simulated_heights) <span class="op">%&gt;%</span></span>
+<span id="cb176-15"><a href="section-2-overview.html#cb176-15" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(simulated_heights)) <span class="op">+</span></span>
+<span id="cb176-16"><a href="section-2-overview.html#cb176-16" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_histogram</span>(<span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">binwidth =</span> <span class="dv">2</span>)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-66-1.png" width="672" /></p>
 <p><em>Code: Monte Carlo simulation of probability of tallest person being over 7 feet</em></p>
-<div class="sourceCode" id="cb168"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb168-1"><a href="section-2-overview.html#cb168-1" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
-<span id="cb168-2"><a href="section-2-overview.html#cb168-2" aria-hidden="true"></a>tallest &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb168-3"><a href="section-2-overview.html#cb168-3" aria-hidden="true"></a>    simulated_data &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">800</span>, avg, s)    <span class="co"># generate 800 normally distributed random heights</span></span>
-<span id="cb168-4"><a href="section-2-overview.html#cb168-4" aria-hidden="true"></a>    <span class="kw">max</span>(simulated_data)    <span class="co"># determine the tallest height </span></span>
-<span id="cb168-5"><a href="section-2-overview.html#cb168-5" aria-hidden="true"></a>})</span>
-<span id="cb168-6"><a href="section-2-overview.html#cb168-6" aria-hidden="true"></a><span class="kw">mean</span>(tallest <span class="op">&gt;=</span><span class="st"> </span><span class="dv">7</span><span class="op">*</span><span class="dv">12</span>)    <span class="co"># proportion of times that tallest person exceeded 7 feet (84 inches)</span></span></code></pre></div>
-<pre><code>## [1] 0.0216</code></pre>
+<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="section-2-overview.html#cb177-1" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">10000</span></span>
+<span id="cb177-2"><a href="section-2-overview.html#cb177-2" aria-hidden="true"></a>tallest &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb177-3"><a href="section-2-overview.html#cb177-3" aria-hidden="true"></a>    simulated_data &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">800</span>, avg, s)    <span class="co"># generate 800 normally distributed random heights</span></span>
+<span id="cb177-4"><a href="section-2-overview.html#cb177-4" aria-hidden="true"></a>    <span class="kw">max</span>(simulated_data)    <span class="co"># determine the tallest height </span></span>
+<span id="cb177-5"><a href="section-2-overview.html#cb177-5" aria-hidden="true"></a>})</span>
+<span id="cb177-6"><a href="section-2-overview.html#cb177-6" aria-hidden="true"></a><span class="kw">mean</span>(tallest <span class="op">&gt;=</span><span class="st"> </span><span class="dv">7</span><span class="op">*</span><span class="dv">12</span>)    <span class="co"># proportion of times that tallest person exceeded 7 feet (84 inches)</span></span></code></pre></div>
+<pre><code>## [1] 0.0209</code></pre>
 </div>
 <div id="other-continuous-distributions" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Other Continuous Distributions</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#continuous-distributions">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/probability.html#continuous-distributions" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>You may encounter other continuous distributions (Student t, chi-squared, exponential, gamma, beta, etc.).</li>
@@ -350,11 +350,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p><em>Code: Plotting the normal distribution with dnorm</em></p>
 <p>Use d to plot the density function of a continuous distribution. Here is the density function for the normal distribution (abbreviation norm):</p>
-<div class="sourceCode" id="cb170"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb170-1"><a href="section-2-overview.html#cb170-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
-<span id="cb170-2"><a href="section-2-overview.html#cb170-2" aria-hidden="true"></a><span class="kw">data.frame</span>(x, <span class="dt">f =</span> <span class="kw">dnorm</span>(x)) <span class="op">%&gt;%</span></span>
-<span id="cb170-3"><a href="section-2-overview.html#cb170-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x,f)) <span class="op">+</span></span>
-<span id="cb170-4"><a href="section-2-overview.html#cb170-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-80-1.png" width="672" /></p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="section-2-overview.html#cb179-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="op">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="dt">length.out =</span> <span class="dv">100</span>)</span>
+<span id="cb179-2"><a href="section-2-overview.html#cb179-2" aria-hidden="true"></a><span class="kw">data.frame</span>(x, <span class="dt">f =</span> <span class="kw">dnorm</span>(x)) <span class="op">%&gt;%</span></span>
+<span id="cb179-3"><a href="section-2-overview.html#cb179-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x,f)) <span class="op">+</span></span>
+<span id="cb179-4"><a href="section-2-overview.html#cb179-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-68-1.png" width="672" /></p>
 </div>
 <div id="assessment---continuous-probability" class="section level2" number="3.6">
 <h2><span class="header-section-number">3.6</span> Assessment - Continuous Probability</h2>
@@ -362,105 +362,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Assume the distribution of female heights is approximated by a normal distribution with a mean of 64 inches and a standard deviation of 3 inches.</li>
 </ol>
 <p>If we pick a female at random, what is the probability that she is 5 feet or shorter?</p>
-<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="section-2-overview.html#cb171-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
-<span id="cb171-2"><a href="section-2-overview.html#cb171-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
-<span id="cb171-3"><a href="section-2-overview.html#cb171-3" aria-hidden="true"></a></span>
-<span id="cb171-4"><a href="section-2-overview.html#cb171-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
-<span id="cb171-5"><a href="section-2-overview.html#cb171-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb171-6"><a href="section-2-overview.html#cb171-6" aria-hidden="true"></a></span>
-<span id="cb171-7"><a href="section-2-overview.html#cb171-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is shorter than 5 feet. Print this value to the console.</span></span>
-<span id="cb171-8"><a href="section-2-overview.html#cb171-8" aria-hidden="true"></a><span class="kw">pnorm</span>((<span class="dv">5</span><span class="op">*</span><span class="dv">12</span>), female_avg, female_sd)</span></code></pre></div>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="section-2-overview.html#cb180-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
+<span id="cb180-2"><a href="section-2-overview.html#cb180-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
+<span id="cb180-3"><a href="section-2-overview.html#cb180-3" aria-hidden="true"></a></span>
+<span id="cb180-4"><a href="section-2-overview.html#cb180-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
+<span id="cb180-5"><a href="section-2-overview.html#cb180-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb180-6"><a href="section-2-overview.html#cb180-6" aria-hidden="true"></a></span>
+<span id="cb180-7"><a href="section-2-overview.html#cb180-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is shorter than 5 feet. Print this value to the console.</span></span>
+<span id="cb180-8"><a href="section-2-overview.html#cb180-8" aria-hidden="true"></a><span class="kw">pnorm</span>((<span class="dv">5</span><span class="op">*</span><span class="dv">12</span>), female_avg, female_sd)</span></code></pre></div>
 <pre><code>## [1] 0.0912</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Assume the distribution of female heights is approximated by a normal distribution with a mean of 64 inches and a standard deviation of 3 inches.</li>
 </ol>
 <p>If we pick a female at random, what is the probability that she is 6 feet or taller?</p>
-<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="section-2-overview.html#cb173-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
-<span id="cb173-2"><a href="section-2-overview.html#cb173-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
-<span id="cb173-3"><a href="section-2-overview.html#cb173-3" aria-hidden="true"></a></span>
-<span id="cb173-4"><a href="section-2-overview.html#cb173-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
-<span id="cb173-5"><a href="section-2-overview.html#cb173-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb173-6"><a href="section-2-overview.html#cb173-6" aria-hidden="true"></a></span>
-<span id="cb173-7"><a href="section-2-overview.html#cb173-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is 6 feet or taller. Print this value to the console.</span></span>
-<span id="cb173-8"><a href="section-2-overview.html#cb173-8" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>((<span class="dv">6</span><span class="op">*</span><span class="dv">12</span>), female_avg, female_sd)</span></code></pre></div>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="section-2-overview.html#cb182-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
+<span id="cb182-2"><a href="section-2-overview.html#cb182-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
+<span id="cb182-3"><a href="section-2-overview.html#cb182-3" aria-hidden="true"></a></span>
+<span id="cb182-4"><a href="section-2-overview.html#cb182-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
+<span id="cb182-5"><a href="section-2-overview.html#cb182-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb182-6"><a href="section-2-overview.html#cb182-6" aria-hidden="true"></a></span>
+<span id="cb182-7"><a href="section-2-overview.html#cb182-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is 6 feet or taller. Print this value to the console.</span></span>
+<span id="cb182-8"><a href="section-2-overview.html#cb182-8" aria-hidden="true"></a><span class="dv">1</span><span class="op">-</span><span class="kw">pnorm</span>((<span class="dv">6</span><span class="op">*</span><span class="dv">12</span>), female_avg, female_sd)</span></code></pre></div>
 <pre><code>## [1] 0.00383</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Assume the distribution of female heights is approximated by a normal distribution with a mean of 64 inches and a standard deviation of 3 inches.</li>
 </ol>
 <p>If we pick a female at random, what is the probability that she is between 61 and 67 inches?</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="section-2-overview.html#cb175-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
-<span id="cb175-2"><a href="section-2-overview.html#cb175-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
-<span id="cb175-3"><a href="section-2-overview.html#cb175-3" aria-hidden="true"></a></span>
-<span id="cb175-4"><a href="section-2-overview.html#cb175-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
-<span id="cb175-5"><a href="section-2-overview.html#cb175-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb175-6"><a href="section-2-overview.html#cb175-6" aria-hidden="true"></a></span>
-<span id="cb175-7"><a href="section-2-overview.html#cb175-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
-<span id="cb175-8"><a href="section-2-overview.html#cb175-8" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">67</span>, female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">61</span>, female_avg, female_sd)</span></code></pre></div>
+<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="section-2-overview.html#cb184-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
+<span id="cb184-2"><a href="section-2-overview.html#cb184-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
+<span id="cb184-3"><a href="section-2-overview.html#cb184-3" aria-hidden="true"></a></span>
+<span id="cb184-4"><a href="section-2-overview.html#cb184-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
+<span id="cb184-5"><a href="section-2-overview.html#cb184-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb184-6"><a href="section-2-overview.html#cb184-6" aria-hidden="true"></a></span>
+<span id="cb184-7"><a href="section-2-overview.html#cb184-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
+<span id="cb184-8"><a href="section-2-overview.html#cb184-8" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">67</span>, female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">61</span>, female_avg, female_sd)</span></code></pre></div>
 <pre><code>## [1] 0.683</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Repeat the previous exercise, but convert everything to centimeters.</li>
 </ol>
 <p>That is, multiply every height, including the standard deviation, by 2.54. What is the answer now?</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb177-1"><a href="section-2-overview.html#cb177-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height. Convert this value to centimeters.</span></span>
-<span id="cb177-2"><a href="section-2-overview.html#cb177-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span><span class="op">*</span><span class="fl">2.54</span></span>
-<span id="cb177-3"><a href="section-2-overview.html#cb177-3" aria-hidden="true"></a></span>
-<span id="cb177-4"><a href="section-2-overview.html#cb177-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights. Convert this value to centimeters.</span></span>
-<span id="cb177-5"><a href="section-2-overview.html#cb177-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span><span class="op">*</span><span class="fl">2.54</span></span>
-<span id="cb177-6"><a href="section-2-overview.html#cb177-6" aria-hidden="true"></a></span>
-<span id="cb177-7"><a href="section-2-overview.html#cb177-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
-<span id="cb177-8"><a href="section-2-overview.html#cb177-8" aria-hidden="true"></a><span class="kw">pnorm</span>((<span class="dv">67</span><span class="op">*</span><span class="fl">2.54</span>), female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>((<span class="dv">61</span><span class="op">*</span><span class="fl">2.54</span>), female_avg, female_sd)</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-2-overview.html#cb186-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height. Convert this value to centimeters.</span></span>
+<span id="cb186-2"><a href="section-2-overview.html#cb186-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span><span class="op">*</span><span class="fl">2.54</span></span>
+<span id="cb186-3"><a href="section-2-overview.html#cb186-3" aria-hidden="true"></a></span>
+<span id="cb186-4"><a href="section-2-overview.html#cb186-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights. Convert this value to centimeters.</span></span>
+<span id="cb186-5"><a href="section-2-overview.html#cb186-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span><span class="op">*</span><span class="fl">2.54</span></span>
+<span id="cb186-6"><a href="section-2-overview.html#cb186-6" aria-hidden="true"></a></span>
+<span id="cb186-7"><a href="section-2-overview.html#cb186-7" aria-hidden="true"></a><span class="co"># Using variables &#39;female_avg&#39; and &#39;female_sd&#39;, calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
+<span id="cb186-8"><a href="section-2-overview.html#cb186-8" aria-hidden="true"></a><span class="kw">pnorm</span>((<span class="dv">67</span><span class="op">*</span><span class="fl">2.54</span>), female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>((<span class="dv">61</span><span class="op">*</span><span class="fl">2.54</span>), female_avg, female_sd)</span></code></pre></div>
 <pre><code>## [1] 0.683</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Compute the probability that the height of a randomly chosen female is within 1 SD from the average height.</li>
 </ol>
-<div class="sourceCode" id="cb179"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb179-1"><a href="section-2-overview.html#cb179-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
-<span id="cb179-2"><a href="section-2-overview.html#cb179-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
-<span id="cb179-3"><a href="section-2-overview.html#cb179-3" aria-hidden="true"></a></span>
-<span id="cb179-4"><a href="section-2-overview.html#cb179-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
-<span id="cb179-5"><a href="section-2-overview.html#cb179-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb179-6"><a href="section-2-overview.html#cb179-6" aria-hidden="true"></a></span>
-<span id="cb179-7"><a href="section-2-overview.html#cb179-7" aria-hidden="true"></a><span class="co"># To a variable named &#39;taller&#39;, assign the value of a height that is one SD taller than average.</span></span>
-<span id="cb179-8"><a href="section-2-overview.html#cb179-8" aria-hidden="true"></a>taller &lt;-<span class="st"> </span>female_avg <span class="op">+</span><span class="st"> </span>female_sd</span>
-<span id="cb179-9"><a href="section-2-overview.html#cb179-9" aria-hidden="true"></a></span>
-<span id="cb179-10"><a href="section-2-overview.html#cb179-10" aria-hidden="true"></a><span class="co"># To a variable named &#39;shorter&#39;, assign the value of a height that is one SD shorter than average.</span></span>
-<span id="cb179-11"><a href="section-2-overview.html#cb179-11" aria-hidden="true"></a>shorter &lt;-<span class="st"> </span>female_avg <span class="op">-</span><span class="st"> </span>female_sd</span>
-<span id="cb179-12"><a href="section-2-overview.html#cb179-12" aria-hidden="true"></a></span>
-<span id="cb179-13"><a href="section-2-overview.html#cb179-13" aria-hidden="true"></a><span class="co"># Calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
-<span id="cb179-14"><a href="section-2-overview.html#cb179-14" aria-hidden="true"></a><span class="kw">pnorm</span>(taller, female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(shorter, female_avg, female_sd) </span></code></pre></div>
+<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="section-2-overview.html#cb188-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_avg&#39; as the average female height.</span></span>
+<span id="cb188-2"><a href="section-2-overview.html#cb188-2" aria-hidden="true"></a>female_avg &lt;-<span class="st"> </span><span class="dv">64</span></span>
+<span id="cb188-3"><a href="section-2-overview.html#cb188-3" aria-hidden="true"></a></span>
+<span id="cb188-4"><a href="section-2-overview.html#cb188-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;female_sd&#39; as the standard deviation for female heights.</span></span>
+<span id="cb188-5"><a href="section-2-overview.html#cb188-5" aria-hidden="true"></a>female_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb188-6"><a href="section-2-overview.html#cb188-6" aria-hidden="true"></a></span>
+<span id="cb188-7"><a href="section-2-overview.html#cb188-7" aria-hidden="true"></a><span class="co"># To a variable named &#39;taller&#39;, assign the value of a height that is one SD taller than average.</span></span>
+<span id="cb188-8"><a href="section-2-overview.html#cb188-8" aria-hidden="true"></a>taller &lt;-<span class="st"> </span>female_avg <span class="op">+</span><span class="st"> </span>female_sd</span>
+<span id="cb188-9"><a href="section-2-overview.html#cb188-9" aria-hidden="true"></a></span>
+<span id="cb188-10"><a href="section-2-overview.html#cb188-10" aria-hidden="true"></a><span class="co"># To a variable named &#39;shorter&#39;, assign the value of a height that is one SD shorter than average.</span></span>
+<span id="cb188-11"><a href="section-2-overview.html#cb188-11" aria-hidden="true"></a>shorter &lt;-<span class="st"> </span>female_avg <span class="op">-</span><span class="st"> </span>female_sd</span>
+<span id="cb188-12"><a href="section-2-overview.html#cb188-12" aria-hidden="true"></a></span>
+<span id="cb188-13"><a href="section-2-overview.html#cb188-13" aria-hidden="true"></a><span class="co"># Calculate the probability that a randomly selected female is between the desired height range. Print this value to the console.</span></span>
+<span id="cb188-14"><a href="section-2-overview.html#cb188-14" aria-hidden="true"></a><span class="kw">pnorm</span>(taller, female_avg, female_sd) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(shorter, female_avg, female_sd) </span></code></pre></div>
 <pre><code>## [1] 0.683</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>Imagine the distribution of male adults is approximately normal with an expected value of 69 inches and a standard deviation of 3 inches.</li>
 </ol>
 <p>How tall is a male in the 99th percentile?</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb181-1"><a href="section-2-overview.html#cb181-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;male_avg&#39; as the average male height.</span></span>
-<span id="cb181-2"><a href="section-2-overview.html#cb181-2" aria-hidden="true"></a>male_avg &lt;-<span class="st"> </span><span class="dv">69</span></span>
-<span id="cb181-3"><a href="section-2-overview.html#cb181-3" aria-hidden="true"></a></span>
-<span id="cb181-4"><a href="section-2-overview.html#cb181-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;male_sd&#39; as the standard deviation for male heights.</span></span>
-<span id="cb181-5"><a href="section-2-overview.html#cb181-5" aria-hidden="true"></a>male_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
-<span id="cb181-6"><a href="section-2-overview.html#cb181-6" aria-hidden="true"></a></span>
-<span id="cb181-7"><a href="section-2-overview.html#cb181-7" aria-hidden="true"></a><span class="co"># Determine the height of a man in the 99th percentile of the distribution.</span></span>
-<span id="cb181-8"><a href="section-2-overview.html#cb181-8" aria-hidden="true"></a><span class="kw">qnorm</span>(<span class="fl">0.99</span>, male_avg, male_sd)</span></code></pre></div>
+<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="section-2-overview.html#cb190-1" aria-hidden="true"></a><span class="co"># Assign a variable &#39;male_avg&#39; as the average male height.</span></span>
+<span id="cb190-2"><a href="section-2-overview.html#cb190-2" aria-hidden="true"></a>male_avg &lt;-<span class="st"> </span><span class="dv">69</span></span>
+<span id="cb190-3"><a href="section-2-overview.html#cb190-3" aria-hidden="true"></a></span>
+<span id="cb190-4"><a href="section-2-overview.html#cb190-4" aria-hidden="true"></a><span class="co"># Assign a variable &#39;male_sd&#39; as the standard deviation for male heights.</span></span>
+<span id="cb190-5"><a href="section-2-overview.html#cb190-5" aria-hidden="true"></a>male_sd &lt;-<span class="st"> </span><span class="dv">3</span></span>
+<span id="cb190-6"><a href="section-2-overview.html#cb190-6" aria-hidden="true"></a></span>
+<span id="cb190-7"><a href="section-2-overview.html#cb190-7" aria-hidden="true"></a><span class="co"># Determine the height of a man in the 99th percentile of the distribution.</span></span>
+<span id="cb190-8"><a href="section-2-overview.html#cb190-8" aria-hidden="true"></a><span class="kw">qnorm</span>(<span class="fl">0.99</span>, male_avg, male_sd)</span></code></pre></div>
 <pre><code>## [1] 76</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>The distribution of IQ scores is approximately normally distributed.</li>
 </ol>
 <p>The average is 100 and the standard deviation is 15. Suppose you want to know the distribution of the person with the highest IQ in your school district, where 10,000 people are born each year.</p>
 <p>Generate 10,000 IQ scores 1,000 times using a Monte Carlo simulation. Make a histogram of the highest IQ scores.</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="section-2-overview.html#cb183-1" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run.</span></span>
-<span id="cb183-2"><a href="section-2-overview.html#cb183-2" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">1000</span></span>
-<span id="cb183-3"><a href="section-2-overview.html#cb183-3" aria-hidden="true"></a></span>
-<span id="cb183-4"><a href="section-2-overview.html#cb183-4" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random number generation.</span></span>
-<span id="cb183-5"><a href="section-2-overview.html#cb183-5" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
-<span id="cb183-6"><a href="section-2-overview.html#cb183-6" aria-hidden="true"></a></span>
-<span id="cb183-7"><a href="section-2-overview.html#cb183-7" aria-hidden="true"></a><span class="co"># Create an object called `highestIQ` that contains the highest IQ score from each random distribution of 10,000 people.</span></span>
-<span id="cb183-8"><a href="section-2-overview.html#cb183-8" aria-hidden="true"></a>highestIQ &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
-<span id="cb183-9"><a href="section-2-overview.html#cb183-9" aria-hidden="true"></a>    IQ &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10000</span>, <span class="dv">100</span>, <span class="dv">15</span>)</span>
-<span id="cb183-10"><a href="section-2-overview.html#cb183-10" aria-hidden="true"></a>    <span class="kw">max</span>(IQ) </span>
-<span id="cb183-11"><a href="section-2-overview.html#cb183-11" aria-hidden="true"></a>})</span>
-<span id="cb183-12"><a href="section-2-overview.html#cb183-12" aria-hidden="true"></a></span>
-<span id="cb183-13"><a href="section-2-overview.html#cb183-13" aria-hidden="true"></a><span class="co"># Make a histogram of the highest IQ scores.</span></span>
-<span id="cb183-14"><a href="section-2-overview.html#cb183-14" aria-hidden="true"></a><span class="kw">hist</span>(highestIQ)</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-87-1.png" width="672" /></p>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="section-2-overview.html#cb192-1" aria-hidden="true"></a><span class="co"># The variable `B` specifies the number of times we want the simulation to run.</span></span>
+<span id="cb192-2"><a href="section-2-overview.html#cb192-2" aria-hidden="true"></a>B &lt;-<span class="st"> </span><span class="dv">1000</span></span>
+<span id="cb192-3"><a href="section-2-overview.html#cb192-3" aria-hidden="true"></a></span>
+<span id="cb192-4"><a href="section-2-overview.html#cb192-4" aria-hidden="true"></a><span class="co"># Use the `set.seed` function to make sure your answer matches the expected result after random number generation.</span></span>
+<span id="cb192-5"><a href="section-2-overview.html#cb192-5" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb192-6"><a href="section-2-overview.html#cb192-6" aria-hidden="true"></a></span>
+<span id="cb192-7"><a href="section-2-overview.html#cb192-7" aria-hidden="true"></a><span class="co"># Create an object called `highestIQ` that contains the highest IQ score from each random distribution of 10,000 people.</span></span>
+<span id="cb192-8"><a href="section-2-overview.html#cb192-8" aria-hidden="true"></a>highestIQ &lt;-<span class="st"> </span><span class="kw">replicate</span>(B, {</span>
+<span id="cb192-9"><a href="section-2-overview.html#cb192-9" aria-hidden="true"></a>    IQ &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10000</span>, <span class="dv">100</span>, <span class="dv">15</span>)</span>
+<span id="cb192-10"><a href="section-2-overview.html#cb192-10" aria-hidden="true"></a>    <span class="kw">max</span>(IQ) </span>
+<span id="cb192-11"><a href="section-2-overview.html#cb192-11" aria-hidden="true"></a>})</span>
+<span id="cb192-12"><a href="section-2-overview.html#cb192-12" aria-hidden="true"></a></span>
+<span id="cb192-13"><a href="section-2-overview.html#cb192-13" aria-hidden="true"></a><span class="co"># Make a histogram of the highest IQ scores.</span></span>
+<span id="cb192-14"><a href="section-2-overview.html#cb192-14" aria-hidden="true"></a><span class="kw">hist</span>(highestIQ)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-75-1.png" width="672" /></p>
 </div>
 <div id="assessment---act-scores-part-1" class="section level2" number="3.7">
 <h2><span class="header-section-number">3.7</span> Assessment - ACT scores, part 1</h2>
@@ -472,33 +472,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Set the seed to 16, then use <strong>rnorm</strong> to generate a normal distribution of 10000 tests with a mean of 20.9 and standard deviation of 5.7. Save these values as <strong>act_scores</strong>. You’ll be using this dataset throughout these four multi-part questions.</p>
 <p><strong>(IMPORTANT NOTE! If you use R 3.6 or later, you will need to use the command set.seed(x, sample.kind = “Rounding”) instead of set.seed(x). Your R version will be printed at the top of the Console window when you start RStudio.)</strong></p>
 <p>1a. What is the mean of <code>act_scores</code>?</p>
-<div class="sourceCode" id="cb184"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb184-1"><a href="section-2-overview.html#cb184-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">16</span>, <span class="dt">sample.kind =</span> <span class="st">&quot;Rounding&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="section-2-overview.html#cb193-1" aria-hidden="true"></a><span class="kw">set.seed</span>(<span class="dv">16</span>, <span class="dt">sample.kind =</span> <span class="st">&quot;Rounding&quot;</span>)</span></code></pre></div>
 <pre><code>## Warning in set.seed(16, sample.kind = &quot;Rounding&quot;): non-uniform &#39;Rounding&#39; sampler used</code></pre>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-2-overview.html#cb186-1" aria-hidden="true"></a>act_scores &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10000</span>, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
-<span id="cb186-2"><a href="section-2-overview.html#cb186-2" aria-hidden="true"></a><span class="kw">mean</span>(act_scores)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="section-2-overview.html#cb195-1" aria-hidden="true"></a>act_scores &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10000</span>, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
+<span id="cb195-2"><a href="section-2-overview.html#cb195-2" aria-hidden="true"></a><span class="kw">mean</span>(act_scores)</span></code></pre></div>
 <pre><code>## [1] 20.8</code></pre>
 <p>1b. What is the standard deviation of <code>act_scores</code>?</p>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="section-2-overview.html#cb188-1" aria-hidden="true"></a><span class="kw">sd</span>(act_scores)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="section-2-overview.html#cb197-1" aria-hidden="true"></a><span class="kw">sd</span>(act_scores)</span></code></pre></div>
 <pre><code>## [1] 5.68</code></pre>
 <p>1c. A perfect score is 36 or greater (the maximum reported score is 36).</p>
 <p>In <code>act_scores</code>, how many perfect scores are there out of 10,000 simulated tests?</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="section-2-overview.html#cb190-1" aria-hidden="true"></a><span class="kw">sum</span>(act_scores <span class="op">&gt;=</span><span class="st"> </span><span class="dv">36</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="section-2-overview.html#cb199-1" aria-hidden="true"></a><span class="kw">sum</span>(act_scores <span class="op">&gt;=</span><span class="st"> </span><span class="dv">36</span>)</span></code></pre></div>
 <pre><code>## [1] 41</code></pre>
 <p>1d. In <code>act_scores</code>, what is the probability of an ACT score greater than 30?</p>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="section-2-overview.html#cb192-1" aria-hidden="true"></a><span class="kw">mean</span>(act_scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="section-2-overview.html#cb201-1" aria-hidden="true"></a><span class="kw">mean</span>(act_scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">30</span>)</span></code></pre></div>
 <pre><code>## [1] 0.0527</code></pre>
 <p>1e. In <code>act_scores</code>, what is the probability of an ACT score less than or equal to 10?</p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="section-2-overview.html#cb194-1" aria-hidden="true"></a><span class="kw">mean</span>(act_scores <span class="op">&lt;=</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="section-2-overview.html#cb203-1" aria-hidden="true"></a><span class="kw">mean</span>(act_scores <span class="op">&lt;=</span><span class="st"> </span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## [1] 0.0282</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Set <code>x</code> equal to the sequence of integers 1 to 36. Use <code>dnorm</code> to determine the value of the probability density function over <code>x</code> given a mean of 20.9 and standard deviation of 5.7; save the result as <code>f_x</code>. Plot <code>x</code> against <code>f_x</code>.</li>
 </ol>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="section-2-overview.html#cb196-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">36</span></span>
-<span id="cb196-2"><a href="section-2-overview.html#cb196-2" aria-hidden="true"></a>f_x &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
-<span id="cb196-3"><a href="section-2-overview.html#cb196-3" aria-hidden="true"></a><span class="kw">data.frame</span>(x, f_x) <span class="op">%&gt;%</span></span>
-<span id="cb196-4"><a href="section-2-overview.html#cb196-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, f_x)) <span class="op">+</span></span>
-<span id="cb196-5"><a href="section-2-overview.html#cb196-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-93-1.png" width="672" /></p>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="section-2-overview.html#cb205-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="dv">36</span></span>
+<span id="cb205-2"><a href="section-2-overview.html#cb205-2" aria-hidden="true"></a>f_x &lt;-<span class="st"> </span><span class="kw">dnorm</span>(x, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
+<span id="cb205-3"><a href="section-2-overview.html#cb205-3" aria-hidden="true"></a><span class="kw">data.frame</span>(x, f_x) <span class="op">%&gt;%</span></span>
+<span id="cb205-4"><a href="section-2-overview.html#cb205-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(x, f_x)) <span class="op">+</span></span>
+<span id="cb205-5"><a href="section-2-overview.html#cb205-5" aria-hidden="true"></a><span class="st">  </span><span class="kw">geom_line</span>()</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-81-1.png" width="672" /></p>
 <p>Which of the following plots is correct?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
@@ -515,18 +515,18 @@ B.</li>
 <ol start="3" style="list-style-type: decimal">
 <li>In this 3-part question, you will convert raw ACT scores to Z-scores and answer some questions about them.</li>
 </ol>
-<p>Convert <strong>act_scores</strong> to Z-scores. Recall from <a href="https://www.edx.org/course/data-science-visualization">Data Visualization</a> (the second course in this series) that to standardize values (convert values into Z-scores, that is, values distributed with a mean of 0 and standard deviation of 1), you must subtract the mean and then divide by the standard deviation. Use the mean and standard deviation of <strong>act_scores</strong>, not the original values used to generate random test scores.</p>
+<p>Convert <strong>act_scores</strong> to Z-scores. Recall from <a href="https://www.edx.org/course/data-science-visualization" target="_blank">Data Visualization</a> (the second course in this series) that to standardize values (convert values into Z-scores, that is, values distributed with a mean of 0 and standard deviation of 1), you must subtract the mean and then divide by the standard deviation. Use the mean and standard deviation of <strong>act_scores</strong>, not the original values used to generate random test scores.</p>
 <p>3a. What is the probability of a Z-score greater than 2 (2 standard deviations above the mean)?</p>
-<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="section-2-overview.html#cb197-1" aria-hidden="true"></a>z_scores &lt;-<span class="st"> </span>(act_scores <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(act_scores))<span class="op">/</span><span class="kw">sd</span>(act_scores)</span>
-<span id="cb197-2"><a href="section-2-overview.html#cb197-2" aria-hidden="true"></a><span class="kw">mean</span>(z_scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb206"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb206-1"><a href="section-2-overview.html#cb206-1" aria-hidden="true"></a>z_scores &lt;-<span class="st"> </span>(act_scores <span class="op">-</span><span class="st"> </span><span class="kw">mean</span>(act_scores))<span class="op">/</span><span class="kw">sd</span>(act_scores)</span>
+<span id="cb206-2"><a href="section-2-overview.html#cb206-2" aria-hidden="true"></a><span class="kw">mean</span>(z_scores <span class="op">&gt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 0.0233</code></pre>
 <p>3b. What ACT score value corresponds to 2 standard deviations above the mean (Z = 2)?</p>
-<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="section-2-overview.html#cb199-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sd</span>(act_scores) <span class="op">+</span><span class="st"> </span><span class="kw">mean</span>(act_scores)</span></code></pre></div>
+<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="section-2-overview.html#cb208-1" aria-hidden="true"></a><span class="dv">2</span><span class="op">*</span><span class="kw">sd</span>(act_scores) <span class="op">+</span><span class="st"> </span><span class="kw">mean</span>(act_scores)</span></code></pre></div>
 <pre><code>## [1] 32.2</code></pre>
 <p>3c. A Z-score of 2 corresponds roughly to the 97.5th percentile.</p>
 <p>Use <code>qnorm</code> to determine the 97.5th percentile of normally distributed data with the mean and standard deviation observed in <code>act_scores</code>.</p>
 <p>What is the 97.5th percentile of <code>act_scores</code>?</p>
-<div class="sourceCode" id="cb201"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb201-1"><a href="section-2-overview.html#cb201-1" aria-hidden="true"></a><span class="kw">qnorm</span>(.<span class="dv">975</span>, <span class="kw">mean</span>(act_scores), <span class="kw">sd</span>(act_scores))</span></code></pre></div>
+<div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="section-2-overview.html#cb210-1" aria-hidden="true"></a><span class="kw">qnorm</span>(.<span class="dv">975</span>, <span class="kw">mean</span>(act_scores), <span class="kw">sd</span>(act_scores))</span></code></pre></div>
 <pre><code>## [1] 32</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>In this 4-part question, you will write a function to create a CDF for ACT scores.</li>
@@ -534,29 +534,29 @@ B.</li>
 <p>Write a function that takes a value and produces the probability of an ACT score less than or equal to that value (the CDF). Apply this function to the range 1 to 36.</p>
 <p>4a. What is the minimum integer score such that the probability of that score or lower is at least .95?</p>
 <p>Your answer should be an integer 1-36.</p>
-<div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="section-2-overview.html#cb203-1" aria-hidden="true"></a>cdf &lt;-<span class="st"> </span><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">36</span>, <span class="cf">function</span> (x){</span>
-<span id="cb203-2"><a href="section-2-overview.html#cb203-2" aria-hidden="true"></a>  <span class="kw">mean</span>(act_scores <span class="op">&lt;=</span><span class="st"> </span>x)</span>
-<span id="cb203-3"><a href="section-2-overview.html#cb203-3" aria-hidden="true"></a>})</span>
-<span id="cb203-4"><a href="section-2-overview.html#cb203-4" aria-hidden="true"></a><span class="kw">min</span>(<span class="kw">which</span>(cdf <span class="op">&gt;=</span><span class="st"> </span><span class="fl">.95</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-2-overview.html#cb212-1" aria-hidden="true"></a>cdf &lt;-<span class="st"> </span><span class="kw">sapply</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">36</span>, <span class="cf">function</span> (x){</span>
+<span id="cb212-2"><a href="section-2-overview.html#cb212-2" aria-hidden="true"></a>  <span class="kw">mean</span>(act_scores <span class="op">&lt;=</span><span class="st"> </span>x)</span>
+<span id="cb212-3"><a href="section-2-overview.html#cb212-3" aria-hidden="true"></a>})</span>
+<span id="cb212-4"><a href="section-2-overview.html#cb212-4" aria-hidden="true"></a><span class="kw">min</span>(<span class="kw">which</span>(cdf <span class="op">&gt;=</span><span class="st"> </span><span class="fl">.95</span>))</span></code></pre></div>
 <pre><code>## [1] 31</code></pre>
 <p>4b. Use qnorm to determine the expected 95th percentile, the value for which the probability of receiving that score or lower is 0.95, given a mean score of 20.9 and standard deviation of 5.7.</p>
 <p>What is the expected 95th percentile of ACT scores?</p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="section-2-overview.html#cb205-1" aria-hidden="true"></a><span class="kw">qnorm</span>(.<span class="dv">95</span>, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="section-2-overview.html#cb214-1" aria-hidden="true"></a><span class="kw">qnorm</span>(.<span class="dv">95</span>, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span></code></pre></div>
 <pre><code>## [1] 30.3</code></pre>
 <p>4c. As discussed in the Data Visualization course, we can use <code>quantile</code> to determine sample quantiles from the data.</p>
 <p>Make a vector containing the quantiles for <code>p &lt;- seq(0.01, 0.99, 0.01)</code>, the 1st through 99th percentiles of the <code>act_scores</code> data. Save these as <code>sample_quantiles</code>.</p>
 <p>In what percentile is a score of 26?</p>
 <p>Note that a score between the 98th and 99th percentile should be considered the 98th percentile, for example, and that quantile numbers are used as names for the vector <code>sample_quantiles</code>.</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="section-2-overview.html#cb207-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
-<span id="cb207-2"><a href="section-2-overview.html#cb207-2" aria-hidden="true"></a>sample_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(act_scores, p)</span>
-<span id="cb207-3"><a href="section-2-overview.html#cb207-3" aria-hidden="true"></a><span class="kw">names</span>(sample_quantiles[<span class="kw">max</span>(<span class="kw">which</span>(sample_quantiles <span class="op">&lt;</span><span class="st"> </span><span class="dv">26</span>))])</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="section-2-overview.html#cb216-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
+<span id="cb216-2"><a href="section-2-overview.html#cb216-2" aria-hidden="true"></a>sample_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(act_scores, p)</span>
+<span id="cb216-3"><a href="section-2-overview.html#cb216-3" aria-hidden="true"></a><span class="kw">names</span>(sample_quantiles[<span class="kw">max</span>(<span class="kw">which</span>(sample_quantiles <span class="op">&lt;</span><span class="st"> </span><span class="dv">26</span>))])</span></code></pre></div>
 <pre><code>## [1] &quot;82%&quot;</code></pre>
 <p>4d. Make a corresponding set of theoretical quantiles using <code>qnorm</code> over the interval <code>p &lt;- seq(0.01, 0.99, 0.01)</code> with mean 20.9 and standard deviation 5.7. Save these as <code>theoretical_quantiles</code>. Make a QQ-plot graphing <code>sample_quantiles</code> on the y-axis versus <code>theoretical_quantiles</code> on the x-axis.</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="section-2-overview.html#cb209-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
-<span id="cb209-2"><a href="section-2-overview.html#cb209-2" aria-hidden="true"></a>sample_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(act_scores, p)</span>
-<span id="cb209-3"><a href="section-2-overview.html#cb209-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
-<span id="cb209-4"><a href="section-2-overview.html#cb209-4" aria-hidden="true"></a><span class="kw">qplot</span>(theoretical_quantiles, sample_quantiles) <span class="op">+</span><span class="st"> </span><span class="kw">geom_abline</span>()</span></code></pre></div>
-<p><img src="img/figures/unnamed-chunk-100-1.png" width="672" /></p>
+<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="section-2-overview.html#cb218-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>)</span>
+<span id="cb218-2"><a href="section-2-overview.html#cb218-2" aria-hidden="true"></a>sample_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(act_scores, p)</span>
+<span id="cb218-3"><a href="section-2-overview.html#cb218-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="fl">20.9</span>, <span class="fl">5.7</span>)</span>
+<span id="cb218-4"><a href="section-2-overview.html#cb218-4" aria-hidden="true"></a><span class="kw">qplot</span>(theoretical_quantiles, sample_quantiles) <span class="op">+</span><span class="st"> </span><span class="kw">geom_abline</span>()</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-88-1.png" width="672" /></p>
 <p>Which of the following graphs is correct?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
