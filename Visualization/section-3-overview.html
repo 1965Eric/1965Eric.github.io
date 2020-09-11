@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="dplyr" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> dplyr</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#summarizing-data">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#summarizing-data" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><code>summarize</code> from the dplyr/tidyverse package computes summary statistics from the data frame. It returns a data frame whose column names are defined within the function call.</li>
@@ -251,37 +251,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Like most dplyr functions, <code>summarize</code> is aware of variable names within data frames and can use them directly.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="section-3-overview.html#cb150-1" aria-hidden="true"></a><span class="co"># compute average and standard deviation for males</span></span>
-<span id="cb150-2"><a href="section-3-overview.html#cb150-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span></span>
-<span id="cb150-3"><a href="section-3-overview.html#cb150-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb150-4"><a href="section-3-overview.html#cb150-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
-<span id="cb150-5"><a href="section-3-overview.html#cb150-5" aria-hidden="true"></a>    </span>
-<span id="cb150-6"><a href="section-3-overview.html#cb150-6" aria-hidden="true"></a><span class="co"># access average and standard deviation from summary table</span></span>
-<span id="cb150-7"><a href="section-3-overview.html#cb150-7" aria-hidden="true"></a>s<span class="op">$</span>average</span></code></pre></div>
-<pre><code>## [1] 69.3</code></pre>
-<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="section-3-overview.html#cb152-1" aria-hidden="true"></a>s<span class="op">$</span>standard_deviation</span></code></pre></div>
-<pre><code>## [1] 3.61</code></pre>
-<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="section-3-overview.html#cb154-1" aria-hidden="true"></a><span class="co"># compute median, min and max</span></span>
-<span id="cb154-2"><a href="section-3-overview.html#cb154-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
-<span id="cb154-3"><a href="section-3-overview.html#cb154-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb154-4"><a href="section-3-overview.html#cb154-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(height),</span>
-<span id="cb154-5"><a href="section-3-overview.html#cb154-5" aria-hidden="true"></a>                       <span class="dt">minimum =</span> <span class="kw">min</span>(height),</span>
-<span id="cb154-6"><a href="section-3-overview.html#cb154-6" aria-hidden="true"></a>                       <span class="dt">maximum =</span> <span class="kw">max</span>(height))</span></code></pre></div>
-<pre><code>##   median minimum maximum
-## 1     69      50    82.7</code></pre>
-<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="section-3-overview.html#cb156-1" aria-hidden="true"></a><span class="co"># alternative way to get min, median, max in base R</span></span>
-<span id="cb156-2"><a href="section-3-overview.html#cb156-2" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span></code></pre></div>
-<pre><code>##   0%  50% 100% 
-## 50.0 68.5 82.7</code></pre>
-<div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="section-3-overview.html#cb158-1" aria-hidden="true"></a><span class="co"># generates an error: summarize can only take functions that return a single value</span></span>
-<span id="cb158-2"><a href="section-3-overview.html#cb158-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
-<span id="cb158-3"><a href="section-3-overview.html#cb158-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb158-4"><a href="section-3-overview.html#cb158-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb167-1"><a href="section-3-overview.html#cb167-1" aria-hidden="true"></a><span class="co"># compute average and standard deviation for males</span></span>
+<span id="cb167-2"><a href="section-3-overview.html#cb167-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>heights <span class="op">%&gt;%</span></span>
+<span id="cb167-3"><a href="section-3-overview.html#cb167-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb167-4"><a href="section-3-overview.html#cb167-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span>
+<span id="cb167-5"><a href="section-3-overview.html#cb167-5" aria-hidden="true"></a>    </span>
+<span id="cb167-6"><a href="section-3-overview.html#cb167-6" aria-hidden="true"></a><span class="co"># access average and standard deviation from summary table</span></span>
+<span id="cb167-7"><a href="section-3-overview.html#cb167-7" aria-hidden="true"></a>s<span class="op">$</span>average</span></code></pre></div>
+<pre><code>## [1] 69.31475</code></pre>
+<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="section-3-overview.html#cb169-1" aria-hidden="true"></a>s<span class="op">$</span>standard_deviation</span></code></pre></div>
+<pre><code>## [1] 3.611024</code></pre>
+<div class="sourceCode" id="cb171"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb171-1"><a href="section-3-overview.html#cb171-1" aria-hidden="true"></a><span class="co"># compute median, min and max</span></span>
+<span id="cb171-2"><a href="section-3-overview.html#cb171-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb171-3"><a href="section-3-overview.html#cb171-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb171-4"><a href="section-3-overview.html#cb171-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median =</span> <span class="kw">median</span>(height),</span>
+<span id="cb171-5"><a href="section-3-overview.html#cb171-5" aria-hidden="true"></a>                       <span class="dt">minimum =</span> <span class="kw">min</span>(height),</span>
+<span id="cb171-6"><a href="section-3-overview.html#cb171-6" aria-hidden="true"></a>                       <span class="dt">maximum =</span> <span class="kw">max</span>(height))</span></code></pre></div>
+<pre><code>##   median minimum  maximum
+## 1     69      50 82.67717</code></pre>
+<div class="sourceCode" id="cb173"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb173-1"><a href="section-3-overview.html#cb173-1" aria-hidden="true"></a><span class="co"># alternative way to get min, median, max in base R</span></span>
+<span id="cb173-2"><a href="section-3-overview.html#cb173-2" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>##       0%      50%     100% 
+## 50.00000 68.50000 82.67717</code></pre>
+<div class="sourceCode" id="cb175"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb175-1"><a href="section-3-overview.html#cb175-1" aria-hidden="true"></a><span class="co"># generates an error: summarize can only take functions that return a single value</span></span>
+<span id="cb175-2"><a href="section-3-overview.html#cb175-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb175-3"><a href="section-3-overview.html#cb175-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb175-4"><a href="section-3-overview.html#cb175-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">range =</span> <span class="kw">quantile</span>(height, <span class="kw">c</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="dv">1</span>)))</span></code></pre></div>
 </div>
 <div id="the-dot-placeholder" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> The Dot Placeholder</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#the-dot-operator">here</a></p>
-<p>Note that a common replacement for the dot operator is the pull function. Here is the <a href="https://rafalab.github.io/dsbook/tidyverse.html#pull">textbook section on the pull function</a>.</p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#the-dot-operator" target="_blank">here</a>.</p>
+<p>Note that a common replacement for the dot operator is the pull function. Here is the <a href="https://rafalab.github.io/dsbook/tidyverse.html#pull" target="_blank">textbook section on the pull function</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The dot operator allows you to access values stored in data that is being piped in using the <code>%&gt;%</code> character. The dot is a placeholder for the data being passed in through the pipe.</li>
@@ -290,27 +290,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Note that an equivalent way to extract a single column using the pipe is <code>us_murder_rate %&gt;% pull(rate)</code>. The pull function will be used in later course material.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb159-1"><a href="section-3-overview.html#cb159-1" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>)</span>
-<span id="cb159-2"><a href="section-3-overview.html#cb159-2" aria-hidden="true"></a><span class="kw">summarize</span>(murders, <span class="kw">mean</span>(murder_rate))</span></code></pre></div>
+<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="section-3-overview.html#cb176-1" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population<span class="op">*</span><span class="dv">100000</span>)</span>
+<span id="cb176-2"><a href="section-3-overview.html#cb176-2" aria-hidden="true"></a><span class="kw">summarize</span>(murders, <span class="kw">mean</span>(murder_rate))</span></code></pre></div>
 <pre><code>##   mean(murder_rate)
-## 1              2.78</code></pre>
-<div class="sourceCode" id="cb161"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb161-1"><a href="section-3-overview.html#cb161-1" aria-hidden="true"></a><span class="co"># calculate US murder rate, generating a data frame</span></span>
-<span id="cb161-2"><a href="section-3-overview.html#cb161-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb161-3"><a href="section-3-overview.html#cb161-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
-<span id="cb161-4"><a href="section-3-overview.html#cb161-4" aria-hidden="true"></a>us_murder_rate</span></code></pre></div>
-<pre><code>##   rate
-## 1 3.03</code></pre>
-<div class="sourceCode" id="cb163"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb163-1"><a href="section-3-overview.html#cb163-1" aria-hidden="true"></a><span class="co"># extract the numeric US murder rate with the dot operator</span></span>
-<span id="cb163-2"><a href="section-3-overview.html#cb163-2" aria-hidden="true"></a>us_murder_rate <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>rate</span></code></pre></div>
-<pre><code>## [1] 3.03</code></pre>
-<div class="sourceCode" id="cb165"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb165-1"><a href="section-3-overview.html#cb165-1" aria-hidden="true"></a><span class="co"># calculate and extract the murder rate with one pipe</span></span>
-<span id="cb165-2"><a href="section-3-overview.html#cb165-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb165-3"><a href="section-3-overview.html#cb165-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb165-4"><a href="section-3-overview.html#cb165-4" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>rate</span></code></pre></div>
+## 1          2.779125</code></pre>
+<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="section-3-overview.html#cb178-1" aria-hidden="true"></a><span class="co"># calculate US murder rate, generating a data frame</span></span>
+<span id="cb178-2"><a href="section-3-overview.html#cb178-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb178-3"><a href="section-3-overview.html#cb178-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population) <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb178-4"><a href="section-3-overview.html#cb178-4" aria-hidden="true"></a>us_murder_rate</span></code></pre></div>
+<pre><code>##       rate
+## 1 3.034555</code></pre>
+<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="section-3-overview.html#cb180-1" aria-hidden="true"></a><span class="co"># extract the numeric US murder rate with the dot operator</span></span>
+<span id="cb180-2"><a href="section-3-overview.html#cb180-2" aria-hidden="true"></a>us_murder_rate <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>rate</span></code></pre></div>
+<pre><code>## [1] 3.034555</code></pre>
+<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="section-3-overview.html#cb182-1" aria-hidden="true"></a><span class="co"># calculate and extract the murder rate with one pipe</span></span>
+<span id="cb182-2"><a href="section-3-overview.html#cb182-2" aria-hidden="true"></a>us_murder_rate &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb182-3"><a href="section-3-overview.html#cb182-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">rate =</span> <span class="kw">sum</span>(total) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb182-4"><a href="section-3-overview.html#cb182-4" aria-hidden="true"></a><span class="st">    </span>.<span class="op">$</span>rate</span></code></pre></div>
 </div>
 <div id="group-by" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Group By</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#group-by">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#group-by" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The <code>group_by</code> function from <strong>dplyr</strong> converts a data frame to a grouped data frame, creating groups using one or more variables.</li>
@@ -318,22 +318,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Using <code>summarize</code> on a grouped data frame computes the summary statistics for each of the separate groups.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb166"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb166-1"><a href="section-3-overview.html#cb166-1" aria-hidden="true"></a><span class="co"># compute separate average and standard deviation for male/female heights</span></span>
-<span id="cb166-2"><a href="section-3-overview.html#cb166-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
-<span id="cb166-3"><a href="section-3-overview.html#cb166-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></span>
-<span id="cb166-4"><a href="section-3-overview.html#cb166-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb183-1"><a href="section-3-overview.html#cb183-1" aria-hidden="true"></a><span class="co"># compute separate average and standard deviation for male/female heights</span></span>
+<span id="cb183-2"><a href="section-3-overview.html#cb183-2" aria-hidden="true"></a>heights <span class="op">%&gt;%</span></span>
+<span id="cb183-3"><a href="section-3-overview.html#cb183-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(sex) <span class="op">%&gt;%</span></span>
+<span id="cb183-4"><a href="section-3-overview.html#cb183-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(height), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(height))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 2 x 3
 ##   sex    average standard_deviation
 ##   &lt;fct&gt;    &lt;dbl&gt;              &lt;dbl&gt;
 ## 1 Female    64.9               3.76
 ## 2 Male      69.3               3.61</code></pre>
-<div class="sourceCode" id="cb169"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb169-1"><a href="section-3-overview.html#cb169-1" aria-hidden="true"></a><span class="co"># compute median murder rate in 4 regions of country</span></span>
-<span id="cb169-2"><a href="section-3-overview.html#cb169-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb169-3"><a href="section-3-overview.html#cb169-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
-<span id="cb169-4"><a href="section-3-overview.html#cb169-4" aria-hidden="true"></a>murders <span class="op">%&gt;%</span></span>
-<span id="cb169-5"><a href="section-3-overview.html#cb169-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
-<span id="cb169-6"><a href="section-3-overview.html#cb169-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median_rate =</span> <span class="kw">median</span>(murder_rate))</span></code></pre></div>
+<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-3-overview.html#cb186-1" aria-hidden="true"></a><span class="co"># compute median murder rate in 4 regions of country</span></span>
+<span id="cb186-2"><a href="section-3-overview.html#cb186-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb186-3"><a href="section-3-overview.html#cb186-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb186-4"><a href="section-3-overview.html#cb186-4" aria-hidden="true"></a>murders <span class="op">%&gt;%</span></span>
+<span id="cb186-5"><a href="section-3-overview.html#cb186-5" aria-hidden="true"></a><span class="st">    </span><span class="kw">group_by</span>(region) <span class="op">%&gt;%</span></span>
+<span id="cb186-6"><a href="section-3-overview.html#cb186-6" aria-hidden="true"></a><span class="st">    </span><span class="kw">summarize</span>(<span class="dt">median_rate =</span> <span class="kw">median</span>(murder_rate))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 4 x 2
 ##   region        median_rate
@@ -345,7 +345,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="sorting-data-tables" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Sorting Data Tables</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#sorting-data-frames">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/tidyverse.html#sorting-data-frames" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The <code>arrange</code> function from <strong>dplyr</strong> sorts a data frame by a given column.</li>
@@ -354,102 +354,102 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>The <code>top_n</code> function shows the top results ranked by a given variable, but the results are not ordered. You can combine <code>top_n</code> with <code>arrange</code> to return the top results in order.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb172"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb172-1"><a href="section-3-overview.html#cb172-1" aria-hidden="true"></a><span class="co"># set up murders object</span></span>
-<span id="cb172-2"><a href="section-3-overview.html#cb172-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
-<span id="cb172-3"><a href="section-3-overview.html#cb172-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
-<span id="cb172-4"><a href="section-3-overview.html#cb172-4" aria-hidden="true"></a></span>
-<span id="cb172-5"><a href="section-3-overview.html#cb172-5" aria-hidden="true"></a><span class="co"># arrange by population column, smallest to largest</span></span>
-<span id="cb172-6"><a href="section-3-overview.html#cb172-6" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(population) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb189-1"><a href="section-3-overview.html#cb189-1" aria-hidden="true"></a><span class="co"># set up murders object</span></span>
+<span id="cb189-2"><a href="section-3-overview.html#cb189-2" aria-hidden="true"></a>murders &lt;-<span class="st"> </span>murders <span class="op">%&gt;%</span></span>
+<span id="cb189-3"><a href="section-3-overview.html#cb189-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">murder_rate =</span> total<span class="op">/</span>population <span class="op">*</span><span class="st"> </span><span class="dv">100000</span>)</span>
+<span id="cb189-4"><a href="section-3-overview.html#cb189-4" aria-hidden="true"></a></span>
+<span id="cb189-5"><a href="section-3-overview.html#cb189-5" aria-hidden="true"></a><span class="co"># arrange by population column, smallest to largest</span></span>
+<span id="cb189-6"><a href="section-3-overview.html#cb189-6" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(population) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <pre><code>##                  state abb        region population total murder_rate
-## 1              Wyoming  WY          West     563626     5       0.887
-## 2 District of Columbia  DC         South     601723    99      16.453
-## 3              Vermont  VT     Northeast     625741     2       0.320
-## 4         North Dakota  ND North Central     672591     4       0.595
-## 5               Alaska  AK          West     710231    19       2.675
-## 6         South Dakota  SD North Central     814180     8       0.983</code></pre>
-<div class="sourceCode" id="cb174"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb174-1"><a href="section-3-overview.html#cb174-1" aria-hidden="true"></a><span class="co"># arrange by murder rate, smallest to largest</span></span>
-<span id="cb174-2"><a href="section-3-overview.html#cb174-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+## 1              Wyoming  WY          West     563626     5   0.8871131
+## 2 District of Columbia  DC         South     601723    99  16.4527532
+## 3              Vermont  VT     Northeast     625741     2   0.3196211
+## 4         North Dakota  ND North Central     672591     4   0.5947151
+## 5               Alaska  AK          West     710231    19   2.6751860
+## 6         South Dakota  SD North Central     814180     8   0.9825837</code></pre>
+<div class="sourceCode" id="cb191"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb191-1"><a href="section-3-overview.html#cb191-1" aria-hidden="true"></a><span class="co"># arrange by murder rate, smallest to largest</span></span>
+<span id="cb191-2"><a href="section-3-overview.html#cb191-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <pre><code>##           state abb        region population total murder_rate
-## 1       Vermont  VT     Northeast     625741     2       0.320
-## 2 New Hampshire  NH     Northeast    1316470     5       0.380
-## 3        Hawaii  HI          West    1360301     7       0.515
-## 4  North Dakota  ND North Central     672591     4       0.595
-## 5          Iowa  IA North Central    3046355    21       0.689
-## 6         Idaho  ID          West    1567582    12       0.766</code></pre>
-<div class="sourceCode" id="cb176"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb176-1"><a href="section-3-overview.html#cb176-1" aria-hidden="true"></a><span class="co"># arrange by murder rate in descending order</span></span>
-<span id="cb176-2"><a href="section-3-overview.html#cb176-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+## 1       Vermont  VT     Northeast     625741     2   0.3196211
+## 2 New Hampshire  NH     Northeast    1316470     5   0.3798036
+## 3        Hawaii  HI          West    1360301     7   0.5145920
+## 4  North Dakota  ND North Central     672591     4   0.5947151
+## 5          Iowa  IA North Central    3046355    21   0.6893484
+## 6         Idaho  ID          West    1567582    12   0.7655102</code></pre>
+<div class="sourceCode" id="cb193"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb193-1"><a href="section-3-overview.html#cb193-1" aria-hidden="true"></a><span class="co"># arrange by murder rate in descending order</span></span>
+<span id="cb193-2"><a href="section-3-overview.html#cb193-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <pre><code>##                  state abb        region population total murder_rate
-## 1 District of Columbia  DC         South     601723    99       16.45
-## 2            Louisiana  LA         South    4533372   351        7.74
-## 3             Missouri  MO North Central    5988927   321        5.36
-## 4             Maryland  MD         South    5773552   293        5.07
-## 5       South Carolina  SC         South    4625364   207        4.48
-## 6             Delaware  DE         South     897934    38        4.23</code></pre>
-<div class="sourceCode" id="cb178"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb178-1"><a href="section-3-overview.html#cb178-1" aria-hidden="true"></a><span class="co"># arrange by region alphabetically, then by murder rate within each region</span></span>
-<span id="cb178-2"><a href="section-3-overview.html#cb178-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(region, murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
+## 1 District of Columbia  DC         South     601723    99   16.452753
+## 2            Louisiana  LA         South    4533372   351    7.742581
+## 3             Missouri  MO North Central    5988927   321    5.359892
+## 4             Maryland  MD         South    5773552   293    5.074866
+## 5       South Carolina  SC         South    4625364   207    4.475323
+## 6             Delaware  DE         South     897934    38    4.231937</code></pre>
+<div class="sourceCode" id="cb195"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb195-1"><a href="section-3-overview.html#cb195-1" aria-hidden="true"></a><span class="co"># arrange by region alphabetically, then by murder rate within each region</span></span>
+<span id="cb195-2"><a href="section-3-overview.html#cb195-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(region, murder_rate) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <pre><code>##           state abb    region population total murder_rate
-## 1       Vermont  VT Northeast     625741     2       0.320
-## 2 New Hampshire  NH Northeast    1316470     5       0.380
-## 3         Maine  ME Northeast    1328361    11       0.828
-## 4  Rhode Island  RI Northeast    1052567    16       1.520
-## 5 Massachusetts  MA Northeast    6547629   118       1.802
-## 6      New York  NY Northeast   19378102   517       2.668</code></pre>
-<div class="sourceCode" id="cb180"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb180-1"><a href="section-3-overview.html#cb180-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, not ordered by rate</span></span>
-<span id="cb180-2"><a href="section-3-overview.html#cb180-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>, murder_rate)</span></code></pre></div>
+## 1       Vermont  VT Northeast     625741     2   0.3196211
+## 2 New Hampshire  NH Northeast    1316470     5   0.3798036
+## 3         Maine  ME Northeast    1328361    11   0.8280881
+## 4  Rhode Island  RI Northeast    1052567    16   1.5200933
+## 5 Massachusetts  MA Northeast    6547629   118   1.8021791
+## 6      New York  NY Northeast   19378102   517   2.6679599</code></pre>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="section-3-overview.html#cb197-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, not ordered by rate</span></span>
+<span id="cb197-2"><a href="section-3-overview.html#cb197-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>, murder_rate)</span></code></pre></div>
 <pre><code>##                   state abb        region population total murder_rate
-## 1               Arizona  AZ          West    6392017   232        3.63
-## 2              Delaware  DE         South     897934    38        4.23
-## 3  District of Columbia  DC         South     601723    99       16.45
-## 4               Georgia  GA         South    9920000   376        3.79
-## 5             Louisiana  LA         South    4533372   351        7.74
-## 6              Maryland  MD         South    5773552   293        5.07
-## 7              Michigan  MI North Central    9883640   413        4.18
-## 8           Mississippi  MS         South    2967297   120        4.04
-## 9              Missouri  MO North Central    5988927   321        5.36
-## 10       South Carolina  SC         South    4625364   207        4.48</code></pre>
-<div class="sourceCode" id="cb182"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb182-1"><a href="section-3-overview.html#cb182-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, ordered by rate</span></span>
-<span id="cb182-2"><a href="section-3-overview.html#cb182-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>)</span></code></pre></div>
+## 1               Arizona  AZ          West    6392017   232    3.629527
+## 2              Delaware  DE         South     897934    38    4.231937
+## 3  District of Columbia  DC         South     601723    99   16.452753
+## 4               Georgia  GA         South    9920000   376    3.790323
+## 5             Louisiana  LA         South    4533372   351    7.742581
+## 6              Maryland  MD         South    5773552   293    5.074866
+## 7              Michigan  MI North Central    9883640   413    4.178622
+## 8           Mississippi  MS         South    2967297   120    4.044085
+## 9              Missouri  MO North Central    5988927   321    5.359892
+## 10       South Carolina  SC         South    4625364   207    4.475323</code></pre>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="section-3-overview.html#cb199-1" aria-hidden="true"></a><span class="co"># show the top 10 states with highest murder rate, ordered by rate</span></span>
+<span id="cb199-2"><a href="section-3-overview.html#cb199-2" aria-hidden="true"></a>murders <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(murder_rate)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">top_n</span>(<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## Selecting by murder_rate</code></pre>
 <pre><code>##                   state abb        region population total murder_rate
-## 1  District of Columbia  DC         South     601723    99       16.45
-## 2             Louisiana  LA         South    4533372   351        7.74
-## 3              Missouri  MO North Central    5988927   321        5.36
-## 4              Maryland  MD         South    5773552   293        5.07
-## 5        South Carolina  SC         South    4625364   207        4.48
-## 6              Delaware  DE         South     897934    38        4.23
-## 7              Michigan  MI North Central    9883640   413        4.18
-## 8           Mississippi  MS         South    2967297   120        4.04
-## 9               Georgia  GA         South    9920000   376        3.79
-## 10              Arizona  AZ          West    6392017   232        3.63</code></pre>
+## 1  District of Columbia  DC         South     601723    99   16.452753
+## 2             Louisiana  LA         South    4533372   351    7.742581
+## 3              Missouri  MO North Central    5988927   321    5.359892
+## 4              Maryland  MD         South    5773552   293    5.074866
+## 5        South Carolina  SC         South    4625364   207    4.475323
+## 6              Delaware  DE         South     897934    38    4.231937
+## 7              Michigan  MI North Central    9883640   413    4.178622
+## 8           Mississippi  MS         South    2967297   120    4.044085
+## 9               Georgia  GA         South    9920000   376    3.790323
+## 10              Arizona  AZ          West    6392017   232    3.629527</code></pre>
 </div>
 <div id="assessment---summarizing-with-dplyr" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> Assessment - Summarizing with dplyr</h2>
 <p>To practice our dplyr skills we will be working with data from the survey collected by the United States National Center for Health Statistics (NCHS). This center has conducted a series of health and nutrition surveys since the 1960’s.</p>
 <p>Starting in 1999, about 5,000 individuals of all ages have been interviewed every year and then they complete the health examination component of the survey. Part of this dataset is made available via the NHANES package which can be loaded this way:</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb185-1"><a href="section-3-overview.html#cb185-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(NHANES)) <span class="kw">install.packages</span>(<span class="st">&quot;NHANES&quot;</span>)</span>
-<span id="cb185-2"><a href="section-3-overview.html#cb185-2" aria-hidden="true"></a></span>
-<span id="cb185-3"><a href="section-3-overview.html#cb185-3" aria-hidden="true"></a><span class="kw">library</span>(NHANES)</span>
-<span id="cb185-4"><a href="section-3-overview.html#cb185-4" aria-hidden="true"></a><span class="kw">data</span>(NHANES)</span></code></pre></div>
+<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="section-3-overview.html#cb202-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(NHANES)) <span class="kw">install.packages</span>(<span class="st">&quot;NHANES&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: NHANES</code></pre>
+<div class="sourceCode" id="cb204"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb204-1"><a href="section-3-overview.html#cb204-1" aria-hidden="true"></a><span class="kw">library</span>(NHANES)</span>
+<span id="cb204-2"><a href="section-3-overview.html#cb204-2" aria-hidden="true"></a><span class="kw">data</span>(NHANES)</span></code></pre></div>
 <p>The NHANES data has many missing values. Remember that the main summarization function in R will return <code>NA</code> if any of the entries of the input vector is an <code>NA</code>. Here is an example:</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="section-3-overview.html#cb186-1" aria-hidden="true"></a><span class="kw">data</span>(na_example)</span>
-<span id="cb186-2"><a href="section-3-overview.html#cb186-2" aria-hidden="true"></a><span class="kw">mean</span>(na_example)</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="section-3-overview.html#cb205-1" aria-hidden="true"></a><span class="kw">data</span>(na_example)</span>
+<span id="cb205-2"><a href="section-3-overview.html#cb205-2" aria-hidden="true"></a><span class="kw">mean</span>(na_example)</span></code></pre></div>
 <pre><code>## [1] NA</code></pre>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="section-3-overview.html#cb188-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example)</span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="section-3-overview.html#cb207-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example)</span></code></pre></div>
 <pre><code>## [1] NA</code></pre>
 <p>To ignore the <code>NA</code>s, we can use the <code>na.rm</code> argument:</p>
-<div class="sourceCode" id="cb190"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb190-1"><a href="section-3-overview.html#cb190-1" aria-hidden="true"></a><span class="kw">mean</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] 2.3</code></pre>
-<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="section-3-overview.html#cb192-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
-<pre><code>## [1] 1.22</code></pre>
+<div class="sourceCode" id="cb209"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb209-1"><a href="section-3-overview.html#cb209-1" aria-hidden="true"></a><span class="kw">mean</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 2.301754</code></pre>
+<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="section-3-overview.html#cb211-1" aria-hidden="true"></a><span class="kw">sd</span>(na_example, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 1.22338</code></pre>
 <p>Try running this code, then let us know you are ready to proceed with the analysis.</p>
 <ol style="list-style-type: decimal">
 <li>Let’s explore the <code>NHANES</code> data. We will be exploring blood pressure in this dataset.</li>
 </ol>
 <p>First let’s select a group to set the standard. We will use 20-29 year old females. Note that the category is coded with <code>20-29</code>, with a space in front of the <code>20</code>! The <code>AgeDecade</code> is a categorical variable with these ages.</p>
 <p>To know if someone is female, you can look at the <code>Gender</code> variable.</p>
-<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="section-3-overview.html#cb194-1" aria-hidden="true"></a><span class="co">## fill in what is needed</span></span>
-<span id="cb194-2"><a href="section-3-overview.html#cb194-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>)</span>
-<span id="cb194-3"><a href="section-3-overview.html#cb194-3" aria-hidden="true"></a><span class="kw">head</span>(tab)</span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="section-3-overview.html#cb213-1" aria-hidden="true"></a><span class="co">## fill in what is needed</span></span>
+<span id="cb213-2"><a href="section-3-overview.html#cb213-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>)</span>
+<span id="cb213-3"><a href="section-3-overview.html#cb213-3" aria-hidden="true"></a><span class="kw">head</span>(tab)</span></code></pre></div>
 <pre><code>## # A tibble: 6 x 76
 ##      ID SurveyYr Gender   Age AgeDecade AgeMonths Race1 Race3 Education MaritalStatus HHIncome HHIncomeMid Poverty HomeRooms HomeOwn Work  Weight Length HeadCirc Height   BMI
 ##   &lt;int&gt; &lt;fct&gt;    &lt;fct&gt;  &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;     &lt;fct&gt;         &lt;fct&gt;          &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt; &lt;fct&gt;   &lt;fct&gt;  &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
@@ -469,9 +469,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Now we will compute the average and standard deviation for the subgroup we defined in the previous exercise (20-29 year old females), which we will use reference for what is typical.</li>
 </ol>
 <p>You will determine the average and standard deviation of systolic blood pressure, which are stored in the <code>BPSysAve</code> variable in the NHANES dataset.</p>
-<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="section-3-overview.html#cb196-1" aria-hidden="true"></a><span class="co">## complete this line of code.</span></span>
-<span id="cb196-2"><a href="section-3-overview.html#cb196-2" aria-hidden="true"></a>ref &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span>
-<span id="cb196-3"><a href="section-3-overview.html#cb196-3" aria-hidden="true"></a>ref</span></code></pre></div>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="section-3-overview.html#cb215-1" aria-hidden="true"></a><span class="co">## complete this line of code.</span></span>
+<span id="cb215-2"><a href="section-3-overview.html#cb215-2" aria-hidden="true"></a>ref &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb215-3"><a href="section-3-overview.html#cb215-3" aria-hidden="true"></a>ref</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   average standard_deviation
 ##     &lt;dbl&gt;              &lt;dbl&gt;
@@ -480,21 +480,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Now we will repeat the exercise and generate only the average blood pressure for 20-29 year old females.</li>
 </ol>
 <p>For this exercise, you should review how to use the place holder <code>.</code> in dplyr or the <code>pull</code> function.</p>
-<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="section-3-overview.html#cb198-1" aria-hidden="true"></a><span class="co">## modify the code we wrote for previous exercise.</span></span>
-<span id="cb198-2"><a href="section-3-overview.html#cb198-2" aria-hidden="true"></a>ref_avg &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span></span>
-<span id="cb198-3"><a href="section-3-overview.html#cb198-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span></span>
-<span id="cb198-4"><a href="section-3-overview.html#cb198-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb198-5"><a href="section-3-overview.html#cb198-5" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>average</span>
-<span id="cb198-6"><a href="section-3-overview.html#cb198-6" aria-hidden="true"></a>ref_avg</span></code></pre></div>
-<pre><code>## [1] 108</code></pre>
+<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="section-3-overview.html#cb217-1" aria-hidden="true"></a><span class="co">## modify the code we wrote for previous exercise.</span></span>
+<span id="cb217-2"><a href="section-3-overview.html#cb217-2" aria-hidden="true"></a>ref_avg &lt;-<span class="st"> </span>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb217-3"><a href="section-3-overview.html#cb217-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb217-4"><a href="section-3-overview.html#cb217-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb217-5"><a href="section-3-overview.html#cb217-5" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span>.<span class="op">$</span>average</span>
+<span id="cb217-6"><a href="section-3-overview.html#cb217-6" aria-hidden="true"></a>ref_avg</span></code></pre></div>
+<pre><code>## [1] 108.4224</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Let’s continue practicing by calculating two other data summaries: the minimum and the maximum.</li>
 </ol>
 <p>Again we will do it for the <code>BPSysAve</code> variable and the group of 20-29 year old females.</p>
-<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="section-3-overview.html#cb200-1" aria-hidden="true"></a><span class="co">## complete the line</span></span>
-<span id="cb200-2"><a href="section-3-overview.html#cb200-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
-<span id="cb200-3"><a href="section-3-overview.html#cb200-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span>  <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">minbp =</span> <span class="kw">min</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb200-4"><a href="section-3-overview.html#cb200-4" aria-hidden="true"></a>            <span class="dt">maxbp =</span> <span class="kw">max</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="section-3-overview.html#cb219-1" aria-hidden="true"></a><span class="co">## complete the line</span></span>
+<span id="cb219-2"><a href="section-3-overview.html#cb219-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb219-3"><a href="section-3-overview.html#cb219-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 20-29&quot;</span>  <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">minbp =</span> <span class="kw">min</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb219-4"><a href="section-3-overview.html#cb219-4" aria-hidden="true"></a>            <span class="dt">maxbp =</span> <span class="kw">max</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 1 x 2
 ##   minbp maxbp
 ##   &lt;int&gt; &lt;int&gt;
@@ -504,10 +504,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>What we are about to do is a very common operation in data science: you will split a data table into groups and then compute summary statistics for each group.</p>
 <p>We will compute the average and standard deviation of systolic blood pressure for females for each age group separately. Remember that the age groups are contained in <code>AgeDecade</code>.</p>
-<div class="sourceCode" id="cb202"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb202-1"><a href="section-3-overview.html#cb202-1" aria-hidden="true"></a><span class="co">##complete the line with group_by and summarize</span></span>
-<span id="cb202-2"><a href="section-3-overview.html#cb202-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
-<span id="cb202-3"><a href="section-3-overview.html#cb202-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb202-4"><a href="section-3-overview.html#cb202-4" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb221"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb221-1"><a href="section-3-overview.html#cb221-1" aria-hidden="true"></a><span class="co">##complete the line with group_by and summarize</span></span>
+<span id="cb221-2"><a href="section-3-overview.html#cb221-2" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb221-3"><a href="section-3-overview.html#cb221-3" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;female&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb221-4"><a href="section-3-overview.html#cb221-4" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 9 x 3
 ##   AgeDecade average standard_deviation
@@ -526,9 +526,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>We are going to repeat the previous exercise of calculating the average and standard deviation of systolic blood pressure, but for males instead of females.</p>
 <p>This time we will not provide much sample code. You are on your own!</p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="section-3-overview.html#cb205-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
-<span id="cb205-2"><a href="section-3-overview.html#cb205-2" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb205-3"><a href="section-3-overview.html#cb205-3" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="section-3-overview.html#cb224-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span></span>
+<span id="cb224-2"><a href="section-3-overview.html#cb224-2" aria-hidden="true"></a><span class="st">      </span><span class="kw">filter</span>(Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb224-3"><a href="section-3-overview.html#cb224-3" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 9 x 3
 ##   AgeDecade average standard_deviation
@@ -547,8 +547,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>This is because <code>group_by</code> permits us to group by more than one variable.</p>
 <p>We can use <code>group_by(AgeDecade, Gender)</code> to group by both age decades and gender.</p>
-<div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="section-3-overview.html#cb208-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade, Gender) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
-<span id="cb208-2"><a href="section-3-overview.html#cb208-2" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="section-3-overview.html#cb227-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(AgeDecade, Gender) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), </span>
+<span id="cb227-2"><a href="section-3-overview.html#cb227-2" aria-hidden="true"></a>            <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>))</span></code></pre></div>
 <pre><code>## `summarise()` regrouping output by &#39;AgeDecade&#39; (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 18 x 4
 ## # Groups:   AgeDecade [9]
@@ -577,11 +577,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>We will learn to use the <code>arrange</code> function to order the outcome acording to one variable.</p>
 <p>Note that this function can be used to order any table by a given outcome. Here is an example that arranges by systolic blood pressure.</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb211-1"><a href="section-3-overview.html#cb211-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(BPSysAve)</span></code></pre></div>
+<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="section-3-overview.html#cb230-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(BPSysAve)</span></code></pre></div>
 <p>If we want it in descending order we can use the <code>desc</code> function like this:</p>
-<div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="section-3-overview.html#cb212-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(BPSysAve))</span></code></pre></div>
+<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="section-3-overview.html#cb231-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(<span class="kw">desc</span>(BPSysAve))</span></code></pre></div>
 <p>In this example, we will compare systolic blood pressure across values of the <code>Race1</code> variable for males between the ages of 40-49.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="section-3-overview.html#cb213-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 40-49&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Race1) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(average)</span></code></pre></div>
+<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="section-3-overview.html#cb232-1" aria-hidden="true"></a>NHANES <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(AgeDecade <span class="op">==</span><span class="st"> &quot; 40-49&quot;</span> <span class="op">&amp;</span><span class="st"> </span>Gender <span class="op">==</span><span class="st"> &quot;male&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">group_by</span>(Race1) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">summarize</span>(<span class="dt">average =</span> <span class="kw">mean</span>(BPSysAve, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>), <span class="dt">standard_deviation =</span> <span class="kw">sd</span>(BPSysAve, <span class="dt">na.rm=</span><span class="ot">TRUE</span>)) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">arrange</span>(average)</span></code></pre></div>
 <pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
 <pre><code>## # A tibble: 5 x 3
 ##   Race1    average standard_deviation

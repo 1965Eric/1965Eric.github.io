@@ -243,7 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="introduction-to-data-visualization" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Introduction to Data Visualization</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/introduction-to-data-visualization.html" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Plots of data easily communicate information that is difficult to extract from tables of raw values.</li>
@@ -252,11 +252,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>This course covers the basics of data visualization and EDA in R using the <strong>ggplot2</strong> package and motivating examples from world health, economics and infectious disease.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span>
-<span id="cb1-2"><a href="section-1-overview.html#cb1-2" aria-hidden="true"></a></span>
-<span id="cb1-3"><a href="section-1-overview.html#cb1-3" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb1-4"><a href="section-1-overview.html#cb1-4" aria-hidden="true"></a><span class="kw">data</span>(murders)</span>
-<span id="cb1-5"><a href="section-1-overview.html#cb1-5" aria-hidden="true"></a><span class="kw">head</span>(murders)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="section-1-overview.html#cb1-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(dslabs)) <span class="kw">install.packages</span>(<span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: dslabs</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="section-1-overview.html#cb3-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb3-2"><a href="section-1-overview.html#cb3-2" aria-hidden="true"></a><span class="kw">data</span>(murders)</span>
+<span id="cb3-3"><a href="section-1-overview.html#cb3-3" aria-hidden="true"></a><span class="kw">head</span>(murders)</span></code></pre></div>
 <pre><code>##        state abb region population total
 ## 1    Alabama  AL  South    4779736   135
 ## 2     Alaska  AK   West     710231    19
@@ -267,7 +267,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="introduction-to-distributions" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Introduction to Distributions</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The most basic statistical summary of a list of objects is its distribution.</li>
@@ -277,7 +277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="data-types" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Data Types</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#variable-types">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#variable-types" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Categorical data are variables that are defined by a small number of groups.
@@ -299,15 +299,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>We will be working with two types of variables: categorical and numeric. Each can be divided into two other groups: categorical can be ordinal or not, whereas numerical variables can be discrete or continuous.</p>
 <p>We will review data types using some of the examples provided in the <code>dslabs</code> package. For example, the <code>heights</code> dataset.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="section-1-overview.html#cb3-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb3-2"><a href="section-1-overview.html#cb3-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="section-1-overview.html#cb4-1" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb4-2"><a href="section-1-overview.html#cb4-2" aria-hidden="true"></a><span class="kw">names</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="section-1-overview.html#cb5-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb5-2"><a href="section-1-overview.html#cb5-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="section-1-overview.html#cb6-1" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb6-2"><a href="section-1-overview.html#cb6-2" aria-hidden="true"></a><span class="kw">names</span>(heights)</span></code></pre></div>
 <pre><code>## [1] &quot;sex&quot;    &quot;height&quot;</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>We saw that <code>sex</code> is the first variable. We know what values are represented by this variable and can confirm this by looking at the first few entires:</li>
 </ol>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="section-1-overview.html#cb6-1" aria-hidden="true"></a><span class="kw">head</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="section-1-overview.html#cb8-1" aria-hidden="true"></a><span class="kw">head</span>(heights)</span></code></pre></div>
 <pre><code>##      sex height
 ## 1   Male     75
 ## 2   Male     70
@@ -331,25 +331,25 @@ D. None of the above</li>
 </ol>
 <p>Although this is technically true, we usually reserve the term ordinal data for variables belonging to a small number of different groups, with each group having many members.</p>
 <p>The <code>height</code> variable could be ordinal if, for example, we report a small number of values such as short, medium, and tall. Let’s explore how many unique values are used by the heights variable. For this we can use the <code>unique</code> function:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="section-1-overview.html#cb8-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
-<span id="cb8-2"><a href="section-1-overview.html#cb8-2" aria-hidden="true"></a><span class="kw">unique</span>(x)</span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="section-1-overview.html#cb9-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
-<span id="cb9-2"><a href="section-1-overview.html#cb9-2" aria-hidden="true"></a><span class="kw">length</span>(<span class="kw">unique</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="section-1-overview.html#cb10-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb10-2"><a href="section-1-overview.html#cb10-2" aria-hidden="true"></a><span class="kw">unique</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="section-1-overview.html#cb11-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
+<span id="cb11-2"><a href="section-1-overview.html#cb11-2" aria-hidden="true"></a><span class="kw">length</span>(<span class="kw">unique</span>(x))</span></code></pre></div>
 <pre><code>## [1] 139</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>One of the useful outputs of data visualization is that we can learn about the distribution of variables.</li>
 </ol>
 <p>For categorical data we can construct this distribution by simply computing the frequency of each unique value. This can be done with the function <code>table</code>. Here is an example:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="section-1-overview.html#cb11-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
-<span id="cb11-2"><a href="section-1-overview.html#cb11-2" aria-hidden="true"></a><span class="kw">table</span>(x)</span></code></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="section-1-overview.html#cb12-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
-<span id="cb12-2"><a href="section-1-overview.html#cb12-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="section-1-overview.html#cb13-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>)</span>
+<span id="cb13-2"><a href="section-1-overview.html#cb13-2" aria-hidden="true"></a><span class="kw">table</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="section-1-overview.html#cb14-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height</span>
+<span id="cb14-2"><a href="section-1-overview.html#cb14-2" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(x)</span></code></pre></div>
 <ol start="5" style="list-style-type: decimal">
 <li>To see why treating the reported heights as an ordinal value is not useful in practice we note how many values are reported only once.</li>
 </ol>
 <p>In the previous exercise we computed the variable tab which reports the number of times each unique value appears. For values reported only once tab will be 1. Use logicals and the function sum to count the number of times this happens.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="section-1-overview.html#cb13-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(heights<span class="op">$</span>height)</span>
-<span id="cb13-2"><a href="section-1-overview.html#cb13-2" aria-hidden="true"></a><span class="kw">sum</span>(tab<span class="op">==</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-1-overview.html#cb15-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span><span class="kw">table</span>(heights<span class="op">$</span>height)</span>
+<span id="cb15-2"><a href="section-1-overview.html#cb15-2" aria-hidden="true"></a><span class="kw">sum</span>(tab<span class="op">==</span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 63</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>Since there are a finite number of reported heights and technically the height can be considered ordinal, which of the following is true:</li>
@@ -369,10 +369,10 @@ D. This is a numerical variable because numbers are used to represent it.</li>
 <h2><span class="header-section-number">2.5</span> Describe Heights to ET</h2>
 <p>The textbook for this section is available:</p>
 <ul>
-<li><a href="https://rafalab.github.io/dsbook/distributions.html#case-study-describing-student-heights">Case Study describing student heights</a></li>
-<li><a href="https://rafalab.github.io/dsbook/distributions.html#distribution-function">Distribution Function</a></li>
-<li><a href="https://rafalab.github.io/dsbook/distributions.html#cdf-intro">CDF Intro</a></li>
-<li><a href="https://rafalab.github.io/dsbook/distributions.html#histograms">Histograms</a></li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#case-study-describing-student-heights" target="_blank">Case Study describing student heights</a>.</li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#distribution-function" target="_blank">Distribution Function</a>.</li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#cdf-intro" target="_blank">CDF Intro</a>.</li>
+<li><a href="https://rafalab.github.io/dsbook/distributions.html#histograms" target="_blank">Histograms</a>.</li>
 </ul>
 <p><strong>Key points</strong></p>
 <ul>
@@ -385,18 +385,18 @@ D. This is a numerical variable because numbers are used to represent it.</li>
 <li>A <em>histogram</em> divides data into non-overlapping bins of the same size and plots the counts of number of values that fall in that interval.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="section-1-overview.html#cb15-1" aria-hidden="true"></a><span class="co"># load the dataset</span></span>
-<span id="cb15-2"><a href="section-1-overview.html#cb15-2" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb15-3"><a href="section-1-overview.html#cb15-3" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="section-1-overview.html#cb16-1" aria-hidden="true"></a><span class="co"># make a table of category proportions</span></span>
-<span id="cb16-2"><a href="section-1-overview.html#cb16-2" aria-hidden="true"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(heights<span class="op">$</span>sex))</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="section-1-overview.html#cb17-1" aria-hidden="true"></a><span class="co"># load the dataset</span></span>
+<span id="cb17-2"><a href="section-1-overview.html#cb17-2" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb17-3"><a href="section-1-overview.html#cb17-3" aria-hidden="true"></a><span class="kw">data</span>(heights)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="section-1-overview.html#cb18-1" aria-hidden="true"></a><span class="co"># make a table of category proportions</span></span>
+<span id="cb18-2"><a href="section-1-overview.html#cb18-2" aria-hidden="true"></a><span class="kw">prop.table</span>(<span class="kw">table</span>(heights<span class="op">$</span>sex))</span></code></pre></div>
 <pre><code>## 
-## Female   Male 
-##  0.227  0.773</code></pre>
+##    Female      Male 
+## 0.2266667 0.7733333</code></pre>
 </div>
 <div id="smooth-density-plots" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Smooth Density Plots</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#smoothed-density">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#smoothed-density" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><em>Smooth density plots</em> can be thought of as histograms where the bin width is extremely or infinitely small. The smoothing function makes estimates of the true continuous trend of the data given the available sample of data points.</li>
@@ -579,7 +579,7 @@ D. They are the same dataset, but the first is not in the log scale, the second 
 </div>
 <div id="normal-distribution" class="section level2" number="2.8">
 <h2><span class="header-section-number">2.8</span> Normal Distribution</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#normal-distribution">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#normal-distribution" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><p>The normal distribution:</p>
@@ -601,29 +601,37 @@ D. They are the same dataset, but the first is not in the log scale, the second 
 <p>The normal distribution is mathematically defined by the following formula for any mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>:</p>
 <p><span class="math inline">\(Pr(a &lt; x &lt; b) = \int_{a}^{b} \frac{1}{\sqrt2\pi\sigma} e^-\frac{1}{2}(\frac{x - \mu}{\sigma})^2 dx\)</span></p>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="section-1-overview.html#cb18-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
-<span id="cb18-2"><a href="section-1-overview.html#cb18-2" aria-hidden="true"></a></span>
-<span id="cb18-3"><a href="section-1-overview.html#cb18-3" aria-hidden="true"></a><span class="co"># define x as vector of male heights</span></span>
-<span id="cb18-4"><a href="section-1-overview.html#cb18-4" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb18-5"><a href="section-1-overview.html#cb18-5" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
-<span id="cb18-6"><a href="section-1-overview.html#cb18-6" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
-<span id="cb18-7"><a href="section-1-overview.html#cb18-7" aria-hidden="true"></a></span>
-<span id="cb18-8"><a href="section-1-overview.html#cb18-8" aria-hidden="true"></a><span class="co"># calculate the mean and standard deviation manually</span></span>
-<span id="cb18-9"><a href="section-1-overview.html#cb18-9" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">sum</span>(x)<span class="op">/</span><span class="kw">length</span>(x)</span>
-<span id="cb18-10"><a href="section-1-overview.html#cb18-10" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>((x <span class="op">-</span><span class="st"> </span>average)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="kw">length</span>(x))</span>
-<span id="cb18-11"><a href="section-1-overview.html#cb18-11" aria-hidden="true"></a></span>
-<span id="cb18-12"><a href="section-1-overview.html#cb18-12" aria-hidden="true"></a><span class="co"># built-in mean and sd functions - note that the audio and printed values disagree</span></span>
-<span id="cb18-13"><a href="section-1-overview.html#cb18-13" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb18-14"><a href="section-1-overview.html#cb18-14" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb18-15"><a href="section-1-overview.html#cb18-15" aria-hidden="true"></a><span class="kw">c</span>(<span class="dt">average =</span> average, <span class="dt">SD =</span> SD)</span></code></pre></div>
-<pre><code>## average      SD 
-##   69.31    3.61</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="section-1-overview.html#cb20-1" aria-hidden="true"></a><span class="co"># calculate standard units</span></span>
-<span id="cb20-2"><a href="section-1-overview.html#cb20-2" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
-<span id="cb20-3"><a href="section-1-overview.html#cb20-3" aria-hidden="true"></a></span>
-<span id="cb20-4"><a href="section-1-overview.html#cb20-4" aria-hidden="true"></a><span class="co"># calculate proportion of values within 2 SD of mean</span></span>
-<span id="cb20-5"><a href="section-1-overview.html#cb20-5" aria-hidden="true"></a><span class="kw">mean</span>(<span class="kw">abs</span>(z) <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## [1] 0.95</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="section-1-overview.html#cb20-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidyverse)) <span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: tidyverse</code></pre>
+<pre><code>## ── Attaching packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
+<pre><code>## ✓ ggplot2 3.3.2     ✓ purrr   0.3.4
+## ✓ tibble  3.0.3     ✓ dplyr   1.0.2
+## ✓ tidyr   1.1.2     ✓ stringr 1.4.0
+## ✓ readr   1.3.1     ✓ forcats 0.5.0</code></pre>
+<pre><code>## ── Conflicts ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="section-1-overview.html#cb25-1" aria-hidden="true"></a><span class="co"># define x as vector of male heights</span></span>
+<span id="cb25-2"><a href="section-1-overview.html#cb25-2" aria-hidden="true"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb25-3"><a href="section-1-overview.html#cb25-3" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
+<span id="cb25-4"><a href="section-1-overview.html#cb25-4" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
+<span id="cb25-5"><a href="section-1-overview.html#cb25-5" aria-hidden="true"></a></span>
+<span id="cb25-6"><a href="section-1-overview.html#cb25-6" aria-hidden="true"></a><span class="co"># calculate the mean and standard deviation manually</span></span>
+<span id="cb25-7"><a href="section-1-overview.html#cb25-7" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">sum</span>(x)<span class="op">/</span><span class="kw">length</span>(x)</span>
+<span id="cb25-8"><a href="section-1-overview.html#cb25-8" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">sum</span>((x <span class="op">-</span><span class="st"> </span>average)<span class="op">^</span><span class="dv">2</span>)<span class="op">/</span><span class="kw">length</span>(x))</span>
+<span id="cb25-9"><a href="section-1-overview.html#cb25-9" aria-hidden="true"></a></span>
+<span id="cb25-10"><a href="section-1-overview.html#cb25-10" aria-hidden="true"></a><span class="co"># built-in mean and sd functions - note that the audio and printed values disagree</span></span>
+<span id="cb25-11"><a href="section-1-overview.html#cb25-11" aria-hidden="true"></a>average &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb25-12"><a href="section-1-overview.html#cb25-12" aria-hidden="true"></a>SD &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb25-13"><a href="section-1-overview.html#cb25-13" aria-hidden="true"></a><span class="kw">c</span>(<span class="dt">average =</span> average, <span class="dt">SD =</span> SD)</span></code></pre></div>
+<pre><code>##   average        SD 
+## 69.314755  3.611024</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="section-1-overview.html#cb27-1" aria-hidden="true"></a><span class="co"># calculate standard units</span></span>
+<span id="cb27-2"><a href="section-1-overview.html#cb27-2" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
+<span id="cb27-3"><a href="section-1-overview.html#cb27-3" aria-hidden="true"></a></span>
+<span id="cb27-4"><a href="section-1-overview.html#cb27-4" aria-hidden="true"></a><span class="co"># calculate proportion of values within 2 SD of mean</span></span>
+<span id="cb27-5"><a href="section-1-overview.html#cb27-5" aria-hidden="true"></a><span class="kw">mean</span>(<span class="kw">abs</span>(z) <span class="op">&lt;</span><span class="st"> </span><span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.9495074</code></pre>
 <p><strong>Note about the sd function:</strong> The built-in R function <code>sd</code> calculates the standard deviation, but it divides by <code>length(x)-1</code> instead of <code>length(x)</code>. When the length of the list is large, this difference is negligible and you can use the built-in <code>sd</code> function. Otherwise, you should compute <span class="math inline">\(\sigma\)</span> by hand. For this course series, assume that you should use the <code>sd</code> function unless you are told not to do so.</p>
 </div>
 <div id="assessment---normal-distribution" class="section level2" number="2.9">
@@ -636,87 +644,87 @@ D. They are the same dataset, but the first is not in the log scale, the second 
 <p>Here we focus on how the normal distribution helps us summarize data and can be useful in practice.</p>
 <p>One way the normal distribution is useful is that it can be used to approximate the distribution of a list of numbers without having access to the entire list. We will demonstrate this with the heights dataset.</p>
 <p>Load the height data set and create a vector <code>x</code> with just the male heights:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="section-1-overview.html#cb22-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb22-2"><a href="section-1-overview.html#cb22-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb22-3"><a href="section-1-overview.html#cb22-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="section-1-overview.html#cb29-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb29-2"><a href="section-1-overview.html#cb29-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb29-3"><a href="section-1-overview.html#cb29-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span></code></pre></div>
 <p>What proportion of the data is between 69 and 72 inches (taller than 69 but shorter or equal to 72)? A proportion is between 0 and 1.</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="section-1-overview.html#cb23-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
-<span id="cb23-2"><a href="section-1-overview.html#cb23-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">69</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">72</span>)</span></code></pre></div>
-<pre><code>## [1] 0.334</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="section-1-overview.html#cb30-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
+<span id="cb30-2"><a href="section-1-overview.html#cb30-2" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">69</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">72</span>)</span></code></pre></div>
+<pre><code>## [1] 0.3337438</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Suppose all you know about the height data from the previous exercise is the average and the standard deviation and that its distribution is approximated by the normal distribution.</li>
 </ol>
 <p>We can compute the average and standard deviation like this:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="section-1-overview.html#cb25-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb25-2"><a href="section-1-overview.html#cb25-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb25-3"><a href="section-1-overview.html#cb25-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
-<span id="cb25-4"><a href="section-1-overview.html#cb25-4" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb25-5"><a href="section-1-overview.html#cb25-5" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="section-1-overview.html#cb32-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb32-2"><a href="section-1-overview.html#cb32-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb32-3"><a href="section-1-overview.html#cb32-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb32-4"><a href="section-1-overview.html#cb32-4" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb32-5"><a href="section-1-overview.html#cb32-5" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
 <p>Suppose you only have <code>avg</code> and <code>stdev</code> below, but no access to <code>x</code>, can you approximate the proportion of the data that is between 69 and 72 inches?</p>
 <p>Given a normal distribution with a mean <code>mu</code> and standard deviation <code>sigma</code>, you can calculate the proportion of observations less than or equal to a certain <code>value</code> with <code>pnorm(value, mu, sigma)</code>. Notice that this is the CDF for the normal distribution. We will learn much more about <code>pnorm</code> later in the course series, but you can also learn more now with <code>?pnorm</code>.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="section-1-overview.html#cb26-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
-<span id="cb26-2"><a href="section-1-overview.html#cb26-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb26-3"><a href="section-1-overview.html#cb26-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb26-4"><a href="section-1-overview.html#cb26-4" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">72</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">69</span>, avg, stdev)</span></code></pre></div>
-<pre><code>## [1] 0.306</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="section-1-overview.html#cb33-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb33-2"><a href="section-1-overview.html#cb33-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb33-3"><a href="section-1-overview.html#cb33-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb33-4"><a href="section-1-overview.html#cb33-4" aria-hidden="true"></a><span class="kw">pnorm</span>(<span class="dv">72</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">69</span>, avg, stdev)</span></code></pre></div>
+<pre><code>## [1] 0.3061779</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Notice that the approximation calculated in the second question is very close to the exact calculation in the first question.</li>
 </ol>
 <p>The normal distribution was a useful approximation for this case. However, the approximation is not always useful. An example is for the more extreme values, often called the “tails” of the distribution. Let’s look at an example. We can compute the proportion of heights between 79 and 81.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="section-1-overview.html#cb28-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)  </span>
-<span id="cb28-2"><a href="section-1-overview.html#cb28-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb28-3"><a href="section-1-overview.html#cb28-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]  </span>
-<span id="cb28-4"><a href="section-1-overview.html#cb28-4" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)  </span></code></pre></div>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="section-1-overview.html#cb29-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
-<span id="cb29-2"><a href="section-1-overview.html#cb29-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb29-3"><a href="section-1-overview.html#cb29-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
-<span id="cb29-4"><a href="section-1-overview.html#cb29-4" aria-hidden="true"></a>exact &lt;-<span class="st"> </span><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)</span>
-<span id="cb29-5"><a href="section-1-overview.html#cb29-5" aria-hidden="true"></a>approx &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">81</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">79</span>, avg, stdev)</span>
-<span id="cb29-6"><a href="section-1-overview.html#cb29-6" aria-hidden="true"></a>exact</span></code></pre></div>
-<pre><code>## [1] 0.00493</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="section-1-overview.html#cb31-1" aria-hidden="true"></a>approx</span></code></pre></div>
-<pre><code>## [1] 0.00305</code></pre>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="section-1-overview.html#cb33-1" aria-hidden="true"></a>exact<span class="op">/</span>approx</span></code></pre></div>
-<pre><code>## [1] 1.61</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="section-1-overview.html#cb35-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)  </span>
+<span id="cb35-2"><a href="section-1-overview.html#cb35-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb35-3"><a href="section-1-overview.html#cb35-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]  </span>
+<span id="cb35-4"><a href="section-1-overview.html#cb35-4" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)  </span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="section-1-overview.html#cb36-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex <span class="op">==</span><span class="st"> &quot;Male&quot;</span>]</span>
+<span id="cb36-2"><a href="section-1-overview.html#cb36-2" aria-hidden="true"></a>avg &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb36-3"><a href="section-1-overview.html#cb36-3" aria-hidden="true"></a>stdev &lt;-<span class="st"> </span><span class="kw">sd</span>(x)</span>
+<span id="cb36-4"><a href="section-1-overview.html#cb36-4" aria-hidden="true"></a>exact &lt;-<span class="st"> </span><span class="kw">mean</span>(x <span class="op">&gt;</span><span class="st"> </span><span class="dv">79</span> <span class="op">&amp;</span><span class="st"> </span>x <span class="op">&lt;=</span><span class="st"> </span><span class="dv">81</span>)</span>
+<span id="cb36-5"><a href="section-1-overview.html#cb36-5" aria-hidden="true"></a>approx &lt;-<span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">81</span>, avg, stdev) <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">79</span>, avg, stdev)</span>
+<span id="cb36-6"><a href="section-1-overview.html#cb36-6" aria-hidden="true"></a>exact</span></code></pre></div>
+<pre><code>## [1] 0.004926108</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="section-1-overview.html#cb38-1" aria-hidden="true"></a>approx</span></code></pre></div>
+<pre><code>## [1] 0.003051617</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="section-1-overview.html#cb40-1" aria-hidden="true"></a>exact<span class="op">/</span>approx</span></code></pre></div>
+<pre><code>## [1] 1.614261</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>Someone asks you what percent of seven footers are in the National Basketball Association (NBA). Can you provide an estimate? Let’s try using the normal approximation to answer this question.</li>
 </ol>
 <p>First, we will estimate the proportion of adult men that are 7 feet tall or taller.</p>
 <p>Assume that the distribution of adult men in the world as normally distributed with an average of 69 inches and a standard deviation of 3 inches.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="section-1-overview.html#cb35-1" aria-hidden="true"></a><span class="co"># use pnorm to calculate the proportion over 7 feet (7*12 inches)</span></span>
-<span id="cb35-2"><a href="section-1-overview.html#cb35-2" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>## [1] 2.87e-07</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="section-1-overview.html#cb42-1" aria-hidden="true"></a><span class="co"># use pnorm to calculate the proportion over 7 feet (7*12 inches)</span></span>
+<span id="cb42-2"><a href="section-1-overview.html#cb42-2" aria-hidden="true"></a><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] 2.866516e-07</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Now we have an approximation for the proportion, call it <code>p</code>, of men that are 7 feet tall or taller.</li>
 </ol>
 <p>We know that there are about 1 billion men between the ages of 18 and 40 in the world, the age range for the NBA.</p>
 <p>Can we use the normal distribution to estimate how many of these 1 billion men are at least seven feet tall?</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="section-1-overview.html#cb37-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
-<span id="cb37-2"><a href="section-1-overview.html#cb37-2" aria-hidden="true"></a><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="section-1-overview.html#cb44-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb44-2"><a href="section-1-overview.html#cb44-2" aria-hidden="true"></a><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span></code></pre></div>
 <pre><code>## [1] 287</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>There are about 10 National Basketball Association (NBA) players that are 7 feet tall or higher.</li>
 </ol>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="section-1-overview.html#cb39-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
-<span id="cb39-2"><a href="section-1-overview.html#cb39-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
-<span id="cb39-3"><a href="section-1-overview.html#cb39-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
-<pre><code>## [1] 0.0348</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="section-1-overview.html#cb46-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb46-2"><a href="section-1-overview.html#cb46-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p<span class="op">*</span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb46-3"><a href="section-1-overview.html#cb46-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.03484321</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>In the previous exerceise we estimated the proportion of seven footers in the NBA using this simple code:</li>
 </ol>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="section-1-overview.html#cb41-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)  </span>
-<span id="cb41-2"><a href="section-1-overview.html#cb41-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)  </span>
-<span id="cb41-3"><a href="section-1-overview.html#cb41-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N  </span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="section-1-overview.html#cb48-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)  </span>
+<span id="cb48-2"><a href="section-1-overview.html#cb48-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)  </span>
+<span id="cb48-3"><a href="section-1-overview.html#cb48-3" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N  </span></code></pre></div>
 <p>Repeat the calculations performed in the previous question for Lebron James’ height: 6 feet 8 inches. There are about 150 players, instead of 10, that are at least that tall in the NBA.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="section-1-overview.html#cb42-1" aria-hidden="true"></a><span class="co">## Change the solution to previous answer</span></span>
-<span id="cb42-2"><a href="section-1-overview.html#cb42-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
-<span id="cb42-3"><a href="section-1-overview.html#cb42-3" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
-<span id="cb42-4"><a href="section-1-overview.html#cb42-4" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
-<pre><code>## [1] 0.0348</code></pre>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="section-1-overview.html#cb44-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">6</span><span class="op">*</span><span class="dv">12</span><span class="op">+</span><span class="dv">8</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
-<span id="cb44-2"><a href="section-1-overview.html#cb44-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
-<span id="cb44-3"><a href="section-1-overview.html#cb44-3" aria-hidden="true"></a><span class="dv">150</span><span class="op">/</span>N</span></code></pre></div>
-<pre><code>## [1] 0.00122</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="section-1-overview.html#cb49-1" aria-hidden="true"></a><span class="co">## Change the solution to previous answer</span></span>
+<span id="cb49-2"><a href="section-1-overview.html#cb49-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">7</span><span class="op">*</span><span class="dv">12</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb49-3"><a href="section-1-overview.html#cb49-3" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb49-4"><a href="section-1-overview.html#cb49-4" aria-hidden="true"></a><span class="dv">10</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.03484321</code></pre>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="section-1-overview.html#cb51-1" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">pnorm</span>(<span class="dv">6</span><span class="op">*</span><span class="dv">12</span><span class="op">+</span><span class="dv">8</span>, <span class="dv">69</span>, <span class="dv">3</span>)</span>
+<span id="cb51-2"><a href="section-1-overview.html#cb51-2" aria-hidden="true"></a>N &lt;-<span class="st"> </span><span class="kw">round</span>(p <span class="op">*</span><span class="st"> </span><span class="dv">10</span><span class="op">^</span><span class="dv">9</span>)</span>
+<span id="cb51-3"><a href="section-1-overview.html#cb51-3" aria-hidden="true"></a><span class="dv">150</span><span class="op">/</span>N</span></code></pre></div>
+<pre><code>## [1] 0.001220842</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li>In answering the previous questions, we found that it is not at all rare for a seven footer to become an NBA player.</li>
 </ol>
@@ -734,7 +742,7 @@ D. As seen in exercise 3, the normal approximation tends to overestimate the ext
 </div>
 <div id="quantile-quantile-plots" class="section level2" number="2.10">
 <h2><span class="header-section-number">2.10</span> Quantile-Quantile Plots</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#quantile-quantile-plots">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#quantile-quantile-plots" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Quantile-quantile plots, or QQ-plots, are used to check whether distributions are well-approximated by a normal distribution.</li>
@@ -745,33 +753,33 @@ D. As seen in exercise 3, the normal approximation tends to overestimate the ext
 <li>Note that we will learn alternate ways to make QQ-plots with less code later in the series.</li>
 </ul>
 <p><em>Code</em></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="section-1-overview.html#cb46-1" aria-hidden="true"></a><span class="co"># define x and z</span></span>
-<span id="cb46-2"><a href="section-1-overview.html#cb46-2" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
-<span id="cb46-3"><a href="section-1-overview.html#cb46-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
-<span id="cb46-4"><a href="section-1-overview.html#cb46-4" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
-<span id="cb46-5"><a href="section-1-overview.html#cb46-5" aria-hidden="true"></a></span>
-<span id="cb46-6"><a href="section-1-overview.html#cb46-6" aria-hidden="true"></a><span class="co"># proportion of data below 69.5</span></span>
-<span id="cb46-7"><a href="section-1-overview.html#cb46-7" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span></code></pre></div>
-<pre><code>## [1] 0.515</code></pre>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="section-1-overview.html#cb48-1" aria-hidden="true"></a><span class="co"># calculate observed and theoretical quantiles</span></span>
-<span id="cb48-2"><a href="section-1-overview.html#cb48-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.05</span>)</span>
-<span id="cb48-3"><a href="section-1-overview.html#cb48-3" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, p)</span>
-<span id="cb48-4"><a href="section-1-overview.html#cb48-4" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="dt">mean =</span> <span class="kw">mean</span>(x), <span class="dt">sd =</span> <span class="kw">sd</span>(x))</span>
-<span id="cb48-5"><a href="section-1-overview.html#cb48-5" aria-hidden="true"></a></span>
-<span id="cb48-6"><a href="section-1-overview.html#cb48-6" aria-hidden="true"></a><span class="co"># make QQ-plot</span></span>
-<span id="cb48-7"><a href="section-1-overview.html#cb48-7" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
-<span id="cb48-8"><a href="section-1-overview.html#cb48-8" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
-<p><img src="https://1965Eric.github.io/Visualization/img/figures/unnamed-chunk-24-1.png" width="672" /></p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="section-1-overview.html#cb49-1" aria-hidden="true"></a><span class="co"># make QQ-plot with scaled values</span></span>
-<span id="cb49-2"><a href="section-1-overview.html#cb49-2" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(z, p)</span>
-<span id="cb49-3"><a href="section-1-overview.html#cb49-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p) </span>
-<span id="cb49-4"><a href="section-1-overview.html#cb49-4" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
-<span id="cb49-5"><a href="section-1-overview.html#cb49-5" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
-<p><img src="https://1965Eric.github.io/Visualization/img/figures/unnamed-chunk-24-2.png" width="672" /></p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="section-1-overview.html#cb53-1" aria-hidden="true"></a><span class="co"># define x and z</span></span>
+<span id="cb53-2"><a href="section-1-overview.html#cb53-2" aria-hidden="true"></a>index &lt;-<span class="st"> </span>heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span></span>
+<span id="cb53-3"><a href="section-1-overview.html#cb53-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>heights<span class="op">$</span>height[index]</span>
+<span id="cb53-4"><a href="section-1-overview.html#cb53-4" aria-hidden="true"></a>z &lt;-<span class="st"> </span><span class="kw">scale</span>(x)</span>
+<span id="cb53-5"><a href="section-1-overview.html#cb53-5" aria-hidden="true"></a></span>
+<span id="cb53-6"><a href="section-1-overview.html#cb53-6" aria-hidden="true"></a><span class="co"># proportion of data below 69.5</span></span>
+<span id="cb53-7"><a href="section-1-overview.html#cb53-7" aria-hidden="true"></a><span class="kw">mean</span>(x <span class="op">&lt;=</span><span class="st"> </span><span class="fl">69.5</span>)</span></code></pre></div>
+<pre><code>## [1] 0.5147783</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="section-1-overview.html#cb55-1" aria-hidden="true"></a><span class="co"># calculate observed and theoretical quantiles</span></span>
+<span id="cb55-2"><a href="section-1-overview.html#cb55-2" aria-hidden="true"></a>p &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="fl">0.05</span>, <span class="fl">0.95</span>, <span class="fl">0.05</span>)</span>
+<span id="cb55-3"><a href="section-1-overview.html#cb55-3" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, p)</span>
+<span id="cb55-4"><a href="section-1-overview.html#cb55-4" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p, <span class="dt">mean =</span> <span class="kw">mean</span>(x), <span class="dt">sd =</span> <span class="kw">sd</span>(x))</span>
+<span id="cb55-5"><a href="section-1-overview.html#cb55-5" aria-hidden="true"></a></span>
+<span id="cb55-6"><a href="section-1-overview.html#cb55-6" aria-hidden="true"></a><span class="co"># make QQ-plot</span></span>
+<span id="cb55-7"><a href="section-1-overview.html#cb55-7" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
+<span id="cb55-8"><a href="section-1-overview.html#cb55-8" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="section-1-overview.html#cb56-1" aria-hidden="true"></a><span class="co"># make QQ-plot with scaled values</span></span>
+<span id="cb56-2"><a href="section-1-overview.html#cb56-2" aria-hidden="true"></a>observed_quantiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(z, p)</span>
+<span id="cb56-3"><a href="section-1-overview.html#cb56-3" aria-hidden="true"></a>theoretical_quantiles &lt;-<span class="st"> </span><span class="kw">qnorm</span>(p) </span>
+<span id="cb56-4"><a href="section-1-overview.html#cb56-4" aria-hidden="true"></a><span class="kw">plot</span>(theoretical_quantiles, observed_quantiles)</span>
+<span id="cb56-5"><a href="section-1-overview.html#cb56-5" aria-hidden="true"></a><span class="kw">abline</span>(<span class="dv">0</span>,<span class="dv">1</span>)</span></code></pre></div>
+<p><img src="img/figures/unnamed-chunk-24-2.png" width="672" /></p>
 </div>
 <div id="percentiles" class="section level2" number="2.11">
 <h2><span class="header-section-number">2.11</span> Percentiles</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#percentiles">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#percentiles" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li><em>Percentiles</em> are the quantiles obtained when defining <em>p</em> as <code>0.01,0.02,...,0.99</code>. They summarize the values at which a certain percent of the observations are equal to or less than that value.</li>
@@ -781,7 +789,7 @@ D. As seen in exercise 3, the normal approximation tends to overestimate the ext
 </div>
 <div id="boxplots" class="section level2" number="2.12">
 <h2><span class="header-section-number">2.12</span> Boxplots</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#boxplots">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#boxplots" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>When data do not follow a normal distribution and cannot be succinctly summarized by only the mean and standard deviation, an alternative is to report a five-number summary: range (ignoring outliers) and the quartiles (25th, 50th, 75th percentile).</li>
@@ -796,30 +804,30 @@ D. As seen in exercise 3, the normal approximation tends to overestimate the ext
 <ol style="list-style-type: decimal">
 <li>When analyzing data it’s often important to know the number of measurements you have for each category.</li>
 </ol>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="section-1-overview.html#cb50-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
-<span id="cb50-2"><a href="section-1-overview.html#cb50-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
-<span id="cb50-3"><a href="section-1-overview.html#cb50-3" aria-hidden="true"></a><span class="kw">length</span>(male)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="section-1-overview.html#cb57-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb57-2"><a href="section-1-overview.html#cb57-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
+<span id="cb57-3"><a href="section-1-overview.html#cb57-3" aria-hidden="true"></a><span class="kw">length</span>(male)</span></code></pre></div>
 <pre><code>## [1] 812</code></pre>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="section-1-overview.html#cb52-1" aria-hidden="true"></a><span class="kw">length</span>(female)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="section-1-overview.html#cb59-1" aria-hidden="true"></a><span class="kw">length</span>(female)</span></code></pre></div>
 <pre><code>## [1] 238</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Suppose we can’t make a plot and want to compare the distributions side by side. If the number of data points is large, listing all the numbers is inpractical. A more practical approach is to look at the percentiles. We can obtain percentiles using the <code>quantile</code> function like this</li>
 </ol>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="section-1-overview.html#cb54-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
-<span id="cb54-2"><a href="section-1-overview.html#cb54-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
-<span id="cb54-3"><a href="section-1-overview.html#cb54-3" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">seq</span>(.<span class="dv">01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>))</span></code></pre></div>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="section-1-overview.html#cb55-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
-<span id="cb55-2"><a href="section-1-overview.html#cb55-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
-<span id="cb55-3"><a href="section-1-overview.html#cb55-3" aria-hidden="true"></a>female_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(female, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
-<span id="cb55-4"><a href="section-1-overview.html#cb55-4" aria-hidden="true"></a>male_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(male, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
-<span id="cb55-5"><a href="section-1-overview.html#cb55-5" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">female =</span> (female_percentiles), <span class="dt">male =</span> (male_percentiles))</span>
-<span id="cb55-6"><a href="section-1-overview.html#cb55-6" aria-hidden="true"></a>df</span></code></pre></div>
-<pre><code>##     female male
-## 10%   61.0 65.0
-## 30%   63.0 68.0
-## 50%   65.0 69.0
-## 70%   66.5 71.0
-## 90%   69.0 73.2</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="section-1-overview.html#cb61-1" aria-hidden="true"></a><span class="kw">library</span>(dslabs)</span>
+<span id="cb61-2"><a href="section-1-overview.html#cb61-2" aria-hidden="true"></a><span class="kw">data</span>(heights)</span>
+<span id="cb61-3"><a href="section-1-overview.html#cb61-3" aria-hidden="true"></a><span class="kw">quantile</span>(heights<span class="op">$</span>height, <span class="kw">seq</span>(.<span class="dv">01</span>, <span class="fl">0.99</span>, <span class="fl">0.01</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="section-1-overview.html#cb62-1" aria-hidden="true"></a>male &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Male&quot;</span>]</span>
+<span id="cb62-2"><a href="section-1-overview.html#cb62-2" aria-hidden="true"></a>female &lt;-<span class="st"> </span>heights<span class="op">$</span>height[heights<span class="op">$</span>sex<span class="op">==</span><span class="st">&quot;Female&quot;</span>]</span>
+<span id="cb62-3"><a href="section-1-overview.html#cb62-3" aria-hidden="true"></a>female_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(female, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
+<span id="cb62-4"><a href="section-1-overview.html#cb62-4" aria-hidden="true"></a>male_percentiles &lt;-<span class="st"> </span><span class="kw">quantile</span>(male, <span class="kw">seq</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>, <span class="fl">0.2</span>))</span>
+<span id="cb62-5"><a href="section-1-overview.html#cb62-5" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">female =</span> (female_percentiles), <span class="dt">male =</span> (male_percentiles))</span>
+<span id="cb62-6"><a href="section-1-overview.html#cb62-6" aria-hidden="true"></a>df</span></code></pre></div>
+<pre><code>##       female     male
+## 10% 61.00000 65.00000
+## 30% 63.00000 68.00000
+## 50% 64.98031 69.00000
+## 70% 66.46417 71.00000
+## 90% 69.00000 73.22751</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Study the boxplots summarizing the distributions of populations sizes by country.</li>
 </ol>
@@ -903,7 +911,7 @@ E. Oceania</li>
 </div>
 <div id="distribution-of-female-heights" class="section level2" number="2.14">
 <h2><span class="header-section-number">2.14</span> Distribution of Female Heights</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#student-height-cont">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/distributions.html#student-height-cont" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>If a distribution is not normal, it cannot be summarized with only the mean and standard deviation. Provide a histogram, smooth density or boxplot instead.</li>
@@ -915,70 +923,70 @@ E. Oceania</li>
 <ol style="list-style-type: decimal">
 <li>For this chapter, we will use height data collected by Francis Galton for his genetics studies. Here we just use height of the children in the dataset:</li>
 </ol>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="section-1-overview.html#cb57-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
-<span id="cb57-2"><a href="section-1-overview.html#cb57-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
-<span id="cb57-3"><a href="section-1-overview.html#cb57-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span></code></pre></div>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="section-1-overview.html#cb58-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(HistData)) <span class="kw">install.packages</span>(<span class="st">&quot;HistData&quot;</span>)</span>
-<span id="cb58-2"><a href="section-1-overview.html#cb58-2" aria-hidden="true"></a></span>
-<span id="cb58-3"><a href="section-1-overview.html#cb58-3" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
-<span id="cb58-4"><a href="section-1-overview.html#cb58-4" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
-<span id="cb58-5"><a href="section-1-overview.html#cb58-5" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
-<span id="cb58-6"><a href="section-1-overview.html#cb58-6" aria-hidden="true"></a><span class="kw">mean</span>(x)</span></code></pre></div>
-<pre><code>## [1] 68.1</code></pre>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="section-1-overview.html#cb60-1" aria-hidden="true"></a><span class="kw">median</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="section-1-overview.html#cb64-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb64-2"><a href="section-1-overview.html#cb64-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb64-3"><a href="section-1-overview.html#cb64-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="section-1-overview.html#cb65-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(HistData)) <span class="kw">install.packages</span>(<span class="st">&quot;HistData&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: HistData</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="section-1-overview.html#cb67-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb67-2"><a href="section-1-overview.html#cb67-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb67-3"><a href="section-1-overview.html#cb67-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb67-4"><a href="section-1-overview.html#cb67-4" aria-hidden="true"></a><span class="kw">mean</span>(x)</span></code></pre></div>
+<pre><code>## [1] 68.08847</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="section-1-overview.html#cb69-1" aria-hidden="true"></a><span class="kw">median</span>(x)</span></code></pre></div>
 <pre><code>## [1] 68.2</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li>Now for the same data compute the standard deviation and the median absolute deviation (MAD).</li>
 </ol>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="section-1-overview.html#cb62-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
-<span id="cb62-2"><a href="section-1-overview.html#cb62-2" aria-hidden="true"></a><span class="kw">sd</span>(x)</span></code></pre></div>
-<pre><code>## [1] 2.52</code></pre>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="section-1-overview.html#cb64-1" aria-hidden="true"></a><span class="kw">mad</span>(x)</span></code></pre></div>
-<pre><code>## [1] 2.97</code></pre>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="section-1-overview.html#cb71-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb71-2"><a href="section-1-overview.html#cb71-2" aria-hidden="true"></a><span class="kw">sd</span>(x)</span></code></pre></div>
+<pre><code>## [1] 2.517941</code></pre>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="section-1-overview.html#cb73-1" aria-hidden="true"></a><span class="kw">mad</span>(x)</span></code></pre></div>
+<pre><code>## [1] 2.9652</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>In the previous exercises we saw that the mean and median are very similar and so are the standard deviation and MAD. This is expected since the data is approximated by a normal distribution which has this property.</li>
 </ol>
 <p>Now suppose that suppose Galton made a mistake when entering the first value, forgetting to use the decimal point. You can imitate this error by typing:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="section-1-overview.html#cb66-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
-<span id="cb66-2"><a href="section-1-overview.html#cb66-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
-<span id="cb66-3"><a href="section-1-overview.html#cb66-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
-<span id="cb66-4"><a href="section-1-overview.html#cb66-4" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
-<span id="cb66-5"><a href="section-1-overview.html#cb66-5" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="section-1-overview.html#cb75-1" aria-hidden="true"></a><span class="kw">library</span>(HistData)</span>
+<span id="cb75-2"><a href="section-1-overview.html#cb75-2" aria-hidden="true"></a><span class="kw">data</span>(Galton)</span>
+<span id="cb75-3"><a href="section-1-overview.html#cb75-3" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb75-4"><a href="section-1-overview.html#cb75-4" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb75-5"><a href="section-1-overview.html#cb75-5" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span></code></pre></div>
 <p>The data now has an outlier that the normal approximation does not account for. Let’s see how this affects the average.</p>
-<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="section-1-overview.html#cb67-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
-<span id="cb67-2"><a href="section-1-overview.html#cb67-2" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
-<span id="cb67-3"><a href="section-1-overview.html#cb67-3" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
-<span id="cb67-4"><a href="section-1-overview.html#cb67-4" aria-hidden="true"></a>gem &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
-<span id="cb67-5"><a href="section-1-overview.html#cb67-5" aria-hidden="true"></a>gem_error &lt;-<span class="st"> </span><span class="kw">mean</span>(x_with_error)</span>
-<span id="cb67-6"><a href="section-1-overview.html#cb67-6" aria-hidden="true"></a>gem_error <span class="op">-</span><span class="st"> </span>gem</span></code></pre></div>
-<pre><code>## [1] 0.598</code></pre>
+<div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="section-1-overview.html#cb76-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb76-2"><a href="section-1-overview.html#cb76-2" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb76-3"><a href="section-1-overview.html#cb76-3" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb76-4"><a href="section-1-overview.html#cb76-4" aria-hidden="true"></a>gem &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</span>
+<span id="cb76-5"><a href="section-1-overview.html#cb76-5" aria-hidden="true"></a>gem_error &lt;-<span class="st"> </span><span class="kw">mean</span>(x_with_error)</span>
+<span id="cb76-6"><a href="section-1-overview.html#cb76-6" aria-hidden="true"></a>gem_error <span class="op">-</span><span class="st"> </span>gem</span></code></pre></div>
+<pre><code>## [1] 0.5983836</code></pre>
 <ol start="4" style="list-style-type: decimal">
 <li>In the previous exercise we saw how a simple mistake in 1 out of over 900 observations can result in the average of our data increasing more than half an inch, which is a large difference in practical terms.</li>
 </ol>
 <p>Now let’s explore the effect this outlier has on the standard deviation.</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="section-1-overview.html#cb69-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
-<span id="cb69-2"><a href="section-1-overview.html#cb69-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
-<span id="cb69-3"><a href="section-1-overview.html#cb69-3" aria-hidden="true"></a><span class="kw">sd</span>(x_with_error)<span class="op">-</span><span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
-<pre><code>## [1] 15.7</code></pre>
+<div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb78-1"><a href="section-1-overview.html#cb78-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb78-2"><a href="section-1-overview.html#cb78-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb78-3"><a href="section-1-overview.html#cb78-3" aria-hidden="true"></a><span class="kw">sd</span>(x_with_error)<span class="op">-</span><span class="st"> </span><span class="kw">sd</span>(x)</span></code></pre></div>
+<pre><code>## [1] 15.6746</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>In the previous exercises we saw how one mistake can have a substantial effect on the average and the standard deviation.</li>
 </ol>
 <p>Now we are going to see how the median and MAD are much more resistant to outliers. For this reason we say that they are <em>robust</em> summaries.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="section-1-overview.html#cb71-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
-<span id="cb71-2"><a href="section-1-overview.html#cb71-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
-<span id="cb71-3"><a href="section-1-overview.html#cb71-3" aria-hidden="true"></a>mediaan &lt;-<span class="st"> </span><span class="kw">median</span>(x)</span>
-<span id="cb71-4"><a href="section-1-overview.html#cb71-4" aria-hidden="true"></a>mediaan_error &lt;-<span class="st"> </span><span class="kw">median</span>(x_with_error)</span>
-<span id="cb71-5"><a href="section-1-overview.html#cb71-5" aria-hidden="true"></a>mediaan_error <span class="op">-</span><span class="st"> </span>mediaan</span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb80-1"><a href="section-1-overview.html#cb80-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb80-2"><a href="section-1-overview.html#cb80-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb80-3"><a href="section-1-overview.html#cb80-3" aria-hidden="true"></a>mediaan &lt;-<span class="st"> </span><span class="kw">median</span>(x)</span>
+<span id="cb80-4"><a href="section-1-overview.html#cb80-4" aria-hidden="true"></a>mediaan_error &lt;-<span class="st"> </span><span class="kw">median</span>(x_with_error)</span>
+<span id="cb80-5"><a href="section-1-overview.html#cb80-5" aria-hidden="true"></a>mediaan_error <span class="op">-</span><span class="st"> </span>mediaan</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>We saw that the median barely changes. Now let’s see how the MAD is affected.</li>
 </ol>
 <p>We saw that the median barely changes. Now let’s see how the MAD is affected.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="section-1-overview.html#cb73-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
-<span id="cb73-2"><a href="section-1-overview.html#cb73-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
-<span id="cb73-3"><a href="section-1-overview.html#cb73-3" aria-hidden="true"></a>mad_normal &lt;-<span class="st"> </span><span class="kw">mad</span>(x)</span>
-<span id="cb73-4"><a href="section-1-overview.html#cb73-4" aria-hidden="true"></a>mad_error &lt;-<span class="st"> </span><span class="kw">mad</span>(x_with_error)</span>
-<span id="cb73-5"><a href="section-1-overview.html#cb73-5" aria-hidden="true"></a>mad_error <span class="op">-</span><span class="st"> </span>mad_normal</span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb82-1"><a href="section-1-overview.html#cb82-1" aria-hidden="true"></a>x_with_error &lt;-<span class="st"> </span>x</span>
+<span id="cb82-2"><a href="section-1-overview.html#cb82-2" aria-hidden="true"></a>x_with_error[<span class="dv">1</span>] &lt;-<span class="st"> </span>x_with_error[<span class="dv">1</span>]<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb82-3"><a href="section-1-overview.html#cb82-3" aria-hidden="true"></a>mad_normal &lt;-<span class="st"> </span><span class="kw">mad</span>(x)</span>
+<span id="cb82-4"><a href="section-1-overview.html#cb82-4" aria-hidden="true"></a>mad_error &lt;-<span class="st"> </span><span class="kw">mad</span>(x_with_error)</span>
+<span id="cb82-5"><a href="section-1-overview.html#cb82-5" aria-hidden="true"></a>mad_error <span class="op">-</span><span class="st"> </span>mad_normal</span></code></pre></div>
 <pre><code>## [1] 0</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>How could you use exploratory data analysis to detect that an error was made?</li>
@@ -998,15 +1006,15 @@ D. A scatter plot would show high levels of measurement error.</li>
 </ol>
 <p>But how large can this effect get? This of course depends on the size of the outlier and the size of the dataset.</p>
 <p>To see how outliers can affect the average of a dataset, let’s write a simple function that takes the size of the outlier as input and returns the average.</p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="section-1-overview.html#cb75-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
-<span id="cb75-2"><a href="section-1-overview.html#cb75-2" aria-hidden="true"></a>error_avg &lt;-<span class="st"> </span><span class="cf">function</span>(k){</span>
-<span id="cb75-3"><a href="section-1-overview.html#cb75-3" aria-hidden="true"></a>x[<span class="dv">1</span>] =<span class="st"> </span>k</span>
-<span id="cb75-4"><a href="section-1-overview.html#cb75-4" aria-hidden="true"></a><span class="kw">mean</span>(x)</span>
-<span id="cb75-5"><a href="section-1-overview.html#cb75-5" aria-hidden="true"></a>}</span>
-<span id="cb75-6"><a href="section-1-overview.html#cb75-6" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="dv">10000</span>)</span></code></pre></div>
-<pre><code>## [1] 78.8</code></pre>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="section-1-overview.html#cb77-1" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="op">-</span><span class="dv">10000</span>)</span></code></pre></div>
-<pre><code>## [1] 57.2</code></pre>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="section-1-overview.html#cb84-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span>Galton<span class="op">$</span>child</span>
+<span id="cb84-2"><a href="section-1-overview.html#cb84-2" aria-hidden="true"></a>error_avg &lt;-<span class="st"> </span><span class="cf">function</span>(k){</span>
+<span id="cb84-3"><a href="section-1-overview.html#cb84-3" aria-hidden="true"></a>x[<span class="dv">1</span>] =<span class="st"> </span>k</span>
+<span id="cb84-4"><a href="section-1-overview.html#cb84-4" aria-hidden="true"></a><span class="kw">mean</span>(x)</span>
+<span id="cb84-5"><a href="section-1-overview.html#cb84-5" aria-hidden="true"></a>}</span>
+<span id="cb84-6"><a href="section-1-overview.html#cb84-6" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## [1] 78.79784</code></pre>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="section-1-overview.html#cb86-1" aria-hidden="true"></a><span class="kw">error_avg</span>(<span class="op">-</span><span class="dv">10000</span>)</span></code></pre></div>
+<pre><code>## [1] 57.24612</code></pre>
 </div>
 </div>
             </section>
