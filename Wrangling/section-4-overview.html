@@ -227,7 +227,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="dates-and-times" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Dates and Times</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/parsing-dates-and-times.html">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/parsing-dates-and-times.html" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Dates are a separate data type in R.The <strong>tidyverse</strong> includes functionality for dealing with dates through the <strong>lubridate</strong> package.</li>
@@ -305,15 +305,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb521"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb521-1"><a href="section-4-overview.html#cb521-1" aria-hidden="true"></a><span class="kw">dym</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;2001-02-09&quot;</code></pre>
 <div class="sourceCode" id="cb523"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb523-1"><a href="section-4-overview.html#cb523-1" aria-hidden="true"></a><span class="kw">now</span>()    <span class="co"># current time in your time zone</span></span></code></pre></div>
-<pre><code>## [1] &quot;2020-08-17 16:29:08 CEST&quot;</code></pre>
+<pre><code>## [1] &quot;2020-09-11 17:38:02 CEST&quot;</code></pre>
 <div class="sourceCode" id="cb525"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb525-1"><a href="section-4-overview.html#cb525-1" aria-hidden="true"></a><span class="kw">now</span>(<span class="st">&quot;GMT&quot;</span>)    <span class="co"># current time in GMT</span></span></code></pre></div>
-<pre><code>## [1] &quot;2020-08-17 14:29:08 GMT&quot;</code></pre>
+<pre><code>## [1] &quot;2020-09-11 15:38:02 GMT&quot;</code></pre>
 <div class="sourceCode" id="cb527"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb527-1"><a href="section-4-overview.html#cb527-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">hour</span>()    <span class="co"># current hour</span></span></code></pre></div>
-<pre><code>## [1] 16</code></pre>
+<pre><code>## [1] 17</code></pre>
 <div class="sourceCode" id="cb529"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb529-1"><a href="section-4-overview.html#cb529-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">minute</span>()    <span class="co"># current minute</span></span></code></pre></div>
-<pre><code>## [1] 29</code></pre>
+<pre><code>## [1] 38</code></pre>
 <div class="sourceCode" id="cb531"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb531-1"><a href="section-4-overview.html#cb531-1" aria-hidden="true"></a><span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">second</span>()    <span class="co"># current second</span></span></code></pre></div>
-<pre><code>## [1] 8.364374</code></pre>
+<pre><code>## [1] 2.700909</code></pre>
 <div class="sourceCode" id="cb533"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb533-1"><a href="section-4-overview.html#cb533-1" aria-hidden="true"></a><span class="co"># parse time</span></span>
 <span id="cb533-2"><a href="section-4-overview.html#cb533-2" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;12:34:56&quot;</span>)</span>
 <span id="cb533-3"><a href="section-4-overview.html#cb533-3" aria-hidden="true"></a><span class="kw">hms</span>(x)</span></code></pre></div>
@@ -325,7 +325,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="text-mining" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Text mining</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/text-mining.html">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/text-mining.html" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The <strong>tidytext</strong> package helps us convert free form text into a tidy table.</li>
@@ -335,7 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>With the exception of labels used to represent categorical data, we have focused on numerical data, but in many applications data starts as text. Well known examples are spam filtering, cyber-crime prevention, counter-terrorism and sentiment analysis.</p>
 <p>In all these examples, the raw data is composed of free form texts. Our task is to extract insights from these data. In this section, we learn how to generate useful numerical summaries from text data to which we can apply some of the powerful data visualization and analysis techniques we have learned.</p>
 <p><strong>Case study: Trump Tweets</strong></p>
-<p>See my <a href="https://github.com/1965Eric/trump-tweets.git">GitHub-repository on Trump Tweets</a></p>
+<p>See my <a href="https://github.com/1965Eric/trump-tweets.git" target="_blank">GitHub-repository on Trump Tweets</a>.</p>
 </div>
 <div id="assessment-part-1---dates-times-and-text-mining" class="section level2" number="5.3">
 <h2><span class="header-section-number">5.3</span> Assessment Part 1 - Dates, Times, and Text Mining</h2>
@@ -428,12 +428,12 @@ G. Sunday</li>
 <p>Use these libraries and options:</p>
 <div class="sourceCode" id="cb553"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb553-1"><a href="section-4-overview.html#cb553-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(gutenbergr)) <span class="kw">install.packages</span>(<span class="st">&quot;gutenbergr&quot;</span>)</span></code></pre></div>
 <pre><code>## Loading required package: gutenbergr</code></pre>
-<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb555-1"><a href="section-4-overview.html#cb555-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidytext)) <span class="kw">install.packages</span>(<span class="st">&quot;tidytext&quot;</span>)</span>
-<span id="cb555-2"><a href="section-4-overview.html#cb555-2" aria-hidden="true"></a></span>
-<span id="cb555-3"><a href="section-4-overview.html#cb555-3" aria-hidden="true"></a><span class="kw">library</span>(gutenbergr)</span>
-<span id="cb555-4"><a href="section-4-overview.html#cb555-4" aria-hidden="true"></a><span class="kw">library</span>(tidytext)</span></code></pre></div>
+<div class="sourceCode" id="cb555"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb555-1"><a href="section-4-overview.html#cb555-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(tidytext)) <span class="kw">install.packages</span>(<span class="st">&quot;tidytext&quot;</span>)</span></code></pre></div>
+<pre><code>## Loading required package: tidytext</code></pre>
+<div class="sourceCode" id="cb557"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb557-1"><a href="section-4-overview.html#cb557-1" aria-hidden="true"></a><span class="kw">library</span>(gutenbergr)</span>
+<span id="cb557-2"><a href="section-4-overview.html#cb557-2" aria-hidden="true"></a><span class="kw">library</span>(tidytext)</span></code></pre></div>
 <p>You can see the books and documents available in <strong>gutenbergr</strong> like this:</p>
-<div class="sourceCode" id="cb556"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb556-1"><a href="section-4-overview.html#cb556-1" aria-hidden="true"></a>gutenberg_metadata</span></code></pre></div>
+<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="section-4-overview.html#cb558-1" aria-hidden="true"></a>gutenberg_metadata</span></code></pre></div>
 <pre><code>## # A tibble: 51,997 x 8
 ##    gutenberg_id title                                                  author              gutenberg_author_… language gutenberg_bookshelf                     rights         has_text
 ##           &lt;int&gt; &lt;chr&gt;                                                  &lt;chr&gt;                            &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                                   &lt;chr&gt;          &lt;lgl&gt;   
@@ -450,8 +450,8 @@ G. Sunday</li>
 ## # … with 51,987 more rows</code></pre>
 <p>Use <code>str_detect()</code> to find the ID of the novel <em>Pride and Prejudice</em>.</p>
 <p>How many different ID numbers are returned?</p>
-<div class="sourceCode" id="cb558"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb558-1"><a href="section-4-overview.html#cb558-1" aria-hidden="true"></a>gutenberg_metadata <span class="op">%&gt;%</span></span>
-<span id="cb558-2"><a href="section-4-overview.html#cb558-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">str_detect</span>(title, <span class="st">&quot;Pride and Prejudice&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="section-4-overview.html#cb560-1" aria-hidden="true"></a>gutenberg_metadata <span class="op">%&gt;%</span></span>
+<span id="cb560-2"><a href="section-4-overview.html#cb560-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(<span class="kw">str_detect</span>(title, <span class="st">&quot;Pride and Prejudice&quot;</span>))</span></code></pre></div>
 <pre><code>## # A tibble: 6 x 8
 ##   gutenberg_id title                                                 author       gutenberg_author_id language gutenberg_bookshelf                    rights                  has_text
 ##          &lt;int&gt; &lt;chr&gt;                                                 &lt;chr&gt;                      &lt;int&gt; &lt;chr&gt;    &lt;chr&gt;                                  &lt;chr&gt;                   &lt;lgl&gt;   
@@ -466,7 +466,7 @@ G. Sunday</li>
 </ol>
 <p>What is the correct ID number?</p>
 <p>Read the <code>gutenberg_works()</code> documentation to learn how to use the function.</p>
-<div class="sourceCode" id="cb560"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb560-1"><a href="section-4-overview.html#cb560-1" aria-hidden="true"></a><span class="kw">gutenberg_works</span>(title <span class="op">==</span><span class="st"> &quot;Pride and Prejudice&quot;</span>)<span class="op">$</span>gutenberg_id</span></code></pre></div>
+<div class="sourceCode" id="cb562"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb562-1"><a href="section-4-overview.html#cb562-1" aria-hidden="true"></a><span class="kw">gutenberg_works</span>(title <span class="op">==</span><span class="st"> &quot;Pride and Prejudice&quot;</span>)<span class="op">$</span>gutenberg_id</span></code></pre></div>
 <pre><code>## Warning: `filter_()` is deprecated as of dplyr 0.7.0.
 ## Please use `filter()` instead.
 ## See vignette(&#39;programming&#39;) for more help
@@ -482,66 +482,66 @@ G. Sunday</li>
 <li>Use the <code>gutenberg_download()</code> function to download the text for Pride and Prejudice. Use the <strong>tidytext</strong> package to create a tidy table with all the words in the text. Save this object as `<code>words</code>.</li>
 </ol>
 <p>How many words are present in the book?</p>
-<div class="sourceCode" id="cb564"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb564-1"><a href="section-4-overview.html#cb564-1" aria-hidden="true"></a>book &lt;-<span class="st"> </span><span class="kw">gutenberg_download</span>(<span class="dv">1342</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb566"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb566-1"><a href="section-4-overview.html#cb566-1" aria-hidden="true"></a>book &lt;-<span class="st"> </span><span class="kw">gutenberg_download</span>(<span class="dv">1342</span>)</span></code></pre></div>
 <pre><code>## Determining mirror for Project Gutenberg from http://www.gutenberg.org/robot/harvest</code></pre>
 <pre><code>## Using mirror http://aleph.gutenberg.org</code></pre>
-<div class="sourceCode" id="cb567"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb567-1"><a href="section-4-overview.html#cb567-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>book <span class="op">%&gt;%</span></span>
-<span id="cb567-2"><a href="section-4-overview.html#cb567-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">unnest_tokens</span>(word, text)</span>
-<span id="cb567-3"><a href="section-4-overview.html#cb567-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
+<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="section-4-overview.html#cb569-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>book <span class="op">%&gt;%</span></span>
+<span id="cb569-2"><a href="section-4-overview.html#cb569-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">unnest_tokens</span>(word, text)</span>
+<span id="cb569-3"><a href="section-4-overview.html#cb569-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
 <pre><code>## [1] 122204</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Remove stop words from the <code>words</code> object. Recall that stop words are defined in the <code>stop_words</code> data frame from the <strong>tidytext</strong> package.</li>
 </ol>
 <p>How many words remain?</p>
-<div class="sourceCode" id="cb569"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb569-1"><a href="section-4-overview.html#cb569-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">anti_join</span>(stop_words) </span></code></pre></div>
+<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="section-4-overview.html#cb571-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">anti_join</span>(stop_words) </span></code></pre></div>
 <pre><code>## Joining, by = &quot;word&quot;</code></pre>
-<div class="sourceCode" id="cb571"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb571-1"><a href="section-4-overview.html#cb571-1" aria-hidden="true"></a><span class="kw">nrow</span>(words) </span></code></pre></div>
+<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb573-1"><a href="section-4-overview.html#cb573-1" aria-hidden="true"></a><span class="kw">nrow</span>(words) </span></code></pre></div>
 <pre><code>## [1] 37246</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>After removing stop words, detect and then filter out any token that contains a digit from `<code>words</code>.</li>
 </ol>
 <p>How many words remain?</p>
-<div class="sourceCode" id="cb573"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb573-1"><a href="section-4-overview.html#cb573-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span></span>
-<span id="cb573-2"><a href="section-4-overview.html#cb573-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">str_detect</span>(word, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d&quot;</span>))</span>
-<span id="cb573-3"><a href="section-4-overview.html#cb573-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
+<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb575-1"><a href="section-4-overview.html#cb575-1" aria-hidden="true"></a>words &lt;-<span class="st"> </span>words <span class="op">%&gt;%</span></span>
+<span id="cb575-2"><a href="section-4-overview.html#cb575-2" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span><span class="kw">str_detect</span>(word, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d&quot;</span>))</span>
+<span id="cb575-3"><a href="section-4-overview.html#cb575-3" aria-hidden="true"></a><span class="kw">nrow</span>(words)</span></code></pre></div>
 <pre><code>## [1] 37180</code></pre>
 <ol start="11" style="list-style-type: decimal">
 <li>Analyze the most frequent words in the novel after removing stop words and tokens with digits.</li>
 </ol>
 <p>How many words appear more than 100 times in the book?</p>
-<div class="sourceCode" id="cb575"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb575-1"><a href="section-4-overview.html#cb575-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
-<span id="cb575-2"><a href="section-4-overview.html#cb575-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
-<span id="cb575-3"><a href="section-4-overview.html#cb575-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
-<span id="cb575-4"><a href="section-4-overview.html#cb575-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">nrow</span>()</span></code></pre></div>
-<pre><code>## [1] 23</code></pre>
-<p>What is the most common word in the book?</p>
 <div class="sourceCode" id="cb577"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb577-1"><a href="section-4-overview.html#cb577-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
 <span id="cb577-2"><a href="section-4-overview.html#cb577-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
-<span id="cb577-3"><a href="section-4-overview.html#cb577-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">top_n</span>(<span class="dv">1</span>, n) <span class="op">%&gt;%</span></span>
-<span id="cb577-4"><a href="section-4-overview.html#cb577-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(word)</span></code></pre></div>
-<pre><code>## [1] &quot;elizabeth&quot;</code></pre>
-<p>How many times does that most common word appear?</p>
+<span id="cb577-3"><a href="section-4-overview.html#cb577-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">filter</span>(n <span class="op">&gt;</span><span class="st"> </span><span class="dv">100</span>) <span class="op">%&gt;%</span></span>
+<span id="cb577-4"><a href="section-4-overview.html#cb577-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">nrow</span>()</span></code></pre></div>
+<pre><code>## [1] 23</code></pre>
+<p>What is the most common word in the book?</p>
 <div class="sourceCode" id="cb579"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb579-1"><a href="section-4-overview.html#cb579-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
 <span id="cb579-2"><a href="section-4-overview.html#cb579-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
 <span id="cb579-3"><a href="section-4-overview.html#cb579-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">top_n</span>(<span class="dv">1</span>, n) <span class="op">%&gt;%</span></span>
-<span id="cb579-4"><a href="section-4-overview.html#cb579-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(n)</span></code></pre></div>
+<span id="cb579-4"><a href="section-4-overview.html#cb579-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(word)</span></code></pre></div>
+<pre><code>## [1] &quot;elizabeth&quot;</code></pre>
+<p>How many times does that most common word appear?</p>
+<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb581-1"><a href="section-4-overview.html#cb581-1" aria-hidden="true"></a>words <span class="op">%&gt;%</span></span>
+<span id="cb581-2"><a href="section-4-overview.html#cb581-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">count</span>(word) <span class="op">%&gt;%</span></span>
+<span id="cb581-3"><a href="section-4-overview.html#cb581-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">top_n</span>(<span class="dv">1</span>, n) <span class="op">%&gt;%</span></span>
+<span id="cb581-4"><a href="section-4-overview.html#cb581-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">pull</span>(n)</span></code></pre></div>
 <pre><code>## [1] 597</code></pre>
 <ol start="12" style="list-style-type: decimal">
 <li>Define the afinn lexicon.</li>
 </ol>
-<div class="sourceCode" id="cb581"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb581-1"><a href="section-4-overview.html#cb581-1" aria-hidden="true"></a>afinn &lt;-<span class="st"> </span><span class="kw">get_sentiments</span>(<span class="st">&quot;afinn&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb583"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb583-1"><a href="section-4-overview.html#cb583-1" aria-hidden="true"></a>afinn &lt;-<span class="st"> </span><span class="kw">get_sentiments</span>(<span class="st">&quot;afinn&quot;</span>)</span></code></pre></div>
 <p>Note that this command will trigger a question in the R Console asking if you want to download the AFINN lexicon. Press 1 to select “Yes” (if using RStudio, enter this in the Console tab).</p>
 <p>Use this <code>afinn</code> lexicon to assign sentiment values to <code>words</code>. Keep only words that are present in both <code>words</code> and the <code>afinn</code> lexicon. Save this data frame as <code>afinn_sentiments</code>.</p>
 <p>How many elements of words have sentiments in the afinn lexicon?</p>
-<div class="sourceCode" id="cb582"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb582-1"><a href="section-4-overview.html#cb582-1" aria-hidden="true"></a>afinn_sentiments &lt;-<span class="st"> </span><span class="kw">inner_join</span>(afinn, words)</span></code></pre></div>
+<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="section-4-overview.html#cb584-1" aria-hidden="true"></a>afinn_sentiments &lt;-<span class="st"> </span><span class="kw">inner_join</span>(afinn, words)</span></code></pre></div>
 <pre><code>## Joining, by = &quot;word&quot;</code></pre>
-<div class="sourceCode" id="cb584"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb584-1"><a href="section-4-overview.html#cb584-1" aria-hidden="true"></a><span class="kw">nrow</span>(afinn_sentiments)</span></code></pre></div>
+<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="section-4-overview.html#cb586-1" aria-hidden="true"></a><span class="kw">nrow</span>(afinn_sentiments)</span></code></pre></div>
 <pre><code>## [1] 6065</code></pre>
 <p>What proportion of words in afinn_sentiments have a positive value?</p>
-<div class="sourceCode" id="cb586"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb586-1"><a href="section-4-overview.html#cb586-1" aria-hidden="true"></a><span class="kw">mean</span>(afinn_sentiments<span class="op">$</span>value <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="section-4-overview.html#cb588-1" aria-hidden="true"></a><span class="kw">mean</span>(afinn_sentiments<span class="op">$</span>value <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>)</span></code></pre></div>
 <pre><code>## [1] 0.563</code></pre>
 <p>How many elements of afinn_sentiments have a value of 4?</p>
-<div class="sourceCode" id="cb588"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb588-1"><a href="section-4-overview.html#cb588-1" aria-hidden="true"></a><span class="kw">sum</span>(afinn_sentiments<span class="op">$</span>value <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="section-4-overview.html#cb590-1" aria-hidden="true"></a><span class="kw">sum</span>(afinn_sentiments<span class="op">$</span>value <span class="op">==</span><span class="st"> </span><span class="dv">4</span>)</span></code></pre></div>
 <pre><code>## [1] 51</code></pre>
 </div>
 <div id="final-comprehensive-assessment" class="section level2" number="5.5">
@@ -552,20 +552,20 @@ G. Sunday</li>
 <div id="project-introduction" class="section level3" number="5.5.2">
 <h3><span class="header-section-number">5.5.2</span> Project Introduction</h3>
 <p>On September 20, 2017, Hurricane Maria made landfall on Puerto Rico. It was the worst natural disaster on record in Puerto Rico and the deadliest Atlantic hurricane since 2004. However, Puerto Rico’s official death statistics only tallied 64 deaths caused directly by the hurricane (due to structural collapse, debris, floods and drownings), an undercount that slowed disaster recovery funding. The majority of the deaths resulted from infrastructure damage that made it difficult to access resources like clean food, water, power, healthcare and communications in the months after the disaster, and although these deaths were due to effects of the hurricane, they were not initially counted.</p>
-<p>In order to correct the misconception that few lives were lost in Hurricane Maria, statisticians analyzed how death rates in Puerto Rico changed after the hurricane and estimated the excess number of deaths likely caused by the storm. <a href="https://drive.google.com/file/d/16X9qtnPaD--2dPhpcwu7S53esafH59i9/preview">This analysis</a> suggested that the actual number of deaths in Puerto Rico was 2,975 (95% CI: 2,658-3,290) over the 4 months following the hurricane, much higher than the original count.</p>
+<p>In order to correct the misconception that few lives were lost in Hurricane Maria, statisticians analyzed how death rates in Puerto Rico changed after the hurricane and estimated the excess number of deaths likely caused by the storm. <a href="https://drive.google.com/file/d/16X9qtnPaD--2dPhpcwu7S53esafH59i9/preview" target="_blank">This analysis</a> suggested that the actual number of deaths in Puerto Rico was 2,975 (95% CI: 2,658-3,290) over the 4 months following the hurricane, much higher than the original count.</p>
 <p>We will use your new data wrangling skills to extract actual daily mortality data from Puerto Rico and investigate whether the Hurricane Maria had an immediate effect on daily mortality compared to unaffected days in September 2015-2017.</p>
-<div class="sourceCode" id="cb590"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb590-1"><a href="section-4-overview.html#cb590-1" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)    <span class="co"># report 3 significant digits</span></span></code></pre></div>
+<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="section-4-overview.html#cb592-1" aria-hidden="true"></a><span class="kw">options</span>(<span class="dt">digits =</span> <span class="dv">3</span>)    <span class="co"># report 3 significant digits</span></span></code></pre></div>
 </div>
 <div id="puerto-rico-hurricane-mortality---part-1" class="section level3" number="5.5.3">
 <h3><span class="header-section-number">5.5.3</span> Puerto Rico Hurricane Mortality - Part 1</h3>
 <ol style="list-style-type: decimal">
 <li>In the <code>extdata</code> directory of the <strong>dslabs</strong> package, you will find a PDF file containing daily mortality data for Puerto Rico from Jan 1, 2015 to May 31, 2018. You can find the file like this:</li>
 </ol>
-<div class="sourceCode" id="cb591"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb591-1"><a href="section-4-overview.html#cb591-1" aria-hidden="true"></a>fn &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;RD-Mortality-Report_2015-18-180531.pdf&quot;</span>, <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="section-4-overview.html#cb593-1" aria-hidden="true"></a>fn &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;RD-Mortality-Report_2015-18-180531.pdf&quot;</span>, <span class="dt">package=</span><span class="st">&quot;dslabs&quot;</span>)</span></code></pre></div>
 <p>Find and open the file or open it directly from RStudio. On a Mac, you can type:</p>
-<div class="sourceCode" id="cb592"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb592-1"><a href="section-4-overview.html#cb592-1" aria-hidden="true"></a><span class="kw">system2</span>(<span class="st">&quot;open&quot;</span>, <span class="dt">args =</span> fn)</span></code></pre></div>
+<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="section-4-overview.html#cb594-1" aria-hidden="true"></a><span class="kw">system2</span>(<span class="st">&quot;open&quot;</span>, <span class="dt">args =</span> fn)</span></code></pre></div>
 <p>and on Windows, you can type:</p>
-<div class="sourceCode" id="cb593"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb593-1"><a href="section-4-overview.html#cb593-1" aria-hidden="true"></a><span class="kw">system</span>(<span class="st">&quot;cmd.exe&quot;</span>, <span class="dt">input =</span> <span class="kw">paste</span>(<span class="st">&quot;start&quot;</span>, fn))</span></code></pre></div>
+<div class="sourceCode" id="cb595"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb595-1"><a href="section-4-overview.html#cb595-1" aria-hidden="true"></a><span class="kw">system</span>(<span class="st">&quot;cmd.exe&quot;</span>, <span class="dt">input =</span> <span class="kw">paste</span>(<span class="st">&quot;start&quot;</span>, fn))</span></code></pre></div>
 <p>Which of the following best describes this file?</p>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -581,12 +581,12 @@ D. It shows graphs of the data. Extracting the data will be difficult.</li>
 <li>We are going to create a tidy dataset with each row representing one observation. The variables in this dataset will be year, month, day and deaths.</li>
 </ol>
 <p>Use the <strong>pdftools</strong> package to read in <code>fn</code> using the <code>pdf_text</code> function. Store the results in an object called txt.</p>
-<div class="sourceCode" id="cb594"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb594-1"><a href="section-4-overview.html#cb594-1" aria-hidden="true"></a>txt &lt;-<span class="st"> </span><span class="kw">pdf_text</span>(fn)</span>
-<span id="cb594-2"><a href="section-4-overview.html#cb594-2" aria-hidden="true"></a><span class="kw">class</span>(txt)</span></code></pre></div>
+<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="section-4-overview.html#cb596-1" aria-hidden="true"></a>txt &lt;-<span class="st"> </span><span class="kw">pdf_text</span>(fn)</span>
+<span id="cb596-2"><a href="section-4-overview.html#cb596-2" aria-hidden="true"></a><span class="kw">class</span>(txt)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb596"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb596-1"><a href="section-4-overview.html#cb596-1" aria-hidden="true"></a><span class="kw">str</span>(txt)</span></code></pre></div>
+<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="section-4-overview.html#cb598-1" aria-hidden="true"></a><span class="kw">str</span>(txt)</span></code></pre></div>
 <pre><code>##  chr [1:12] &quot;6/4/2018                       Departamento de Salud - Registro Demográfico - División de Calidad y Estadística&quot;| __truncated__ ...</code></pre>
-<div class="sourceCode" id="cb598"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb598-1"><a href="section-4-overview.html#cb598-1" aria-hidden="true"></a><span class="kw">length</span>(txt)</span></code></pre></div>
+<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="section-4-overview.html#cb600-1" aria-hidden="true"></a><span class="kw">length</span>(txt)</span></code></pre></div>
 <pre><code>## [1] 12</code></pre>
 <p>Describe what you see in <code>txt</code>.</p>
 <ul class="task-list">
@@ -605,10 +605,10 @@ D. An html document.</li>
 <p>Look at <code>x</code>. What best describes what you see?</p>
 <p>What kind of object is <code>x</code>?</p>
 <p>How many entries does <code>x</code> have?</p>
-<div class="sourceCode" id="cb600"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb600-1"><a href="section-4-overview.html#cb600-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">str_split</span>(txt[<span class="dv">9</span>], <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
-<span id="cb600-2"><a href="section-4-overview.html#cb600-2" aria-hidden="true"></a><span class="kw">class</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb602-1"><a href="section-4-overview.html#cb602-1" aria-hidden="true"></a>x &lt;-<span class="st"> </span><span class="kw">str_split</span>(txt[<span class="dv">9</span>], <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb602-2"><a href="section-4-overview.html#cb602-2" aria-hidden="true"></a><span class="kw">class</span>(x)</span></code></pre></div>
 <pre><code>## [1] &quot;list&quot;</code></pre>
-<div class="sourceCode" id="cb602"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb602-1"><a href="section-4-overview.html#cb602-1" aria-hidden="true"></a><span class="kw">length</span>(x)</span></code></pre></div>
+<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="section-4-overview.html#cb604-1" aria-hidden="true"></a><span class="kw">length</span>(x)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
@@ -625,18 +625,18 @@ D. I can see the table! But there is a bunch of other stuff we need to get rid o
 </ol>
 <p>What kind of object is s?</p>
 <p>How many entries does s have?</p>
-<div class="sourceCode" id="cb604"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb604-1"><a href="section-4-overview.html#cb604-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span>x[[<span class="dv">1</span>]]</span>
-<span id="cb604-2"><a href="section-4-overview.html#cb604-2" aria-hidden="true"></a><span class="kw">class</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="section-4-overview.html#cb606-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span>x[[<span class="dv">1</span>]]</span>
+<span id="cb606-2"><a href="section-4-overview.html#cb606-2" aria-hidden="true"></a><span class="kw">class</span>(s)</span></code></pre></div>
 <pre><code>## [1] &quot;character&quot;</code></pre>
-<div class="sourceCode" id="cb606"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb606-1"><a href="section-4-overview.html#cb606-1" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="section-4-overview.html#cb608-1" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
 <pre><code>## [1] 40</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>When inspecting the string we obtained above, we see a common problem: white space before and after the other characters. Trimming is a common first step in string processing. These extra spaces will eventually make splitting the strings hard so we start by removing them.</li>
 </ol>
 <p>We learned about the command <code>str_trim</code>that removes spaces at the start or end of the strings. Use this function to trim <code>s</code> and assign the result to <code>s</code> again.</p>
 <p>After trimming, what single character is the last character of element 1 of <code>s</code>?</p>
-<div class="sourceCode" id="cb608"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb608-1"><a href="section-4-overview.html#cb608-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_trim</span>(s)</span>
-<span id="cb608-2"><a href="section-4-overview.html#cb608-2" aria-hidden="true"></a>s[<span class="dv">1</span>] <span class="co"># print string, visually inspect last character</span></span></code></pre></div>
+<div class="sourceCode" id="cb610"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb610-1"><a href="section-4-overview.html#cb610-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_trim</span>(s)</span>
+<span id="cb610-2"><a href="section-4-overview.html#cb610-2" aria-hidden="true"></a>s[<span class="dv">1</span>] <span class="co"># print string, visually inspect last character</span></span></code></pre></div>
 <pre><code>## [1] &quot;6/4/2018                               Departamento de Salud - Registro Demográfico - División de Calidad y Estadísticas Vitales&quot;</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>We want to extract the numbers from the strings stored in <code>s</code>. However, there are a lot of non-numeric characters that will get in the way. We can remove these, but before doing this we want to preserve the string with the column header, which includes the month abbreviation.</li>
@@ -644,8 +644,8 @@ D. I can see the table! But there is a bunch of other stuff we need to get rid o
 <p>Use the <code>str_which</code> function to find the row with the header. Save this result to <code>header_index</code>.<br />
 Hint: find the first string that matches the pattern <code>"2015"</code> using the <code>str_which</code> function.</p>
 <p>What is the value of <code>header_index</code>?</p>
-<div class="sourceCode" id="cb610"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb610-1"><a href="section-4-overview.html#cb610-1" aria-hidden="true"></a>header_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="dt">pattern=</span><span class="st">&quot;2015&quot;</span>)[<span class="dv">1</span>]</span>
-<span id="cb610-2"><a href="section-4-overview.html#cb610-2" aria-hidden="true"></a>header_index</span></code></pre></div>
+<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="section-4-overview.html#cb612-1" aria-hidden="true"></a>header_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="dt">pattern=</span><span class="st">&quot;2015&quot;</span>)[<span class="dv">1</span>]</span>
+<span id="cb612-2"><a href="section-4-overview.html#cb612-2" aria-hidden="true"></a>header_index</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>We want to extract two objects from the header row: <code>month</code> will store the month and <code>header</code> will store the column names.<br />
@@ -653,12 +653,12 @@ Save the content of the header row into an object called <code>header</code>, th
 </ol>
 <p>What is the value of month? Use <code>header_index</code> to extract the row. The separator here is one or more spaces. Also, consider using the <code>simplify</code> argument.</p>
 <p>What is the third value in header?</p>
-<div class="sourceCode" id="cb612"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb612-1"><a href="section-4-overview.html#cb612-1" aria-hidden="true"></a>tmp &lt;-<span class="st"> </span><span class="kw">str_split</span>(s[header_index], <span class="dt">pattern=</span><span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">simplify=</span><span class="ot">TRUE</span>)</span>
-<span id="cb612-2"><a href="section-4-overview.html#cb612-2" aria-hidden="true"></a>month &lt;-<span class="st"> </span>tmp[<span class="dv">1</span>]</span>
-<span id="cb612-3"><a href="section-4-overview.html#cb612-3" aria-hidden="true"></a>header &lt;-<span class="st"> </span>tmp[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb612-4"><a href="section-4-overview.html#cb612-4" aria-hidden="true"></a>month</span></code></pre></div>
+<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="section-4-overview.html#cb614-1" aria-hidden="true"></a>tmp &lt;-<span class="st"> </span><span class="kw">str_split</span>(s[header_index], <span class="dt">pattern=</span><span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">simplify=</span><span class="ot">TRUE</span>)</span>
+<span id="cb614-2"><a href="section-4-overview.html#cb614-2" aria-hidden="true"></a>month &lt;-<span class="st"> </span>tmp[<span class="dv">1</span>]</span>
+<span id="cb614-3"><a href="section-4-overview.html#cb614-3" aria-hidden="true"></a>header &lt;-<span class="st"> </span>tmp[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb614-4"><a href="section-4-overview.html#cb614-4" aria-hidden="true"></a>month</span></code></pre></div>
 <pre><code>## [1] &quot;SEP&quot;</code></pre>
-<div class="sourceCode" id="cb614"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb614-1"><a href="section-4-overview.html#cb614-1" aria-hidden="true"></a>header[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="section-4-overview.html#cb616-1" aria-hidden="true"></a>header[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;2017&quot;</code></pre>
 </div>
 <div id="puerto-rico-hurricane-mortality---part-2" class="section level3" number="5.5.4">
@@ -667,23 +667,23 @@ Save the content of the header row into an object called <code>header</code>, th
 <li>Notice that towards the end of the page defined by <code>s</code> you see a <em>“Total”</em> row followed by rows with other summary statistics. Create an object called <code>tail_index</code> with the index of the <em>“Total”</em> entry.</li>
 </ol>
 <p>What is the value of <code>tail_index</code>?</p>
-<div class="sourceCode" id="cb616"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb616-1"><a href="section-4-overview.html#cb616-1" aria-hidden="true"></a>tail_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;Total&quot;</span>)</span>
-<span id="cb616-2"><a href="section-4-overview.html#cb616-2" aria-hidden="true"></a>tail_index</span></code></pre></div>
+<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="section-4-overview.html#cb618-1" aria-hidden="true"></a>tail_index &lt;-<span class="st"> </span><span class="kw">str_which</span>(s, <span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb618-2"><a href="section-4-overview.html#cb618-2" aria-hidden="true"></a>tail_index</span></code></pre></div>
 <pre><code>## [1] 35</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Because our PDF page includes graphs with numbers, some of our rows have just one number (from the y-axis of the plot). Use the <code>str_count</code> function to create an object <code>n</code> with the count of numbers in each row.</li>
 </ol>
 <p>How many rows have a single number in them? You can write a regex for a number like this <code>\\d+</code>.</p>
-<div class="sourceCode" id="cb618"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb618-1"><a href="section-4-overview.html#cb618-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="kw">str_count</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d+&quot;</span>)</span>
-<span id="cb618-2"><a href="section-4-overview.html#cb618-2" aria-hidden="true"></a><span class="kw">sum</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="section-4-overview.html#cb620-1" aria-hidden="true"></a>n &lt;-<span class="st"> </span><span class="kw">str_count</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">d+&quot;</span>)</span>
+<span id="cb620-2"><a href="section-4-overview.html#cb620-2" aria-hidden="true"></a><span class="kw">sum</span>(n <span class="op">==</span><span class="st"> </span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 2</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>We are now ready to remove entries from rows that we know we don’t need. The entry <code>header_index</code> and everything before it should be removed. Entries for which <code>n</code> is 1 should also be removed, and the entry <code>tail_index</code> and everything that comes after it should be removed as well.</li>
 </ol>
 <p>How many entries remain in <code>s</code>?</p>
-<div class="sourceCode" id="cb620"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb620-1"><a href="section-4-overview.html#cb620-1" aria-hidden="true"></a>out &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>header_index, <span class="kw">which</span>(n<span class="op">==</span><span class="dv">1</span>), tail_index<span class="op">:</span><span class="kw">length</span>(s))</span>
-<span id="cb620-2"><a href="section-4-overview.html#cb620-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>s[<span class="op">-</span>out]</span>
-<span id="cb620-3"><a href="section-4-overview.html#cb620-3" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
+<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="section-4-overview.html#cb622-1" aria-hidden="true"></a>out &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span>header_index, <span class="kw">which</span>(n<span class="op">==</span><span class="dv">1</span>), tail_index<span class="op">:</span><span class="kw">length</span>(s))</span>
+<span id="cb622-2"><a href="section-4-overview.html#cb622-2" aria-hidden="true"></a>s &lt;-<span class="st"> </span>s[<span class="op">-</span>out]</span>
+<span id="cb622-3"><a href="section-4-overview.html#cb622-3" aria-hidden="true"></a><span class="kw">length</span>(s)</span></code></pre></div>
 <pre><code>## [1] 30</code></pre>
 <ol start="11" style="list-style-type: decimal">
 <li>Now we are ready to remove all text that is not a digit or space. Do this using regular expressions (regex) and the <code>str_remove_all</code> function.
@@ -694,53 +694,53 @@ In regex, using the <code>^</code> inside the square brackets <code>[]</code> me
 <li><input type="checkbox" disabled="" />
 A.</li>
 </ul>
-<div class="sourceCode" id="cb622"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb622-1"><a href="section-4-overview.html#cb622-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="section-4-overview.html#cb624-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 B.</li>
 </ul>
-<div class="sourceCode" id="cb623"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb623-1"><a href="section-4-overview.html#cb623-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="section-4-overview.html#cb625-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" checked="" />
 C.</li>
 </ul>
-<div class="sourceCode" id="cb624"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb624-1"><a href="section-4-overview.html#cb624-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="section-4-overview.html#cb626-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[^</span><span class="ch">\\</span><span class="st">d</span><span class="ch">\\</span><span class="st">s]&quot;</span>)</span></code></pre></div>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 D.</li>
 </ul>
-<div class="sourceCode" id="cb625"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb625-1"><a href="section-4-overview.html#cb625-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="section-4-overview.html#cb627-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_remove_all</span>(s, <span class="st">&quot;[</span><span class="ch">\\</span><span class="st">d]&quot;</span>)</span></code></pre></div>
 <ol start="12" style="list-style-type: decimal">
 <li>Use the <code>str_split_fixed</code> function to convert <code>s</code> into a data matrix with just the day and death count data:</li>
 </ol>
-<div class="sourceCode" id="cb626"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb626-1"><a href="section-4-overview.html#cb626-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_split_fixed</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">n =</span> <span class="dv">6</span>)[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb628"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb628-1"><a href="section-4-overview.html#cb628-1" aria-hidden="true"></a>s &lt;-<span class="st"> </span><span class="kw">str_split_fixed</span>(s, <span class="st">&quot;</span><span class="ch">\\</span><span class="st">s+&quot;</span>, <span class="dt">n =</span> <span class="dv">6</span>)[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</span></code></pre></div>
 <p>Now you are almost ready to finish. Add column names to the matrix: the first column should be <code>day</code> and the next columns should be the <code>header</code>. Convert all values to numeric. Also, add a column with the month. Call the resulting object <code>tab</code>.</p>
 <p>What was the mean number of deaths per day in September 2015?</p>
-<div class="sourceCode" id="cb627"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb627-1"><a href="section-4-overview.html#cb627-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>s <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb627-2"><a href="section-4-overview.html#cb627-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">as_data_frame</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb627-3"><a href="section-4-overview.html#cb627-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">setNames</span>(<span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, header)) <span class="op">%&gt;%</span></span>
-<span id="cb627-4"><a href="section-4-overview.html#cb627-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate_all</span>(as.numeric)</span>
-<span id="cb627-5"><a href="section-4-overview.html#cb627-5" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">&quot;2015&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="section-4-overview.html#cb629-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>s <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb629-2"><a href="section-4-overview.html#cb629-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">as_data_frame</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb629-3"><a href="section-4-overview.html#cb629-3" aria-hidden="true"></a><span class="st">    </span><span class="kw">setNames</span>(<span class="kw">c</span>(<span class="st">&quot;day&quot;</span>, header)) <span class="op">%&gt;%</span></span>
+<span id="cb629-4"><a href="section-4-overview.html#cb629-4" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate_all</span>(as.numeric)</span>
+<span id="cb629-5"><a href="section-4-overview.html#cb629-5" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">&quot;2015&quot;</span>)</span></code></pre></div>
 <pre><code>## [1] 75.3</code></pre>
 <p>What is the mean number of deaths per day in September 2016?</p>
-<div class="sourceCode" id="cb629"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb629-1"><a href="section-4-overview.html#cb629-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2016</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="section-4-overview.html#cb631-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2016</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## [1] 78.9</code></pre>
 <p>Hurricane Maria hit Puerto Rico on September 20, 2017. What was the mean number of deaths per day from September 1-19, 2017, before the hurricane hit?</p>
-<div class="sourceCode" id="cb631"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb631-1"><a href="section-4-overview.html#cb631-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="section-4-overview.html#cb633-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">1</span><span class="op">:</span><span class="dv">19</span>])</span></code></pre></div>
 <pre><code>## [1] 83.7</code></pre>
 <p>What was the mean number of deaths per day from September 20-30, 2017, after the hurricane hit?</p>
-<div class="sourceCode" id="cb633"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb633-1"><a href="section-4-overview.html#cb633-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">20</span><span class="op">:</span><span class="dv">30</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="section-4-overview.html#cb635-1" aria-hidden="true"></a><span class="kw">mean</span>(tab<span class="op">$</span><span class="st">`</span><span class="dt">2017</span><span class="st">`</span>[<span class="dv">20</span><span class="op">:</span><span class="dv">30</span>])</span></code></pre></div>
 <pre><code>## [1] 122</code></pre>
 <ol start="13" style="list-style-type: decimal">
 <li>Finish it up by changing <code>tab</code> to a tidy format, starting from this code outline:</li>
 </ol>
-<div class="sourceCode" id="cb635"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb635-1"><a href="section-4-overview.html#cb635-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">________</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
-<span id="cb635-2"><a href="section-4-overview.html#cb635-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
-<span id="cb635-3"><a href="section-4-overview.html#cb635-3" aria-hidden="true"></a>tab</span></code></pre></div>
+<div class="sourceCode" id="cb637"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb637-1"><a href="section-4-overview.html#cb637-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">________</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb637-2"><a href="section-4-overview.html#cb637-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
+<span id="cb637-3"><a href="section-4-overview.html#cb637-3" aria-hidden="true"></a>tab</span></code></pre></div>
 <p>What code fills the blank to generate a data frame with columns named “day”, “year” and “deaths”?</p>
-<div class="sourceCode" id="cb636"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb636-1"><a href="section-4-overview.html#cb636-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
-<span id="cb636-2"><a href="section-4-overview.html#cb636-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
-<span id="cb636-3"><a href="section-4-overview.html#cb636-3" aria-hidden="true"></a>tab</span></code></pre></div>
+<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="section-4-overview.html#cb638-1" aria-hidden="true"></a>tab &lt;-<span class="st"> </span>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">gather</span>(year, deaths, <span class="op">-</span>day) <span class="op">%&gt;%</span></span>
+<span id="cb638-2"><a href="section-4-overview.html#cb638-2" aria-hidden="true"></a><span class="st">    </span><span class="kw">mutate</span>(<span class="dt">deaths =</span> <span class="kw">as.numeric</span>(deaths))</span>
+<span id="cb638-3"><a href="section-4-overview.html#cb638-3" aria-hidden="true"></a>tab</span></code></pre></div>
 <pre><code>## # A tibble: 120 x 3
 ##      day year  deaths
 ##    &lt;dbl&gt; &lt;chr&gt;  &lt;dbl&gt;
@@ -768,11 +768,11 @@ D. spread</li>
 <ol start="14" style="list-style-type: decimal">
 <li>Make a plot of deaths versus day with color to denote year. Exclude 2018 since we have no data. Add a vertical line at day 20, the day that Hurricane Maria hit in 2017.</li>
 </ol>
-<div class="sourceCode" id="cb638"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb638-1"><a href="section-4-overview.html#cb638-1" aria-hidden="true"></a>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">&lt;</span><span class="st"> </span><span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
-<span id="cb638-2"><a href="section-4-overview.html#cb638-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, deaths, <span class="dt">color =</span> year)) <span class="op">+</span></span>
-<span id="cb638-3"><a href="section-4-overview.html#cb638-3" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
-<span id="cb638-4"><a href="section-4-overview.html#cb638-4" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">20</span>) <span class="op">+</span></span>
-<span id="cb638-5"><a href="section-4-overview.html#cb638-5" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb640"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb640-1"><a href="section-4-overview.html#cb640-1" aria-hidden="true"></a>tab <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(year <span class="op">&lt;</span><span class="st"> </span><span class="dv">2018</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb640-2"><a href="section-4-overview.html#cb640-2" aria-hidden="true"></a><span class="st">        </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(day, deaths, <span class="dt">color =</span> year)) <span class="op">+</span></span>
+<span id="cb640-3"><a href="section-4-overview.html#cb640-3" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_line</span>() <span class="op">+</span></span>
+<span id="cb640-4"><a href="section-4-overview.html#cb640-4" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">20</span>) <span class="op">+</span></span>
+<span id="cb640-5"><a href="section-4-overview.html#cb640-5" aria-hidden="true"></a><span class="st">        </span><span class="kw">geom_point</span>()</span></code></pre></div>
 <p><img src="img/figures/unnamed-chunk-234-1.png" width="672" /></p>
 <p>Which of the following are TRUE?</p>
 <ul class="task-list">

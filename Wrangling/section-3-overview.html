@@ -232,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="string-parsing" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> String Parsing</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The most common tasks in string processing include:
@@ -271,7 +271,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="defining-strings-single-and-double-quotes-and-how-to-escape" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Defining Strings: Single and Double Quotes and How to Escape</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#how-to-escape-when-defining-strings">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#how-to-escape-when-defining-strings" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Define a string by surrounding text with either single quotes or double quotes.</li>
@@ -306,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="stringr-package" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> stringr Package</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#stringr">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#stringr" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>The main types of string processing tasks are detecting, locating, extracting and replacing elements of strings.</li>
@@ -324,7 +324,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="case-study-1-us-murders-data" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Case Study 1: US Murders Data</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-1-us-murders-data">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-1-us-murders-data" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Use the <code>str_detect()</code> function to determine whether a string contains a certain pattern.</li>
@@ -438,7 +438,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 </div>
 <div id="case-study-2-reported-heights" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Case Study 2: Reported Heights</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-2-self-reported-heights">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-2-self-reported-heights" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>In the raw heights data, many students did not report their height as the number of inches as requested. There are many entries with real height information but in the wrong format, which we can extract with string processing.</li>
@@ -463,7 +463,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 <span id="cb319-3"><a href="section-3-overview.html#cb319-3" aria-hidden="true"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">is.na</span>(new_height)) <span class="op">%&gt;%</span><span class="st"> </span></span>
 <span id="cb319-4"><a href="section-3-overview.html#cb319-4" aria-hidden="true"></a><span class="st">  </span><span class="kw">head</span>(<span class="dt">n=</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## Warning: Problem with `mutate()` input `new_height`.
-## x NAs introduced by coercion
+## ℹ NAs introduced by coercion
 ## ℹ Input `new_height` is `as.numeric(height)`.</code></pre>
 <pre><code>## Warning in mask$eval_all_mutate(dots[[i]]): NAs introduced by coercion</code></pre>
 <pre><code>##             time_stamp    sex                 height new_height
@@ -512,7 +512,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 </div>
 <div id="regex" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Regex</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#regular-expressions">here</a> through <a href="https://rafalab.github.io/dsbook/string-processing.html#special-characters">section 24.5.2</a>.</p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#regular-expressions" target="_blank">here</a> through <a href="https://rafalab.github.io/dsbook/string-processing.html#special-characters" target="_blank">section 24.5.2</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>A regular expression (regex) is a way to describe a specific pattern of characters of text. A set of rules has been designed to do this specifically and efficiently.</li>
@@ -546,7 +546,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 </div>
 <div id="character-classes-anchors-and-quantifiers" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Character Classes, Anchors and Quantifiers</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#character-classes">here</a>, <a href="https://rafalab.github.io/dsbook/string-processing.html#anchors">here</a> and <a href="https://rafalab.github.io/dsbook/string-processing.html#quantifiers">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#character-classes" target="_blank">here</a>, <a href="https://rafalab.github.io/dsbook/string-processing.html#anchors" target="_blank">here</a> and <a href="https://rafalab.github.io/dsbook/string-processing.html#quantifiers" target="_blank">here</a></p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Define strings to test your regular expressions, including some elements that match and some that do not. This allows you to check for the two types of errors: failing to match and matching incorrectly.</li>
@@ -594,9 +594,9 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 <h2><span class="header-section-number">4.9</span> Search and Replace with Regex</h2>
 <p>The textbook for this section is available:</p>
 <ul>
-<li><a href="https://rafalab.github.io/dsbook/string-processing.html#search-and-replace-with-regex">searching and replacing with regex</a></li>
-<li><a href="https://rafalab.github.io/dsbook/string-processing.html#white-space-s">white space</a></li>
-<li><a href="https://rafalab.github.io/dsbook/string-processing.html#quantifiers-1">quantifiers: *, +, ?</a></li>
+<li><a href="https://rafalab.github.io/dsbook/string-processing.html#search-and-replace-with-regex" target="_blank">searching and replacing with regex</a>.</li>
+<li><a href="https://rafalab.github.io/dsbook/string-processing.html#white-space-s" target="_blank">white space</a>.</li>
+<li><a href="https://rafalab.github.io/dsbook/string-processing.html#quantifiers-1" target="_blank">quantifiers: *, +, ?</a>.</li>
 </ul>
 <p><strong>Key points</strong></p>
 <ul>
@@ -652,7 +652,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 </div>
 <div id="groups-with-regex" class="section level2" number="4.10">
 <h2><span class="header-section-number">4.10</span> Groups with Regex</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#groups">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#groups" target="_blank">here</a>.</p>
 <p><strong>Key Points</strong></p>
 <ul>
 <li>Groups are defined using parentheses.</li>
@@ -706,7 +706,7 @@ D. <code>dat %&gt;% mutate_at(2:3, funs(str_replace_all(., c("\\$|,"), ""))) %&g
 </div>
 <div id="testing-and-improving" class="section level2" number="4.11">
 <h2><span class="header-section-number">4.11</span> Testing and Improving</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#testing-and-improving">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#testing-and-improving" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Wrangling with regular expressions is often an iterative process of testing the approach, looking for problematic entries, and improving the patterns.</li>
@@ -1065,7 +1065,7 @@ D.</li>
 </div>
 <div id="separate-with-regex" class="section level2" number="4.13">
 <h2><span class="header-section-number">4.13</span> Separate with Regex</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#the-extract-function">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#the-extract-function" target="_blank">here</a>.</p>
 <p><strong>Key Point</strong></p>
 <ul>
 <li>The <code>extract()</code> function behaves similarly to the separate() function but allows extraction of groups from regular expressions.</li>
@@ -1102,7 +1102,7 @@ D.</li>
 </div>
 <div id="using-groups-and-quantifiers" class="section level2" number="4.14">
 <h2><span class="header-section-number">4.14</span> Using Groups and Quantifiers</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#testing-and-improving">here; through 24.10</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#testing-and-improving" target="_blank">here; through 24.10</a>.</p>
 <p>Four clear patterns of entries have arisen along with some other minor problems:</p>
 <ol style="list-style-type: decimal">
 <li>Many students measuring exactly 5 or 6 feet did not enter any inches. For example, <strong>6’</strong> - our pattern requires that inches be included.</li>
@@ -1231,7 +1231,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 <span id="cb415-42"><a href="section-3-overview.html#cb415-42" aria-hidden="true"></a>    <span class="ot">TRUE</span> <span class="op">~</span><span class="st"> </span><span class="kw">as.numeric</span>(<span class="ot">NA</span>))) <span class="op">%&gt;%</span></span>
 <span id="cb415-43"><a href="section-3-overview.html#cb415-43" aria-hidden="true"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>guess)</span></code></pre></div>
 <pre><code>## Warning: Problem with `mutate()` input `height`.
-## x NAs introduced by coercion
+## ℹ NAs introduced by coercion
 ## ℹ Input `height` is `.Primitive(&quot;as.double&quot;)(height)`.</code></pre>
 <pre><code>## Warning in mask$eval_all_mutate(dots[[i]]): NAs introduced by coercion</code></pre>
 <p>We can check all the entries we converted using the following code:</p>
@@ -1254,7 +1254,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 </div>
 <div id="string-splitting" class="section level2" number="4.16">
 <h2><span class="header-section-number">4.16</span> String Splitting</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#string-splitting">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#string-splitting" target="_blank">here</a>.</p>
 <p><strong>Key Points</strong></p>
 <ul>
 <li>The function <code>str_split()</code> splits a string into a character vector on a delimiter (such as a comma, space or underscore). By default, <code>str_split()</code> generates a list with one element for each original string. Use the function argument <code>simplify=TRUE</code> to have <code>str_split()</code> return a matrix instead.</li>
@@ -1387,7 +1387,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 </div>
 <div id="case-study---extracting-a-table-from-a-pdf" class="section level2" number="4.17">
 <h2><span class="header-section-number">4.17</span> Case Study - Extracting a Table from a PDF</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-3-extracting-tables-from-a-pdf">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#case-study-3-extracting-tables-from-a-pdf" target="_blank">here</a>.</p>
 <p>One of the datasets provided in <code>dslabs</code> shows scientific funding rates by gender in the Netherlands:</p>
 <div class="sourceCode" id="cb435"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb435-1"><a href="section-3-overview.html#cb435-1" aria-hidden="true"></a><span class="kw">data</span>(<span class="st">&quot;research_funding_rates&quot;</span>)</span>
 <span id="cb435-2"><a href="section-3-overview.html#cb435-2" aria-hidden="true"></a>research_funding_rates</span></code></pre></div>
@@ -1401,7 +1401,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 ## 7 Earth/life sciences                282              156                126           56         38           18                19.9              24.4                14.3
 ## 8     Social sciences                834              425                409          112         65           47                13.4              15.3                11.5
 ## 9    Medical sciences                505              245                260           75         46           29                14.9              18.8                11.2</code></pre>
-<p>The data come from a <a href="https://www.pnas.org/content/112/40/12349.abstract">paper</a> published in the prestigious journal PNAS. However, the data are not provided in a spreadsheet; they are in a table in a PDF document. We could extract the numbers by hand, but this could lead to human error. Instead we can try to wrangle the data using R.</p>
+<p>The data come from a <a href="https://www.pnas.org/content/112/40/12349.abstract" target="_blank">paper</a> published in the prestigious journal PNAS. However, the data are not provided in a spreadsheet; they are in a table in a PDF document. We could extract the numbers by hand, but this could lead to human error. Instead we can try to wrangle the data using R.</p>
 <p>**Downloading the data*</p>
 <p>We start by downloading the PDF document then importing it into R using the following code:</p>
 <div class="sourceCode" id="cb437"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb437-1"><a href="section-3-overview.html#cb437-1" aria-hidden="true"></a><span class="cf">if</span>(<span class="op">!</span><span class="kw">require</span>(pdftools)) <span class="kw">install.packages</span>(<span class="st">&quot;pdftools&quot;</span>)</span></code></pre></div>
@@ -1490,7 +1490,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 </div>
 <div id="recoding" class="section level2" number="4.18">
 <h2><span class="header-section-number">4.18</span> Recoding</h2>
-<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#recode">here</a></p>
+<p>The textbook for this section is available <a href="https://rafalab.github.io/dsbook/string-processing.html#recode" target="_blank">here</a>.</p>
 <p><strong>Key points</strong></p>
 <ul>
 <li>Change long factor names with the <code>recode()</code> function from the <strong>tidyverse</strong>.</li>
@@ -1526,7 +1526,7 @@ It is not necessarily clear that it is worth writing code to handle all these ca
 </div>
 <div id="assessment---string-processing-part-3" class="section level2" number="4.19">
 <h2><span class="header-section-number">4.19</span> Assessment - String Processing Part 3</h2>
-<p>Want even more practice with regular expressions? Complete the lessons and exercises in the <a href="https://regexone.com">RegexOne</a> online interactive tutorial!</p>
+<p>Want even more practice with regular expressions? Complete the lessons and exercises in the <a href="https://regexone.com" target="_blank">RegexOne</a> online interactive tutorial!</p>
 <ol style="list-style-type: decimal">
 <li></li>
 </ol>
